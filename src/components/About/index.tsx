@@ -16,7 +16,7 @@ const About = () => {
                   Empowering Bioinformatics Research
                 </h2>
                 <p className="text-body-color dark:text-dark-6 mb-10 text-base leading-relaxed">
-                  Giang Labs is an open-source initiative driving innovation in
+                  Olab is an open-source initiative driving innovation in
                   bioinformatics and multiomics research. We build scalable
                   tools, workflows, and libraries designed to support complex
                   experimental designs across bioinformatics applications.

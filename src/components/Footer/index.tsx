@@ -21,7 +21,7 @@ const Footer = () => {
                 />
               </Link>
               <p className="text-gray-7 mb-8 max-w-[270px] text-base">
-                Giang Labs provides innovative bioinformatics solutions and
+                Olab provides innovative bioinformatics solutions and
                 open-source tools for researchers and institutions worldwide.
               </p>
               <div className="-mx-3 flex items-center">

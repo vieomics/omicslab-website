@@ -19,7 +19,7 @@ const Hero = () => {
                   Innovative Bioinformatics Services & Open-Source Tools
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Giang Labs empowers researchers with scalable bioinformatics
+                  Olab empowers researchers with scalable bioinformatics
                   solutions. From advanced variant calling pipelines to
                   cutting-edge multiomics analysis tools, we provide
                   production-ready workflows and software for complex biological
@@ -78,7 +78,7 @@ const Hero = () => {
               >
                 <div className="mt-16">
                   <Image
-                    src="/images/hero/hero-image.jpg"
+                    src="/images/hero/multiomics.svg"
                     alt="hero"
                     className="mx-auto max-w-full rounded-t-xl rounded-tr-xl"
                     width={845}
