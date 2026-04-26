@@ -15,7 +15,7 @@ import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Olab - Bioinformatics Services & Open-Source Tools",
+  title: "OLab - Open Omics",
   description:
     "Innovative bioinformatics solutions for researchers. Production-ready variant calling pipelines, multiomics analysis tools, and data platforms.",
 };
