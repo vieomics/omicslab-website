@@ -21,9 +21,9 @@ const servicesData: Feature[] = [
         />
       </svg>
     ),
-    title: "Variant Calling Pipelines",
+    title: "Bioinformatics Pipelines",
     paragraph:
-      "Production-ready Nextflow pipelines for germline and somatic short-read variant calling, optimized for accuracy and speed.",
+      "Production-ready pipelines for comprehensive bioinformatics analysis and data processing.",
     btn: "View on GitHub",
     btnLink: "https://github.com/gianglabs",
   },
@@ -43,9 +43,9 @@ const servicesData: Feature[] = [
         />
       </svg>
     ),
-    title: "Methylation Analysis",
+    title: "Multiomics",
     paragraph:
-      "Advanced short-read methylation calling and analysis for epigenomic research and biomarker discovery.",
+      "Advanced integration and harmonization of complex multiomics datasets for comprehensive analysis at scale.",
     btn: "View on GitHub",
     btnLink: "https://github.com/gianglabs",
   },
@@ -60,14 +60,14 @@ const servicesData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M28 10H4c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-6 16h-8v2h8v-2zm6-8H4v-2h24v2z"
+          d="M28 10H12c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-4 12h-2v4h-2v-4h-2v-2h2v-4h2v4h2v2z"
           fill="white"
         />
       </svg>
     ),
-    title: "Data Platform (River)",
+    title: "Infrastructure HPC SLURM",
     paragraph:
-      "Comprehensive bioinformatics data platform for integration, analysis, and management of complex multiomics datasets.",
+      "Production-ready infrastructure configuration for high-performance computing cluster setup and management.",
     btn: "View on GitHub",
     btnLink: "https://github.com/gianglabs",
   },
@@ -82,58 +82,14 @@ const servicesData: Feature[] = [
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
-          d="M20 2C10.06 2 2 10.06 2 20s8.06 18 18 18 18-8.06 18-18S29.94 2 20 2zm0 32c-7.73 0-14-6.27-14-14S12.27 6 20 6s14 6.27 14 14-6.27 14-14 14zm3.5-9h-7v2h7v-2zm0-6h-7v2h7v-2zm0-6h-7v2h7v-2z"
+          d="M28 10H4c-1.1 0-2 .9-2 2v20c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-6 16h-8v2h8v-2zm6-8H4v-2h24v2z"
           fill="white"
         />
       </svg>
     ),
-    title: "Genomics Kit (gkit)",
+    title: "Data Platform (only for Vietnam region)",
     paragraph:
-      "Integrated utilities for bioinformatics setup including Spark, SLURM, HAIL, GLnexus, IGV-report and more.",
-    btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
-  },
-  {
-    id: 5,
-    icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M32 6H8c-1.1 0-2 .9-2 2v24c0 1.1.9 2 2 2h24c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-2 18h-8v2h8v-2zm0-4h-8v2h8v-2zm0-4h-8v2h8v-2zm4-8h-4v12h-4V8h-8v12h-4V8h-4v24h20V8z"
-          fill="white"
-        />
-      </svg>
-    ),
-    title: "SmartSensor",
-    paragraph:
-      "Innovative smartphone-based sensor technology for chemical compound analysis and characterization.",
-    btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
-  },
-  {
-    id: 6,
-    icon: (
-      <svg
-        width="40"
-        height="40"
-        viewBox="0 0 40 40"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M28 10H12c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V12c0-1.1-.9-2-2-2zm-4 12h-2v4h-2v-4h-2v-2h2v-4h2v4h2v2z"
-          fill="white"
-        />
-      </svg>
-    ),
-    title: "HPC Infrastructure",
-    paragraph:
-      "Production-ready Ansible configuration for SLURM HPC cluster setup and management.",
+      "Comprehensive bioinformatics data platform for integration, analysis, and management of complex datasets.",
     btn: "View on GitHub",
     btnLink: "https://github.com/gianglabs",
   },
