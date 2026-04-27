@@ -30,7 +30,6 @@ export default function Home() {
       <CallToAction />
       <Faq />
       <HomeBlogSection posts={posts} />
-      <Contact />
     </main>
   );
 }
