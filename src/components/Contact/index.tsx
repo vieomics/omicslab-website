@@ -1,17 +1,18 @@
 const Contact = () => {
   return (
-    <section id="contact" className="relative py-20 md:py-[120px]">
-      <div className="dark:bg-dark absolute top-0 left-0 -z-[1] h-full w-full"></div>
-      <div className="dark:bg-dark-700 absolute top-0 left-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] lg:h-[45%] xl:h-1/2"></div>
+    <section
+      id="contact"
+      className="bg-primary relative z-10 overflow-hidden py-20 md:py-[120px]"
+    >
       <div className="container px-4">
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="ud-contact-content-wrapper">
               <div className="ud-contact-title mb-12 lg:mb-[150px]">
-                <span className="text-dark mb-6 block text-base font-medium dark:text-white">
+                <span className="mb-6 block text-base font-medium text-white">
                   CONTACT US
                 </span>
-                <h2 className="text-dark max-w-[260px] text-[35px] leading-[1.14] font-semibold dark:text-white">
+                <h2 className="max-w-[260px] text-[35px] leading-[1.14] font-semibold text-white">
                   Let&#39;s work together on your bioinformatics needs.
                 </h2>
               </div>
@@ -29,11 +30,11 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-dark mb-[18px] text-lg font-semibold dark:text-white">
+                    <h3 className="mb-[18px] text-lg font-semibold text-white">
                       Our Location
                     </h3>
-                    <p className="text-body-color dark:text-dark-6 text-base">
-                      401 Broadway, 24th Floor, Orchard Cloud View, London
+                    <p className="text-base text-white">
+                      Ho Chi Minh City, Vietnam
                     </p>
                   </div>
                 </div>
@@ -49,12 +50,10 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-dark mb-[18px] text-lg font-semibold dark:text-white">
+                    <h3 className="mb-[18px] text-lg font-semibold text-white">
                       Email Us
                     </h3>
-                    <p className="text-body-color dark:text-dark-6 text-base">
-                      nttg8100@gmail.com
-                    </p>
+                    <p className="text-base text-white">nttg8100@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -138,6 +137,71 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div>
+        <span className="absolute top-0 left-0">
+          <svg
+            width="495"
+            height="470"
+            viewBox="0 0 495 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="55"
+              cy="442"
+              r="138"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="50"
+            />
+            <circle
+              cx="446"
+              r="39"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="20"
+            />
+            <path
+              d="M245.406 137.609L233.985 94.9852L276.609 106.406L245.406 137.609Z"
+              stroke="white"
+              strokeOpacity="0.08"
+              strokeWidth="12"
+            />
+          </svg>
+        </span>
+        <span className="absolute right-0 bottom-0">
+          <svg
+            width="493"
+            height="470"
+            viewBox="0 0 493 470"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle
+              cx="462"
+              cy="5"
+              r="138"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="50"
+            />
+            <circle
+              cx="49"
+              cy="470"
+              r="39"
+              stroke="white"
+              strokeOpacity="0.04"
+              strokeWidth="20"
+            />
+            <path
+              d="M222.393 226.701L272.808 213.192L259.299 263.607L222.393 226.701Z"
+              stroke="white"
+              strokeOpacity="0.06"
+              strokeWidth="13"
+            />
+          </svg>
+        </span>
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const CallToAction = () => {
   return (
-    <section className="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
+    <section className="bg-primary relative z-10 overflow-hidden py-20 lg:py-[115px]">
       <div className="container mx-auto">
         <div className="relative overflow-hidden">
           <div className="-mx-4 flex flex-wrap items-stretch">
@@ -16,14 +16,15 @@ const CallToAction = () => {
                   </span>
                 </h2>
                 <p className="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
-                  There are many variations of passages of Lorem Ipsum but the
-                  majority have suffered in some form.
+                  We provide open-source solutions. If you're interested,
+                  contact us to discuss a partnership.
                 </p>
+
                 <Link
-                  href="/"
-                  className="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]"
+                  href="#contact"
+                  className="text-dark shadow-1 hover:bg-gray-2 inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium transition duration-300 ease-in-out"
                 >
-                  Start using Play
+                  Contact for Work
                 </Link>
               </div>
             </div>
@@ -31,7 +32,7 @@ const CallToAction = () => {
         </div>
       </div>
       <div>
-        <span className="absolute left-0 top-0">
+        <span className="absolute top-0 left-0">
           <svg
             width="495"
             height="470"
@@ -62,7 +63,7 @@ const CallToAction = () => {
             />
           </svg>
         </span>
-        <span className="absolute bottom-0 right-0">
+        <span className="absolute right-0 bottom-0">
           <svg
             width="493"
             height="470"
