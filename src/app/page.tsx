@@ -5,17 +5,15 @@ import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
-import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
 import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OLab - Open Omics",
+  title: "Otech - Omics Technology",
   description:
     "Innovative bioinformatics solutions for researchers. Production-ready variant calling pipelines, multiomics analysis tools, and data platforms.",
 };
@@ -28,10 +26,8 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Services />
-      <Features />
       <About />
       <CallToAction />
-      <Testimonials />
       <Faq />
       <HomeBlogSection posts={posts} />
       <Contact />
