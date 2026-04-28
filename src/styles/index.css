@@ -433,3 +433,139 @@ body {
 .blog-details h3 {
   @apply text-dark mb-6 text-2xl font-bold sm:text-[28px] sm:leading-[40px] dark:text-white;
 }
+
+.blog-details table {
+  @apply mb-8 w-full border-collapse;
+}
+
+.blog-details table th {
+  @apply dark:bg-dark-2 text-dark dark:border-dark-3 border border-gray-200 bg-gray-100 px-4 py-3 text-left font-semibold dark:text-white;
+}
+
+.blog-details table td {
+  @apply text-dark dark:border-dark-3 border border-gray-200 px-4 py-3 dark:text-white;
+}
+
+.blog-details table tr:nth-child(even) {
+  @apply dark:bg-dark bg-gray-50;
+}
+
+.blog-details pre {
+  @apply dark:bg-dark-2 mb-6 overflow-x-auto rounded-lg bg-gray-900 p-4;
+}
+
+.blog-details code {
+  @apply font-mono text-sm;
+}
+
+.blog-details :not(pre) > code {
+  @apply dark:bg-dark-2 text-primary dark:text-primary rounded bg-gray-100 px-1.5 py-0.5 font-mono text-sm;
+}
+
+.hljs {
+  @apply text-gray-100;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-section,
+.hljs-link {
+  @apply text-pink-400;
+}
+
+.hljs-string,
+.hljs-title,
+.hljs-name,
+.hljs-type,
+.hljs-attribute,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  @apply text-green-400;
+}
+
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  @apply text-gray-500;
+}
+
+.hljs-number,
+.hljs-regexp,
+.hljs-literal,
+.hljs-params {
+  @apply text-yellow-300;
+}
+
+.hljs-function {
+  @apply text-blue-400;
+}
+
+.blog-details .admonition {
+  @apply my-6 rounded-lg border-l-4 p-4;
+}
+
+.blog-details .admonition-title {
+  @apply mb-2 font-semibold;
+}
+
+.blog-details .admonition-note {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-900/20;
+}
+
+.blog-details .admonition-note .admonition-title {
+  @apply text-blue-700 dark:text-blue-300;
+}
+
+.blog-details .admonition-tip {
+  @apply border-green-500 bg-green-50 dark:bg-green-900/20;
+}
+
+.blog-details .admonition-tip .admonition-title {
+  @apply text-green-700 dark:text-green-300;
+}
+
+.blog-details .admonition-info {
+  @apply border-blue-500 bg-blue-50 dark:bg-blue-900/20;
+}
+
+.blog-details .admonition-info .admonition-title {
+  @apply text-blue-700 dark:text-blue-300;
+}
+
+.blog-details .admonition-warning {
+  @apply border-yellow-500 bg-yellow-50 dark:bg-yellow-900/20;
+}
+
+.blog-details .admonition-warning .admonition-title {
+  @apply text-yellow-700 dark:text-yellow-300;
+}
+
+.blog-details .admonition-danger {
+  @apply border-red-500 bg-red-50 dark:bg-red-900/20;
+}
+
+.blog-details .admonition-danger .admonition-title {
+  @apply text-red-700 dark:text-red-300;
+}
+
+.blog-details .admonition-caution {
+  @apply border-orange-500 bg-orange-50 dark:bg-orange-900/20;
+}
+
+.blog-details .admonition-caution .admonition-title {
+  @apply text-orange-700 dark:text-orange-300;
+}
+
+.blog-details .admonition-important {
+  @apply border-purple-500 bg-purple-50 dark:bg-purple-900/20;
+}
+
+.blog-details .admonition-important .admonition-title {
+  @apply text-purple-700 dark:text-purple-300;
+}

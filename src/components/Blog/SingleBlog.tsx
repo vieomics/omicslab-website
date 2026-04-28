@@ -11,27 +11,27 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
       <div className="mb-8 overflow-hidden rounded">
         <Link href={`/blogs/${slug}`} aria-label="blog cover" className="block">
           <Image
-            src={coverImage!}
+            src={coverImage || "/images/blog/placeholder.jpg"}
             alt="image"
-            className="w-full transition group-hover:rotate-6 group-hover:scale-125"
+            className="w-full transition group-hover:scale-125 group-hover:rotate-6"
             width={408}
             height={272}
           />
         </Link>
       </div>
       <div>
-        <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
-          {format(new Date(date), "dd MMM yyyy")}
+        <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
+          {date ? format(new Date(date), "dd MMM yyyy") : "No date"}
         </span>
         <h3>
           <Link
             href={`/blogs/${slug}`}
-            className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+            className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
           >
             {title}
           </Link>
         </h3>
-        <p className="text-base text-body-color dark:text-dark-6">{excerpt}</p>
+        <p className="text-body-color dark:text-dark-6 text-base">{excerpt}</p>
       </div>
     </div>
   );
