@@ -5,17 +5,17 @@ import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
-import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import Services from "@/components/Services";
 import Team from "@/components/Team";
-import Testimonials from "@/components/Testimonials";
 import { getAllPosts } from "@/utils/markdown";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Play Next.js - SaaS Starter Kit and Boilerplate for Next.js",
-  description: "Free Next.js SaaS Boilerplate and Starter Kit designed and built for SaaS startups. It comes with all necessary integrations, pages, and components you need to launch a feature-rich SaaS websites.",
+  title: "Otech - Omics Technology",
+  description:
+    "Innovative bioinformatics solutions for researchers. Production-ready variant calling pipelines, multiomics analysis tools, and data platforms.",
 };
 
 export default function Home() {
@@ -25,16 +25,12 @@ export default function Home() {
     <main>
       <ScrollUp />
       <Hero />
-      <Features />
+      <Services />
       <About />
       <CallToAction />
-      <Pricing />
-      <Testimonials />
       <Faq />
-      <Team />
       <HomeBlogSection posts={posts} />
       <Contact />
-      <Clients />
     </main>
   );
 }
