@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap') layer(base);
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap")
+layer(base);
 
-@import 'tailwindcss';
-@plugin 'tailgrids/plugin';
+@import "tailwindcss";
+@plugin "tailgrids/plugin";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -335,6 +336,7 @@
   --color-blue-gray-800: #1e293b;
   --color-blue-gray-900: #0f172a;
   --color-blue-gray-950: #020617;
+  --color-primary: #000000;
 }
 
 /*
@@ -346,7 +348,6 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-
   *,
   ::after,
   ::before,
@@ -368,7 +369,7 @@ body {
   @apply bg-dark dark:bg-white;
 }
 
-.sticky-menu #navbarCollapse li>a {
+.sticky-menu #navbarCollapse li > a {
   @apply text-dark hover:text-primary hover:opacity-100 dark:text-white;
 }
 
@@ -388,15 +389,15 @@ body {
   @apply bg-primary hover:bg-dark text-white hover:text-white;
 }
 
-.navbarTogglerActive>span:nth-child(1) {
+.navbarTogglerActive > span:nth-child(1) {
   @apply top-[7px] rotate-45 transform;
 }
 
-.navbarTogglerActive>span:nth-child(2) {
+.navbarTogglerActive > span:nth-child(2) {
   @apply opacity-0;
 }
 
-.navbarTogglerActive>span:nth-child(3) {
+.navbarTogglerActive > span:nth-child(3) {
   @apply top-[-8px] rotate-135;
 }
 
@@ -422,13 +423,13 @@ body {
 }
 
 .blog-details h1 {
-  @apply text-dark mb-8 text-3xl font-bold dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.28];
+  @apply text-dark mb-8 text-3xl font-bold sm:text-4xl md:text-[40px] md:leading-[1.28] dark:text-white;
 }
 
 .blog-details h2 {
-  @apply text-dark mb-8 text-2xl font-bold dark:text-white sm:text-3xl md:text-[35px] md:leading-[1.28];
+  @apply text-dark mb-8 text-2xl font-bold sm:text-3xl md:text-[35px] md:leading-[1.28] dark:text-white;
 }
 
 .blog-details h3 {
-  @apply text-dark mb-6 text-2xl font-bold dark:text-white sm:text-[28px] sm:leading-[40px];
+  @apply text-dark mb-6 text-2xl font-bold sm:text-[28px] sm:leading-[40px] dark:text-white;
 }

@@ -5,36 +5,9 @@ import SingleTeam from "./SingleTeam";
 const teamData: TeamType[] = [
   {
     id: 1,
-    name: "Adveen Desuza",
-    designation: "UI Designer",
-    image: "/images/team/team-01.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
-  },
-  {
-    id: 2,
-    name: "Jezmin uniya",
-    designation: "Product Designer",
-    image: "/images/team/team-02.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
-  },
-  {
-    id: 3,
-    name: "Andrieo Gloree",
-    designation: "App Developer",
-    image: "/images/team/team-03.png",
-    facebookLink: "/#",
-    twitterLink: "/#",
-    instagramLink: "/#",
-  },
-  {
-    id: 4,
-    name: "Jackie Sanders",
-    designation: "Content Writer",
-    image: "/images/team/team-04.png",
+    name: "Giang Nguyen",
+    designation: "Founder",
+    image: "/images/team/giangnguyen.png",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
@@ -45,14 +18,14 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px]"
+      className="bg-gray-1 dark:bg-dark-2 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
     >
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Our Team"
-            title="Meet Our Team"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            subtitle="Meet The Founder"
+            title="About Giang Nguyen"
+            paragraph="Ex-bioinformatics engineer at DNANexus. Bioinformatics professional with hands-on experience, delivering end-to-end solutions across computational biology, high-throughput sequencing (NGS) analysis, and scalable infrastructure for the biobank scale to accelerate the precision medicine."
             width="640px"
             center
           />

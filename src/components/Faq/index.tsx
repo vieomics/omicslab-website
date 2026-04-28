@@ -3,51 +3,36 @@ import SingleFaq from "./SingleFaq";
 
 const Faq = () => {
   return (
-    <section className="relative z-20 overflow-hidden bg-white pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+    <section className="dark:bg-dark relative z-20 overflow-hidden bg-white pt-20 pb-8 lg:pt-[120px] lg:pb-[50px]">
       <div className="container">
         <SectionTitle
           subtitle="FAQ"
           title="Any Questions? Answered"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Below are answers to some of the most common questions we receive."
           width="640px"
           center
         />
 
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
-          <div className="w-full px-4 lg:w-1/2">
+          <div className="w-full px-4">
             <SingleFaq
-              question="How to use TailGrids?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="Is there a cost for using your solutions?"
+              answer="Our open-source solutions are available at no cost. For custom implementations tailored to your specific requirements, we offer project-based pricing. Please contact us for a detailed quote."
             />
             <SingleFaq
-              question="How to download icons from LineIcons?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="How is pricing structured?"
+              answer="We provide customized pricing based on your technical requirements and project scope. Rather than hourly billing, we offer project-based contracts that align with your business objectives and timeline."
             />
             <SingleFaq
-              question="Is GrayGrids part of UIdeck?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-          </div>
-
-          <div className="w-full px-4 lg:w-1/2">
-            <SingleFaq
-              question="Can I use this template for commercial project?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Do you have plan to releasing Play Pro?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
-            />
-            <SingleFaq
-              question="Where and how to host this template?"
-              answer="It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available ."
+              question="What is the availability of your data platform?"
+              answer="Our data platform is currently available in Vietnam (beta phase). Full integration is supported when using our IaaS infrastructure for High Performance Computing with SLURM configuration."
             />
           </div>
         </div>
       </div>
 
       <div>
-        <span className="absolute left-4 top-4 -z-[1]">
+        <span className="absolute top-4 left-4 -z-[1]">
           <svg
             width="48"
             height="134"
@@ -337,7 +322,7 @@ const Faq = () => {
             />
           </svg>
         </span>
-        <span className="absolute bottom-4 right-4 -z-[1]">
+        <span className="absolute right-4 bottom-4 -z-[1]">
           <svg
             width="48"
             height="134"
