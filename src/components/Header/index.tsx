@@ -3,7 +3,7 @@ import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import menuData from "./menuData";
 
@@ -16,19 +16,6 @@ const Header = () => {
   const navbarToggleHandler = () => {
     setNavbarOpen(!navbarOpen);
   };
-
-  // Sticky Navbar
-  const [sticky, setSticky] = useState(false);
-  const handleStickyNavbar = () => {
-    if (window.scrollY >= 80) {
-      setSticky(true);
-    } else {
-      setSticky(false);
-    }
-  };
-  useEffect(() => {
-    window.addEventListener("scroll", handleStickyNavbar);
-  });
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -44,59 +31,22 @@ const Header = () => {
     <>
       <header
         className={`ud-header top-0 left-0 z-40 flex w-full items-center ${
-          sticky
+          true
             ? "shadow-nav border-stroke dark:border-dark-3/20 dark:bg-dark/10 fixed z-[999] border-b bg-white/80 backdrop-blur-[5px]"
             : "absolute bg-transparent"
         }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4">
-              <Link
-                href="/"
-                className={`navbar-logo block w-full ${
-                  sticky ? "py-2" : "py-5"
-                } `}
-              >
-                {pathUrl !== "/" ? (
-                  <>
-                    <Image
-                      src={`/images/logo/logo.svg`}
-                      alt="logo"
-                      width={240}
-                      height={30}
-                      className="header-logo w-full dark:hidden"
-                    />
-                    <Image
-                      src={`/images/logo/logo-white.svg`}
-                      alt="logo"
-                      width={240}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
-                  </>
-                ) : (
-                  <>
-                    <Image
-                      src={`${
-                        sticky
-                          ? "/images/logo/logo.svg"
-                          : "/images/logo/logo-white.svg"
-                      }`}
-                      alt="logo"
-                      width={140}
-                      height={30}
-                      className="header-logo w-full dark:hidden"
-                    />
-                    <Image
-                      src={"/images/logo/logo-white.svg"}
-                      alt="logo"
-                      width={140}
-                      height={30}
-                      className="header-logo hidden w-full dark:block"
-                    />
-                  </>
-                )}
+            <div className="w-48 max-w-full px-4">
+              <Link href="/" className="navbar-logo block w-full py-2">
+                <Image
+                  src={`/images/logo/logo.svg`}
+                  alt="logo"
+                  width={450}
+                  height={120}
+                  className="header-logo h-16 w-auto"
+                />
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -111,7 +61,7 @@ const Header = () => {
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "top-[7px] rotate-45" : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" && sticky
+                      pathUrl === "/" && true
                         ? "bg-dark dark:bg-white"
                         : "bg-white"
                     }`}
@@ -120,7 +70,7 @@ const Header = () => {
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "opacity-0" : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" && sticky
+                      pathUrl === "/" && true
                         ? "bg-dark dark:bg-white"
                         : "bg-white"
                     }`}
@@ -129,7 +79,7 @@ const Header = () => {
                     className={`relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
                       navbarOpen ? "top-[-8px] -rotate-45" : " "
                     } ${pathUrl !== "/" && "!bg-dark dark:!bg-white"} ${
-                      pathUrl === "/" && sticky
+                      pathUrl === "/" && true
                         ? "bg-dark dark:bg-white"
                         : "bg-white"
                     }`}
@@ -163,12 +113,12 @@ const Header = () => {
                               scroll={false}
                               href={menuItem.path}
                               className={`ud-menu-scroll flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                                sticky
+                                true
                                   ? "text-dark group-hover:text-primary dark:group-hover:text-primary dark:text-white"
                                   : "text-body-color lg:text-white dark:text-white"
                               } ${
                                 pathUrl === menuItem?.path &&
-                                sticky &&
+                                true &&
                                 "!text-primary"
                               }`}
                             >
@@ -205,7 +155,7 @@ const Header = () => {
                             <button
                               onClick={() => handleSubmenu(index)}
                               className={`ud-menu-scroll flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 ${
-                                sticky
+                                true
                                   ? "text-dark group-hover:text-primary dark:group-hover:text-primary dark:text-white"
                                   : "text-white"
                               }`}
@@ -262,12 +212,12 @@ const Header = () => {
                   <>
                     <p
                       className={`loginBtn px-7 py-3 text-base font-medium ${
-                        !sticky && pathUrl === "/" ? "text-white" : "text-dark"
+                        !true && pathUrl === "/" ? "text-white" : "text-dark"
                       }`}
                     >
                       {session?.user?.name}
                     </p>
-                    {pathUrl !== "/" || sticky ? (
+                    {pathUrl !== "/" || true ? (
                       <button
                         onClick={() => signOut()}
                         className="signUpBtn bg-primary/100 hover:bg-opacity-20 hover:text-dark rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out"
@@ -305,7 +255,7 @@ const Header = () => {
                         <Link
                           href="/signin"
                           className={`px-7 py-3 text-base font-medium hover:opacity-70 ${
-                            sticky ? "text-dark dark:text-white" : "text-white"
+                            true ? "text-dark dark:text-white" : "text-white"
                           }`}
                         >
                           Sign In
@@ -313,7 +263,7 @@ const Header = () => {
                         <Link
                           href="/signup"
                           className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
-                            sticky
+                            true
                               ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
                               : "bg-white/10 hover:bg-white/20"
                           }`}

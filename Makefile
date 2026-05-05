@@ -12,7 +12,7 @@ POSTGRES_HOST=localhost
 # Start PostgreSQL in Docker (uses port 5433 to avoid conflicts)
 docker-db:
 	@echo "Starting PostgreSQL in Docker on port 5433..."
-	@docker run -d \
+	@docker run -d --rm \
 		--name $(POSTGRES_CONTAINER_NAME) \
 		-e POSTGRES_USER=$(POSTGRES_USER) \
 		-e POSTGRES_PASSWORD=$(POSTGRES_PASSWORD) \
