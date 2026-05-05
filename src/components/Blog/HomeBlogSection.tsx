@@ -3,13 +3,13 @@ import SingleBlog from "./SingleBlog";
 
 const HomeBlogSection = ({ posts }: any) => {
   return (
-    <section className="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+    <section className="dark:bg-dark bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20">
       <div className="container mx-auto">
         <div className="mb-[60px]">
           <SectionTitle
             subtitle="Our Blogs"
             title="Our Recent News"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            paragraph="Explore the latest blogs and solutions from OmicsLab, offering tailored bioinformatics services and solutions."
             width="640px"
             center
           />

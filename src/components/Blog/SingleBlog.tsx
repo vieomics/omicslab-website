@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, coverImage, excerpt, date, slug } = blog;
+  const { title, coverImage, excerpt, date, slug, author, authorData } = blog;
 
   return (
     <div className="wow fadeInUp group mb-10" data-wow-delay=".1s">
@@ -20,6 +20,25 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         </Link>
       </div>
       <div>
+        <div className="mb-4 flex items-center gap-3">
+          {authorData?.image_url && (
+            <Image
+              src={authorData.image_url}
+              alt={authorData.name}
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
+          )}
+          <span className="text-dark text-sm font-medium dark:text-white">
+            {authorData?.name || author || "Anonymous"}
+          </span>
+          {authorData?.title && (
+            <span className="text-xs text-gray-500 dark:text-gray-400">
+              • {authorData.title}
+            </span>
+          )}
+        </div>
         <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
           {date ? format(new Date(date), "dd MMM yyyy") : "No date"}
         </span>

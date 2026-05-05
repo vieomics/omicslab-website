@@ -16,7 +16,7 @@ const About = () => {
                   Empowering Bioinformatics Research
                 </h2>
                 <p className="text-body-color dark:text-dark-6 mb-10 text-base leading-relaxed">
-                  Otech is an open-source initiative driving innovation in
+                  Omicslab is an open-source initiative driving innovation in
                   bioinformatics and multiomics research. We build scalable
                   tools, workflows, and libraries designed to support complex
                   experimental designs across bioinformatics applications.
@@ -45,7 +45,7 @@ const About = () => {
                     className={`relative mb-4 sm:mb-8 sm:h-[400px] md:h-[540px] lg:h-[400px] xl:h-[500px]`}
                   >
                     <Image
-                      src="/images/about/about-image-01.jpg"
+                      src="/images/about/multiomics.svg"
                       alt="about image"
                       fill
                       className="h-full w-full object-cover object-center"
@@ -66,13 +66,13 @@ const About = () => {
                   <div className="bg-primary relative z-10 mb-4 flex items-center justify-center overflow-hidden px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        Ecosystem
+                        Omics
                       </span>
                       <span className="block text-base font-semibold text-white">
                         Open Sources
                       </span>
                       <span className="block text-base font-medium text-white/70">
-                        Multi-Omics
+                        Optimization
                       </span>
                     </div>
                     <div>

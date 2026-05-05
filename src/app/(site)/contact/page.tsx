@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const ContactPage = () => {
   return (
     <>
-      <Contact />
+      <Contact fullHeight={true} />
     </>
   );
 };

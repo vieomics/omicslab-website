@@ -6,4 +6,6 @@ export type TeamType = {
   facebookLink: string;
   twitterLink: string;
   instagramLink: string;
+  linkedinLink: string;
+  bio: string;
 };

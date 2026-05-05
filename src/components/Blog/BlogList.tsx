@@ -1,8 +1,17 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect, useCallback } from "react";
 import { Blog } from "@/types/blog";
 import SingleBlog from "./SingleBlog";
+
+interface SearchResult {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  tags: string[];
+  date: string;
+}
 
 interface BlogListProps {
   posts: Blog[];
@@ -12,6 +21,55 @@ interface BlogListProps {
 const BlogList = ({ posts, allTags }: BlogListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
+  const [isSearching, setIsSearching] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const debounce = <T extends (...args: any[]) => any>(
+    func: T,
+    wait: number,
+  ) => {
+    let timeout: NodeJS.Timeout;
+    return (...args: Parameters<T>) => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => func(...args), wait);
+    };
+  };
+
+  const performSearch = useCallback(
+    debounce(async (query: string) => {
+      if (!query || query.length < 2) {
+        setSearchResults([]);
+        setIsSearching(false);
+        return;
+      }
+
+      setIsSearching(true);
+      try {
+        const response = await fetch(
+          `/api/search?q=${encodeURIComponent(query)}&limit=10`,
+        );
+        const data = await response.json();
+        setSearchResults(data.results || []);
+      } catch (error) {
+        console.error("Search error:", error);
+        setSearchResults([]);
+      } finally {
+        setIsSearching(false);
+      }
+    }, 300),
+    [],
+  );
+
+  useEffect(() => {
+    if (searchQuery.length >= 2) {
+      setShowDropdown(true);
+      performSearch(searchQuery);
+    } else {
+      setSearchResults([]);
+      setShowDropdown(false);
+    }
+  }, [searchQuery, performSearch]);
 
   const filteredPosts = useMemo(() => {
     let result = posts;
@@ -20,18 +78,12 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
       result = result.filter((post) => post.tags?.includes(selectedTag));
     }
 
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase();
-      result = result.filter(
-        (post) =>
-          post.title?.toLowerCase().includes(query) ||
-          post.excerpt?.toLowerCase().includes(query) ||
-          post.tags?.some((tag) => tag.toLowerCase().includes(query)),
-      );
-    }
-
     return result;
-  }, [posts, selectedTag, searchQuery]);
+  }, [posts, selectedTag]);
+
+  const handleResultClick = (slug: string) => {
+    window.location.href = `/blogs/${slug}`;
+  };
 
   return (
     <div>
@@ -67,6 +119,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
             placeholder="Search posts..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => searchQuery.length >= 2 && setShowDropdown(true)}
             className="text-dark focus:border-primary dark:border-dark-3 dark:bg-dark-2 w-full rounded border border-gray-200 bg-white px-4 py-2 focus:outline-none dark:text-white"
           />
           <svg
@@ -89,6 +142,39 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
               strokeLinecap="round"
             />
           </svg>
+          {isSearching && (
+            <div className="absolute top-1/2 right-10 -translate-y-1/2">
+              <div className="border-primary h-4 w-4 animate-spin rounded-full border-2 border-t-transparent"></div>
+            </div>
+          )}
+          {showDropdown && searchResults.length > 0 && (
+            <div className="dark:bg-dark-2 absolute z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
+              {searchResults.map((result) => (
+                <button
+                  key={result.slug}
+                  onClick={() => handleResultClick(result.slug)}
+                  className="dark:hover:bg-dark-3 w-full px-4 py-3 text-left hover:bg-gray-100"
+                >
+                  <div className="text-dark font-medium dark:text-white">
+                    {result.title}
+                  </div>
+                  <div className="line-clamp-1 text-sm text-gray-500">
+                    {result.excerpt || result.content.slice(0, 100)}
+                  </div>
+                  <div className="mt-1 flex gap-1">
+                    {result.tags?.slice(0, 3).map((tag) => (
+                      <span
+                        key={tag}
+                        className="dark:bg-dark-3 rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600 dark:text-gray-400"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
