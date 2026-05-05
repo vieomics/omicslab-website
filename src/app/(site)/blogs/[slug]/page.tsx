@@ -134,9 +134,10 @@ export default async function Post({ params }: Props) {
                     <Image
                       src={authorImage}
                       alt={author}
-                      className="w-full"
+                      className="h-full w-full object-cover"
                       width={40}
                       height={40}
+                      unoptimized
                     />
                   </div>
                   <div className="flex flex-col">
