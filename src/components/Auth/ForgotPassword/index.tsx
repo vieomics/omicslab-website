@@ -46,12 +46,12 @@ const ForgotPassword = () => {
   };
 
   return (
-    <section className="bg-[#F4F7FF] py-14 dark:bg-dark lg:py-20">
+    <section className="dark:bg-dark bg-[#F4F7FF] py-14 lg:py-20">
       <div className="container">
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div
-              className="wow fadeInUp relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white px-8 py-14 text-center dark:bg-dark-2 sm:px-12 md:px-[60px]"
+              className="wow fadeInUp dark:bg-dark-2 relative mx-auto max-w-[525px] overflow-hidden rounded-lg bg-white px-8 py-14 text-center sm:px-12 md:px-[60px]"
               data-wow-delay=".15s"
             >
               <div className="mb-10 text-center">
@@ -59,15 +59,15 @@ const ForgotPassword = () => {
                   <Image
                     src="/images/logo/logo.svg"
                     alt="logo"
-                    width={140}
-                    height={30}
+                    width={5}
+                    height={5}
                     className="dark:hidden"
                   />
                   <Image
                     src="/images/logo/logo-white.svg"
                     alt="logo"
-                    width={140}
-                    height={30}
+                    width={5}
+                    height={5}
                     className="hidden dark:block"
                   />
                 </Link>
@@ -82,13 +82,13 @@ const ForgotPassword = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
-                    className="w-full rounded-md border border-stroke bg-transparent px-5 py-3 text-base text-dark outline-none transition placeholder:text-dark-6 focus:border-primary focus-visible:shadow-none dark:border-dark-3 dark:text-white dark:focus:border-primary"
+                    className="border-stroke text-dark placeholder:text-dark-6 focus:border-primary dark:border-dark-3 dark:focus:border-primary w-full rounded-md border bg-transparent px-5 py-3 text-base transition outline-none focus-visible:shadow-none dark:text-white"
                   />
                 </div>
                 <div className="">
                   <button
                     type="submit"
-                    className="flex w-full cursor-pointer items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-base text-white transition duration-300 ease-in-out hover:bg-blue-dark"
+                    className="border-primary bg-primary hover:bg-blue-dark flex w-full cursor-pointer items-center justify-center rounded-md border px-5 py-3 text-base text-white transition duration-300 ease-in-out"
                   >
                     Send Email {loader && <Loader />}
                   </button>
@@ -96,7 +96,7 @@ const ForgotPassword = () => {
               </form>
 
               <div>
-                <span className="absolute right-1 top-1">
+                <span className="absolute top-1 right-1">
                   <svg
                     width="40"
                     height="40"

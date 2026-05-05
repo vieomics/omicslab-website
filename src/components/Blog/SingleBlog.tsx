@@ -4,34 +4,53 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
-  const { title, coverImage, excerpt, date, slug } = blog;
+  const { title, coverImage, excerpt, date, slug, author, authorData } = blog;
 
   return (
     <div className="wow fadeInUp group mb-10" data-wow-delay=".1s">
       <div className="mb-8 overflow-hidden rounded">
         <Link href={`/blogs/${slug}`} aria-label="blog cover" className="block">
           <Image
-            src={coverImage!}
+            src={coverImage || "/images/blog/placeholder.jpg"}
             alt="image"
-            className="w-full transition group-hover:rotate-6 group-hover:scale-125"
+            className="w-full transition group-hover:scale-125 group-hover:rotate-6"
             width={408}
             height={272}
           />
         </Link>
       </div>
       <div>
-        <span className="mb-5 inline-block rounded bg-primary px-4 py-1 text-center text-xs font-semibold leading-loose text-white">
-          {format(new Date(date), "dd MMM yyyy")}
+        <div className="mb-4 flex items-center gap-3">
+          {authorData?.image_url && (
+            <Image
+              src={authorData.image_url}
+              alt={authorData.name}
+              width={32}
+              height={32}
+              className="rounded-full"
+            />
+          )}
+          <span className="text-dark text-sm font-medium dark:text-white">
+            {authorData?.name || author || "Anonymous"}
+          </span>
+          {authorData?.title && (
+            <span className="text-xs text-gray-500 dark:text-gray-400">
+              • {authorData.title}
+            </span>
+          )}
+        </div>
+        <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
+          {date ? format(new Date(date), "dd MMM yyyy") : "No date"}
         </span>
         <h3>
           <Link
             href={`/blogs/${slug}`}
-            className="mb-4 inline-block text-xl font-semibold text-dark hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl lg:text-xl xl:text-2xl"
+            className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
           >
             {title}
           </Link>
         </h3>
-        <p className="text-base text-body-color dark:text-dark-6">{excerpt}</p>
+        <p className="text-body-color dark:text-dark-6 text-base">{excerpt}</p>
       </div>
     </div>
   );

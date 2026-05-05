@@ -1,7 +1,7 @@
 export default function Head() {
   return (
     <>
-      <title>Otech - Omics Technology</title>
+      <title>Omicslab - Omics Technology</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       <meta
         name="description"
