@@ -403,11 +403,7 @@ body {
 
 .blog-details,
 .blog-details p {
-  @apply text-body-color dark:text-dark-6 text-base leading-relaxed;
-}
-
-.blog-details p {
-  @apply mb-8;
+  @apply dark:text-dark-6 mb-8 text-base leading-relaxed text-gray-900;
 }
 
 .blog-details strong {
@@ -506,8 +502,38 @@ body {
   @apply text-blue-400;
 }
 
+.blog-details .admonition::before {
+  @apply mb-2 block text-lg font-semibold uppercase;
+  content: attr(data-admonition-title);
+}
+
+.blog-details .admonition[data-admonition-type="tip"]::before {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.blog-details .admonition[data-admonition-type="note"]::before,
+.blog-details .admonition[data-admonition-type="info"]::before {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.blog-details .admonition[data-admonition-type="warning"]::before {
+  @apply text-yellow-600 dark:text-yellow-400;
+}
+
+.blog-details .admonition[data-admonition-type="danger"]::before {
+  @apply text-red-600 dark:text-red-400;
+}
+
+.blog-details .admonition[data-admonition-type="caution"]::before {
+  @apply text-orange-600 dark:text-orange-400;
+}
+
+.blog-details .admonition[data-admonition-type="important"]::before {
+  @apply text-purple-600 dark:text-purple-400;
+}
+
 .blog-details .admonition {
-  @apply my-6 rounded-lg border-l-4 p-4;
+  @apply my-4 rounded-lg border-l-4 p-3;
 }
 
 .blog-details .admonition-title {

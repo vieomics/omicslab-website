@@ -4,43 +4,78 @@ import { join } from "path";
 
 const postsDirectory = join(process.cwd(), "markdown/blogs");
 
-export function getPostSlugs() {
-  return fs
-    .readdirSync(postsDirectory)
-    .filter((file) => file.endsWith(".md") || file.endsWith(".mdx"));
+interface PostFile {
+  slug: string;
+  folderPath: string;
+  fileName: string;
+}
+
+function getPostFiles(): PostFile[] {
+  const files: PostFile[] = [];
+
+  function scanDirectory(dir: string) {
+    const entries = fs.readdirSync(dir, { withFileTypes: true });
+    for (const entry of entries) {
+      const fullPath = join(dir, entry.name);
+      if (entry.isDirectory()) {
+        scanDirectory(fullPath);
+      } else if (entry.name.endsWith(".md") || entry.name.endsWith(".mdx")) {
+        const relativePath = fullPath.replace(postsDirectory + "/", "");
+        const folderPath = relativePath
+          .replace(/\.mdx?$/, "")
+          .replace(/\/[^/]+$/, "");
+        const slug = entry.name.replace(/\.mdx?$/, "");
+        files.push({ slug, folderPath, fileName: entry.name });
+      }
+    }
+  }
+
+  scanDirectory(postsDirectory);
+  return files;
+}
+
+export function getPostSlugs(): string[] {
+  const slugs: string[] = [];
+  const postFiles = getPostFiles();
+
+  for (const file of postFiles) {
+    const fullPath = join(postsDirectory, file.folderPath, file.fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+    if (data.slug) {
+      slugs.push(data.slug);
+    } else {
+      slugs.push(file.slug);
+    }
+  }
+
+  return slugs;
 }
 
 export function getPostBySlug(slug: string, fields: string[] = []) {
   const realSlug = slug.replace(/\.mdx?$/, "");
-  const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const altFullPath = join(postsDirectory, `${realSlug}.mdx`);
+  const postFiles = getPostFiles();
 
-  let fileContents: string = "";
-  let fileName = "";
+  let postFile = postFiles.find((f) => f.slug === realSlug);
 
-  if (fs.existsSync(fullPath)) {
-    fileContents = fs.readFileSync(fullPath, "utf8");
-    fileName = `${realSlug}.md`;
-  } else if (fs.existsSync(altFullPath)) {
-    fileContents = fs.readFileSync(altFullPath, "utf8");
-    fileName = `${realSlug}.mdx`;
-  } else {
-    const slugs = getPostSlugs();
-    for (const file of slugs) {
-      const filePath = join(postsDirectory, file);
-      const content = fs.readFileSync(filePath, "utf8");
-      const { data } = matter(content);
+  if (!postFile) {
+    for (const file of postFiles) {
+      const fullPath = join(postsDirectory, file.folderPath, file.fileName);
+      const fileContents = fs.readFileSync(fullPath, "utf8");
+      const { data } = matter(fileContents);
       if (data.slug === realSlug) {
-        fileContents = content;
-        fileName = file;
+        postFile = file;
         break;
       }
     }
-    if (!fileContents) {
-      return null;
-    }
   }
 
+  if (!postFile) {
+    return null;
+  }
+
+  const fullPath = join(postsDirectory, postFile.folderPath, postFile.fileName);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
   type Items = {
@@ -49,12 +84,23 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 
   const items: Items = {};
 
-  function processContent(content: string) {
+  function parseDateFromFileName(fileName: string): Date | null {
+    const match = fileName.match(/^(\d{4}-\d{2}-\d{2})/);
+    if (match) {
+      const date = new Date(match[1]);
+      if (!isNaN(date.getTime())) {
+        return date;
+      }
+    }
+    return null;
+  }
+
+  function processContent(content: string, folderPath: string) {
     let processed = content.replace(/<!--truncate-->/g, "");
     processed = processed.replace(/!\[.*?\]\((.*?)\)/g, (match, path) => {
       let fixedPath = path;
       if (!path.startsWith("/") && !path.startsWith("http")) {
-        fixedPath = "/images/blog/" + path.replace(/^\.\//, "");
+        fixedPath = `/api/markdown-blogs/${folderPath}/${path.replace(/^\.\//, "")}`;
       }
       return `<img src="${fixedPath}" alt="" />`;
     });
@@ -68,7 +114,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
         if (imgMatch) {
           let src = imgMatch[1];
           if (!src.startsWith("/") && !src.startsWith("http")) {
-            src = "/images/blog/" + src.replace(/^\.\//, "");
+            src = `/api/markdown-blogs/${folderPath}/${src.replace(/^\.\//, "")}`;
           }
           let html = `<figure><img src="${src}" alt="" />`;
           if (captionMatch) {
@@ -84,10 +130,16 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   }
 
   const postSlug = data.slug || realSlug;
-  let postDate = data.date ? new Date(data.date) : new Date();
-  if (isNaN(postDate.getTime())) {
+  const folderPath = postFile.folderPath;
+
+  let postDate = data.date ? new Date(data.date) : null;
+  if (!postDate || isNaN(postDate.getTime())) {
+    postDate = parseDateFromFileName(postFile.fileName);
+  }
+  if (!postDate || isNaN(postDate.getTime())) {
     postDate = new Date();
   }
+
   const authorName = Array.isArray(data.authors)
     ? data.authors[0]
     : data.authors || "Anonymous";
@@ -98,7 +150,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       : [];
 
   const imagePath = data.image
-    ? "/images/blog/" + data.image.replace(/^\.\//, "")
+    ? `/api/markdown-blogs/${folderPath}/${data.image.replace(/^\.\//, "")}`
     : null;
 
   fields.forEach((field) => {
@@ -106,10 +158,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       items[field] = postSlug;
     }
     if (field === "content") {
-      items[field] = processContent(content);
+      items[field] = processContent(content, folderPath);
     }
     if (field === "date") {
-      items[field] = postDate.toISOString();
+      items[field] = postDate?.toISOString();
     }
     if (field === "author") {
       items[field] = authorName;
@@ -140,17 +192,26 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
 }
 
 export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs();
-  const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
-    .filter((post): post is PostItems => post !== null)
-    .sort((post1, post2) => {
-      const date1 = new Date(post1.date as string);
-      const date2 = new Date(post2.date as string);
-      return date2.getTime() - date1.getTime();
-    });
+  const postFiles = getPostFiles();
+  const posts: PostItems[] = [];
 
-  return posts;
+  for (const file of postFiles) {
+    const fullPath = join(postsDirectory, file.folderPath, file.fileName);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data } = matter(fileContents);
+    const slug = data.slug || file.slug;
+
+    const post = getPostBySlug(slug, fields);
+    if (post) {
+      posts.push(post);
+    }
+  }
+
+  return posts.sort((post1, post2) => {
+    const date1 = new Date(post1.date as string);
+    const date2 = new Date(post2.date as string);
+    return date2.getTime() - date1.getTime();
+  });
 }
 
 export function getAllTags(): string[] {

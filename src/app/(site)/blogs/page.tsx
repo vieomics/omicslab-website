@@ -1,6 +1,6 @@
 import BlogList from "@/components/Blog/BlogList";
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import { getAllPosts, getAllTags } from "@/utils/markdown";
+import { getAuthors } from "@/utils/authors";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,14 +16,21 @@ const Blog = () => {
     "coverImage",
     "slug",
     "tags",
+    "author",
   ]);
   const allTags = getAllTags();
+  const authors = getAuthors();
+
+  const postsWithAuthorData = posts.map((post: any) => ({
+    ...post,
+    authorData: post.author ? authors[post.author] || null : null,
+  }));
 
   return (
     <>
       <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
         <div className="container">
-          <BlogList posts={posts} allTags={allTags} />
+          <BlogList posts={postsWithAuthorData} allTags={allTags} />
         </div>
       </section>
     </>
