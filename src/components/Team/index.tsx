@@ -34,7 +34,7 @@ const Team = () => {
               className="flex flex-col items-center gap-8 md:flex-row"
             >
               <div className="w-full md:w-1/3">
-                <div className="mx-auto w-[150px]">
+                <div className="mx-auto w-[280px]">
                   <SingleTeam team={member} />
                 </div>
               </div>
