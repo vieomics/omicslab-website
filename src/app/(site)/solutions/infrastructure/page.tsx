@@ -2,6 +2,11 @@ import { Metadata } from "next";
 import Link from "next/link";
 import Contact from "@/components/Contact";
 import OfferList from "@/components/Pricing/OfferList";
+import BlogListWithFilter, {
+  BlogPost,
+} from "@/components/Blog/BlogListWithFilter";
+import { getAllPosts } from "@/utils/markdown";
+import { getAuthorByKey } from "@/utils/authors";
 
 export const metadata: Metadata = {
   title: "Infrastructure as a Service | GiangLabs",
@@ -10,6 +15,32 @@ export const metadata: Metadata = {
 };
 
 export default function InfrastructurePage() {
+  const allPosts = getAllPosts([
+    "title",
+    "slug",
+    "date",
+    "description",
+    "coverImage",
+    "tags",
+    "author",
+  ]);
+  const infraPosts = allPosts.filter(
+    (post) =>
+      (post.tags as string[])?.includes("HPC") ||
+      (post.tags as string[])?.includes("infrastructure"),
+  );
+
+  const getAuthorData = (authorKey: string | undefined) => {
+    if (!authorKey) return null;
+    const author = getAuthorByKey(authorKey);
+    if (!author) return null;
+    return {
+      name: author.name,
+      title: author.title,
+      image_url: author.image_url,
+    };
+  };
+
   return (
     <div className="container mt-16 py-20">
       <h1 className="mb-8 text-4xl font-bold">Infrastructure as a Service</h1>
@@ -31,65 +62,34 @@ export default function InfrastructurePage() {
       </div>
 
       {/* Related HPC Blog Posts */}
-      <section className="mb-16">
-        <h2 className="mb-6 text-2xl font-semibold">
-          Building Your Own HPC Cluster
-        </h2>
-        <p className="mb-6 text-gray-600 dark:text-gray-400">
-          Technical guides for setting up and managing HPC infrastructure. Each
-          guide can be customized to your specific requirements.
-        </p>
-        <div className="space-y-4">
-          <Link
-            href="/blogs/how-to-build-slurm-hpc-part-1"
-            className="group flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-          >
-            <span className="shrink-0 rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              Part 1
-            </span>
-            <div>
-              <h3 className="font-semibold group-hover:text-blue-600">
-                Single Node Setup
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Build a complete Slurm cluster on a single machine.
-              </p>
-            </div>
-          </Link>
-          <Link
-            href="/blogs/how-to-build-slurm-hpc-part-2"
-            className="group flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-          >
-            <span className="shrink-0 rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              Part 2
-            </span>
-            <div>
-              <h3 className="font-semibold group-hover:text-blue-600">
-                Production Scaling
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Scale to multi-node cluster with Ansible automation.
-              </p>
-            </div>
-          </Link>
-          <Link
-            href="/blogs/how-to-build-slurm-hpc-part-3"
-            className="group flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
-          >
-            <span className="shrink-0 rounded bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800 dark:bg-blue-900 dark:text-blue-200">
-              Part 3
-            </span>
-            <div>
-              <h3 className="font-semibold group-hover:text-blue-600">
-                Administration &amp; Best Practices
-              </h3>
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                HPC cluster management and monitoring.
-              </p>
-            </div>
-          </Link>
-        </div>
-      </section>
+      {infraPosts.length > 0 && (
+        <section className="mb-16">
+          <h2 className="mb-6 text-2xl font-semibold">Infrastructure Guides</h2>
+          <p className="mb-6 text-gray-600 dark:text-gray-400">
+            Technical guides for setting up and managing HPC infrastructure.
+            Each guide can be customized to your specific requirements.
+          </p>
+          <BlogListWithFilter
+            posts={infraPosts.map((post) => {
+              const authorKey = post.author as string | undefined;
+              const authorData = getAuthorData(authorKey);
+              return {
+                title: post.title as string,
+                slug: post.slug as string,
+                date: post.date as string,
+                description: post.description as string,
+                coverImage: post.coverImage as string | null,
+                tags: (post.tags as string[]) || [],
+                author: post.author as string,
+                authorData,
+              };
+            })}
+            layout="grid"
+            searchPlaceholder="Search infrastructure blogs..."
+            className="grid gap-6 md:grid-cols-3"
+          />
+        </section>
+      )}
 
       <section className="mb-16">
         <h2 className="mb-6 text-2xl font-semibold">
