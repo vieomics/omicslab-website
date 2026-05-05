@@ -13,22 +13,27 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
           <Image
             src={coverImage || "/images/blog/placeholder.jpg"}
             alt="image"
-            className="w-full transition group-hover:scale-125 group-hover:rotate-6"
+            className="h-[225px] w-full object-cover transition group-hover:scale-125 group-hover:rotate-6"
             width={408}
-            height={272}
+            height={225}
           />
         </Link>
       </div>
       <div>
         <div className="mb-4 flex items-center gap-3">
-          {authorData?.image_url && (
-            <Image
-              src={authorData.image_url}
-              alt={authorData.name}
-              width={32}
-              height={32}
-              className="rounded-full"
-            />
+          {authorData?.image_url ? (
+            <div className="h-8 w-8 overflow-hidden rounded-full">
+              <Image
+                src={authorData.image_url}
+                alt={authorData.name}
+                width={32}
+                height={32}
+                className="h-full w-full object-cover"
+                unoptimized
+              />
+            </div>
+          ) : (
+            <div className="h-8 w-8 rounded-full bg-gray-300" />
           )}
           <span className="text-dark text-sm font-medium dark:text-white">
             {authorData?.name || author || "Anonymous"}

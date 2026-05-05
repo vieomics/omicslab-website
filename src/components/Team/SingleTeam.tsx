@@ -7,13 +7,13 @@ const SingleTeam = ({ team }: { team: TeamType }) => {
     team;
   return (
     <div>
-      <div className="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
+      <div className="relative z-10 mx-auto mb-5 h-[240px] w-[240px]">
         <Image
           src={image}
           alt={name}
-          className="w-full rounded-full"
-          width={120}
-          height={120}
+          className="h-full w-full rounded-full object-cover"
+          width={240}
+          height={240}
         />
         <span className="bg-secondary absolute bottom-0 left-0 -z-10 h-10 w-10 rounded-full opacity-0 transition-all group-hover:opacity-100"></span>
         <span className="absolute top-0 right-0 -z-10 opacity-0 transition-all group-hover:opacity-100">
