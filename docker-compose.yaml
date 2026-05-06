@@ -1,42 +1,42 @@
 services:
   omicslab:
     build: .
-    container_name: omicslab-web
-    expose:
-      - "3000"
+    container_name: omicslab-app
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.omicslab.rule=Host(`${DOMAIN}`)"
       - "traefik.http.routers.omicslab.entrypoints=websecure"
+      - "traefik.http.routers.omicslab.tls=true"
       - "traefik.http.routers.omicslab.tls.certresolver=myresolver"
+      - "traefik.http.routers.omicslab.tls.domains=omicslab.io,www.omicslab.io"
       - "traefik.http.services.omicslab.loadbalancer.server.port=3000"
-    environment:
-      - NODE_ENV=production
-      - DATABASE_URL=${DATABASE_URL}
-      - NEXTAUTH_URL=${NEXTAUTH_URL}
-      - NEXTAUTH_SECRET=${NEXTAUTH_SECRET}
-    restart: unless-stopped
-    volumes:
-      - ./traefik/dynamic:/etc/traefik/dynamic:ro
+      - "traefik.docker.network=traefik-public"
+    networks:
+      - traefik-public
     depends_on:
       - traefik
 
   traefik:
     image: traefik:v3.5
     container_name: omicslab-traefik
+    restart: unless-stopped
+    env_file:
+      - .env
     ports:
       - "80:80"
       - "443:443"
-    environment:
-      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
-      - acme:/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
       - ./traefik/dynamic:/etc/traefik/dynamic:ro
-    depends_on:
-      - omicslab
-    restart: unless-stopped
+      - ./traefik/acme.json:/letsencrypt/acme.json
 
-volumes:
-  acme:
+networks:
+  traefik-public:
+    name: traefik-public
+    driver: bridge

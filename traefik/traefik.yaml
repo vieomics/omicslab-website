@@ -12,11 +12,14 @@ providers:
     watch: true
 
 log:
-  level: INFO
+  level: DEBUG
 
 certificatesResolvers:
   myresolver:
     acme:
-      email: "${LETSENCRYPT_EMAIL}"
+      email: "admin@omicslab.io"
       storage: "/letsencrypt/acme.json"
-      tlsChallenge: true
+      httpChallenge:
+        entryPoint: web
+      tlsChallenge:
+        enabled: false
