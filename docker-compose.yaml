@@ -14,7 +14,7 @@ services:
       - "traefik.http.routers.omicslab.tls=true"
       - "traefik.http.routers.omicslab.tls.certresolver=myresolver"
       - "traefik.http.routers.omicslab.tls.domains=omicslab.io,www.omicslab.io"
-      - "traefik.http.services.omicslab.loadbalancer.server.port=3000"
+      - "traefik.http.services.omicslab.loadbalancer.server.port=8000"
       - "traefik.docker.network=traefik-public"
     networks:
       - traefik-public
@@ -22,7 +22,7 @@ services:
       - traefik
 
   traefik:
-    image: traefik:v3.5
+    image: traefik:v2.10
     container_name: omicslab-traefik
     restart: unless-stopped
     env_file:
@@ -35,6 +35,8 @@ services:
       - ./traefik/traefik.yaml:/etc/traefik/traefik.yaml:ro
       - ./traefik/dynamic:/etc/traefik/dynamic:ro
       - ./traefik/acme.json:/letsencrypt/acme.json
+    networks:
+      - traefik-public
 
 networks:
   traefik-public:

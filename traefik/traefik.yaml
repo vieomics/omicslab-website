@@ -9,7 +9,6 @@ providers:
     exposedByDefault: false
   file:
     directory: /etc/traefik/dynamic
-    watch: true
 
 log:
   level: DEBUG
@@ -21,5 +20,3 @@ certificatesResolvers:
       storage: "/letsencrypt/acme.json"
       httpChallenge:
         entryPoint: web
-      tlsChallenge:
-        enabled: false
