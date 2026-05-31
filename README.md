@@ -1,118 +1,107 @@
-Play Next.js is a free and **Open-source SaaS starter kit and boilerplate, designed and built for SaaS startups**, apps, businesses, and more. With its premium design and essential UI components and pages, it provides everything you need to kickstart a feature-rich SaaS website.
+# Omicslab Website
 
-[![Play Next.js](https://github.com/NextJSTemplates/play-nextjs/blob/main/nextjs-play.png)](https://play.nextjstemplates.com)
+Static website for [Omicslab](https://omicslab.io) — innovative bioinformatics solutions for researchers. Built with Next.js, deployed as fully static HTML.
 
-## Free SaaS Boilerplate and Starter Kit for Next.js 🚀
+## Tech Stack
 
-Play Next.js SaaS Boilerplate and Starter Kit is a free, open-source solution ideal for startups, SaaS companies, and more. It offers essential UI components, authentication and database integration, and Stripe integration. Its superior design and functionality make it a go-to choice for launching a feature-rich SaaS website efficiently.
+- **Next.js 16** (App Router, `output: "export"`)
+- **React 19** / TypeScript
+- **Tailwind CSS v4** + TailGrids components
+- **Markdown** blogs with gray-matter, unified/remark/rehype pipeline
+- **Fuse.js** client-side search with build-time index
 
-### [🚀 View Live Demo](https://play.nextjstemplates.com/)
+## Getting Started
 
-### [🔌 Documentation](https://nextjstemplates.com/docs)
+```bash
+npm install
+npm run dev       # development server on :3000
+npm run build     # static export to out/
+npm run preview   # serve out/ locally on :3000
+```
 
-### All Essential Integrations - DB, Auth, Payment, MDX, and more ⚡
+## Project Structure
 
-Play Next.js SaaS Starter kit includes all the key integrations required to build a fully functional SaaS platform.
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── (site)/             # Public site route group
+│   │   ├── about/          # About page
+│   │   ├── blogs/          # Blog listing + [slug]
+│   │   ├── contact/        # Contact page
+│   │   ├── pricing/        # Pricing page
+│   │   └── solutions/      # Infrastructure, Data Platform, Pipelines
+│   ├── layout.tsx          # Root layout (Header + Footer)
+│   ├── page.tsx            # Homepage
+│   └── providers.tsx       # ThemeProvider + Toaster
+├── components/             # React components
+│   ├── Header/             # Navigation with dropdown
+│   ├── Blog/               # Blog cards, search, TOC, etc.
+│   ├── About/ Hero/ Services/ Contact/ Pricing/
+│   ├── Faq/ Team/ CallToAction/
+│   └── Common/             # SectionTitle, Breadcrumb, etc.
+├── utils/
+│   ├── markdown.ts         # Read & parse blog markdown files
+│   ├── markdownToHtml.ts   # remark/rehype MD→HTML pipeline
+│   ├── authors.ts          # Authors YAML parser
+│   ├── toc.ts              # Table of contents extraction
+│   └── search.ts           # Fuse.js search (legacy, replaced)
+├── types/                  # TypeScript interfaces
+└── styles/                 # Global CSS
+markdown/
+├── authors.yml             # Author definitions
+└── blogs/                  # Blog posts in YYYY-MM/ directories
+    ├── 2026-01/
+    └── 2026-05/
+scripts/
+└── build-search-index.js   # Generates public/search-index.json at build
+public/
+├── images/                 # Static images, logos, team photos
+└── search-index.json       # Generated at build time (gitignored)
+```
 
-- **PostgreSQL for Database**: Comes with PostgreSQL integration with Prisma which is a powerful and open-source relational database system ensures data integrity and reliability.
+## Blog System
 
-- **NextAuth for Authentication**: Play Next.js utilizes NextAuth, a versatile solution that provides secure login and user management.
+Blog posts are plain Markdown files in `markdown/blogs/YYYY-MM/` with YAML frontmatter:
 
-- **MDX for Blogs**: MDX uniquely combines Markdown and JSX, Play Next.js comes with complete blogging solution to create and maintain blog using MDX.
-
-- **Stripe for Subscription Payments**: Stripe, a globally trusted payment processing platform, offers robust security features and smooth checkout experiences.
-
-These integrations work together to simplify development and enhance the user experience.
-
-### Essential SaaS Pages & Components and Styled Using Tailwind CSS 🎨
-
-This Next.js SaaS Boilerplate and Starter Kit is **styled using Tailwind CSS**, a highly flexible and customizable utility-first CSS framework. Leveraging the power of Tailwind, each component and page of this kit, including **login, signup, blog, about, and others, has been handcrafted to offer top-notch aesthetics** while maintaining peak usability.
-
-### Crafted Using [🎨 TailGrids Components](https://tailgrids.com)
-
-Play Next.js SaaS boilerplate, you can enjoy a professional-looking website that offers seamless operation, all while significantly reducing your web development time and effort.
-
+```yaml
 ---
-
-### 🚀 Deploy Now
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FNextJSTemplates%2Fplay-nextjs)
-
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/NextJSTemplates/play-nextjs)
-
-### Setup Instructions
-
-Follow these steps to set up and run this template on your local machine:
-
-1. Begin by downloading and extracting the template from **Next.js Templates**.
-
-2. Once you've done that, navigate into the template directory using the **cd** command.
-
-3. Install the necessary dependencies by running the following commands:
-
-```bash
-    npm install --legacy-peer-deps
+slug: my-post-slug
+title: My Post Title
+description: A brief description
+authors: [river]
+tags: [pipeline, hpc]
+image: ./imgs/cover.svg
+---
 ```
 
-**Note:** As of right now React 19 causes peer dependencies issues with some packages, so the `legacy-peer-deps` flag is required.
+Features:
+- GFM tables, code blocks, admonitions (`:::info`, `:::warning`, `:::tip`, etc.)
+- Syntax highlighting via rehype-highlight + prismjs
+- Author data from `markdown/authors.yml`
+- Client-side search with Fuse.js index built at build time
+- All blog posts prerendered as static HTML via `generateStaticParams()`
 
-4. Now you're ready to start the project on your local server. Use the following command to get it up and running:
+## Static Export
 
+The site is configured with `output: "export"`. All pages (including blog posts) are prerendered at build time. No server, no database, no API routes needed.
+
+To serve the output:
 ```bash
-    npm run dev
+npm run build
+npm run preview   # node server.js → http://localhost:3000
 ```
 
-This will launch the template on [localhost:3000](http://localhost:3000).
+Or deploy `out/` to any static host (Netlify, Vercel, GitHub Pages, S3 + CloudFront, Nginx).
 
-Our comprehensive documentation includes all the guides you'll need for integrating various features.
+## Docker
 
-### Deployment on PaaS
+```bash
+docker build -t omicslab-website .
+docker run -p 80:80 omicslab-website
+```
 
-If your project is hosted on a GitHub repository, you can deploy it using free and user-friendly platforms like [Vercel](https://vercel.com/) or [Netlify](https://netlify.com/). Both provide generous free tiers for hosting Next.js projects.
+Uses multi-stage build: Node.js builder → Nginx Alpine serving `out/`.
 
-### License Information
+## License
 
-Play is Free is completely free and open-source. Feel free to use it for both personal and commercial projects.
-
-### Show Your Support
-
-If you appreciate this project, please consider starring this repository. Your support encourages our team to continue creating more content like this and helps us to reach more users like you!
-
-## Explore More Templates
-
-For a wider range of options, feel free to browse our collection of [Next.js Templates, Boilerplates and Starter Kits](https://nextjstemplates.com/templates).
-
-### Update Log
-
-**03 December 2025** - v2.2.2
-
-- Upgraded to Next.js 16
-- Update prisma latest version
-- Updated tailwindcss latest version
-
-**06 August 2025** - v2.2.1
-
-- fix: [#21](https://github.com/NextJSTemplates/play-nextjs/issues/21) - Moved context providers to `/src/app/providers.tsx`
-- Removed initial loader
-
-**10 April 2025**
-
-- Fix peer deps issue
-- Update Next.js for security patch
-
-**29 Jan 2025**
-
-- Upgraded to Next.js 15
-- Using `Link` instead of `a` tag
-- Fixed all minor bugs
-
-**21 March 2024**
-
-- Upgraded to Next.js 14
-- Updated stripe integration
-- Fixed auth issues
-- Updated all the packages
-- Update ts config & fix all the issues
-- Update signin & signup page Design
-- Integrated Magic link signin
-- & Forgot password
+MIT — free for personal and commercial use.
