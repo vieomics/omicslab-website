@@ -3,14 +3,16 @@
 import { useState, useMemo, useEffect, useCallback } from "react";
 import { Blog } from "@/types/blog";
 import SingleBlog from "./SingleBlog";
+import Fuse from "fuse.js";
 
-interface SearchResult {
+interface SearchIndexItem {
   slug: string;
   title: string;
   excerpt: string;
   content: string;
   tags: string[];
   date: string;
+  coverImage: string | null;
 }
 
 interface BlogListProps {
@@ -21,64 +23,47 @@ interface BlogListProps {
 const BlogList = ({ posts, allTags }: BlogListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
-  const [isSearching, setIsSearching] = useState(false);
+  const [searchResults, setSearchResults] = useState<SearchIndexItem[]>([]);
   const [showDropdown, setShowDropdown] = useState(false);
-
-  const debounce = <T extends (...args: any[]) => any>(
-    func: T,
-    wait: number,
-  ) => {
-    let timeout: NodeJS.Timeout;
-    return (...args: Parameters<T>) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), wait);
-    };
-  };
-
-  const performSearch = useCallback(
-    debounce(async (query: string) => {
-      if (!query || query.length < 2) {
-        setSearchResults([]);
-        setIsSearching(false);
-        return;
-      }
-
-      setIsSearching(true);
-      try {
-        const response = await fetch(
-          `/api/search?q=${encodeURIComponent(query)}&limit=10`,
-        );
-        const data = await response.json();
-        setSearchResults(data.results || []);
-      } catch (error) {
-        console.error("Search error:", error);
-        setSearchResults([]);
-      } finally {
-        setIsSearching(false);
-      }
-    }, 300),
-    [],
-  );
+  const [fuse, setFuse] = useState<Fuse<SearchIndexItem> | null>(null);
 
   useEffect(() => {
-    if (searchQuery.length >= 2) {
-      setShowDropdown(true);
-      performSearch(searchQuery);
-    } else {
+    fetch("/search-index.json")
+      .then((res) => res.json())
+      .then((data: SearchIndexItem[]) => {
+        const index = new Fuse(data, {
+          keys: [
+            { name: "title", weight: 0.4 },
+            { name: "content", weight: 0.3 },
+            { name: "tags", weight: 0.2 },
+            { name: "excerpt", weight: 0.1 },
+          ],
+          threshold: 0.3,
+          ignoreLocation: true,
+          minMatchCharLength: 2,
+        });
+        setFuse(index);
+      })
+      .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    if (!fuse || !searchQuery || searchQuery.length < 2) {
       setSearchResults([]);
       setShowDropdown(false);
+      return;
     }
-  }, [searchQuery, performSearch]);
+
+    const results = fuse.search(searchQuery, { limit: 10 });
+    setSearchResults(results.map((r) => r.item));
+    setShowDropdown(true);
+  }, [searchQuery, fuse]);
 
   const filteredPosts = useMemo(() => {
-    let result = posts;
-
     if (selectedTag) {
-      result = result.filter((post) => post.tags?.includes(selectedTag));
+      return posts.filter((post) => post.tags?.includes(selectedTag));
     }
-
-    return result;
+    return posts;
   }, [posts, selectedTag]);
 
   const handleResultClick = (slug: string) => {
@@ -142,11 +127,6 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
               strokeLinecap="round"
             />
           </svg>
-          {isSearching && (
-            <div className="absolute top-1/2 right-10 -translate-y-1/2">
-              <div className="border-primary h-4 w-4 animate-spin rounded-full border-2 border-t-transparent"></div>
-            </div>
-          )}
           {showDropdown && searchResults.length > 0 && (
             <div className="dark:bg-dark-2 absolute z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
               {searchResults.map((result) => (
