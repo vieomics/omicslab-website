@@ -100,7 +100,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     processed = processed.replace(/!\[.*?\]\((.*?)\)/g, (match, path) => {
       let fixedPath = path;
       if (!path.startsWith("/") && !path.startsWith("http")) {
-        fixedPath = `/api/markdown-blogs/${folderPath}/${path.replace(/^\.\//, "")}`;
+        fixedPath = `/images/blog-content/${folderPath}/${path.replace(/^\.\//, "")}`;
       }
       return `<img src="${fixedPath}" alt="" />`;
     });
@@ -114,7 +114,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
         if (imgMatch) {
           let src = imgMatch[1];
           if (!src.startsWith("/") && !src.startsWith("http")) {
-            src = `/api/markdown-blogs/${folderPath}/${src.replace(/^\.\//, "")}`;
+            src = `/images/blog-content/${folderPath}/${src.replace(/^\.\//, "")}`;
           }
           let html = `<figure><img src="${src}" alt="" />`;
           if (captionMatch) {
@@ -150,7 +150,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       : [];
 
   const imagePath = data.image
-    ? `/api/markdown-blogs/${folderPath}/${data.image.replace(/^\.\//, "")}`
+    ? `/images/blog-content/${folderPath}/${data.image.replace(/^\.\//, "")}`
     : null;
 
   fields.forEach((field) => {

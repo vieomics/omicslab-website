@@ -1,7 +1,4 @@
-"use client";
 import SectionTitle from "../Common/SectionTitle";
-import PricingBox from "./PricingBox";
-import { pricingData } from "@/stripe/pricingData";
 
 const Pricing = () => {
   return (
@@ -12,17 +9,17 @@ const Pricing = () => {
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Pricing Table"
-            title="Our Pricing Plan"
-            paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+            subtitle="Pricing"
+            title="Contact Us for Pricing"
+            paragraph="We offer customized pricing based on your requirements. Reach out to discuss a plan that fits your needs."
             center
           />
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
-          {pricingData.map((product, i) => (
-            <PricingBox key={i} product={product} />
-          ))}
+        <div className="text-center">
+          <p className="text-body-color dark:text-dark-6 text-base">
+            Our solutions are tailored to your specific bioinformatics needs.
+          </p>
         </div>
       </div>
     </section>
