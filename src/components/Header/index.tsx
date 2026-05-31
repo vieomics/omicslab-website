@@ -1,5 +1,4 @@
 "use client";
-import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -8,8 +7,6 @@ import { useState } from "react";
 import menuData from "./menuData";
 
 const Header = () => {
-  const { data: session } = useSession();
-
   const pathUrl = usePathname();
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -49,7 +46,7 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
+            <div className="flex w-full items-center justify-end px-4">
               <div>
                 <button
                   onClick={navbarToggleHandler}
@@ -204,76 +201,6 @@ const Header = () => {
                     )}
                   </ul>
                 </nav>
-              </div>
-              <div className="hidden items-center justify-end pr-16 sm:flex lg:pr-0">
-                {/* theme toggler - DISABLED */}
-
-                {session?.user ? (
-                  <>
-                    <p
-                      className={`loginBtn px-7 py-3 text-base font-medium ${
-                        !true && pathUrl === "/" ? "text-white" : "text-dark"
-                      }`}
-                    >
-                      {session?.user?.name}
-                    </p>
-                    {pathUrl !== "/" || true ? (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn bg-primary/100 hover:bg-opacity-20 hover:text-dark rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out"
-                      >
-                        Sign Out
-                      </button>
-                    ) : (
-                      <button
-                        onClick={() => signOut()}
-                        className="signUpBtn hover:bg-opacity-100 hover:text-dark rounded-lg bg-white/20 px-6 py-3 text-base font-medium text-white duration-300 ease-in-out"
-                      >
-                        Sign Out
-                      </button>
-                    )}
-                  </>
-                ) : (
-                  <>
-                    {pathUrl !== "/" ? (
-                      <>
-                        <Link
-                          href="/signin"
-                          className="text-dark px-7 py-3 text-base font-medium hover:opacity-70 dark:text-white"
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/signup"
-                          className="bg-primary hover:bg-primary/90 rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out dark:bg-white/10 dark:hover:bg-white/20"
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    ) : (
-                      <>
-                        <Link
-                          href="/signin"
-                          className={`px-7 py-3 text-base font-medium hover:opacity-70 ${
-                            true ? "text-dark dark:text-white" : "text-white"
-                          }`}
-                        >
-                          Sign In
-                        </Link>
-                        <Link
-                          href="/signup"
-                          className={`rounded-lg px-6 py-3 text-base font-medium text-white duration-300 ease-in-out ${
-                            true
-                              ? "bg-primary hover:bg-primary/90 dark:bg-white/10 dark:hover:bg-white/20"
-                              : "bg-white/10 hover:bg-white/20"
-                          }`}
-                        >
-                          Sign Up
-                        </Link>
-                      </>
-                    )}
-                  </>
-                )}
               </div>
             </div>
           </div>

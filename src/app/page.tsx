@@ -1,14 +1,11 @@
 import About from "@/components/About";
 import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
-import Clients from "@/components/Clients";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
-import Pricing from "@/components/Pricing";
 import Services from "@/components/Services";
-import Team from "@/components/Team";
 import { getAllPosts } from "@/utils/markdown";
 import { getAuthors } from "@/utils/authors";
 import { Metadata } from "next";

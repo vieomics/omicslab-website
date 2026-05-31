@@ -3,12 +3,17 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import TableOfContents from "@/components/Blog/TableOfContents";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import CodeBlockWrapper from "@/components/Blog/CodeBlockWrapper";
-import { getAllPosts, getPostBySlug } from "@/utils/markdown";
+import { getAllPosts, getPostBySlug, getPostSlugs } from "@/utils/markdown";
 import { extractHeadings } from "@/utils/toc";
 import markdownToHtml from "@/utils/markdownToHtml";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
+
+export function generateStaticParams() {
+  const slugs = getPostSlugs();
+  return slugs.map((slug) => ({ slug }));
+}
 
 type Props = {
   params: Promise<{ slug: string }>;
