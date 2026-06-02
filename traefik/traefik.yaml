@@ -21,5 +21,3 @@ certificatesResolvers:
       storage: "/letsencrypt/acme.json"
       httpChallenge:
         entryPoint: web
-      tlsChallenge:
-        enabled: false
