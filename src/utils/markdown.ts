@@ -2,7 +2,7 @@ import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
 
-const postsDirectory = join(process.cwd(), "markdown/blogs");
+const postsDirectory = join(process.cwd(), "public/blogs");
 
 interface PostFile {
   slug: string;
@@ -100,7 +100,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     processed = processed.replace(/!\[.*?\]\((.*?)\)/g, (match, path) => {
       let fixedPath = path;
       if (!path.startsWith("/") && !path.startsWith("http")) {
-        fixedPath = `/images/blog-content/${folderPath}/${path.replace(/^\.\//, "")}`;
+        fixedPath = `/blogs/${folderPath}/${path.replace(/^\.\//, "")}`;
       }
       return `<img src="${fixedPath}" alt="" />`;
     });
@@ -114,7 +114,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
         if (imgMatch) {
           let src = imgMatch[1];
           if (!src.startsWith("/") && !src.startsWith("http")) {
-            src = `/images/blog-content/${folderPath}/${src.replace(/^\.\//, "")}`;
+            src = `/blogs/${folderPath}/${src.replace(/^\.\//, "")}`;
           }
           let html = `<figure><img src="${src}" alt="" />`;
           if (captionMatch) {
@@ -150,7 +150,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       : [];
 
   const imagePath = data.image
-    ? `/images/blog-content/${folderPath}/${data.image.replace(/^\.\//, "")}`
+    ? `/blogs/${folderPath}/${data.image.replace(/^\.\//, "")}`
     : null;
 
   fields.forEach((field) => {
