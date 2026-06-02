@@ -21,6 +21,7 @@ npm run dev        # Next.js dev server on :3000
 npm run build      # Generate search index + static export to out/
 npm run preview    # Node.js static server serving out/ on :3000
 npm run lint       # ESLint
+docker compose up -d --build   # Build image and run with traefik on :80/:443
 ```
 
 ## Architecture Rules
@@ -30,6 +31,7 @@ npm run lint       # ESLint
 - No NextAuth, no Stripe, no Nodemailer
 - `src/app/api/` is completely removed
 - All data comes from filesystem at BUILD TIME, not runtime
+- No `.env` file — site name/author are hardcoded constants since the build is fully static and single-brand
 
 ### Blog content flow
 1. Markdown source: `markdown/blogs/YYYY-MM/*.md` with YAML frontmatter
