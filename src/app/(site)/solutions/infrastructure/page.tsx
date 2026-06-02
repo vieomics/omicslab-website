@@ -45,9 +45,6 @@ export default function InfrastructurePage() {
     <div className="container mt-16 py-20">
       <h1 className="mb-8 text-4xl font-bold">Infrastructure as a Service</h1>
       <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
-        <span className="mx-2 inline-block rounded bg-yellow-100 px-2 py-1 text-xs font-semibold text-yellow-800">
-          BETA
-        </span>
         Setup infrastructure to run Nextflow pipelines on-premises or in the
         cloud.
       </p>
