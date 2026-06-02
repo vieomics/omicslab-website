@@ -34,7 +34,7 @@ docker compose up -d --build   # Build image and run with traefik on :80/:443
 - No `.env` file — site name/author are hardcoded constants since the build is fully static and single-brand
 
 ### Blog content flow
-1. Markdown source: `markdown/blogs/YYYY-MM/*.md` with YAML frontmatter
+1. Markdown source: `public/blogs/YYYY-MM/*.md` with YAML frontmatter
 2. `scripts/build-search-index.js` runs at build → `public/search-index.json`
 3. `src/utils/markdown.ts` reads files, `gray-matter` parses frontmatter
 4. `src/utils/markdownToHtml.ts` unified pipeline: remark-parse → remark-gfm → remark-directive → remark-rehype → rehype-slug → rehype-highlight → rehype-stringify
@@ -42,9 +42,9 @@ docker compose up -d --build   # Build image and run with traefik on :80/:443
 6. BlogList.tsx fetches `search-index.json` client-side, runs Fuse.js in browser
 
 ### Image paths
-- Blog images are served from `public/images/blog-content/YYYY-MM/img*/`
-- Images are copied from `markdown/blogs/` to `public/` via a manual prebuild step
-- Content markdown image paths are rewritten by markdown.ts from relative to `/images/blog-content/`
+- Blog images live alongside markdown in `public/blogs/YYYY-MM/imgs/`
+- Images are served directly at `/blogs/YYYY-MM/imgs/` (Next.js serves `public/` natively)
+- Content markdown image paths are rewritten by markdown.ts from relative to `/blogs/`
 
 ### Styling
 - Tailwind CSS v4 with `@import "tailwindcss"` (no PostCSS config)
