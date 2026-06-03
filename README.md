@@ -61,7 +61,7 @@ public/
 
 ## Blog System
 
-Blog posts are plain Markdown files in `markdown/blogs/YYYY-MM/` with YAML frontmatter:
+Blog posts are plain Markdown files in `public/blogs/YYYY-MM/` with YAML frontmatter:
 
 ```yaml
 ---

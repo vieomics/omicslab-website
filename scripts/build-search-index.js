@@ -2,7 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-const postsDirectory = path.join(process.cwd(), "markdown/blogs");
+const postsDirectory = path.join(process.cwd(), "public/blogs");
 const outputPath = path.join(process.cwd(), "public/search-index.json");
 
 function getPostFiles() {
@@ -51,7 +51,7 @@ for (const file of postFiles) {
       ? [data.tags]
       : [];
   const imagePath = data.image
-    ? `/images/blog-content/${file.folderPath}/${data.image.replace(/^\.\//, "")}`
+    ? `/blogs/${file.folderPath}/${data.image.replace(/^\.\//, "")}`
     : null;
 
   searchItems.push({
