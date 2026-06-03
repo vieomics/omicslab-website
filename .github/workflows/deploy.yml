@@ -34,8 +34,6 @@ jobs:
             cd /home/river/omicslab-website
             git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
             git pull origin main
-            npm ci
-            npm run build
             docker compose up --build -d
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
