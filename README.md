@@ -75,6 +75,7 @@ image: ./imgs/cover.svg
 ```
 
 Features:
+
 - GFM tables, code blocks, admonitions (`:::info`, `:::warning`, `:::tip`, etc.)
 - Syntax highlighting via rehype-highlight + prismjs
 - Author data from `markdown/authors.yml`
@@ -86,6 +87,7 @@ Features:
 The site is configured with `output: "export"`. All pages (including blog posts) are prerendered at build time. No server, no database, no API routes needed.
 
 To serve the output:
+
 ```bash
 npm run build
 npm run preview   # node server.js → http://localhost:3000
@@ -111,15 +113,18 @@ docker compose up --build -d
 ```
 
 The stack is defined in `docker-compose.yaml`:
+
 - `omicslab` service — Nginx serving the built site
 - `traefik` service — reverse proxy with TLS termination for `omicslab.io`
 
 Configuration:
+
 - `traefik/traefik.yaml` — static Traefik config
 - `traefik/dynamic/` — dynamic routing rules
 - `traefik/acme.json` — Let's Encrypt certificates (gitignored)
 
 > **Note**: A Traefik Docker network named `traefik-public` must exist before first run:
+>
 > ```bash
 > docker network create traefik-public
 > ```
@@ -133,11 +138,11 @@ On every push to `main`, the [`deploy.yml`](.github/workflows/deploy.yml) workfl
 
 ### Required GitHub Secrets
 
-| Secret | Description |
-|---|---|
-| `SSH_HOST` | VPS hostname or IP (e.g. `omicslab.io`) |
-| `SSH_USER` | SSH user (e.g. `river`) |
-| `SSH_PRIVATE_KEY` | Private SSH key for authentication |
+| Secret            | Description                             |
+| ----------------- | --------------------------------------- |
+| `SSH_HOST`        | VPS hostname or IP (e.g. `omicslab.io`) |
+| `SSH_USER`        | SSH user (e.g. `river`)                 |
+| `SSH_PRIVATE_KEY` | Private SSH key for authentication      |
 
 The workflow uses the built-in `GITHUB_TOKEN` to authenticate `git pull` on the VPS — no deploy keys or PATs needed.
 
