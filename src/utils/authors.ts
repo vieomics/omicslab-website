@@ -18,7 +18,7 @@ export type AuthorsData = {
   [key: string]: Author;
 };
 
-const authorsPath = join(process.cwd(), "markdown/authors.yml");
+const authorsPath = join(process.cwd(), "public/authors.yml");
 
 function parseSimpleYaml(content: string): AuthorsData {
   const result: AuthorsData = {};

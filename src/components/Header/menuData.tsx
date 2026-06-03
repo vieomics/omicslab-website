@@ -39,7 +39,7 @@ const menuData: Menu[] = [
       },
       {
         id: 62,
-        title: "Data Platform (VN only)",
+        title: "Data Platform",
         path: "/solutions/data-platform",
         newTab: false,
       },
