@@ -24,6 +24,20 @@ export default function RootLayout({
     <html suppressHydrationWarning className="!scroll-smooth" lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-H4DR9KS6SL"
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-H4DR9KS6SL');
+            `,
+          }}
+        />
       </head>
       <body>
         <Providers>
