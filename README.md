@@ -47,16 +47,16 @@ src/
 │   └── search.ts           # Fuse.js search (legacy, replaced)
 ├── types/                  # TypeScript interfaces
 └── styles/                 # Global CSS
-markdown/
-├── authors.yml             # Author definitions
-└── blogs/                  # Blog posts in YYYY-MM/ directories
-    ├── 2026-01/
-    └── 2026-05/
-scripts/
-└── build-search-index.js   # Generates public/search-index.json at build
 public/
+├── authors.yml             # Author definitions
+├── blogs/                  # Blog posts in YYYY-MM/ directories
+│   ├── 2026-01/
+│   ├── 2026-05/
+│   └── 2026-06/
 ├── images/                 # Static images, logos, team photos
 └── search-index.json       # Generated at build time (gitignored)
+scripts/
+└── build-search-index.js   # Generates public/search-index.json at build
 ```
 
 ## Blog System
@@ -78,7 +78,7 @@ Features:
 
 - GFM tables, code blocks, admonitions (`:::info`, `:::warning`, `:::tip`, etc.)
 - Syntax highlighting via rehype-highlight + prismjs
-- Author data from `markdown/authors.yml`
+- Author data from `public/authors.yml`
 - Client-side search with Fuse.js index built at build time
 - All blog posts prerendered as static HTML via `generateStaticParams()`
 
