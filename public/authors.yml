@@ -8,3 +8,14 @@ river:
   socials:
     linkedin: https://www.linkedin.com/in/thanh-giang-tan-nguyen-761b28190/
     github: nttg8100
+
+namnguyen:
+  name: Nam Nguyen
+  title: Bioinformatician @ Omicslab
+  url: /#
+  image_url: /images/team/namnguyen.jpeg
+  page: true
+  email: /#
+  socials:
+    linkedin: /#
+    github: /#
