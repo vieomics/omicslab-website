@@ -26,4 +26,5 @@ jobs:
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 9d588da6db7f8868a77394467f1b97ab
           command: pages deploy out --project-name=omicslab-website
