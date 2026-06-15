@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const Hero = () => {
@@ -9,13 +8,15 @@ const Hero = () => {
         className="relative h-screen min-h-[600px] overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero/background.gif"
-            alt="background"
-            fill
-            className="object-cover"
-            unoptimized
-          />
+          <video
+            autoPlay
+            muted
+            loop
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          >
+            <source src="/images/hero/background.mp4" type="video/mp4" />
+          </video>
         </div>
         <div className="relative z-10 flex h-full items-center justify-center">
           <div className="-mx-4 w-full text-center">
