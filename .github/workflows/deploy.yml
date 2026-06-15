@@ -1,4 +1,4 @@
-name: Deploy
+name: Deploy to Cloudflare Pages
 
 on:
   push:
@@ -17,23 +17,13 @@ jobs:
           node-version: 20
           cache: "npm"
 
-      - name: Build check
+      - name: Build
         run: |
           npm ci
           npm run build
 
-      - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1.2.0
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/wrangler-action@v3
         with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 9000
-          envs: GITHUB_TOKEN
-          script: |
-            cd /home/river/omicslab-website
-            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-            git pull origin main
-            docker compose up --build -d
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          command: pages deploy out --project-name=omicslab-website
