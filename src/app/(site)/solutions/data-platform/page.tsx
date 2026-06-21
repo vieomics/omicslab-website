@@ -13,9 +13,6 @@ export default function DataPlatformPage() {
     <div className="container mt-16 py-20">
       <h1 className="mb-8 text-4xl font-bold">Data Platform</h1>
       <p className="mb-8 text-xl text-gray-600 dark:text-gray-400">
-        <span className="mx-2 inline-block rounded bg-yellow-100 px-2 py-1 text-xs font-semibold text-yellow-800">
-          BETA
-        </span>
         Rapid Integration and Visualization for Enhanced Research (RIVER) - A
         scalable platform that unifies data management, high-performance
         computing (HPC), and tool execution.
@@ -37,15 +34,189 @@ export default function DataPlatformPage() {
 
       <div className="mb-12 rounded-lg bg-blue-50 p-4 dark:bg-blue-900/20">
         <p className="text-sm text-blue-800 dark:text-blue-200">
-          <strong>Note:</strong> Currently, the Data Platform is the service
-          that will be configured freely for the customers who use our IaaS in
-          Vietnam,{" "}
+          <strong>Note:</strong> The Data Platform is currently under{" "}
+          <strong>trial</strong>. It is <strong>not free</strong>.{" "}
           <Link href="/contact" className="underline">
-            contact us
+            Contact us
           </Link>{" "}
-          to discuss setup options.
+          to get <strong>2 free genomics assembly sample runs</strong> on the
+          platform.
         </p>
       </div>
+
+      <section className="mb-16">
+        <h2 className="mb-6 text-2xl font-semibold">Pricing</h2>
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-lg border p-6 text-center">
+            <h3 className="mb-2 text-lg font-semibold">Platform Subscription</h3>
+            <p className="mb-4 text-3xl font-bold text-primary">Under Trial</p>
+            <p className="mb-4 text-sm text-gray-500">Price can be adjusted</p>
+            <ul className="mb-6 space-y-2 text-left text-sm text-gray-600 dark:text-gray-400">
+              <li>✓ Role-based access control</li>
+              <li>✓ Project &amp; credential management</li>
+              <li>✓ Web interface &amp; monitoring</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border p-6 text-center">
+            <h3 className="mb-2 text-lg font-semibold">Storage (S3)</h3>
+            <p className="mb-4 text-3xl font-bold text-primary">1,000 VND</p>
+            <p className="mb-4 text-sm text-gray-500">/GB per month</p>
+            <ul className="mb-6 space-y-2 text-left text-sm text-gray-600 dark:text-gray-400">
+              <li>✓ Secure scalable object storage</li>
+              <li>✓ Data organized by project</li>
+              <li>✓ RBAC for data access</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border p-6 text-center">
+            <h3 className="mb-2 text-lg font-semibold">HPC Compute</h3>
+            <p className="mb-4 text-3xl font-bold text-primary">20,000 VND</p>
+            <p className="mb-1 text-sm text-gray-500">
+              /hour (max 16 CPUs / 32 GB RAM)
+            </p>
+            <p className="mb-4 text-xs text-gray-400">
+              Ratio 1:2 — 1,250 VND/hour per 1 CPU + 2 GB RAM
+            </p>
+            <ul className="mb-6 space-y-2 text-left text-sm text-gray-600 dark:text-gray-400">
+              <li>✓ nf-core pipelines: Free</li>
+              <li>✓ OmicsLab pipelines: Adjusted</li>
+              <li>✓ Metagenomics assembly: 100,000 VND/sample</li>
+              <li>✓ Slurm HPC cluster access</li>
+              <li>✓ Interactive web apps (RStudio, Jupyter, VS Code)</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-6 rounded-lg bg-blue-50 p-4 text-center dark:bg-blue-900/20">
+          <p className="text-sm text-blue-800 dark:text-blue-200">
+            The platform is currently under trial.{" "}
+            <Link href="/contact" className="underline">
+              Contact us
+            </Link>{" "}
+            to get <strong>2 free genomics assembly sample runs</strong>.
+          </p>
+        </div>
+        <div className="mt-4 rounded-lg bg-gray-50 p-4 text-center dark:bg-gray-800">
+          <p className="text-sm text-gray-700 dark:text-gray-300">
+            <strong>Fully local deployment</strong> of the entire platform and
+            HPC is available.{" "}
+            <Link href="/contact" className="underline">
+              Contact us
+            </Link>{" "}
+            for more details.
+          </p>
+        </div>
+
+        <div className="mt-8 rounded-lg border border-green-200 bg-green-50 p-6 dark:border-green-800 dark:bg-green-900/20">
+          <h3 className="mb-4 text-xl font-semibold text-green-800 dark:text-green-200">
+            Cost Estimate — 100 Bacterial Genome Assemblies / Month
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm text-gray-700 dark:text-gray-300">
+              <thead>
+                <tr className="border-b border-green-200 dark:border-green-800">
+                  <th className="pb-2 font-semibold">Item</th>
+                  <th className="pb-2 font-semibold">Unit Price</th>
+                  <th className="pb-2 font-semibold">Qty</th>
+                  <th className="pb-2 font-semibold">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">Metagenomics assembly</td>
+                  <td className="py-2">100,000 VND/sample</td>
+                  <td className="py-2">100</td>
+                  <td className="py-2 font-medium">10,000,000 VND</td>
+                </tr>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">HPC compute (16 CPUs / 32 GB)</td>
+                  <td className="py-2">20,000 VND/hour</td>
+                  <td className="py-2">~200 hours</td>
+                  <td className="py-2 font-medium">~4,000,000 VND</td>
+                </tr>
+                <tr>
+                  <td className="py-2">Storage (S3)</td>
+                  <td className="py-2">1,000 VND/GB</td>
+                  <td className="py-2">~50 GB</td>
+                  <td className="py-2 font-medium">~50,000 VND</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="border-t-2 border-green-300 dark:border-green-700">
+                  <td className="pt-3 font-bold" colSpan={3}>
+                    Estimated Total / Month
+                  </td>
+                  <td className="pt-3 font-bold text-green-700 dark:text-green-300">
+                    ~14,050,000 VND
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p className="mt-4 text-xs text-gray-500">
+            * Estimates based on typical bacterial genome assembly workload.
+            Actual costs may vary.{" "}
+            <Link href="/contact" className="underline">
+              Contact us
+            </Link>{" "}
+            for a precise quote.
+          </p>
+        </div>
+
+        <div className="mt-6 rounded-lg border border-green-200 bg-green-50 p-6 dark:border-green-800 dark:bg-green-900/20">
+          <h3 className="mb-4 text-xl font-semibold text-green-800 dark:text-green-200">
+            Cost Estimate — 100 16S rRNA Samples / Month
+          </h3>
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-sm text-gray-700 dark:text-gray-300">
+              <thead>
+                <tr className="border-b border-green-200 dark:border-green-800">
+                  <th className="pb-2 font-semibold">Item</th>
+                  <th className="pb-2 font-semibold">Unit Price</th>
+                  <th className="pb-2 font-semibold">Qty</th>
+                  <th className="pb-2 font-semibold">Subtotal</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">16S rRNA analysis</td>
+                  <td className="py-2">100,000 VND/sample</td>
+                  <td className="py-2">100</td>
+                  <td className="py-2 font-medium">10,000,000 VND</td>
+                </tr>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">HPC compute (16 CPUs / 32 GB)</td>
+                  <td className="py-2">20,000 VND/hour</td>
+                  <td className="py-2">~50 hours</td>
+                  <td className="py-2 font-medium">~1,000,000 VND</td>
+                </tr>
+                <tr>
+                  <td className="py-2">Storage (S3)</td>
+                  <td className="py-2">1,000 VND/GB</td>
+                  <td className="py-2">~10 GB</td>
+                  <td className="py-2 font-medium">~10,000 VND</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr className="border-t-2 border-green-300 dark:border-green-700">
+                  <td className="pt-3 font-bold" colSpan={3}>
+                    Estimated Total / Month
+                  </td>
+                  <td className="pt-3 font-bold text-green-700 dark:text-green-300">
+                    ~11,010,000 VND
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+          </div>
+          <p className="mt-4 text-xs text-gray-500">
+            * Estimates based on typical 16S rRNA analysis workload. Actual
+            costs may vary.{" "}
+            <Link href="/contact" className="underline">
+              Contact us
+            </Link>{" "}
+            for a precise quote.
+          </p>
+        </div>
+      </section>
 
       <section className="mb-16">
         <h2 className="mb-6 text-2xl font-semibold">Key Features</h2>
@@ -236,11 +407,13 @@ export default function DataPlatformPage() {
             style={{ position: "relative", paddingBottom: "56.25%", height: 0 }}
           >
             <iframe
-              width="853"
-              height="480"
-              src="https://www.youtube.com/embed/videoseries?list=PLvbBIKZT8w5yhh-aU2u3TlTWj-UfDfbmM"
+              width="1840"
+              height="1035"
+              src="https://www.youtube.com/embed/j8-HmT1JTCw"
+              title="Omicslab Platform - Nền tảng phân tích tin sinh học"
               frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               style={{
                 position: "absolute",
