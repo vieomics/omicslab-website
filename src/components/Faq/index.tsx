@@ -17,7 +17,7 @@ const Faq = () => {
           <div className="w-full px-4">
             <SingleFaq
               question="Is there a cost for using your solutions?"
-              answer="Our open-source solutions are available at no cost. For custom implementations tailored to your specific requirements, we offer project-based pricing. Please contact us for a detailed quote."
+              answer="Our open-source solutions are available at no cost. The Data Platform subscription is currently under trial with adjustable pricing. Storage (S3) is 1,000 VND/GB/month. HPC compute starts at 20,000 VND/hour (max 16 CPUs / 32 GB RAM, ratio 1:2). nf-core pipelines are free, OmicsLab pipelines are adjusted, and metagenomics assembly is 100,000 VND/sample for complete genomes. Fully local deployment of the platform and HPC is also available — contact us for details."
             />
             <SingleFaq
               question="How is pricing structured?"
@@ -25,7 +25,7 @@ const Faq = () => {
             />
             <SingleFaq
               question="What is the availability of your data platform?"
-              answer="Our data platform is currently available in Vietnam (beta phase). Full integration is supported when using our IaaS infrastructure for High Performance Computing with SLURM configuration."
+              answer="Our data platform is currently under trial in Vietnam. Contact us to get 2 free genomics assembly sample runs on the platform. Full integration is supported when using our IaaS infrastructure for High Performance Computing with SLURM configuration."
             />
           </div>
         </div>

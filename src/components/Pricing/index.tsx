@@ -11,14 +11,27 @@ const Pricing = () => {
           <SectionTitle
             subtitle="Pricing"
             title="Contact Us for Pricing"
-            paragraph="We offer customized pricing based on your requirements. Reach out to discuss a plan that fits your needs."
+            paragraph="The Data Platform is currently under trial. Contact us to get 2 free genomics assembly sample runs on the platform."
             center
           />
         </div>
 
         <div className="text-center">
           <p className="text-body-color dark:text-dark-6 text-base">
-            Our solutions are tailored to your specific bioinformatics needs.
+            <strong>Platform subscription:</strong> Under trial — price can be
+            adjusted.
+          </p>
+          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
+            <strong>Storage (S3):</strong> 1,000 VND/GB/month.
+          </p>
+          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
+            <strong>HPC compute:</strong> 20,000 VND/hour (max 16 CPUs / 32 GB
+            RAM, ratio 1:2). nf-core pipelines free, OmicsLab pipelines
+            adjusted, metagenomics assembly 100,000 VND/sample.
+          </p>
+          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
+            <strong>Fully local deployment</strong> of platform &amp; HPC also
+            available — contact us for details.
           </p>
         </div>
       </div>
