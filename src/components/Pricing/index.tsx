@@ -18,8 +18,8 @@ const Pricing = () => {
 
         <div className="text-center">
           <p className="text-body-color dark:text-dark-6 text-base">
-            <strong>Platform subscription:</strong> Under trial — price can be
-            adjusted.
+            <strong>Platform subscription:</strong> 1,000,000 VND/month for 10
+            users — fixed until end of July 2026.
           </p>
           <p className="text-body-color dark:text-dark-6 mt-2 text-base">
             <strong>Storage (S3):</strong> 1,000 VND/GB/month.

@@ -49,8 +49,13 @@ export default function DataPlatformPage() {
         <div className="grid gap-6 md:grid-cols-3">
           <div className="rounded-lg border p-6 text-center">
             <h3 className="mb-2 text-lg font-semibold">Platform Subscription</h3>
-            <p className="mb-4 text-3xl font-bold text-primary">Under Trial</p>
-            <p className="mb-4 text-sm text-gray-500">Price can be adjusted</p>
+            <p className="mb-4 text-3xl font-bold text-primary">
+              1,000,000 VND
+            </p>
+            <p className="mb-4 text-sm text-gray-500">/month for 10 users</p>
+            <p className="mb-4 text-xs font-semibold text-yellow-600 dark:text-yellow-400">
+              Fixed price until end of July 2026
+            </p>
             <ul className="mb-6 space-y-2 text-left text-sm text-gray-600 dark:text-gray-400">
               <li>✓ Role-based access control</li>
               <li>✓ Project &amp; credential management</li>
@@ -132,6 +137,12 @@ export default function DataPlatformPage() {
                   <td className="py-2">~200 hours</td>
                   <td className="py-2 font-medium">~4,000,000 VND</td>
                 </tr>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">Platform subscription</td>
+                  <td className="py-2">1,000,000 VND/month</td>
+                  <td className="py-2">1</td>
+                  <td className="py-2 font-medium">1,000,000 VND</td>
+                </tr>
                 <tr>
                   <td className="py-2">Storage (S3)</td>
                   <td className="py-2">1,000 VND/GB</td>
@@ -145,7 +156,7 @@ export default function DataPlatformPage() {
                     Estimated Total / Month
                   </td>
                   <td className="pt-3 font-bold text-green-700 dark:text-green-300">
-                    ~14,050,000 VND
+                    ~15,050,000 VND
                   </td>
                 </tr>
               </tfoot>
@@ -188,6 +199,12 @@ export default function DataPlatformPage() {
                   <td className="py-2">~50 hours</td>
                   <td className="py-2 font-medium">~1,000,000 VND</td>
                 </tr>
+                <tr className="border-b border-green-100 dark:border-green-800/50">
+                  <td className="py-2">Platform subscription</td>
+                  <td className="py-2">1,000,000 VND/month</td>
+                  <td className="py-2">1</td>
+                  <td className="py-2 font-medium">1,000,000 VND</td>
+                </tr>
                 <tr>
                   <td className="py-2">Storage (S3)</td>
                   <td className="py-2">1,000 VND/GB</td>
@@ -201,7 +218,7 @@ export default function DataPlatformPage() {
                     Estimated Total / Month
                   </td>
                   <td className="pt-3 font-bold text-green-700 dark:text-green-300">
-                    ~11,010,000 VND
+                    ~12,010,000 VND
                   </td>
                 </tr>
               </tfoot>

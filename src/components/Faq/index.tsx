@@ -17,7 +17,7 @@ const Faq = () => {
           <div className="w-full px-4">
             <SingleFaq
               question="Is there a cost for using your solutions?"
-              answer="Our open-source solutions are available at no cost. The Data Platform subscription is currently under trial with adjustable pricing. Storage (S3) is 1,000 VND/GB/month. HPC compute starts at 20,000 VND/hour (max 16 CPUs / 32 GB RAM, ratio 1:2). nf-core pipelines are free, OmicsLab pipelines are adjusted, and metagenomics assembly is 100,000 VND/sample for complete genomes. Fully local deployment of the platform and HPC is also available — contact us for details."
+              answer="Our open-source solutions are available at no cost. The Data Platform subscription is 1,000,000 VND/month for 10 users (fixed price until end of July 2026). Storage (S3) is 1,000 VND/GB/month. HPC compute starts at 20,000 VND/hour (max 16 CPUs / 32 GB RAM, ratio 1:2). nf-core pipelines are free, OmicsLab pipelines are adjusted, and metagenomics assembly is 100,000 VND/sample for complete genomes. Fully local deployment of the platform and HPC is also available — contact us for details."
             />
             <SingleFaq
               question="How is pricing structured?"
