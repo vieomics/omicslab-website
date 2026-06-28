@@ -19,3 +19,14 @@ namnguyen:
   socials:
     linkedin: /#
     github: /#
+
+anhnguyen:
+  name: Anh Nguyen
+  title: Product Specialist @ Omicslab
+  url: /#
+  image_url: /images/team/anhnguyen.png
+  page: true
+  email: /#
+  socials:
+    linkedin: /#
+    github: /#

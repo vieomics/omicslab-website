@@ -24,6 +24,17 @@ const teamData: TeamType[] = [
     linkedinLink: "/#",
     bio: "Develop bioinformatics and software solutions",
   },
+  {
+    id: 3,
+    name: "Anh Nguyen",
+    designation: "Metagenomics Product Specialist",
+    image: "/images/team/anhnguyen.png",
+    facebookLink: "/#",
+    twitterLink: "/#",
+    instagramLink: "/#",
+    linkedinLink: "/#",
+    bio: "Bring bioinformatics and software solutions for metagenomics related services",
+  },
 ];
 
 const Team = () => {

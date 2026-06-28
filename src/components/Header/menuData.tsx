@@ -77,5 +77,11 @@ const menuData: Menu[] = [
     path: "/blogs",
     newTab: false,
   },
+  {
+    id: 8,
+    title: "Docs",
+    path: "https://docs.omicslab.io",
+    newTab: false,
+  },
 ];
 export default menuData;
