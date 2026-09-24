@@ -88,7 +88,7 @@ export const en = {
         {
           title: "Project-Based Bioinformatics Services",
           paragraph:
-            "You already have a Slurm HPC cluster and local NAS, and you want to grow production without tearing down the existing cluster — the platform integrates with your infrastructure, letting part of the cluster move to development while capacity scales up for production. You can then run NIPT pipelines: the platform uploads and stores data, creates samples with cohort management, and auto-triggers pre-configured pipelines at scale (via built-in mini-LIMS features). Its plugin architecture lets you integrate full LIMS capabilities when sensitive data is involved.",
+            "You already have a Slurm HPC cluster and S3-compatible storage, and you want to grow production without tearing down the existing cluster — the platform integrates with your infrastructure, letting part of the cluster move to development while capacity scales up for production. You can then run NIPT pipelines: the platform uploads and stores data, creates samples with cohort management, and auto-triggers pre-configured pipelines at scale (via built-in mini-LIMS features). Its plugin architecture lets you integrate full LIMS capabilities when sensitive data is involved.",
           cta: "Talk to us",
         },
       ],
@@ -107,7 +107,7 @@ export const en = {
         {
           title: "Add infrastructure and storage",
           paragraph:
-            "Pay for cloud compute and storage if you need them, or connect your own infrastructure and NAS — the platform works with what you already have.",
+            "Cloud and HPC are pre-configured and ready to run — pick CloudFly, GreenNode or an Slurm cluster and pay as you go, with no configuration on your side. Already have compute and S3-compatible storage? Connect it instead.",
         },
         {
           title: "Select your input data",
