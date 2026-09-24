@@ -5,6 +5,7 @@ export const vi: Dictionary = {
   site: {
     name: "Omicslab",
     tagline: "Công nghệ Omics",
+    legalName: "CÔNG TY TNHH VIEOMICS",
     address:
       "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
     taxLabel: "Mã số thuế",
@@ -29,6 +30,7 @@ export const vi: Dictionary = {
   },
   footer: {
     copyright: "© 2026 Omicslab. Bảo lưu mọi quyền.",
+    productOf: "Sản phẩm của",
   },
   common: {
     home: "Trang chủ",
