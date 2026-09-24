@@ -1,9 +1,8 @@
 import Link from "next/link";
 import { Dictionary } from "@/i18n";
-import { Locale } from "@/i18n/config";
-import { localizeHref } from "@/i18n/paths";
+import { SITE_LINKS } from "@/utils/siteLinks";
 
-const Hero = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
+const Hero = ({ dict }: { dict: Dictionary }) => {
   const { hero } = dict.home;
   return (
     <section
@@ -36,20 +35,22 @@ const Hero = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
         <ul className="mt-10 flex flex-wrap items-center gap-4">
           <li>
             <Link
-              href={localizeHref("/contact", locale)}
+              href={SITE_LINKS.platform}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-editorial btn-editorial-inverse"
             >
-              {hero.contactCta}
+              {hero.primaryCta}
             </Link>
           </li>
           <li>
             <Link
-              href="https://github.com/vieomics"
+              href={SITE_LINKS.docs}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-editorial border-white/40 bg-transparent text-white hover:border-white hover:bg-white hover:text-ink"
             >
-              {hero.githubCta}
+              {hero.secondaryCta}
             </Link>
           </li>
         </ul>

@@ -55,58 +55,104 @@ export const en = {
   },
   home: {
     hero: {
-      title: "Innovative Bioinformatics Services & Open-Source Tools",
+      title: "End-to-End Dry-Lab Bioinformatics Services",
       paragraph:
-        "Omicslab empowers researchers with scalable bioinformatics solutions. From advanced variant calling pipelines to cutting-edge multiomics analysis tools, we provide production-ready workflows and software for complex biological data analysis.",
-      contactCta: "Contact for Work",
-      githubCta: "View on GitHub",
+        "Omicslab gives your lab one bioinformatics platform to manage users, data, tools and compute infrastructure — on Vietnamese clouds, your own Slurm HPC cluster, or on-premises. Bring your existing pipelines with minimal migration effort, or simply pay and get everything ready to run.",
+      primaryCta: "Start on Omicslab",
+      secondaryCta: "Read the docs",
     },
     services: {
-      subtitle: "Our Services",
-      title: "Comprehensive Bioinformatics Solutions",
+      subtitle: "Platform & Services",
+      title: "Your Entire Dry Lab on One Platform",
       paragraph:
-        "From production-grade variant calling pipelines to cutting-edge data platforms, we provide complete tools and workflows for your bioinformatics research needs.",
+        "Manage users, data, tools and compute infrastructure in one bioinformatics platform, with deployment options that fit your existing setup and professional services for custom requests.",
       items: [
         {
-          title: "Bioinformatics Pipelines",
+          title: "Manage Users, Data, Tools and Compute",
           paragraph:
-            "Production-ready pipelines for comprehensive bioinformatics analysis and data processing.",
+            "Organizations and workspaces with S3-compatible storage, tool catalogs, cloud and HPC runners, access control, audit and cost tracking — all in one place.",
+          cta: "Open the platform",
         },
         {
-          title: "Multiomics",
+          title: "Bring or Migrate Your Services",
           paragraph:
-            "Advanced integration and harmonization of complex multiomics datasets for comprehensive analysis at scale.",
+            "Self-host the platform on-premises, register your own Slurm HPC cluster and S3 storage, and migrate your existing pipelines with minimal effort.",
+          cta: "Deployment docs",
         },
         {
-          title: "Infrastructure HPC SLURM",
+          title: "Pay and Run, Fully Managed",
           paragraph:
-            "Production-ready infrastructure configuration for high-performance computing cluster setup and management.",
+            "New to the dry lab? Everything is ready: CloudFly and GreenNode compute, storage, and nf-core and Nextflow pipelines. Pay as you go and start running.",
+          cta: "Read the docs",
         },
         {
-          title: "Data Platform (only for Vietnam region)",
+          title: "Professional Bioinformatics Services",
           paragraph:
-            "Comprehensive bioinformatics data platform for integration, analysis, and management of complex datasets.",
+            "Customer-specific work — multiomics integration, variant calling, metagenomics assembly, pipeline development and HPC setup — tightly integrated with the platform.",
+          cta: "Talk to us",
         },
       ],
     },
+    howItWorks: {
+      subtitle: "How it works",
+      title: "From Raw Data to Results in Four Steps",
+      paragraph:
+        "No cluster setup and no container plumbing. Create a workspace, connect compute, choose a pipeline and run.",
+      steps: [
+        {
+          title: "Create a workspace",
+          paragraph:
+            "Spin up a workspace with its own S3 bucket, invite your lab and upload sequencing data.",
+        },
+        {
+          title: "Connect compute",
+          paragraph:
+            "Attach a CloudFly or GreenNode account, or register your own Slurm HPC cluster over SSH.",
+        },
+        {
+          title: "Choose a pipeline",
+          paragraph:
+            "Pick an nf-core pipeline or register any Git repository, then set parameters, CPU, memory and time limits.",
+        },
+        {
+          title: "Run and review",
+          paragraph:
+            "Launch analysis or studio sessions, follow live logs, and open MultiQC, Nextflow and genome reports in your browser.",
+        },
+      ],
+    },
+    platforms: {
+      subtitle: "Works with",
+      title: "Clouds, Pipelines and Tools You Already Use",
+      paragraph:
+        "The platform is built on open standards, so you can bring your own data, compute and pipelines.",
+      items: [
+        { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
+        { title: "GreenNode", detail: "VNG Cloud compute" },
+        { title: "Slurm HPC", detail: "Your own cluster over SSH" },
+        { title: "Nextflow", detail: "nf-core and custom workflows" },
+        { title: "S3 Storage", detail: "Any S3-compatible bucket" },
+        { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
+      ],
+    },
     about: {
-      title: "Empowering Bioinformatics Research",
+      title: "End-to-End Dry-Lab Bioinformatics Services, Built in Vietnam",
       paragraph1:
-        "Omicslab is an open-source initiative driving innovation in bioinformatics and multiomics research. We build scalable tools, workflows, and libraries designed to support complex experimental designs across bioinformatics applications.",
+        "Omicslab is developed by Vieomics Company Limited. We deliver an end-to-end dry-lab service: a bioinformatics platform for users, data, tools and compute, plus the professional services that surround it.",
       paragraph2:
-        "Our mission is to empower researchers with accessible, high-performance, and modern solutions for data analysis and integrative multiomics. From production-ready variant calling pipelines to cutting-edge data platforms, we provide everything you need for advanced bioinformatics research.",
+        "Labs can migrate existing pipelines and infrastructure with minimal effort, or start from scratch and pay for everything ready to run. Data stays in Vietnam, on the clouds and clusters you choose.",
       cta: "Explore on GitHub",
       badge: {
         line1: "Omics",
-        line2: "Open Sources",
-        line3: "Optimization",
+        line2: "Dry-Lab Services",
+        line3: "Platform & Professional",
       },
     },
     cta: {
-      title: "What Are You Looking For?",
-      titleAccent: "Get Started Now",
+      title: "Ready to Modernise Your Dry Lab?",
+      titleAccent: "Start on Omicslab",
       paragraph:
-        "We provide open-source solutions. If you're interested, contact us to discuss a partnership.",
+        "Create an account and run your first pipeline, or contact us to migrate your pipelines, set up HPC and discuss custom bioinformatics services.",
       button: "Contact for Work",
     },
     faq: {
@@ -116,19 +162,39 @@ export const en = {
         "Below are answers to some of the most common questions we receive.",
       items: [
         {
-          question: "Is there a cost for using your solutions?",
+          question: "What is Omicslab?",
           answer:
-            "Our open-source solutions are available at no cost. The Data Platform subscription is 1,000,000 VND/month for 10 users (fixed price until end of July 2026). Storage (S3) is 1,000 VND/GB/month. HPC compute starts at 20,000 VND/hour (max 16 CPUs / 32 GB RAM, ratio 1:2). nf-core pipelines are free, OmicsLab pipelines are adjusted, and metagenomics assembly is 100,000 VND/sample for complete genomes. Fully local deployment of the platform and HPC is also available — contact us for details.",
+            "Omicslab is an end-to-end dry-lab bioinformatics service. It provides a bioinformatics platform to manage users, data, tools and compute infrastructure, plus professional services for customer-specific analyses that integrate tightly with the platform.",
         },
         {
-          question: "How is pricing structured?",
+          question: "Can I migrate my existing pipelines and infrastructure?",
           answer:
-            "We provide customized pricing based on your technical requirements and project scope. Rather than hourly billing, we offer project-based contracts that align with your business objectives and timeline.",
+            "Yes. Self-host the platform on-premises or in your own cloud, register your Slurm HPC cluster over SSH and your S3-compatible storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
         },
         {
-          question: "What is the availability of your data platform?",
+          question: "Which pipelines can I run?",
           answer:
-            "Our data platform is currently under trial in Vietnam. Contact us to get 2 free genomics assembly sample runs on the platform. Full integration is supported when using our IaaS infrastructure for High Performance Computing with SLURM configuration.",
+            "Any nf-core or Nextflow pipeline, and any Git repository that provides a run script and a parameter schema. Popular choices include rnaseq, sarek, scrnaseq, chipseq, atacseq, methylseq, ampliseq, mag, taxprofiler and rnafusion. MultiQC and Nextflow reports are rendered directly in the browser.",
+        },
+        {
+          question: "Which clouds and infrastructure are supported?",
+          answer:
+            "The platform natively provisions compute on CloudFly and GreenNode, and can register your own Slurm HPC cluster over SSH. Storage is S3-compatible, including CloudFly/VNG object storage and your own buckets. Self-hosted and air-gapped deployments are available on request.",
+        },
+        {
+          question: "Do I need my own compute and storage?",
+          answer:
+            "No. New users can pay and get everything ready — compute, storage and pipelines — then start running right away. Create an account at platform.omicslab.io; no credit card is required to sign up.",
+        },
+        {
+          question: "Where is my data stored?",
+          answer:
+            "Data lives in the S3-compatible storage you choose — including buckets in Vietnam. Each regional platform instance keeps customer data inside the region, with no cross-border transfer.",
+        },
+        {
+          question: "How much does it cost?",
+          answer:
+            "Pricing depends on your plan, storage and compute usage. Contact us for a quote — we offer project-based contracts as well as pay-as-you-go platform usage.",
         },
       ],
     },
@@ -675,11 +741,11 @@ export const en = {
   },
   metadata: {
     siteDescription:
-      "Innovative bioinformatics solutions for researchers. Production-ready variant calling pipelines, multiomics analysis tools, and data platforms.",
+      "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     home: {
-      title: "Omicslab - Omics Technology",
+      title: "Omicslab | Bioinformatics Platform & Dry-Lab Services",
       description:
-        "Innovative bioinformatics solutions for researchers. Production-ready variant calling pipelines, multiomics analysis tools, and data platforms.",
+        "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     },
     about: {
       title: "About Us",
