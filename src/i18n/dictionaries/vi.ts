@@ -480,12 +480,12 @@ export const vi: Dictionary = {
         title: "Tính năng chính",
         items: [
           {
-            title: "Lưu trữ dữ liệu",
+            title: "Tổ chức",
             paragraph:
-              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực S3.",
+              "Tạo và quản lý tổ chức cùng thành viên, vai trò và thông tin xác thực. Hỗ trợ phân tích độc lập và tái lập giữa các nhóm với tài nguyên tính toán riêng của tổ chức.",
           },
           {
-            title: "Tích hợp HPC",
+            title: "Tích hợp tính toán",
             paragraph:
               "Kết nối tới cụm HPC Slurm cho các phân tích đòi hỏi tính toán lớn. Tác vụ được khởi chạy và giám sát qua giao diện web thân thiện.",
           },
@@ -495,9 +495,9 @@ export const vi: Dictionary = {
               "Dễ dàng tích hợp và thực thi các quy trình do cộng đồng phát triển (như nf-core) cũng như quy trình tùy chỉnh. Hỗ trợ phân tích dữ liệu đa omics.",
           },
           {
-            title: "Quản lý dự án",
+            title: "Lưu trữ dữ liệu",
             paragraph:
-              "Tạo và quản lý dự án cùng thông tin xác thực. Hỗ trợ phân tích độc lập và tái lập giữa các nhóm với tài nguyên tính toán riêng của tổ chức.",
+              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực S3.",
           },
         ],
       },

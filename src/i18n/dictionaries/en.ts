@@ -480,24 +480,24 @@ export const en = {
         title: "Key Features",
         items: [
           {
-            title: "Data Storage",
+            title: "Organization",
             paragraph:
-              "Secure, scalable storage for datasets. Organize data by project, type, and analysis. Raw or processed data can be stored and shared using role-based access control (RBAC) where the data source can be registered with the S3 credential service,",
+              "Create and manage organizations with members, roles and credentials. Support independent and reproducible analyses across groups with organization-specific computing resources.",
           },
           {
-            title: "HPC Integration",
+            title: "Compute Integration",
             paragraph:
-              "Connect to Slurm HPC cluster for compute-intensive analysis. Jobs are launched and monitored via a user-friendly web interface.",
+              "Connect to Slurm HPC clusters for compute-intensive analysis. Jobs are launched and monitored via a user-friendly web interface.",
           },
           {
-            title: "Tool Integration",
+            title: "Tools Integration",
             paragraph:
               "Easy integration and execution of community-developed workflows (such as nf-core) as well as custom pipelines. Supports multi-omics data analysis.",
           },
           {
-            title: "Project Management",
+            title: "Data Storage",
             paragraph:
-              "Create and manage projects with credentials. Support independent and reproducible analyses across groups with organization-specific computing resources.",
+              "Secure, scalable storage for datasets. Organize data by project, type, and analysis. Raw or processed data can be stored and shared using role-based access control (RBAC), where the data source can be registered with the S3 credential service.",
           },
         ],
       },
