@@ -57,7 +57,7 @@ export const vi: Dictionary = {
   },
   home: {
     hero: {
-      title: "Dịch vụ tin sinh học dry-lab đầu-cuối",
+      title: "Dịch vụ tin sinh học dry-lab toàn diện",
       paragraph:
         "Một nền tảng cho toàn bộ dry-lab của bạn: quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trong cùng một nơi. Omicslab chạy trên mọi cloud, tối ưu cho các nhà cung cấp Việt Nam đã được tích hợp sẵn như CloudFly và GreenNode với dịch vụ PAYG. Đồng thời hỗ trợ các cụm máy tính hiệu năng cao SLURM của bạn. Đã có hệ thống sẵn, chúng tôi hỗ trợ tích hợp thay vì thay thế hoàn toàn hệ thống hiện có, giúp mở rộng khả năng tính toán của bạn khi cần.",
       primaryCta: "Bắt đầu trên Omicslab",
@@ -97,7 +97,7 @@ export const vi: Dictionary = {
     },
     howItWorks: {
       subtitle: "Cách hoạt động",
-      title: "Quy trình đầu-cuối hoàn chỉnh trên nền tảng",
+      title: "Quy trình toàn diện trên nền tảng",
       paragraph:
         "Từ khi tạo tổ chức đến khi có kết quả — mọi bước diễn ra trên cùng một nền tảng.",
       steps: [
@@ -119,7 +119,7 @@ export const vi: Dictionary = {
         {
           title: "Chọn quy trình và chạy",
           paragraph:
-            "Chạy Nextflow và nf-core, hoặc bất kỳ quy trình nào có schema được cấu hình sẵn (bash, Snakemake và nhiều hơn nữa) — tham số, tài nguyên, log và kết quả đều vận hành đầu-cuối trên nền tảng.",
+            "Chạy Nextflow và nf-core, hoặc bất kỳ quy trình nào có schema được cấu hình sẵn (bash, Snakemake và nhiều hơn nữa) — tham số, tài nguyên, log và kết quả đều được quản lý toàn diện trên nền tảng.",
         },
       ],
       noteLabel: "Lưu ý",
@@ -141,9 +141,9 @@ export const vi: Dictionary = {
       ],
     },
     about: {
-      title: "Dịch vụ tin sinh học dry-lab đầu-cuối, phát triển tại Việt Nam",
+      title: "Dịch vụ tin sinh học dry-lab toàn diện, phát triển tại Việt Nam",
       paragraph1:
-        "Omicslab được phát triển bởi Công ty TNHH Vieomics. Chúng tôi cung cấp dịch vụ dry-lab đầu-cuối: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng các dịch vụ chuyên môn xoay quanh nó.",
+        "Omicslab được phát triển bởi Công ty TNHH Vieomics. Chúng tôi cung cấp dịch vụ dry-lab toàn diện: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng các dịch vụ chuyên môn xoay quanh nó.",
       paragraph2:
         "Phòng thí nghiệm có thể di chuyển quy trình và hạ tầng hiện có với công sức tối thiểu, hoặc bắt đầu từ đầu và trả phí để có mọi thứ sẵn sàng. Dữ liệu được giữ tại Việt Nam, trên cloud và cụm máy mà bạn chọn.",
       cta: "Khám phá trên GitHub",
@@ -169,7 +169,7 @@ export const vi: Dictionary = {
         {
           question: "Omicslab là gì?",
           answer:
-            "Omicslab là dịch vụ tin sinh học dry-lab đầu-cuối. Nền tảng giúp quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, kèm dịch vụ chuyên môn cho các phân tích theo yêu cầu khách hàng, gắn kết chặt chẽ với nền tảng.",
+            "Omicslab là dịch vụ tin sinh học dry-lab toàn diện. Nền tảng giúp quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, kèm dịch vụ chuyên môn cho các phân tích theo yêu cầu khách hàng, gắn kết chặt chẽ với nền tảng.",
         },
         {
           question: "Tôi có thể di chuyển quy trình và hạ tầng hiện có không?",
@@ -225,7 +225,7 @@ export const vi: Dictionary = {
       members: [
         {
           designation: "Nhà sáng lập",
-          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp đầu-cuối trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
+          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp toàn diện trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
         },
       ],
     },
@@ -613,7 +613,7 @@ export const vi: Dictionary = {
       available: {
         title: "Quy trình có sẵn",
         paragraph:
-          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học đầu-cuối trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics toàn diện. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
+          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học toàn diện trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
         categories: [
           {
             title: "Hệ gen",
@@ -746,11 +746,11 @@ export const vi: Dictionary = {
   },
   metadata: {
     siteDescription:
-      "Dịch vụ tin sinh học dry-lab đầu-cuối. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
+      "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     home: {
       title: "Omicslab | Nền tảng và dịch vụ tin sinh học dry-lab",
       description:
-        "Dịch vụ tin sinh học dry-lab đầu-cuối. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
+        "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     },
     about: {
       title: "Giới thiệu",
