@@ -131,9 +131,9 @@ export const en = {
         "Built to work with any cloud and any storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so your research data stays in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
-        { title: "GreenNode", detail: "VNG Cloud compute" },
+        { title: "GreenNode", detail: "Greennode (VNG Cloud) - Ho Chi Minh City" },
         { title: "Slurm HPC", detail: "Your own cluster, connected via SDK" },
-        { title: "Nextflow", detail: "Mainly Nextflow & nf-core, but not only" },
+        { title: "Nextflow", detail: "Mainly Nextflow & nf-core, not limited — extend easily with bash, Snakemake, etc." },
         { title: "Storage", detail: "Bought by quota, or bring your own" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code, or any Docker web app" },
       ],
