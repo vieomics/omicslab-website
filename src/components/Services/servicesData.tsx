@@ -20,7 +20,7 @@ const servicesData: Feature[] = [
     ),
     title: "Manage Users, Data, Tools and Compute",
     paragraph:
-      "Organizations and workspaces with S3-compatible storage, tool catalogs, cloud and HPC runners, access control, audit and cost tracking — all in one place.",
+      "Comprehensive access control and monitoring across the analysis system. Admins create organizations and workspaces, and manage users and resources. Analysts take those resources, build their own tools or use built-in ones (nf-core) to analyse data, deliver results and view them directly on the platform. Every data operation is logged and reviewed, keeping data provenance safe and its use traceable.",
     btn: "Open the platform",
     btnLink: SITE_LINKS.platform,
   },
@@ -40,7 +40,7 @@ const servicesData: Feature[] = [
     ),
     title: "Bring or Migrate Your Services",
     paragraph:
-      "Self-host the platform on-premises, register your own Slurm HPC cluster and S3 storage, and migrate your existing pipelines with minimal effort.",
+      "Deploy the platform on-premises, connect your own Slurm HPC cluster, and bring your existing pipelines across with minimal effort. Storage is purchased by quota, so you only pay for the capacity you choose.",
     btn: "Deployment docs",
     btnLink: SITE_LINKS.docs,
   },
