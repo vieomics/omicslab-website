@@ -252,12 +252,11 @@ export const vi: Dictionary = {
     dataPlatform: {
       metadataTitle: "Nền tảng Omicslab",
       metadataDescription:
-        "RIVER - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
+        "Omicslab - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
       title: "Nền tảng Omicslab",
-      subtitle:
-        "Rapid Integration and Visualization for Enhanced Research (RIVER) - Nền tảng có khả năng mở rộng, hợp nhất quản lý dữ liệu, tính toán hiệu năng cao (HPC) và thực thi công cụ.",
+      subtitle: "Omicslab — nền tảng nghiên cứu tin sinh học toàn diện",
       intro:
-        "Nghiên cứu tin sinh học thường đòi hỏi thu thập và quản lý dữ liệu, thực thi các công cụ tính toán và quản lý kết quả trên nhiều nguồn tài nguyên phân tán với khả năng tái lập cao. Bên cạnh đó, các thách thức về hiệu quả, khả năng tiếp cận và bảo mật cũng cần được giải quyết. RIVER tích hợp ba thành phần chính: lưu trữ dữ liệu, quản lý phiên bản công cụ và tài nguyên tính toán. Đóng vai trò bộ điều khiển, RIVER cung cấp hệ thống phân quyền theo vai trò, cho phép người dùng tạo và quản lý thông tin xác thực, dự án và công cụ, trong khi các tác vụ phân tích được khởi chạy và giám sát qua giao diện web thân thiện.",
+        "Nghiên cứu tin sinh học thường đòi hỏi rất nhiều bước rời rạc — tải dữ liệu lên, cài đặt công cụ, chạy việc trên cụm máy và theo dõi kết quả ở nhiều nơi; rất khó để tái lập. Omicslab gộp toàn bộ các bước đó vào một nền tảng duy nhất, nơi lưu trữ dữ liệu, thư viện công cụ và tài nguyên tính toán hoạt động cùng nhau. Quản trị viên kết nối một lần cho tổ chức — thông tin xác thực, nhà cung cấp cloud hay cụm HPC — và phân quyền theo vai trò (quản trị, cộng tác, chỉ xem). Chuyên viên phân tích chỉ cần chọn công cụ đã đăng ký, cấu hình tham số theo biểu mẫu, khởi chạy và theo dõi log trực tiếp ngay trên web; mọi cấu hình của từng lượt chạy đều được lưu lại, kèm theo chi phí và nhật ký hoạt động, để có thể tái lập bất cứ lúc nào.",
       note: [
         { strong: "Lưu ý:" },
         { text: " Nền tảng Omicslab hiện đang trong giai đoạn " },
@@ -454,12 +453,12 @@ export const vi: Dictionary = {
           {
             title: "Phân tích không tương tác",
             paragraph:
-              "RIVER cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
+              "Omicslab cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
           },
           {
             title: "Ứng dụng web tương tác",
             paragraph:
-              "RIVER cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
+              "Omicslab cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
           },
           {
             title: "Nghiên cứu cộng tác",
