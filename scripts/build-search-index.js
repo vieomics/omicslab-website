@@ -2,11 +2,17 @@ const fs = require("fs");
 const path = require("path");
 const matter = require("gray-matter");
 
-const postsDirectory = path.join(process.cwd(), "public/blogs");
-const outputPath = path.join(process.cwd(), "public/search-index.json");
+const locales = ["vi", "en"];
+const postsRoot = path.join(process.cwd(), "public/blogs");
+const publicDir = path.join(process.cwd(), "public");
 
-function getPostFiles() {
+function getPostFiles(locale) {
   const files = [];
+  const baseDir = path.join(postsRoot, locale);
+
+  if (!fs.existsSync(baseDir)) {
+    return files;
+  }
 
   function scanDirectory(dir) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -15,7 +21,7 @@ function getPostFiles() {
       if (entry.isDirectory()) {
         scanDirectory(fullPath);
       } else if (entry.name.endsWith(".md") || entry.name.endsWith(".mdx")) {
-        const relativePath = fullPath.replace(postsDirectory + "/", "");
+        const relativePath = fullPath.replace(baseDir + path.sep, "");
         const folderPath = relativePath
           .replace(/\.mdx?$/, "")
           .replace(/\/[^/]+$/, "");
@@ -28,49 +34,75 @@ function getPostFiles() {
     }
   }
 
-  scanDirectory(postsDirectory);
+  scanDirectory(baseDir);
   return files;
 }
 
-const postFiles = getPostFiles();
-const searchItems = [];
+function resolveImagePath(locale, folderPath, image) {
+  if (!image) return null;
+  if (image.startsWith("/") || image.startsWith("http")) return image;
 
-for (const file of postFiles) {
-  const fileContents = fs.readFileSync(file.fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const relative = image.replace(/^\.\//, "");
+  const candidates = locale === "vi" ? ["vi", "en"] : ["en", "vi"];
 
-  const slug = data.slug || file.fileName.replace(/\.mdx?$/, "");
-  const title = data.title || slug;
-  const description = data.description || "";
-  const date = data.date
-    ? new Date(data.date).toISOString()
-    : file.fileName.replace(/\.mdx?$/, "");
-  const tags = Array.isArray(data.tags)
-    ? data.tags
-    : data.tags
-      ? [data.tags]
-      : [];
-  const imagePath = data.image
-    ? `/blogs/${file.folderPath}/${data.image.replace(/^\.\//, "")}`
-    : null;
+  for (const candidate of candidates) {
+    const absolute = path.join(postsRoot, candidate, folderPath, relative);
+    if (fs.existsSync(absolute)) {
+      return `/blogs/${candidate}/${folderPath}/${relative}`;
+    }
+  }
 
-  searchItems.push({
-    slug,
-    title,
-    excerpt: description,
-    content: content
-      .replace(/#{1,6}\s+/g, "")
-      .replace(/\*\*(.*?)\*\*/g, "$1")
-      .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
-      .replace(/`{1,3}[^`]*`{1,3}/g, "")
-      .replace(/<[^>]*>/g, "")
-      .replace(/\n+/g, " ")
-      .slice(0, 2000),
-    tags,
-    date,
-    coverImage: imagePath,
-  });
+  return `/blogs/${locale}/${folderPath}/${relative}`;
 }
 
-fs.writeFileSync(outputPath, JSON.stringify(searchItems), "utf8");
-console.log(`Search index generated with ${searchItems.length} posts at ${outputPath}`);
+for (const locale of locales) {
+  const postFiles = getPostFiles(locale);
+  const searchItems = [];
+
+  for (const file of postFiles) {
+    const fileContents = fs.readFileSync(file.fullPath, "utf8");
+    const { data, content } = matter(fileContents);
+
+    const slug = data.slug || file.fileName.replace(/\.mdx?$/, "");
+    const title = data.title || slug;
+    const description = data.description || "";
+    const date = data.date
+      ? new Date(data.date).toISOString()
+      : file.fileName.replace(/\.mdx?$/, "");
+    const tags = Array.isArray(data.tags)
+      ? data.tags
+      : data.tags
+        ? [data.tags]
+        : [];
+    const imagePath = resolveImagePath(locale, file.folderPath, data.image);
+
+    searchItems.push({
+      slug,
+      title,
+      excerpt: description,
+      content: content
+        .replace(/#{1,6}\s+/g, "")
+        .replace(/\*\*(.*?)\*\*/g, "$1")
+        .replace(/\[([^\]]+)\]\([^)]+\)/g, "$1")
+        .replace(/`{1,3}[^`]*`{1,3}/g, "")
+        .replace(/<[^>]*>/g, "")
+        .replace(/\n+/g, " ")
+        .slice(0, 2000),
+      tags,
+      date,
+      coverImage: imagePath,
+    });
+  }
+
+  const outputPath = path.join(publicDir, `search-index.${locale}.json`);
+  fs.writeFileSync(outputPath, JSON.stringify(searchItems), "utf8");
+  console.log(
+    `Search index generated with ${searchItems.length} ${locale} posts at ${outputPath}`,
+  );
+}
+
+// Remove the legacy single-locale index if it exists.
+const legacyIndex = path.join(publicDir, "search-index.json");
+if (fs.existsSync(legacyIndex)) {
+  fs.unlinkSync(legacyIndex);
+}

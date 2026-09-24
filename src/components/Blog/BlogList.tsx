@@ -1,7 +1,10 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Blog } from "@/types/blog";
+import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { localizePath } from "@/i18n/paths";
 import SingleBlog from "./SingleBlog";
 import Fuse from "fuse.js";
 
@@ -18,9 +21,11 @@ interface SearchIndexItem {
 interface BlogListProps {
   posts: Blog[];
   allTags: string[];
+  dict: Dictionary;
+  locale: Locale;
 }
 
-const BlogList = ({ posts, allTags }: BlogListProps) => {
+const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<SearchIndexItem[]>([]);
@@ -28,7 +33,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
   const [fuse, setFuse] = useState<Fuse<SearchIndexItem> | null>(null);
 
   useEffect(() => {
-    fetch("/search-index.json")
+    fetch(`/search-index.${locale}.json`)
       .then((res) => res.json())
       .then((data: SearchIndexItem[]) => {
         const index = new Fuse(data, {
@@ -45,7 +50,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
         setFuse(index);
       })
       .catch(() => {});
-  }, []);
+  }, [locale]);
 
   useEffect(() => {
     if (!fuse || !searchQuery || searchQuery.length < 2) {
@@ -67,7 +72,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
   }, [posts, selectedTag]);
 
   const handleResultClick = (slug: string) => {
-    window.location.href = `/blogs/${slug}`;
+    window.location.href = localizePath(`/blogs/${slug}`, locale);
   };
 
   return (
@@ -82,7 +87,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
                 : "text-dark hover:bg-primary dark:bg-dark-2 bg-gray-100 hover:text-white dark:text-white"
             }`}
           >
-            All
+            {dict.common.all}
           </button>
           {allTags.map((tag) => (
             <button
@@ -101,7 +106,7 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
         <div className="relative">
           <input
             type="text"
-            placeholder="Search posts..."
+            placeholder={dict.blogPage.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => searchQuery.length >= 2 && setShowDropdown(true)}
@@ -162,13 +167,13 @@ const BlogList = ({ posts, allTags }: BlogListProps) => {
         <div className="-mx-4 flex flex-wrap justify-start">
           {filteredPosts.map((blog, i) => (
             <div key={i} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
-              <SingleBlog blog={blog} />
+              <SingleBlog blog={blog} dict={dict} locale={locale} />
             </div>
           ))}
         </div>
       ) : (
         <div className="py-10 text-center text-gray-500">
-          No posts found matching your criteria.
+          {dict.common.noPosts}
         </div>
       )}
     </div>

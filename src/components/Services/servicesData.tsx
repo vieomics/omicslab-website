@@ -25,7 +25,7 @@ const servicesData: Feature[] = [
     paragraph:
       "Production-ready pipelines for comprehensive bioinformatics analysis and data processing.",
     btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
+    btnLink: "https://github.com/vieomics",
   },
   {
     id: 2,
@@ -47,7 +47,7 @@ const servicesData: Feature[] = [
     paragraph:
       "Advanced integration and harmonization of complex multiomics datasets for comprehensive analysis at scale.",
     btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
+    btnLink: "https://github.com/vieomics",
   },
   {
     id: 3,
@@ -69,7 +69,7 @@ const servicesData: Feature[] = [
     paragraph:
       "Production-ready infrastructure configuration for high-performance computing cluster setup and management.",
     btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
+    btnLink: "https://github.com/vieomics",
   },
   {
     id: 4,
@@ -91,7 +91,7 @@ const servicesData: Feature[] = [
     paragraph:
       "Comprehensive bioinformatics data platform for integration, analysis, and management of complex datasets.",
     btn: "View on GitHub",
-    btnLink: "https://github.com/gianglabs",
+    btnLink: "https://github.com/vieomics",
   },
 ];
 
