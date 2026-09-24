@@ -324,6 +324,21 @@ export default function DataPlatformView({
             ))}
           </ol>
 
+          <ul className="mt-6 space-y-2">
+            {t.gettingStarted.notes.map((note) => (
+              <li
+                key={note}
+                className="text-muted flex gap-3 text-sm leading-relaxed"
+              >
+                <span
+                  aria-hidden="true"
+                  className="bg-ink mt-2 h-1 w-1 shrink-0"
+                />
+                <span>{note}</span>
+              </li>
+            ))}
+          </ul>
+
           <div className="border-line mt-10 border">
             <div className="relative aspect-video">
               <iframe
