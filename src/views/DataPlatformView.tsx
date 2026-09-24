@@ -209,17 +209,10 @@ export default function DataPlatformView({
             ))}
           </div>
 
-          <div className="border-line bg-line mt-8 grid gap-px border md:grid-cols-2">
-            <div className="bg-paper-light p-6">
-              <p className="text-muted [&_strong]:text-ink text-sm leading-relaxed [&_strong]:font-bold">
-                <RichText segments={t.pricing.trialNote} locale={locale} />
-              </p>
-            </div>
-            <div className="bg-paper-light p-6">
-              <p className="text-muted [&_strong]:text-ink text-sm leading-relaxed [&_strong]:font-bold">
-                <RichText segments={t.pricing.localNote} locale={locale} />
-              </p>
-            </div>
+          <div className="border-line bg-paper-light mt-8 border p-6">
+            <p className="text-muted [&_strong]:text-ink text-sm leading-relaxed [&_strong]:font-bold">
+              <RichText segments={t.pricing.trialNote} locale={locale} />
+            </p>
           </div>
 
           {t.pricing.estimates.map((estimate) => (
