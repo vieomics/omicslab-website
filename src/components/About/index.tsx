@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Dictionary } from "@/i18n";
 
-const About = () => {
+const About = ({ dict }: { dict: Dictionary }) => {
+  const { about } = dict.home;
   return (
     <section
       id="about"
@@ -13,27 +15,20 @@ const About = () => {
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="text-dark mb-5 text-3xl leading-tight font-bold sm:text-[40px] sm:leading-[1.2] dark:text-white">
-                  Empowering Bioinformatics Research
+                  {about.title}
                 </h2>
                 <p className="text-body-color dark:text-dark-6 mb-10 text-base leading-relaxed">
-                  Omicslab is an open-source initiative driving innovation in
-                  bioinformatics and multiomics research. We build scalable
-                  tools, workflows, and libraries designed to support complex
-                  experimental designs across bioinformatics applications.
+                  {about.paragraph1}
                   <br /> <br />
-                  Our mission is to empower researchers with accessible,
-                  high-performance, and modern solutions for data analysis and
-                  integrative multiomics. From production-ready variant calling
-                  pipelines to cutting-edge data platforms, we provide
-                  everything you need for advanced bioinformatics research.
+                  {about.paragraph2}
                 </p>
 
                 <Link
-                  href="https://github.com/gianglabs"
+                  href="https://github.com/vieomics"
                   target="_blank"
                   className="bg-primary hover:bg-primary/90 inline-flex items-center justify-center rounded-md px-7 py-3 text-center text-base font-medium text-white duration-300"
                 >
-                  Explore on GitHub
+                  {about.cta}
                 </Link>
               </div>
             </div>
@@ -66,13 +61,13 @@ const About = () => {
                   <div className="bg-primary relative z-10 mb-4 flex items-center justify-center overflow-hidden px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
-                        Omics
+                        {about.badge.line1}
                       </span>
                       <span className="block text-base font-semibold text-white">
-                        Open Sources
+                        {about.badge.line2}
                       </span>
                       <span className="block text-base font-medium text-white/70">
-                        Optimization
+                        {about.badge.line3}
                       </span>
                     </div>
                     <div>

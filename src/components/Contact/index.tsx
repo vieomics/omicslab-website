@@ -1,10 +1,13 @@
+import { Dictionary } from "@/i18n";
 import SectionTitle from "../Common/SectionTitle";
 
 interface ContactProps {
+  dict: Dictionary;
   fullHeight?: boolean;
 }
 
-const Contact = ({ fullHeight = false }: ContactProps) => {
+const Contact = ({ dict, fullHeight = false }: ContactProps) => {
+  const { contact } = dict.home;
   return (
     <section
       id="contact"
@@ -19,8 +22,8 @@ const Contact = ({ fullHeight = false }: ContactProps) => {
       >
         <div className="ud-contact-content-wrapper mx-auto max-w-6xl text-center">
           <SectionTitle
-            subtitle="Contact us"
-            title="Let's work together on your bioinformatics needs."
+            subtitle={contact.subtitle}
+            title={contact.title}
             paragraph=""
             width="100%"
             center
@@ -41,10 +44,10 @@ const Contact = ({ fullHeight = false }: ContactProps) => {
                 </div>
                 <div>
                   <h4 className="text-dark mb-1 text-lg font-semibold">
-                    Our Location
+                    {contact.locationLabel}
                   </h4>
                   <p className="text-base text-gray-600">
-                    Ho Chi Minh City, Vietnam
+                    {contact.location}
                   </p>
                 </div>
               </div>
@@ -61,9 +64,9 @@ const Contact = ({ fullHeight = false }: ContactProps) => {
                 </div>
                 <div>
                   <h4 className="text-dark mb-1 text-lg font-semibold">
-                    Email Us
+                    {contact.emailLabel}
                   </h4>
-                  <p className="text-base text-gray-600">contact@omicslab.io</p>
+                  <p className="text-base text-gray-600">{contact.email}</p>
                 </div>
               </div>
             </div>

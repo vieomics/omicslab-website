@@ -1,17 +1,18 @@
 import Link from "next/link";
+import { Dictionary } from "@/i18n";
 
-const Footer = () => {
+const Footer = ({ dict }: { dict: Dictionary }) => {
   return (
     <footer className="bg-black py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-white md:text-base">
-            © 2026 Omicslab. All rights reserved.
+            {dict.footer.copyright}
           </p>
           <div className="flex items-center gap-6">
             <Link
               aria-label="GitHub"
-              href="https://github.com/gianglabs"
+              href="https://github.com/vieomics"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white transition duration-300 hover:opacity-80"
