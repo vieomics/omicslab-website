@@ -250,12 +250,11 @@ export const en = {
     dataPlatform: {
       metadataTitle: "Omicslab Platform",
       metadataDescription:
-        "RIVER - Bioinformatics research platform for data management, HPC, and tool execution.",
+        "Omicslab - Bioinformatics research platform for data management, HPC, and tool execution.",
       title: "Omicslab Platform",
-      subtitle:
-        "Rapid Integration and Visualization for Enhanced Research (RIVER) - A scalable platform that unifies data management, high-performance computing (HPC), and tool execution.",
+      subtitle: "Omicslab — a comprehensive bioinformatics research platform",
       intro:
-        "Bioinformatics research often requires collecting and curating data, executing computational tools, and managing results across distributed resources with high reproducibility. In addition, challenges related to efficiency, accessibility, and security must be addressed. RIVER integrates three key components: data storage, tool version control, and computing resources. Acting as a controller, RIVER provides a role-based access control system, enabling users to create and manage credentials, projects, and tools, while analysis jobs are launched and monitored via a user-friendly web interface.",
+        "Bioinformatics research usually means many disconnected steps — uploading data, installing tools, running jobs on a cluster and chasing results in different places — and reproducing it all is hard. Omicslab brings those steps into one platform, where storage, a catalog of tools and compute resources work together. Administrators connect credentials, a cloud provider or an HPC cluster once for the whole organization, then grant access by role (admin, contributor, viewer). Analysts pick an already-registered tool, fill in a schema-driven parameter form, launch the job and follow live logs in the browser — with every run's configuration stored alongside its cost and audit trail, ready to reproduce at any time.",
       note: [
         { strong: "Note:" },
         { text: " The Omicslab Platform is currently under " },
@@ -452,12 +451,12 @@ export const en = {
           {
             title: "Non-Interactive Analysis",
             paragraph:
-              "RIVER allows effortless integration and execution of community-developed workflows as well as custom pipelines with easy migration from existing tools. It supports all nf-core pipelines (https://nf-co.re/pipelines/) or required to add a minor configuration for non nf-core nextflow, snakemake and bash script pipelines",
+              "Omicslab allows effortless integration and execution of community-developed workflows as well as custom pipelines with easy migration from existing tools. It supports all nf-core pipelines (https://nf-co.re/pipelines/) or required to add a minor configuration for non nf-core nextflow, snakemake and bash script pipelines",
           },
           {
             title: "Interactive Web Apps",
             paragraph:
-              "RIVER provides a secure way to publish interactive web applications from HPC environments to the public network, with authentication and centralized system control. It includes a ready-to-use Studio stack—RStudio Server, JupyterLab, and VS Code Server—and also supports access to other web-based applications such as custom dashboards.",
+              "Omicslab provides a secure way to publish interactive web applications from HPC environments to the public network, with authentication and centralized system control. It includes a ready-to-use Studio stack—RStudio Server, JupyterLab, and VS Code Server—and also supports access to other web-based applications such as custom dashboards.",
           },
           {
             title: "Collaborative Research",
