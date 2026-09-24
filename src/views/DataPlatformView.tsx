@@ -109,7 +109,14 @@ export default function DataPlatformView({
       <section className="section-pad">
         <div className="page-width">
           <div className="rule-accent max-w-[900px]">
-            <p className="text-ink text-base leading-relaxed">{t.intro}</p>
+            {t.intro.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-ink text-base leading-relaxed first:mt-0 mt-5"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
 
           <div className="border-line bg-paper-light mt-10 max-w-[900px] border px-6 py-5">
