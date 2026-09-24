@@ -1,4 +1,5 @@
 import Fuse from "fuse.js";
+import { Locale } from "@/i18n/config";
 import { getAllPosts } from "./markdown";
 
 export interface SearchItem {
@@ -12,8 +13,8 @@ export interface SearchItem {
 
 let searchIndex: Fuse<SearchItem> | null = null;
 
-export function buildSearchIndex(): Fuse<SearchItem> {
-  const posts = getAllPosts([
+export function buildSearchIndex(locale: Locale = "vi"): Fuse<SearchItem> {
+  const posts = getAllPosts(locale, [
     "slug",
     "title",
     "excerpt",

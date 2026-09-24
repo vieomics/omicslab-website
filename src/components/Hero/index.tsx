@@ -1,6 +1,10 @@
 import Link from "next/link";
+import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
 
-const Hero = () => {
+const Hero = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
+  const { hero } = dict.home;
   return (
     <>
       <section
@@ -26,14 +30,10 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-6 text-3xl leading-snug font-bold text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-                  Innovative Bioinformatics Services & Open-Source Tools
+                  {hero.title}
                 </h1>
                 <p className="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-                  Omicslab empowers researchers with scalable bioinformatics
-                  solutions. From advanced variant calling pipelines to
-                  cutting-edge multiomics analysis tools, we provide
-                  production-ready workflows and software for complex biological
-                  data analysis.
+                  {hero.paragraph}
                 </p>
                 <ul className="mb-10 flex flex-wrap items-center justify-center gap-5">
                   <li>
@@ -41,12 +41,12 @@ const Hero = () => {
                       href="#contact"
                       className="text-dark shadow-1 hover:bg-gray-2 inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium transition duration-300 ease-in-out"
                     >
-                      Contact for Work
+                      {hero.contactCta}
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="https://github.com/gianglabs"
+                      href="https://github.com/vieomics"
                       target="_blank"
                       className="hover:text-dark flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white"
                     >
@@ -67,7 +67,7 @@ const Hero = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      View on GitHub
+                      {hero.githubCta}
                     </Link>
                   </li>
                 </ul>

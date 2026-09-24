@@ -33,18 +33,30 @@ docker compose up -d --build   # Build image and run with traefik on :80/:443
 - All data comes from filesystem at BUILD TIME, not runtime
 - No `.env` file — site name/author are hardcoded constants since the build is fully static and single-brand
 
+### Internationalization (Vietnamese default + English)
+- Vietnamese is the default locale at `/`; English lives under `/en`
+- Two root layouts: `src/app/(vi)/layout.tsx` and `src/app/en/layout.tsx` (no top-level `app/layout.tsx`)
+- All copy lives in `src/i18n/dictionaries/{vi,en}.ts`; `en.ts` defines the `Dictionary` type so missing vi keys fail the build
+- Pages are thin wrappers (metadata + view); shared page bodies live in `src/views/`
+- Components take `dict` (and `locale`) as props — do NOT add an i18n context or runtime library
+- Never hardcode user-facing strings in components; add them to both dictionaries
+- Internal links MUST use `localizeHref`/`localizePath` from `src/i18n/paths.ts`
+- Blog translations share the same `slug` across `public/blogs/vi` and `public/blogs/en`; tags stay in English
+- Unmatched routes are handled by `src/app/global-not-found.tsx` (`experimental.globalNotFound`)
+
 ### Blog content flow
-1. Markdown source: `public/blogs/YYYY-MM/*.md` with YAML frontmatter
-2. `scripts/build-search-index.js` runs at build → `public/search-index.json`
-3. `src/utils/markdown.ts` reads files, `gray-matter` parses frontmatter
+1. Markdown source: `public/blogs/<locale>/YYYY-MM/*.md` with YAML frontmatter
+2. `scripts/build-search-index.js` runs at build → `public/search-index.vi.json` and `public/search-index.en.json`
+3. `src/utils/markdown.ts` reads files per locale, `gray-matter` parses frontmatter
 4. `src/utils/markdownToHtml.ts` unified pipeline: remark-parse → remark-gfm → remark-directive → remark-rehype → rehype-slug → rehype-highlight → rehype-stringify
-5. `generateStaticParams()` in blogs/[slug]/page.tsx prerenders all slugs at build
-6. BlogList.tsx fetches `search-index.json` client-side, runs Fuse.js in browser
+5. `generateStaticParams()` in `(vi)/blogs/[slug]/page.tsx` and `en/blogs/[slug]/page.tsx` prerenders all slugs per locale
+6. BlogList.tsx fetches the locale's search index client-side, runs Fuse.js in browser
 
 ### Image paths
-- Blog images live alongside markdown in `public/blogs/YYYY-MM/imgs/`
-- Images are served directly at `/blogs/YYYY-MM/imgs/` (Next.js serves `public/` natively)
-- Content markdown image paths are rewritten by markdown.ts from relative to `/blogs/`
+- Blog images live alongside markdown in `public/blogs/<locale>/YYYY-MM/imgs/`
+- Images are served directly at `/blogs/<locale>/YYYY-MM/imgs/`
+- Content markdown image paths are rewritten by markdown.ts from relative to `/blogs/<locale>/`
+- If an image is missing in the post's locale, the resolver falls back to the other locale's folder (translations reuse English screenshots)
 
 ### Styling
 - Tailwind CSS v4 with `@import "tailwindcss"` (no PostCSS config)

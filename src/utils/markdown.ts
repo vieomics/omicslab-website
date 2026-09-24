@@ -1,8 +1,9 @@
 import fs from "fs";
 import matter from "gray-matter";
 import { join } from "path";
+import { Locale } from "@/i18n/config";
 
-const postsDirectory = join(process.cwd(), "public/blogs");
+const postsRoot = join(process.cwd(), "public/blogs");
 
 interface PostFile {
   slug: string;
@@ -10,8 +11,17 @@ interface PostFile {
   fileName: string;
 }
 
-function getPostFiles(): PostFile[] {
+function localeDirectory(locale: Locale): string {
+  return join(postsRoot, locale);
+}
+
+function getPostFiles(locale: Locale): PostFile[] {
   const files: PostFile[] = [];
+  const baseDir = localeDirectory(locale);
+
+  if (!fs.existsSync(baseDir)) {
+    return files;
+  }
 
   function scanDirectory(dir: string) {
     const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -20,7 +30,7 @@ function getPostFiles(): PostFile[] {
       if (entry.isDirectory()) {
         scanDirectory(fullPath);
       } else if (entry.name.endsWith(".md") || entry.name.endsWith(".mdx")) {
-        const relativePath = fullPath.replace(postsDirectory + "/", "");
+        const relativePath = fullPath.replace(baseDir + "/", "");
         const folderPath = relativePath
           .replace(/\.mdx?$/, "")
           .replace(/\/[^/]+$/, "");
@@ -30,39 +40,52 @@ function getPostFiles(): PostFile[] {
     }
   }
 
-  scanDirectory(postsDirectory);
+  scanDirectory(baseDir);
   return files;
 }
 
-export function getPostSlugs(): string[] {
-  const slugs: string[] = [];
-  const postFiles = getPostFiles();
+/**
+ * Resolve an image referenced from a post. Images are looked up in the post's
+ * own locale folder first, then in the other locale folder, so translated
+ * posts can reuse the original images without duplicating files.
+ */
+function resolveImagePath(
+  locale: Locale,
+  folderPath: string,
+  src: string,
+): string {
+  if (src.startsWith("/") || src.startsWith("http")) {
+    return src;
+  }
 
-  for (const file of postFiles) {
-    const fullPath = join(postsDirectory, file.folderPath, file.fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
-    if (data.slug) {
-      slugs.push(data.slug);
-    } else {
-      slugs.push(file.slug);
+  const relative = src.replace(/^\.\//, "");
+  const candidates: Locale[] = locale === "vi" ? ["vi", "en"] : ["en", "vi"];
+
+  for (const candidate of candidates) {
+    const absolute = join(postsRoot, candidate, folderPath, relative);
+    if (fs.existsSync(absolute)) {
+      return `/blogs/${candidate}/${folderPath}/${relative}`;
     }
   }
 
-  return slugs;
+  return `/blogs/${locale}/${folderPath}/${relative}`;
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
+function readPostFile(file: PostFile, locale: Locale) {
+  const fullPath = join(localeDirectory(locale), file.folderPath, file.fileName);
+  const fileContents = fs.readFileSync(fullPath, "utf8");
+  return matter(fileContents);
+}
+
+function findPostFile(locale: Locale, slug: string): PostFile | null {
   const realSlug = slug.replace(/\.mdx?$/, "");
-  const postFiles = getPostFiles();
+  const postFiles = getPostFiles(locale);
 
   let postFile = postFiles.find((f) => f.slug === realSlug);
 
   if (!postFile) {
     for (const file of postFiles) {
-      const fullPath = join(postsDirectory, file.folderPath, file.fileName);
-      const fileContents = fs.readFileSync(fullPath, "utf8");
-      const { data } = matter(fileContents);
+      const { data } = readPostFile(file, locale);
       if (data.slug === realSlug) {
         postFile = file;
         break;
@@ -70,13 +93,34 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     }
   }
 
+  return postFile ?? null;
+}
+
+export function getPostSlugs(locale: Locale): string[] {
+  const slugs: string[] = [];
+  const postFiles = getPostFiles(locale);
+
+  for (const file of postFiles) {
+    const { data } = readPostFile(file, locale);
+    slugs.push(data.slug || file.slug);
+  }
+
+  return slugs;
+}
+
+export function getPostBySlug(
+  locale: Locale,
+  slug: string,
+  fields: string[] = [],
+) {
+  const realSlug = slug.replace(/\.mdx?$/, "");
+  const postFile = findPostFile(locale, realSlug);
+
   if (!postFile) {
     return null;
   }
 
-  const fullPath = join(postsDirectory, postFile.folderPath, postFile.fileName);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  const { data, content } = readPostFile(postFile, locale);
 
   type Items = {
     [key: string]: string | string[] | object | null;
@@ -95,13 +139,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
     return null;
   }
 
-  function processContent(content: string, folderPath: string) {
-    let processed = content.replace(/<!--truncate-->/g, "");
+  function processContent(rawContent: string, folderPath: string) {
+    let processed = rawContent.replace(/<!--truncate-->/g, "");
     processed = processed.replace(/!\[.*?\]\((.*?)\)/g, (match, path) => {
-      let fixedPath = path;
-      if (!path.startsWith("/") && !path.startsWith("http")) {
-        fixedPath = `/blogs/${folderPath}/${path.replace(/^\.\//, "")}`;
-      }
+      const fixedPath = resolveImagePath(locale, folderPath, path);
       return `<img src="${fixedPath}" alt="" />`;
     });
     processed = processed.replace(
@@ -112,10 +153,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
           /<figcaption[^>]*>([\s\S]*?)<\/figcaption>/,
         );
         if (imgMatch) {
-          let src = imgMatch[1];
-          if (!src.startsWith("/") && !src.startsWith("http")) {
-            src = `/blogs/${folderPath}/${src.replace(/^\.\//, "")}`;
-          }
+          const src = resolveImagePath(locale, folderPath, imgMatch[1]);
           let html = `<figure><img src="${src}" alt="" />`;
           if (captionMatch) {
             html += `<figcaption>${captionMatch[1]}</figcaption>`;
@@ -150,7 +188,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
       : [];
 
   const imagePath = data.image
-    ? `/blogs/${folderPath}/${data.image.replace(/^\.\//, "")}`
+    ? resolveImagePath(locale, folderPath, data.image)
     : null;
 
   fields.forEach((field) => {
@@ -191,17 +229,15 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items;
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const postFiles = getPostFiles();
+export function getAllPosts(locale: Locale, fields: string[] = []) {
+  const postFiles = getPostFiles(locale);
   const posts: PostItems[] = [];
 
   for (const file of postFiles) {
-    const fullPath = join(postsDirectory, file.folderPath, file.fileName);
-    const fileContents = fs.readFileSync(fullPath, "utf8");
-    const { data } = matter(fileContents);
+    const { data } = readPostFile(file, locale);
     const slug = data.slug || file.slug;
 
-    const post = getPostBySlug(slug, fields);
+    const post = getPostBySlug(locale, slug, fields);
     if (post) {
       posts.push(post);
     }
@@ -214,8 +250,8 @@ export function getAllPosts(fields: string[] = []) {
   });
 }
 
-export function getAllTags(): string[] {
-  const posts = getAllPosts(["tags"]);
+export function getAllTags(locale: Locale): string[] {
+  const posts = getAllPosts(locale, ["tags"]);
   const tagSet = new Set<string>();
   posts.forEach((post) => {
     const tags = post.tags as string[];
@@ -230,16 +266,24 @@ type PostItems = {
   [key: string]: string | string[] | object | null;
 };
 
-export function getPostsByTag(tag: string, fields: string[] = []): PostItems[] {
-  const allPosts = getAllPosts([...fields, "tags"]);
+export function getPostsByTag(
+  locale: Locale,
+  tag: string,
+  fields: string[] = [],
+): PostItems[] {
+  const allPosts = getAllPosts(locale, [...fields, "tags"]);
   return allPosts.filter((post) => {
     const tags = post.tags as string[];
     return tags ? tags.includes(tag) : false;
   });
 }
 
-export function searchPosts(query: string, fields: string[] = []): PostItems[] {
-  const allPosts = getAllPosts([...fields, "title", "content", "tags"]);
+export function searchPosts(
+  locale: Locale,
+  query: string,
+  fields: string[] = [],
+): PostItems[] {
+  const allPosts = getAllPosts(locale, [...fields, "title", "content", "tags"]);
   const lowerQuery = query.toLowerCase();
 
   return allPosts.filter((post) => {
@@ -253,4 +297,32 @@ export function searchPosts(query: string, fields: string[] = []): PostItems[] {
       tags.some((tag) => tag.includes(lowerQuery))
     );
   });
+}
+
+/**
+ * Slugs that exist in both locales. Used by the language switcher to link
+ * directly to a translated article instead of the blog index.
+ */
+export function getTranslatedSlugs(): string[] {
+  const viSlugs = new Set(getPostSlugs("vi"));
+  const enSlugs = getPostSlugs("en");
+  return enSlugs.filter((slug) => viSlugs.has(slug));
+}
+
+/**
+ * Return the slug of the same article in the other locale, or null when the
+ * article has not been translated yet.
+ */
+export function getPostTranslation(
+  locale: Locale,
+  slug: string,
+): string | null {
+  const other: Locale = locale === "vi" ? "en" : "vi";
+  const realSlug = slug.replace(/\.mdx?$/, "");
+  const file = findPostFile(other, realSlug);
+  if (!file) {
+    return null;
+  }
+  const { data } = readPostFile(file, other);
+  return data.slug || file.slug;
 }

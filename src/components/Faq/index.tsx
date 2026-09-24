@@ -1,32 +1,29 @@
+import { Dictionary } from "@/i18n";
 import SectionTitle from "../Common/SectionTitle";
 import SingleFaq from "./SingleFaq";
 
-const Faq = () => {
+const Faq = ({ dict }: { dict: Dictionary }) => {
+  const { faq } = dict.home;
   return (
     <section className="dark:bg-dark relative z-20 overflow-hidden bg-white pt-20 pb-8 lg:pt-[120px] lg:pb-[50px]">
       <div className="container">
         <SectionTitle
-          subtitle="FAQ"
-          title="Any Questions? Answered"
-          paragraph="Below are answers to some of the most common questions we receive."
+          subtitle={faq.subtitle}
+          title={faq.title}
+          paragraph={faq.paragraph}
           width="640px"
           center
         />
 
         <div className="-mx-4 mt-[60px] flex flex-wrap lg:mt-20">
           <div className="w-full px-4">
-            <SingleFaq
-              question="Is there a cost for using your solutions?"
-              answer="Our open-source solutions are available at no cost. The Data Platform subscription is 1,000,000 VND/month for 10 users (fixed price until end of July 2026). Storage (S3) is 1,000 VND/GB/month. HPC compute starts at 20,000 VND/hour (max 16 CPUs / 32 GB RAM, ratio 1:2). nf-core pipelines are free, OmicsLab pipelines are adjusted, and metagenomics assembly is 100,000 VND/sample for complete genomes. Fully local deployment of the platform and HPC is also available — contact us for details."
-            />
-            <SingleFaq
-              question="How is pricing structured?"
-              answer="We provide customized pricing based on your technical requirements and project scope. Rather than hourly billing, we offer project-based contracts that align with your business objectives and timeline."
-            />
-            <SingleFaq
-              question="What is the availability of your data platform?"
-              answer="Our data platform is currently under trial in Vietnam. Contact us to get 2 free genomics assembly sample runs on the platform. Full integration is supported when using our IaaS infrastructure for High Performance Computing with SLURM configuration."
-            />
+            {faq.items.map((item, index) => (
+              <SingleFaq
+                key={index}
+                question={item.question}
+                answer={item.answer}
+              />
+            ))}
           </div>
         </div>
       </div>

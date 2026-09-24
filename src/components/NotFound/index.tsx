@@ -1,8 +1,11 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
 
-const NotFound = () => {
+const NotFound = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
   return (
     <section className="bg-white py-20 dark:bg-dark-2 lg:py-[110px]">
       <div className="container mx-auto">
@@ -56,18 +59,17 @@ const NotFound = () => {
                   />
                 </svg>
               </div>
-              <h3 className="mb-5 text-2xl font-semibold text-dark dark:text-white">
-                We Can&#39;t Seem to Find The Page You&#39;re Looking For.
+              <h3 className="text-dark mb-5 text-2xl font-semibold dark:text-white">
+                {dict.notFound.heading}
               </h3>
-              <p className="mb-8 text-base text-body-color dark:text-dark-6">
-                Oops! The page you are looking for does not exist. It might have
-                been moved or deleted.
+              <p className="text-body-color dark:text-dark-6 mb-8 text-base">
+                {dict.notFound.paragraph}
               </p>
               <Link
-                href="/"
-                className="rounded-md bg-dark px-7 py-3 text-base font-medium text-white transition hover:bg-primary dark:bg-primary dark:hover:bg-primary/80"
+                href={localizeHref("/", locale)}
+                className="bg-dark hover:bg-primary dark:bg-primary dark:hover:bg-primary/80 rounded-md px-7 py-3 text-base font-medium text-white transition"
               >
-                Go To Home
+                {dict.notFound.button}
               </Link>
             </div>
           </div>
