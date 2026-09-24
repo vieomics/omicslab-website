@@ -19,44 +19,29 @@ const teamData: TeamType[] = [
 const Team = ({ dict }: { dict: Dictionary }) => {
   const { team } = dict.aboutPage;
   return (
-    <section
-      id="team"
-      className="bg-gray-1 dark:bg-dark-2 overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
-    >
-      <div className="container">
-        <div className="w-full">
-          <div className="mb-10 text-left">
-            <h2 className="text-dark mb-4 text-3xl leading-tight font-bold sm:text-[40px] sm:leading-[1.2] dark:text-white">
-              {team.title}
-            </h2>
-          </div>
-          <div className="space-y-16">
-            {teamData.map((member, index) => (
-              <div
-                key={member.id}
-                className="flex flex-col items-center gap-8 md:flex-row"
-              >
-                <div className="w-full md:w-1/3">
-                  <div className="mx-auto w-[280px]">
-                    <SingleTeam team={member} />
-                  </div>
-                </div>
-                <div className="w-full md:w-2/3">
-                  <div className="mb-4">
-                    <h2 className="text-dark text-2xl font-bold dark:text-white">
-                      {member.name}
-                    </h2>
-                    <p className="text-primary font-medium">
-                      {team.members[index]?.designation ?? member.designation}
-                    </p>
-                  </div>
-                  <p className="text-body-color dark:text-dark-6 text-base leading-relaxed whitespace-pre-wrap">
-                    {team.members[index]?.bio ?? member.bio}
-                  </p>
-                </div>
+    <section id="team" className="section-pad rule-top">
+      <div className="page-width">
+        <h2 className="display-lg text-ink">{team.title}</h2>
+
+        <div className="mt-16 space-y-20">
+          {teamData.map((member, index) => (
+            <article
+              key={member.id}
+              className="border-line grid gap-10 border-t pt-10 md:grid-cols-[minmax(220px,280px)_1fr] md:gap-16"
+            >
+              <SingleTeam team={member} />
+
+              <div>
+                <h3 className="display-md text-ink">{member.name}</h3>
+                <p className="micro-label text-muted mt-3">
+                  {team.members[index]?.designation ?? member.designation}
+                </p>
+                <p className="text-muted mt-8 max-w-[760px] text-base leading-relaxed whitespace-pre-wrap">
+                  {team.members[index]?.bio ?? member.bio}
+                </p>
               </div>
-            ))}
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

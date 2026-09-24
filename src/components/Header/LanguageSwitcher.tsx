@@ -28,7 +28,7 @@ export default function LanguageSwitcher({
     <Link
       href={href}
       aria-label={ariaLabel}
-      className={`text-dark border-stroke hover:border-primary hover:text-primary dark:border-dark-3 flex items-center gap-1 rounded-md border px-2.5 py-1 text-sm font-medium transition duration-300 dark:text-white ${className}`}
+      className={`flex items-center gap-2 border border-white/25 px-3 py-2 text-[10px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:border-accent ${className}`}
     >
       <svg
         width="16"
@@ -43,7 +43,7 @@ export default function LanguageSwitcher({
         <path d="M2 12h20" />
         <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
       </svg>
-      {label}
+      <span className="hidden sm:inline">{label}</span>
     </Link>
   );
 }

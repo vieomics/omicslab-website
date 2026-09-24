@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import SiteShell from "@/components/SiteShell";
 import { getDictionary } from "@/i18n";
 import { getTranslatedSlugs } from "@/utils/markdown";
+import { fontVariables } from "../fonts";
 import "../../styles/index.css";
 import "../../styles/prism-vsc-dark-plus.css";
 
@@ -27,7 +28,11 @@ export default function VietnameseRootLayout({
   const translatedSlugs = getTranslatedSlugs();
 
   return (
-    <html suppressHydrationWarning className="!scroll-smooth" lang="vi">
+    <html
+      suppressHydrationWarning
+      className={`${fontVariables} !scroll-smooth`}
+      lang="vi"
+    >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <script

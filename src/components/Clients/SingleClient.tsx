@@ -3,23 +3,21 @@ import Link from "next/link";
 import { Client } from "@/types/client";
 
 const SingleClient = ({ client }: { client: Client }) => {
-  const { title, link, logo, logoWhite } = client;
+  const { title, link, logo } = client;
   return (
-    <div className="ud-single-logo mr-10 mb-5 max-w-[140px]">
-      <Link href={link} target="_blank" rel="nofollow noopner">
+    <div className="bg-paper-light flex items-center justify-center p-8">
+      <Link
+        href={link}
+        target="_blank"
+        rel="nofollow noopener noreferrer"
+        className="opacity-70 transition-opacity hover:opacity-100"
+      >
         <Image
           src={logo}
           alt={title}
-          className="dark:hidden"
-          width={5}
+          width={120}
           height={40}
-        />
-        <Image
-          src={logoWhite}
-          alt={title}
-          className="hidden dark:block"
-          width={5}
-          height={40}
+          className="h-10 w-auto object-contain"
         />
       </Link>
     </div>

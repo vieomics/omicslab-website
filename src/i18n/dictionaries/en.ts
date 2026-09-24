@@ -4,6 +4,12 @@ export const en = {
   site: {
     name: "Omicslab",
     tagline: "Omics Technology",
+    legalName: "VIEOMICS COMPANY LIMITED",
+    address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
+    taxLabel: "Tax ID",
+    taxId: "0319713358",
+    phoneLabel: "Phone",
+    phone: "(+84) 364002059",
   },
   nav: {
     home: "Home",
@@ -24,6 +30,8 @@ export const en = {
   },
   footer: {
     copyright: "© 2026 Omicslab. All rights reserved.",
+    platform: "Omicslab platform",
+    productOf: "A product of",
   },
   common: {
     home: "Home",
@@ -38,7 +46,6 @@ export const en = {
     noDate: "No date",
     anonymous: "Anonymous",
     scrollToTop: "scroll to top",
-    themeToggler: "theme toggler",
     viewOnGitHub: "View on GitHub",
     contactUs: "Contact us",
     readInOtherLanguage: "Read in Vietnamese",
@@ -135,7 +142,6 @@ export const en = {
       subtitle: "Contact us",
       title: "Let's work together on your bioinformatics needs.",
       locationLabel: "Our Location",
-      location: "Ho Chi Minh City, Vietnam",
       emailLabel: "Email Us",
       email: "contact@omicslab.io",
     },
