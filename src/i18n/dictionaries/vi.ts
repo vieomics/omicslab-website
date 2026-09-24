@@ -76,7 +76,7 @@ export const vi: Dictionary = {
           cta: "Mở nền tảng",
         },
         {
-          title: "Mang theo hoặc tích hợp dịch vụ của bạn",
+          title: "Tích hợp hạ tầng của bạn",
           paragraph:
             "Tự vận hành nền tảng ngay tại chỗ, kết nối cụm HPC Slurm của riêng bạn và mang các quy trình hiện có vào với công sức tối thiểu. Dữ liệu được lưu trữ theo dung lượng — bạn chỉ trả phí cho gói lưu trữ đã chọn.",
           cta: "Tài liệu triển khai",
@@ -84,13 +84,13 @@ export const vi: Dictionary = {
         {
           title: "Trả phí và chạy, trọn gói",
           paragraph:
-            "Mới bắt đầu với dry-lab? Mọi thứ đã sẵn sàng: tính toán CloudFly và GreenNode, lưu trữ, cùng quy trình nf-core và Nextflow. Trả phí theo mức sử dụng và bắt đầu chạy.",
+            "Mọi thứ đã sẵn sàng: đăng nhập, chọn một quy trình nf-core như rnaseq hoặc sarek, thiết lập tham số và tài nguyên rồi bấm chạy — tính toán trên CloudFly hoặc GreenNode, lưu trữ, và kết quả trả về ngay trên nền tảng. Hệ thống tối ưu cho Nextflow và nf-core nhưng không giới hạn ở đó; bên cạnh Studio như RStudio, JupyterLab và VS Code, nền tảng còn chạy được mọi ứng dụng web triển khai bằng Docker.",
           cta: "Đọc tài liệu",
         },
         {
-          title: "Dịch vụ tin sinh học chuyên môn",
+          title: "Dịch vụ tin sinh học theo dự án",
           paragraph:
-            "Công việc theo yêu cầu khách hàng — tích hợp đa omics, phát hiện biến thể, lắp ráp metagenomics, phát triển quy trình và thiết lập HPC — gắn kết chặt chẽ với nền tảng.",
+            "Ví dụ: bạn đã có cụm HPC Slurm và NAS cục bộ, muốn mở rộng dịch vụ sản xuất mà không phải gỡ bỏ cụm hiện có — nền tảng tích hợp vào hạ tầng sẵn có, cho phép một phần cụm chuyển sang vai trò phát triển, phần còn lại mở rộng cho sản xuất. Bạn có thể triển khai quy trình NIPT: nền tảng giúp tải lên, lưu trữ dữ liệu, tạo mẫu kèm quản lý cohort và tự động kích hoạt các quy trình đã cấu hình sẵn ở quy mô lớn (qua tính năng mini LIMS). Kiến trúc plugin cho phép tích hợp toàn bộ chức năng LIMS khi cần xử lý dữ liệu nhạy cảm.",
           cta: "Liên hệ với chúng tôi",
         },
       ],
@@ -132,9 +132,9 @@ export const vi: Dictionary = {
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
         { title: "GreenNode", detail: "Tính toán VNG Cloud" },
         { title: "Slurm HPC", detail: "Cụm riêng của bạn qua SSH" },
-        { title: "Nextflow", detail: "nf-core và quy trình tùy chỉnh" },
+        { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không chỉ" },
         { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
-        { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
+        { title: "Studio", detail: "RStudio, JupyterLab, VS Code hoặc mọi ứng dụng web Docker" },
       ],
     },
     about: {
