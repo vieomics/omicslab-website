@@ -95,31 +95,34 @@ export const en = {
     },
     howItWorks: {
       subtitle: "How it works",
-      title: "From Raw Data to Results in Four Steps",
+      title: "A Complete End-to-End Flow on the Platform",
       paragraph:
-        "No cluster setup and no container plumbing. Create a workspace, connect compute, choose a pipeline and run.",
+        "From creating your organization to getting results — every step happens in one place, on the platform.",
       steps: [
         {
-          title: "Create a workspace",
+          title: "Create your organization",
           paragraph:
-            "Spin up a workspace with its own storage, invite your lab and upload sequencing data.",
+            "Set up your organization, invite your team and activate your license by paying the subscription bill.",
         },
         {
-          title: "Connect compute",
+          title: "Add infrastructure and storage",
           paragraph:
-            "Attach a CloudFly or GreenNode account, or register your own Slurm HPC cluster over SSH.",
+            "Pay for cloud compute and storage if you need them, or connect your own infrastructure and NAS — the platform works with what you already have.",
         },
         {
-          title: "Choose a pipeline",
+          title: "Select your input data",
           paragraph:
-            "Pick an nf-core pipeline or register any Git repository, then set parameters, CPU, memory and time limits.",
+            "Choose the files to analyse in the data browser — upload them or pull them from your existing storage.",
         },
         {
-          title: "Run and review",
+          title: "Choose a pipeline and run",
           paragraph:
-            "Launch analysis or studio sessions, follow live logs, and open MultiQC, Nextflow and genome reports in your browser.",
+            "Run Nextflow and nf-core, or any pipeline with a preconfigured schema (bash, Snakemake and more) — parameters, resources, logs and results stay end-to-end on the platform.",
         },
       ],
+      noteLabel: "Note",
+      note:
+        "Running on your own infrastructure? A small platform fee is still charged per hour while jobs run — it covers platform maintenance only.",
     },
     platforms: {
       subtitle: "Works with",

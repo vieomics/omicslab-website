@@ -97,31 +97,34 @@ export const vi: Dictionary = {
     },
     howItWorks: {
       subtitle: "Cách hoạt động",
-      title: "Từ dữ liệu thô đến kết quả trong bốn bước",
+      title: "Quy trình đầu-cuối hoàn chỉnh trên nền tảng",
       paragraph:
-        "Không cần dựng cụm, không cần cấu hình container. Tạo workspace, kết nối tính toán, chọn quy trình và chạy.",
+        "Từ khi tạo tổ chức đến khi có kết quả — mọi bước diễn ra trên cùng một nền tảng.",
       steps: [
         {
-          title: "Tạo workspace",
+          title: "Tạo tổ chức",
           paragraph:
-            "Khởi tạo workspace với dung lượng lưu trữ riêng, mời thành viên trong nhóm và tải dữ liệu giải trình tự lên.",
+            "Thiết lập tổ chức, mời thành viên và kích hoạt giấy phép bằng cách thanh toán phí thuê bao.",
         },
         {
-          title: "Kết nối tính toán",
+          title: "Thêm hạ tầng và lưu trữ",
           paragraph:
-            "Gắn tài khoản CloudFly hoặc GreenNode, hoặc đăng ký cụm HPC Slurm của bạn qua SSH.",
+            "Trả phí cho điện toán và lưu trữ trên cloud nếu bạn cần, hoặc kết nối hạ tầng và NAS sẵn có — nền tảng hoạt động với những gì bạn đang có.",
         },
         {
-          title: "Chọn quy trình",
+          title: "Chọn dữ liệu đầu vào",
           paragraph:
-            "Chọn quy trình nf-core hoặc đăng ký kho Git bất kỳ, rồi thiết lập tham số, CPU, bộ nhớ và giới hạn thời gian.",
+            "Chọn các tệp cần phân tích ngay trên trình duyệt dữ liệu — tải lên hoặc lấy từ hạ tầng sẵn có của bạn.",
         },
         {
-          title: "Chạy và xem kết quả",
+          title: "Chọn quy trình và chạy",
           paragraph:
-            "Khởi chạy phân tích hoặc phiên studio, theo dõi log trực tiếp và mở báo cáo MultiQC, Nextflow và hệ gen ngay trên trình duyệt.",
+            "Chạy Nextflow và nf-core, hoặc bất kỳ quy trình nào có schema được cấu hình sẵn (bash, Snakemake và nhiều hơn nữa) — tham số, tài nguyên, log và kết quả đều vận hành đầu-cuối trên nền tảng.",
         },
       ],
+      noteLabel: "Lưu ý",
+      note:
+        "Dùng hạ tầng của riêng bạn? Nền tảng vẫn tính một khoản phí nhỏ theo giờ khi chạy job — chỉ dùng để vận hành và bảo trì nền tảng.",
     },
     platforms: {
       subtitle: "Tương thích với",

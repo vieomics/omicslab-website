@@ -25,6 +25,13 @@ const HowItWorks = ({ dict }: { dict: Dictionary }) => {
             </div>
           ))}
         </div>
+
+        <p className="mt-6 max-w-[760px] text-xs leading-relaxed text-muted">
+          <span className="micro-label mr-2 text-ink">
+            {howItWorks.noteLabel}
+          </span>
+          {howItWorks.note}
+        </p>
       </div>
     </section>
   );
