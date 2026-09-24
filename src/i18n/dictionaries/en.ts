@@ -73,7 +73,7 @@ const topup = {
     [
       { strong: "Storage:" },
       {
-        text: " 1,000 VND/GB per month, deducted monthly from your organization balance.",
+        text: " 500 VND/GB per month, deducted monthly from your organization balance.",
       },
     ],
     [
@@ -99,6 +99,17 @@ const topup = {
       { text: " of the platform & HPC is available — contact us for details." },
     ],
   ] as TextSegment[][],
+  storage: {
+    title: "S3 Storage (Marketplace)",
+    specs: [
+      { label: "Storage quota", value: "Unlimited" },
+      { label: "Download speed", value: "10 Gbps" },
+      { label: "HTTP GET/HEAD", value: "5000 req/s" },
+      { label: "Data transfer", value: "Unlimited" },
+      { label: "Billing", value: "Pay as you go" },
+      { label: "Price", value: "500 VND/GB" },
+    ],
+  },
 };
 
 export const en = {
@@ -414,13 +425,13 @@ export const en = {
               },
               {
                 item: "Storage (S3)",
-                unitPrice: "1,000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~50 GB",
-                subtotal: "~50,000 VND",
+                subtotal: "~25,000 VND",
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~15,050,000 VND",
+            total: "~15,025,000 VND",
             footnote: [
               {
                 text: "* Estimates based on typical bacterial genome assembly workload. Actual costs may vary. ",
@@ -458,13 +469,13 @@ export const en = {
               },
               {
                 item: "Storage (S3)",
-                unitPrice: "1,000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~10 GB",
-                subtotal: "~10,000 VND",
+                subtotal: "~5,000 VND",
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~12,010,000 VND",
+            total: "~12,005,000 VND",
             footnote: [
               {
                 text: "* Estimates based on typical 16S rRNA analysis workload. Actual costs may vary. ",

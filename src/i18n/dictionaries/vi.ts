@@ -73,7 +73,7 @@ const topup = {
     ],
     [
       { strong: "Lưu trữ:" },
-      { text: " 1.000 VND/GB mỗi tháng, trừ hàng tháng vào số dư tổ chức." },
+      { text: " 500 VND/GB mỗi tháng, trừ hàng tháng vào số dư tổ chức." },
     ],
     [
       { strong: "Điện toán:" },
@@ -98,6 +98,17 @@ const topup = {
       { text: " cho nền tảng & HPC đã có sẵn — liên hệ để biết chi tiết." },
     ],
   ] as TextSegment[][],
+  storage: {
+    title: "Lưu trữ S3 (Marketplace)",
+    specs: [
+      { label: "Dung lượng lưu trữ", value: "Không giới hạn" },
+      { label: "Tốc độ tải xuống", value: "10 Gbps" },
+      { label: "HTTP GET/HEAD", value: "5000 req/s" },
+      { label: "Chuyển dữ liệu", value: "Không giới hạn" },
+      { label: "Cách tính phí", value: "Pay as you go" },
+      { label: "Giá lưu trữ", value: "500 VND/GB" },
+    ],
+  },
 };
 
 export const vi: Dictionary = {
@@ -414,13 +425,13 @@ export const vi: Dictionary = {
               },
               {
                 item: "Lưu trữ (S3)",
-                unitPrice: "1.000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~50 GB",
-                subtotal: "~50.000 VND",
+                subtotal: "~25.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~15.050.000 VND",
+            total: "~15.025.000 VND",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -458,13 +469,13 @@ export const vi: Dictionary = {
               },
               {
                 item: "Lưu trữ (S3)",
-                unitPrice: "1.000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~10 GB",
-                subtotal: "~10.000 VND",
+                subtotal: "~5.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~12.010.000 VND",
+            total: "~12.005.000 VND",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng phân tích 16S rRNA thông thường. Chi phí thực tế có thể thay đổi. ",
