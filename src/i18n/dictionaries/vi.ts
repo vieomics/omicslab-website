@@ -133,9 +133,9 @@ export const vi: Dictionary = {
         "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
       items: [
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
-        { title: "GreenNode", detail: "Tính toán VNG Cloud" },
+        { title: "GreenNode", detail: "Greennode (VNG Cloud) - TP.HCM" },
         { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
-        { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không chỉ" },
+        { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv" },
         { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code hoặc mọi ứng dụng web Docker" },
       ],
