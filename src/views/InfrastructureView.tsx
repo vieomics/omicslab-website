@@ -1,6 +1,6 @@
 import BlogListWithFilter from "@/components/Blog/BlogListWithFilter";
 import Contact from "@/components/Contact";
-import OfferList from "@/components/Pricing/OfferList";
+import OfferList from "@/components/Common/OfferList";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
 import { toBlogPosts } from "@/utils/blogPosts";

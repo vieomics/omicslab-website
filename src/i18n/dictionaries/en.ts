@@ -1,5 +1,102 @@
 import { TextSegment } from "../types";
 
+const subscription = {
+  subtitle: "Subscription",
+  title: "Three Tiers, Sized to Your Team",
+  paragraph:
+    "Limits — workspaces, members and concurrent jobs — scale by tier, while compute and storage stay usage-based.",
+  tiers: [
+    {
+      name: "Lite",
+      highlight: "Individuals and small teams",
+      price: "100,000 VND",
+      period: "/month",
+      features: [
+        "Up to 2 workspaces",
+        "1 organization member, 3 members per workspace",
+        "5 Studio sessions and 5 analysis jobs at once",
+        "Storage billed by usage",
+        "The full platform feature set",
+      ],
+      cta: "Sign up with Lite",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Pro",
+      highlight: "Most popular",
+      price: "1,000,000 VND",
+      period: "/month",
+      features: [
+        "Up to 20 workspaces",
+        "10 organization members, 30 members per workspace",
+        "50 Studio sessions and 50 analysis jobs at once",
+        "Storage billed by usage",
+        "The full platform feature set",
+      ],
+      cta: "Sign up with Pro",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Business",
+      highlight: "Self-customizable",
+      price: "Custom",
+      period: "by request",
+      features: [
+        "Custom limits sized to your business",
+        "On-premises or private (air-gapped) deployment",
+        "LIMS and plugin integrations to spec",
+        "Priority support with a contracted SLA",
+        "A dedicated quote and contract",
+      ],
+      cta: "Talk to us",
+      ctaHref: "/contact",
+    },
+  ],
+};
+
+const topup = {
+  subtitle: "Top-Up",
+  title: "Pay for What You Use",
+  paragraph:
+    "Top up your organization wallet and spend it on compute, storage and the platform fee as you go.",
+  lines: [
+    [
+      { strong: "Top-up:" },
+      {
+        text: " Fund your wallet via SePay/VietQR. The balance covers compute, storage and the platform fee — top-up invoices carry 10% VAT, subscriptions 0%.",
+      },
+    ],
+    [
+      { strong: "Storage:" },
+      {
+        text: " 1,000 VND/GB per month, deducted monthly from your organization balance.",
+      },
+    ],
+    [
+      { strong: "Compute:" },
+      {
+        text: " 20,000 VND/hour for 16 CPUs / 32 GB RAM on CloudFly, GreenNode or your own Slurm cluster — rates follow each provider's configuration.",
+      },
+    ],
+    [
+      { strong: "Platform fee:" },
+      {
+        text: " 1,000 VND/hour while jobs run — also applies on your own infrastructure, and covers platform maintenance only.",
+      },
+    ],
+    [
+      { strong: "Pipelines:" },
+      {
+        text: " nf-core pipelines are free; OmicsLab pipelines are tailored to your request; metagenomics assembly 100,000 VND/sample.",
+      },
+    ],
+    [
+      { strong: "Fully local deployment" },
+      { text: " of the platform & HPC is available — contact us for details." },
+    ],
+  ] as TextSegment[][],
+};
+
 export const en = {
   site: {
     name: "Omicslab",
@@ -265,42 +362,8 @@ export const en = {
       ] as TextSegment[],
       pricing: {
         title: "Pricing",
-        cards: [
-          {
-            title: "Platform Subscription",
-            price: "1,000,000 VND",
-            period: "/month for 10 users",
-            highlight: "Fixed price until end of July 2026",
-            features: [
-              "Role-based access control",
-              "Project & credential management",
-              "Web interface & monitoring",
-            ],
-          },
-          {
-            title: "Storage (S3)",
-            price: "1,000 VND",
-            period: "/GB per month",
-            features: [
-              "Secure scalable object storage",
-              "Data organized by project",
-              "RBAC for data access",
-            ],
-          },
-          {
-            title: "HPC Compute",
-            price: "20,000 VND",
-            period: "/hour (max 16 CPUs / 32 GB RAM)",
-            note: "Ratio 1:2 — 1,250 VND/hour per 1 CPU + 2 GB RAM",
-            features: [
-              "nf-core pipelines: Free",
-              "OmicsLab pipelines: Adjusted",
-              "Metagenomics assembly: 100,000 VND/sample",
-              "Slurm HPC cluster access",
-              "Interactive web apps (RStudio, Jupyter, VS Code)",
-            ],
-          },
-        ],
+        subscription,
+        topup,
         trialNote: [
           { text: "For a trial or support, reach us at " },
           {
@@ -686,111 +749,6 @@ export const en = {
     title: "Contact",
     description:
       "Get in touch with Omicslab for bioinformatics services and solutions.",
-  },
-  pricingPage: {
-    title: "Pricing",
-    description:
-      "Omicslab pricing: monthly subscription tiers (Lite, Pro, Business) and pay-as-you-go top-ups for compute, storage and the platform fee.",
-    section: {
-      subtitle: "Pricing",
-      title: "Two Ways to Pay: Subscription and Top-Up",
-      paragraph: "For a trial or support, reach us at contact@omicslab.io.",
-    },
-    subscription: {
-      subtitle: "Subscription",
-      title: "Three Tiers, Sized to Your Team",
-      paragraph:
-        "Limits — workspaces, members and concurrent jobs — scale by tier, while compute and storage stay usage-based.",
-      tiers: [
-        {
-          name: "Lite",
-          highlight: "Individuals and small teams",
-          price: "100,000 VND",
-          period: "/month",
-          features: [
-            "Up to 2 workspaces",
-            "1 organization member, 3 members per workspace",
-            "5 Studio sessions and 5 analysis jobs at once",
-            "Storage billed by usage",
-            "The full platform feature set",
-          ],
-          cta: "Sign up with Lite",
-          ctaHref: "https://platform.omicslab.io",
-        },
-        {
-          name: "Pro",
-          highlight: "Most popular",
-          price: "1,000,000 VND",
-          period: "/month",
-          features: [
-            "Up to 20 workspaces",
-            "10 organization members, 30 members per workspace",
-            "50 Studio sessions and 50 analysis jobs at once",
-            "Storage billed by usage",
-            "The full platform feature set",
-          ],
-          cta: "Sign up with Pro",
-          ctaHref: "https://platform.omicslab.io",
-        },
-        {
-          name: "Business",
-          highlight: "Self-customizable",
-          price: "Custom",
-          period: "by request",
-          features: [
-            "Custom limits sized to your business",
-            "On-premises or private (air-gapped) deployment",
-            "LIMS and plugin integrations to spec",
-            "Priority support with a contracted SLA",
-            "A dedicated quote and contract",
-          ],
-          cta: "Talk to us",
-          ctaHref: "/contact",
-        },
-      ],
-    },
-    topup: {
-      subtitle: "Top-Up",
-      title: "Pay for What You Use",
-      paragraph:
-        "Top up your organization wallet and spend it on compute, storage and the platform fee as you go.",
-      lines: [
-        [
-          { strong: "Top-up:" },
-          {
-            text: " Fund your wallet via SePay/VietQR. The balance covers compute, storage and the platform fee — top-up invoices carry 10% VAT, subscriptions 0%.",
-          },
-        ],
-        [
-          { strong: "Storage:" },
-          {
-            text: " 1,000 VND/GB per month, deducted monthly from your organization balance.",
-          },
-        ],
-        [
-          { strong: "Compute:" },
-          {
-            text: " 20,000 VND/hour for 16 CPUs / 32 GB RAM on CloudFly, GreenNode or your own Slurm cluster — rates follow each provider's configuration.",
-          },
-        ],
-        [
-          { strong: "Platform fee:" },
-          {
-            text: " 1,000 VND/hour while jobs run — also applies on your own infrastructure, and covers platform maintenance only.",
-          },
-        ],
-        [
-          { strong: "Pipelines:" },
-          {
-            text: " nf-core pipelines are free; OmicsLab pipelines are tailored to your request; metagenomics assembly 100,000 VND/sample.",
-          },
-        ],
-        [
-          { strong: "Fully local deployment" },
-          { text: " of the platform & HPC is available — contact us for details." },
-        ],
-      ] as TextSegment[][],
-    },
   },
   errorPage: {
     title: "404 Page",

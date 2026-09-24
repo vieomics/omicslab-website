@@ -2,6 +2,8 @@ import Contact from "@/components/Contact";
 import RichText from "@/components/Common/RichText";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
+import Link from "next/link";
 
 const featureIcons = [
   <svg
@@ -132,32 +134,21 @@ export default function DataPlatformView({
           <h2 className="display-md text-ink">{t.pricing.title}</h2>
 
           <div className="border-line bg-line mt-10 grid gap-px border md:grid-cols-3">
-            {t.pricing.cards.map((card) => (
+            {t.pricing.subscription.tiers.map((tier) => (
               <div
-                key={card.title}
+                key={tier.name}
                 className="bg-paper-light flex flex-col p-8"
               >
-                <h3 className="display-md text-ink">{card.title}</h3>
+                <p className="micro-label text-muted">{tier.highlight}</p>
+                <h3 className="display-md text-ink mt-3">{tier.name}</h3>
 
                 <p className="font-display text-ink mt-7 text-[40px] leading-none font-bold tracking-[-0.02em]">
-                  {card.price}
+                  {tier.price}
                 </p>
-                <p className="micro-label text-muted mt-3">{card.period}</p>
-
-                {"highlight" in card && card.highlight && (
-                  <p className="micro-label border-ink bg-ink text-paper-light mt-5 self-start border px-3 py-1.5">
-                    {card.highlight}
-                  </p>
-                )}
-
-                {"note" in card && card.note && (
-                  <p className="text-muted mt-4 text-xs leading-relaxed">
-                    {card.note}
-                  </p>
-                )}
+                <p className="micro-label text-muted mt-3">{tier.period}</p>
 
                 <ul className="border-line mt-8 border-t">
-                  {card.features.map((feature) => (
+                  {tier.features.map((feature) => (
                     <li
                       key={feature}
                       className="border-line text-muted flex items-baseline gap-3 border-b py-3 text-sm leading-relaxed last:border-b-0"
@@ -170,8 +161,38 @@ export default function DataPlatformView({
                     </li>
                   ))}
                 </ul>
+
+                <Link
+                  href={localizeHref(tier.ctaHref, locale)}
+                  target={tier.ctaHref.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    tier.ctaHref.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="btn-editorial mt-8 w-full justify-center"
+                >
+                  {tier.cta}
+                </Link>
               </div>
             ))}
+          </div>
+
+          <div className="mx-auto mt-14 max-w-3xl">
+            <h3 className="display-md text-ink">{t.pricing.topup.title}</h3>
+            <p className="text-muted mt-3 text-base leading-relaxed">
+              {t.pricing.topup.paragraph}
+            </p>
+            <ul className="border-line mt-6 border-t">
+              {t.pricing.topup.lines.map((line, index) => (
+                <li
+                  key={index}
+                  className="border-line text-muted [&_strong]:text-ink border-b py-5 text-sm leading-relaxed [&_strong]:font-bold"
+                >
+                  <RichText segments={line} locale={locale} />
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div className="border-line bg-line mt-8 grid gap-px border md:grid-cols-2">
