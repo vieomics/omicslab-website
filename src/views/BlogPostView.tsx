@@ -46,91 +46,72 @@ export default function BlogPostView({
         copiedLabel={dict.common.copied}
       />
 
-      <section className="dark:bg-dark pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-        <div className="container">
-          <div className="-mx-4 flex flex-wrap justify-center">
-            <div className="w-full px-4">
-              <div
-                className="wow fadeInUp mb-[60px] w-full"
-                data-wow-delay=".1s"
-              >
-                <Image
-                  src={coverImage}
-                  alt="image"
-                  width={1920}
-                  height={600}
-                  className="h-auto w-full object-cover"
-                />
-                <h1 className="text-dark mt-6 mb-4 text-3xl font-bold sm:text-4xl dark:text-white">
-                  {title}
-                </h1>
-                <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-                  <div className="flex items-center gap-4">
-                    <div className="h-10 w-10 overflow-hidden rounded-full">
-                      <Image
-                        src={authorImage}
-                        alt={author}
-                        className="h-full w-full object-cover"
-                        width={40}
-                        height={40}
-                        unoptimized
-                      />
-                    </div>
-                    <div className="flex flex-col">
-                      <p className="text-dark text-base font-medium dark:text-white">
-                        {author}
-                      </p>
-                      <p className="text-sm text-gray-500">
-                        {formatDate(date, locale)}
-                      </p>
-                    </div>
-                  </div>
-                  {translationSlug && (
-                    <Link
-                      href={localizePath(
-                        `/blogs/${translationSlug}`,
-                        otherLocale,
-                      )}
-                      className="text-primary text-sm font-medium underline"
-                    >
-                      {dict.common.readInOtherLanguage}
-                    </Link>
-                  )}
+      <section className="section-pad">
+        <div className="page-width">
+          <header className="mb-14">
+            <span className="eyebrow text-muted">
+              <span className="eyebrow-line" />
+              {formatDate(date, locale)}
+            </span>
+            <h1 className="display-lg mt-6 mb-8 max-w-[1100px] text-ink">
+              {title}
+            </h1>
+            <div className="flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-6">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 shrink-0 overflow-hidden border border-line">
+                  <Image
+                    src={authorImage}
+                    alt={author}
+                    className="h-full w-full object-cover"
+                    width={40}
+                    height={40}
+                    unoptimized
+                  />
                 </div>
+                <p className="micro-label text-ink">{author}</p>
               </div>
-              <div className="-mx-4 flex flex-wrap">
-                <div className="w-full px-4 lg:w-9/12">
-                  <div className="blog-details xl:pr-10">
-                    <div dangerouslySetInnerHTML={{ __html: content }}></div>
-                  </div>
-                </div>
-                <div className="w-full px-4 lg:w-3/12">
-                  <div className="sticky top-24">
-                    <TableOfContents
-                      headings={headings}
-                      title={dict.common.tableOfContents}
-                    />
-                  </div>
-                </div>
+              {translationSlug && (
+                <Link
+                  href={localizePath(`/blogs/${translationSlug}`, otherLocale)}
+                  className="btn-editorial btn-editorial-ghost min-h-0 px-4 py-2"
+                >
+                  {dict.common.readInOtherLanguage}
+                </Link>
+              )}
+            </div>
+            <div className="mt-10 border border-line">
+              <Image
+                src={coverImage}
+                alt="image"
+                width={1920}
+                height={600}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </header>
+
+          <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
+            <div className="min-w-0 lg:col-span-9">
+              <div className="blog-details xl:pr-10">
+                <div dangerouslySetInnerHTML={{ __html: content }}></div>
               </div>
             </div>
+            <aside className="min-w-0 lg:col-span-3">
+              <TableOfContents
+                headings={headings}
+                title={dict.common.tableOfContents}
+              />
+            </aside>
           </div>
 
-          <div className="-mx-4 flex flex-wrap">
-            <div
-              className="wow fadeInUp mt-14 w-full px-4"
-              data-wow-delay=".2s"
-            >
-              <h2 className="text-dark relative pb-5 text-2xl font-semibold sm:text-[28px] dark:text-white">
-                {dict.common.recentArticles}
-              </h2>
-              <span className="bg-primary mb-10 inline-block h-[2px] w-20"></span>
-            </div>
-
+          <div className="rule-top mt-24 pt-12">
+            <h2 className="display-md text-ink">
+              {dict.common.recentArticles}
+            </h2>
+          </div>
+          <div className="mt-10 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
             {recentPosts.slice(0, 6).map((blog, key) => (
-              <div key={key} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
-                <SingleBlog blog={blog} dict={dict} locale={locale} />
-              </div>
+              <SingleBlog key={key} blog={blog} dict={dict} locale={locale} />
             ))}
           </div>
         </div>

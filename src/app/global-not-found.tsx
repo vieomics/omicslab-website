@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { fontVariables } from "./fonts";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
@@ -13,29 +14,27 @@ export const metadata: Metadata = {
  */
 export default function GlobalNotFound() {
   return (
-    <html lang="vi">
+    <html lang="vi" className={fontVariables}>
       <body>
-        <div className="flex min-h-screen flex-col items-center justify-center gap-6 p-8 text-center">
-          <h1 className="text-dark text-5xl font-bold dark:text-white">404</h1>
-          <div className="space-y-1">
-            <p className="text-dark text-lg font-medium dark:text-white">
+        <div className="flex min-h-screen flex-col items-center justify-center gap-8 px-6 text-center">
+          <span className="eyebrow">
+            <span className="eyebrow-line" />
+            Error 404
+          </span>
+          <h1 className="display-xl">404</h1>
+          <div className="max-w-md space-y-2">
+            <p className="text-lg font-medium text-ink">
               Không tìm thấy trang bạn đang tìm.
             </p>
-            <p className="text-base text-gray-500">
+            <p className="text-base text-muted">
               We can&apos;t seem to find the page you&apos;re looking for.
             </p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/"
-              className="bg-primary hover:bg-primary/90 rounded-md px-6 py-3 text-base font-medium text-white transition"
-            >
+            <Link href="/" className="btn-editorial">
               Trang chủ (Tiếng Việt)
             </Link>
-            <Link
-              href="/en"
-              className="text-dark dark:border-dark-3 rounded-md border px-6 py-3 text-base font-medium transition dark:text-white"
-            >
+            <Link href="/en" className="btn-editorial btn-editorial-ghost">
               Home (English)
             </Link>
           </div>

@@ -9,10 +9,10 @@ Static website for Omicslab — a bioinformatics blog and landing page. Next.js 
 ## Tech Stack
 
 - Next.js 16 (App Router), React 19, TypeScript 5
-- Tailwind CSS v4 with TailGrids plugin
+- Tailwind CSS v4 with an editorial monochrome theme (no UI kit plugin)
 - Blog: Markdown files via gray-matter + remark/rehype pipeline
 - Client-side search: Fuse.js with build-time JSON index
-- State: react-hot-toast for notifications, next-themes for dark mode
+- State: react-hot-toast for notifications (single light theme, no dark mode)
 
 ## Commands
 
@@ -59,9 +59,11 @@ docker compose up -d --build   # Build image and run with traefik on :80/:443
 - If an image is missing in the post's locale, the resolver falls back to the other locale's folder (translations reuse English screenshots)
 
 ### Styling
-- Tailwind CSS v4 with `@import "tailwindcss"` (no PostCSS config)
-- Custom theme colors in `@theme`: `--color-primary`, `--color-dark`, `--color-body-color`, etc.
-- Dark mode via `next-themes` with class strategy (`.dark` class)
+- Tailwind CSS v4 with `@import "tailwindcss"` (no PostCSS config, no UI kit plugin)
+- Editorial monochrome theme tokens in `@theme`: `--color-ink`, `--color-black`, `--color-charcoal`, `--color-accent`, `--color-paper`, `--color-paper-light`, `--color-muted`, `--color-line`
+- Fonts via `next/font/google` in `src/app/fonts.ts`: Inter (body) + Barlow Condensed (display); headings use the display font automatically
+- Editorial primitives in `src/styles/index.css`: `.page-width`, `.section-pad`, `.eyebrow`, `.micro-label`, `.display-*`, `.rule-top`, `.rule-accent`, `.band-dark`, `.btn-editorial`
+- Single theme — no dark mode and no `dark:` variants
 - Global container padding via `@layer base` in `src/styles/index.css`
 
 ### Component patterns

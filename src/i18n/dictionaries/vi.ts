@@ -5,6 +5,13 @@ export const vi: Dictionary = {
   site: {
     name: "Omicslab",
     tagline: "Công nghệ Omics",
+    legalName: "CÔNG TY TNHH VIEOMICS",
+    address:
+      "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+    taxLabel: "Mã số thuế",
+    taxId: "0319713358",
+    phoneLabel: "Điện thoại",
+    phone: "(+84) 364002059",
   },
   nav: {
     home: "Trang chủ",
@@ -25,6 +32,8 @@ export const vi: Dictionary = {
   },
   footer: {
     copyright: "© 2026 Omicslab. Bảo lưu mọi quyền.",
+    platform: "Nền tảng Omicslab",
+    productOf: "Sản phẩm của",
   },
   common: {
     home: "Trang chủ",
@@ -39,7 +48,6 @@ export const vi: Dictionary = {
     noDate: "Không có ngày",
     anonymous: "Ẩn danh",
     scrollToTop: "cuộn lên đầu trang",
-    themeToggler: "chuyển đổi giao diện",
     viewOnGitHub: "Xem trên GitHub",
     contactUs: "Liên hệ với chúng tôi",
     readInOtherLanguage: "Đọc bằng tiếng Anh",
@@ -136,7 +144,6 @@ export const vi: Dictionary = {
       subtitle: "Liên hệ",
       title: "Hãy cùng nhau giải quyết các bài toán tin sinh học của bạn.",
       locationLabel: "Địa chỉ",
-      location: "TP. Hồ Chí Minh, Việt Nam",
       emailLabel: "Email",
       email: "contact@omicslab.io",
     },

@@ -77,14 +77,14 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
 
   return (
     <div>
-      <div className="mb-8 flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mb-10 flex flex-col gap-6 border-b border-line pb-8 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`rounded px-4 py-2 text-sm font-medium transition ${
+            className={`micro-label border px-4 py-2.5 transition-colors ${
               selectedTag === null
-                ? "bg-primary text-white"
-                : "text-dark hover:bg-primary dark:bg-dark-2 bg-gray-100 hover:text-white dark:text-white"
+                ? "border-ink bg-ink text-paper-light"
+                : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
             }`}
           >
             {dict.common.all}
@@ -93,27 +93,27 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-              className={`rounded px-4 py-2 text-sm font-medium transition ${
+              className={`micro-label border px-4 py-2.5 transition-colors ${
                 selectedTag === tag
-                  ? "bg-primary text-white"
-                  : "text-dark hover:bg-primary dark:bg-dark-2 bg-gray-100 hover:text-white dark:text-white"
+                  ? "border-ink bg-ink text-paper-light"
+                  : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
               }`}
             >
               {tag}
             </button>
           ))}
         </div>
-        <div className="relative">
+        <div className="relative w-full lg:w-80">
           <input
             type="text"
             placeholder={dict.blogPage.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             onFocus={() => searchQuery.length >= 2 && setShowDropdown(true)}
-            className="text-dark focus:border-primary dark:border-dark-3 dark:bg-dark-2 w-full rounded border border-gray-200 bg-white px-4 py-2 focus:outline-none dark:text-white"
+            className="w-full border border-line bg-paper-light py-3 pr-10 pl-4 text-sm text-ink placeholder:text-muted"
           />
           <svg
-            className="absolute top-1/2 right-3 -translate-y-1/2 text-gray-400"
+            className="pointer-events-none absolute top-1/2 right-3 -translate-y-1/2 text-muted"
             width="20"
             height="20"
             viewBox="0 0 20 20"
@@ -133,24 +133,24 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
             />
           </svg>
           {showDropdown && searchResults.length > 0 && (
-            <div className="dark:bg-dark-2 absolute z-50 mt-1 w-full rounded-md border border-gray-200 bg-white shadow-lg">
+            <div className="absolute z-50 mt-px w-full divide-y divide-line border border-line bg-paper-light">
               {searchResults.map((result) => (
                 <button
                   key={result.slug}
                   onClick={() => handleResultClick(result.slug)}
-                  className="dark:hover:bg-dark-3 w-full px-4 py-3 text-left hover:bg-gray-100"
+                  className="block w-full px-4 py-3 text-left transition-colors hover:bg-paper"
                 >
-                  <div className="text-dark font-medium dark:text-white">
+                  <div className="font-display text-base leading-tight font-bold tracking-[-0.01em] text-ink uppercase">
                     {result.title}
                   </div>
-                  <div className="line-clamp-1 text-sm text-gray-500">
+                  <div className="mt-1 line-clamp-1 text-xs text-muted">
                     {result.excerpt || result.content.slice(0, 100)}
                   </div>
-                  <div className="mt-1 flex gap-1">
+                  <div className="mt-2 flex flex-wrap gap-1.5">
                     {result.tags?.slice(0, 3).map((tag) => (
                       <span
                         key={tag}
-                        className="dark:bg-dark-3 rounded bg-gray-100 px-2 py-0.5 text-xs text-gray-600 dark:text-gray-400"
+                        className="micro-label border border-line px-2 py-1 text-muted"
                       >
                         {tag}
                       </span>
@@ -164,16 +164,14 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
       </div>
 
       {filteredPosts.length > 0 ? (
-        <div className="-mx-4 flex flex-wrap justify-start">
+        <div className="grid gap-8 sm:grid-cols-2 xl:grid-cols-3">
           {filteredPosts.map((blog, i) => (
-            <div key={i} className="w-full px-4 md:w-2/3 lg:w-1/2 xl:w-1/3">
-              <SingleBlog blog={blog} dict={dict} locale={locale} />
-            </div>
+            <SingleBlog key={i} blog={blog} dict={dict} locale={locale} />
           ))}
         </div>
       ) : (
-        <div className="py-10 text-center text-gray-500">
-          {dict.common.noPosts}
+        <div className="border border-line bg-paper-light py-16 text-center">
+          <p className="micro-label text-muted">{dict.common.noPosts}</p>
         </div>
       )}
     </div>
