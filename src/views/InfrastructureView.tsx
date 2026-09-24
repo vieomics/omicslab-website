@@ -134,7 +134,7 @@ export default function InfrastructureView({
       <section className="band-dark pt-36 pb-16 lg:pt-[190px] lg:pb-24">
         <div className="page-width">
           <h1 className="display-lg max-w-[1000px] text-white">{t.title}</h1>
-          <p className="mt-6 max-w-[820px] text-base leading-relaxed text-[#c9c9c9] sm:text-lg">
+          <p className="mt-6 max-w-[820px] text-base leading-relaxed text-white sm:text-lg">
             {t.subtitle}
           </p>
         </div>
@@ -215,7 +215,7 @@ export default function InfrastructureView({
                   <span
                     className={`micro-label self-start border px-3 py-1.5 ${
                       featured
-                        ? "border-white/30 text-[#c9c9c9]"
+                        ? "border-white/30 text-white"
                         : "border-line text-muted"
                     }`}
                   >
@@ -231,7 +231,7 @@ export default function InfrastructureView({
                   </h3>
                   <p
                     className={`mt-4 text-sm leading-relaxed ${
-                      featured ? "text-[#c9c9c9]" : "text-muted"
+                      featured ? "text-white" : "text-muted"
                     }`}
                   >
                     {plan.description}
@@ -248,7 +248,7 @@ export default function InfrastructureView({
                     {plan.priceSuffix && (
                       <span
                         className={`text-sm ${
-                          featured ? "text-[#c9c9c9]" : "text-muted"
+                          featured ? "text-white" : "text-muted"
                         }`}
                       >
                         {plan.priceSuffix}
@@ -260,7 +260,7 @@ export default function InfrastructureView({
                     <div className="mt-8">
                       <p
                         className={`micro-label ${
-                          featured ? "text-[#c9c9c9]" : "text-muted"
+                          featured ? "text-white" : "text-muted"
                         }`}
                       >
                         {plan.configTitle}
@@ -280,7 +280,7 @@ export default function InfrastructureView({
                   <div className="mt-8">
                     <p
                       className={`micro-label ${
-                        featured ? "text-[#c9c9c9]" : "text-muted"
+                        featured ? "text-white" : "text-muted"
                       }`}
                     >
                       {plan.includesTitle}
@@ -294,7 +294,7 @@ export default function InfrastructureView({
 
                   <p
                     className={`mt-auto pt-8 text-xs leading-relaxed ${
-                      featured ? "text-[#8f8f8f]" : "text-muted"
+                      featured ? "text-white" : "text-muted"
                     }`}
                   >
                     {plan.note}

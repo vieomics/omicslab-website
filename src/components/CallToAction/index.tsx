@@ -8,9 +8,9 @@ const CallToAction = ({ dict }: { dict: Dictionary }) => {
       <div className="page-width">
         <div className="mx-auto max-w-[860px] text-center">
           <h2 className="display-lg text-white">
-            {cta.title} <span className="text-accent">{cta.titleAccent}</span>
+            {cta.title} <span className="text-white">{cta.titleAccent}</span>
           </h2>
-          <p className="mx-auto mt-7 mb-10 max-w-[560px] text-base leading-relaxed text-[#b9b9b9]">
+          <p className="mx-auto mt-7 mb-10 max-w-[560px] text-base leading-relaxed text-white">
             {cta.paragraph}
           </p>
 

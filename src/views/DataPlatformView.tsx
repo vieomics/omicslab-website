@@ -100,7 +100,7 @@ export default function DataPlatformView({
       <section className="band-dark pt-36 pb-16 lg:pt-[190px] lg:pb-24">
         <div className="page-width">
           <h1 className="display-lg max-w-[1000px] text-white">{t.title}</h1>
-          <p className="mt-6 max-w-[820px] text-base leading-relaxed text-[#c9c9c9] sm:text-lg">
+          <p className="mt-6 max-w-[820px] text-base leading-relaxed text-white sm:text-lg">
             {t.subtitle}
           </p>
         </div>

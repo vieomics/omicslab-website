@@ -23,14 +23,14 @@ const Hero = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
       <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/70" />
 
       <div className="page-width relative z-10 pt-36 pb-24">
-        <span className="eyebrow text-accent">
+        <span className="eyebrow text-white">
           <span className="eyebrow-line" />
           {dict.site.tagline}
         </span>
         <h1 className="display-xl mt-7 max-w-[1000px] text-white">
           {hero.title}
         </h1>
-        <p className="mt-7 max-w-[640px] text-base leading-relaxed text-[#c9c9c9] sm:text-lg">
+        <p className="mt-7 max-w-[640px] text-base leading-relaxed text-white sm:text-lg">
           {hero.paragraph}
         </p>
         <ul className="mt-10 flex flex-wrap items-center gap-4">

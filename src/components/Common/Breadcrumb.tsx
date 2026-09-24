@@ -19,20 +19,20 @@ const Breadcrumb = ({
       <div className="page-width">
         <nav
           aria-label={pageName}
-          className="micro-label mb-7 flex items-center gap-3 text-[#aeb2b6]"
+          className="micro-label mb-7 flex items-center gap-3 text-white"
         >
           <Link
             href={localizeHref("/", locale)}
-            className="transition-colors hover:text-accent"
+            className="transition-opacity hover:opacity-70"
           >
             {dict.common.home}
           </Link>
           <span aria-hidden="true">/</span>
-          <span className="text-accent">{pageName}</span>
+          <span className="text-white">{pageName}</span>
         </nav>
         <h1 className="display-lg max-w-[900px] text-white">{pageName}</h1>
         {pageDescription && (
-          <p className="mt-7 max-w-[640px] text-base leading-relaxed text-[#b9b9b9]">
+          <p className="mt-7 max-w-[640px] text-base leading-relaxed text-white">
             {pageDescription}
           </p>
         )}
