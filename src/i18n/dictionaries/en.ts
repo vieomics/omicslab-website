@@ -389,12 +389,6 @@ export const en = {
           },
           { text: "." },
         ] as TextSegment[],
-        localNote: [
-          { strong: "Fully local deployment" },
-          { text: " of the entire platform and HPC is available. " },
-          { link: { href: "/contact", text: "Contact us" } },
-          { text: " for more details." },
-        ] as TextSegment[],
         estimates: [
           {
             title: "Cost Estimate — 100 Bacterial Genome Assemblies / Month",

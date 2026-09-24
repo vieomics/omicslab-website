@@ -389,12 +389,6 @@ export const vi: Dictionary = {
           },
           { text: "." },
         ] as TextSegment[],
-        localNote: [
-          { strong: "Triển khai hoàn toàn tại chỗ" },
-          { text: " cho toàn bộ nền tảng và HPC đã có sẵn. " },
-          { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-          { text: " để biết thêm chi tiết." },
-        ] as TextSegment[],
         estimates: [
           {
             title: "Ước tính chi phí — 100 mẫu lắp ráp hệ gen vi khuẩn / tháng",
