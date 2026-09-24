@@ -5,6 +5,10 @@ export const vi: Dictionary = {
   site: {
     name: "Omicslab",
     tagline: "Công nghệ Omics",
+    address:
+      "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
+    taxLabel: "Mã số thuế",
+    taxId: "0319713358",
   },
   nav: {
     home: "Trang chủ",
@@ -135,7 +139,6 @@ export const vi: Dictionary = {
       subtitle: "Liên hệ",
       title: "Hãy cùng nhau giải quyết các bài toán tin sinh học của bạn.",
       locationLabel: "Địa chỉ",
-      location: "TP. Hồ Chí Minh, Việt Nam",
       emailLabel: "Email",
       email: "contact@omicslab.io",
     },

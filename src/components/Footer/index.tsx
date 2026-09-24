@@ -10,9 +10,13 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
         <div className="font-display text-[26px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white">
           {siteName}
         </div>
-        <p className="max-w-[550px] text-[11px] leading-relaxed text-white">
-          {dict.footer.copyright}
-        </p>
+        <div className="max-w-[550px] text-[11px] leading-relaxed text-white">
+          <p>{dict.footer.copyright}</p>
+          <p className="mt-2">{dict.site.address}</p>
+          <p className="mt-1">
+            {dict.site.taxLabel}: {dict.site.taxId}
+          </p>
+        </div>
         <div className="flex items-center gap-6">
           <Link
             aria-label="GitHub"

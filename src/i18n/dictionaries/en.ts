@@ -4,6 +4,9 @@ export const en = {
   site: {
     name: "Omicslab",
     tagline: "Omics Technology",
+    address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
+    taxLabel: "Tax ID",
+    taxId: "0319713358",
   },
   nav: {
     home: "Home",
@@ -134,7 +137,6 @@ export const en = {
       subtitle: "Contact us",
       title: "Let's work together on your bioinformatics needs.",
       locationLabel: "Our Location",
-      location: "Ho Chi Minh City, Vietnam",
       emailLabel: "Email Us",
       email: "contact@omicslab.io",
     },
