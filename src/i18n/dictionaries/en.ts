@@ -94,10 +94,6 @@ const topup = {
         text: " nf-core pipelines are free; OmicsLab pipelines are tailored to your request; metagenomics assembly 100,000 VND/sample.",
       },
     ],
-    [
-      { strong: "Fully local deployment" },
-      { text: " of the platform & HPC is available — contact us for details." },
-    ],
   ] as TextSegment[][],
   storage: {
     title: "S3 Storage (Marketplace)",
