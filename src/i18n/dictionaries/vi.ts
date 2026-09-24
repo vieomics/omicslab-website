@@ -93,10 +93,6 @@ const topup = {
         text: " Quy trình nf-core miễn phí; quy trình OmicsLab được điều chỉnh theo yêu cầu; lắp ráp metagenomics 100.000 VND/mẫu.",
       },
     ],
-    [
-      { strong: "Triển khai hoàn toàn tại chỗ" },
-      { text: " cho nền tảng & HPC đã có sẵn — liên hệ để biết chi tiết." },
-    ],
   ] as TextSegment[][],
   storage: {
     title: "Lưu trữ S3 (Marketplace)",
