@@ -1,6 +1,101 @@
 import { TextSegment } from "../types";
 import type { Dictionary } from "./en";
 
+const subscription = {
+  subtitle: "Gói thuê bao",
+  title: "Ba gói, tùy quy mô của bạn",
+  paragraph:
+    "Giới hạn — workspace, thành viên và số job chạy đồng thời — tăng theo gói, trong khi tính toán và lưu trữ vẫn tính theo mức sử dụng.",
+  tiers: [
+    {
+      name: "Lite",
+      highlight: "Cá nhân & nhóm nhỏ",
+      price: "100.000 VND",
+      period: "/tháng",
+      features: [
+        "Tối đa 2 workspace",
+        "1 thành viên tổ chức, 3 thành viên mỗi workspace",
+        "5 job Studio và 5 job phân tích chạy đồng thời",
+        "Lưu trữ tính theo dung lượng dùng",
+        "Đầy đủ tính năng của nền tảng",
+      ],
+      cta: "Đăng ký gói Lite",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Pro",
+      highlight: "Phổ biến nhất",
+      price: "1.000.000 VND",
+      period: "/tháng",
+      features: [
+        "Tối đa 20 workspace",
+        "10 thành viên tổ chức, 30 thành viên mỗi workspace",
+        "50 job Studio và 50 job phân tích chạy đồng thời",
+        "Lưu trữ tính theo dung lượng dùng",
+        "Đầy đủ tính năng của nền tảng",
+      ],
+      cta: "Đăng ký gói Pro",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Business",
+      highlight: "Tùy biến theo yêu cầu",
+      price: "Tùy chỉnh",
+      period: "theo yêu cầu",
+      features: [
+        "Giới hạn tùy chỉnh theo quy mô doanh nghiệp",
+        "Triển khai tại chỗ hoặc môi trường riêng (air-gapped)",
+        "Tích hợp LIMS và plugin theo yêu cầu",
+        "Hỗ trợ ưu tiên, SLA theo hợp đồng",
+        "Báo giá và hợp đồng riêng",
+      ],
+      cta: "Liên hệ tư vấn",
+      ctaHref: "/contact",
+    },
+  ],
+};
+
+const topup = {
+  subtitle: "Nạp tiền (top-up)",
+  title: "Trả phí cho những gì bạn dùng",
+  paragraph:
+    "Nạp vào ví của tổ chức và dùng cho tính toán, lưu trữ cùng phí nền tảng.",
+  lines: [
+    [
+      { strong: "Nạp tiền:" },
+      {
+        text: " Nạp vào ví tổ chức qua SePay/VietQR. Số dư dùng cho tính toán, lưu trữ và phí nền tảng — hóa đơn nạp tiền chịu VAT 10%, thuê bao 0%.",
+      },
+    ],
+    [
+      { strong: "Lưu trữ:" },
+      { text: " 1.000 VND/GB mỗi tháng, trừ hàng tháng vào số dư tổ chức." },
+    ],
+    [
+      { strong: "Điện toán:" },
+      {
+        text: " 20.000 VND/giờ cho cấu hình 16 CPU / 32 GB RAM trên CloudFly, GreenNode hoặc cụm Slurm của bạn — mức giá theo cấu hình thực tế của từng nguồn.",
+      },
+    ],
+    [
+      { strong: "Phí nền tảng:" },
+      {
+        text: " 1.000 VND/giờ trong lúc job chạy — áp dụng cả với hạ tầng của riêng bạn, chỉ dùng để vận hành và bảo trì nền tảng.",
+      },
+    ],
+    [
+      { strong: "Quy trình:" },
+      {
+        text: " Quy trình nf-core miễn phí; quy trình OmicsLab được điều chỉnh theo yêu cầu; lắp ráp metagenomics 100.000 VND/mẫu.",
+      },
+    ],
+    [
+      { strong: "Triển khai hoàn toàn tại chỗ" },
+      { text: " cho nền tảng & HPC đã có sẵn — liên hệ để biết chi tiết." },
+    ],
+  ] as TextSegment[][],
+};
+
 export const vi: Dictionary = {
   site: {
     name: "Omicslab",
@@ -267,42 +362,8 @@ export const vi: Dictionary = {
       ] as TextSegment[],
       pricing: {
         title: "Bảng giá",
-        cards: [
-          {
-            title: "Gói thuê bao nền tảng",
-            price: "1.000.000 VND",
-            period: "/tháng cho 10 người dùng",
-            highlight: "Giá cố định đến hết tháng 7/2026",
-            features: [
-              "Phân quyền theo vai trò",
-              "Quản lý dự án & thông tin xác thực",
-              "Giao diện web & giám sát",
-            ],
-          },
-          {
-            title: "Lưu trữ (S3)",
-            price: "1.000 VND",
-            period: "/GB mỗi tháng",
-            features: [
-              "Lưu trữ đối tượng an toàn, dễ mở rộng",
-              "Dữ liệu tổ chức theo dự án",
-              "RBAC cho truy cập dữ liệu",
-            ],
-          },
-          {
-            title: "Điện toán HPC",
-            price: "20.000 VND",
-            period: "/giờ (tối đa 16 CPU / 32 GB RAM)",
-            note: "Tỷ lệ 1:2 — 1.250 VND/giờ cho mỗi 1 CPU + 2 GB RAM",
-            features: [
-              "Quy trình nf-core: Miễn phí",
-              "Quy trình OmicsLab: Điều chỉnh",
-              "Lắp ráp metagenomics: 100.000 VND/mẫu",
-              "Truy cập cụm HPC Slurm",
-              "Ứng dụng web tương tác (RStudio, Jupyter, VS Code)",
-            ],
-          },
-        ],
+        subscription,
+        topup,
         trialNote: [
           { text: "Dùng thử hoặc cần hỗ trợ, liên hệ " },
           {
@@ -688,109 +749,6 @@ export const vi: Dictionary = {
     title: "Liên hệ",
     description:
       "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
-  },
-  pricingPage: {
-    title: "Bảng giá",
-    description:
-      "Bảng giá Omicslab: gói thuê bao hàng tháng (Lite, Pro, Business) và nạp tiền theo mức sử dụng cho tính toán, lưu trữ và phí nền tảng.",
-    section: {
-      subtitle: "Bảng giá",
-      title: "Hai hình thức thanh toán: thuê bao và nạp tiền",
-      paragraph: "Dùng thử hoặc cần hỗ trợ, liên hệ contact@omicslab.io.",
-    },
-    subscription: {
-      subtitle: "Gói thuê bao",
-      title: "Ba gói, tùy quy mô của bạn",
-      paragraph:
-        "Giới hạn — workspace, thành viên và số job chạy đồng thời — tăng theo gói, trong khi tính toán và lưu trữ vẫn tính theo mức sử dụng.",
-      tiers: [
-        {
-          name: "Lite",
-          highlight: "Cá nhân & nhóm nhỏ",
-          price: "100.000 VND",
-          period: "/tháng",
-          features: [
-            "Tối đa 2 workspace",
-            "1 thành viên tổ chức, 3 thành viên mỗi workspace",
-            "5 job Studio và 5 job phân tích chạy đồng thời",
-            "Lưu trữ tính theo dung lượng dùng",
-            "Đầy đủ tính năng của nền tảng",
-          ],
-          cta: "Đăng ký gói Lite",
-          ctaHref: "https://platform.omicslab.io",
-        },
-        {
-          name: "Pro",
-          highlight: "Phổ biến nhất",
-          price: "1.000.000 VND",
-          period: "/tháng",
-          features: [
-            "Tối đa 20 workspace",
-            "10 thành viên tổ chức, 30 thành viên mỗi workspace",
-            "50 job Studio và 50 job phân tích chạy đồng thời",
-            "Lưu trữ tính theo dung lượng dùng",
-            "Đầy đủ tính năng của nền tảng",
-          ],
-          cta: "Đăng ký gói Pro",
-          ctaHref: "https://platform.omicslab.io",
-        },
-        {
-          name: "Business",
-          highlight: "Tùy biến theo yêu cầu",
-          price: "Tùy chỉnh",
-          period: "theo yêu cầu",
-          features: [
-            "Giới hạn tùy chỉnh theo quy mô doanh nghiệp",
-            "Triển khai tại chỗ hoặc môi trường riêng (air-gapped)",
-            "Tích hợp LIMS và plugin theo yêu cầu",
-            "Hỗ trợ ưu tiên, SLA theo hợp đồng",
-            "Báo giá và hợp đồng riêng",
-          ],
-          cta: "Liên hệ tư vấn",
-          ctaHref: "/contact",
-        },
-      ],
-    },
-    topup: {
-      subtitle: "Nạp tiền (top-up)",
-      title: "Trả phí cho những gì bạn dùng",
-      paragraph:
-        "Nạp vào ví của tổ chức và dùng cho tính toán, lưu trữ cùng phí nền tảng.",
-      lines: [
-        [
-          { strong: "Nạp tiền:" },
-          {
-            text: " Nạp vào ví tổ chức qua SePay/VietQR. Số dư dùng cho tính toán, lưu trữ và phí nền tảng — hóa đơn nạp tiền chịu VAT 10%, thuê bao 0%.",
-          },
-        ],
-        [
-          { strong: "Lưu trữ:" },
-          { text: " 1.000 VND/GB mỗi tháng, trừ hàng tháng vào số dư tổ chức." },
-        ],
-        [
-          { strong: "Điện toán:" },
-          {
-            text: " 20.000 VND/giờ cho cấu hình 16 CPU / 32 GB RAM trên CloudFly, GreenNode hoặc cụm Slurm của bạn — mức giá theo cấu hình thực tế của từng nguồn.",
-          },
-        ],
-        [
-          { strong: "Phí nền tảng:" },
-          {
-            text: " 1.000 VND/giờ trong lúc job chạy — áp dụng cả với hạ tầng của riêng bạn, chỉ dùng để vận hành và bảo trì nền tảng.",
-          },
-        ],
-        [
-          { strong: "Quy trình:" },
-          {
-            text: " Quy trình nf-core miễn phí; quy trình OmicsLab được điều chỉnh theo yêu cầu; lắp ráp metagenomics 100.000 VND/mẫu.",
-          },
-        ],
-        [
-          { strong: "Triển khai hoàn toàn tại chỗ" },
-          { text: " cho nền tảng & HPC đã có sẵn — liên hệ để biết chi tiết." },
-        ],
-      ] as TextSegment[][],
-    },
   },
   errorPage: {
     title: "Trang 404",
