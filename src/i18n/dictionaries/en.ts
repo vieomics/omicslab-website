@@ -57,7 +57,7 @@ export const en = {
     hero: {
       title: "End-to-End Dry-Lab Bioinformatics Services",
       paragraph:
-        "Omicslab gives your lab one bioinformatics platform to manage users, data, tools and compute infrastructure — on Vietnamese clouds, your own Slurm HPC cluster, or on-premises. Bring your existing pipelines with minimal migration effort, or simply pay and get everything ready to run.",
+        "One platform for your entire dry lab: manage users, data, tools and compute in a single place. Omicslab runs on any cloud, tuned for providers like CloudFly and GreenNode, on your own Slurm HPC cluster, or deployed on-premises. Already have a setup? Bring your pipelines across with minimal effort. Starting fresh? Pay for what you use and everything is ready to run.",
       primaryCta: "Start on Omicslab",
       secondaryCta: "Read the docs",
     },
@@ -125,7 +125,7 @@ export const en = {
       subtitle: "Works with",
       title: "Clouds, Pipelines and Tools You Already Use",
       paragraph:
-        "The platform is built on open standards, so you can bring your own data, compute and pipelines.",
+        "Built to plug into any cloud and any S3-compatible storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so your research data stays in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
         { title: "GreenNode", detail: "VNG Cloud compute" },
@@ -179,7 +179,7 @@ export const en = {
         {
           question: "Which clouds and infrastructure are supported?",
           answer:
-            "The platform natively provisions compute on CloudFly and GreenNode, and can register your own Slurm HPC cluster over SSH. Storage is S3-compatible, including CloudFly/VNG object storage and your own buckets. Self-hosted and air-gapped deployments are available on request.",
+            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster over SSH, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and S3-compatible storage including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
         },
         {
           question: "Do I need my own compute and storage?",
@@ -189,7 +189,7 @@ export const en = {
         {
           question: "Where is my data stored?",
           answer:
-            "Data lives in the S3-compatible storage you choose — including buckets in Vietnam. Each regional platform instance keeps customer data inside the region, with no cross-border transfer.",
+            "In the storage you choose — your own S3-compatible bucket, or one hosted in Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
         },
         {
           question: "How much does it cost?",

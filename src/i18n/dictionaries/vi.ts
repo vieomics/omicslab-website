@@ -59,7 +59,7 @@ export const vi: Dictionary = {
     hero: {
       title: "Dịch vụ tin sinh học dry-lab đầu-cuối",
       paragraph:
-        "Omicslab mang đến một nền tảng tin sinh học để quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán — trên cloud Việt Nam, cụm HPC Slurm của bạn hoặc tại chỗ. Mang theo quy trình hiện có với công sức di chuyển tối thiểu, hoặc chỉ cần trả phí để có mọi thứ sẵn sàng chạy.",
+        "Một nền tảng cho toàn bộ dry-lab của bạn: quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trong cùng một nơi. Omicslab chạy trên mọi cloud, tối ưu cho các nhà cung cấp Việt Nam như CloudFly và GreenNode, dùng chính cụm HPC Slurm của bạn hoặc triển khai ngay tại chỗ. Đã có hệ thống sẵn? Hãy mang quy trình vào với nỗ lực tối thiểu. Mới bắt đầu? Chỉ cần trả phí — mọi thứ đã được chuẩn bị và sẵn sàng chạy.",
       primaryCta: "Bắt đầu trên Omicslab",
       secondaryCta: "Đọc tài liệu",
     },
@@ -127,7 +127,7 @@ export const vi: Dictionary = {
       subtitle: "Tương thích với",
       title: "Cloud, quy trình và công cụ bạn đang dùng",
       paragraph:
-        "Nền tảng được xây dựng trên các chuẩn mở, để bạn có thể mang theo dữ liệu, tính toán và quy trình của riêng mình.",
+        "Được thiết kế để kết nối với mọi cloud và mọi lưu trữ tương thích S3, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
       items: [
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
         { title: "GreenNode", detail: "Tính toán VNG Cloud" },
@@ -181,7 +181,7 @@ export const vi: Dictionary = {
         {
           question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
           answer:
-            "Nền tảng hỗ trợ sẵn tính toán trên CloudFly và GreenNode, đồng thời có thể đăng ký cụm HPC Slurm của bạn qua SSH. Lưu trữ tương thích S3, bao gồm object storage của CloudFly/VNG và bucket riêng của bạn. Chúng tôi cũng hỗ trợ triển khai tự vận hành và mạng biệt lập theo yêu cầu.",
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn qua SSH hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ tương thích S3 bao gồm object storage của CloudFly/VNG và bucket của riêng bạn. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
         },
         {
           question: "Tôi có cần tự chuẩn bị tính toán và lưu trữ không?",
@@ -191,7 +191,7 @@ export const vi: Dictionary = {
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
           answer:
-            "Dữ liệu nằm trong lưu trữ tương thích S3 do bạn chọn — bao gồm bucket tại Việt Nam. Mỗi phiên bản nền tảng theo khu vực giữ dữ liệu khách hàng trong khu vực, không chuyển dữ liệu qua biên giới.",
+            "Trong lưu trữ bạn chọn — bucket S3 tương thích của riêng bạn, hoặc bucket được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới — thiết kế để hỗ trợ tuân thủ Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
         },
         {
           question: "Chi phí như thế nào?",
