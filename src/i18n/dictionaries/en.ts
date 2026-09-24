@@ -57,7 +57,7 @@ export const en = {
     hero: {
       title: "End-to-End Dry-Lab Bioinformatics Services",
       paragraph:
-        "One platform for your entire dry lab: manage users, data, tools and compute in a single place. Omicslab runs on any cloud, tuned for providers like CloudFly and GreenNode, on your own Slurm HPC cluster, or deployed on-premises. Already have a setup? Bring your pipelines across with minimal effort. Starting fresh? Pay for what you use and everything is ready to run.",
+        "One platform for your entire dry lab: manage users, data, tools and compute in a single place. Omicslab runs on any cloud, with pre-integrated Vietnamese providers such as CloudFly and GreenNode available pay-as-you-go. It also supports your own high-performance Slurm clusters. If you already have a system in place, we help you integrate with it rather than replace it outright — expanding your compute capacity exactly when you need it.",
       primaryCta: "Start on Omicslab",
       secondaryCta: "Read the docs",
     },
@@ -70,13 +70,13 @@ export const en = {
         {
           title: "Manage Users, Data, Tools and Compute",
           paragraph:
-            "Organizations and workspaces with S3-compatible storage, tool catalogs, cloud and HPC runners, access control, audit and cost tracking — all in one place.",
+            "Comprehensive access control and monitoring across the analysis system. Admins create organizations and workspaces, and manage users and resources. Analysts take those resources, build their own tools or use built-in ones (nf-core) to analyse data, deliver results and view them directly on the platform. Every data operation is logged and reviewed, keeping data provenance safe and its use traceable.",
           cta: "Open the platform",
         },
         {
           title: "Bring or Migrate Your Services",
           paragraph:
-            "Self-host the platform on-premises, register your own Slurm HPC cluster and S3 storage, and migrate your existing pipelines with minimal effort.",
+            "Deploy the platform on-premises, connect your own Slurm HPC cluster, and bring your existing pipelines across with minimal effort. Storage is purchased by quota, so you only pay for the capacity you choose.",
           cta: "Deployment docs",
         },
         {
@@ -102,7 +102,7 @@ export const en = {
         {
           title: "Create a workspace",
           paragraph:
-            "Spin up a workspace with its own S3 bucket, invite your lab and upload sequencing data.",
+            "Spin up a workspace with its own storage, invite your lab and upload sequencing data.",
         },
         {
           title: "Connect compute",
@@ -125,13 +125,13 @@ export const en = {
       subtitle: "Works with",
       title: "Clouds, Pipelines and Tools You Already Use",
       paragraph:
-        "Built to plug into any cloud and any S3-compatible storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so your research data stays in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
+        "Built to work with any cloud and any storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so your research data stays in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
         { title: "GreenNode", detail: "VNG Cloud compute" },
         { title: "Slurm HPC", detail: "Your own cluster over SSH" },
         { title: "Nextflow", detail: "nf-core and custom workflows" },
-        { title: "S3 Storage", detail: "Any S3-compatible bucket" },
+        { title: "Storage", detail: "Bought by quota, or bring your own" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
       ],
     },
@@ -169,7 +169,7 @@ export const en = {
         {
           question: "Can I migrate my existing pipelines and infrastructure?",
           answer:
-            "Yes. Self-host the platform on-premises or in your own cloud, register your Slurm HPC cluster over SSH and your S3-compatible storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
+            "Yes. Deploy the platform on-premises or in your own cloud, connect your Slurm HPC cluster over SSH and your storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
         },
         {
           question: "Which pipelines can I run?",
@@ -179,7 +179,7 @@ export const en = {
         {
           question: "Which clouds and infrastructure are supported?",
           answer:
-            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster over SSH, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and S3-compatible storage including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
+            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster over SSH, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and storage you can buy by quota or bring yourself, including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
         },
         {
           question: "Do I need my own compute and storage?",
@@ -189,7 +189,7 @@ export const en = {
         {
           question: "Where is my data stored?",
           answer:
-            "In the storage you choose — your own S3-compatible bucket, or one hosted in Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
+            "In the storage you choose — your own bucket, or one hosted in Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
         },
         {
           question: "How much does it cost?",

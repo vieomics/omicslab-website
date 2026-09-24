@@ -59,7 +59,7 @@ export const vi: Dictionary = {
     hero: {
       title: "Dịch vụ tin sinh học dry-lab đầu-cuối",
       paragraph:
-        "Một nền tảng cho toàn bộ dry-lab của bạn: quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trong cùng một nơi. Omicslab chạy trên mọi cloud, tối ưu cho các nhà cung cấp Việt Nam như CloudFly và GreenNode, dùng chính cụm HPC Slurm của bạn hoặc triển khai ngay tại chỗ. Đã có hệ thống sẵn? Hãy mang quy trình vào với nỗ lực tối thiểu. Mới bắt đầu? Chỉ cần trả phí — mọi thứ đã được chuẩn bị và sẵn sàng chạy.",
+        "Một nền tảng cho toàn bộ dry-lab của bạn: quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trong cùng một nơi. Omicslab chạy trên mọi cloud, tối ưu cho các nhà cung cấp Việt Nam đã được tích hợp sẵn như CloudFly và GreenNode với dịch vụ PAYG. Đồng thời hỗ trợ các cụm máy tính hiệu năng cao SLURM của bạn. Đã có hệ thống sẵn, chúng tôi hỗ trợ tích hợp thay vì thay thế hoàn toàn hệ thống hiện có, giúp mở rộng khả năng tính toán của bạn khi cần.",
       primaryCta: "Bắt đầu trên Omicslab",
       secondaryCta: "Đọc tài liệu",
     },
@@ -72,13 +72,13 @@ export const vi: Dictionary = {
         {
           title: "Quản lý người dùng, dữ liệu, công cụ và tính toán",
           paragraph:
-            "Tổ chức và workspace với lưu trữ tương thích S3, danh mục công cụ, runner cloud và HPC, phân quyền, audit và theo dõi chi phí — tất cả trong một nơi.",
+            "Giám sát toàn diện phân quyền và hoạt động của hệ thống phân tích. Người quản lý tạo tổ chức, không gian làm việc và quản trị người dùng, tài nguyên. Chuyên viên phân tích nhận tài nguyên, tự xây dựng công cụ hoặc dùng công cụ sẵn có (nf-core) để phân tích dữ liệu, trả kết quả và xem kết quả ngay trên nền tảng. Mọi thao tác với dữ liệu đều được ghi lại và kiểm tra, đảm bảo truy xuất và sử dụng dữ liệu an toàn.",
           cta: "Mở nền tảng",
         },
         {
-          title: "Mang theo hoặc di chuyển dịch vụ của bạn",
+          title: "Mang theo hoặc tích hợp dịch vụ của bạn",
           paragraph:
-            "Tự vận hành nền tảng tại chỗ, đăng ký cụm HPC Slurm và lưu trữ S3 của bạn, và di chuyển quy trình hiện có với công sức tối thiểu.",
+            "Tự vận hành nền tảng ngay tại chỗ, kết nối cụm HPC Slurm của riêng bạn và mang các quy trình hiện có vào với công sức tối thiểu. Dữ liệu được lưu trữ theo dung lượng — bạn chỉ trả phí cho gói lưu trữ đã chọn.",
           cta: "Tài liệu triển khai",
         },
         {
@@ -104,7 +104,7 @@ export const vi: Dictionary = {
         {
           title: "Tạo workspace",
           paragraph:
-            "Khởi tạo workspace với bucket S3 riêng, mời thành viên trong nhóm và tải dữ liệu giải trình tự lên.",
+            "Khởi tạo workspace với dung lượng lưu trữ riêng, mời thành viên trong nhóm và tải dữ liệu giải trình tự lên.",
         },
         {
           title: "Kết nối tính toán",
@@ -127,13 +127,13 @@ export const vi: Dictionary = {
       subtitle: "Tương thích với",
       title: "Cloud, quy trình và công cụ bạn đang dùng",
       paragraph:
-        "Được thiết kế để kết nối với mọi cloud và mọi lưu trữ tương thích S3, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
+        "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
       items: [
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
         { title: "GreenNode", detail: "Tính toán VNG Cloud" },
         { title: "Slurm HPC", detail: "Cụm riêng của bạn qua SSH" },
         { title: "Nextflow", detail: "nf-core và quy trình tùy chỉnh" },
-        { title: "Lưu trữ S3", detail: "Mọi bucket tương thích S3" },
+        { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
       ],
     },
@@ -171,7 +171,7 @@ export const vi: Dictionary = {
         {
           question: "Tôi có thể di chuyển quy trình và hạ tầng hiện có không?",
           answer:
-            "Có. Bạn có thể tự vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SSH và lưu trữ tương thích S3, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
+            "Có. Bạn có thể vận hành nền tảng tại chỗ hoặc trên cloud riêng, kết nối cụm HPC Slurm qua SSH và lưu trữ của mình, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
         },
         {
           question: "Tôi có thể chạy những quy trình nào?",
@@ -181,7 +181,7 @@ export const vi: Dictionary = {
         {
           question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
           answer:
-            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn qua SSH hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ tương thích S3 bao gồm object storage của CloudFly/VNG và bucket của riêng bạn. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn qua SSH hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ mà bạn có thể mua theo gói hoặc mang theo của riêng bạn, bao gồm object storage của CloudFly/VNG. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
         },
         {
           question: "Tôi có cần tự chuẩn bị tính toán và lưu trữ không?",
@@ -191,7 +191,7 @@ export const vi: Dictionary = {
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
           answer:
-            "Trong lưu trữ bạn chọn — bucket S3 tương thích của riêng bạn, hoặc bucket được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới — thiết kế để hỗ trợ tuân thủ Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
+            "Trong dung lượng lưu trữ bạn chọn — của riêng bạn, hoặc được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới — thiết kế để hỗ trợ tuân thủ Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
         },
         {
           question: "Chi phí như thế nào?",
