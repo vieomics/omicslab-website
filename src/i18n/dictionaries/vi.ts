@@ -134,7 +134,7 @@ export const vi: Dictionary = {
       items: [
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
         { title: "GreenNode", detail: "Tính toán VNG Cloud" },
-        { title: "Slurm HPC", detail: "Cụm riêng của bạn qua SSH" },
+        { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
         { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không chỉ" },
         { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code hoặc mọi ứng dụng web Docker" },
@@ -174,7 +174,7 @@ export const vi: Dictionary = {
         {
           question: "Tôi có thể di chuyển quy trình và hạ tầng hiện có không?",
           answer:
-            "Có. Bạn có thể vận hành nền tảng tại chỗ hoặc trên cloud riêng, kết nối cụm HPC Slurm qua SSH và lưu trữ của mình, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
+            "Có. Bạn có thể vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK và kết nối lưu trữ của mình, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
         },
         {
           question: "Tôi có thể chạy những quy trình nào?",
@@ -184,7 +184,7 @@ export const vi: Dictionary = {
         {
           question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
           answer:
-            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn qua SSH hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ mà bạn có thể mua theo gói hoặc mang theo của riêng bạn, bao gồm object storage của CloudFly/VNG. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ mà bạn có thể mua theo gói hoặc mang theo của riêng bạn, bao gồm object storage của CloudFly/VNG. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
         },
         {
           question: "Tôi có cần tự chuẩn bị tính toán và lưu trữ không?",
