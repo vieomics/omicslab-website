@@ -195,6 +195,20 @@ export default function DataPlatformView({
             </ul>
           </div>
 
+          <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-3">
+            <div className="border-line bg-paper-light border-b px-6 py-4 sm:col-span-2 lg:col-span-3">
+              <h3 className="display-md text-ink">{t.pricing.topup.storage.title}</h3>
+            </div>
+            {t.pricing.topup.storage.specs.map((spec) => (
+              <div key={spec.label} className="bg-paper-light p-6">
+                <p className="micro-label text-muted">{spec.label}</p>
+                <p className="font-display mt-2 text-3xl leading-none font-extrabold text-ink">
+                  {spec.value}
+                </p>
+              </div>
+            ))}
+          </div>
+
           <div className="border-line bg-line mt-8 grid gap-px border md:grid-cols-2">
             <div className="bg-paper-light p-6">
               <p className="text-muted [&_strong]:text-ink text-sm leading-relaxed [&_strong]:font-bold">
