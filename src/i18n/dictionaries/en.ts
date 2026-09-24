@@ -257,13 +257,7 @@ export const en = {
         "Bioinformatics research is often fragmented into disconnected steps — from uploading data, installing tools and running jobs on a cluster to chasing results scattered across different places — which makes reproducing results difficult. Omicslab addresses this by bringing everything onto a single platform, where storage, a catalog of tools and compute resources run seamlessly together.\n\nWith Omicslab, administrators connect the system once for the whole organization — credentials, cloud providers and HPC clusters — then grant access by role (admin, contributor or viewer). Analysts simply pick a tool, fill in the parameters through a form, hit run and follow live logs right in the web interface. Every run's configuration, activity log and related cost are stored in full, so you can reproduce results at any time.",
       note: [
         { strong: "Note:" },
-        { text: " The Omicslab Platform is currently under " },
-        { strong: "trial" },
-        { text: ". It is " },
-        { strong: "not free" },
-        { text: ". You can request a demo or get " },
-        { strong: "2 free genomics assembly sample runs" },
-        { text: " on the platform. Support: " },
+        { text: " For a trial or support, reach us at " },
         {
           link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
         },
@@ -308,10 +302,13 @@ export const en = {
           },
         ],
         trialNote: [
-          { text: "The platform is currently under trial. " },
-          { link: { href: "/contact", text: "Contact us" } },
-          { text: " to get " },
-          { strong: "2 free genomics assembly sample runs" },
+          { text: "For a trial or support, reach us at " },
+          {
+            link: {
+              href: "mailto:contact@omicslab.io",
+              text: "contact@omicslab.io",
+            },
+          },
           { text: "." },
         ] as TextSegment[],
         localNote: [
@@ -698,7 +695,7 @@ export const en = {
       subtitle: "Pricing",
       title: "Contact Us for Pricing",
       paragraph:
-        "The Omicslab Platform is currently under trial. Contact us to get 2 free genomics assembly sample runs on the platform.",
+        "For a trial or support, reach us at contact@omicslab.io.",
       lines: [
         [
           { strong: "Platform subscription:" },
