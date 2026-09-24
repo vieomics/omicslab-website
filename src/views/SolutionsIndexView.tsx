@@ -9,7 +9,7 @@ export default function SolutionsIndexView({ dict }: { dict: Dictionary }) {
           <h1 className="display-lg max-w-[1000px] text-white">
             {index.title}
           </h1>
-          <p className="mt-6 max-w-[760px] text-base leading-relaxed text-[#c9c9c9] sm:text-lg">
+          <p className="mt-6 max-w-[760px] text-base leading-relaxed text-white sm:text-lg">
             {index.subtitle}
           </p>
         </div>

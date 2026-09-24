@@ -49,10 +49,10 @@ const About = ({ dict }: { dict: Dictionary }) => {
               <span className="font-display text-4xl leading-none font-extrabold">
                 {about.badge.line1}
               </span>
-              <span className="micro-label mt-3 text-accent">
+              <span className="micro-label mt-3 text-white">
                 {about.badge.line2}
               </span>
-              <span className="mt-1 text-xs text-[#9a9a9a]">
+              <span className="mt-1 text-xs text-white">
                 {about.badge.line3}
               </span>
             </div>

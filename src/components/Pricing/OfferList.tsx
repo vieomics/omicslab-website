@@ -8,7 +8,7 @@ const OfferList = ({
   return (
     <p
       className={`flex items-baseline gap-3 border-b py-2.5 text-sm leading-relaxed last:border-b-0 ${
-        inverse ? "border-white/15 text-[#c9c9c9]" : "border-line text-muted"
+        inverse ? "border-white/15 text-white" : "border-line text-muted"
       }`}
     >
       <span

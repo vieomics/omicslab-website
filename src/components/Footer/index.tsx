@@ -10,7 +10,7 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
         <div className="font-display text-[26px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white">
           {siteName}
         </div>
-        <p className="max-w-[550px] text-[11px] leading-relaxed text-[#918f84]">
+        <p className="max-w-[550px] text-[11px] leading-relaxed text-white">
           {dict.footer.copyright}
         </p>
         <div className="flex items-center gap-6">
@@ -19,7 +19,7 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
             href="https://github.com/vieomics"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#918f84] transition-colors hover:text-accent"
+            className="text-white transition-opacity hover:opacity-70"
           >
             <svg
               width="22"
@@ -36,7 +36,7 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
             href="https://www.linkedin.com/company/omicstech/?viewAsMember=true"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-[#918f84] transition-colors hover:text-accent"
+            className="text-white transition-opacity hover:opacity-70"
           >
             <svg
               width="22"

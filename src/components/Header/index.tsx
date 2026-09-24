@@ -50,7 +50,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
             <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white sm:text-[26px]">
               {siteName}
             </span>
-            <span className="hidden border-l border-white/40 pl-3 text-[9px] leading-[1.4] font-bold tracking-[0.14em] text-[#aeb2b6] uppercase sm:block">
+            <span className="hidden border-l border-white/40 pl-3 text-[9px] leading-[1.4] font-bold tracking-[0.14em] text-white uppercase sm:block">
               {dict.site.tagline}
             </span>
           </Link>
@@ -70,10 +70,10 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                         onClick={navbarToggleHandler}
                         scroll={false}
                         href={localizeHref(menuItem.path, locale)}
-                        className={`flex items-center py-3 text-[11px] font-bold tracking-[0.14em] uppercase transition-colors lg:py-0 ${
+                        className={`flex items-center py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors lg:py-0 hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 ${
                           currentPath === menuItem.path
-                            ? "text-accent"
-                            : "text-[#d9dcdf] hover:text-accent"
+                            ? "underline decoration-accent decoration-2 underline-offset-8"
+                            : ""
                         }`}
                       >
                         {menuItem.title}
@@ -84,7 +84,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                       <button
                         onClick={() => handleSubmenu(index)}
                         aria-expanded={openIndex === index}
-                        className="flex w-full items-center justify-between gap-2 py-3 text-[11px] font-bold tracking-[0.14em] text-[#d9dcdf] uppercase transition-colors hover:text-accent lg:w-auto lg:py-0"
+                        className="flex w-full items-center justify-between gap-2 py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 lg:w-auto lg:py-0"
                       >
                         {menuItem.title}
                         <svg

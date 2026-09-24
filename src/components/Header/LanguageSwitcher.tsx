@@ -28,7 +28,7 @@ export default function LanguageSwitcher({
     <Link
       href={href}
       aria-label={ariaLabel}
-      className={`flex items-center gap-2 border border-white/25 px-3 py-2 text-[10px] font-bold tracking-[0.14em] text-[#d9dcdf] uppercase transition-colors hover:border-accent hover:text-accent ${className}`}
+      className={`flex items-center gap-2 border border-white/25 px-3 py-2 text-[10px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:border-accent ${className}`}
     >
       <svg
         width="16"
