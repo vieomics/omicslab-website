@@ -74,7 +74,7 @@ export const en = {
           cta: "Open the platform",
         },
         {
-          title: "Bring or Migrate Your Services",
+          title: "Integrate Your Infrastructure",
           paragraph:
             "Deploy the platform on-premises, connect your own Slurm HPC cluster, and bring your existing pipelines across with minimal effort. Storage is purchased by quota, so you only pay for the capacity you choose.",
           cta: "Deployment docs",
@@ -82,13 +82,13 @@ export const en = {
         {
           title: "Pay and Run, Fully Managed",
           paragraph:
-            "New to the dry lab? Everything is ready: CloudFly and GreenNode compute, storage, and nf-core and Nextflow pipelines. Pay as you go and start running.",
+            "Everything is ready: sign in, pick an nf-core pipeline such as rnaseq or sarek, set parameters and resources, then hit run — compute on CloudFly or GreenNode, storage, and results returned straight to the platform. Tuned mainly for Nextflow and nf-core, but not limited to them: beside Studio environments like RStudio, JupyterLab and VS Code, any web application deployed with Docker can run too.",
           cta: "Read the docs",
         },
         {
-          title: "Professional Bioinformatics Services",
+          title: "Project-Based Bioinformatics Services",
           paragraph:
-            "Customer-specific work — multiomics integration, variant calling, metagenomics assembly, pipeline development and HPC setup — tightly integrated with the platform.",
+            "Example: you already have a Slurm HPC cluster and local NAS, and you want to grow production without tearing down the existing cluster — the platform integrates with your infrastructure, letting part of the cluster move to development while capacity scales up for production. You can then run NIPT pipelines: the platform uploads and stores data, creates samples with cohort management, and auto-triggers pre-configured pipelines at scale (via built-in mini-LIMS features). Its plugin architecture lets you integrate full LIMS capabilities when sensitive data is involved.",
           cta: "Talk to us",
         },
       ],
@@ -130,9 +130,9 @@ export const en = {
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
         { title: "GreenNode", detail: "VNG Cloud compute" },
         { title: "Slurm HPC", detail: "Your own cluster over SSH" },
-        { title: "Nextflow", detail: "nf-core and custom workflows" },
+        { title: "Nextflow", detail: "Mainly Nextflow & nf-core, but not only" },
         { title: "Storage", detail: "Bought by quota, or bring your own" },
-        { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
+        { title: "Studio", detail: "RStudio, JupyterLab, VS Code, or any Docker web app" },
       ],
     },
     about: {
