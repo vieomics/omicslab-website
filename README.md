@@ -9,6 +9,7 @@ Static website for [Omicslab](https://omicslab.io) — innovative bioinformatics
 - **Tailwind CSS v4** + TailGrids components
 - **Markdown** blogs with gray-matter, unified/remark/rehype pipeline
 - **Fuse.js** client-side search with build-time index
+- **i18n** — Vietnamese (default, no prefix) + English (`/en`), no runtime dependency
 
 ## Getting Started
 
@@ -24,23 +25,32 @@ npm run preview   # serve out/ locally on :3000
 ```
 src/
 ├── app/                    # Next.js App Router pages
-│   ├── (site)/             # Public site route group
+│   ├── (vi)/               # Vietnamese pages — root layout, no URL prefix
 │   │   ├── about/          # About page
 │   │   ├── blogs/          # Blog listing + [slug]
 │   │   ├── contact/        # Contact page
 │   │   ├── pricing/        # Pricing page
 │   │   └── solutions/      # Infrastructure, Data Platform, Pipelines
-│   ├── layout.tsx          # Root layout (Header + Footer)
-│   ├── page.tsx            # Homepage
-│   └── providers.tsx       # ThemeProvider + Toaster
+│   ├── en/                 # English pages — root layout, /en prefix
+│   ├── global-not-found.tsx# Bilingual 404 for unmatched routes (out/404.html)
+│   ├── sitemap.ts          # Bilingual sitemap.xml with hreflang alternates
+│   └── robots.ts           # robots.txt
+├── i18n/
+│   ├── config.ts           # locales, defaultLocale
+│   ├── dictionaries/       # vi.ts (source of truth) + en.ts (typed)
+│   ├── paths.ts            # localizePath, localizeHref, switchLocalePath
+│   ├── metadata.ts         # page metadata + hreflang alternates
+│   ├── date.ts             # locale-aware date formatting
+│   └── authors.ts          # localized author titles
+├── views/                  # Shared page bodies used by both locales
 ├── components/             # React components
-│   ├── Header/             # Navigation with dropdown
+│   ├── Header/             # Navigation, language switcher
 │   ├── Blog/               # Blog cards, search, TOC, etc.
 │   ├── About/ Hero/ Services/ Contact/ Pricing/
 │   ├── Faq/ Team/ CallToAction/
-│   └── Common/             # SectionTitle, Breadcrumb, etc.
+│   └── Common/             # SectionTitle, Breadcrumb, RichText, etc.
 ├── utils/
-│   ├── markdown.ts         # Read & parse blog markdown files
+│   ├── markdown.ts         # Read & parse blog markdown files (locale-aware)
 │   ├── markdownToHtml.ts   # remark/rehype MD→HTML pipeline
 │   ├── authors.ts          # Authors YAML parser
 │   ├── toc.ts              # Table of contents extraction
@@ -49,19 +59,38 @@ src/
 └── styles/                 # Global CSS
 public/
 ├── authors.yml             # Author definitions
-├── blogs/                  # Blog posts in YYYY-MM/ directories
-│   ├── 2026-01/
-│   ├── 2026-05/
-│   └── 2026-06/
+├── blogs/
+│   ├── vi/YYYY-MM/         # Vietnamese posts (translations)
+│   └── en/YYYY-MM/         # English posts
 ├── images/                 # Static images, logos, team photos
-└── search-index.json       # Generated at build time (gitignored)
+├── search-index.vi.json    # Generated at build time (gitignored)
+└── search-index.en.json    # Generated at build time (gitignored)
 scripts/
-└── build-search-index.js   # Generates public/search-index.json at build
+└── build-search-index.js   # Generates per-locale search indexes at build
 ```
+
+## Internationalization
+
+Vietnamese is the default locale served at `/`; English is served under `/en`.
+Both trees are **root layouts** (there is no top-level `app/layout.tsx`), which
+lets each locale set its own `<html lang>` and metadata.
+
+- **Copy** lives in `src/i18n/dictionaries/{vi,en}.ts`. `en.ts` is the source
+  of the `Dictionary` type, so `vi.ts` fails to compile if a key is missing.
+- **Pages** are thin wrappers: they define localized metadata and render a
+  shared view from `src/views/` with the locale's dictionary.
+- **Components** receive `dict` (and `locale` where needed) as props; there is
+  no i18n context or runtime library.
+- **Links** must go through `localizeHref`/`localizePath` from `src/i18n/paths.ts`.
+- **The language switcher** in the header maps the current path to the other
+  locale; blog posts without a translation fall back to the other locale's
+  blog index.
+- **SEO**: every page emits `hreflang` alternates via `src/i18n/metadata.ts`,
+  and `sitemap.xml` lists both locales.
 
 ## Blog System
 
-Blog posts are plain Markdown files in `public/blogs/YYYY-MM/` with YAML frontmatter:
+Blog posts are plain Markdown files in `public/blogs/<locale>/YYYY-MM/` with YAML frontmatter:
 
 ```yaml
 ---
@@ -79,8 +108,13 @@ Features:
 - GFM tables, code blocks, admonitions (`:::info`, `:::warning`, `:::tip`, etc.)
 - Syntax highlighting via rehype-highlight + prismjs
 - Author data from `public/authors.yml`
-- Client-side search with Fuse.js index built at build time
+- Client-side search with per-locale Fuse.js indexes built at build time
 - All blog posts prerendered as static HTML via `generateStaticParams()`
+- A translated post uses the **same `slug`** in `vi/` and `en/`; tags stay in
+  English in both locales so filters behave identically
+- Images are looked up in the post's own locale folder first and fall back to
+  the other locale, so translations can reuse the original screenshots without
+  duplicating files
 
 ## Static Export
 

@@ -1,6 +1,10 @@
+import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import RichText from "../Common/RichText";
 import SectionTitle from "../Common/SectionTitle";
 
-const Pricing = () => {
+const Pricing = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
+  const { section } = dict.pricingPage;
   return (
     <section
       id="pricing"
@@ -9,30 +13,22 @@ const Pricing = () => {
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Pricing"
-            title="Contact Us for Pricing"
-            paragraph="The Data Platform is currently under trial. Contact us to get 2 free genomics assembly sample runs on the platform."
+            subtitle={section.subtitle}
+            title={section.title}
+            paragraph={section.paragraph}
             center
           />
         </div>
 
         <div className="text-center">
-          <p className="text-body-color dark:text-dark-6 text-base">
-            <strong>Platform subscription:</strong> 1,000,000 VND/month for 10
-            users — fixed until end of July 2026.
-          </p>
-          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
-            <strong>Storage (S3):</strong> 1,000 VND/GB/month.
-          </p>
-          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
-            <strong>HPC compute:</strong> 20,000 VND/hour (max 16 CPUs / 32 GB
-            RAM, ratio 1:2). nf-core pipelines free, OmicsLab pipelines
-            adjusted, metagenomics assembly 100,000 VND/sample.
-          </p>
-          <p className="text-body-color dark:text-dark-6 mt-2 text-base">
-            <strong>Fully local deployment</strong> of platform &amp; HPC also
-            available — contact us for details.
-          </p>
+          {section.lines.map((line, index) => (
+            <p
+              key={index}
+              className="text-body-color dark:text-dark-6 mt-2 text-base first:mt-0"
+            >
+              <RichText segments={line} locale={locale} />
+            </p>
+          ))}
         </div>
       </div>
     </section>

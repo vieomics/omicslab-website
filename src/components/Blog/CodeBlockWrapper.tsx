@@ -2,7 +2,13 @@
 
 import { useEffect } from "react";
 
-export default function CodeBlockWrapper() {
+export default function CodeBlockWrapper({
+  copyLabel,
+  copiedLabel,
+}: {
+  copyLabel: string;
+  copiedLabel: string;
+}) {
   useEffect(() => {
     const preElements = document.querySelectorAll("pre[data-code]");
 
@@ -14,7 +20,7 @@ export default function CodeBlockWrapper() {
       const button = document.createElement("button");
       button.className =
         "copy-btn absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white text-xs px-2 py-1 rounded transition opacity-0 group-hover:opacity-100";
-      button.textContent = "Copy";
+      button.textContent = copyLabel;
 
       const wrapper = document.createElement("div");
       wrapper.className = "group relative";
@@ -26,16 +32,16 @@ export default function CodeBlockWrapper() {
       button.addEventListener("click", async () => {
         try {
           await navigator.clipboard.writeText(code);
-          button.textContent = "Copied!";
+          button.textContent = copiedLabel;
           setTimeout(() => {
-            button.textContent = "Copy";
+            button.textContent = copyLabel;
           }, 2000);
         } catch (err) {
           console.error("Failed to copy:", err);
         }
       });
     });
-  }, []);
+  }, [copyLabel, copiedLabel]);
 
   return null;
 }

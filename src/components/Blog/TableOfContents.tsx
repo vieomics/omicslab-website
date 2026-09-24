@@ -5,9 +5,10 @@ import { useState } from "react";
 
 interface TableOfContentsProps {
   headings: TocItem[];
+  title: string;
 }
 
-const TableOfContents = ({ headings }: TableOfContentsProps) => {
+const TableOfContents = ({ headings, title }: TableOfContentsProps) => {
   const [activeId, setActiveId] = useState<string>("");
 
   if (headings.length === 0) {
@@ -27,7 +28,7 @@ const TableOfContents = ({ headings }: TableOfContentsProps) => {
   return (
     <div className="sticky top-24">
       <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">
-        Table of Contents
+        {title}
       </h3>
       <nav className="space-y-2">
         {headings.map((heading, index) => (

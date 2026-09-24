@@ -3,6 +3,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { formatDate } from "@/i18n/date";
+import { getAuthorTitle } from "@/i18n/authors";
+import { localizePath } from "@/i18n/paths";
 
 interface AuthorData {
   name: string;
@@ -23,17 +28,28 @@ export interface BlogPost {
 
 interface BlogListWithFilterProps {
   posts: BlogPost[];
+  dict: Dictionary;
+  locale: Locale;
   layout?: "grid" | "list";
   searchPlaceholder?: string;
   className?: string;
 }
 
-function PipelineBlogItem({ post }: { post: BlogPost }) {
+function PipelineBlogItem({
+  post,
+  dict,
+  locale,
+}: {
+  post: BlogPost;
+  dict: Dictionary;
+  locale: Locale;
+}) {
+  const authorTitle = getAuthorTitle(post.author, post.authorData?.title, dict);
   return (
     <div className="group mb-10">
       <div className="mb-8 overflow-hidden rounded">
         <Link
-          href={`/blogs/${post.slug}`}
+          href={localizePath(`/blogs/${post.slug}`, locale)}
           aria-label="blog cover"
           className="block"
         >
@@ -63,24 +79,20 @@ function PipelineBlogItem({ post }: { post: BlogPost }) {
             <div className="h-8 w-8 rounded-full bg-gray-300" />
           )}
           <span className="text-dark text-sm font-medium dark:text-white">
-            {post.authorData?.name || post.author || "Anonymous"}
+            {post.authorData?.name || post.author || dict.common.anonymous}
           </span>
-          {post.authorData?.title && (
+          {authorTitle && (
             <span className="text-xs text-gray-500 dark:text-gray-400">
-              • {post.authorData.title}
+              • {authorTitle}
             </span>
           )}
         </div>
         <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
-          {new Date(post.date).toLocaleDateString("en-US", {
-            year: "numeric",
-            month: "short",
-            day: "numeric",
-          })}
+          {formatDate(post.date, locale)}
         </span>
         <h3>
           <Link
-            href={`/blogs/${post.slug}`}
+            href={localizePath(`/blogs/${post.slug}`, locale)}
             className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
           >
             {post.title}
@@ -94,10 +106,18 @@ function PipelineBlogItem({ post }: { post: BlogPost }) {
   );
 }
 
-function InfrastructureBlogItem({ post }: { post: BlogPost }) {
+function InfrastructureBlogItem({
+  post,
+  dict,
+  locale,
+}: {
+  post: BlogPost;
+  dict: Dictionary;
+  locale: Locale;
+}) {
   return (
     <Link
-      href={`/blogs/${post.slug}`}
+      href={localizePath(`/blogs/${post.slug}`, locale)}
       className="group flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
     >
       {post.coverImage && (
@@ -110,11 +130,7 @@ function InfrastructureBlogItem({ post }: { post: BlogPost }) {
       <div className="flex-1">
         <div className="mb-1 flex items-center gap-2">
           <span className="text-xs text-gray-500">
-            {new Date(post.date).toLocaleDateString("en-US", {
-              year: "numeric",
-              month: "short",
-              day: "numeric",
-            })}
+            {formatDate(post.date, locale)}
           </span>
           {post.authorData?.name && (
             <span className="text-xs text-gray-500">
@@ -145,8 +161,10 @@ function InfrastructureBlogItem({ post }: { post: BlogPost }) {
 
 export default function BlogListWithFilter({
   posts,
+  dict,
+  locale,
   layout = "grid",
-  searchPlaceholder = "Search blogs...",
+  searchPlaceholder,
   className = "",
 }: BlogListWithFilterProps) {
   const allTags = Array.from(
@@ -170,9 +188,23 @@ export default function BlogListWithFilter({
 
   const renderItem = (post: BlogPost) => {
     if (layout === "list") {
-      return <InfrastructureBlogItem key={post.slug} post={post} />;
+      return (
+        <InfrastructureBlogItem
+          key={post.slug}
+          post={post}
+          dict={dict}
+          locale={locale}
+        />
+      );
     }
-    return <PipelineBlogItem key={post.slug} post={post} />;
+    return (
+      <PipelineBlogItem
+        key={post.slug}
+        post={post}
+        dict={dict}
+        locale={locale}
+      />
+    );
   };
 
   return (
@@ -180,7 +212,7 @@ export default function BlogListWithFilter({
       <div className="mb-6 flex flex-wrap gap-4">
         <input
           type="text"
-          placeholder={searchPlaceholder}
+          placeholder={searchPlaceholder ?? dict.blogPage.searchPlaceholder}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="rounded-lg border border-gray-300 px-4 py-2 dark:border-gray-600 dark:bg-gray-800"
@@ -194,7 +226,7 @@ export default function BlogListWithFilter({
                 : "bg-gray-200 dark:bg-gray-700"
             }`}
           >
-            All
+            {dict.common.all}
           </button>
           {allTags.map((tag) => (
             <button
@@ -221,7 +253,7 @@ export default function BlogListWithFilter({
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => renderItem(post))
         ) : (
-          <p className="text-gray-500">No blogs found.</p>
+          <p className="text-gray-500">{dict.common.noBlogs}</p>
         )}
       </div>
     </div>
