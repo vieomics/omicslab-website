@@ -261,11 +261,13 @@ export const en = {
         { strong: "trial" },
         { text: ". It is " },
         { strong: "not free" },
-        { text: ". " },
-        { link: { href: "/contact", text: "Contact us" } },
-        { text: " to get " },
+        { text: ". You can request a demo or get " },
         { strong: "2 free genomics assembly sample runs" },
-        { text: " on the platform." },
+        { text: " on the platform. Support: " },
+        {
+          link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
+        },
+        { text: "." },
       ] as TextSegment[],
       pricing: {
         title: "Pricing",

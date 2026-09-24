@@ -263,11 +263,13 @@ export const vi: Dictionary = {
         { strong: "dùng thử" },
         { text: ". Nền tảng " },
         { strong: "không miễn phí" },
-        { text: ". " },
-        { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-        { text: " để nhận " },
+        { text: ". Bạn có thể yêu cầu bản demo hoặc nhận " },
         { strong: "2 lượt chạy mẫu lắp ráp hệ gen miễn phí" },
-        { text: " trên nền tảng." },
+        { text: " trên nền tảng. Liên hệ hỗ trợ: " },
+        {
+          link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
+        },
+        { text: "." },
       ] as TextSegment[],
       pricing: {
         title: "Bảng giá",
