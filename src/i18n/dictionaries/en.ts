@@ -132,7 +132,7 @@ export const en = {
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
         { title: "GreenNode", detail: "VNG Cloud compute" },
-        { title: "Slurm HPC", detail: "Your own cluster over SSH" },
+        { title: "Slurm HPC", detail: "Your own cluster, connected via SDK" },
         { title: "Nextflow", detail: "Mainly Nextflow & nf-core, but not only" },
         { title: "Storage", detail: "Bought by quota, or bring your own" },
         { title: "Studio", detail: "RStudio, JupyterLab, VS Code, or any Docker web app" },
@@ -172,7 +172,7 @@ export const en = {
         {
           question: "Can I migrate my existing pipelines and infrastructure?",
           answer:
-            "Yes. Deploy the platform on-premises or in your own cloud, connect your Slurm HPC cluster over SSH and your storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
+            "Yes. Deploy the platform on-premises or in your own cloud, register your Slurm HPC cluster via the SDK and connect your storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
         },
         {
           question: "Which pipelines can I run?",
@@ -182,7 +182,7 @@ export const en = {
         {
           question: "Which clouds and infrastructure are supported?",
           answer:
-            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster over SSH, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and storage you can buy by quota or bring yourself, including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
+            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster registered via the SDK, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and storage you can buy by quota or bring yourself, including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
         },
         {
           question: "Do I need my own compute and storage?",
