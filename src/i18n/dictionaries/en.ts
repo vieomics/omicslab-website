@@ -142,8 +142,6 @@ export const en = {
       title: "End-to-End Dry-Lab Bioinformatics Services, Built in Vietnam",
       paragraph1:
         "Omicslab is developed by Vieomics Company Limited. We deliver an end-to-end dry-lab service: a bioinformatics platform for users, data, tools and compute, plus the professional services that surround it.",
-      paragraph2:
-        "Labs can migrate existing pipelines and infrastructure with minimal effort, or start from scratch and pay for everything ready to run. Data stays in Vietnam, on the clouds and clusters you choose.",
       cta: "Explore on GitHub",
       badge: {
         line1: "Omics",
