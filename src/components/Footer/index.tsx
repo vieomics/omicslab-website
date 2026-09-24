@@ -2,23 +2,22 @@ import Link from "next/link";
 import { Dictionary } from "@/i18n";
 
 const Footer = ({ dict }: { dict: Dictionary }) => {
-  const siteName = dict.site.name.toUpperCase();
-
   return (
     <footer className="bg-black text-white">
-      <div className="page-width grid gap-8 py-12 md:grid-cols-[1fr_1.5fr_auto] md:items-center">
-        <div className="font-display text-[26px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white">
-          {siteName}
-        </div>
-        <div className="max-w-[550px] text-[11px] leading-relaxed text-white">
-          <p className="text-[10px] font-bold tracking-[0.14em] uppercase">
-            {dict.footer.productOf} {dict.site.legalName}
+      <div className="page-width grid gap-8 py-12 md:grid-cols-[1fr_auto] md:items-center">
+        <div className="max-w-[560px] text-[11px] leading-relaxed text-white">
+          <p className="text-[10px] font-bold tracking-[0.12em] uppercase md:whitespace-nowrap">
+            {dict.footer.platform} - {dict.footer.productOf}{" "}
+            {dict.site.legalName}
           </p>
-          <p className="mt-2">{dict.site.address}</p>
+          <p className="mt-2">{dict.footer.copyright}</p>
+          <p className="mt-1">{dict.site.address}</p>
           <p className="mt-1">
             {dict.site.taxLabel}: {dict.site.taxId}
           </p>
-          <p className="mt-3">{dict.footer.copyright}</p>
+          <p className="mt-1">
+            {dict.site.phoneLabel}: {dict.site.phone}
+          </p>
         </div>
         <div className="flex items-center gap-6">
           <Link

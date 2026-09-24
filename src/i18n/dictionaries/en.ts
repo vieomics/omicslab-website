@@ -8,6 +8,8 @@ export const en = {
     address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
     taxLabel: "Tax ID",
     taxId: "0319713358",
+    phoneLabel: "Phone",
+    phone: "(+84) 364002059",
   },
   nav: {
     home: "Home",
@@ -28,6 +30,7 @@ export const en = {
   },
   footer: {
     copyright: "© 2026 Omicslab. All rights reserved.",
+    platform: "Omicslab platform",
     productOf: "A product of",
   },
   common: {

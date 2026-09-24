@@ -10,6 +10,8 @@ export const vi: Dictionary = {
       "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
     taxLabel: "Mã số thuế",
     taxId: "0319713358",
+    phoneLabel: "Điện thoại",
+    phone: "(+84) 364002059",
   },
   nav: {
     home: "Trang chủ",
@@ -30,6 +32,7 @@ export const vi: Dictionary = {
   },
   footer: {
     copyright: "© 2026 Omicslab. Bảo lưu mọi quyền.",
+    platform: "Nền tảng Omicslab",
     productOf: "Sản phẩm của",
   },
   common: {
