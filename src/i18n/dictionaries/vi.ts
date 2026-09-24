@@ -57,58 +57,104 @@ export const vi: Dictionary = {
   },
   home: {
     hero: {
-      title: "Dịch vụ Tin sinh học Đổi mới & Công cụ Mã nguồn mở",
+      title: "Dịch vụ tin sinh học dry-lab đầu-cuối",
       paragraph:
-        "Omicslab đồng hành cùng các nhà nghiên cứu với những giải pháp tin sinh học có khả năng mở rộng. Từ các quy trình phát hiện biến thể tiên tiến đến công cụ phân tích đa omics hiện đại, chúng tôi cung cấp quy trình và phần mềm sẵn sàng vận hành cho phân tích dữ liệu sinh học phức tạp.",
-      contactCta: "Liên hệ hợp tác",
-      githubCta: "Xem trên GitHub",
+        "Omicslab mang đến một nền tảng tin sinh học để quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán — trên cloud Việt Nam, cụm HPC Slurm của bạn hoặc tại chỗ. Mang theo quy trình hiện có với công sức di chuyển tối thiểu, hoặc chỉ cần trả phí để có mọi thứ sẵn sàng chạy.",
+      primaryCta: "Bắt đầu trên Omicslab",
+      secondaryCta: "Đọc tài liệu",
     },
     services: {
-      subtitle: "Dịch vụ của chúng tôi",
-      title: "Giải pháp Tin sinh học Toàn diện",
+      subtitle: "Nền tảng & Dịch vụ",
+      title: "Toàn bộ dry-lab trên một nền tảng",
       paragraph:
-        "Từ các quy trình phát hiện biến thể chuẩn vận hành đến nền tảng dữ liệu hiện đại, chúng tôi cung cấp đầy đủ công cụ và quy trình cho nhu cầu nghiên cứu tin sinh học của bạn.",
+        "Quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trên một nền tảng tin sinh học, với phương án triển khai phù hợp hạ tầng hiện có và dịch vụ chuyên môn cho yêu cầu riêng.",
       items: [
         {
-          title: "Quy trình Tin sinh học",
+          title: "Quản lý người dùng, dữ liệu, công cụ và tính toán",
           paragraph:
-            "Các quy trình sẵn sàng vận hành phục vụ phân tích tin sinh học và xử lý dữ liệu toàn diện.",
+            "Tổ chức và workspace với lưu trữ tương thích S3, danh mục công cụ, runner cloud và HPC, phân quyền, audit và theo dõi chi phí — tất cả trong một nơi.",
+          cta: "Mở nền tảng",
         },
         {
-          title: "Đa omics",
+          title: "Mang theo hoặc di chuyển dịch vụ của bạn",
           paragraph:
-            "Tích hợp và chuẩn hóa nâng cao các tập dữ liệu đa omics phức tạp để phân tích toàn diện ở quy mô lớn.",
+            "Tự vận hành nền tảng tại chỗ, đăng ký cụm HPC Slurm và lưu trữ S3 của bạn, và di chuyển quy trình hiện có với công sức tối thiểu.",
+          cta: "Tài liệu triển khai",
         },
         {
-          title: "Hạ tầng HPC SLURM",
+          title: "Trả phí và chạy, trọn gói",
           paragraph:
-            "Cấu hình hạ tầng sẵn sàng vận hành để thiết lập và quản lý cụm máy tính hiệu năng cao.",
+            "Mới bắt đầu với dry-lab? Mọi thứ đã sẵn sàng: tính toán CloudFly và GreenNode, lưu trữ, cùng quy trình nf-core và Nextflow. Trả phí theo mức sử dụng và bắt đầu chạy.",
+          cta: "Đọc tài liệu",
         },
         {
-          title: "Nền tảng dữ liệu (chỉ dành cho khu vực Việt Nam)",
+          title: "Dịch vụ tin sinh học chuyên môn",
           paragraph:
-            "Nền tảng dữ liệu tin sinh học toàn diện phục vụ tích hợp, phân tích và quản lý các tập dữ liệu phức tạp.",
+            "Công việc theo yêu cầu khách hàng — tích hợp đa omics, phát hiện biến thể, lắp ráp metagenomics, phát triển quy trình và thiết lập HPC — gắn kết chặt chẽ với nền tảng.",
+          cta: "Liên hệ với chúng tôi",
         },
       ],
     },
+    howItWorks: {
+      subtitle: "Cách hoạt động",
+      title: "Từ dữ liệu thô đến kết quả trong bốn bước",
+      paragraph:
+        "Không cần dựng cụm, không cần cấu hình container. Tạo workspace, kết nối tính toán, chọn quy trình và chạy.",
+      steps: [
+        {
+          title: "Tạo workspace",
+          paragraph:
+            "Khởi tạo workspace với bucket S3 riêng, mời thành viên trong nhóm và tải dữ liệu giải trình tự lên.",
+        },
+        {
+          title: "Kết nối tính toán",
+          paragraph:
+            "Gắn tài khoản CloudFly hoặc GreenNode, hoặc đăng ký cụm HPC Slurm của bạn qua SSH.",
+        },
+        {
+          title: "Chọn quy trình",
+          paragraph:
+            "Chọn quy trình nf-core hoặc đăng ký kho Git bất kỳ, rồi thiết lập tham số, CPU, bộ nhớ và giới hạn thời gian.",
+        },
+        {
+          title: "Chạy và xem kết quả",
+          paragraph:
+            "Khởi chạy phân tích hoặc phiên studio, theo dõi log trực tiếp và mở báo cáo MultiQC, Nextflow và hệ gen ngay trên trình duyệt.",
+        },
+      ],
+    },
+    platforms: {
+      subtitle: "Tương thích với",
+      title: "Cloud, quy trình và công cụ bạn đang dùng",
+      paragraph:
+        "Nền tảng được xây dựng trên các chuẩn mở, để bạn có thể mang theo dữ liệu, tính toán và quy trình của riêng mình.",
+      items: [
+        { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
+        { title: "GreenNode", detail: "Tính toán VNG Cloud" },
+        { title: "Slurm HPC", detail: "Cụm riêng của bạn qua SSH" },
+        { title: "Nextflow", detail: "nf-core và quy trình tùy chỉnh" },
+        { title: "Lưu trữ S3", detail: "Mọi bucket tương thích S3" },
+        { title: "Studio", detail: "RStudio, JupyterLab, VS Code" },
+      ],
+    },
     about: {
-      title: "Nâng tầm Nghiên cứu Tin sinh học",
+      title: "Dịch vụ tin sinh học dry-lab đầu-cuối, phát triển tại Việt Nam",
       paragraph1:
-        "Omicslab là một sáng kiến mã nguồn mở thúc đẩy đổi mới trong nghiên cứu tin sinh học và đa omics. Chúng tôi xây dựng các công cụ, quy trình và thư viện có khả năng mở rộng, hỗ trợ những thiết kế thí nghiệm phức tạp trong nhiều ứng dụng tin sinh học.",
+        "Omicslab được phát triển bởi Công ty TNHH Vieomics. Chúng tôi cung cấp dịch vụ dry-lab đầu-cuối: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng các dịch vụ chuyên môn xoay quanh nó.",
       paragraph2:
-        "Sứ mệnh của chúng tôi là trao cho các nhà nghiên cứu những giải pháp hiện đại, hiệu năng cao và dễ tiếp cận cho phân tích dữ liệu và đa omics tích hợp. Từ quy trình phát hiện biến thể sẵn sàng vận hành đến nền tảng dữ liệu tiên tiến, chúng tôi cung cấp mọi thứ bạn cần cho nghiên cứu tin sinh học chuyên sâu.",
+        "Phòng thí nghiệm có thể di chuyển quy trình và hạ tầng hiện có với công sức tối thiểu, hoặc bắt đầu từ đầu và trả phí để có mọi thứ sẵn sàng. Dữ liệu được giữ tại Việt Nam, trên cloud và cụm máy mà bạn chọn.",
       cta: "Khám phá trên GitHub",
       badge: {
         line1: "Omics",
-        line2: "Mã nguồn mở",
-        line3: "Tối ưu hóa",
+        line2: "Dịch vụ Dry-Lab",
+        line3: "Nền tảng & Chuyên môn",
       },
     },
     cta: {
-      title: "Bạn đang tìm kiếm điều gì?",
-      titleAccent: "Bắt đầu ngay",
+      title: "Sẵn sàng hiện đại hóa dry-lab của bạn?",
+      titleAccent: "Bắt đầu trên Omicslab",
       paragraph:
-        "Chúng tôi cung cấp các giải pháp mã nguồn mở. Nếu bạn quan tâm, hãy liên hệ để trao đổi về hợp tác.",
+        "Tạo tài khoản và chạy quy trình đầu tiên, hoặc liên hệ để di chuyển quy trình, thiết lập HPC và trao đổi về dịch vụ tin sinh học tùy chỉnh.",
       button: "Liên hệ hợp tác",
     },
     faq: {
@@ -118,19 +164,39 @@ export const vi: Dictionary = {
         "Dưới đây là giải đáp cho một số câu hỏi phổ biến nhất mà chúng tôi nhận được.",
       items: [
         {
-          question: "Sử dụng các giải pháp của Omicslab có mất phí không?",
+          question: "Omicslab là gì?",
           answer:
-            "Các giải pháp mã nguồn mở của chúng tôi hoàn toàn miễn phí. Gói thuê bao Nền tảng dữ liệu là 1.000.000 VND/tháng cho 10 người dùng (giá cố định đến hết tháng 7/2026). Lưu trữ (S3) là 1.000 VND/GB/tháng. Điện toán HPC từ 20.000 VND/giờ (tối đa 16 CPU / 32 GB RAM, tỷ lệ 1:2). Các quy trình nf-core miễn phí, quy trình OmicsLab được điều chỉnh, và lắp ráp metagenomics là 100.000 VND/mẫu cho hệ gen hoàn chỉnh. Chúng tôi cũng hỗ trợ triển khai hoàn toàn tại chỗ cho nền tảng và HPC — hãy liên hệ để biết chi tiết.",
+            "Omicslab là dịch vụ tin sinh học dry-lab đầu-cuối. Nền tảng giúp quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, kèm dịch vụ chuyên môn cho các phân tích theo yêu cầu khách hàng, gắn kết chặt chẽ với nền tảng.",
         },
         {
-          question: "Cách tính giá được cấu trúc như thế nào?",
+          question: "Tôi có thể di chuyển quy trình và hạ tầng hiện có không?",
           answer:
-            "Chúng tôi cung cấp báo giá tùy chỉnh dựa trên yêu cầu kỹ thuật và phạm vi dự án của bạn. Thay vì tính phí theo giờ, chúng tôi áp dụng hợp đồng theo dự án, phù hợp với mục tiêu kinh doanh và tiến độ của bạn.",
+            "Có. Bạn có thể tự vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SSH và lưu trữ tương thích S3, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
         },
         {
-          question: "Nền tảng dữ liệu của các bạn hiện có sẵn chưa?",
+          question: "Tôi có thể chạy những quy trình nào?",
           answer:
-            "Nền tảng dữ liệu của chúng tôi hiện đang trong giai đoạn dùng thử tại Việt Nam. Hãy liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng. Hỗ trợ tích hợp đầy đủ khi sử dụng hạ tầng IaaS của chúng tôi cho tính toán hiệu năng cao với cấu hình SLURM.",
+            "Mọi quy trình nf-core hoặc Nextflow, và bất kỳ kho Git nào cung cấp script chạy cùng schema tham số. Một số lựa chọn phổ biến gồm rnaseq, sarek, scrnaseq, chipseq, atacseq, methylseq, ampliseq, mag, taxprofiler và rnafusion. Báo cáo MultiQC và Nextflow được hiển thị trực tiếp trên trình duyệt.",
+        },
+        {
+          question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
+          answer:
+            "Nền tảng hỗ trợ sẵn tính toán trên CloudFly và GreenNode, đồng thời có thể đăng ký cụm HPC Slurm của bạn qua SSH. Lưu trữ tương thích S3, bao gồm object storage của CloudFly/VNG và bucket riêng của bạn. Chúng tôi cũng hỗ trợ triển khai tự vận hành và mạng biệt lập theo yêu cầu.",
+        },
+        {
+          question: "Tôi có cần tự chuẩn bị tính toán và lưu trữ không?",
+          answer:
+            "Không. Người dùng mới chỉ cần trả phí là có mọi thứ sẵn sàng — tính toán, lưu trữ và quy trình — và có thể bắt đầu chạy ngay. Hãy tạo tài khoản tại platform.omicslab.io; đăng ký không cần thẻ tín dụng.",
+        },
+        {
+          question: "Dữ liệu của tôi được lưu ở đâu?",
+          answer:
+            "Dữ liệu nằm trong lưu trữ tương thích S3 do bạn chọn — bao gồm bucket tại Việt Nam. Mỗi phiên bản nền tảng theo khu vực giữ dữ liệu khách hàng trong khu vực, không chuyển dữ liệu qua biên giới.",
+        },
+        {
+          question: "Chi phí như thế nào?",
+          answer:
+            "Chi phí phụ thuộc vào gói, dung lượng lưu trữ và mức sử dụng tính toán. Hãy liên hệ để nhận báo giá — chúng tôi cung cấp cả hợp đồng theo dự án và hình thức trả phí theo mức sử dụng.",
         },
       ],
     },
@@ -677,11 +743,11 @@ export const vi: Dictionary = {
   },
   metadata: {
     siteDescription:
-      "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+      "Dịch vụ tin sinh học dry-lab đầu-cuối. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     home: {
-      title: "Omicslab - Công nghệ Omics",
+      title: "Omicslab | Nền tảng và dịch vụ tin sinh học dry-lab",
       description:
-        "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+        "Dịch vụ tin sinh học dry-lab đầu-cuối. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     },
     about: {
       title: "Giới thiệu",
