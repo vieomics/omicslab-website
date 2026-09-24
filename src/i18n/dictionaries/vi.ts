@@ -160,44 +160,44 @@ export const vi: Dictionary = {
     },
     faq: {
       subtitle: "Câu hỏi thường gặp",
-      title: "Mọi thắc mắc đều được giải đáp",
+      title: "Giải đáp các câu hỏi thường gặp",
       paragraph:
-        "Dưới đây là giải đáp cho một số câu hỏi phổ biến nhất mà chúng tôi nhận được.",
+        "Những câu hỏi chúng tôi nhận được nhiều nhất về nền tảng, hạ tầng và chi phí.",
       items: [
         {
           question: "Omicslab là gì?",
           answer:
-            "Omicslab là dịch vụ tin sinh học dry-lab toàn diện. Nền tảng giúp quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, kèm dịch vụ chuyên môn cho các phân tích theo yêu cầu khách hàng, gắn kết chặt chẽ với nền tảng.",
+            "Omicslab là dịch vụ tin sinh học dry-lab toàn diện: nền tảng giúp bạn quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, cộng thêm dịch vụ chuyên môn khi cần phân tích theo yêu cầu. Tạo tổ chức, kết nối hạ tầng, chọn quy trình và chạy — mọi thứ cùng một nơi.",
         },
         {
-          question: "Tôi có thể di chuyển quy trình và hạ tầng hiện có không?",
+          question: "Tôi đã có quy trình và hạ tầng riêng, có chuyển sang dùng được không?",
           answer:
-            "Có. Bạn có thể vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK và kết nối lưu trữ của mình, rồi mang quy trình vào dưới dạng kho Git. Việc di chuyển được thiết kế để tốn ít công sức nhất.",
+            "Hoàn toàn được. Bạn vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK, kết nối lưu trữ sẵn có rồi mang quy trình vào dưới dạng kho Git. Không cần viết lại từ đầu — chúng tôi đồng hành cùng bạn ở từng bước.",
         },
         {
           question: "Tôi có thể chạy những quy trình nào?",
           answer:
-            "Mọi quy trình nf-core hoặc Nextflow, và bất kỳ kho Git nào cung cấp script chạy cùng schema tham số. Một số lựa chọn phổ biến gồm rnaseq, sarek, scrnaseq, chipseq, atacseq, methylseq, ampliseq, mag, taxprofiler và rnafusion. Báo cáo MultiQC và Nextflow được hiển thị trực tiếp trên trình duyệt.",
+            "Từ các pipeline nf-core phổ biến như rnaseq, sarek, scrnaseq, chipseq, atacseq, methylseq, ampliseq, mag, taxprofiler và rnafusion, đến quy trình riêng của bạn — chỉ cần repo Git kèm script chạy và schema tham số. Báo cáo MultiQC và Nextflow hiển thị ngay trên trình duyệt, không cần cài thêm công cụ.",
         },
         {
           question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
           answer:
-            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng của bạn được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ — có hỗ trợ sẵn cho CloudFly và GreenNode của Việt Nam, cùng lưu trữ mà bạn có thể mua theo gói hoặc mang theo của riêng bạn, bao gồm object storage của CloudFly/VNG. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ. Chúng tôi hỗ trợ sẵn CloudFly và GreenNode tại Việt Nam, cùng lưu trữ mua theo gói hoặc mang theo của riêng bạn. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
         },
         {
-          question: "Tôi có cần tự chuẩn bị tính toán và lưu trữ không?",
+          question: "Tôi có cần tự chuẩn bị hạ tầng không?",
           answer:
-            "Không. Người dùng mới chỉ cần trả phí là có mọi thứ sẵn sàng — tính toán, lưu trữ và quy trình — và có thể bắt đầu chạy ngay. Hãy tạo tài khoản tại platform.omicslab.io; đăng ký không cần thẻ tín dụng.",
+            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.io — không cần thẻ tín dụng.",
         },
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
           answer:
-            "Trong dung lượng lưu trữ bạn chọn — của riêng bạn, hoặc được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới — thiết kế để hỗ trợ tuân thủ Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
+            "Trong dung lượng lưu trữ bạn chọn — của riêng bạn hoặc được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
         },
         {
           question: "Chi phí như thế nào?",
           answer:
-            "Chi phí phụ thuộc vào gói, dung lượng lưu trữ và mức sử dụng tính toán. Hãy liên hệ để nhận báo giá — chúng tôi cung cấp cả hợp đồng theo dự án và hình thức trả phí theo mức sử dụng.",
+            "Chi phí phụ thuộc gói, dung lượng lưu trữ và mức sử dụng tính toán. Hãy liên hệ để nhận báo giá — chúng tôi có cả gói trả phí theo mức sử dụng và hợp đồng theo dự án.",
         },
       ],
     },
