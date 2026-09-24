@@ -44,7 +44,13 @@ const Contact = ({ dict, fullHeight = false }: ContactProps) => {
                 <h3 className="micro-label text-muted">
                   {contact.locationLabel}
                 </h3>
-                <p className="text-ink mt-2 text-base">{contact.location}</p>
+                <p className="text-ink mt-2 text-base">{dict.site.address}</p>
+                <p className="text-muted mt-3 text-sm">
+                  {dict.site.taxLabel}:{" "}
+                  <span className="text-ink font-medium">
+                    {dict.site.taxId}
+                  </span>
+                </p>
               </div>
             </div>
 
