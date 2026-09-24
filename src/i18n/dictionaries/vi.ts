@@ -259,13 +259,7 @@ export const vi: Dictionary = {
         "Nghiên cứu tin sinh học thường bị phân mảnh do phải qua nhiều bước rời rạc — từ tải dữ liệu, cài đặt công cụ, chạy tác vụ trên cụm máy đến theo dõi kết quả rải rác ở nhiều nơi, khiến việc tái lập kết quả gặp rất nhiều khó khăn. Omicslab giải quyết triệt để vấn đề này bằng cách gom tất cả về một nền tảng duy nhất, nơi lưu trữ dữ liệu, thư viện công cụ và tài nguyên tính toán vận hành liền mạch cùng nhau.\n\nVới Omicslab, quản trị viên chỉ cần kết nối hệ thống một lần cho toàn tổ chức — bao gồm thông tin xác thực, nhà cung cấp cloud hay cụm máy HPC — rồi phân quyền theo từng vai trò (quản trị, cộng tác hoặc chỉ xem). Chuyên viên phân tích chỉ việc chọn công cụ, điền tham số theo biểu mẫu, bấm chạy và theo dõi log trực tiếp ngay trên giao diện web. Mọi cấu hình lượt chạy, nhật ký hoạt động và chi phí liên quan đều được lưu trữ đầy đủ, giúp bạn dễ dàng tái lập kết quả bất cứ lúc nào.",
       note: [
         { strong: "Lưu ý:" },
-        { text: " Nền tảng Omicslab hiện đang trong giai đoạn " },
-        { strong: "dùng thử" },
-        { text: ". Nền tảng " },
-        { strong: "không miễn phí" },
-        { text: ". Bạn có thể yêu cầu bản demo hoặc nhận " },
-        { strong: "2 lượt chạy mẫu lắp ráp hệ gen miễn phí" },
-        { text: " trên nền tảng. Liên hệ hỗ trợ: " },
+        { text: " Dùng thử hoặc cần hỗ trợ, liên hệ " },
         {
           link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
         },
@@ -310,10 +304,13 @@ export const vi: Dictionary = {
           },
         ],
         trialNote: [
-          { text: "Nền tảng hiện đang trong giai đoạn dùng thử. " },
-          { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-          { text: " để nhận " },
-          { strong: "2 lượt chạy mẫu lắp ráp hệ gen miễn phí" },
+          { text: "Dùng thử hoặc cần hỗ trợ, liên hệ " },
+          {
+            link: {
+              href: "mailto:contact@omicslab.io",
+              text: "contact@omicslab.io",
+            },
+          },
           { text: "." },
         ] as TextSegment[],
         localNote: [
@@ -700,7 +697,7 @@ export const vi: Dictionary = {
       subtitle: "Bảng giá",
       title: "Liên hệ để nhận báo giá",
       paragraph:
-        "Nền tảng Omicslab hiện đang trong giai đoạn dùng thử. Liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng.",
+        "Dùng thử hoặc cần hỗ trợ, liên hệ contact@omicslab.io.",
       lines: [
         [
           { strong: "Gói thuê bao nền tảng:" },
