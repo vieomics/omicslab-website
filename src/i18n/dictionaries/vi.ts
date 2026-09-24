@@ -90,7 +90,7 @@ export const vi: Dictionary = {
         {
           title: "Dịch vụ tin sinh học theo dự án",
           paragraph:
-            "Bạn đã có cụm HPC Slurm và NAS cục bộ, muốn mở rộng dịch vụ sản xuất mà không phải gỡ bỏ cụm hiện có — nền tảng tích hợp vào hạ tầng sẵn có, cho phép một phần cụm chuyển sang vai trò phát triển, phần còn lại mở rộng cho sản xuất. Bạn có thể triển khai quy trình NIPT: nền tảng giúp tải lên, lưu trữ dữ liệu, tạo mẫu kèm quản lý cohort và tự động kích hoạt các quy trình đã cấu hình sẵn ở quy mô lớn (qua tính năng mini LIMS). Kiến trúc plugin cho phép tích hợp toàn bộ chức năng LIMS khi cần xử lý dữ liệu nhạy cảm.",
+            "Bạn đã có cụm HPC Slurm và hệ thống lưu trữ tương thích S3, muốn mở rộng dịch vụ sản xuất mà không phải gỡ bỏ cụm hiện có — nền tảng tích hợp vào hạ tầng sẵn có, cho phép một phần cụm chuyển sang vai trò phát triển, phần còn lại mở rộng cho sản xuất. Bạn có thể triển khai quy trình NIPT: nền tảng giúp tải lên, lưu trữ dữ liệu, tạo mẫu kèm quản lý cohort và tự động kích hoạt các quy trình đã cấu hình sẵn ở quy mô lớn (qua tính năng mini LIMS). Kiến trúc plugin cho phép tích hợp toàn bộ chức năng LIMS khi cần xử lý dữ liệu nhạy cảm.",
           cta: "Liên hệ với chúng tôi",
         },
       ],
@@ -109,7 +109,7 @@ export const vi: Dictionary = {
         {
           title: "Thêm hạ tầng và lưu trữ",
           paragraph:
-            "Trả phí cho điện toán và lưu trữ trên cloud nếu bạn cần, hoặc kết nối hạ tầng và NAS sẵn có — nền tảng hoạt động với những gì bạn đang có.",
+            "Cloud và HPC đã được cấu hình sẵn, sẵn sàng để chạy — bạn chỉ cần chọn CloudFly, GreenNode hoặc một cụm Slurm và trả phí theo mức sử dụng, không cần cấu hình gì thêm. Đã có máy tính và lưu trữ tương thích S3 của riêng bạn? Chỉ cần kết nối.",
         },
         {
           title: "Chọn dữ liệu đầu vào",
