@@ -144,8 +144,6 @@ export const vi: Dictionary = {
       title: "Dịch vụ tin sinh học dry-lab toàn diện, phát triển tại Việt Nam",
       paragraph1:
         "Omicslab được phát triển bởi Công ty TNHH Vieomics. Chúng tôi cung cấp dịch vụ dry-lab toàn diện: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng các dịch vụ chuyên môn xoay quanh nó.",
-      paragraph2:
-        "Phòng thí nghiệm có thể di chuyển quy trình và hạ tầng hiện có với công sức tối thiểu, hoặc bắt đầu từ đầu và trả phí để có mọi thứ sẵn sàng. Dữ liệu được giữ tại Việt Nam, trên cloud và cụm máy mà bạn chọn.",
       cta: "Khám phá trên GitHub",
       badge: {
         line1: "Omics",
