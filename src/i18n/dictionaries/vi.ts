@@ -137,7 +137,7 @@ export const vi: Dictionary = {
         { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
         { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv" },
         { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
-        { title: "Studio", detail: "RStudio, JupyterLab, VS Code hoặc mọi ứng dụng web Docker" },
+        { title: "Studio", detail: "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker" },
       ],
     },
     about: {

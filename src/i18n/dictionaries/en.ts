@@ -135,7 +135,7 @@ export const en = {
         { title: "Slurm HPC", detail: "Your own cluster, connected via SDK" },
         { title: "Nextflow", detail: "Mainly Nextflow & nf-core, not limited — extend easily with bash, Snakemake, etc." },
         { title: "Storage", detail: "Bought by quota, or bring your own" },
-        { title: "Studio", detail: "RStudio, JupyterLab, VS Code, or any Docker web app" },
+        { title: "Studio", detail: "Galaxy, Streamlit, RStudio, etc. — or any Docker web app" },
       ],
     },
     about: {
