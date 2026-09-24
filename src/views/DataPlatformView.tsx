@@ -147,7 +147,7 @@ export default function DataPlatformView({
                 </p>
                 <p className="micro-label text-muted mt-3">{tier.period}</p>
 
-                <ul className="border-line mt-8 border-t">
+                <ul className="border-line mt-8 flex-1 border-t">
                   {tier.features.map((feature) => (
                     <li
                       key={feature}

@@ -2,7 +2,7 @@ import { TextSegment } from "../types";
 import type { Dictionary } from "./en";
 
 const subscription = {
-  subtitle: "Gói thuê bao",
+  subtitle: "Gói sử dụng",
   title: "Ba gói, tùy quy mô của bạn",
   paragraph:
     "Giới hạn — workspace, thành viên và số job chạy đồng thời — tăng theo gói, trong khi tính toán và lưu trữ vẫn tính theo mức sử dụng.",
@@ -10,12 +10,14 @@ const subscription = {
     {
       name: "Lite",
       highlight: "Cá nhân & nhóm nhỏ",
-      price: "100.000 VND",
+      price: "1.000.000 VND",
       period: "/tháng",
       features: [
         "Tối đa 2 workspace",
         "1 thành viên tổ chức, 3 thành viên mỗi workspace",
         "5 job Studio và 5 job phân tích chạy đồng thời",
+        "LIMS đi kèm theo mặc định",
+        "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
         "Lưu trữ tính theo dung lượng dùng",
         "Đầy đủ tính năng của nền tảng",
       ],
@@ -25,12 +27,14 @@ const subscription = {
     {
       name: "Pro",
       highlight: "Phổ biến nhất",
-      price: "1.000.000 VND",
+      price: "10.000.000 VND",
       period: "/tháng",
       features: [
         "Tối đa 20 workspace",
         "10 thành viên tổ chức, 30 thành viên mỗi workspace",
         "50 job Studio và 50 job phân tích chạy đồng thời",
+        "LIMS đi kèm theo mặc định",
+        "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
         "Lưu trữ tính theo dung lượng dùng",
         "Đầy đủ tính năng của nền tảng",
       ],
@@ -46,8 +50,8 @@ const subscription = {
         "Giới hạn tùy chỉnh theo quy mô doanh nghiệp",
         "Triển khai tại chỗ hoặc môi trường riêng (air-gapped)",
         "Tích hợp LIMS và plugin theo yêu cầu",
-        "Hỗ trợ ưu tiên, SLA theo hợp đồng",
-        "Báo giá và hợp đồng riêng",
+        "Hỗ trợ ưu tiên — hợp đồng và SLA thương lượng riêng",
+        "Báo giá riêng cho từng dự án",
       ],
       cta: "Liên hệ tư vấn",
       ctaHref: "/contact",
@@ -64,7 +68,7 @@ const topup = {
     [
       { strong: "Nạp tiền:" },
       {
-        text: " Nạp vào ví tổ chức qua SePay/VietQR. Số dư dùng cho tính toán, lưu trữ và phí nền tảng — hóa đơn nạp tiền chịu VAT 10%, thuê bao 0%.",
+        text: " Nạp vào ví tổ chức qua SePay/VietQR. Số dư dùng cho tính toán, lưu trữ và phí nền tảng — hóa đơn nạp tiền chịu VAT 10%, gói sử dụng 0%.",
       },
     ],
     [
@@ -199,7 +203,7 @@ export const vi: Dictionary = {
         {
           title: "Tạo tổ chức",
           paragraph:
-            "Thiết lập tổ chức, mời thành viên và kích hoạt giấy phép bằng cách thanh toán phí thuê bao.",
+            "Thiết lập tổ chức, mời thành viên và kích hoạt giấy phép bằng cách thanh toán phí gói sử dụng.",
         },
         {
           title: "Thêm hạ tầng và lưu trữ",
@@ -403,7 +407,7 @@ export const vi: Dictionary = {
                 subtotal: "~4.000.000 VND",
               },
               {
-                item: "Gói thuê bao nền tảng",
+                item: "Gói sử dụng nền tảng",
                 unitPrice: "1.000.000 VND/tháng",
                 qty: "1",
                 subtotal: "1.000.000 VND",
@@ -447,7 +451,7 @@ export const vi: Dictionary = {
                 subtotal: "~1.000.000 VND",
               },
               {
-                item: "Gói thuê bao nền tảng",
+                item: "Gói sử dụng nền tảng",
                 unitPrice: "1.000.000 VND/tháng",
                 qty: "1",
                 subtotal: "1.000.000 VND",
@@ -786,11 +790,6 @@ export const vi: Dictionary = {
       title: "Liên hệ",
       description:
         "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
-    },
-    pricing: {
-      title: "Bảng giá",
-      description:
-        "Bảng giá Omicslab cho nền tảng dữ liệu, lưu trữ và điện toán HPC.",
     },
   },
 };
