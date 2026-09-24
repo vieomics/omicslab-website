@@ -9,12 +9,14 @@ const subscription = {
     {
       name: "Lite",
       highlight: "Individuals and small teams",
-      price: "100,000 VND",
+      price: "1,000,000 VND",
       period: "/month",
       features: [
         "Up to 2 workspaces",
         "1 organization member, 3 members per workspace",
         "5 Studio sessions and 5 analysis jobs at once",
+        "LIMS included by default",
+        "Support SLA: response within 24 business hours",
         "Storage billed by usage",
         "The full platform feature set",
       ],
@@ -24,12 +26,14 @@ const subscription = {
     {
       name: "Pro",
       highlight: "Most popular",
-      price: "1,000,000 VND",
+      price: "10,000,000 VND",
       period: "/month",
       features: [
         "Up to 20 workspaces",
         "10 organization members, 30 members per workspace",
         "50 Studio sessions and 50 analysis jobs at once",
+        "LIMS included by default",
+        "Support SLA: response within 24 business hours",
         "Storage billed by usage",
         "The full platform feature set",
       ],
@@ -45,8 +49,8 @@ const subscription = {
         "Custom limits sized to your business",
         "On-premises or private (air-gapped) deployment",
         "LIMS and plugin integrations to spec",
-        "Priority support with a contracted SLA",
-        "A dedicated quote and contract",
+        "Priority support — contract and SLA agreed separately",
+        "A dedicated quote and pricing",
       ],
       cta: "Talk to us",
       ctaHref: "/contact",
@@ -786,11 +790,6 @@ export const en = {
       title: "Contact",
       description:
         "Get in touch with Omicslab for bioinformatics services and solutions.",
-    },
-    pricing: {
-      title: "Pricing",
-      description:
-        "Omicslab pricing for the data platform, storage, and HPC compute.",
     },
   },
 };
