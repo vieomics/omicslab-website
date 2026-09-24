@@ -46,26 +46,24 @@ function PipelineBlogItem({
 }) {
   const authorTitle = getAuthorTitle(post.author, post.authorData?.title, dict);
   return (
-    <div className="group mb-10">
-      <div className="mb-8 overflow-hidden rounded">
-        <Link
-          href={localizePath(`/blogs/${post.slug}`, locale)}
-          aria-label="blog cover"
-          className="block"
-        >
-          <Image
-            src={post.coverImage || "/images/blog/placeholder.jpg"}
-            alt={post.title}
-            className="h-[225px] w-full object-cover transition group-hover:scale-125 group-hover:rotate-6"
-            width={408}
-            height={225}
-          />
-        </Link>
-      </div>
-      <div>
-        <div className="mb-4 flex items-center gap-3">
+    <article className="group flex h-full flex-col border border-line bg-paper-light">
+      <Link
+        href={localizePath(`/blogs/${post.slug}`, locale)}
+        aria-label="blog cover"
+        className="block overflow-hidden border-b border-line"
+      >
+        <Image
+          src={post.coverImage || "/images/blog/placeholder.jpg"}
+          alt={post.title}
+          className="h-[225px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          width={408}
+          height={225}
+        />
+      </Link>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-5 flex flex-wrap items-center gap-3">
           {post.authorData?.image_url ? (
-            <div className="h-8 w-8 overflow-hidden rounded-full">
+            <div className="h-8 w-8 shrink-0 overflow-hidden border border-line">
               <Image
                 src={post.authorData.image_url}
                 alt={post.authorData.name}
@@ -76,33 +74,31 @@ function PipelineBlogItem({
               />
             </div>
           ) : (
-            <div className="h-8 w-8 rounded-full bg-gray-300" />
+            <div className="h-8 w-8 shrink-0 border border-line bg-paper" />
           )}
-          <span className="text-dark text-sm font-medium dark:text-white">
+          <span className="micro-label text-ink">
             {post.authorData?.name || post.author || dict.common.anonymous}
           </span>
           {authorTitle && (
-            <span className="text-xs text-gray-500 dark:text-gray-400">
-              • {authorTitle}
-            </span>
+            <span className="micro-label text-muted">• {authorTitle}</span>
           )}
         </div>
-        <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
+        <span className="micro-label mb-4 inline-flex w-fit border border-line px-3 py-1.5 text-muted">
           {formatDate(post.date, locale)}
         </span>
-        <h3>
+        <h3 className="display-md mb-4">
           <Link
             href={localizePath(`/blogs/${post.slug}`, locale)}
-            className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
+            className="text-ink transition-colors hover:text-muted"
           >
             {post.title}
           </Link>
         </h3>
-        <p className="text-body-color dark:text-dark-6 line-clamp-2 text-base">
+        <p className="line-clamp-2 flex-1 text-sm leading-relaxed text-muted">
           {post.description}
         </p>
       </div>
-    </div>
+    </article>
   );
 }
 
@@ -118,37 +114,37 @@ function InfrastructureBlogItem({
   return (
     <Link
       href={localizePath(`/blogs/${post.slug}`, locale)}
-      className="group flex items-center gap-4 rounded-lg border border-gray-200 bg-white p-4 shadow-sm transition hover:border-blue-500 hover:shadow-md dark:border-gray-700 dark:bg-gray-800"
+      className="group flex items-center gap-5 border border-line bg-paper-light p-4 transition-colors hover:border-ink"
     >
       {post.coverImage && (
         <img
           src={post.coverImage}
           alt={post.title}
-          className="h-16 w-24 shrink-0 rounded-lg object-cover"
+          className="h-16 w-24 shrink-0 border border-line object-cover"
         />
       )}
       <div className="flex-1">
-        <div className="mb-1 flex items-center gap-2">
-          <span className="text-xs text-gray-500">
+        <div className="mb-2 flex flex-wrap items-center gap-3">
+          <span className="micro-label text-muted">
             {formatDate(post.date, locale)}
           </span>
           {post.authorData?.name && (
-            <span className="text-xs text-gray-500">
+            <span className="micro-label text-muted">
               • {post.authorData.name}
             </span>
           )}
         </div>
-        <h3 className="font-semibold group-hover:text-blue-600">
+        <h3 className="display-md text-[22px] leading-tight transition-colors group-hover:text-muted">
           {post.title}
         </h3>
-        <p className="line-clamp-1 text-sm text-gray-600 dark:text-gray-400">
+        <p className="mt-2 line-clamp-1 text-sm text-muted">
           {post.description}
         </p>
-        <div className="mt-1 flex flex-wrap gap-1">
+        <div className="mt-3 flex flex-wrap gap-1.5">
           {post.tags.slice(0, 3).map((tag) => (
             <span
               key={tag}
-              className="rounded-full bg-gray-100 px-2 py-0.5 text-xs dark:bg-gray-700"
+              className="micro-label border border-line px-2 py-1 text-muted"
             >
               {tag}
             </span>
@@ -209,21 +205,21 @@ export default function BlogListWithFilter({
 
   return (
     <div>
-      <div className="mb-6 flex flex-wrap gap-4">
+      <div className="mb-8 flex flex-wrap items-center gap-4">
         <input
           type="text"
           placeholder={searchPlaceholder ?? dict.blogPage.searchPlaceholder}
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="rounded-lg border border-gray-300 px-4 py-2 dark:border-gray-600 dark:bg-gray-800"
+          className="w-full border border-line bg-paper-light px-4 py-3 text-sm text-ink placeholder:text-muted sm:w-72"
         />
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`rounded-full px-3 py-1 text-sm ${
+            className={`micro-label border px-3.5 py-2 transition-colors ${
               selectedTag === null
-                ? "bg-primary text-white"
-                : "bg-gray-200 dark:bg-gray-700"
+                ? "border-ink bg-ink text-paper-light"
+                : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
             }`}
           >
             {dict.common.all}
@@ -232,10 +228,10 @@ export default function BlogListWithFilter({
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`rounded-full px-3 py-1 text-sm ${
+              className={`micro-label border px-3.5 py-2 transition-colors ${
                 selectedTag === tag
-                  ? "bg-primary text-white"
-                  : "bg-gray-200 dark:bg-gray-700"
+                  ? "border-ink bg-ink text-paper-light"
+                  : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
               }`}
             >
               {tag}
@@ -253,7 +249,7 @@ export default function BlogListWithFilter({
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post) => renderItem(post))
         ) : (
-          <p className="text-gray-500">{dict.common.noBlogs}</p>
+          <p className="text-muted">{dict.common.noBlogs}</p>
         )}
       </div>
     </div>

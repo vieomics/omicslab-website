@@ -34,24 +34,14 @@ function rehypeCopyButton() {
   };
 }
 
-const admonitionConfig: Record<string, { label: string; color: string }> = {
-  tip: { label: "Tip", color: "#059669" },
-  note: { label: "Note", color: "#2563eb" },
-  info: { label: "Info", color: "#2563eb" },
-  warning: { label: "Warning", color: "#d97706" },
-  danger: { label: "Danger", color: "#dc2626" },
-  caution: { label: "Caution", color: "#ea580c" },
-  important: { label: "Important", color: "#7c3aed" },
-};
-
-const bgColors: Record<string, string> = {
-  tip: "#f0fdf4",
-  note: "#eff6ff",
-  info: "#eff6ff",
-  warning: "#fefbeb",
-  danger: "#fef2f2",
-  caution: "#fff7ed",
-  important: "#faf5ff",
+const admonitionConfig: Record<string, { label: string; border: string }> = {
+  tip: { label: "Tip", border: "#111111" },
+  note: { label: "Note", border: "#6c6c6c" },
+  info: { label: "Info", border: "#6c6c6c" },
+  warning: { label: "Warning", border: "#2a2a2a" },
+  danger: { label: "Danger", border: "#111111" },
+  caution: { label: "Caution", border: "#2a2a2a" },
+  important: { label: "Important", border: "#111111" },
 };
 
 const processor = (unified() as any)
@@ -67,8 +57,8 @@ const processor = (unified() as any)
         node.data = node.data || {};
         node.data.hName = "div";
         node.data.hProperties = {
-          className: `admonition admonition-${type} my-4 rounded-r-lg`,
-          style: `border-left: 4px solid ${config.color}; background-color: ${bgColors[type] || bgColors.note}; padding-bottom: 1px`,
+          className: `admonition admonition-${type} my-4`,
+          style: `border-left: 4px solid ${config.border}; background-color: #fafafa; padding-bottom: 1px`,
           "data-admonition-title": title,
         };
       }

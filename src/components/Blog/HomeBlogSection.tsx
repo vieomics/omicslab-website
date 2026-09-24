@@ -13,9 +13,9 @@ const HomeBlogSection = ({
   locale: Locale;
 }) => {
   return (
-    <section className="dark:bg-dark bg-white pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-      <div className="container mx-auto">
-        <div className="mb-[60px]">
+    <section className="section-pad">
+      <div className="page-width">
+        <div className="mb-14 lg:mb-20">
           <SectionTitle
             subtitle={dict.home.blog.subtitle}
             title={dict.home.blog.title}
@@ -25,11 +25,9 @@ const HomeBlogSection = ({
           />
         </div>
 
-        <div className="-mx-4 flex flex-wrap">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {posts.slice(0, 3).map((blog: any, i: number) => (
-            <div key={i} className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <SingleBlog blog={blog} dict={dict} locale={locale} />
-            </div>
+            <SingleBlog key={i} blog={blog} dict={dict} locale={locale} />
           ))}
         </div>
       </div>

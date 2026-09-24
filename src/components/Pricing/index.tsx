@@ -6,30 +6,25 @@ import SectionTitle from "../Common/SectionTitle";
 const Pricing = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
   const { section } = dict.pricingPage;
   return (
-    <section
-      id="pricing"
-      className="dark:bg-dark relative z-20 overflow-hidden bg-white pt-20 pb-12 lg:pt-[120px] lg:pb-[90px]"
-    >
-      <div className="container">
-        <div className="mb-[60px]">
-          <SectionTitle
-            subtitle={section.subtitle}
-            title={section.title}
-            paragraph={section.paragraph}
-            center
-          />
-        </div>
+    <section id="pricing" className="section-pad">
+      <div className="page-width">
+        <SectionTitle
+          subtitle={section.subtitle}
+          title={section.title}
+          paragraph={section.paragraph}
+          center
+        />
 
-        <div className="text-center">
+        <ul className="border-line mx-auto mt-14 max-w-3xl border-t">
           {section.lines.map((line, index) => (
-            <p
+            <li
               key={index}
-              className="text-body-color dark:text-dark-6 mt-2 text-base first:mt-0"
+              className="border-line text-muted [&_strong]:text-ink border-b py-5 text-center text-base leading-relaxed [&_strong]:font-bold"
             >
               <RichText segments={line} locale={locale} />
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </section>
   );

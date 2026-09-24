@@ -21,22 +21,24 @@ const SingleBlog = ({
   const authorTitle = getAuthorTitle(author, authorData?.title, dict);
 
   return (
-    <div className="wow fadeInUp group mb-10" data-wow-delay=".1s">
-      <div className="mb-8 overflow-hidden rounded">
-        <Link href={href} aria-label="blog cover" className="block">
-          <Image
-            src={coverImage || "/images/blog/placeholder.jpg"}
-            alt="image"
-            className="h-[225px] w-full object-cover transition group-hover:scale-125 group-hover:rotate-6"
-            width={408}
-            height={225}
-          />
-        </Link>
-      </div>
-      <div>
-        <div className="mb-4 flex items-center gap-3">
+    <article className="group flex h-full flex-col border border-line bg-paper-light">
+      <Link
+        href={href}
+        aria-label="blog cover"
+        className="block overflow-hidden border-b border-line"
+      >
+        <Image
+          src={coverImage || "/images/blog/placeholder.jpg"}
+          alt="image"
+          className="h-[225px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+          width={408}
+          height={225}
+        />
+      </Link>
+      <div className="flex flex-1 flex-col p-6">
+        <div className="mb-5 flex flex-wrap items-center gap-3">
           {authorData?.image_url ? (
-            <div className="h-8 w-8 overflow-hidden rounded-full">
+            <div className="h-8 w-8 shrink-0 overflow-hidden border border-line">
               <Image
                 src={authorData.image_url}
                 alt={authorData.name}
@@ -47,31 +49,31 @@ const SingleBlog = ({
               />
             </div>
           ) : (
-            <div className="h-8 w-8 rounded-full bg-gray-300" />
+            <div className="h-8 w-8 shrink-0 border border-line bg-paper" />
           )}
-          <span className="text-dark text-sm font-medium dark:text-white">
+          <span className="micro-label text-ink">
             {authorData?.name || author || dict.common.anonymous}
           </span>
           {authorTitle && (
-            <span className="text-xs text-gray-500 dark:text-gray-400">
-              • {authorTitle}
-            </span>
+            <span className="micro-label text-muted">• {authorTitle}</span>
           )}
         </div>
-        <span className="bg-primary mb-5 inline-block rounded px-4 py-1 text-center text-xs leading-loose font-semibold text-white">
+        <span className="micro-label mb-4 inline-flex w-fit border border-line px-3 py-1.5 text-muted">
           {date ? formatDate(date, locale) : dict.common.noDate}
         </span>
-        <h3>
+        <h3 className="display-md mb-4">
           <Link
             href={href}
-            className="text-dark hover:text-primary dark:hover:text-primary mb-4 inline-block text-xl font-semibold sm:text-2xl lg:text-xl xl:text-2xl dark:text-white"
+            className="text-ink transition-colors hover:text-muted"
           >
             {title}
           </Link>
         </h3>
-        <p className="text-body-color dark:text-dark-6 text-base">{excerpt}</p>
+        <p className="line-clamp-3 flex-1 text-sm leading-relaxed text-muted">
+          {excerpt}
+        </p>
       </div>
-    </div>
+    </article>
   );
 };
 

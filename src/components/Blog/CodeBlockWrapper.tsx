@@ -19,7 +19,7 @@ export default function CodeBlockWrapper({
 
       const button = document.createElement("button");
       button.className =
-        "copy-btn absolute top-2 right-2 bg-gray-700 hover:bg-gray-600 text-white text-xs px-2 py-1 rounded transition opacity-0 group-hover:opacity-100";
+        "copy-btn absolute top-3 right-3 border border-line bg-paper-light px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] uppercase text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper-light opacity-0 group-hover:opacity-100 focus:opacity-100";
       button.textContent = copyLabel;
 
       const wrapper = document.createElement("div");

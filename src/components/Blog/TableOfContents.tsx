@@ -26,28 +26,33 @@ const TableOfContents = ({ headings, title }: TableOfContentsProps) => {
   };
 
   return (
-    <div className="sticky top-24">
-      <h3 className="text-dark mb-4 text-lg font-semibold dark:text-white">
-        {title}
-      </h3>
-      <nav className="space-y-2">
-        {headings.map((heading, index) => (
-          <a
-            key={`${heading.id}-${index}`}
-            href={`#${heading.id}`}
-            onClick={(e) => {
-              e.preventDefault();
-              handleClick(heading.id);
-            }}
-            className={`hover:text-primary block text-sm transition-colors ${
-              heading.level === 2
-                ? "text-dark font-medium dark:text-white"
-                : "pl-4 text-gray-600 dark:text-gray-400"
-            } ${activeId === heading.id ? "text-primary font-medium" : ""}`}
-          >
-            {heading.text}
-          </a>
-        ))}
+    <div className="sticky top-24 border border-line bg-paper-light p-6">
+      <h3 className="micro-label mb-4 text-muted">{title}</h3>
+      <nav className="flex flex-col gap-1">
+        {headings.map((heading, index) => {
+          const isActive = activeId === heading.id;
+          return (
+            <a
+              key={`${heading.id}-${index}`}
+              href={`#${heading.id}`}
+              onClick={(e) => {
+                e.preventDefault();
+                handleClick(heading.id);
+              }}
+              className={`block border-l-2 py-1 text-sm leading-snug transition-colors ${
+                heading.level === 2 ? "pl-3" : "pl-6"
+              } ${
+                isActive
+                  ? "border-ink font-semibold text-ink"
+                  : heading.level === 2
+                    ? "border-line text-ink hover:border-ink"
+                    : "border-line text-muted hover:border-ink hover:text-ink"
+              }`}
+            >
+              {heading.text}
+            </a>
+          );
+        })}
       </nav>
     </div>
   );

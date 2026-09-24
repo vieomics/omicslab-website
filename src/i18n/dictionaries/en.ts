@@ -38,7 +38,6 @@ export const en = {
     noDate: "No date",
     anonymous: "Anonymous",
     scrollToTop: "scroll to top",
-    themeToggler: "theme toggler",
     viewOnGitHub: "View on GitHub",
     contactUs: "Contact us",
     readInOtherLanguage: "Read in Vietnamese",
