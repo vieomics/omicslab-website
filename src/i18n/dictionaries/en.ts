@@ -17,7 +17,7 @@ export const en = {
     contact: "Contact",
     solutions: "Solutions",
     infrastructure: "Infrastructure as a Service",
-    dataPlatform: "Data Platform",
+    dataPlatform: "Omicslab Platform",
     pipelinesSoftwares: "Pipelines & Softwares",
     multiomicsPipeline: "Multiomics Pipeline",
     runPipeline: "Run Pipeline",
@@ -243,22 +243,22 @@ export const en = {
       title: "Solutions",
       subtitle: "Bioinformatics solutions for multiomics research",
       paragraph:
-        "Use the navigation menu to access: Data Platform, Service Platform, or Software Platform.",
+        "Use the navigation menu to access: Omicslab Platform, Service Platform, or Software Platform.",
       metadataDescription:
         "Bioinformatics solutions for multiomics analysis, data management, and pipeline execution.",
     },
     dataPlatform: {
-      metadataTitle: "Data Platform",
+      metadataTitle: "Omicslab Platform",
       metadataDescription:
         "RIVER - Bioinformatics research platform for data management, HPC, and tool execution.",
-      title: "Data Platform",
+      title: "Omicslab Platform",
       subtitle:
         "Rapid Integration and Visualization for Enhanced Research (RIVER) - A scalable platform that unifies data management, high-performance computing (HPC), and tool execution.",
       intro:
         "Bioinformatics research often requires collecting and curating data, executing computational tools, and managing results across distributed resources with high reproducibility. In addition, challenges related to efficiency, accessibility, and security must be addressed. RIVER integrates three key components: data storage, tool version control, and computing resources. Acting as a controller, RIVER provides a role-based access control system, enabling users to create and manage credentials, projects, and tools, while analysis jobs are launched and monitored via a user-friendly web interface.",
       note: [
         { strong: "Note:" },
-        { text: " The Data Platform is currently under " },
+        { text: " The Omicslab Platform is currently under " },
         { strong: "trial" },
         { text: ". It is " },
         { strong: "not free" },
@@ -697,7 +697,7 @@ export const en = {
       subtitle: "Pricing",
       title: "Contact Us for Pricing",
       paragraph:
-        "The Data Platform is currently under trial. Contact us to get 2 free genomics assembly sample runs on the platform.",
+        "The Omicslab Platform is currently under trial. Contact us to get 2 free genomics assembly sample runs on the platform.",
       lines: [
         [
           { strong: "Platform subscription:" },

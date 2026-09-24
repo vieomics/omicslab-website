@@ -19,7 +19,7 @@ export const vi: Dictionary = {
     contact: "Liên hệ",
     solutions: "Giải pháp",
     infrastructure: "Hạ tầng dưới dạng dịch vụ",
-    dataPlatform: "Nền tảng dữ liệu",
+    dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Quy trình & Phần mềm",
     multiomicsPipeline: "Quy trình đa omics",
     runPipeline: "Chạy quy trình",
@@ -245,22 +245,22 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Sử dụng menu điều hướng để truy cập: Nền tảng dữ liệu, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
+        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
     dataPlatform: {
-      metadataTitle: "Nền tảng dữ liệu",
+      metadataTitle: "Nền tảng Omicslab",
       metadataDescription:
         "RIVER - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
-      title: "Nền tảng dữ liệu",
+      title: "Nền tảng Omicslab",
       subtitle:
         "Rapid Integration and Visualization for Enhanced Research (RIVER) - Nền tảng có khả năng mở rộng, hợp nhất quản lý dữ liệu, tính toán hiệu năng cao (HPC) và thực thi công cụ.",
       intro:
         "Nghiên cứu tin sinh học thường đòi hỏi thu thập và quản lý dữ liệu, thực thi các công cụ tính toán và quản lý kết quả trên nhiều nguồn tài nguyên phân tán với khả năng tái lập cao. Bên cạnh đó, các thách thức về hiệu quả, khả năng tiếp cận và bảo mật cũng cần được giải quyết. RIVER tích hợp ba thành phần chính: lưu trữ dữ liệu, quản lý phiên bản công cụ và tài nguyên tính toán. Đóng vai trò bộ điều khiển, RIVER cung cấp hệ thống phân quyền theo vai trò, cho phép người dùng tạo và quản lý thông tin xác thực, dự án và công cụ, trong khi các tác vụ phân tích được khởi chạy và giám sát qua giao diện web thân thiện.",
       note: [
         { strong: "Lưu ý:" },
-        { text: " Nền tảng dữ liệu hiện đang trong giai đoạn " },
+        { text: " Nền tảng Omicslab hiện đang trong giai đoạn " },
         { strong: "dùng thử" },
         { text: ". Nền tảng " },
         { strong: "không miễn phí" },
@@ -699,7 +699,7 @@ export const vi: Dictionary = {
       subtitle: "Bảng giá",
       title: "Liên hệ để nhận báo giá",
       paragraph:
-        "Nền tảng dữ liệu hiện đang trong giai đoạn dùng thử. Liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng.",
+        "Nền tảng Omicslab hiện đang trong giai đoạn dùng thử. Liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng.",
       lines: [
         [
           { strong: "Gói thuê bao nền tảng:" },
