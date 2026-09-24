@@ -4,6 +4,7 @@ export const en = {
   site: {
     name: "Omicslab",
     tagline: "Omics Technology",
+    legalName: "VIEOMICS COMPANY LIMITED",
     address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
     taxLabel: "Tax ID",
     taxId: "0319713358",
@@ -27,6 +28,7 @@ export const en = {
   },
   footer: {
     copyright: "© 2026 Omicslab. All rights reserved.",
+    productOf: "A product of",
   },
   common: {
     home: "Home",
