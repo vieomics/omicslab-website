@@ -13,6 +13,7 @@ interface AdmonitionProps {
 
 export default function Admonition({
   type = "note",
+  title,
   children,
 }: AdmonitionProps) {
   const typeLabels: Record<string, string> = {
@@ -26,7 +27,11 @@ export default function Admonition({
   };
 
   return (
-    <div className={`admonition-${type} my-4 mb-8 rounded-lg border-l-4 p-4`}>
+    <div
+      className={`admonition admonition-${type} my-4 border border-line border-l-[3px] border-l-ink bg-paper-light p-5`}
+      data-admonition-type={type}
+      data-admonition-title={title || typeLabels[type] || typeLabels.note}
+    >
       <div className="admonition-content">{children}</div>
     </div>
   );

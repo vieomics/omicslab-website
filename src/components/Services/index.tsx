@@ -6,15 +6,15 @@ import servicesData from "./servicesData";
 const Services = ({ dict }: { dict: Dictionary }) => {
   const { services } = dict.home;
   return (
-    <section className="dark:bg-dark pt-20 pb-8 lg:pt-[120px] lg:pb-[70px]">
-      <div className="container">
+    <section className="section-pad">
+      <div className="page-width">
         <SectionTitle
           subtitle={services.subtitle}
           title={services.title}
           paragraph={services.paragraph}
         />
 
-        <div className="-mx-4 mt-12 flex flex-wrap lg:mt-20">
+        <div className="mt-14 grid gap-px border border-line bg-line md:grid-cols-2 lg:mt-20 lg:grid-cols-4">
           {servicesData.map((service, i) => (
             <SingleFeature
               key={i}

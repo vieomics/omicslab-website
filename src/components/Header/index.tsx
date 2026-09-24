@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -37,134 +36,157 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
     }
   };
 
+  const siteName = dict.site.name.toUpperCase();
+
   return (
     <>
-      <header className="ud-header shadow-nav border-stroke dark:border-dark-3/20 dark:bg-dark/10 fixed top-0 left-0 z-[999] flex w-full items-center border-b bg-white/80 backdrop-blur-[5px]">
-        <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-48 max-w-full px-4">
-              <Link
-                href={localizeHref("/", locale)}
-                className="navbar-logo block w-full py-2"
-              >
-                <Image
-                  src={`/images/logo/logo.svg`}
-                  alt="logo"
-                  width={450}
-                  height={120}
-                  className="header-logo h-16 w-auto"
-                />
-              </Link>
-            </div>
-            <div className="flex w-full items-center justify-end px-4">
-              <div className="flex items-center">
-                <LanguageSwitcher
-                  locale={locale}
-                  label={dict.nav.switchTo}
-                  ariaLabel={dict.nav.languageSwitcher}
-                  translatedSlugs={translatedSlugs}
-                  className="mr-10 lg:mr-4"
-                />
-                <button
-                  onClick={navbarToggleHandler}
-                  id="navbarToggler"
-                  aria-label={dict.nav.mobileMenu}
-                  className="ring-primary absolute top-1/2 right-4 block -translate-y-1/2 rounded-lg px-3 py-[6px] focus:ring-2 lg:hidden"
-                >
-                  <span
-                    className={`bg-dark dark:bg-white relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? "top-[7px] rotate-45" : " "
-                    }`}
-                  />
-                  <span
-                    className={`bg-dark dark:bg-white relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? "opacity-0" : " "
-                    }`}
-                  />
-                  <span
-                    className={`bg-dark dark:bg-white relative my-1.5 block h-0.5 w-[30px] transition-all duration-300 ${
-                      navbarOpen ? "top-[-8px] -rotate-45" : " "
-                    }`}
-                  />
-                </button>
-                <nav
-                  id="navbarCollapse"
-                  className={`navbar border-body-color/50 dark:border-body-color/20 dark:bg-dark-2 absolute right-0 z-30 w-[250px] rounded border-[.5px] bg-white px-6 py-4 duration-300 lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 lg:dark:bg-transparent ${
-                    navbarOpen
-                      ? "visibility top-full opacity-100"
-                      : "invisible top-[120%] opacity-0"
-                  }`}
-                >
-                  <ul className="block lg:ml-8 lg:flex lg:gap-x-8 xl:ml-14 xl:gap-x-12">
-                    {menuData.map((menuItem, index) =>
-                      menuItem.path ? (
-                        <li key={index} className="group relative">
-                          <Link
-                            onClick={navbarToggleHandler}
-                            scroll={false}
-                            href={localizeHref(menuItem.path, locale)}
-                            className={`ud-menu-scroll text-dark group-hover:text-primary dark:group-hover:text-primary flex py-2 text-base lg:inline-flex lg:px-0 lg:py-6 dark:text-white ${
-                              currentPath === menuItem.path && "!text-primary"
-                            }`}
-                          >
-                            {menuItem.title}
-                          </Link>
-                        </li>
-                      ) : (
-                        <li className="submenu-item group relative" key={index}>
-                          <button
-                            onClick={() => handleSubmenu(index)}
-                            className={`ud-menu-scroll text-dark group-hover:text-primary dark:group-hover:text-primary flex items-center justify-between py-2 text-base lg:inline-flex lg:px-0 lg:py-6 dark:text-white`}
-                          >
-                            {menuItem.title}
+      <header className="fixed top-0 left-0 z-[999] w-full border-b border-white/15 bg-[#030303]/80 backdrop-blur-[12px]">
+        <div className="page-width flex h-[76px] items-center justify-between gap-10">
+          <Link
+            href={localizeHref("/", locale)}
+            className="flex shrink-0 items-center gap-3"
+            aria-label={dict.site.name}
+          >
+            <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white sm:text-[26px]">
+              {siteName}
+            </span>
+            <span className="hidden border-l border-white/40 pl-3 text-[9px] leading-[1.4] font-bold tracking-[0.14em] text-[#aeb2b6] uppercase sm:block">
+              {dict.site.tagline}
+            </span>
+          </Link>
 
-                            <span className="pl-1">
-                              <svg
-                                className={`duration-300 lg:group-hover:rotate-180`}
-                                width="16"
-                                height="17"
-                                viewBox="0 0 16 17"
-                                fill="none"
-                                xmlns="http://www.w3.org/2000/svg"
-                              >
-                                <path
-                                  d="M8.00039 11.9C7.85039 11.9 7.72539 11.85 7.60039 11.75L1.85039 6.10005C1.62539 5.87505 1.62539 5.52505 1.85039 5.30005C2.07539 5.07505 2.42539 5.07505 2.65039 5.30005L8.00039 10.525L13.3504 5.25005C13.5754 5.02505 13.9254 5.02505 14.1504 5.25005C14.3754 5.47505 14.3754 5.82505 14.1504 6.05005L8.40039 11.7C8.27539 11.825 8.15039 11.9 8.00039 11.9Z"
-                                  fill="currentColor"
-                                />
-                              </svg>
-                            </span>
-                          </button>
+          <div className="flex items-center gap-3 sm:gap-6">
+            <nav
+              id="navbarCollapse"
+              className={`${
+                navbarOpen ? "visible opacity-100" : "invisible opacity-0"
+              } fixed inset-x-0 top-[76px] bottom-0 z-30 overflow-y-auto bg-[#050505] px-5 py-8 transition-opacity duration-200 lg:visible lg:static lg:flex lg:items-center lg:gap-9 lg:overflow-visible lg:bg-transparent lg:p-0 lg:opacity-100`}
+            >
+              <ul className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-9">
+                {menuData.map((menuItem, index) =>
+                  menuItem.path ? (
+                    <li key={index} className="relative">
+                      <Link
+                        onClick={navbarToggleHandler}
+                        scroll={false}
+                        href={localizeHref(menuItem.path, locale)}
+                        className={`flex items-center py-3 text-[11px] font-bold tracking-[0.14em] uppercase transition-colors lg:py-0 ${
+                          currentPath === menuItem.path
+                            ? "text-accent"
+                            : "text-[#d9dcdf] hover:text-accent"
+                        }`}
+                      >
+                        {menuItem.title}
+                      </Link>
+                    </li>
+                  ) : (
+                    <li className="group relative" key={index}>
+                      <button
+                        onClick={() => handleSubmenu(index)}
+                        aria-expanded={openIndex === index}
+                        className="flex w-full items-center justify-between gap-2 py-3 text-[11px] font-bold tracking-[0.14em] text-[#d9dcdf] uppercase transition-colors hover:text-accent lg:w-auto lg:py-0"
+                      >
+                        {menuItem.title}
+                        <svg
+                          className={`h-3 w-3 transition-transform duration-200 ${
+                            openIndex === index ? "rotate-180" : ""
+                          }`}
+                          viewBox="0 0 16 17"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M8 11.4 2.6 6.1a.9.9 0 0 1 1.3-1.3L8 8.9l4.1-4.1a.9.9 0 1 1 1.3 1.3L8 11.4Z"
+                            fill="currentColor"
+                          />
+                        </svg>
+                      </button>
 
-                          <div
-                            className={`submenu dark:bg-dark-2 relative top-full left-0 w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
-                              openIndex === index ? "!-left-[25px]" : "hidden"
-                            }`}
-                          >
-                            {menuItem?.submenu?.map((submenuItem, i) => (
-                              <Link
-                                href={
-                                  submenuItem.path
-                                    ? localizeHref(submenuItem.path, locale)
-                                    : "#"
-                                }
-                                key={i}
-                                className={`block rounded px-4 py-[10px] text-sm ${
-                                  currentPath === submenuItem.path
-                                    ? "text-primary"
-                                    : "text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary"
-                                }`}
-                              >
-                                {submenuItem.title}
-                              </Link>
-                            ))}
+                      <div
+                        className={`${
+                          openIndex === index ? "block" : "hidden"
+                        } mt-1 border-l border-line pl-4 lg:absolute lg:top-full lg:left-0 lg:mt-0 lg:min-w-[280px] lg:border lg:border-line lg:bg-paper-light lg:py-3 lg:pl-0`}
+                      >
+                        {menuItem?.submenu?.map((submenuItem, i) => (
+                          <div key={i}>
+                            <Link
+                              href={
+                                submenuItem.path
+                                  ? localizeHref(submenuItem.path, locale)
+                                  : "#"
+                              }
+                              onClick={navbarToggleHandler}
+                              className={`block px-4 py-2.5 text-sm transition-colors ${
+                                currentPath === submenuItem.path
+                                  ? "text-ink"
+                                  : "text-muted hover:text-ink"
+                              }`}
+                            >
+                              {submenuItem.title}
+                            </Link>
+                            {submenuItem.submenu && (
+                              <div className="lg:pl-4">
+                                {submenuItem.submenu.map((nested, j) => (
+                                  <Link
+                                    key={j}
+                                    href={
+                                      nested.path
+                                        ? localizeHref(nested.path, locale)
+                                        : "#"
+                                    }
+                                    onClick={navbarToggleHandler}
+                                    className={`block px-4 py-2 text-[13px] transition-colors ${
+                                      currentPath === nested.path
+                                        ? "text-ink"
+                                        : "text-muted hover:text-ink"
+                                    }`}
+                                  >
+                                    {nested.title}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
                           </div>
-                        </li>
-                      ),
-                    )}
-                  </ul>
-                </nav>
-              </div>
-            </div>
+                        ))}
+                      </div>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </nav>
+
+            <LanguageSwitcher
+              locale={locale}
+              label={dict.nav.switchTo}
+              ariaLabel={dict.nav.languageSwitcher}
+              translatedSlugs={translatedSlugs}
+              className="inline-flex"
+            />
+
+            <button
+              onClick={navbarToggleHandler}
+              id="navbarToggler"
+              aria-label={dict.nav.mobileMenu}
+              aria-expanded={navbarOpen}
+              className="relative flex h-10 w-10 flex-col items-center justify-center gap-[5px] lg:hidden"
+            >
+              <span
+                className={`block h-0.5 w-[26px] bg-white transition-all duration-300 ${
+                  navbarOpen ? "translate-y-[7px] rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-[26px] bg-white transition-all duration-300 ${
+                  navbarOpen ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`block h-0.5 w-[26px] bg-white transition-all duration-300 ${
+                  navbarOpen ? "-translate-y-[7px] -rotate-45" : ""
+                }`}
+              />
+            </button>
           </div>
         </div>
       </header>

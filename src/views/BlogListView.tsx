@@ -17,17 +17,10 @@ export default function BlogListView({
   allTags,
 }: BlogListViewProps) {
   return (
-    <>
-      <section className="pt-20 pb-10 lg:pt-[120px] lg:pb-20">
-        <div className="container">
-          <BlogList
-            posts={posts}
-            allTags={allTags}
-            dict={dict}
-            locale={locale}
-          />
-        </div>
-      </section>
-    </>
+    <section className="section-pad">
+      <div className="page-width">
+        <BlogList posts={posts} allTags={allTags} dict={dict} locale={locale} />
+      </div>
+    </section>
   );
 }

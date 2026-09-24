@@ -39,7 +39,6 @@ export const vi: Dictionary = {
     noDate: "Không có ngày",
     anonymous: "Ẩn danh",
     scrollToTop: "cuộn lên đầu trang",
-    themeToggler: "chuyển đổi giao diện",
     viewOnGitHub: "Xem trên GitHub",
     contactUs: "Liên hệ với chúng tôi",
     readInOtherLanguage: "Đọc bằng tiếng Anh",
