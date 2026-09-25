@@ -289,6 +289,7 @@ export const policiesVi: Policies = {
             type: "ul",
             items: [
               "Đơn vị chịu trách nhiệm pháp lý: **CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS**",
+              "Đầu mối về bảo vệ dữ liệu cá nhân (DPO): **Nguyễn Tấn Thanh Giang** — **giangnguyen@omicslab.io**",
               "Trang web: Mục [Liên hệ](/contact)",
               "Email: **contact@omicslab.io** (Tiêu đề email vui lòng ghi rõ: “Yêu cầu về Quyền riêng tư”)",
             ],
