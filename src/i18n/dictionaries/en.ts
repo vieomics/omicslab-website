@@ -111,7 +111,7 @@ const topup = {
 export const en = {
   site: {
     name: "Omicslab",
-    tagline: "Omics Technology",
+    tagline: "OMICS x AI",
     legalName: "VIEOMICS COMPANY LIMITED",
     address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
     taxLabel: "Tax ID",
@@ -159,7 +159,10 @@ export const en = {
     readInOtherLanguage: "Read in Vietnamese",
   },
   authors: {
-    river: { title: "Founder @ Omicslab" },
+    river: {
+      title:
+        "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
+    },
   },
   home: {
     hero: {
@@ -328,8 +331,8 @@ export const en = {
       title: "Meet Our Team",
       members: [
         {
-          designation: "Founder",
-          bio: "Bioinformatics professional with hands-on experience since 2019, specializing in end-to-end solutions across computational biology, high-throughput sequencing (NGS) analysis, and scalable infrastructure. His work spans the full stack of bioinformatics systems, from designing reproducible pipelines with Nextflow, Snakemake, and Galaxy to deploying production-grade platforms with CI/CD integration for automation and scalability.\n\nAs the pace of innovation in life sciences accelerates, he founded OmicsLab with a clear vision: to build a strong, foundational ecosystem that supports the entire omics journey—from core infrastructure and data generation to advanced downstream analysis and AI-driven applications. This includes developing robust HPC and cloud-based environments, managing Slurm-based compute systems, and architecting storage and workflow solutions capable of handling large-scale genomics and multi-omics data.\n\nWith a solid background in genomics, epigenetics, transcriptomics, and machine learning, he focuses on transforming complex biological data into actionable insights. He is committed to building systems that are not only scalable and reproducible, but also accessible and impactful for both research and industry. Through OmicsLab, his goal is to bridge the gap between infrastructure and innovation, enabling the next generation of bioinformatics and precision medicine solutions.",
+          designation:
+            "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
     },
