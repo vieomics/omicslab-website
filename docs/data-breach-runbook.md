@@ -8,7 +8,7 @@ Legal basis: **Law No. 91/2025/QH15 (PDPL), Article 23** and **Decree No.
 356/2025/ND-CP** (notification content, Article 28 and related provisions);
 sanctions under **Decree No. 330/2026/ND-CP**.
 
-> Owner: [DPO / data protection contact — name + email, to be filled]
+> Owner (DPO / data protection contact): **Nguyen Tan Thanh Giang** — giangnguyen@omicslab.io
 > Review cadence: every 6 months, or after any incident.
 
 ---
@@ -79,7 +79,7 @@ Both notifications must, as a minimum, contain:
 
 **Authority:** the specialised personal data protection authority under the
 Ministry of Public Security (Cục An ninh mạng và phòng, chống tội phạm sử dụng
-công nghệ cao — **A05**) — channel: [dpo email / portal — to be filled].
+công nghệ cao — **A05**) — channel: giangnguyen@omicslab.io.
 
 **Data subjects:** direct notice (email) to affected users, in plain language,
 in Vietnamese, with what to do next (password reset, monitoring, contact).
