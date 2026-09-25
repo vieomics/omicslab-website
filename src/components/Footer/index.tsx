@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Script from "next/script";
 import { Dictionary } from "@/i18n";
 
@@ -68,6 +69,13 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
               alt="DMCA.com Protection Status"
             />
           </a>
+          <Image
+            src="/images/logo/vieomics-white.svg"
+            alt="Vieomics"
+            width={120}
+            height={40}
+            className="h-auto w-[120px]"
+          />
         </div>
       </div>
       <Script
