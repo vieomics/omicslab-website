@@ -521,7 +521,7 @@ export const en = {
         "Custom bioinformatics and platform services: HPC built and integrated with the platform, private platform deployments, and pipeline development and integration.",
       title: "Custom Solutions",
       subtitle:
-        "Tell us the specific request and we build it: an HPC cluster integrated with the platform, a private deployment for your own team, and pipelines shaped around your data.",
+        "Tell us the specific request and we build it: an HPC cluster integrated with the platform, a private deployment for your own organization, and pipelines shaped around your data.",
       intro:
         "Custom Solutions is our service for specific requests in bioinformatics and on the Omicslab platform. Instead of fitting your work into a fixed product, you describe the outcome you need, we scope it together, build it and hand it over working.\n\nOne engagement can be a single pipeline or a whole environment: an HPC cluster built and connected to the platform, the platform deployed privately for your own users, or the pipelines your analysis depends on developed and integrated with what you already run.",
       searchPlaceholder: "Search custom solutions...",
