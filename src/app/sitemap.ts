@@ -15,7 +15,6 @@ const staticPaths = [
   "/contact",
   "/solutions",
   "/solutions/data-platform",
-  "/solutions/infrastructure",
   "/solutions/pipelines-softwares",
 ];
 
