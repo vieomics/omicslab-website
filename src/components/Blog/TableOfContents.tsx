@@ -11,6 +11,12 @@ interface TableOfContentsProps {
 /** Matches the scroll offset used when a ToC link is clicked. */
 const SCROLL_OFFSET = 100;
 
+/**
+ * Smooth scrolling lands a fraction of a pixel off the offset line, so a
+ * heading sitting right on it still counts as the active section.
+ */
+const ACTIVE_TOLERANCE = 2;
+
 const TableOfContents = ({ headings, title }: TableOfContentsProps) => {
   const [activeId, setActiveId] = useState<string>("");
   const navRef = useRef<HTMLElement | null>(null);
@@ -39,7 +45,10 @@ const TableOfContents = ({ headings, title }: TableOfContentsProps) => {
         for (const heading of headings) {
           const element = document.getElementById(heading.id);
           if (!element) continue;
-          if (element.getBoundingClientRect().top - SCROLL_OFFSET <= 0) {
+          if (
+            element.getBoundingClientRect().top - SCROLL_OFFSET <=
+            ACTIVE_TOLERANCE
+          ) {
             current = heading.id;
           } else {
             break;
