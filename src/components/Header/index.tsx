@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -28,6 +28,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
+  const openSubmenuRef = useRef<HTMLLIElement | null>(null);
   const handleSubmenu = (index: number) => {
     if (openIndex === index) {
       setOpenIndex(-1);
@@ -36,7 +37,41 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
     }
   };
 
+  // Close the open submenu when the reader clicks anywhere outside it
+  // (page content, logo, language switcher) or presses Escape.
+  useEffect(() => {
+    if (openIndex === -1) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      const target = event.target as Node | null;
+      if (target && !openSubmenuRef.current?.contains(target)) {
+        setOpenIndex(-1);
+      }
+    };
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpenIndex(-1);
+    };
+
+    document.addEventListener("pointerdown", handlePointerDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", handlePointerDown);
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [openIndex]);
+
+  // Navigating away closes it too — the header survives route changes.
+  useEffect(() => {
+    setOpenIndex(-1);
+  }, [pathUrl]);
+
   const siteName = dict.site.name.toUpperCase();
+
+  // Any navigation closes both the mobile nav and an open submenu.
+  const closeMenus = () => {
+    setNavbarOpen(false);
+    setOpenIndex(-1);
+  };
 
   return (
     <>
@@ -67,7 +102,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                   menuItem.path ? (
                     <li key={index} className="relative">
                       <Link
-                        onClick={navbarToggleHandler}
+                        onClick={closeMenus}
                         scroll={false}
                         href={localizeHref(menuItem.path, locale)}
                         className={`flex items-center py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors lg:py-0 hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 ${
@@ -80,7 +115,11 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                       </Link>
                     </li>
                   ) : (
-                    <li className="group relative" key={index}>
+                    <li
+                      className="group relative"
+                      key={index}
+                      ref={openIndex === index ? openSubmenuRef : null}
+                    >
                       <button
                         onClick={() => handleSubmenu(index)}
                         aria-expanded={openIndex === index}
@@ -116,7 +155,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                                   ? localizeHref(submenuItem.path, locale)
                                   : "#"
                               }
-                              onClick={navbarToggleHandler}
+                              onClick={closeMenus}
                               className={`block px-4 py-2.5 text-sm transition-colors ${
                                 currentPath === submenuItem.path
                                   ? "text-ink"
@@ -135,7 +174,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                                         ? localizeHref(nested.path, locale)
                                         : "#"
                                     }
-                                    onClick={navbarToggleHandler}
+                                    onClick={closeMenus}
                                     className={`block px-4 py-2 text-[13px] transition-colors ${
                                       currentPath === nested.path
                                         ? "text-ink"

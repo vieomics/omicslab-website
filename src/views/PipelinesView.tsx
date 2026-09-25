@@ -33,7 +33,14 @@ export default function PipelinesView({
       <section className="section-pad">
         <div className="page-width">
           <div className="rule-accent max-w-[900px]">
-            <p className="text-ink text-base leading-relaxed">{t.intro}</p>
+            {t.intro.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-ink text-base leading-relaxed first:mt-0 mt-5"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>
@@ -41,28 +48,14 @@ export default function PipelinesView({
       <section className="section-pad rule-top">
         <div className="page-width">
           <h2 className="display-md text-ink">{t.available.title}</h2>
-          <p className="text-muted mt-5 max-w-[820px] text-base leading-relaxed">
-            {t.available.paragraph}
-          </p>
 
           <div className="border-line bg-line mt-10 grid gap-px border md:grid-cols-2 lg:grid-cols-3">
             {t.available.categories.map((category) => (
               <div key={category.title} className="bg-paper-light p-8">
                 <h3 className="display-md text-ink mb-5">{category.title}</h3>
-                <ul>
-                  {category.items.map((item) => (
-                    <li
-                      key={item}
-                      className="border-line text-muted flex items-baseline gap-3 border-b py-3 text-sm leading-relaxed last:border-b-0"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className="bg-ink inline-block h-[6px] w-[6px] shrink-0"
-                      />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                <p className="text-muted text-sm leading-relaxed">
+                  {category.paragraph}
+                </p>
               </div>
             ))}
           </div>

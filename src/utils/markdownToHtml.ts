@@ -4,6 +4,7 @@ import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
+import rehypeHighlight from "rehype-highlight";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
 
@@ -66,6 +67,11 @@ const processor = (unified() as any)
   })
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeSlug)
+  // Colour the fenced blocks (`language-bash` and friends). Only tagged
+  // blocks are highlighted — detection stays off so terminal output keeps
+  // its literal text. csv/groovy are not in highlight.js' common set and
+  // are listed as plain text to avoid a missing-language notice per block.
+  .use(rehypeHighlight, { plainText: ["csv", "groovy"] })
   .use(rehypeCopyButton)
   .use(rehypeStringify, { allowDangerousHtml: true });
 

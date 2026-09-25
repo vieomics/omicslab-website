@@ -8,7 +8,7 @@ const dict = getDictionary("en");
 
 export const metadata: Metadata = pageMetadata({
   locale: "en",
-  path: "/solutions/pipelines-softwares",
+  path: "/solutions/custom-solutions",
   title: dict.solutions.pipelines.metadataTitle,
   description: dict.solutions.pipelines.metadataDescription,
 });

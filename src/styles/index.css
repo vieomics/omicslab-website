@@ -153,17 +153,43 @@
     text-transform: uppercase;
   }
 
+  /* Blog post titles: the display voice without the hero scale. */
+  .display-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4.4vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  /* Blog card titles: smaller than display-md, still a heading. */
+  .display-sm {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 1.9vw, 26px);
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    /* Headings inherit text-wrap: balance, which shortens the first line
+       to even the two out and reads as padding on the right. Cards fill
+       the available width instead. */
+    text-wrap: pretty;
+  }
+
   /*
     Vietnamese uppercase stacks diacritics above and below the cap height
     (e.g. Ầ rises ~1.01em, Ụ drops ~0.26em), so the English editorial
     leading would overlap consecutive lines. Loosen it for vi only.
   */
   :lang(vi) .display-xl,
-  :lang(vi) .display-lg {
+  :lang(vi) .display-lg,
+  :lang(vi) .display-title {
     line-height: 1.26;
   }
 
-  :lang(vi) .display-md {
+  :lang(vi) .display-md,
+  :lang(vi) .display-sm {
     line-height: 1.2;
   }
 
@@ -501,4 +527,101 @@
 .blog-details .admonition-title {
   margin-bottom: 8px;
   font-weight: 700;
+}
+
+/*
+  Policy documents — long-form body copy on paper.
+*/
+.legal-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+}
+
+.legal-body p {
+  margin-bottom: 1.25rem;
+}
+
+.legal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mini heading that groups the paragraphs that follow it. */
+.legal-body p.legal-label {
+  margin-bottom: 0.75rem;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.legal-body strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.legal-body a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+  text-decoration-color: var(--color-ink);
+}
+
+.legal-body ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+  list-style: disc;
+}
+
+.legal-body li + li {
+  margin-top: 0.65rem;
+}
+
+.legal-body ul ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.35rem;
+  list-style: circle;
+}
+
+.legal-body ul ul ul {
+  list-style: square;
+}
+
+:lang(vi) .legal-body {
+  line-height: 1.9;
+}
+
+.legal-table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.legal-table th {
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper-light);
+  padding: 12px 16px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.legal-table td {
+  border: 1px solid var(--color-line);
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.legal-table tr:nth-child(even) {
+  background-color: rgb(0 0 0 / 0.02);
 }
