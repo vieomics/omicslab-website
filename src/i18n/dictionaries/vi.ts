@@ -125,10 +125,7 @@ export const vi: Dictionary = {
     contact: "Liên hệ",
     solutions: "Giải pháp",
     dataPlatform: "Nền tảng Omicslab",
-    pipelinesSoftwares: "Quy trình & Phần mềm",
-    multiomicsPipeline: "Quy trình đa omics",
-    runPipeline: "Chạy quy trình",
-    software: "Phần mềm",
+    pipelinesSoftwares: "Giải pháp tùy chỉnh",
     blog: "Blog",
     docs: "Tài liệu",
     mobileMenu: "Menu di động",
@@ -350,7 +347,7 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
+        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab và Giải pháp tùy chỉnh.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
@@ -519,74 +516,53 @@ export const vi: Dictionary = {
       },
     },
     pipelines: {
-      metadataTitle: "Quy trình & Phần mềm",
+      metadataTitle: "Giải pháp tùy chỉnh",
       metadataDescription:
-        "Quy trình đa omics và các gói phần mềm phục vụ phân tích.",
-      title: "Quy trình & Phần mềm",
+        "Dịch vụ tin sinh học và nền tảng theo yêu cầu: xây dựng HPC và tích hợp với nền tảng, triển khai nền tảng riêng, phát triển và tích hợp quy trình.",
+      title: "Giải pháp tùy chỉnh",
       subtitle:
-        "Thực thi các quy trình phân tích đa omics từ dữ liệu thô đến khám phá sẵn sàng sử dụng và phân tích AI/ML",
+        "Bạn nêu yêu cầu cụ thể, chúng tôi xây dựng: cụm HPC tích hợp với nền tảng, bản triển khai riêng cho đội của bạn, và các quy trình được thiết kế quanh dữ liệu của bạn.",
       intro:
-        "Pipelines & Software cung cấp các quy trình Nextflow sẵn sàng sử dụng cho phân tích đa omics và các gói mã nguồn mở cho phân tích tùy chỉnh.",
-      searchPlaceholder: "Tìm kiếm quy trình...",
+        "Giải pháp tùy chỉnh là dịch vụ dành cho các yêu cầu cụ thể về tin sinh học và trên nền tảng Omicslab. Thay vì ép công việc vào một sản phẩm cố định, bạn mô tả kết quả cần đạt, chúng tôi cùng chốt phạm vi, xây dựng và bàn giao vận hành được.\n\nMột hợp tác có thể chỉ là một quy trình, hoặc cả một môi trường: cụm HPC được dựng và kết nối vào nền tảng, nền tảng được triển khai riêng cho người dùng của bạn, hoặc các quy trình mà phân tích của bạn phụ thuộc được phát triển và tích hợp với cái bạn đang chạy.",
+      searchPlaceholder: "Tìm kiếm giải pháp tùy chỉnh...",
       available: {
-        title: "Quy trình có sẵn",
+        title: "Những gì chúng tôi xây dựng cho bạn",
         paragraph:
-          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học toàn diện trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
+          "Mỗi yêu cầu đều bắt đầu từ hạ tầng sẵn có của bạn: cụm máy, lưu trữ, quy trình và đội ngũ. Ba dịch vụ bên dưới là những việc khách hàng nhờ nhất, và các hạng mục lân cận — phân tích tùy chỉnh, chuẩn hóa dữ liệu, tích hợp LIMS và plugin, đào tạo đội ngũ — cũng bắt đầu từ cùng cuộc trao đổi. Chúng tôi công bố một phần công việc này qua các bài viết kỹ thuật bên dưới.",
         categories: [
           {
-            title: "Hệ gen",
+            title: "Xây dựng HPC & tích hợp nền tảng",
             items: [
-              "Phát hiện biến thể dòng mầm từ short-read",
-              "Phát hiện biến thể soma từ short-read",
-              "Phát hiện biến thể từ long-read",
+              "Thiết kế và dựng cụm HPC Slurm, tại chỗ hoặc trên đám mây",
+              "Đăng ký cụm của bạn với nền tảng qua SDK",
+              "Kết nối lưu trữ tương thích S3 và dữ liệu dự án dùng chung",
+              "Bàn giao kèm tự động hóa Ansible, tài liệu và đào tạo",
             ],
           },
           {
-            title: "Methyl hóa",
+            title: "Triển khai nền tảng riêng",
             items: [
-              "Phân tích giải trình tự bisulfite",
-              "Phát hiện methyl hóa dựa trên TAPS",
-              "Phân tích M-bias",
+              "Triển khai nền tảng để tổ chức của bạn tự dùng thay vì dùng chung",
+              "Tổ chức, người dùng và dữ liệu của bạn — không chia sẻ với ai",
+              "Tại chỗ hoặc đám mây của bạn, hỗ trợ môi trường air-gapped",
+              "Nâng cấp, bảo trì và hỗ trợ do chúng tôi phụ trách",
             ],
           },
           {
-            title: "Phiên mã",
+            title: "Phát triển & tích hợp quy trình",
             items: [
-              "Phân tích biểu hiện khác biệt RNA-seq",
-              "Phiên mã đơn bào",
-              "Phiên mã không gian",
-            ],
-          },
-          {
-            title: "Protein",
-            items: [
-              "Nhận diện protein",
-              "Định lượng",
-              "Phân tích PTM",
-            ],
-          },
-          {
-            title: "Chuyển hóa",
-            items: [
-              "Phân tích dấu ấn chuyển hóa",
-              "Phân tích con đường",
-              "Định hướng & không định hướng",
-            ],
-          },
-          {
-            title: "Metagenomics",
-            items: [
-              "Giải trình tự amplicon 16S",
-              "Whole-genome shotgun",
-              "Lắp ráp de novo",
+              "Dựng quy trình theo yêu cầu cụ thể: Nextflow, Snakemake, bash",
+              "Tư vấn cách tích hợp các quy trình bạn đang chạy",
+              "Schema tham số, quy ước nf-core và kiểm thử",
+              "Chuyển các workflow hiện có lên nền tảng",
             ],
           },
         ],
       },
       software: {
-        title: "Giải pháp phần mềm có khả năng mở rộng",
+        title: "Các khối xây dựng mã nguồn mở",
         paragraph:
-          "Chúng tôi cung cấp các gói phần mềm mã nguồn mở cho chuẩn hóa và phân tích dữ liệu đa omics ở quy mô lớn.",
+          "Công việc tùy chỉnh ở trên được xây trên những công cụ chúng tôi duy trì công khai. Đó là điểm khởi đầu của hầu hết hợp tác thay vì làm từ đầu, và chúng vẫn thuộc về đội của bạn sau bàn giao.",
         packages: [
           {
             name: "omicslab-kit",
