@@ -111,7 +111,7 @@ const topup = {
 export const en = {
   site: {
     name: "Omicslab",
-    tagline: "Omics Technology",
+    tagline: "OMICS x AI",
     legalName: "VIEOMICS COMPANY LIMITED",
     address: "No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam",
     taxLabel: "Tax ID",
@@ -124,12 +124,8 @@ export const en = {
     about: "About",
     contact: "Contact",
     solutions: "Solutions",
-    infrastructure: "Infrastructure as a Service",
     dataPlatform: "Omicslab Platform",
-    pipelinesSoftwares: "Pipelines & Softwares",
-    multiomicsPipeline: "Multiomics Pipeline",
-    runPipeline: "Run Pipeline",
-    software: "Software",
+    pipelinesSoftwares: "Custom Solutions",
     blog: "Blog",
     docs: "Docs",
     mobileMenu: "Mobile Menu",
@@ -159,7 +155,7 @@ export const en = {
     readInOtherLanguage: "Read in Vietnamese",
   },
   authors: {
-    river: { title: "Founder @ Omicslab" },
+    river: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
@@ -328,8 +324,8 @@ export const en = {
       title: "Meet Our Team",
       members: [
         {
-          designation: "Founder",
-          bio: "Bioinformatics professional with hands-on experience since 2019, specializing in end-to-end solutions across computational biology, high-throughput sequencing (NGS) analysis, and scalable infrastructure. His work spans the full stack of bioinformatics systems, from designing reproducible pipelines with Nextflow, Snakemake, and Galaxy to deploying production-grade platforms with CI/CD integration for automation and scalability.\n\nAs the pace of innovation in life sciences accelerates, he founded OmicsLab with a clear vision: to build a strong, foundational ecosystem that supports the entire omics journey—from core infrastructure and data generation to advanced downstream analysis and AI-driven applications. This includes developing robust HPC and cloud-based environments, managing Slurm-based compute systems, and architecting storage and workflow solutions capable of handling large-scale genomics and multi-omics data.\n\nWith a solid background in genomics, epigenetics, transcriptomics, and machine learning, he focuses on transforming complex biological data into actionable insights. He is committed to building systems that are not only scalable and reproducible, but also accessible and impactful for both research and industry. Through OmicsLab, his goal is to bridge the gap between infrastructure and innovation, enabling the next generation of bioinformatics and precision medicine solutions.",
+          designation:
+            "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
     },
@@ -351,7 +347,7 @@ export const en = {
       title: "Solutions",
       subtitle: "Bioinformatics solutions for multiomics research",
       paragraph:
-        "Use the navigation menu to access: Omicslab Platform, Service Platform, or Software Platform.",
+        "Use the navigation menu to access: Omicslab Platform and Custom Solutions.",
       metadataDescription:
         "Bioinformatics solutions for multiomics analysis, data management, and pipeline execution.",
     },
@@ -518,225 +514,41 @@ export const en = {
         ],
         videoTitle: "Omicslab Platform - Bioinformatics analysis platform",
       },
-      useCases: {
-        title: "Use Cases",
-        items: [
-          {
-            title: "Non-Interactive Analysis",
-            paragraph:
-              "Omicslab allows effortless integration and execution of community-developed workflows as well as custom pipelines with easy migration from existing tools. It supports all nf-core pipelines (https://nf-co.re/pipelines/) or required to add a minor configuration for non nf-core nextflow, snakemake and bash script pipelines",
-          },
-          {
-            title: "Interactive Web Apps",
-            paragraph:
-              "Omicslab provides a secure way to publish interactive web applications from HPC environments to the public network, with authentication and centralized system control. It includes a ready-to-use Studio stack—RStudio Server, JupyterLab, and VS Code Server—and also supports access to other web-based applications such as custom dashboards.",
-          },
-          {
-            title: "Collaborative Research",
-            paragraph:
-              "Support independent and reproducible analyses across computing resources (HPC, Cloud), with data stored in the cloud and organization-specific computing resources.",
-          },
-        ],
-      },
-    },
-    infrastructure: {
-      metadataTitle: "Infrastructure as a Service",
-      metadataDescription:
-        "Setup infrastructure to run Nextflow pipelines on-premises HPC or cloud (AWS, GCP).",
-      title: "Infrastructure as a Service",
-      subtitle:
-        "Setup infrastructure to run Nextflow pipelines on-premises or in the cloud.",
-      intro:
-        "Run Nextflow pipelines at scale on your preferred infrastructure. We provide automated deployment for on-premises HPC clusters (Slurm) or cloud environments (AWS, GCP). Focus on your research while we handle the infrastructure.",
-      searchPlaceholder: "Search infrastructure blogs...",
-      available: {
-        title: "Available Infrastructure",
-        items: [
-          {
-            title: "On-Premises HPC",
-            paragraph:
-              "Deploy Nextflow on your local HPC cluster with Slurm, PBS, or LSF scheduler.",
-          },
-          {
-            title: "AWS Cloud",
-            paragraph:
-              "Run Nextflow on AWS Batch with EC2, Fargate, or Spot instances.",
-          },
-          {
-            title: "GCP Cloud",
-            paragraph:
-              "Deploy on Google Cloud Batch with Compute Engine or preemptible VMs.",
-          },
-        ],
-      },
-      onPrem: {
-        title: "On-Premises HPC",
-        paragraph:
-          "Deploy a complete Slurm HPC cluster on your local infrastructure. We provide the setup and configuration, you provide the hardware.",
-        plans: [
-          {
-            badge: "Setup",
-            title: "Mini-HPC",
-            description:
-              "Small cluster for individual researchers or small labs",
-            price: "$250",
-            priceSuffix: " one-time",
-            configTitle: "Configuration:",
-            config: [
-              "1 Controller/Login Node",
-              "1 Compute Node",
-              "Slurm Scheduler",
-              "NFS Shared Storage",
-              "Basic Monitoring",
-            ],
-            includesTitle: "Includes:",
-            includes: [
-              "Ansible automation setup",
-              "Slurm configuration",
-              "Nextflow integration",
-              "Basic training session",
-              "30-day support",
-            ],
-            note: "* Hardware not included.",
-          },
-          {
-            badge: "Service",
-            title: "HPC Maintenance",
-            description: "Ongoing maintenance service for any HPC cluster",
-            price: "$100",
-            priceSuffix: "/month",
-            configTitle: "",
-            config: [] as string[],
-            includesTitle: "What's Included:",
-            includes: [
-              "System updates and patches",
-              "Slurm version upgrades",
-              "Software package updates",
-              "24/7 monitoring",
-              "Priority support",
-            ],
-            note: "* Works for any HPC cluster, including ones not set up by us.",
-          },
-          {
-            badge: "Setup",
-            title: "Multi-Node HPC",
-            description:
-              "Scalable cluster for research groups and production workloads",
-            price: "Contact",
-            priceSuffix: "",
-            configTitle: "Configuration:",
-            config: [
-              "Multiple Controller Nodes (HA)",
-              "Multiple Compute Nodes",
-              "GPU Support (Optional)",
-              "High-Performance Storage",
-              "Advanced Monitoring",
-            ],
-            includesTitle: "Includes:",
-            includes: [
-              "Custom Ansible automation",
-              "High availability setup",
-              "LDAP/Active Directory | NIS",
-              "Full training sessions",
-              "1-year support",
-            ],
-            note: "* Requirements vary.",
-          },
-        ],
-      },
-      cloudFeatures: {
-        title: "Cloud Infrastructure Features",
-        items: [
-          {
-            title: "Auto-Scaling",
-            paragraph:
-              "Automatically scale compute resources based on workload.",
-          },
-          {
-            title: "Cost Optimization",
-            paragraph:
-              "Use spot/preemptible instances for batch jobs. Save up to 90%.",
-          },
-          {
-            title: "Job Monitoring",
-            paragraph: "Real-time monitoring of pipeline execution.",
-          },
-          {
-            title: "Storage Integration",
-            paragraph: "Connect to S3, GCS, or local NFS storage.",
-          },
-        ],
-      },
     },
     pipelines: {
-      metadataTitle: "Pipelines & Softwares",
+      metadataTitle: "Custom Solutions",
       metadataDescription:
-        "Multiomics pipelines and software packages for analysis.",
-      title: "Pipelines & Softwares",
+        "Custom bioinformatics and platform services: HPC built and integrated with the platform, private platform deployments, and pipeline development and integration.",
+      title: "Custom Solutions",
       subtitle:
-        "Execute multiomics analysis pipelines from raw data to read-to-use exploration and AI/ML analysis",
+        "Custom Omicslab solutions that fit exactly what your specific bioinformatics work requires.",
       intro:
-        "Pipelines & Software provides ready-to-use Nextflow pipelines for multi-omics analysis and open-source packages for custom analysis.",
-      searchPlaceholder: "Search pipelines...",
+        "Describe the problem and the goal — we design, develop and deliver the complete system together with you.",
+      searchPlaceholder: "Search custom solutions...",
       available: {
-        title: "Available Pipelines",
-        paragraph:
-          "At OmicsLab, we deliver end-to-end bioinformatics solutions spanning infrastructure, data platforms, pipelines, and software for comprehensive multi-omics data management and analysis. Our services are designed to support projects at any scale, from individual studies to biobank-level cohorts. Our solution will be published partially via technical blog posts as below.",
+        title: "Choose what you need:",
         categories: [
           {
-            title: "Genomics",
-            items: [
-              "Short-read germline variant calling",
-              "Short-read somatic variant calling",
-              "Long-read variant calling",
-            ],
+            title: "Pipeline development",
+            paragraph:
+              "Programming and integration of new analysis tools into your existing system.",
           },
           {
-            title: "Methylation",
-            items: [
-              "Bisulfite sequencing analysis",
-              "TAPS-based methylation calling",
-              "M-bias analysis",
-            ],
+            title: "Infrastructure deployment & optimization",
+            paragraph:
+              "Build HPC clusters, configure S3 storage dedicated to omics data, or set up your own private cloud infrastructure.",
           },
           {
-            title: "Transcriptomics",
-            items: [
-              "RNA-seq differential expression",
-              "Single-cell transcriptomics",
-              "Spatial transcriptomics",
-            ],
-          },
-          {
-            title: "Proteomics",
-            items: [
-              "Protein identification",
-              "Quantification",
-              "PTM analysis",
-            ],
-          },
-          {
-            title: "Metabolomics",
-            items: [
-              "Metabolite profiling",
-              "Pathway analysis",
-              "Targeted & untargeted",
-            ],
-          },
-          {
-            title: "Metagenomics",
-            items: [
-              "16S amplicon sequencing",
-              "Whole-genome shotgun",
-              "De novo assembly",
-            ],
+            title: "Private platform",
+            paragraph:
+              "Deploy a standalone Omicslab instance dedicated to your own users.",
           },
         ],
       },
       software: {
-        title: "Scalable Software Solutions",
+        title: "Open-source building blocks",
         paragraph:
-          "We provide open-source software packages for multi-omics data harmonization and analysis at scale.",
+          "The custom work above is built on tools we maintain in the open. They are where most engagements start instead of starting from scratch, and they stay available to your team after handover.",
         packages: [
           {
             name: "omicslab-kit",

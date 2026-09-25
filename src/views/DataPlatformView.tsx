@@ -357,23 +357,6 @@ export default function DataPlatformView({
         </div>
       </section>
 
-      <section className="section-pad rule-top">
-        <div className="page-width">
-          <h2 className="display-md text-ink">{t.useCases.title}</h2>
-
-          <div className="border-line bg-line mt-10 grid gap-px border md:grid-cols-3">
-            {t.useCases.items.map((item) => (
-              <div key={item.title} className="bg-paper-light p-8">
-                <h3 className="display-md text-ink mb-4">{item.title}</h3>
-                <p className="text-muted text-sm leading-relaxed">
-                  {item.paragraph}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       <Contact dict={dict} fullHeight={false} />
     </div>
   );

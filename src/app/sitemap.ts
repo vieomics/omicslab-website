@@ -15,8 +15,7 @@ const staticPaths = [
   "/contact",
   "/solutions",
   "/solutions/data-platform",
-  "/solutions/infrastructure",
-  "/solutions/pipelines-softwares",
+  "/solutions/custom-solutions",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
