@@ -1,6 +1,7 @@
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
 import Providers from "@/app/providers";
+import CookieConsent from "@/components/CookieConsent";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -26,8 +27,9 @@ export default function SiteShell({
       <div className="isolate">
         <Header dict={dict} locale={locale} translatedSlugs={translatedSlugs} />
         {children}
-        <Footer dict={dict} />
+        <Footer dict={dict} locale={locale} />
         <ScrollToTop label={dict.common.scrollToTop} />
+        <CookieConsent dict={dict} />
       </div>
     </Providers>
   );

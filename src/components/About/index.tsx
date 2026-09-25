@@ -13,8 +13,6 @@ const About = ({ dict }: { dict: Dictionary }) => {
           </h2>
           <p className="mb-10 max-w-[540px] text-base leading-relaxed text-muted">
             {about.paragraph1}
-            <br /> <br />
-            {about.paragraph2}
           </p>
 
           <Link

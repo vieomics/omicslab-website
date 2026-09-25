@@ -5,6 +5,8 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
+import PlatformStrip from "@/components/PlatformStrip";
 import Services from "@/components/Services";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -19,8 +21,10 @@ export default function HomeView({ dict, locale, posts }: HomeViewProps) {
   return (
     <main>
       <ScrollUp />
-      <Hero dict={dict} locale={locale} />
-      <Services dict={dict} />
+      <Hero dict={dict} />
+      <Services dict={dict} locale={locale} />
+      <HowItWorks dict={dict} />
+      <PlatformStrip dict={dict} />
       <About dict={dict} />
       <CallToAction dict={dict} />
       <Faq dict={dict} />

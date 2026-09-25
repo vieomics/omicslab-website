@@ -53,7 +53,7 @@ export default function BlogPostView({
               <span className="eyebrow-line" />
               {formatDate(date, locale)}
             </span>
-            <h1 className="display-lg mt-6 mb-8 max-w-[1100px] text-ink">
+            <h1 className="display-title mt-6 mb-8 max-w-[1100px] text-ink">
               {title}
             </h1>
             <div className="flex flex-wrap items-center gap-x-8 gap-y-4 border-t border-line pt-6">
@@ -79,7 +79,7 @@ export default function BlogPostView({
                 </Link>
               )}
             </div>
-            <div className="mt-10 border border-line">
+            <div className="mt-10 border border-line bg-white">
               <Image
                 src={coverImage}
                 alt="image"
@@ -92,8 +92,10 @@ export default function BlogPostView({
 
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
             <div className="min-w-0 lg:col-span-9">
-              <div className="blog-details xl:pr-10">
-                <div dangerouslySetInnerHTML={{ __html: content }}></div>
+              <div className="border border-line bg-paper-light p-6 sm:p-10">
+                <div className="blog-details xl:pr-6">
+                  <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                </div>
               </div>
             </div>
             <aside className="min-w-0 lg:col-span-3">
