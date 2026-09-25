@@ -1,4 +1,5 @@
 import { TextSegment } from "../types";
+import { policiesEn } from "./policies/en";
 
 const subscription = {
   subtitle: "Subscription",
@@ -96,7 +97,7 @@ const topup = {
     ],
   ] as TextSegment[][],
   storage: {
-    title: "S3 Storage (Marketplace)",
+    title: "Object Storage (Marketplace)",
     specs: [
       { label: "Storage quota", value: "Unlimited" },
       { label: "Download speed", value: "10 Gbps" },
@@ -136,7 +137,12 @@ export const en = {
     copyright: "© 2026 Omicslab. All rights reserved.",
     platform: "Omicslab platform",
     productOf: "A product of",
+    legalLabel: "Legal",
+    privacy: "Privacy Policy",
+    terms: "Terms of Service",
+    security: "Security & Compliance",
   },
+  policies: policiesEn,
   common: {
     home: "Home",
     all: "All",
@@ -238,7 +244,7 @@ export const en = {
         { title: "GreenNode", detail: "Greennode (VNG Cloud) - Ho Chi Minh City" },
         { title: "Slurm HPC", detail: "Your own cluster, connected via SDK" },
         { title: "Nextflow", detail: "Mainly Nextflow & nf-core, not limited — extend easily with bash, Snakemake, etc." },
-        { title: "Storage", detail: "Bought by quota, or bring your own" },
+        { title: "Storage", detail: "S3-compatible object storage — bought by quota, or bring your own" },
         { title: "Studio", detail: "Galaxy, Streamlit, RStudio, etc. — or any Docker web app" },
       ],
     },
@@ -294,7 +300,7 @@ export const en = {
         {
           question: "Where is my data stored?",
           answer:
-            "In the storage you choose — your own bucket, or one hosted in Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
+            "In the storage you choose. Storage is S3-compatible object storage, so it can be CloudFly/VNG, your own bucket, or Amazon S3 — the AWS Hanoi Local Zone has been generally available since June 2026, letting S3 data be stored inside Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
         },
         {
           question: "How much does it cost?",
@@ -410,7 +416,7 @@ export const en = {
                 subtotal: "1,000,000 VND",
               },
               {
-                item: "Storage (S3)",
+                item: "Storage (object storage)",
                 unitPrice: "500 VND/GB",
                 qty: "~50 GB",
                 subtotal: "~25,000 VND",
@@ -454,7 +460,7 @@ export const en = {
                 subtotal: "1,000,000 VND",
               },
               {
-                item: "Storage (S3)",
+                item: "Storage (object storage)",
                 unitPrice: "500 VND/GB",
                 qty: "~10 GB",
                 subtotal: "~5,000 VND",
@@ -493,7 +499,7 @@ export const en = {
           {
             title: "Data Storage",
             paragraph:
-              "Secure, scalable storage for datasets. Organize data by project, type, and analysis. Raw or processed data can be stored and shared using role-based access control (RBAC), where the data source can be registered with the S3 credential service.",
+              "Secure, scalable storage for datasets. Organize data by project, type, and analysis. Raw or processed data can be stored and shared using role-based access control (RBAC), where the data source can be registered with the object-storage credential service.",
           },
         ],
       },
@@ -536,7 +542,7 @@ export const en = {
           {
             title: "Infrastructure deployment & optimization",
             paragraph:
-              "Build HPC clusters, configure S3 storage dedicated to omics data, or set up your own private cloud infrastructure.",
+              "Build HPC clusters, configure S3-compatible object storage dedicated to omics data, or set up your own private cloud infrastructure.",
           },
           {
             title: "Private platform",
@@ -609,6 +615,31 @@ export const en = {
       title: "Contact",
       description:
         "Get in touch with Omicslab for bioinformatics services and solutions.",
+    },
+    privacy: {
+      title: "Personal Data Protection & Privacy Policy",
+      description:
+        "How Omicslab collects, uses, stores and protects personal data under Vietnamese law and international security standards.",
+    },
+    terms: {
+      title: "Terms of Service",
+      description:
+        "The terms that govern your use of the Omicslab Platform.",
+    },
+    security: {
+      title: "Security & Compliance",
+      description:
+        "Two deployment models, the security controls we apply, and how responsibility is shared between Omicslab and the customer.",
+    },
+    securityCompliance: {
+      title: "Compliance",
+      description:
+        "Where the Omicslab Platform is hosted, the law it follows and our compliance posture in Vietnam.",
+    },
+    securityResponsibility: {
+      title: "Responsibility",
+      description:
+        "Who owns each security control in each Omicslab deployment model.",
     },
   },
 };
