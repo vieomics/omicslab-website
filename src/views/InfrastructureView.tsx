@@ -1,6 +1,6 @@
 import BlogListWithFilter from "@/components/Blog/BlogListWithFilter";
 import Contact from "@/components/Contact";
-import OfferList from "@/components/Pricing/OfferList";
+import OfferList from "@/components/Common/OfferList";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
 import { toBlogPosts } from "@/utils/blogPosts";
@@ -143,7 +143,14 @@ export default function InfrastructureView({
       <section className="section-pad">
         <div className="page-width">
           <div className="rule-accent max-w-[900px]">
-            <p className="text-ink text-base leading-relaxed">{t.intro}</p>
+            {t.intro.split("\n\n").map((paragraph, i) => (
+              <p
+                key={i}
+                className="text-ink text-base leading-relaxed first:mt-0 mt-5"
+              >
+                {paragraph}
+              </p>
+            ))}
           </div>
         </div>
       </section>

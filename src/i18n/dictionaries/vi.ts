@@ -1,6 +1,112 @@
 import { TextSegment } from "../types";
 import type { Dictionary } from "./en";
 
+const subscription = {
+  subtitle: "Gói sử dụng",
+  title: "Ba gói, tùy quy mô của bạn",
+  paragraph:
+    "Giới hạn — workspace, thành viên và số job chạy đồng thời — tăng theo gói, trong khi tính toán và lưu trữ vẫn tính theo mức sử dụng.",
+  tiers: [
+    {
+      name: "Lite",
+      highlight: "Cá nhân & nhóm nhỏ",
+      price: "1.000.000 VND",
+      period: "/tháng",
+      features: [
+        "Tối đa 2 workspace",
+        "1 thành viên tổ chức, 3 thành viên mỗi workspace",
+        "5 job Studio và 5 job phân tích chạy đồng thời",
+        "LIMS đi kèm theo mặc định",
+        "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
+        "Lưu trữ tính theo dung lượng dùng",
+        "Đầy đủ tính năng của nền tảng",
+      ],
+      cta: "Đăng ký gói Lite",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Pro",
+      highlight: "Phổ biến nhất",
+      price: "10.000.000 VND",
+      period: "/tháng",
+      features: [
+        "Tối đa 20 workspace",
+        "10 thành viên tổ chức, 30 thành viên mỗi workspace",
+        "50 job Studio và 50 job phân tích chạy đồng thời",
+        "LIMS đi kèm theo mặc định",
+        "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
+        "Lưu trữ tính theo dung lượng dùng",
+        "Đầy đủ tính năng của nền tảng",
+      ],
+      cta: "Đăng ký gói Pro",
+      ctaHref: "https://platform.omicslab.io",
+    },
+    {
+      name: "Business",
+      highlight: "Tùy biến theo yêu cầu",
+      price: "Tùy chỉnh",
+      period: "theo yêu cầu",
+      features: [
+        "Giới hạn tùy chỉnh theo quy mô doanh nghiệp",
+        "Triển khai tại chỗ hoặc môi trường riêng (air-gapped)",
+        "Tích hợp LIMS và plugin theo yêu cầu",
+        "Hỗ trợ ưu tiên — hợp đồng và SLA thương lượng riêng",
+        "Báo giá riêng cho từng dự án",
+      ],
+      cta: "Liên hệ tư vấn",
+      ctaHref: "/contact",
+    },
+  ],
+};
+
+const topup = {
+  subtitle: "Nạp tiền (top-up)",
+  title: "Trả phí cho những gì bạn dùng",
+  paragraph:
+    "Nạp vào ví của tổ chức và dùng cho tính toán, lưu trữ cùng phí nền tảng.",
+  lines: [
+    [
+      { strong: "Nạp tiền:" },
+      {
+        text: " Nạp vào ví tổ chức qua SePay/VietQR. Số dư dùng cho tính toán, lưu trữ và phí nền tảng — hóa đơn nạp tiền chịu VAT 10%, gói sử dụng 0%.",
+      },
+    ],
+    [
+      { strong: "Lưu trữ:" },
+      { text: " 500 VND/GB mỗi tháng, trừ hàng tháng vào số dư tổ chức." },
+    ],
+    [
+      { strong: "Điện toán:" },
+      {
+        text: " 20.000 VND/giờ cho cấu hình 16 CPU / 32 GB RAM trên CloudFly, GreenNode hoặc cụm Slurm của bạn — mức giá theo cấu hình thực tế của từng nguồn.",
+      },
+    ],
+    [
+      { strong: "Phí nền tảng:" },
+      {
+        text: " 1.000 VND/giờ trong lúc job chạy — áp dụng cả với hạ tầng của riêng bạn, chỉ dùng để vận hành và bảo trì nền tảng.",
+      },
+    ],
+    [
+      { strong: "Quy trình:" },
+      {
+        text: " Quy trình nf-core miễn phí; quy trình OmicsLab được điều chỉnh theo yêu cầu; lắp ráp metagenomics 100.000 VND/mẫu.",
+      },
+    ],
+  ] as TextSegment[][],
+  storage: {
+    title: "Lưu trữ S3 (Marketplace)",
+    specs: [
+      { label: "Dung lượng lưu trữ", value: "Không giới hạn" },
+      { label: "Tốc độ tải xuống", value: "10 Gbps" },
+      { label: "HTTP GET/HEAD", value: "5000 req/s" },
+      { label: "Chuyển dữ liệu", value: "Không giới hạn" },
+      { label: "Cách tính phí", value: "Pay as you go" },
+      { label: "Giá lưu trữ", value: "500 VND/GB" },
+    ],
+  },
+};
+
 export const vi: Dictionary = {
   site: {
     name: "Omicslab",
@@ -19,7 +125,7 @@ export const vi: Dictionary = {
     contact: "Liên hệ",
     solutions: "Giải pháp",
     infrastructure: "Hạ tầng dưới dạng dịch vụ",
-    dataPlatform: "Nền tảng dữ liệu",
+    dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Quy trình & Phần mềm",
     multiomicsPipeline: "Quy trình đa omics",
     runPipeline: "Chạy quy trình",
@@ -57,80 +163,147 @@ export const vi: Dictionary = {
   },
   home: {
     hero: {
-      title: "Dịch vụ Tin sinh học Đổi mới & Công cụ Mã nguồn mở",
+      title: "Dịch vụ tin sinh học dry-lab toàn diện",
       paragraph:
-        "Omicslab đồng hành cùng các nhà nghiên cứu với những giải pháp tin sinh học có khả năng mở rộng. Từ các quy trình phát hiện biến thể tiên tiến đến công cụ phân tích đa omics hiện đại, chúng tôi cung cấp quy trình và phần mềm sẵn sàng vận hành cho phân tích dữ liệu sinh học phức tạp.",
-      contactCta: "Liên hệ hợp tác",
-      githubCta: "Xem trên GitHub",
+        "Một nền tảng cho toàn bộ dry-lab của bạn: quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trong cùng một nơi. Omicslab chạy trên mọi cloud, tối ưu cho các nhà cung cấp Việt Nam đã được tích hợp sẵn như CloudFly và GreenNode với dịch vụ PAYG. Đồng thời hỗ trợ các cụm máy tính hiệu năng cao SLURM của bạn. Đã có hệ thống sẵn, chúng tôi hỗ trợ tích hợp thay vì thay thế hoàn toàn hệ thống hiện có, giúp mở rộng khả năng tính toán của bạn khi cần.",
+      primaryCta: "Bắt đầu trên Omicslab",
+      secondaryCta: "Đọc tài liệu",
     },
     services: {
-      subtitle: "Dịch vụ của chúng tôi",
-      title: "Giải pháp Tin sinh học Toàn diện",
+      subtitle: "Nền tảng & Dịch vụ",
+      title: "Toàn bộ dry-lab trên một nền tảng",
       paragraph:
-        "Từ các quy trình phát hiện biến thể chuẩn vận hành đến nền tảng dữ liệu hiện đại, chúng tôi cung cấp đầy đủ công cụ và quy trình cho nhu cầu nghiên cứu tin sinh học của bạn.",
+        "Quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán trên một nền tảng tin sinh học, với phương án triển khai phù hợp hạ tầng hiện có và dịch vụ chuyên môn cho yêu cầu riêng.",
       items: [
         {
-          title: "Quy trình Tin sinh học",
+          title: "Quản lý người dùng, dữ liệu, công cụ và tính toán",
           paragraph:
-            "Các quy trình sẵn sàng vận hành phục vụ phân tích tin sinh học và xử lý dữ liệu toàn diện.",
+            "Giám sát toàn diện phân quyền và hoạt động của hệ thống phân tích. Người quản lý tạo tổ chức, không gian làm việc và quản trị người dùng, tài nguyên. Chuyên viên phân tích nhận tài nguyên, tự xây dựng công cụ hoặc dùng công cụ sẵn có (nf-core) để phân tích dữ liệu, trả kết quả và xem kết quả ngay trên nền tảng. Mọi thao tác với dữ liệu đều được ghi lại và kiểm tra, đảm bảo truy xuất và sử dụng dữ liệu an toàn.",
+          cta: "Mở nền tảng",
         },
         {
-          title: "Đa omics",
+          title: "Tích hợp hạ tầng của bạn",
           paragraph:
-            "Tích hợp và chuẩn hóa nâng cao các tập dữ liệu đa omics phức tạp để phân tích toàn diện ở quy mô lớn.",
+            "Tự vận hành nền tảng ngay tại chỗ, kết nối cụm HPC Slurm của riêng bạn và mang các quy trình hiện có vào với công sức tối thiểu. Dữ liệu được lưu trữ theo dung lượng — bạn chỉ trả phí cho gói lưu trữ đã chọn.",
+          cta: "Tài liệu triển khai",
         },
         {
-          title: "Hạ tầng HPC SLURM",
+          title: "Trả phí và chạy, trọn gói",
           paragraph:
-            "Cấu hình hạ tầng sẵn sàng vận hành để thiết lập và quản lý cụm máy tính hiệu năng cao.",
+            "Mọi thứ đã sẵn sàng: đăng nhập, chọn một quy trình nf-core như rnaseq hoặc sarek, thiết lập tham số và tài nguyên rồi bấm chạy — tính toán trên CloudFly hoặc GreenNode, lưu trữ, và kết quả trả về ngay trên nền tảng. Hệ thống tối ưu cho Nextflow và nf-core nhưng không giới hạn ở đó; bên cạnh Studio như RStudio, JupyterLab và VS Code, nền tảng còn chạy được mọi ứng dụng web triển khai bằng Docker.",
+          cta: "Đọc tài liệu",
         },
         {
-          title: "Nền tảng dữ liệu (chỉ dành cho khu vực Việt Nam)",
+          title: "Dịch vụ tin sinh học theo dự án",
           paragraph:
-            "Nền tảng dữ liệu tin sinh học toàn diện phục vụ tích hợp, phân tích và quản lý các tập dữ liệu phức tạp.",
+            "Bạn đã có cụm HPC Slurm và hệ thống lưu trữ tương thích S3, muốn mở rộng dịch vụ sản xuất mà không phải gỡ bỏ cụm hiện có — nền tảng tích hợp vào hạ tầng sẵn có, cho phép một phần cụm chuyển sang vai trò phát triển, phần còn lại mở rộng cho sản xuất. Bạn có thể triển khai quy trình NIPT: nền tảng giúp tải lên, lưu trữ dữ liệu, tạo mẫu kèm quản lý cohort và tự động kích hoạt các quy trình đã cấu hình sẵn ở quy mô lớn (qua tính năng mini LIMS). Kiến trúc plugin cho phép tích hợp toàn bộ chức năng LIMS khi cần xử lý dữ liệu nhạy cảm.",
+          cta: "Liên hệ với chúng tôi",
         },
       ],
     },
+    howItWorks: {
+      subtitle: "Cách hoạt động",
+      title: "Quy trình toàn diện trên nền tảng",
+      paragraph:
+        "Từ khi tạo tổ chức đến khi có kết quả — mọi bước diễn ra trên cùng một nền tảng.",
+      steps: [
+        {
+          title: "Tạo tổ chức",
+          paragraph:
+            "Thiết lập tổ chức, mời thành viên và kích hoạt giấy phép bằng cách thanh toán phí gói sử dụng.",
+        },
+        {
+          title: "Thêm hạ tầng và lưu trữ",
+          paragraph:
+            "Cloud và HPC đã được cấu hình sẵn, sẵn sàng để chạy — bạn chỉ cần chọn CloudFly, GreenNode hoặc một cụm Slurm và trả phí theo mức sử dụng, không cần cấu hình gì thêm. Đã có máy tính và lưu trữ tương thích S3 của riêng bạn? Chỉ cần kết nối.",
+        },
+        {
+          title: "Chọn dữ liệu đầu vào",
+          paragraph:
+            "Chọn các tệp cần phân tích ngay trên trình duyệt dữ liệu — tải lên hoặc lấy từ hạ tầng sẵn có của bạn.",
+        },
+        {
+          title: "Chọn quy trình và chạy",
+          paragraph:
+            "Chạy Nextflow và nf-core, hoặc bất kỳ quy trình nào có schema được cấu hình sẵn (bash, Snakemake và nhiều hơn nữa) — tham số, tài nguyên, log và kết quả đều được quản lý toàn diện trên nền tảng.",
+        },
+      ],
+      noteLabel: "Lưu ý",
+      note:
+        "Dùng hạ tầng của riêng bạn? Nền tảng vẫn tính một khoản phí nhỏ theo giờ khi chạy job — chỉ dùng để vận hành và bảo trì nền tảng.",
+    },
+    platforms: {
+      subtitle: "Tương thích với",
+      title: "Cloud, quy trình và công cụ bạn đang dùng",
+      paragraph:
+        "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
+      items: [
+        { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
+        { title: "GreenNode", detail: "Greennode (VNG Cloud) - TP.HCM" },
+        { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
+        { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv" },
+        { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
+        { title: "Studio", detail: "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker" },
+      ],
+    },
     about: {
-      title: "Nâng tầm Nghiên cứu Tin sinh học",
+      title: "Dịch vụ tin sinh học dry-lab toàn diện, phát triển tại Việt Nam",
       paragraph1:
-        "Omicslab là một sáng kiến mã nguồn mở thúc đẩy đổi mới trong nghiên cứu tin sinh học và đa omics. Chúng tôi xây dựng các công cụ, quy trình và thư viện có khả năng mở rộng, hỗ trợ những thiết kế thí nghiệm phức tạp trong nhiều ứng dụng tin sinh học.",
-      paragraph2:
-        "Sứ mệnh của chúng tôi là trao cho các nhà nghiên cứu những giải pháp hiện đại, hiệu năng cao và dễ tiếp cận cho phân tích dữ liệu và đa omics tích hợp. Từ quy trình phát hiện biến thể sẵn sàng vận hành đến nền tảng dữ liệu tiên tiến, chúng tôi cung cấp mọi thứ bạn cần cho nghiên cứu tin sinh học chuyên sâu.",
+        "Omicslab được phát triển bởi Công ty TNHH Vieomics. Chúng tôi cung cấp dịch vụ dry-lab toàn diện: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng các dịch vụ chuyên môn xoay quanh nó.",
       cta: "Khám phá trên GitHub",
       badge: {
         line1: "Omics",
-        line2: "Mã nguồn mở",
-        line3: "Tối ưu hóa",
+        line2: "Dịch vụ Dry-Lab",
+        line3: "Nền tảng & Chuyên môn",
       },
     },
     cta: {
-      title: "Bạn đang tìm kiếm điều gì?",
-      titleAccent: "Bắt đầu ngay",
+      title: "Sẵn sàng hiện đại hóa dry-lab của bạn?",
+      titleAccent: "Bắt đầu trên Omicslab",
       paragraph:
-        "Chúng tôi cung cấp các giải pháp mã nguồn mở. Nếu bạn quan tâm, hãy liên hệ để trao đổi về hợp tác.",
+        "Tạo tài khoản và chạy quy trình đầu tiên, hoặc liên hệ để di chuyển quy trình, thiết lập HPC và trao đổi về dịch vụ tin sinh học tùy chỉnh.",
       button: "Liên hệ hợp tác",
     },
     faq: {
       subtitle: "Câu hỏi thường gặp",
-      title: "Mọi thắc mắc đều được giải đáp",
+      title: "Giải đáp các câu hỏi thường gặp",
       paragraph:
-        "Dưới đây là giải đáp cho một số câu hỏi phổ biến nhất mà chúng tôi nhận được.",
+        "Những câu hỏi chúng tôi nhận được nhiều nhất về nền tảng, hạ tầng và chi phí.",
       items: [
         {
-          question: "Sử dụng các giải pháp của Omicslab có mất phí không?",
+          question: "Omicslab là gì?",
           answer:
-            "Các giải pháp mã nguồn mở của chúng tôi hoàn toàn miễn phí. Gói thuê bao Nền tảng dữ liệu là 1.000.000 VND/tháng cho 10 người dùng (giá cố định đến hết tháng 7/2026). Lưu trữ (S3) là 1.000 VND/GB/tháng. Điện toán HPC từ 20.000 VND/giờ (tối đa 16 CPU / 32 GB RAM, tỷ lệ 1:2). Các quy trình nf-core miễn phí, quy trình OmicsLab được điều chỉnh, và lắp ráp metagenomics là 100.000 VND/mẫu cho hệ gen hoàn chỉnh. Chúng tôi cũng hỗ trợ triển khai hoàn toàn tại chỗ cho nền tảng và HPC — hãy liên hệ để biết chi tiết.",
+            "Omicslab là dịch vụ tin sinh học dry-lab toàn diện: nền tảng giúp bạn quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, cộng thêm dịch vụ chuyên môn khi cần phân tích theo yêu cầu. Tạo tổ chức, kết nối hạ tầng, chọn quy trình và chạy — mọi thứ cùng một nơi.",
         },
         {
-          question: "Cách tính giá được cấu trúc như thế nào?",
+          question: "Tôi đã có quy trình và hạ tầng riêng, có chuyển sang dùng được không?",
           answer:
-            "Chúng tôi cung cấp báo giá tùy chỉnh dựa trên yêu cầu kỹ thuật và phạm vi dự án của bạn. Thay vì tính phí theo giờ, chúng tôi áp dụng hợp đồng theo dự án, phù hợp với mục tiêu kinh doanh và tiến độ của bạn.",
+            "Hoàn toàn được. Bạn vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK, kết nối lưu trữ sẵn có rồi mang quy trình vào dưới dạng kho Git. Không cần viết lại từ đầu — chúng tôi đồng hành cùng bạn ở từng bước.",
         },
         {
-          question: "Nền tảng dữ liệu của các bạn hiện có sẵn chưa?",
+          question: "Tôi có thể chạy những quy trình nào?",
           answer:
-            "Nền tảng dữ liệu của chúng tôi hiện đang trong giai đoạn dùng thử tại Việt Nam. Hãy liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng. Hỗ trợ tích hợp đầy đủ khi sử dụng hạ tầng IaaS của chúng tôi cho tính toán hiệu năng cao với cấu hình SLURM.",
+            "Từ các pipeline nf-core phổ biến như rnaseq, sarek, scrnaseq, chipseq, atacseq, methylseq, ampliseq, mag, taxprofiler và rnafusion, đến quy trình riêng của bạn — chỉ cần repo Git kèm script chạy và schema tham số. Báo cáo MultiQC và Nextflow hiển thị ngay trên trình duyệt, không cần cài thêm công cụ.",
+        },
+        {
+          question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
+          answer:
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ. Chúng tôi hỗ trợ sẵn CloudFly và GreenNode tại Việt Nam, cùng lưu trữ mua theo gói hoặc mang theo của riêng bạn. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
+        },
+        {
+          question: "Tôi có cần tự chuẩn bị hạ tầng không?",
+          answer:
+            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.io — không cần thẻ tín dụng.",
+        },
+        {
+          question: "Dữ liệu của tôi được lưu ở đâu?",
+          answer:
+            "Trong dung lượng lưu trữ bạn chọn — của riêng bạn hoặc được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
+        },
+        {
+          question: "Chi phí như thế nào?",
+          answer:
+            "Chi phí phụ thuộc gói, dung lượng lưu trữ và mức sử dụng tính toán. Hãy liên hệ để nhận báo giá — chúng tôi có cả gói trả phí theo mức sử dụng và hợp đồng theo dự án.",
         },
       ],
     },
@@ -156,7 +329,7 @@ export const vi: Dictionary = {
       members: [
         {
           designation: "Nhà sáng lập",
-          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp đầu-cuối trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
+          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp toàn diện trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
         },
       ],
     },
@@ -178,81 +351,39 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Sử dụng menu điều hướng để truy cập: Nền tảng dữ liệu, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
+        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
     dataPlatform: {
-      metadataTitle: "Nền tảng dữ liệu",
+      metadataTitle: "Nền tảng Omicslab",
       metadataDescription:
-        "RIVER - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
-      title: "Nền tảng dữ liệu",
-      subtitle:
-        "Rapid Integration and Visualization for Enhanced Research (RIVER) - Nền tảng có khả năng mở rộng, hợp nhất quản lý dữ liệu, tính toán hiệu năng cao (HPC) và thực thi công cụ.",
+        "Omicslab - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
+      title: "Nền tảng Omicslab",
+      subtitle: "Omicslab — nền tảng nghiên cứu tin sinh học toàn diện",
       intro:
-        "Nghiên cứu tin sinh học thường đòi hỏi thu thập và quản lý dữ liệu, thực thi các công cụ tính toán và quản lý kết quả trên nhiều nguồn tài nguyên phân tán với khả năng tái lập cao. Bên cạnh đó, các thách thức về hiệu quả, khả năng tiếp cận và bảo mật cũng cần được giải quyết. RIVER tích hợp ba thành phần chính: lưu trữ dữ liệu, quản lý phiên bản công cụ và tài nguyên tính toán. Đóng vai trò bộ điều khiển, RIVER cung cấp hệ thống phân quyền theo vai trò, cho phép người dùng tạo và quản lý thông tin xác thực, dự án và công cụ, trong khi các tác vụ phân tích được khởi chạy và giám sát qua giao diện web thân thiện.",
+        "Nghiên cứu tin sinh học thường bị phân mảnh do phải qua nhiều bước rời rạc — từ tải dữ liệu, cài đặt công cụ, chạy tác vụ trên cụm máy đến theo dõi kết quả rải rác ở nhiều nơi, khiến việc tái lập kết quả gặp rất nhiều khó khăn. Omicslab giải quyết triệt để vấn đề này bằng cách gom tất cả về một nền tảng duy nhất, nơi lưu trữ dữ liệu, thư viện công cụ và tài nguyên tính toán vận hành liền mạch cùng nhau.\n\nVới Omicslab, quản trị viên chỉ cần kết nối hệ thống một lần cho toàn tổ chức — bao gồm thông tin xác thực, nhà cung cấp cloud hay cụm máy HPC — rồi phân quyền theo từng vai trò (quản trị, cộng tác hoặc chỉ xem). Chuyên viên phân tích chỉ việc chọn công cụ, điền tham số theo biểu mẫu, bấm chạy và theo dõi log trực tiếp ngay trên giao diện web. Mọi cấu hình lượt chạy, nhật ký hoạt động và chi phí liên quan đều được lưu trữ đầy đủ, giúp bạn dễ dàng tái lập kết quả bất cứ lúc nào.",
       note: [
         { strong: "Lưu ý:" },
-        { text: " Nền tảng dữ liệu hiện đang trong giai đoạn " },
-        { strong: "dùng thử" },
-        { text: ". Nền tảng " },
-        { strong: "không miễn phí" },
-        { text: ". " },
-        { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-        { text: " để nhận " },
-        { strong: "2 lượt chạy mẫu lắp ráp hệ gen miễn phí" },
-        { text: " trên nền tảng." },
+        { text: " Dùng thử hoặc cần hỗ trợ, liên hệ " },
+        {
+          link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
+        },
+        { text: "." },
       ] as TextSegment[],
       pricing: {
         title: "Bảng giá",
-        cards: [
-          {
-            title: "Gói thuê bao nền tảng",
-            price: "1.000.000 VND",
-            period: "/tháng cho 10 người dùng",
-            highlight: "Giá cố định đến hết tháng 7/2026",
-            features: [
-              "Phân quyền theo vai trò",
-              "Quản lý dự án & thông tin xác thực",
-              "Giao diện web & giám sát",
-            ],
-          },
-          {
-            title: "Lưu trữ (S3)",
-            price: "1.000 VND",
-            period: "/GB mỗi tháng",
-            features: [
-              "Lưu trữ đối tượng an toàn, dễ mở rộng",
-              "Dữ liệu tổ chức theo dự án",
-              "RBAC cho truy cập dữ liệu",
-            ],
-          },
-          {
-            title: "Điện toán HPC",
-            price: "20.000 VND",
-            period: "/giờ (tối đa 16 CPU / 32 GB RAM)",
-            note: "Tỷ lệ 1:2 — 1.250 VND/giờ cho mỗi 1 CPU + 2 GB RAM",
-            features: [
-              "Quy trình nf-core: Miễn phí",
-              "Quy trình OmicsLab: Điều chỉnh",
-              "Lắp ráp metagenomics: 100.000 VND/mẫu",
-              "Truy cập cụm HPC Slurm",
-              "Ứng dụng web tương tác (RStudio, Jupyter, VS Code)",
-            ],
-          },
-        ],
+        subscription,
+        topup,
         trialNote: [
-          { text: "Nền tảng hiện đang trong giai đoạn dùng thử. " },
-          { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-          { text: " để nhận " },
-          { strong: "2 lượt chạy mẫu lắp ráp hệ gen miễn phí" },
+          { text: "Dùng thử hoặc cần hỗ trợ, liên hệ " },
+          {
+            link: {
+              href: "mailto:contact@omicslab.io",
+              text: "contact@omicslab.io",
+            },
+          },
           { text: "." },
-        ] as TextSegment[],
-        localNote: [
-          { strong: "Triển khai hoàn toàn tại chỗ" },
-          { text: " cho toàn bộ nền tảng và HPC đã có sẵn. " },
-          { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-          { text: " để biết thêm chi tiết." },
         ] as TextSegment[],
         estimates: [
           {
@@ -277,20 +408,20 @@ export const vi: Dictionary = {
                 subtotal: "~4.000.000 VND",
               },
               {
-                item: "Gói thuê bao nền tảng",
+                item: "Gói sử dụng nền tảng",
                 unitPrice: "1.000.000 VND/tháng",
                 qty: "1",
                 subtotal: "1.000.000 VND",
               },
               {
                 item: "Lưu trữ (S3)",
-                unitPrice: "1.000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~50 GB",
-                subtotal: "~50.000 VND",
+                subtotal: "~25.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~15.050.000 VND",
+            total: "~15.025.000 VND",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -321,20 +452,20 @@ export const vi: Dictionary = {
                 subtotal: "~1.000.000 VND",
               },
               {
-                item: "Gói thuê bao nền tảng",
+                item: "Gói sử dụng nền tảng",
                 unitPrice: "1.000.000 VND/tháng",
                 qty: "1",
                 subtotal: "1.000.000 VND",
               },
               {
                 item: "Lưu trữ (S3)",
-                unitPrice: "1.000 VND/GB",
+                unitPrice: "500 VND/GB",
                 qty: "~10 GB",
-                subtotal: "~10.000 VND",
+                subtotal: "~5.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~12.010.000 VND",
+            total: "~12.005.000 VND",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng phân tích 16S rRNA thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -349,12 +480,12 @@ export const vi: Dictionary = {
         title: "Tính năng chính",
         items: [
           {
-            title: "Lưu trữ dữ liệu",
+            title: "Tổ chức",
             paragraph:
-              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực S3.",
+              "Tạo và quản lý tổ chức cùng thành viên, vai trò và thông tin xác thực. Hỗ trợ phân tích độc lập và tái lập giữa các nhóm với tài nguyên tính toán riêng của tổ chức.",
           },
           {
-            title: "Tích hợp HPC",
+            title: "Tích hợp tính toán",
             paragraph:
               "Kết nối tới cụm HPC Slurm cho các phân tích đòi hỏi tính toán lớn. Tác vụ được khởi chạy và giám sát qua giao diện web thân thiện.",
           },
@@ -364,20 +495,26 @@ export const vi: Dictionary = {
               "Dễ dàng tích hợp và thực thi các quy trình do cộng đồng phát triển (như nf-core) cũng như quy trình tùy chỉnh. Hỗ trợ phân tích dữ liệu đa omics.",
           },
           {
-            title: "Quản lý dự án",
+            title: "Lưu trữ dữ liệu",
             paragraph:
-              "Tạo và quản lý dự án cùng thông tin xác thực. Hỗ trợ phân tích độc lập và tái lập giữa các nhóm với tài nguyên tính toán riêng của tổ chức.",
+              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực S3.",
           },
         ],
       },
       gettingStarted: {
-        title: "Bắt đầu",
+        title: "Bắt đầu nhanh",
         steps: [
-          "Tạo dự án và tải lên các tệp dữ liệu thô",
-          "Cấu hình thông tin xác thực và quyền truy cập",
-          "Chọn dữ liệu để thực thi quy trình",
-          "Chạy quy trình trên HPC và theo dõi tiến độ",
-          "Xem báo cáo quy trình và tải kết quả đã xử lý",
+          "Tạo tổ chức",
+          "Thanh toán gói sử dụng",
+          "Nạp tiền vào ví",
+          "Tạo workspace",
+          "Tải dữ liệu lên",
+          "Chọn dữ liệu để chạy quy trình",
+          "Chờ quy trình hoàn tất và xem kết quả",
+        ],
+        notes: [
+          "Có thể tự động kích hoạt quy trình cho các cohort.",
+          "Dữ liệu có thể được cấu hình đồng bộ từ máy giải trình tự.",
         ],
         videoTitle: "Omicslab Platform - Nền tảng phân tích tin sinh học",
       },
@@ -387,12 +524,12 @@ export const vi: Dictionary = {
           {
             title: "Phân tích không tương tác",
             paragraph:
-              "RIVER cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
+              "Omicslab cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
           },
           {
             title: "Ứng dụng web tương tác",
             paragraph:
-              "RIVER cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
+              "Omicslab cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
           },
           {
             title: "Nghiên cứu cộng tác",
@@ -544,7 +681,7 @@ export const vi: Dictionary = {
       available: {
         title: "Quy trình có sẵn",
         paragraph:
-          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học đầu-cuối trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics toàn diện. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
+          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học toàn diện trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
         categories: [
           {
             title: "Hệ gen",
@@ -624,41 +761,6 @@ export const vi: Dictionary = {
     description:
       "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
   },
-  pricingPage: {
-    title: "Bảng giá",
-    description:
-      "Bảng giá Omicslab cho nền tảng dữ liệu, lưu trữ và điện toán HPC.",
-    section: {
-      subtitle: "Bảng giá",
-      title: "Liên hệ để nhận báo giá",
-      paragraph:
-        "Nền tảng dữ liệu hiện đang trong giai đoạn dùng thử. Liên hệ để nhận 2 lượt chạy mẫu lắp ráp hệ gen miễn phí trên nền tảng.",
-      lines: [
-        [
-          { strong: "Gói thuê bao nền tảng:" },
-          {
-            text: " 1.000.000 VND/tháng cho 10 người dùng — cố định đến hết tháng 7/2026.",
-          },
-        ],
-        [
-          { strong: "Lưu trữ (S3):" },
-          { text: " 1.000 VND/GB/tháng." },
-        ],
-        [
-          { strong: "Điện toán HPC:" },
-          {
-            text: " 20.000 VND/giờ (tối đa 16 CPU / 32 GB RAM, tỷ lệ 1:2). Quy trình nf-core miễn phí, quy trình OmicsLab được điều chỉnh, lắp ráp metagenomics 100.000 VND/mẫu.",
-          },
-        ],
-        [
-          { strong: "Triển khai hoàn toàn tại chỗ" },
-          {
-            text: " cho nền tảng & HPC cũng đã có sẵn — liên hệ để biết chi tiết.",
-          },
-        ],
-      ] as TextSegment[][],
-    },
-  },
   errorPage: {
     title: "Trang 404",
     description: "Trang bạn tìm kiếm không tồn tại.",
@@ -677,11 +779,11 @@ export const vi: Dictionary = {
   },
   metadata: {
     siteDescription:
-      "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+      "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     home: {
-      title: "Omicslab - Công nghệ Omics",
+      title: "Omicslab | Nền tảng và dịch vụ tin sinh học dry-lab",
       description:
-        "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+        "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     },
     about: {
       title: "Giới thiệu",
@@ -695,11 +797,6 @@ export const vi: Dictionary = {
       title: "Liên hệ",
       description:
         "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
-    },
-    pricing: {
-      title: "Bảng giá",
-      description:
-        "Bảng giá Omicslab cho nền tảng dữ liệu, lưu trữ và điện toán HPC.",
     },
   },
 };
