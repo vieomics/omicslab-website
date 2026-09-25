@@ -35,6 +35,10 @@ export default function VietnameseRootLayout({
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <meta
+          name="dmca-site-verification"
+          content="Uy9ZaFRpeTRBanRMcUtudE92eUlwZz090"
+        />
       </head>
       <body>
         <SiteShell
