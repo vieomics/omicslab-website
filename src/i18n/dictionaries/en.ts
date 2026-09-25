@@ -521,26 +521,6 @@ export const en = {
         ],
         videoTitle: "Omicslab Platform - Bioinformatics analysis platform",
       },
-      useCases: {
-        title: "Use Cases",
-        items: [
-          {
-            title: "Non-Interactive Analysis",
-            paragraph:
-              "Omicslab allows effortless integration and execution of community-developed workflows as well as custom pipelines with easy migration from existing tools. It supports all nf-core pipelines (https://nf-co.re/pipelines/) or required to add a minor configuration for non nf-core nextflow, snakemake and bash script pipelines",
-          },
-          {
-            title: "Interactive Web Apps",
-            paragraph:
-              "Omicslab provides a secure way to publish interactive web applications from HPC environments to the public network, with authentication and centralized system control. It includes a ready-to-use Studio stack—RStudio Server, JupyterLab, and VS Code Server—and also supports access to other web-based applications such as custom dashboards.",
-          },
-          {
-            title: "Collaborative Research",
-            paragraph:
-              "Support independent and reproducible analyses across computing resources (HPC, Cloud), with data stored in the cloud and organization-specific computing resources.",
-          },
-        ],
-      },
     },
     infrastructure: {
       metadataTitle: "Infrastructure as a Service",

@@ -521,26 +521,6 @@ export const vi: Dictionary = {
         ],
         videoTitle: "Omicslab Platform - Nền tảng phân tích tin sinh học",
       },
-      useCases: {
-        title: "Trường hợp sử dụng",
-        items: [
-          {
-            title: "Phân tích không tương tác",
-            paragraph:
-              "Omicslab cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
-          },
-          {
-            title: "Ứng dụng web tương tác",
-            paragraph:
-              "Omicslab cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
-          },
-          {
-            title: "Nghiên cứu cộng tác",
-            paragraph:
-              "Hỗ trợ phân tích độc lập và tái lập trên nhiều nguồn tài nguyên tính toán (HPC, Cloud), với dữ liệu lưu trên đám mây và tài nguyên tính toán riêng của tổ chức.",
-          },
-        ],
-      },
     },
     infrastructure: {
       metadataTitle: "Hạ tầng dưới dạng dịch vụ",
