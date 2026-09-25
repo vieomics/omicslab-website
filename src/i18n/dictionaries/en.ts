@@ -125,10 +125,7 @@ export const en = {
     contact: "Contact",
     solutions: "Solutions",
     dataPlatform: "Omicslab Platform",
-    pipelinesSoftwares: "Pipelines & Softwares",
-    multiomicsPipeline: "Multiomics Pipeline",
-    runPipeline: "Run Pipeline",
-    software: "Software",
+    pipelinesSoftwares: "Custom Solutions",
     blog: "Blog",
     docs: "Docs",
     mobileMenu: "Mobile Menu",
@@ -350,7 +347,7 @@ export const en = {
       title: "Solutions",
       subtitle: "Bioinformatics solutions for multiomics research",
       paragraph:
-        "Use the navigation menu to access: Omicslab Platform, Service Platform, or Software Platform.",
+        "Use the navigation menu to access: Omicslab Platform and Custom Solutions.",
       metadataDescription:
         "Bioinformatics solutions for multiomics analysis, data management, and pipeline execution.",
     },
@@ -519,74 +516,53 @@ export const en = {
       },
     },
     pipelines: {
-      metadataTitle: "Pipelines & Softwares",
+      metadataTitle: "Custom Solutions",
       metadataDescription:
-        "Multiomics pipelines and software packages for analysis.",
-      title: "Pipelines & Softwares",
+        "Custom bioinformatics and platform services: HPC built and integrated with the platform, private platform deployments, and pipeline development and integration.",
+      title: "Custom Solutions",
       subtitle:
-        "Execute multiomics analysis pipelines from raw data to read-to-use exploration and AI/ML analysis",
+        "Tell us the specific request and we build it: an HPC cluster integrated with the platform, a private deployment for your own team, and pipelines shaped around your data.",
       intro:
-        "Pipelines & Software provides ready-to-use Nextflow pipelines for multi-omics analysis and open-source packages for custom analysis.",
-      searchPlaceholder: "Search pipelines...",
+        "Custom Solutions is our service for specific requests in bioinformatics and on the Omicslab platform. Instead of fitting your work into a fixed product, you describe the outcome you need, we scope it together, build it and hand it over working.\n\nOne engagement can be a single pipeline or a whole environment: an HPC cluster built and connected to the platform, the platform deployed privately for your own users, or the pipelines your analysis depends on developed and integrated with what you already run.",
+      searchPlaceholder: "Search custom solutions...",
       available: {
-        title: "Available Pipelines",
+        title: "What we build for you",
         paragraph:
-          "At OmicsLab, we deliver end-to-end bioinformatics solutions spanning infrastructure, data platforms, pipelines, and software for comprehensive multi-omics data management and analysis. Our services are designed to support projects at any scale, from individual studies to biobank-level cohorts. Our solution will be published partially via technical blog posts as below.",
+          "Every request starts from your own setup: the cluster, storage, pipelines and team you already have. The three services below are what customers ask for most often, and anything adjacent — custom analysis, data curation, LIMS and plugin integrations, team training — starts from the same conversation. We publish part of this work as technical posts below.",
         categories: [
           {
-            title: "Genomics",
+            title: "HPC build & platform integration",
             items: [
-              "Short-read germline variant calling",
-              "Short-read somatic variant calling",
-              "Long-read variant calling",
+              "Design and build Slurm HPC clusters, on-premises or in the cloud",
+              "Register your cluster with the platform via the SDK",
+              "Connect S3-compatible storage and shared project data",
+              "Handover with Ansible automation, documentation and training",
             ],
           },
           {
-            title: "Methylation",
+            title: "Private platform deployment",
             items: [
-              "Bisulfite sequencing analysis",
-              "TAPS-based methylation calling",
-              "M-bias analysis",
+              "Deploy the platform for your own usage instead of a shared instance",
+              "Your organization, your users and your data — nothing shared",
+              "On-premises or your own cloud, air-gapped environments on request",
+              "Upgrades, maintenance and support handled by us",
             ],
           },
           {
-            title: "Transcriptomics",
+            title: "Pipeline development & integration",
             items: [
-              "RNA-seq differential expression",
-              "Single-cell transcriptomics",
-              "Spatial transcriptomics",
-            ],
-          },
-          {
-            title: "Proteomics",
-            items: [
-              "Protein identification",
-              "Quantification",
-              "PTM analysis",
-            ],
-          },
-          {
-            title: "Metabolomics",
-            items: [
-              "Metabolite profiling",
-              "Pathway analysis",
-              "Targeted & untargeted",
-            ],
-          },
-          {
-            title: "Metagenomics",
-            items: [
-              "16S amplicon sequencing",
-              "Whole-genome shotgun",
-              "De novo assembly",
+              "Build pipelines for your specific requests: Nextflow, Snakemake, bash",
+              "Consult on how to integrate the pipelines you already run",
+              "Parameter schemas, nf-core conventions and testing",
+              "Migrate existing workflows onto the platform",
             ],
           },
         ],
       },
       software: {
-        title: "Scalable Software Solutions",
+        title: "Open-source building blocks",
         paragraph:
-          "We provide open-source software packages for multi-omics data harmonization and analysis at scale.",
+          "The custom work above is built on tools we maintain in the open. They are where most engagements start instead of starting from scratch, and they stay available to your team after handover.",
         packages: [
           {
             name: "omicslab-kit",

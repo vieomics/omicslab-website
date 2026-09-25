@@ -38,26 +38,6 @@ export default function getMenuData(dict: Dictionary): Menu[] {
           title: dict.nav.pipelinesSoftwares,
           path: "/solutions/pipelines-softwares",
           newTab: false,
-          submenu: [
-            {
-              id: 631,
-              title: dict.nav.multiomicsPipeline,
-              path: "/solutions/service-platform/multiomics",
-              newTab: false,
-            },
-            {
-              id: 632,
-              title: dict.nav.runPipeline,
-              path: "/solutions/service-platform/run",
-              newTab: false,
-            },
-            {
-              id: 633,
-              title: dict.nav.software,
-              path: "/solutions/software-platform",
-              newTab: false,
-            },
-          ],
         },
       ],
     },
