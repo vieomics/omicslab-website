@@ -521,41 +521,27 @@ export const vi: Dictionary = {
         "Dịch vụ tin sinh học và nền tảng theo yêu cầu: xây dựng HPC và tích hợp với nền tảng, triển khai nền tảng riêng, phát triển và tích hợp quy trình.",
       title: "Giải pháp tùy chỉnh",
       subtitle:
-        "Bạn nêu yêu cầu cụ thể, chúng tôi xây dựng: cụm HPC tích hợp với nền tảng, triển khai cho tổ chức của bạn, và các quy trình được thiết kế quanh dữ liệu của bạn.",
+        "Giải pháp Omicslab tùy chỉnh đáp ứng chính xác mọi yêu cầu tin sinh học đặc thù.",
       intro:
-        "Giải pháp tùy chỉnh là dịch vụ dành cho các yêu cầu cụ thể về tin sinh học và trên nền tảng Omicslab. Thay vì ép công việc vào một sản phẩm cố định, bạn mô tả kết quả cần đạt, chúng tôi cùng chốt phạm vi, xây dựng và bàn giao vận hành được.\n\nMột hợp tác có thể chỉ là một quy trình, hoặc cả một môi trường: cụm HPC được dựng và kết nối vào nền tảng, nền tảng được triển khai riêng cho người dùng của bạn, hoặc các quy trình mà phân tích của bạn phụ thuộc được phát triển và tích hợp với cái bạn đang chạy.",
+        "Bạn chỉ cần mô tả bài toán và mục tiêu, chúng tôi sẽ cùng thiết kế, phát triển và bàn giao hệ thống hoàn chỉnh.",
       searchPlaceholder: "Tìm kiếm giải pháp tùy chỉnh...",
       available: {
-        title: "Những gì chúng tôi xây dựng cho bạn",
-        paragraph:
-          "Mỗi yêu cầu đều bắt đầu từ hạ tầng sẵn có của bạn: cụm máy, lưu trữ, quy trình và đội ngũ. Ba dịch vụ bên dưới là những việc khách hàng nhờ nhất, và các hạng mục lân cận — phân tích tùy chỉnh, chuẩn hóa dữ liệu, tích hợp LIMS và plugin, đào tạo đội ngũ — cũng bắt đầu từ cùng cuộc trao đổi. Chúng tôi công bố một phần công việc này qua các bài viết kỹ thuật bên dưới.",
+        title: "Tùy theo nhu cầu, bạn có thể chọn:",
         categories: [
           {
-            title: "Xây dựng HPC & tích hợp nền tảng",
-            items: [
-              "Thiết kế và dựng cụm HPC Slurm, tại chỗ hoặc trên đám mây",
-              "Đăng ký cụm của bạn với nền tảng qua SDK",
-              "Kết nối lưu trữ tương thích S3 và dữ liệu dự án dùng chung",
-              "Bàn giao kèm tự động hóa Ansible, tài liệu và đào tạo",
-            ],
+            title: "Phát triển quy trình (pipeline)",
+            paragraph:
+              "Lập trình và tích hợp các công cụ phân tích mới vào hệ thống hiện có.",
           },
           {
-            title: "Triển khai nền tảng riêng",
-            items: [
-              "Triển khai nền tảng để tổ chức của bạn tự dùng thay vì dùng chung",
-              "Tổ chức, người dùng và dữ liệu của bạn — không chia sẻ với ai",
-              "Tại chỗ hoặc đám mây của bạn, hỗ trợ môi trường air-gapped",
-              "Nâng cấp, bảo trì và hỗ trợ do chúng tôi phụ trách",
-            ],
+            title: "Triển khai & Tối ưu hạ tầng",
+            paragraph:
+              "Dựng cụm HPC, cấu hình S3 Storage chuyên dụng cho dữ liệu Omics, hoặc thiết lập hạ tầng Cloud riêng.",
           },
           {
-            title: "Phát triển & tích hợp quy trình",
-            items: [
-              "Dựng quy trình theo yêu cầu cụ thể: Nextflow, Snakemake, bash",
-              "Tư vấn cách tích hợp các quy trình bạn đang chạy",
-              "Schema tham số, quy ước nf-core và kiểm thử",
-              "Chuyển các workflow hiện có lên nền tảng",
-            ],
+            title: "Nền tảng riêng",
+            paragraph:
+              "Triển khai phiên bản Omicslab độc lập dành riêng cho người dùng của bạn.",
           },
         ],
       },
