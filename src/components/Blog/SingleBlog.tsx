@@ -25,15 +25,17 @@ const SingleBlog = ({
       <Link
         href={href}
         aria-label="blog cover"
-        className="block overflow-hidden border-b border-line"
+        className="block overflow-hidden border-b border-line bg-paper-light"
       >
-        <Image
-          src={coverImage || "/images/blog/placeholder.jpg"}
-          alt="image"
-          className="h-[225px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-          width={408}
-          height={225}
-        />
+        <div className="aspect-video w-full">
+          <Image
+            src={coverImage || "/images/blog/placeholder.jpg"}
+            alt={title ?? ""}
+            className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
+            width={408}
+            height={230}
+          />
+        </div>
       </Link>
       <div className="flex flex-1 flex-col p-6">
         <div className="mb-5 flex flex-wrap items-center gap-3">
