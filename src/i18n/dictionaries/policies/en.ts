@@ -139,7 +139,7 @@ export const policiesEn: Policies = {
               "**Account data:** representative full name, email address, phone number, contact/billing address, login credentials and account preferences.",
               "**Service usage data:** activity logs on the Platform, including analysis jobs, storage history and storage usage — used for billing reconciliation, system audits and technical support.",
               "**Technical data:** IP address, browser information, device type and connection information — used to keep the service secure, prevent cyberattacks and diagnose errors.",
-              "**Website access data:** aggregated, anonymised traffic data collected through Google Analytics to improve the user experience on this website.",
+              "**Website access data:** aggregated, anonymised traffic data collected through Google Analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics — to improve the user experience.",
               {
                 text: "**Bioinformatics analysis data (uploaded to the system):**",
                 children: [
@@ -291,7 +291,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is website traffic analytics (Google Analytics): traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10.",
+            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is traffic analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics: traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10.",
           },
         ],
       },
@@ -305,7 +305,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "This website uses Google Analytics to analyse traffic in aggregated, anonymised form.",
+            text: "This website (the landing page) uses Google Analytics to analyse traffic in aggregated, anonymised form. The Omicslab Platform itself does not use Google Analytics.",
           },
           {
             type: "p",

@@ -91,7 +91,7 @@ export const policiesVi: Policies = {
               "**Dữ liệu tài khoản:** Họ và tên đại diện, địa chỉ email, số điện thoại, địa chỉ liên hệ/hóa đơn, thông tin xác thực đăng nhập và các thiết lập tùy chỉnh tài khoản.",
               "**Dữ liệu sử dụng dịch vụ:** Nhật ký hoạt động (log files) trên Nền tảng, bao gồm các tiến trình phân tích (jobs), lịch sử lưu trữ, dung lượng sử dụng — phục vụ cho việc đối soát thanh toán, kiểm toán hệ thống và hỗ trợ kỹ thuật.",
               "**Dữ liệu kỹ thuật:** Địa chỉ IP, thông tin trình duyệt, loại thiết bị và thông tin kết nối — nhằm bảo đảm an toàn thông tin, phòng chống tấn công mạng và chẩn đoán lỗi.",
-              "**Dữ liệu truy cập Website:** Dữ liệu lưu lượng truy cập tổng hợp (đã được ẩn danh) thu thập qua Google Analytics để cải thiện trải nghiệm người dùng trên website.",
+              "**Dữ liệu truy cập Website:** Dữ liệu lưu lượng truy cập tổng hợp (đã được ẩn danh) thu thập qua Google Analytics trên **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics — nhằm cải thiện trải nghiệm người dùng.",
               {
                 text: "**Dữ liệu Phân tích Tin sinh học (Tải lên hệ thống):**",
                 children: [
@@ -243,7 +243,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập website (Google Analytics): dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10.",
+            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics: dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10.",
           },
         ],
       },
@@ -257,7 +257,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Website sử dụng Google Analytics để phân tích lưu lượng truy cập ở dạng dữ liệu tổng hợp (đã ẩn danh).",
+            text: "Trang web này (landing page) sử dụng Google Analytics để phân tích lưu lượng truy cập ở dạng dữ liệu tổng hợp (đã ẩn danh). Nền tảng Omicslab không sử dụng Google Analytics.",
           },
           {
             type: "p",
