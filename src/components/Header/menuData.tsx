@@ -28,12 +28,6 @@ export default function getMenuData(dict: Dictionary): Menu[] {
       newTab: false,
       submenu: [
         {
-          id: 61,
-          title: dict.nav.infrastructure,
-          path: "/solutions/infrastructure",
-          newTab: false,
-        },
-        {
           id: 62,
           title: dict.nav.dataPlatform,
           path: "/solutions/data-platform",
