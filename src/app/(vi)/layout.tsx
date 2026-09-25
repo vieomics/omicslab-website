@@ -11,7 +11,7 @@ const dict = getDictionary("vi");
 export const metadata: Metadata = {
   metadataBase: new URL("https://omicslab.io"),
   title: {
-    default: "Omicslab - Công nghệ Omics",
+    default: "Omicslab - OMICS x AI",
     template: "%s | Omicslab",
   },
   description: dict.metadata.siteDescription,

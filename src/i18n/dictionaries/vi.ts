@@ -4,7 +4,7 @@ import type { Dictionary } from "./en";
 export const vi: Dictionary = {
   site: {
     name: "Omicslab",
-    tagline: "Công nghệ Omics",
+    tagline: "OMICS x AI",
     legalName: "CÔNG TY TNHH VIEOMICS",
     address:
       "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
@@ -53,7 +53,10 @@ export const vi: Dictionary = {
     readInOtherLanguage: "Đọc bằng tiếng Anh",
   },
   authors: {
-    river: { title: "Nhà sáng lập @ Omicslab" },
+    river: {
+      title:
+        "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
+    },
   },
   home: {
     hero: {
@@ -155,8 +158,8 @@ export const vi: Dictionary = {
       title: "Đội ngũ của chúng tôi",
       members: [
         {
-          designation: "Nhà sáng lập",
-          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp đầu-cuối trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
+          designation:
+            "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
     },
@@ -677,11 +680,11 @@ export const vi: Dictionary = {
   },
   metadata: {
     siteDescription:
-      "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+      "Omicslab xây dựng pipeline tin sinh học sẵn sàng vận hành, công cụ phân tích đa omics, hạ tầng HPC/Slurm và quy trình AI/ML cho nhà nghiên cứu.",
     home: {
-      title: "Omicslab - Công nghệ Omics",
+      title: "Omicslab - OMICS x AI",
       description:
-        "Giải pháp tin sinh học đổi mới cho nhà nghiên cứu. Quy trình phát hiện biến thể sẵn sàng vận hành, công cụ phân tích đa omics và nền tảng dữ liệu.",
+        "Omicslab xây dựng pipeline tin sinh học sẵn sàng vận hành, công cụ phân tích đa omics, hạ tầng HPC/Slurm và quy trình AI/ML cho nhà nghiên cứu.",
     },
     about: {
       title: "Giới thiệu",
