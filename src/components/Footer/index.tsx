@@ -72,9 +72,9 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
           <Image
             src="/images/logo/vieomics-white.svg"
             alt="Vieomics"
-            width={120}
-            height={40}
-            className="h-auto w-[120px]"
+            width={1818}
+            height={464}
+            className="block h-auto w-[120px]"
           />
         </div>
       </div>

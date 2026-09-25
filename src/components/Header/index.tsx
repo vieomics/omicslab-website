@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
@@ -82,11 +83,17 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
             className="flex shrink-0 items-center gap-3"
             aria-label={dict.site.name}
           >
-            <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white sm:text-[26px]">
+            <Image
+              src="/images/logo/vieomics-white.svg"
+              alt="Vieomics"
+              width={1818}
+              height={464}
+              priority
+              className="block h-[18px] w-auto sm:h-[22px]"
+            />
+            <span aria-hidden="true" className="w-px self-stretch bg-white/40" />
+            <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white uppercase sm:text-[26px]">
               {siteName}
-            </span>
-            <span className="hidden border-l border-white/40 pl-3 text-[9px] leading-[1.4] font-bold tracking-[0.14em] text-white uppercase sm:block">
-              {dict.site.tagline}
             </span>
           </Link>
 
