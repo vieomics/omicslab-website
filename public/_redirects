@@ -1,0 +1,4 @@
+# Cloudflare Pages rewrites .html requests to the extension-less path with a
+# 308 by default. DMCA's ownership checker fetches this exact URL, so proxy it
+# to the same asset with a 200 response instead.
+/dmca-validation.html /dmca-validation 200
