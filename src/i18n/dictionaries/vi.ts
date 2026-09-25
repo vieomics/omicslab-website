@@ -1,5 +1,6 @@
 import { TextSegment } from "../types";
 import type { Dictionary } from "./en";
+import { policiesVi } from "./policies/vi";
 
 const subscription = {
   subtitle: "Gói sử dụng",
@@ -95,7 +96,7 @@ const topup = {
     ],
   ] as TextSegment[][],
   storage: {
-    title: "Lưu trữ S3 (Marketplace)",
+    title: "Lưu trữ đối tượng (Marketplace)",
     specs: [
       { label: "Dung lượng lưu trữ", value: "Không giới hạn" },
       { label: "Tốc độ tải xuống", value: "10 Gbps" },
@@ -136,7 +137,12 @@ export const vi: Dictionary = {
     copyright: "© 2026 Omicslab. Bảo lưu mọi quyền.",
     platform: "Nền tảng Omicslab",
     productOf: "Sản phẩm của",
+    legalLabel: "Pháp lý",
+    privacy: "Chính sách Quyền riêng tư",
+    terms: "Điều khoản Dịch vụ",
+    security: "Bảo mật & Tuân thủ",
   },
+  policies: policiesVi,
   common: {
     home: "Trang chủ",
     all: "Tất cả",
@@ -238,7 +244,7 @@ export const vi: Dictionary = {
         { title: "GreenNode", detail: "Greennode (VNG Cloud) - TP.HCM" },
         { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
         { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv" },
-        { title: "Lưu trữ", detail: "Mua theo gói dung lượng hoặc dùng của riêng bạn" },
+        { title: "Lưu trữ", detail: "Lưu trữ đối tượng tương thích S3 — mua theo gói dung lượng hoặc dùng của riêng bạn" },
         { title: "Studio", detail: "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker" },
       ],
     },
@@ -294,7 +300,7 @@ export const vi: Dictionary = {
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
           answer:
-            "Trong dung lượng lưu trữ bạn chọn — của riêng bạn hoặc được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
+            "Trong dung lượng lưu trữ bạn chọn. Lưu trữ là dịch vụ lưu trữ đối tượng tương thích S3, nên có thể là CloudFly/VNG, bucket riêng của bạn, hoặc Amazon S3 — AWS Hanoi Local Zone đã hoạt động chính thức từ tháng 6 năm 2026, cho phép dữ liệu S3 được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
         },
         {
           question: "Chi phí như thế nào?",
@@ -410,7 +416,7 @@ export const vi: Dictionary = {
                 subtotal: "1.000.000 VND",
               },
               {
-                item: "Lưu trữ (S3)",
+                item: "Lưu trữ (Object Storage)",
                 unitPrice: "500 VND/GB",
                 qty: "~50 GB",
                 subtotal: "~25.000 VND",
@@ -454,7 +460,7 @@ export const vi: Dictionary = {
                 subtotal: "1.000.000 VND",
               },
               {
-                item: "Lưu trữ (S3)",
+                item: "Lưu trữ (Object Storage)",
                 unitPrice: "500 VND/GB",
                 qty: "~10 GB",
                 subtotal: "~5.000 VND",
@@ -493,7 +499,7 @@ export const vi: Dictionary = {
           {
             title: "Lưu trữ dữ liệu",
             paragraph:
-              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực S3.",
+              "Lưu trữ an toàn, dễ mở rộng cho các tập dữ liệu. Tổ chức dữ liệu theo dự án, loại và phân tích. Dữ liệu thô hoặc đã xử lý có thể được lưu trữ và chia sẻ bằng phân quyền theo vai trò (RBAC), trong đó nguồn dữ liệu có thể được đăng ký với dịch vụ xác thực lưu trữ đối tượng.",
           },
         ],
       },
@@ -536,7 +542,7 @@ export const vi: Dictionary = {
           {
             title: "Triển khai & Tối ưu hạ tầng",
             paragraph:
-              "Dựng cụm HPC, cấu hình S3 Storage chuyên dụng cho dữ liệu Omics, hoặc thiết lập hạ tầng Cloud riêng.",
+              "Dựng cụm HPC, cấu hình lưu trữ đối tượng tương thích S3 chuyên dụng cho dữ liệu Omics, hoặc thiết lập hạ tầng Cloud riêng.",
           },
           {
             title: "Nền tảng riêng",
@@ -609,6 +615,30 @@ export const vi: Dictionary = {
       title: "Liên hệ",
       description:
         "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
+    },
+    privacy: {
+      title: "Chính sách Bảo vệ Dữ liệu Cá nhân & Quyền riêng tư",
+      description:
+        "Cách Omicslab thu thập, sử dụng, lưu trữ và bảo vệ dữ liệu cá nhân theo quy định của pháp luật Việt Nam và các tiêu chuẩn bảo mật quốc tế.",
+    },
+    terms: {
+      title: "Điều khoản Dịch vụ",
+      description: "Các điều khoản điều chỉnh việc bạn sử dụng Nền tảng Omicslab.",
+    },
+    security: {
+      title: "Bảo mật & Tuân thủ",
+      description:
+        "Hai mô hình triển khai, các biện pháp kiểm soát bảo mật và phân định trách nhiệm giữa Omicslab và khách hàng.",
+    },
+    securityCompliance: {
+      title: "Tuân thủ",
+      description:
+        "Nơi Nền tảng Omicslab được lưu trữ, pháp luật tuân theo và cam kết tuân thủ tại Việt Nam.",
+    },
+    securityResponsibility: {
+      title: "Trách nhiệm",
+      description:
+        "Ai kiểm soát từng biện pháp bảo mật trong từng mô hình triển khai của Omicslab.",
     },
   },
 };

@@ -26,7 +26,7 @@ export default function SiteShell({
       <div className="isolate">
         <Header dict={dict} locale={locale} translatedSlugs={translatedSlugs} />
         {children}
-        <Footer dict={dict} />
+        <Footer dict={dict} locale={locale} />
         <ScrollToTop label={dict.common.scrollToTop} />
       </div>
     </Providers>

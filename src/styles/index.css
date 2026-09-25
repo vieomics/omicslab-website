@@ -528,3 +528,100 @@
   margin-bottom: 8px;
   font-weight: 700;
 }
+
+/*
+  Policy documents — long-form body copy on paper.
+*/
+.legal-body {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #2b2b2b;
+}
+
+.legal-body p {
+  margin-bottom: 1.25rem;
+}
+
+.legal-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Mini heading that groups the paragraphs that follow it. */
+.legal-body p.legal-label {
+  margin-bottom: 0.75rem;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.legal-body strong {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.legal-body a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-underline-offset: 3px;
+}
+
+.legal-body a:hover {
+  text-decoration-color: var(--color-ink);
+}
+
+.legal-body ul {
+  margin: 0 0 1.25rem;
+  padding-left: 1.35rem;
+  list-style: disc;
+}
+
+.legal-body li + li {
+  margin-top: 0.65rem;
+}
+
+.legal-body ul ul {
+  margin: 0.75rem 0 0;
+  padding-left: 1.35rem;
+  list-style: circle;
+}
+
+.legal-body ul ul ul {
+  list-style: square;
+}
+
+:lang(vi) .legal-body {
+  line-height: 1.9;
+}
+
+.legal-table {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.legal-table th {
+  border: 1px solid var(--color-line);
+  background-color: var(--color-paper-light);
+  padding: 12px 16px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.legal-table td {
+  border: 1px solid var(--color-line);
+  padding: 12px 16px;
+  vertical-align: top;
+}
+
+.legal-table tr:nth-child(even) {
+  background-color: rgb(0 0 0 / 0.02);
+}

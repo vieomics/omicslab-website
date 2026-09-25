@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
 
-const Footer = ({ dict }: { dict: Dictionary }) => {
+const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
   return (
     <footer className="bg-black text-white">
       <div className="page-width grid gap-8 py-12 md:grid-cols-[1fr_auto] md:items-center">
@@ -12,8 +14,7 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
             {dict.footer.platform} - {dict.footer.productOf}{" "}
             {dict.site.legalName}
           </p>
-          <p className="mt-2">{dict.footer.copyright}</p>
-          <p className="mt-1">{dict.site.address}</p>
+          <p className="mt-2">{dict.site.address}</p>
           <p className="mt-1">
             {dict.site.taxLabel}: {dict.site.taxId}
           </p>
@@ -77,6 +78,32 @@ const Footer = ({ dict }: { dict: Dictionary }) => {
             className="block h-auto w-[120px]"
           />
         </div>
+      </div>
+      <div className="page-width flex flex-wrap items-center justify-between gap-x-7 gap-y-3 border-t border-white/15 py-6">
+        <p className="micro-label text-white/50">{dict.footer.copyright}</p>
+        <nav
+          aria-label={dict.footer.legalLabel}
+          className="micro-label flex flex-wrap items-center gap-x-7 gap-y-3 text-white/70"
+        >
+          <Link
+            href={localizeHref("/privacy", locale)}
+            className="transition-opacity hover:opacity-70"
+          >
+            {dict.footer.privacy}
+          </Link>
+          <Link
+            href={localizeHref("/terms", locale)}
+            className="transition-opacity hover:opacity-70"
+          >
+            {dict.footer.terms}
+          </Link>
+          <Link
+            href={localizeHref("/security", locale)}
+            className="transition-opacity hover:opacity-70"
+          >
+            {dict.footer.security}
+          </Link>
+        </nav>
       </div>
       <Script
         src="https://images.dmca.com/Badges/DMCABadgeHelper.min.js"
