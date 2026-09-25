@@ -110,7 +110,7 @@ const topup = {
 export const vi: Dictionary = {
   site: {
     name: "Omicslab",
-    tagline: "Công nghệ Omics",
+    tagline: "OMICS x AI",
     legalName: "CÔNG TY TNHH VIEOMICS",
     address:
       "Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam",
@@ -124,12 +124,8 @@ export const vi: Dictionary = {
     about: "Giới thiệu",
     contact: "Liên hệ",
     solutions: "Giải pháp",
-    infrastructure: "Hạ tầng dưới dạng dịch vụ",
     dataPlatform: "Nền tảng Omicslab",
-    pipelinesSoftwares: "Quy trình & Phần mềm",
-    multiomicsPipeline: "Quy trình đa omics",
-    runPipeline: "Chạy quy trình",
-    software: "Phần mềm",
+    pipelinesSoftwares: "Giải pháp tùy chỉnh",
     blog: "Blog",
     docs: "Tài liệu",
     mobileMenu: "Menu di động",
@@ -159,7 +155,7 @@ export const vi: Dictionary = {
     readInOtherLanguage: "Đọc bằng tiếng Anh",
   },
   authors: {
-    river: { title: "Nhà sáng lập @ Omicslab" },
+    river: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
@@ -328,8 +324,8 @@ export const vi: Dictionary = {
       title: "Đội ngũ của chúng tôi",
       members: [
         {
-          designation: "Nhà sáng lập",
-          bio: "Chuyên gia tin sinh học với kinh nghiệm thực chiến từ năm 2019, chuyên về các giải pháp toàn diện trong sinh học tính toán, phân tích giải trình tự thế hệ mới (NGS) và hạ tầng có khả năng mở rộng. Công việc của anh trải rộng toàn bộ hệ thống tin sinh học, từ thiết kế các quy trình có thể tái lập với Nextflow, Snakemake và Galaxy đến triển khai các nền tảng chuẩn vận hành với tích hợp CI/CD cho tự động hóa và khả năng mở rộng.\n\nKhi tốc độ đổi mới trong khoa học sự sống ngày càng tăng, anh sáng lập OmicsLab với tầm nhìn rõ ràng: xây dựng một hệ sinh thái nền tảng vững chắc, hỗ trợ toàn bộ hành trình omics — từ hạ tầng cốt lõi và tạo sinh dữ liệu đến phân tích chuyên sâu và các ứng dụng dẫn dắt bởi AI. Điều này bao gồm phát triển môi trường HPC và đám mây mạnh mẽ, quản lý hệ thống tính toán dựa trên Slurm, và thiết kế kiến trúc lưu trữ cùng các giải pháp quy trình có khả năng xử lý dữ liệu hệ gen và đa omics quy mô lớn.\n\nVới nền tảng vững chắc về hệ gen, biểu sinh, phiên mã và học máy, anh tập trung biến dữ liệu sinh học phức tạp thành những hiểu biết có thể hành động. Anh cam kết xây dựng các hệ thống không chỉ có khả năng mở rộng và tái lập, mà còn dễ tiếp cận và tạo tác động cho cả nghiên cứu lẫn công nghiệp. Thông qua OmicsLab, mục tiêu của anh là thu hẹp khoảng cách giữa hạ tầng và đổi mới, mở đường cho thế hệ giải pháp tin sinh học và y học chính xác tiếp theo.",
+          designation:
+            "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
     },
@@ -351,7 +347,7 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab, Nền tảng dịch vụ hoặc Nền tảng phần mềm.",
+        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab và Giải pháp tùy chỉnh.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
@@ -518,225 +514,41 @@ export const vi: Dictionary = {
         ],
         videoTitle: "Omicslab Platform - Nền tảng phân tích tin sinh học",
       },
-      useCases: {
-        title: "Trường hợp sử dụng",
-        items: [
-          {
-            title: "Phân tích không tương tác",
-            paragraph:
-              "Omicslab cho phép tích hợp và thực thi dễ dàng các quy trình do cộng đồng phát triển cũng như quy trình tùy chỉnh, với khả năng chuyển đổi thuận tiện từ các công cụ hiện có. Nền tảng hỗ trợ tất cả quy trình nf-core (https://nf-co.re/pipelines/) hoặc chỉ cần thêm cấu hình nhỏ cho các quy trình Nextflow, Snakemake và bash script không thuộc nf-core.",
-          },
-          {
-            title: "Ứng dụng web tương tác",
-            paragraph:
-              "Omicslab cung cấp cách an toàn để công bố các ứng dụng web tương tác từ môi trường HPC ra mạng công khai, với xác thực và kiểm soát hệ thống tập trung. Nền tảng bao gồm bộ Studio sẵn sàng sử dụng — RStudio Server, JupyterLab và VS Code Server — đồng thời hỗ trợ truy cập các ứng dụng web khác như dashboard tùy chỉnh.",
-          },
-          {
-            title: "Nghiên cứu cộng tác",
-            paragraph:
-              "Hỗ trợ phân tích độc lập và tái lập trên nhiều nguồn tài nguyên tính toán (HPC, Cloud), với dữ liệu lưu trên đám mây và tài nguyên tính toán riêng của tổ chức.",
-          },
-        ],
-      },
-    },
-    infrastructure: {
-      metadataTitle: "Hạ tầng dưới dạng dịch vụ",
-      metadataDescription:
-        "Thiết lập hạ tầng để chạy các quy trình Nextflow trên HPC tại chỗ hoặc đám mây (AWS, GCP).",
-      title: "Hạ tầng dưới dạng dịch vụ",
-      subtitle:
-        "Thiết lập hạ tầng để chạy các quy trình Nextflow tại chỗ hoặc trên đám mây.",
-      intro:
-        "Chạy các quy trình Nextflow ở quy mô lớn trên hạ tầng bạn lựa chọn. Chúng tôi cung cấp triển khai tự động cho cụm HPC tại chỗ (Slurm) hoặc môi trường đám mây (AWS, GCP). Bạn tập trung vào nghiên cứu, chúng tôi lo phần hạ tầng.",
-      searchPlaceholder: "Tìm kiếm bài viết hạ tầng...",
-      available: {
-        title: "Hạ tầng có sẵn",
-        items: [
-          {
-            title: "HPC tại chỗ",
-            paragraph:
-              "Triển khai Nextflow trên cụm HPC nội bộ với bộ lập lịch Slurm, PBS hoặc LSF.",
-          },
-          {
-            title: "AWS Cloud",
-            paragraph:
-              "Chạy Nextflow trên AWS Batch với EC2, Fargate hoặc Spot instances.",
-          },
-          {
-            title: "GCP Cloud",
-            paragraph:
-              "Triển khai trên Google Cloud Batch với Compute Engine hoặc preemptible VM.",
-          },
-        ],
-      },
-      onPrem: {
-        title: "HPC tại chỗ",
-        paragraph:
-          "Triển khai cụm HPC Slurm hoàn chỉnh trên hạ tầng nội bộ của bạn. Chúng tôi cung cấp phần thiết lập và cấu hình, bạn cung cấp phần cứng.",
-        plans: [
-          {
-            badge: "Thiết lập",
-            title: "Mini-HPC",
-            description:
-              "Cụm nhỏ cho nhà nghiên cứu cá nhân hoặc phòng thí nghiệm nhỏ",
-            price: "$250",
-            priceSuffix: " một lần",
-            configTitle: "Cấu hình:",
-            config: [
-              "1 nút điều khiển/đăng nhập",
-              "1 nút tính toán",
-              "Bộ lập lịch Slurm",
-              "Lưu trữ chia sẻ NFS",
-              "Giám sát cơ bản",
-            ],
-            includesTitle: "Bao gồm:",
-            includes: [
-              "Thiết lập tự động hóa Ansible",
-              "Cấu hình Slurm",
-              "Tích hợp Nextflow",
-              "Buổi đào tạo cơ bản",
-              "Hỗ trợ 30 ngày",
-            ],
-            note: "* Không bao gồm phần cứng.",
-          },
-          {
-            badge: "Dịch vụ",
-            title: "Bảo trì HPC",
-            description: "Dịch vụ bảo trì định kỳ cho mọi cụm HPC",
-            price: "$100",
-            priceSuffix: "/tháng",
-            configTitle: "",
-            config: [] as string[],
-            includesTitle: "Nội dung bao gồm:",
-            includes: [
-              "Cập nhật và vá hệ thống",
-              "Nâng cấp phiên bản Slurm",
-              "Cập nhật gói phần mềm",
-              "Giám sát 24/7",
-              "Hỗ trợ ưu tiên",
-            ],
-            note: "* Áp dụng cho mọi cụm HPC, kể cả cụm không do chúng tôi thiết lập.",
-          },
-          {
-            badge: "Thiết lập",
-            title: "HPC đa nút",
-            description:
-              "Cụm có khả năng mở rộng cho nhóm nghiên cứu và khối lượng công việc vận hành",
-            price: "Liên hệ",
-            priceSuffix: "",
-            configTitle: "Cấu hình:",
-            config: [
-              "Nhiều nút điều khiển (HA)",
-              "Nhiều nút tính toán",
-              "Hỗ trợ GPU (tùy chọn)",
-              "Lưu trữ hiệu năng cao",
-              "Giám sát nâng cao",
-            ],
-            includesTitle: "Bao gồm:",
-            includes: [
-              "Tự động hóa Ansible tùy chỉnh",
-              "Thiết lập tính sẵn sàng cao",
-              "LDAP/Active Directory | NIS",
-              "Các buổi đào tạo đầy đủ",
-              "Hỗ trợ 1 năm",
-            ],
-            note: "* Yêu cầu có thể khác nhau.",
-          },
-        ],
-      },
-      cloudFeatures: {
-        title: "Tính năng hạ tầng đám mây",
-        items: [
-          {
-            title: "Tự động mở rộng",
-            paragraph:
-              "Tự động mở rộng tài nguyên tính toán theo khối lượng công việc.",
-          },
-          {
-            title: "Tối ưu chi phí",
-            paragraph:
-              "Dùng spot/preemptible instances cho tác vụ theo lô. Tiết kiệm đến 90%.",
-          },
-          {
-            title: "Giám sát tác vụ",
-            paragraph: "Giám sát thời gian thực quá trình thực thi quy trình.",
-          },
-          {
-            title: "Tích hợp lưu trữ",
-            paragraph: "Kết nối tới S3, GCS hoặc lưu trữ NFS nội bộ.",
-          },
-        ],
-      },
     },
     pipelines: {
-      metadataTitle: "Quy trình & Phần mềm",
+      metadataTitle: "Giải pháp tùy chỉnh",
       metadataDescription:
-        "Quy trình đa omics và các gói phần mềm phục vụ phân tích.",
-      title: "Quy trình & Phần mềm",
+        "Dịch vụ tin sinh học và nền tảng theo yêu cầu: xây dựng HPC và tích hợp với nền tảng, triển khai nền tảng riêng, phát triển và tích hợp quy trình.",
+      title: "Giải pháp tùy chỉnh",
       subtitle:
-        "Thực thi các quy trình phân tích đa omics từ dữ liệu thô đến khám phá sẵn sàng sử dụng và phân tích AI/ML",
+        "Giải pháp Omicslab tùy chỉnh đáp ứng chính xác mọi yêu cầu tin sinh học đặc thù.",
       intro:
-        "Pipelines & Software cung cấp các quy trình Nextflow sẵn sàng sử dụng cho phân tích đa omics và các gói mã nguồn mở cho phân tích tùy chỉnh.",
-      searchPlaceholder: "Tìm kiếm quy trình...",
+        "Bạn chỉ cần mô tả bài toán và mục tiêu, chúng tôi sẽ cùng thiết kế, phát triển và bàn giao hệ thống hoàn chỉnh.",
+      searchPlaceholder: "Tìm kiếm giải pháp tùy chỉnh...",
       available: {
-        title: "Quy trình có sẵn",
-        paragraph:
-          "Tại OmicsLab, chúng tôi cung cấp giải pháp tin sinh học toàn diện trải rộng từ hạ tầng, nền tảng dữ liệu, quy trình đến phần mềm cho quản lý và phân tích dữ liệu đa omics. Các dịch vụ của chúng tôi được thiết kế để hỗ trợ dự án ở mọi quy mô, từ nghiên cứu cá nhân đến nhóm thuần tập cấp ngân hàng sinh học. Một phần giải pháp sẽ được công bố qua các bài viết kỹ thuật bên dưới.",
+        title: "Tùy theo nhu cầu, bạn có thể chọn:",
         categories: [
           {
-            title: "Hệ gen",
-            items: [
-              "Phát hiện biến thể dòng mầm từ short-read",
-              "Phát hiện biến thể soma từ short-read",
-              "Phát hiện biến thể từ long-read",
-            ],
+            title: "Phát triển quy trình (pipeline)",
+            paragraph:
+              "Lập trình và tích hợp các công cụ phân tích mới vào hệ thống hiện có.",
           },
           {
-            title: "Methyl hóa",
-            items: [
-              "Phân tích giải trình tự bisulfite",
-              "Phát hiện methyl hóa dựa trên TAPS",
-              "Phân tích M-bias",
-            ],
+            title: "Triển khai & Tối ưu hạ tầng",
+            paragraph:
+              "Dựng cụm HPC, cấu hình S3 Storage chuyên dụng cho dữ liệu Omics, hoặc thiết lập hạ tầng Cloud riêng.",
           },
           {
-            title: "Phiên mã",
-            items: [
-              "Phân tích biểu hiện khác biệt RNA-seq",
-              "Phiên mã đơn bào",
-              "Phiên mã không gian",
-            ],
-          },
-          {
-            title: "Protein",
-            items: [
-              "Nhận diện protein",
-              "Định lượng",
-              "Phân tích PTM",
-            ],
-          },
-          {
-            title: "Chuyển hóa",
-            items: [
-              "Phân tích dấu ấn chuyển hóa",
-              "Phân tích con đường",
-              "Định hướng & không định hướng",
-            ],
-          },
-          {
-            title: "Metagenomics",
-            items: [
-              "Giải trình tự amplicon 16S",
-              "Whole-genome shotgun",
-              "Lắp ráp de novo",
-            ],
+            title: "Nền tảng riêng",
+            paragraph:
+              "Triển khai phiên bản Omicslab độc lập dành riêng cho người dùng của bạn.",
           },
         ],
       },
       software: {
-        title: "Giải pháp phần mềm có khả năng mở rộng",
+        title: "Các khối xây dựng mã nguồn mở",
         paragraph:
-          "Chúng tôi cung cấp các gói phần mềm mã nguồn mở cho chuẩn hóa và phân tích dữ liệu đa omics ở quy mô lớn.",
+          "Công việc tùy chỉnh ở trên được xây trên những công cụ chúng tôi duy trì công khai. Đó là điểm khởi đầu của hầu hết hợp tác thay vì làm từ đầu, và chúng vẫn thuộc về đội của bạn sau bàn giao.",
         packages: [
           {
             name: "omicslab-kit",

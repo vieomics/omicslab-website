@@ -153,17 +153,43 @@
     text-transform: uppercase;
   }
 
+  /* Blog post titles: the display voice without the hero scale. */
+  .display-title {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 4.4vw, 56px);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+
+  /* Blog card titles: smaller than display-md, still a heading. */
+  .display-sm {
+    font-family: var(--font-display);
+    font-size: clamp(20px, 1.9vw, 26px);
+    font-weight: 700;
+    letter-spacing: -0.005em;
+    line-height: 1.15;
+    text-transform: uppercase;
+    /* Headings inherit text-wrap: balance, which shortens the first line
+       to even the two out and reads as padding on the right. Cards fill
+       the available width instead. */
+    text-wrap: pretty;
+  }
+
   /*
     Vietnamese uppercase stacks diacritics above and below the cap height
     (e.g. Ầ rises ~1.01em, Ụ drops ~0.26em), so the English editorial
     leading would overlap consecutive lines. Loosen it for vi only.
   */
   :lang(vi) .display-xl,
-  :lang(vi) .display-lg {
+  :lang(vi) .display-lg,
+  :lang(vi) .display-title {
     line-height: 1.26;
   }
 
-  :lang(vi) .display-md {
+  :lang(vi) .display-md,
+  :lang(vi) .display-sm {
     line-height: 1.2;
   }
 

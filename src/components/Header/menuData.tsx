@@ -28,12 +28,6 @@ export default function getMenuData(dict: Dictionary): Menu[] {
       newTab: false,
       submenu: [
         {
-          id: 61,
-          title: dict.nav.infrastructure,
-          path: "/solutions/infrastructure",
-          newTab: false,
-        },
-        {
           id: 62,
           title: dict.nav.dataPlatform,
           path: "/solutions/data-platform",
@@ -42,28 +36,8 @@ export default function getMenuData(dict: Dictionary): Menu[] {
         {
           id: 63,
           title: dict.nav.pipelinesSoftwares,
-          path: "/solutions/pipelines-softwares",
+          path: "/solutions/custom-solutions",
           newTab: false,
-          submenu: [
-            {
-              id: 631,
-              title: dict.nav.multiomicsPipeline,
-              path: "/solutions/service-platform/multiomics",
-              newTab: false,
-            },
-            {
-              id: 632,
-              title: dict.nav.runPipeline,
-              path: "/solutions/service-platform/run",
-              newTab: false,
-            },
-            {
-              id: 633,
-              title: dict.nav.software,
-              path: "/solutions/software-platform",
-              newTab: false,
-            },
-          ],
         },
       ],
     },
