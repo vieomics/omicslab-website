@@ -215,6 +215,10 @@ export const policiesVi: Policies = {
             type: "p",
             text: "Dữ liệu nghiên cứu của bạn sẽ không bao giờ được chia sẻ cho bên thứ ba ngoại trừ trường hợp có chỉ định trực tiếp từ bạn.",
           },
+          {
+            type: "p",
+            text: "**Nhà cung cấp dịch vụ của trang web này:** (i) **Cloudflare Pages** — phân phối các file tĩnh của trang (chúng tôi không bật dịch vụ phân tích của Cloudflare); (ii) **Google Analytics** — chỉ chạy khi bạn chấp nhận cookie tại Mục 10; (iii) **DMCA.com** — hiển thị huy hiệu bảo vệ. Trong phạm vi Nền tảng, chúng tôi làm việc với đối tác hạ tầng Marketplace và cổng thanh toán, tất cả đều gắn kết bằng thỏa thuận xử lý dữ liệu (DPA).",
+          },
         ],
       },
       {
@@ -247,7 +251,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics: dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10.",
+            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics: dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10. Dịch vụ này **chỉ chạy sau khi bạn bấm Chấp nhận** tại thông báo cookie (Mục 10); nếu bạn từ chối, không có dữ liệu nào được chuyển đi.",
           },
         ],
       },
@@ -257,15 +261,19 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Chúng tôi sử dụng Cookie thiết yếu và Phiên làm việc (Session Tokens) để duy trì trạng thái đăng nhập và bảo vệ tài khoản của bạn. Đây là thành phần bắt buộc để Nền tảng hoạt động.",
+            text: "**Cookie thiết yếu:** dùng để duy trì trạng thái đăng nhập và bảo vệ tài khoản trên Nền tảng — thành phần bắt buộc, không cần đồng ý.",
           },
           {
             type: "p",
-            text: "Trang web này (landing page) sử dụng Google Analytics để phân tích lưu lượng truy cập ở dạng dữ liệu tổng hợp (đã ẩn danh). Nền tảng Omicslab không sử dụng Google Analytics.",
+            text: "**Cookie phân tích (Google Analytics — trang web này):** dùng để xem lưu lượng truy cập ở mức tổng hợp. **Chỉ được bật sau khi bạn bấm “Chấp nhận”** ở thông báo cookie ở cuối trang; nếu bạn chọn “Từ chối”, Google Analytics không được tải và không cookie nào được tạo. Nền tảng Omicslab không sử dụng Google Analytics.",
           },
           {
             type: "p",
-            text: "Chúng tôi không sử dụng Cookie theo dõi nhằm mục đích quảng cáo từ bên thứ ba. Bạn có thể chủ động quản lý hoặc xóa Cookie thông qua cài đặt trên trình duyệt.",
+            text: "**Không có cookie quảng cáo:** chúng tôi không dùng cookie theo dõi quảng cáo của bên thứ ba.",
+          },
+          {
+            type: "p",
+            text: "**Bạn có thể thay đổi quyết định bất cứ lúc nào:** xóa cookie và dữ liệu trang web trong cài đặt trình duyệt — lần truy cập sau, thông báo sẽ hiện lại để bạn chọn lại.",
           },
         ],
       },

@@ -143,6 +143,13 @@ export const en = {
     security: "Security & Compliance",
   },
   policies: policiesEn,
+  cookieConsent: {
+    title: "Traffic analytics",
+    message:
+      "This website uses Google Analytics cookies to understand how visitors use the site. The cookie is only enabled after you press Accept; if you decline, Google Analytics is not loaded and no cookie is set. Declining does not affect your ability to view the site.",
+    accept: "Accept",
+    decline: "Decline",
+  },
   common: {
     home: "Home",
     all: "All",
