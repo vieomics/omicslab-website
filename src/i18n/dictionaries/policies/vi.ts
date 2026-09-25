@@ -160,7 +160,7 @@ export const policiesVi: Policies = {
               "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated)** và được lưu giữ trong thời hạn mà pháp luật yêu cầu (thời hiệu khiếu nại, nghĩa vụ lưu trữ hồ sơ, chứng từ và hóa đơn), để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan. Hết thời hạn đó, dữ liệu bị **xóa hoặc ẩn danh hóa** theo ngoại lệ đã nêu tại Mục 8.",
               "**Dữ liệu sử dụng & kiểm toán:** Lưu trữ theo thời hạn quy định của pháp luật về kế toán, thuế và an ninh mạng.",
               "**Dữ liệu nghiên cứu (Object Storage):** được lưu trữ trên dịch vụ lưu trữ đối tượng (Object Storage) của Marketplace theo mô hình **trả theo mức sử dụng, tính theo chu kỳ tháng (pay-as-you-go)** và chỉ có hiệu lực trong chu kỳ bạn đã trả. Nếu bạn không còn đăng ký bất kỳ gói dịch vụ nào hoặc không gia hạn chu kỳ lưu trữ, quyền truy cập workspace sẽ bị khóa, dữ liệu được giữ lại trong thời gian **ân hạn 1 tháng**, sau đó **bị dọn dẹp toàn bộ khỏi workspace** — chỉ nhật ký audit được giữ lại cho mục đích tra cứu. Bạn cũng có thể tự xóa dữ liệu bất cứ lúc nào trên Nền tảng, hoặc việc xóa được thực hiện theo thỏa thuận xử lý dữ liệu (DPA) đã ký kết.",
-              "**Số dư Top-up (ví tiền tổ chức):** Số dư tiền nạp (top-up) chỉ có thể sử dụng khi tổ chức của bạn còn gói đăng ký hiệu lực. Khi gói đăng ký hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, **số dư còn lại bị thu hồi và đưa về 0** — số tiền nạp không thể tiếp tục sử dụng khi không còn gói dịch vụ. Tổ chức chưa từng đăng ký gói thì số dư (nếu có) không bị thu hồi. Việc thu hồi được rà soát tự động theo chu kỳ hằng ngày.",
+              "**Số dư Top-up (ví tiền tổ chức):** Số dư tiền nạp (top-up) chỉ có thể sử dụng khi tổ chức của bạn còn gói đăng ký hiệu lực. Khi gói đăng ký hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, **số dư còn lại bị thu hồi và đưa về 0** — số tiền nạp không thể tiếp tục sử dụng khi không còn gói dịch vụ. Tổ chức chưa từng đăng ký gói thì số dư (nếu có) không bị thu hồi. Việc thu hồi được rà soát tự động theo chu kỳ hằng ngày. Điều kiện thanh toán, email cảnh báo trước và các mốc thời hạn được nêu chi tiết tại Mục 13 [Điều khoản Dịch vụ](/terms).",
             ],
           },
         ],
@@ -185,6 +185,10 @@ export const policiesVi: Policies = {
           {
             type: "p",
             text: "Các biện pháp này được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai; tính đến ngày cập nhật của Chính sách này, Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó.",
+          },
+          {
+            type: "p",
+            text: "Khi phát hiện vi phạm quy định bảo vệ dữ liệu cá nhân (rò rỉ, mất mát hoặc truy cập trái phép dữ liệu cá nhân), chúng tôi lập biên bản xác minh và **thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân và cho chính chủ thể dữ liệu trong thời hạn 72 giờ kể từ thời điểm phát hiện**, đồng thời kích hoạt quy trình ứng phó sự cố nội bộ. Hồ sơ vụ việc được lưu trữ tối thiểu 5 năm kể từ ngày khắc phục xong sự cố.",
           },
           {
             type: "p",
@@ -452,6 +456,26 @@ export const policiesVi: Policies = {
           {
             type: "p",
             text: "Các câu hỏi về Điều khoản này có thể gửi cho chúng tôi qua trang [Liên hệ](/contact) hoặc tới **contact@omicslab.io**, hoặc tới đầu mối bảo vệ dữ liệu được nêu trong [Chính sách Quyền riêng tư](/privacy).",
+          },
+        ],
+      },
+      {
+        id: "billing",
+        title: "13. Thanh toán, Số dư và Chu kỳ Dữ liệu",
+        blocks: [
+          {
+            type: "p",
+            text: "Các điều khoản thanh toán và chu kỳ dưới đây áp dụng cho Nền tảng; thời gian lưu trữ dữ liệu chi tiết được nêu tại [Chính sách Quyền riêng tư](/privacy).",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Gói đăng ký (Subscription):** được thanh toán theo chu kỳ, thông thường là theo tháng. Việc gia hạn phải được thực hiện trước khi chu kỳ hiện tại kết thúc.",
+              "**Lưu trữ Marketplace (pay-as-you-go):** dung lượng lưu trữ được tính phí theo mức sử dụng và theo chu kỳ tháng, gắn với gói đăng ký, và không thể kéo dài quá thời hạn của gói đang có hiệu lực.",
+              "**Cảnh báo trước bằng email:** trước mọi hành động, chúng tôi gửi email cho quản trị viên — nhắc trước **7 ngày** khi chu kỳ lưu trữ sắp kết thúc, và thông báo ngay khi chu kỳ hết hạn. Sau khi hết hạn, dữ liệu được giữ thêm **thời gian ân hạn 1 tháng** trước khi bị dọn dẹp.",
+              "**Dọn dẹp dữ liệu workspace:** qua thời hạn ân, dữ liệu trong workspace bị xóa — chỉ nhật ký audit được giữ lại cho mục đích tra cứu (chi tiết tại Mục 5 [Chính sách Quyền riêng tư](/privacy)).",
+              "**Số dư Top-up:** chỉ có thể sử dụng khi tổ chức còn gói đăng ký hiệu lực. Khi gói hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, số dư còn lại bị thu hồi về 0; thông tin về số dư và các mốc thời hạn cũng được gửi qua email trước khi áp dụng.",
+            ],
           },
         ],
       },
