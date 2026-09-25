@@ -521,41 +521,27 @@ export const en = {
         "Custom bioinformatics and platform services: HPC built and integrated with the platform, private platform deployments, and pipeline development and integration.",
       title: "Custom Solutions",
       subtitle:
-        "Tell us the specific request and we build it: an HPC cluster integrated with the platform, a private deployment for your own organization, and pipelines shaped around your data.",
+        "Custom Omicslab solutions that fit exactly what your specific bioinformatics work requires.",
       intro:
-        "Custom Solutions is our service for specific requests in bioinformatics and on the Omicslab platform. Instead of fitting your work into a fixed product, you describe the outcome you need, we scope it together, build it and hand it over working.\n\nOne engagement can be a single pipeline or a whole environment: an HPC cluster built and connected to the platform, the platform deployed privately for your own users, or the pipelines your analysis depends on developed and integrated with what you already run.",
+        "Describe the problem and the goal — we design, develop and deliver the complete system together with you.",
       searchPlaceholder: "Search custom solutions...",
       available: {
-        title: "What we build for you",
-        paragraph:
-          "Every request starts from your own setup: the cluster, storage, pipelines and team you already have. The three services below are what customers ask for most often, and anything adjacent — custom analysis, data curation, LIMS and plugin integrations, team training — starts from the same conversation. We publish part of this work as technical posts below.",
+        title: "Choose what you need:",
         categories: [
           {
-            title: "HPC build & platform integration",
-            items: [
-              "Design and build Slurm HPC clusters, on-premises or in the cloud",
-              "Register your cluster with the platform via the SDK",
-              "Connect S3-compatible storage and shared project data",
-              "Handover with Ansible automation, documentation and training",
-            ],
+            title: "Pipeline development",
+            paragraph:
+              "Programming and integration of new analysis tools into your existing system.",
           },
           {
-            title: "Private platform deployment",
-            items: [
-              "Deploy the platform for your own usage instead of a shared instance",
-              "Your organization, your users and your data — nothing shared",
-              "On-premises or your own cloud, air-gapped environments on request",
-              "Upgrades, maintenance and support handled by us",
-            ],
+            title: "Infrastructure deployment & optimization",
+            paragraph:
+              "Build HPC clusters, configure S3 storage dedicated to omics data, or set up your own private cloud infrastructure.",
           },
           {
-            title: "Pipeline development & integration",
-            items: [
-              "Build pipelines for your specific requests: Nextflow, Snakemake, bash",
-              "Consult on how to integrate the pipelines you already run",
-              "Parameter schemas, nf-core conventions and testing",
-              "Migrate existing workflows onto the platform",
-            ],
+            title: "Private platform",
+            paragraph:
+              "Deploy a standalone Omicslab instance dedicated to your own users.",
           },
         ],
       },
