@@ -205,7 +205,7 @@ export const policiesEn: Policies = {
           {
             type: "ul",
             items: [
-              "**Account data:** stored for as long as the account is active. After the account is closed, the account and its related data are only **deactivated, never deleted**, so that the date on which any issue, dispute or legal incident arose can still be traced and evidenced at the request of a competent authority or the parties concerned, in accordance with Vietnamese law on the retention of records and documents.",
+              "**Account data:** stored for as long as the account is active. After the account is closed, the account and its related data are only **deactivated** and retained for the period required by law (limitation periods, and statutory obligations to retain records, documents and invoices), so that the date on which any issue, dispute or legal incident arose can still be traced and evidenced at the request of a competent authority or the parties concerned. Once that period expires, the data is **deleted or anonymised**, under the exception already stated in Section 8.",
               "**Usage & audit data:** retained for the periods required by Vietnamese accounting, tax and cybersecurity law.",
               "**Research data (object storage):** held in the platform’s object storage service (Marketplace) on a **pay-as-you-go basis, billed in monthly cycles**, and only for the cycle you have paid for. If you no longer subscribe to any plan, or do not renew the storage cycle, workspace access is blocked, the data is retained for a **one-month grace period** and is then **removed from the workspace entirely** — only the audit log is kept for tracing purposes. You may also delete data yourself at any time on the Platform, or deletion is carried out under a signed data processing agreement (DPA).",
               "**Top-up balance (organization wallet):** prepaid credit can only be spent while your organization has a live subscription. Once the subscription lapses — expired or cancelled, with no renewal in flight — the **remaining balance is forfeited and reset to zero**, so a top-up cannot be spent without an active plan. Organizations that have never subscribed keep any balance they hold. The forfeiture sweep runs automatically every day.",
@@ -229,6 +229,10 @@ export const policiesEn: Policies = {
               "Regular security reviews and vulnerability assessments.",
               "Only assigned personnel bound by strict confidentiality obligations may access technical support information, and only upon your written request.",
             ],
+          },
+          {
+            type: "p",
+            text: "These measures are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform is ready for stricter requirements in the future; as of the date of this Policy, Omicslab **holds no certification** under any of those frameworks.",
           },
           {
             type: "p",
@@ -287,7 +291,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law.",
+            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is website traffic analytics (Google Analytics): traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10.",
           },
         ],
       },
@@ -354,7 +358,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "You must be at least **18 years of age** to create an account or use the Platform. By registering, you represent and warrant that you are 18 years of age or older and are legally capable of entering into a binding agreement. The Platform is not intended for individuals under 18, and we do not knowingly collect personal data from minors. If we become aware that a user is under 18, we will terminate the account and delete associated personal data without undue delay.",
+            text: "You must be at least **18 years of age** to create an account or use the Platform. By registering, you represent and warrant that you are 18 years of age or older and are legally capable of entering into a binding agreement. The Platform is not intended for individuals under 18, and we do not knowingly collect personal data from minors. If we become aware that a user is under 18, we will deactivate the account and handle the associated personal data in accordance with our [Privacy Policy](/privacy) — deleted or anonymised as required by law.",
           },
           {
             type: "p",
@@ -368,14 +372,14 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "The Platform may be used to store, process and analyse **sensitive data**, including human genomic, genetic, health-related and other special-category data as defined under the General Data Protection Regulation (GDPR) and Vietnamese law. Because of the sensitivity of this data, you agree that:",
+            text: "The Platform may be used to store, process and analyse **sensitive data**, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law (with the GDPR and HIPAA as additional reference frameworks the Platform designs toward). Because of the sensitivity of this data, you agree that:",
           },
           {
             type: "ul",
             items: [
               "You have obtained all required ethical approvals, informed consents and authorisations needed to process the data you upload, in accordance with applicable law and your institution’s review boards.",
               "You will not upload data collected from individuals who have not consented to its processing for bioinformatics research, except where permitted by law.",
-              "You remain the data controller (or an authorised processor under your own agreements) for data you upload, and you are responsible for ensuring your use complies with all applicable data protection legislation, including the GDPR and the Law on Personal Data Protection (Law No. 91/2025/QH15).",
+              "You remain the data controller (or an authorised processor under your own agreements) for data you upload, and you are responsible for ensuring your use complies with all applicable data protection legislation, including the Law on Personal Data Protection (Law No. 91/2025/QH15) and, where applicable, the GDPR or HIPAA.",
               "You will not use the Platform to store unlawful content or data whose processing would violate the rights of any person.",
             ],
           },
@@ -414,7 +418,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "We process personal data in accordance with the GDPR, the Law on Personal Data Protection (Law No. 91/2025/QH15) and equivalent regulations. Key commitments include:",
+            text: "We process personal data in accordance with the Personal Data Protection Law No. 91/2025/QH15, Decree No. 356/2025/ND-CP and equivalent regulations. Our systems and processes are also **designed to align with** the GDPR (EU) and HIPAA (US) should those frameworks come into scope for us in the future — Omicslab **holds no certification** under either of them today. Key commitments include:",
           },
           {
             type: "ul",
@@ -654,6 +658,10 @@ export const policiesEn: Policies = {
           {
             type: "p",
             text: "Administrative penalties for cybersecurity and personal data protection violations are set out in Decree No. 330/2026/ND-CP, in force since 19 August 2026. This posture reflects the current Vietnam operation only. Should the platform expand internationally, the compliance framework and any relevant certificates will be updated and published on this page.",
+          },
+          {
+            type: "p",
+            text: "Omicslab’s systems, controls and processes are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform can serve regulated workloads in those jurisdictions in the future. As of the date of this page, Omicslab **has not been certified, audited or attested** under GDPR, HIPAA or any other international certification scheme — the statements here describe design intent and compliance with Vietnamese law only. Any certification obtained will be published on this page.",
           },
           {
             type: "p",
