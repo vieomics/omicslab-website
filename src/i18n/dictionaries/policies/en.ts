@@ -208,7 +208,7 @@ export const policiesEn: Policies = {
               "**Account data:** stored for as long as the account is active. After the account is closed, the account and its related data are only **deactivated** and retained for the period required by law (limitation periods, and statutory obligations to retain records, documents and invoices), so that the date on which any issue, dispute or legal incident arose can still be traced and evidenced at the request of a competent authority or the parties concerned. Once that period expires, the data is **deleted or anonymised**, under the exception already stated in Section 8.",
               "**Usage & audit data:** retained for the periods required by Vietnamese accounting, tax and cybersecurity law.",
               "**Research data (object storage):** held in the platform’s object storage service (Marketplace) on a **pay-as-you-go basis, billed in monthly cycles**, and only for the cycle you have paid for. If you no longer subscribe to any plan, or do not renew the storage cycle, workspace access is blocked, the data is retained for a **one-month grace period** and is then **removed from the workspace entirely** — only the audit log is kept for tracing purposes. You may also delete data yourself at any time on the Platform, or deletion is carried out under a signed data processing agreement (DPA).",
-              "**Top-up balance (organization wallet):** prepaid credit can only be spent while your organization has a live subscription. Once the subscription lapses — expired or cancelled, with no renewal in flight — the **remaining balance is forfeited and reset to zero**, so a top-up cannot be spent without an active plan. Organizations that have never subscribed keep any balance they hold. The forfeiture sweep runs automatically every day.",
+              "**Top-up balance (organization wallet):** prepaid credit can only be spent while your organization has a live subscription. Once the subscription lapses — expired or cancelled, with no renewal in flight — the **remaining balance is forfeited and reset to zero**, so a top-up cannot be spent without an active plan. Organizations that have never subscribed keep any balance they hold. The forfeiture sweep runs automatically every day. Payment terms, advance email notices and all deadlines are set out in Section 13 of our [Terms of Service](/terms).",
             ],
           },
         ],
@@ -236,6 +236,10 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
+            text: "If a personal data protection violation is detected (leakage, loss or unauthorised access to personal data), we draw up an official record and **notify the specialised personal data protection authority and the data subjects concerned within 72 hours of detection**, while activating our internal incident-response procedure. Incident records are kept for at least five years after the incident has been remediated.",
+          },
+          {
+            type: "p",
             text: "See the full standards on our [Security & Compliance](/security) page.",
           },
         ],
@@ -258,6 +262,10 @@ export const policiesEn: Policies = {
           {
             type: "p",
             text: "Your research data is never shared with third parties unless you instruct us to do so.",
+          },
+          {
+            type: "p",
+            text: "**Service providers for this website:** (i) **Cloudflare Pages** — distributes the site’s static files (we do not enable Cloudflare’s analytics services); (ii) **Google Analytics** — runs only after you accept the cookie notice in Section 10; (iii) **DMCA.com** — displays the protection badge. For the Platform, we work with Marketplace infrastructure partners and the payment gateway, all bound by data processing agreements (DPA).",
           },
         ],
       },
@@ -291,7 +299,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is traffic analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics: traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10.",
+            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is traffic analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics: traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10. This service **runs only after you press Accept** in the cookie notice (Section 10); if you decline, no data is transferred.",
           },
         ],
       },
@@ -301,15 +309,19 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "We use essential cookies and session tokens to maintain your login state and protect your account. These are required for the Platform to operate.",
+            text: "**Essential cookies:** used to keep you signed in and protect your account on the Platform — strictly necessary, no consent required.",
           },
           {
             type: "p",
-            text: "This website (the landing page) uses Google Analytics to analyse traffic in aggregated, anonymised form. The Omicslab Platform itself does not use Google Analytics.",
+            text: "**Analytics cookies (Google Analytics — this website):** used to see traffic in aggregated form. They are **enabled only after you press “Accept”** in the cookie notice at the bottom of this page; if you choose “Decline”, Google Analytics is not loaded and no cookie is set. The Omicslab Platform does not use Google Analytics.",
           },
           {
             type: "p",
-            text: "We do not use third-party advertising or tracking cookies. You can manage or delete cookies at any time through your browser settings.",
+            text: "**No advertising cookies:** we do not use third-party advertising or tracking cookies.",
+          },
+          {
+            type: "p",
+            text: "**You can change your mind at any time:** delete cookies and site data in your browser settings — the notice will appear again on your next visit so you can choose again.",
           },
         ],
       },
@@ -500,6 +512,26 @@ export const policiesEn: Policies = {
           {
             type: "p",
             text: "Questions about these Terms may be directed to us through our [Contact](/contact) page or to **contact@omicslab.io**, or to the data protection contact referenced in the [Privacy Policy](/privacy).",
+          },
+        ],
+      },
+      {
+        id: "billing",
+        title: "13. Billing, Balance and Data Cycles",
+        blocks: [
+          {
+            type: "p",
+            text: "The payment terms and cycles below apply to the Platform; detailed data retention periods are set out in our [Privacy Policy](/privacy).",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Subscription:** billed in cycles, normally monthly. Renewal must be completed before the current cycle ends.",
+              "**Marketplace storage (pay-as-you-go):** storage capacity is charged on a usage basis in monthly cycles, tied to your subscription, and cannot extend beyond the term of the subscription that is in force.",
+              "**Advance email notices:** before any action is taken we email your administrators — a reminder **7 days** before the storage cycle ends, and a notice as soon as it expires. After expiry, data is retained for a **one-month grace period** before it is cleaned up.",
+              "**Workspace cleanup:** once the grace period passes, workspace data is deleted — only the audit log is kept for tracing purposes (details in Section 5 of our [Privacy Policy](/privacy)).",
+              "**Top-up balance:** can only be spent while your organization has an active subscription. When the subscription expires or is cancelled with no renewal in flight, the remaining balance is forfeited and reset to zero; balance information and deadlines are also sent by email before this is applied.",
+            ],
           },
         ],
       },
