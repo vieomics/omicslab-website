@@ -86,10 +86,10 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
             <Image
               src="/images/logo/vieomics-white.svg"
               alt="Vieomics"
-              width={1818}
-              height={464}
+              width={1802}
+              height={323}
               priority
-              className="block h-[20px] w-auto sm:h-[26px]"
+              className="block h-[15px] w-auto sm:h-[19px]"
             />
             <span aria-hidden="true" className="w-px self-stretch bg-white/40" />
             <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white uppercase sm:text-[26px]">
