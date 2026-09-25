@@ -58,6 +58,12 @@ docker compose up -d --build   # Build image and run with traefik on :80/:443
 - Content markdown image paths are rewritten by markdown.ts from relative to `/blogs/<locale>/`
 - If an image is missing in the post's locale, the resolver falls back to the other locale's folder (translations reuse English screenshots)
 
+### Policy pages (Privacy, Terms, Security)
+- Content lives in `src/i18n/dictionaries/policies/{en,vi}.ts`, wired into both dictionaries as the `policies` key (`vi.ts` is typed as `Policies`, so a missing translation fails the build)
+- Long-form copy uses light inline markup — `**bold**` and `[label](/path)` — rendered by `src/components/Legal/index.tsx`, which localises every link with `localizeHref`
+- Routes: `/privacy`, `/terms`, `/security`, `/security/compliance`, `/security/responsibility` (each in `(vi)` and `en`), all thin pages wrapping `src/views/LegalView.tsx`
+- Linked from the footer and listed in `src/app/sitemap.ts`
+
 ### Styling
 - Tailwind CSS v4 with `@import "tailwindcss"` (no PostCSS config, no UI kit plugin)
 - Editorial monochrome theme tokens in `@theme`: `--color-ink`, `--color-black`, `--color-charcoal`, `--color-accent`, `--color-paper`, `--color-paper-light`, `--color-muted`, `--color-line`
