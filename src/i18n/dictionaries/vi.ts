@@ -521,7 +521,7 @@ export const vi: Dictionary = {
         "Dịch vụ tin sinh học và nền tảng theo yêu cầu: xây dựng HPC và tích hợp với nền tảng, triển khai nền tảng riêng, phát triển và tích hợp quy trình.",
       title: "Giải pháp tùy chỉnh",
       subtitle:
-        "Bạn nêu yêu cầu cụ thể, chúng tôi xây dựng: cụm HPC tích hợp với nền tảng, bản triển khai riêng cho đội của bạn, và các quy trình được thiết kế quanh dữ liệu của bạn.",
+        "Bạn nêu yêu cầu cụ thể, chúng tôi xây dựng: cụm HPC tích hợp với nền tảng, triển khai cho tổ chức của bạn, và các quy trình được thiết kế quanh dữ liệu của bạn.",
       intro:
         "Giải pháp tùy chỉnh là dịch vụ dành cho các yêu cầu cụ thể về tin sinh học và trên nền tảng Omicslab. Thay vì ép công việc vào một sản phẩm cố định, bạn mô tả kết quả cần đạt, chúng tôi cùng chốt phạm vi, xây dựng và bàn giao vận hành được.\n\nMột hợp tác có thể chỉ là một quy trình, hoặc cả một môi trường: cụm HPC được dựng và kết nối vào nền tảng, nền tảng được triển khai riêng cho người dùng của bạn, hoặc các quy trình mà phân tích của bạn phụ thuộc được phát triển và tích hợp với cái bạn đang chạy.",
       searchPlaceholder: "Tìm kiếm giải pháp tùy chỉnh...",
