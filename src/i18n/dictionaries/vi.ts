@@ -143,6 +143,13 @@ export const vi: Dictionary = {
     security: "Bảo mật & Tuân thủ",
   },
   policies: policiesVi,
+  cookieConsent: {
+    title: "Phân tích lưu lượng truy cập",
+    message:
+      "Trang web này dùng cookie của Google Analytics để hiểu khách truy cập sử dụng trang như thế nào. Cookie chỉ được bật sau khi bạn bấm Chấp nhận; nếu bạn từ chối, Google Analytics sẽ không được tải và không cookie nào được tạo. Việc từ chối không ảnh hưởng đến khả năng xem trang của bạn.",
+    accept: "Chấp nhận",
+    decline: "Từ chối",
+  },
   common: {
     home: "Trang chủ",
     all: "Tất cả",

@@ -263,6 +263,10 @@ export const policiesEn: Policies = {
             type: "p",
             text: "Your research data is never shared with third parties unless you instruct us to do so.",
           },
+          {
+            type: "p",
+            text: "**Service providers for this website:** (i) **Cloudflare Pages** — distributes the site’s static files (we do not enable Cloudflare’s analytics services); (ii) **Google Analytics** — runs only after you accept the cookie notice in Section 10; (iii) **DMCA.com** — displays the protection badge. For the Platform, we work with Marketplace infrastructure partners and the payment gateway, all bound by data processing agreements (DPA).",
+          },
         ],
       },
       {
@@ -295,7 +299,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is traffic analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics: traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10.",
+            text: "Omicslab’s servers, compute infrastructure and object storage are hosted 100% in standard-compliant data centres located within Vietnam, in strict compliance with the Cybersecurity Law and Decree 53/2022/ND-CP. Where any personal data is transferred abroad, we commit to completing the impact assessment procedures required by Vietnamese law. The only exception is traffic analytics on **this website (the landing page)** — the Platform itself does not use Google Analytics: traffic data (including IP addresses) is processed by our analytics provider as a processor and is not used for advertising — see Section 10. This service **runs only after you press Accept** in the cookie notice (Section 10); if you decline, no data is transferred.",
           },
         ],
       },
@@ -305,15 +309,19 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "We use essential cookies and session tokens to maintain your login state and protect your account. These are required for the Platform to operate.",
+            text: "**Essential cookies:** used to keep you signed in and protect your account on the Platform — strictly necessary, no consent required.",
           },
           {
             type: "p",
-            text: "This website (the landing page) uses Google Analytics to analyse traffic in aggregated, anonymised form. The Omicslab Platform itself does not use Google Analytics.",
+            text: "**Analytics cookies (Google Analytics — this website):** used to see traffic in aggregated form. They are **enabled only after you press “Accept”** in the cookie notice at the bottom of this page; if you choose “Decline”, Google Analytics is not loaded and no cookie is set. The Omicslab Platform does not use Google Analytics.",
           },
           {
             type: "p",
-            text: "We do not use third-party advertising or tracking cookies. You can manage or delete cookies at any time through your browser settings.",
+            text: "**No advertising cookies:** we do not use third-party advertising or tracking cookies.",
+          },
+          {
+            type: "p",
+            text: "**You can change your mind at any time:** delete cookies and site data in your browser settings — the notice will appear again on your next visit so you can choose again.",
           },
         ],
       },
