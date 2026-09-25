@@ -337,6 +337,7 @@ export const policiesEn: Policies = {
             type: "ul",
             items: [
               "Responsible legal entity: **VIEOMICS COMPANY LIMITED**",
+              "Data protection contact (DPO): **Nguyen Tan Thanh Giang** — **giangnguyen@omicslab.io**",
               "Website: the [Contact](/contact) page",
               "Email: **contact@omicslab.io** (please state “Privacy Request” in the subject line)",
             ],
