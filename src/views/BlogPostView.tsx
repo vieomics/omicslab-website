@@ -92,8 +92,10 @@ export default function BlogPostView({
 
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
             <div className="min-w-0 lg:col-span-9">
-              <div className="blog-details xl:pr-10">
-                <div dangerouslySetInnerHTML={{ __html: content }}></div>
+              <div className="border border-line bg-paper-light p-6 sm:p-10">
+                <div className="blog-details xl:pr-6">
+                  <div dangerouslySetInnerHTML={{ __html: content }}></div>
+                </div>
               </div>
             </div>
             <aside className="min-w-0 lg:col-span-3">
