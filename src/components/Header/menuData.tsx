@@ -36,7 +36,7 @@ export default function getMenuData(dict: Dictionary): Menu[] {
         {
           id: 63,
           title: dict.nav.pipelinesSoftwares,
-          path: "/solutions/pipelines-softwares",
+          path: "/solutions/custom-solutions",
           newTab: false,
         },
       ],

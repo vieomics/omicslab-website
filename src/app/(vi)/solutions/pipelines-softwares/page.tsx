@@ -8,7 +8,7 @@ const dict = getDictionary("vi");
 
 export const metadata: Metadata = pageMetadata({
   locale: "vi",
-  path: "/solutions/pipelines-softwares",
+  path: "/solutions/custom-solutions",
   title: dict.solutions.pipelines.metadataTitle,
   description: dict.solutions.pipelines.metadataDescription,
 });
