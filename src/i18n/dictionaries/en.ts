@@ -159,10 +159,7 @@ export const en = {
     readInOtherLanguage: "Read in Vietnamese",
   },
   authors: {
-    river: {
-      title:
-        "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
-    },
+    river: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
