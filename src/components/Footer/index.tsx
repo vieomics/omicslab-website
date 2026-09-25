@@ -60,13 +60,13 @@ const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
           </Link>
           </div>
           <a
-            href="//www.dmca.com/Protection/Status.aspx?ID=3176313a-4420-457e-8cd0-68c337f0f030"
+            href="//www.dmca.com/Protection/Status.aspx?ID=37fe2a31-d91c-449b-83cf-64f02ec334e4"
             title="DMCA.com Protection Status"
             className="dmca-badge"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=3176313a-4420-457e-8cd0-68c337f0f030"
+              src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=37fe2a31-d91c-449b-83cf-64f02ec334e4"
               alt="DMCA.com Protection Status"
             />
           </a>
