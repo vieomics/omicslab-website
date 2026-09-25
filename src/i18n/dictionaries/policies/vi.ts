@@ -157,7 +157,7 @@ export const policiesVi: Policies = {
           {
             type: "ul",
             items: [
-              "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated), không bao giờ bị xóa**, để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan, đúng theo quy định của pháp luật về lưu trữ hồ sơ và chứng từ.",
+              "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated)** và được lưu giữ trong thời hạn mà pháp luật yêu cầu (thời hiệu khiếu nại, nghĩa vụ lưu trữ hồ sơ, chứng từ và hóa đơn), để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan. Hết thời hạn đó, dữ liệu bị **xóa hoặc ẩn danh hóa** theo ngoại lệ đã nêu tại Mục 8.",
               "**Dữ liệu sử dụng & kiểm toán:** Lưu trữ theo thời hạn quy định của pháp luật về kế toán, thuế và an ninh mạng.",
               "**Dữ liệu nghiên cứu (Object Storage):** được lưu trữ trên dịch vụ lưu trữ đối tượng (Object Storage) của Marketplace theo mô hình **trả theo mức sử dụng, tính theo chu kỳ tháng (pay-as-you-go)** và chỉ có hiệu lực trong chu kỳ bạn đã trả. Nếu bạn không còn đăng ký bất kỳ gói dịch vụ nào hoặc không gia hạn chu kỳ lưu trữ, quyền truy cập workspace sẽ bị khóa, dữ liệu được giữ lại trong thời gian **ân hạn 1 tháng**, sau đó **bị dọn dẹp toàn bộ khỏi workspace** — chỉ nhật ký audit được giữ lại cho mục đích tra cứu. Bạn cũng có thể tự xóa dữ liệu bất cứ lúc nào trên Nền tảng, hoặc việc xóa được thực hiện theo thỏa thuận xử lý dữ liệu (DPA) đã ký kết.",
               "**Số dư Top-up (ví tiền tổ chức):** Số dư tiền nạp (top-up) chỉ có thể sử dụng khi tổ chức của bạn còn gói đăng ký hiệu lực. Khi gói đăng ký hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, **số dư còn lại bị thu hồi và đưa về 0** — số tiền nạp không thể tiếp tục sử dụng khi không còn gói dịch vụ. Tổ chức chưa từng đăng ký gói thì số dư (nếu có) không bị thu hồi. Việc thu hồi được rà soát tự động theo chu kỳ hằng ngày.",
@@ -181,6 +181,10 @@ export const policiesVi: Policies = {
               "Rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
               "Chỉ những nhân sự được phân công và chịu cam kết bảo mật nghiêm ngặt mới có quyền truy cập thông tin hỗ trợ kỹ thuật khi có yêu cầu bằng văn bản từ bạn.",
             ],
+          },
+          {
+            type: "p",
+            text: "Các biện pháp này được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai; tính đến ngày cập nhật của Chính sách này, Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó.",
           },
           {
             type: "p",
@@ -239,7 +243,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam.",
+            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập website (Google Analytics): dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10.",
           },
         ],
       },
@@ -306,7 +310,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn phải từ **đủ 18 tuổi** trở lên mới được tạo tài khoản hoặc sử dụng Nền tảng. Khi đăng ký, bạn cam kết mình từ 18 tuổi trở lên và có năng lực pháp lý để tham gia thỏa thuận có ràng buộc. Nền tảng không dành cho người chưa đủ 18 tuổi, và chúng tôi không chủ động thu thập dữ liệu cá nhân của người chưa thành niên. Nếu phát hiện người dùng dưới 18 tuổi, chúng tôi sẽ chấm dứt tài khoản và xóa dữ liệu cá nhân liên quan mà không chậm trễ đáng kể.",
+            text: "Bạn phải từ **đủ 18 tuổi** trở lên mới được tạo tài khoản hoặc sử dụng Nền tảng. Khi đăng ký, bạn cam kết mình từ 18 tuổi trở lên và có năng lực pháp lý để tham gia thỏa thuận có ràng buộc. Nền tảng không dành cho người chưa đủ 18 tuổi, và chúng tôi không chủ động thu thập dữ liệu cá nhân của người chưa thành niên. Nếu phát hiện người dùng dưới 18 tuổi, chúng tôi sẽ vô hiệu hóa tài khoản và xử lý dữ liệu cá nhân liên quan theo [Chính sách Quyền riêng tư](/privacy) — xóa hoặc ẩn danh hóa theo yêu cầu của pháp luật.",
           },
           {
             type: "p",
@@ -320,14 +324,14 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nền tảng có thể được dùng để lưu trữ, xử lý và phân tích **dữ liệu nhạy cảm**, bao gồm dữ liệu bộ gen, di truyền, liên quan đến sức khỏe và dữ liệu danh mục đặc biệt khác của người theo định nghĩa của GDPR và pháp luật Việt Nam. Vì tính nhạy cảm của dữ liệu này, bạn đồng ý rằng:",
+            text: "Nền tảng có thể được dùng để lưu trữ, xử lý và phân tích **dữ liệu nhạy cảm**, bao gồm dữ liệu bộ gen, di truyền, liên quan đến sức khỏe và dữ liệu danh mục đặc biệt khác của người theo định nghĩa của pháp luật Việt Nam (tham chiếu thêm GDPR và HIPAA — các khung chuẩn mà Nền tảng đang hướng tới). Vì tính nhạy cảm của dữ liệu này, bạn đồng ý rằng:",
           },
           {
             type: "ul",
             items: [
               "Bạn đã có các chấp thuận đạo đức, sự đồng ý có hiểu biết và ủy quyền cần thiết để xử lý dữ liệu bạn tải lên, theo pháp luật hiện hành và các hội đồng đạo đức của tổ chức bạn.",
               "Bạn không tải lên dữ liệu thu thập từ những người chưa đồng ý xử lý cho nghiên cứu tin sinh học, trừ khi pháp luật cho phép.",
-              "Bạn vẫn là người kiểm soát dữ liệu (hoặc người xử lý được ủy quyền theo thỏa thuận của riêng bạn) đối với dữ liệu bạn tải lên, và chịu trách nhiệm bảo đảm việc sử dụng tuân thủ mọi luật bảo vệ dữ liệu hiện hành, gồm GDPR và Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15).",
+              "Bạn vẫn là người kiểm soát dữ liệu (hoặc người xử lý được ủy quyền theo thỏa thuận của riêng bạn) đối với dữ liệu bạn tải lên, và chịu trách nhiệm bảo đảm việc sử dụng tuân thủ mọi luật bảo vệ dữ liệu hiện hành, gồm Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và, khi áp dụng, GDPR hoặc HIPAA.",
               "Bạn không sử dụng Nền tảng để lưu trữ nội dung trái pháp luật hoặc dữ liệu mà việc xử lý xâm phạm quyền của bất kỳ người nào.",
             ],
           },
@@ -366,7 +370,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Chúng tôi xử lý dữ liệu cá nhân theo GDPR, Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và các quy định tương đương. Các cam kết chính gồm:",
+            text: "Chúng tôi xử lý dữ liệu cá nhân theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15), Nghị định 356/2025/NĐ-CP và các quy định tương đương. Các hệ thống và quy trình của chúng tôi cũng được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) khi hai khung này đi vào áp dụng với chúng tôi trong tương lai — hiện Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó. Các cam kết chính gồm:",
           },
           {
             type: "ul",
@@ -606,6 +610,10 @@ export const policiesVi: Policies = {
           {
             type: "p",
             text: "Xử phạt vi phạm trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân được quy định tại Nghị định 330/2026/NĐ-CP, có hiệu lực từ ngày 19 tháng 8 năm 2026. Cam kết này chỉ phản ánh hoạt động tại Việt Nam hiện nay. Nếu nền tảng mở rộng ra quốc tế, khung tuân thủ và mọi chứng nhận liên quan sẽ được cập nhật và công bố trên trang này.",
+          },
+          {
+            type: "p",
+            text: "Hệ thống, biện pháp kiểm soát và quy trình của Omicslab được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng có thể phục vụ các khối lượng công việc chịu yêu cầu nghiêm ngặt tại các khu vực này trong tương lai. Tính đến thời điểm trang này, Omicslab **chưa được chứng nhận, đánh giá độc lập hoặc công nhận** theo GDPR, HIPAA hay bất kỳ chương trình chứng nhận quốc tế nào — nội dung tại đây chỉ mô tả định hướng thiết kế và việc tuân thủ pháp luật Việt Nam. Mọi chứng nhận đạt được sẽ được công bố trên trang này.",
           },
           {
             type: "p",
