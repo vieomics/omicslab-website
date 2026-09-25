@@ -89,7 +89,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
               width={1818}
               height={464}
               priority
-              className="block h-[18px] w-auto sm:h-[22px]"
+              className="block h-[20px] w-auto sm:h-[26px]"
             />
             <span aria-hidden="true" className="w-px self-stretch bg-white/40" />
             <span className="font-display text-[20px] leading-[0.9] font-extrabold tracking-[-0.015em] text-white uppercase sm:text-[26px]">
