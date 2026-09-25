@@ -63,7 +63,7 @@ const SingleBlog = ({
         <span className="micro-label mb-4 inline-flex w-fit border border-line px-3 py-1.5 text-muted">
           {date ? formatDate(date, locale) : dict.common.noDate}
         </span>
-        <h3 className="display-md mb-4">
+        <h3 className="display-sm mb-4">
           <Link
             href={href}
             className="text-ink transition-colors hover:text-muted"
