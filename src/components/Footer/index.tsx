@@ -60,8 +60,8 @@ const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
           </Link>
           </div>
           <a
-            href="//www.dmca.com/Protection/Status.aspx?ID=a37d795a-3698-4b42-b62a-163d02b5aadf"
-            title="DMCA.com Protection Status"
+            href="https://www.dmca.com/site-report/omicslab.io"
+            title="DMCA.com Site Report"
             className="dmca-badge"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
