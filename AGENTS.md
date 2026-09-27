@@ -21,7 +21,6 @@ npm run dev        # Next.js dev server on :3100
 npm run build      # Generate search index + static export to out/
 npm run preview    # Node.js static server serving out/ on :3000
 npm run lint       # ESLint
-docker compose up -d --build   # Build image and run with traefik on :80/:443
 ```
 
 ## Architecture Rules
