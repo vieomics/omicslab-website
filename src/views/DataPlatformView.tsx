@@ -133,7 +133,7 @@ export default function DataPlatformView({
         <div className="page-width">
           <h2 className="display-md text-ink">{t.pricing.title}</h2>
 
-          <div className="border-line bg-line mt-10 grid gap-px border md:grid-cols-3">
+          <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-4">
             {t.pricing.subscription.tiers.map((tier) => (
               <div
                 key={tier.name}
