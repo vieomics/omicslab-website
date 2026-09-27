@@ -3,10 +3,26 @@ import { policiesEn } from "./policies/en";
 
 const subscription = {
   subtitle: "Subscription",
-  title: "Three Tiers, Sized to Your Team",
+  title: "Four Tiers, from Individual to Business",
   paragraph:
     "Limits — workspaces, members and concurrent jobs — scale by tier, while compute and storage stay usage-based.",
   tiers: [
+    {
+      name: "Individual",
+      highlight: "Individual learners",
+      price: "100,000 VND",
+      period: "/month",
+      features: [
+        "1 workspace",
+        "1 organization member, 1 member per workspace",
+        "1 Studio session and 1 analysis job at once",
+        "Support SLA: response within 7 business days",
+        "Storage billed by usage",
+        "The full platform feature set",
+      ],
+      cta: "Sign up with Individual",
+      ctaHref: "https://platform.omicslab.io",
+    },
     {
       name: "Lite",
       highlight: "Individuals and small teams",
@@ -16,7 +32,6 @@ const subscription = {
         "Up to 2 workspaces",
         "1 organization member, 3 members per workspace",
         "5 Studio sessions and 5 analysis jobs at once",
-        "LIMS included by default",
         "Support SLA: response within 24 business hours",
         "Storage billed by usage",
         "The full platform feature set",
@@ -92,7 +107,7 @@ const topup = {
     [
       { strong: "Pipelines:" },
       {
-        text: " nf-core pipelines are free; OmicsLab pipelines are tailored to your request; metagenomics assembly 100,000 VND/sample.",
+        text: " Community pipelines such as nf-core and bacass are free — you only pay for compute and storage. Custom OmicsLab pipelines are built to your request and priced per sample, from 100,000 VND/sample.",
       },
     ],
   ] as TextSegment[][],
@@ -385,7 +400,17 @@ export const en = {
         subscription,
         topup,
         trialNote: [
-          { text: "For a trial or support, reach us at " },
+          { strong: "Note:" },
+          {
+            text: " The prices are for self-service use. Following the platform documentation, you create and run the analysis yourself — Vieomics does not receive your data, run everything for you and hand back the results. If you want a fully managed service, see ",
+          },
+          {
+            link: {
+              href: "/solutions/custom-solutions",
+              text: "Custom Solutions",
+            },
+          },
+          { text: ". For a trial or support, reach us at " },
           {
             link: {
               href: "mailto:contact@omicslab.io",
@@ -405,7 +430,7 @@ export const en = {
             },
             rows: [
               {
-                item: "Metagenomics assembly",
+                item: "Metagenomics assembly (OmicsLab custom pipeline)",
                 unitPrice: "100,000 VND/sample",
                 qty: "100",
                 subtotal: "10,000,000 VND",
@@ -425,12 +450,12 @@ export const en = {
               {
                 item: "Storage (object storage)",
                 unitPrice: "500 VND/GB",
-                qty: "~50 GB",
-                subtotal: "~25,000 VND",
+                qty: "~5 GB/sample × 100 = ~500 GB",
+                subtotal: "~250,000 VND",
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~15,025,000 VND",
+            total: "~15,250,000 VND (~5,250,000 VND with nf-core/bacass)",
             footnote: [
               {
                 text: "* Estimates based on typical bacterial genome assembly workload. Actual costs may vary. ",
@@ -449,7 +474,7 @@ export const en = {
             },
             rows: [
               {
-                item: "16S rRNA analysis",
+                item: "16S rRNA analysis (OmicsLab custom pipeline)",
                 unitPrice: "100,000 VND/sample",
                 qty: "100",
                 subtotal: "10,000,000 VND",
@@ -469,12 +494,12 @@ export const en = {
               {
                 item: "Storage (object storage)",
                 unitPrice: "500 VND/GB",
-                qty: "~10 GB",
+                qty: "~100 MB/sample × 100 = ~10 GB",
                 subtotal: "~5,000 VND",
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~12,005,000 VND",
+            total: "~12,005,000 VND (~2,005,000 VND with nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Estimates based on typical 16S rRNA analysis workload. Actual costs may vary. ",
