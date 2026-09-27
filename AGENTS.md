@@ -17,7 +17,7 @@ Static website for Omicslab — a bioinformatics blog and landing page. Next.js 
 ## Commands
 
 ```bash
-npm run dev        # Next.js dev server on :3000
+npm run dev        # Next.js dev server on :3100
 npm run build      # Generate search index + static export to out/
 npm run preview    # Node.js static server serving out/ on :3000
 npm run lint       # ESLint
