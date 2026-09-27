@@ -15,7 +15,7 @@ Static website for [Omicslab](https://omicslab.io) — innovative bioinformatics
 
 ```bash
 npm install
-npm run dev       # development server on :3000
+npm run dev       # development server on :3100
 npm run build     # static export to out/
 npm run preview   # serve out/ locally on :3000
 ```
