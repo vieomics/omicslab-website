@@ -4,10 +4,26 @@ import { policiesVi } from "./policies/vi";
 
 const subscription = {
   subtitle: "Gói sử dụng",
-  title: "Ba gói, tùy quy mô của bạn",
+  title: "Bốn gói, từ cá nhân đến doanh nghiệp",
   paragraph:
     "Giới hạn — workspace, thành viên và số job chạy đồng thời — tăng theo gói, trong khi tính toán và lưu trữ vẫn tính theo mức sử dụng.",
   tiers: [
+    {
+      name: "Individual",
+      highlight: "Cá nhân & người tự học",
+      price: "100.000 VND",
+      period: "/tháng",
+      features: [
+        "1 workspace",
+        "1 thành viên tổ chức, 1 thành viên mỗi workspace",
+        "1 job Studio và 1 job phân tích chạy đồng thời",
+        "SLA hỗ trợ: phản hồi trong 7 ngày làm việc",
+        "Lưu trữ tính theo dung lượng dùng",
+        "Đầy đủ tính năng của nền tảng",
+      ],
+      cta: "Đăng ký gói Individual",
+      ctaHref: "https://platform.omicslab.io",
+    },
     {
       name: "Lite",
       highlight: "Cá nhân & nhóm nhỏ",
@@ -17,7 +33,6 @@ const subscription = {
         "Tối đa 2 workspace",
         "1 thành viên tổ chức, 3 thành viên mỗi workspace",
         "5 job Studio và 5 job phân tích chạy đồng thời",
-        "LIMS đi kèm theo mặc định",
         "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
         "Lưu trữ tính theo dung lượng dùng",
         "Đầy đủ tính năng của nền tảng",
@@ -91,7 +106,7 @@ const topup = {
     [
       { strong: "Quy trình:" },
       {
-        text: " Quy trình nf-core miễn phí; quy trình OmicsLab được điều chỉnh theo yêu cầu; lắp ráp metagenomics 100.000 VND/mẫu.",
+        text: " Quy trình cộng đồng như nf-core và bacass miễn phí — bạn chỉ trả chi phí tính toán và lưu trữ. Quy trình OmicsLab tùy chỉnh được xây theo yêu cầu và tính theo mẫu, từ 100.000 VND/mẫu.",
       },
     ],
   ] as TextSegment[][],
@@ -385,7 +400,17 @@ export const vi: Dictionary = {
         subscription,
         topup,
         trialNote: [
-          { text: "Dùng thử hoặc cần hỗ trợ, liên hệ " },
+          { strong: "Lưu ý:" },
+          {
+            text: " Các mức giá dành cho hình thức tự phục vụ. Theo tài liệu hướng dẫn của nền tảng, bạn tự tạo và chạy phân tích — Vieomics không nhận dữ liệu của bạn, chạy toàn bộ thay bạn rồi trả lại kết quả. Nếu bạn muốn dịch vụ trọn gói, xem ",
+          },
+          {
+            link: {
+              href: "/solutions/custom-solutions",
+              text: "Giải pháp tùy chỉnh",
+            },
+          },
+          { text: ". Dùng thử hoặc cần hỗ trợ, liên hệ " },
           {
             link: {
               href: "mailto:contact@omicslab.io",
@@ -405,7 +430,7 @@ export const vi: Dictionary = {
             },
             rows: [
               {
-                item: "Lắp ráp metagenomics",
+                item: "Lắp ráp metagenomics (quy trình OmicsLab tùy chỉnh)",
                 unitPrice: "100.000 VND/mẫu",
                 qty: "100",
                 subtotal: "10.000.000 VND",
@@ -425,12 +450,12 @@ export const vi: Dictionary = {
               {
                 item: "Lưu trữ (Object Storage)",
                 unitPrice: "500 VND/GB",
-                qty: "~50 GB",
-                subtotal: "~25.000 VND",
+                qty: "~5 GB/mẫu × 100 = ~500 GB",
+                subtotal: "~250.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~15.025.000 VND",
+            total: "~15.250.000 VND (~5.250.000 VND nếu dùng nf-core/bacass)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -449,7 +474,7 @@ export const vi: Dictionary = {
             },
             rows: [
               {
-                item: "Phân tích 16S rRNA",
+                item: "Phân tích 16S rRNA (quy trình OmicsLab tùy chỉnh)",
                 unitPrice: "100.000 VND/mẫu",
                 qty: "100",
                 subtotal: "10.000.000 VND",
@@ -469,12 +494,12 @@ export const vi: Dictionary = {
               {
                 item: "Lưu trữ (Object Storage)",
                 unitPrice: "500 VND/GB",
-                qty: "~10 GB",
+                qty: "~100 MB/mẫu × 100 = ~10 GB",
                 subtotal: "~5.000 VND",
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~12.005.000 VND",
+            total: "~12.005.000 VND (~2.005.000 VND nếu dùng nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng phân tích 16S rRNA thông thường. Chi phí thực tế có thể thay đổi. ",
