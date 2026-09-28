@@ -415,6 +415,27 @@
   background-color: rgb(0 0 0 / 0.02);
 }
 
+/* Tables scroll horizontally instead of squeezing every cell. */
+.blog-details .table-wrap {
+  margin-bottom: 2rem;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.blog-details .table-wrap table {
+  margin-bottom: 0;
+}
+
+.blog-details .table-wrap-wide table {
+  width: max-content;
+  min-width: 100%;
+}
+
+.blog-details .table-wrap-wide th,
+.blog-details .table-wrap-wide td {
+  white-space: nowrap;
+}
+
 .blog-details pre {
   margin-bottom: 1.5rem;
   overflow-x: auto;
