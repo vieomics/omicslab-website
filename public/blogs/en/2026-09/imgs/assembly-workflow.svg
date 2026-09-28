@@ -1,105 +1,56 @@
-<svg width="1600" height="1080" viewBox="0 0 1600 1080" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three stages: sequencing, de novo assembly, and comparison against a reference genome to find variants">
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L10,5 L0,10 z" fill="#111111"/>
-    </marker>
-  </defs>
-
-  <rect width="1600" height="1080" fill="#fafafa"/>
-  <line x1="0" y1="380" x2="1600" y2="380" stroke="#e3e3e3"/>
-  <line x1="0" y1="720" x2="1600" y2="720" stroke="#e3e3e3"/>
-
-  <!-- ============ STEP 1: SEQUENCING ============ -->
-  <circle cx="120" cy="120" r="32" fill="#111111"/>
-  <text x="120" y="132" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#fafafa">1</text>
-  <text x="180" y="112" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="36" font-weight="700" fill="#111111">Sequencing</text>
-  <text x="180" y="150" font-family="Inter, Arial, sans-serif" font-size="19" fill="#6c6c6c">Cut the DNA into millions of short fragments (reads)</text>
-
-  <text x="460" y="96" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">DNA / chromosome</text>
-  <rect x="460" y="106" width="1040" height="18" rx="3" fill="#111111"/>
-  <g stroke="#c6c6c6" stroke-width="1.5" stroke-dasharray="4 7">
-    <line x1="560" y1="124" x2="560" y2="196"/>
-    <line x1="700" y1="124" x2="700" y2="196"/>
-    <line x1="840" y1="124" x2="840" y2="196"/>
-    <line x1="980" y1="124" x2="980" y2="196"/>
-    <line x1="1120" y1="124" x2="1120" y2="196"/>
-    <line x1="1260" y1="124" x2="1260" y2="196"/>
-    <line x1="1400" y1="124" x2="1400" y2="196"/>
-  </g>
-
-  <g>
-    <rect x="460" y="200" width="150" height="14" fill="#6c6c6c"/>
-    <rect x="640" y="200" width="95" height="14" fill="#111111"/>
-    <rect x="765" y="200" width="180" height="14" fill="#6c6c6c"/>
-    <rect x="975" y="200" width="120" height="14" fill="#c6c6c6"/>
-    <rect x="1125" y="200" width="160" height="14" fill="#6c6c6c"/>
-    <rect x="1315" y="200" width="90" height="14" fill="#111111"/>
-    <rect x="1435" y="200" width="65" height="14" fill="#6c6c6c"/>
-
-    <rect x="490" y="232" width="120" height="14" fill="#111111"/>
-    <rect x="640" y="232" width="160" height="14" fill="#6c6c6c"/>
-    <rect x="830" y="232" width="100" height="14" fill="#111111"/>
-    <rect x="960" y="232" width="170" height="14" fill="#6c6c6c"/>
-    <rect x="1160" y="232" width="130" height="14" fill="#111111"/>
-    <rect x="1320" y="232" width="150" height="14" fill="#6c6c6c"/>
-
-    <rect x="470" y="264" width="90" height="14" fill="#6c6c6c"/>
-    <rect x="590" y="264" width="170" height="14" fill="#111111"/>
-    <rect x="790" y="264" width="130" height="14" fill="#6c6c6c"/>
-    <rect x="950" y="264" width="110" height="14" fill="#111111"/>
-    <rect x="1090" y="264" width="180" height="14" fill="#6c6c6c"/>
-    <rect x="1300" y="264" width="140" height="14" fill="#111111"/>
-  </g>
-  <text x="460" y="322" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">→ millions of reads, each only a very short stretch</text>
-
-  <!-- ============ STEP 2: DE NOVO ASSEMBLY ============ -->
-  <circle cx="120" cy="450" r="32" fill="#111111"/>
-  <text x="120" y="462" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#fafafa">2</text>
-  <text x="180" y="442" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="36" font-weight="700" fill="#111111">De novo assembly</text>
-  <text x="180" y="480" font-family="Inter, Arial, sans-serif" font-size="19" fill="#6c6c6c">Stitch overlapping pieces together</text>
-
-  <rect x="470" y="420" width="380" height="16" fill="#c6c6c6"/>
-  <rect x="660" y="452" width="400" height="16" fill="#c6c6c6"/>
-  <rect x="520" y="484" width="380" height="16" fill="#c6c6c6"/>
-  <rect x="780" y="516" width="320" height="16" fill="#c6c6c6"/>
-  <rect x="780" y="420" width="70" height="112" fill="#111111" opacity="0.12"/>
-  <line x1="760" y1="410" x2="800" y2="440" stroke="#6c6c6c" stroke-width="1.5"/>
-  <text x="690" y="404" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">overlapping region</text>
-
-  <line x1="900" y1="474" x2="985" y2="474" stroke="#111111" stroke-width="3" marker-end="url(#arrow)"/>
-
-  <rect x="1020" y="420" width="480" height="16" fill="#111111"/>
-  <rect x="1020" y="452" width="340" height="16" fill="#6c6c6c"/>
-  <rect x="1020" y="484" width="440" height="16" fill="#111111"/>
-  <text x="1020" y="526" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">contigs</text>
-
-  <text x="470" y="600" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">No need to know the genome in advance — this is called de novo assembly.</text>
-
-  <!-- ============ STEP 3: REFERENCE COMPARISON ============ -->
-  <circle cx="120" cy="800" r="32" fill="#111111"/>
-  <text x="120" y="812" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="700" fill="#fafafa">3</text>
-  <text x="180" y="792" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="36" font-weight="700" fill="#111111">Compare &amp; find variants</text>
-  <text x="180" y="830" font-family="Inter, Arial, sans-serif" font-size="19" fill="#6c6c6c">Align to a known reference</text>
-
-  <text x="460" y="762" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Reference genome (known)</text>
-  <rect x="460" y="772" width="1040" height="18" rx="3" fill="#c6c6c6"/>
-  <g stroke="#c6c6c6" stroke-width="1.5" stroke-dasharray="2 7">
-    <line x1="700" y1="790" x2="700" y2="860"/>
-    <line x1="700" y1="790" x2="700" y2="860"/>
-    <line x1="880" y1="790" x2="880" y2="860"/>
-    <line x1="1060" y1="790" x2="1060" y2="860"/>
-    <line x1="1240" y1="790" x2="1240" y2="860"/>
-    <line x1="1420" y1="790" x2="1420" y2="860"/>
-  </g>
-  <text x="460" y="906" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Your genome</text>
-  <rect x="460" y="862" width="1040" height="18" rx="3" fill="#111111"/>
-
-  <circle cx="780" cy="825" r="9" fill="#fafafa" stroke="#111111" stroke-width="3"/>
-  <circle cx="1150" cy="825" r="9" fill="#fafafa" stroke="#111111" stroke-width="3"/>
-  <line x1="1159" y1="825" x2="1230" y2="800" stroke="#6c6c6c" stroke-width="1.5"/>
-  <text x="1238" y="800" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">variant (SNP)</text>
-
-  <circle cx="480" cy="952" r="9" fill="#fafafa" stroke="#111111" stroke-width="3"/>
-  <text x="502" y="958" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">= a position that differs from the reference</text>
-  <text x="460" y="1008" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">A region absent from the reference (a new gene) only surfaces through de novo assembly and annotation.</text>
+<svg width="1600" height="1460" viewBox="0 0 1600 1460" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Sequencing, de novo assembly and reference comparison: a 9-nucleotide genome (3 amino acids), 5 reads, one nucleotide changing an amino acid">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L10,5 L0,10 z" fill="#111111"/></marker></defs>
+<rect width="1600" height="1460" fill="#fafafa"/>
+<line x1="0" y1="580" x2="1600" y2="580" stroke="#e3e3e3"/>
+<line x1="0" y1="1030" x2="1600" y2="1030" stroke="#e3e3e3"/>
+<circle cx="100" cy="110" r="30" fill="#111111"/><text x="100" y="121" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#fafafa">1</text>
+<text x="150" y="100" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Sequencing</text>
+<text x="150" y="136" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">The machine cuts the genome into short reads</text>
+<text x="466" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">1</text><text x="538" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">2</text><text x="610" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">3</text><text x="682" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">4</text><text x="754" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">5</text><text x="826" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">6</text><text x="898" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">7</text><text x="970" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">8</text><text x="1042" y="184" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">9</text>
+<text x="410" y="223" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Original genome (illustration)</text>
+<rect x="433" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="466" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="505" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="538" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="577" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="610" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">G</text><rect x="649" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="682" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="721" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="754" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="793" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="826" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="865" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="898" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="937" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="970" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="1009" y="196" width="66" height="40" rx="3" fill="#111111"/><text x="1042" y="224" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text>
+<text x="410" y="303" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">read 1</text>
+<rect x="433" y="276" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="466" y="304" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="505" y="276" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="538" y="304" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="577" y="276" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="610" y="304" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">G</text>
+<text x="410" y="353" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">read 2</text>
+<rect x="505" y="326" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="538" y="354" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="577" y="326" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="610" y="354" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">G</text><rect x="649" y="326" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="682" y="354" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text>
+<text x="410" y="403" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">read 3</text>
+<rect x="649" y="376" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="682" y="404" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="721" y="376" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="754" y="404" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="793" y="376" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="826" y="404" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text>
+<text x="410" y="453" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">read 4</text>
+<rect x="793" y="426" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="826" y="454" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="865" y="426" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="898" y="454" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="937" y="426" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="970" y="454" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text>
+<text x="410" y="503" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">read 5</text>
+<rect x="865" y="476" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="898" y="504" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="937" y="476" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="970" y="504" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="1009" y="476" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="1042" y="504" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text>
+<text x="150" y="556" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">5 reads, each covering only part of the 9-nucleotide genome.</text>
+<circle cx="100" cy="650" r="30" fill="#111111"/><text x="100" y="661" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#fafafa">2</text>
+<text x="150" y="640" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">De novo assembly</text>
+<text x="150" y="676" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">Use the overlapping pieces to stitch them together</text>
+<rect x="433" y="716" width="210" height="20" rx="3" fill="#c6c6c6" stroke="#6c6c6c"/>
+<text x="659" y="731" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">read 1</text>
+<rect x="505" y="746" width="210" height="20" rx="3" fill="#c6c6c6" stroke="#6c6c6c"/>
+<text x="731" y="761" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">read 2</text>
+<rect x="649" y="776" width="210" height="20" rx="3" fill="#c6c6c6" stroke="#6c6c6c"/>
+<text x="875" y="791" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">read 3</text>
+<rect x="793" y="806" width="210" height="20" rx="3" fill="#c6c6c6" stroke="#6c6c6c"/>
+<text x="1019" y="821" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">read 4</text>
+<rect x="865" y="836" width="210" height="20" rx="3" fill="#c6c6c6" stroke="#6c6c6c"/>
+<text x="1091" y="851" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">read 5</text>
+<line x1="780" y1="876" x2="780" y2="910" stroke="#111111" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="410" y="949" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Assembled genome</text>
+<rect x="433" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="466" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="505" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="538" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="577" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="610" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">G</text><rect x="649" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="682" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="721" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="754" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="793" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="826" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="865" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="898" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="937" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="970" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="1009" y="922" width="66" height="40" rx="3" fill="#111111"/><text x="1042" y="950" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text>
+<text x="150" y="1000" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">Stitch the 5 overlapping reads → a complete 9-nucleotide genome (3 codons).</text>
+<circle cx="100" cy="1110" r="30" fill="#111111"/><text x="100" y="1121" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="32" font-weight="700" fill="#fafafa">3</text>
+<text x="150" y="1100" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="34" font-weight="700" fill="#111111">Compare with a reference</text>
+<text x="150" y="1136" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">Find the positions that differ (variants)</text>
+<text x="466" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">1</text><text x="538" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">2</text><text x="610" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">3</text><text x="682" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">4</text><text x="754" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">5</text><text x="826" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">6</text><text x="898" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">7</text><text x="970" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">8</text><text x="1042" y="1182" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">9</text>
+<text x="410" y="1221" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Your genome</text>
+<rect x="433" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="466" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="505" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="538" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="577" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="610" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">G</text><rect x="649" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="682" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="721" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="754" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="793" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="826" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">A</text><rect x="865" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="898" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="937" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="970" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text><rect x="1009" y="1194" width="66" height="40" rx="3" fill="#111111"/><text x="1042" y="1222" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#fafafa">T</text>
+<line x1="430" y1="1242" x2="646" y2="1242" stroke="#c6c6c6" stroke-width="1.5"/><line x1="430" y1="1242" x2="430" y2="1235" stroke="#c6c6c6" stroke-width="1.5"/><line x1="646" y1="1242" x2="646" y2="1235" stroke="#c6c6c6" stroke-width="1.5"/><text x="538.0" y="1267" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="500" fill="#6c6c6c">M</text><line x1="646" y1="1242" x2="862" y2="1242" stroke="#111111" stroke-width="3"/><line x1="646" y1="1242" x2="646" y2="1235" stroke="#111111" stroke-width="3"/><line x1="862" y1="1242" x2="862" y2="1235" stroke="#111111" stroke-width="3"/><text x="754.0" y="1267" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#111111">K</text><line x1="862" y1="1242" x2="1078" y2="1242" stroke="#c6c6c6" stroke-width="1.5"/><line x1="862" y1="1242" x2="862" y2="1235" stroke="#c6c6c6" stroke-width="1.5"/><line x1="1078" y1="1242" x2="1078" y2="1235" stroke="#c6c6c6" stroke-width="1.5"/><text x="970.0" y="1267" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="500" fill="#6c6c6c">F</text>
+<text x="410" y="1327" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">Reference genome</text>
+<rect x="433" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="466" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="505" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="538" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="577" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="610" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">G</text><rect x="649" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="682" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="721" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="754" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">G</text><rect x="793" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="826" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">A</text><rect x="865" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="898" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="937" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="970" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text><rect x="1009" y="1300" width="66" height="40" rx="3" fill="#ededed" stroke="#c6c6c6"/><text x="1042" y="1328" text-anchor="middle" font-family="ui-monospace, 'Courier New', monospace" font-size="24" font-weight="700" fill="#111111">T</text>
+<line x1="430" y1="1348" x2="646" y2="1348" stroke="#c6c6c6" stroke-width="1.5"/><line x1="430" y1="1348" x2="430" y2="1341" stroke="#c6c6c6" stroke-width="1.5"/><line x1="646" y1="1348" x2="646" y2="1341" stroke="#c6c6c6" stroke-width="1.5"/><text x="538.0" y="1373" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="500" fill="#6c6c6c">M</text><line x1="646" y1="1348" x2="862" y2="1348" stroke="#111111" stroke-width="3"/><line x1="646" y1="1348" x2="646" y2="1341" stroke="#111111" stroke-width="3"/><line x1="862" y1="1348" x2="862" y2="1341" stroke="#111111" stroke-width="3"/><text x="754.0" y="1373" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="700" fill="#111111">R</text><line x1="862" y1="1348" x2="1078" y2="1348" stroke="#c6c6c6" stroke-width="1.5"/><line x1="862" y1="1348" x2="862" y2="1341" stroke="#c6c6c6" stroke-width="1.5"/><line x1="1078" y1="1348" x2="1078" y2="1341" stroke="#c6c6c6" stroke-width="1.5"/><text x="970.0" y="1373" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="500" fill="#6c6c6c">F</text>
+<rect x="718" y="1191" width="72" height="46" rx="4" fill="none" stroke="#111111" stroke-width="3"/>
+<rect x="718" y="1297" width="72" height="46" rx="4" fill="none" stroke="#111111" stroke-width="3"/>
+<line x1="754" y1="1238" x2="754" y2="1292" stroke="#6c6c6c" stroke-width="1.5" stroke-dasharray="4 4"/>
+<line x1="791" y1="1214" x2="805" y2="1214" stroke="#6c6c6c" stroke-width="1.5"/>
+<text x="813" y="1220" font-family="Inter, Arial, sans-serif" font-size="17" fill="#6c6c6c">position 5: A → G  (Lys → Arg)</text>
+<text x="150" y="1440" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">One nucleotide difference (position 5) changes codon AAA to AGA — i.e. Lys (K) to Arg (R).</text>
 </svg>
