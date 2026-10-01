@@ -13,7 +13,7 @@ const Contact = ({ dict, fullHeight = false }: ContactProps) => {
       id="contact"
       className={`rule-top bg-paper-light ${
         fullHeight
-          ? "flex min-h-[calc(100svh-76px)] items-center justify-center pt-36 pb-20"
+          ? "flex min-h-[calc(100svh-60px)] items-center justify-center pt-36 pb-20"
           : "section-pad"
       }`}
     >

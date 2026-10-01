@@ -631,7 +631,7 @@ export const vi: Dictionary = {
     siteDescription:
       "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     home: {
-      title: "Omicslab | Nền tảng và dịch vụ tin sinh học dry-lab",
+      title: "Omicslab",
       description:
         "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     },
