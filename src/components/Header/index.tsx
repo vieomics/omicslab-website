@@ -75,8 +75,8 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 z-[999] w-full border-b border-white/15 bg-[#030303]/80 backdrop-blur-[12px]">
-        <div className="page-width flex h-[76px] items-center justify-between gap-10">
+      <header className="fixed top-0 left-0 z-[999] w-full border-b border-white/15 bg-[#030303]">
+        <div className="page-width flex h-[60px] items-center justify-between gap-10">
           <Link
             href={localizeHref("/", locale)}
             className="flex shrink-0 items-center gap-3"
@@ -95,7 +95,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
               id="navbarCollapse"
               className={`${
                 navbarOpen ? "visible opacity-100" : "invisible opacity-0"
-              } fixed inset-x-0 top-[76px] bottom-0 z-30 overflow-y-auto bg-[#050505] px-5 py-8 transition-opacity duration-200 lg:visible lg:static lg:flex lg:items-center lg:gap-9 lg:overflow-visible lg:bg-transparent lg:p-0 lg:opacity-100`}
+              } fixed inset-x-0 top-[60px] bottom-0 z-30 overflow-y-auto bg-[#050505] px-5 py-8 transition-opacity duration-200 lg:visible lg:static lg:flex lg:items-center lg:gap-9 lg:overflow-visible lg:bg-transparent lg:p-0 lg:opacity-100`}
             >
               <ul className="flex flex-col gap-1 lg:flex-row lg:items-center lg:gap-9">
                 {menuData.map((menuItem, index) =>

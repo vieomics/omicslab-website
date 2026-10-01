@@ -631,7 +631,7 @@ export const en = {
     siteDescription:
       "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     home: {
-      title: "Omicslab | Bioinformatics Platform & Dry-Lab Services",
+      title: "Omicslab",
       description:
         "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     },
