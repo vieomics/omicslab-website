@@ -1,0 +1,37 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building a bacterial genome without writing code with nf-core/bacass">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">GUIDE · NF-CORE/BACASS</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Building a bacterial</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">genome without</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">writing code</text>
+
+  <!-- Right: circular bacterial chromosome -->
+  <circle cx="1520" cy="300" r="228" stroke="#e3e3e3" stroke-width="1"/>
+  <circle cx="1520" cy="300" r="196" stroke="#111111" stroke-width="12"
+          stroke-dasharray="220 46 96 60 260 52 150 74 300 58" stroke-linecap="butt" transform="rotate(-24 1520 300)"/>
+  <circle cx="1520" cy="300" r="150" stroke="#c6c6c6" stroke-width="1" stroke-dasharray="4 9"/>
+  <circle cx="1520" cy="300" r="96" stroke="#c6c6c6" stroke-width="1"/>
+
+  <!-- Radial ticks like a genome map -->
+  <g stroke="#6c6c6c" stroke-width="2">
+    <line x1="1520" y1="104" x2="1520" y2="130"/>
+    <line x1="1659" y1="161" x2="1641" y2="179"/>
+    <line x1="1716" y1="300" x2="1690" y2="300"/>
+    <line x1="1659" y1="439" x2="1641" y2="421"/>
+    <line x1="1520" y1="496" x2="1520" y2="470"/>
+    <line x1="1381" y1="439" x2="1399" y2="421"/>
+    <line x1="1324" y1="300" x2="1350" y2="300"/>
+    <line x1="1381" y1="161" x2="1399" y2="179"/>
+  </g>
+
+  <text x="1520" y="292" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#6c6c6c">GENOME</text>
+  <text x="1520" y="332" text-anchor="middle" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="46" font-weight="700" fill="#111111">~2.8 Mb</text>
+
+  <text x="1520" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">CONTIGS · QC · ANNOTATION</text>
+</svg>
