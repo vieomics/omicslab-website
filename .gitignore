@@ -38,6 +38,5 @@ next-env.d.ts
 
 .env
 excalidraw
-traefik
 # generated search indexes
 public/search-index*.json

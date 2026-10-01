@@ -133,7 +133,7 @@ export default function DataPlatformView({
         <div className="page-width">
           <h2 className="display-md text-ink">{t.pricing.title}</h2>
 
-          <div className="border-line bg-line mt-10 grid gap-px border md:grid-cols-3">
+          <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-4">
             {t.pricing.subscription.tiers.map((tier) => (
               <div
                 key={tier.name}
@@ -344,7 +344,7 @@ export default function DataPlatformView({
               <iframe
                 width="1840"
                 height="1035"
-                src="https://www.youtube.com/embed/j8-HmT1JTCw"
+                src="https://www.youtube.com/embed/j6f85vfLEIs"
                 title={t.gettingStarted.videoTitle}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
