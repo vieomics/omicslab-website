@@ -15,7 +15,7 @@ Static website for [Omicslab](https://omicslab.io) — innovative bioinformatics
 
 ```bash
 npm install
-npm run dev       # development server on :3000
+npm run dev       # development server on :3100
 npm run build     # static export to out/
 npm run preview   # serve out/ locally on :3000
 ```
@@ -127,62 +127,30 @@ npm run build
 npm run preview   # node server.js → http://localhost:3000
 ```
 
-Or deploy `out/` to any static host (Netlify, Vercel, GitHub Pages, S3 + CloudFront, Nginx).
+Or deploy `out/` to any static host. Production uses **Cloudflare Pages** (see CI/CD below).
 
-## Docker (local)
+## Deploy — Cloudflare Pages
 
-```bash
-docker build -t omicslab-website .
-docker run -p 80:80 omicslab-website
+Production is served by **Cloudflare Pages** from the static `out/` directory.
+The project is defined in `wrangler.toml`:
+
+```toml
+name = "omicslab-website"
+pages_build_output_dir = "./out"
 ```
 
-Uses multi-stage build: Node.js builder → Nginx Alpine serving `out/`.
+On every push to `main`, [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
 
-## Docker Compose (production)
+1. Installs dependencies and runs `npm run build`
+2. Deploys `out/` to Cloudflare Pages with `wrangler pages deploy`
 
-Production deployment uses **Traefik** as reverse proxy with automatic Let's Encrypt TLS:
+### Required GitHub Secret
 
-```bash
-docker compose up --build -d
-```
+| Secret                 | Description                                        |
+| ---------------------- | -------------------------------------------------- |
+| `CLOUDFLARE_API_TOKEN` | API token with permission to deploy Pages projects |
 
-The stack is defined in `docker-compose.yaml`:
-
-- `omicslab` service — Nginx serving the built site
-- `traefik` service — reverse proxy with TLS termination for `omicslab.io`
-
-Configuration:
-
-- `traefik/traefik.yaml` — static Traefik config
-- `traefik/dynamic/` — dynamic routing rules
-- `traefik/acme.json` — Let's Encrypt certificates (gitignored)
-
-> **Note**: A Traefik Docker network named `traefik-public` must exist before first run:
->
-> ```bash
-> docker network create traefik-public
-> ```
-
-## CI/CD — GitHub Actions
-
-On every push to `main`, the [`deploy.yml`](.github/workflows/deploy.yml) workflow:
-
-1. **Build check** — installs dependencies and builds the site (catches errors early)
-2. **Deploy to VPS** — SSHes into the production server, pulls the latest code, installs deps, builds, and restarts the Docker Compose stack
-
-### Required GitHub Secrets
-
-| Secret            | Description                             |
-| ----------------- | --------------------------------------- |
-| `SSH_HOST`        | VPS hostname or IP (e.g. `omicslab.io`) |
-| `SSH_USER`        | SSH user (e.g. `river`)                 |
-| `SSH_PRIVATE_KEY` | Private SSH key for authentication      |
-
-The workflow uses the built-in `GITHUB_TOKEN` to authenticate `git pull` on the VPS — no deploy keys or PATs needed.
-
-### Manual Trigger
-
-The workflow can also be triggered manually from GitHub → Actions → **Deploy** → **Run workflow**.
+The workflow can also be triggered manually from GitHub → Actions → **Deploy to Cloudflare Pages** → **Run workflow**.
 
 ## Google Analytics
 
