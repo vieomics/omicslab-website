@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <mask id="donut-mask">
+      <rect width="64" height="64" fill="white"/>
+      <circle cx="32" cy="32" r="14" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="32" cy="32" r="28" fill="#0a0a0a" mask="url(#donut-mask)"/>
+</svg>
