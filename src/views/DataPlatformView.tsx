@@ -344,7 +344,7 @@ export default function DataPlatformView({
               <iframe
                 width="1840"
                 height="1035"
-                src="https://www.youtube.com/embed/JIR96XZu3ss"
+                src="https://www.youtube.com/embed/j6f85vfLEIs"
                 title={t.gettingStarted.videoTitle}
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
