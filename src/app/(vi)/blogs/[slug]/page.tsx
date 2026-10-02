@@ -94,7 +94,7 @@ export default async function Post({ params }: Props) {
         (authorData?.name as string) || (post.author as string) || "Omicslab"
       }
       authorImage={
-        (authorData?.image_url as string) || "/images/blog/author-01.jpg"
+        (authorData?.image_url as string) || "/images/team/omicslab-team.svg"
       }
       date={(post.date as string) || new Date().toISOString()}
       headings={headings}
