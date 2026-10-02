@@ -1,0 +1,40 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building a national 1000-genome project, Part 1: vision and architecture">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">SERIES · NATIONAL GENOMICS</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">A nation's own</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">1000-genome</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">project</text>
+
+  <!-- Right: globe with population sites -->
+  <circle cx="1520" cy="300" r="228" stroke="#e3e3e3" stroke-width="1"/>
+  <circle cx="1520" cy="300" r="210" stroke="#111111" stroke-width="3"/>
+  <ellipse cx="1520" cy="300" rx="80" ry="210" stroke="#c6c6c6" stroke-width="1"/>
+  <ellipse cx="1520" cy="300" rx="152" ry="210" stroke="#c6c6c6" stroke-width="1"/>
+  <line x1="1310" y1="300" x2="1730" y2="300" stroke="#c6c6c6" stroke-width="1"/>
+  <line x1="1326" y1="220" x2="1714" y2="220" stroke="#e3e3e3" stroke-width="1"/>
+  <line x1="1326" y1="380" x2="1714" y2="380" stroke="#e3e3e3" stroke-width="1"/>
+
+  <g fill="#111111">
+    <circle cx="1470" cy="212" r="7"/>
+    <circle cx="1578" cy="246" r="7"/>
+    <circle cx="1608" cy="340" r="7"/>
+    <circle cx="1498" cy="386" r="7"/>
+  </g>
+  <g fill="#6c6c6c">
+    <circle cx="1424" cy="276" r="5"/>
+    <circle cx="1524" cy="300" r="5"/>
+    <circle cx="1642" cy="286" r="5"/>
+    <circle cx="1556" cy="180" r="5"/>
+    <circle cx="1456" cy="338" r="5"/>
+    <circle cx="1560" cy="404" r="5"/>
+  </g>
+
+  <text x="1520" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">POPULATIONS · VARIANTS · PRECISION MEDICINE</text>
+  <text x="1520" y="66" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6c6c6c">PART 1 OF 5 — VISION &amp; ARCHITECTURE</text>
+</svg>
