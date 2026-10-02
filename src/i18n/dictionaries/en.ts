@@ -183,7 +183,7 @@ export const en = {
     readInOtherLanguage: "Read in Vietnamese",
   },
   authors: {
-    river: { title: "Founder @ Vieomics" },
+    vieomics: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
