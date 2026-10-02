@@ -27,28 +27,38 @@ function parseSimpleYaml(content: string): AuthorsData {
   let inSocials = false;
   let socialsObj: { linkedin?: string; github?: string } = {};
 
+  function flushCurrent() {
+    if (currentKey && currentAuthor.name) {
+      currentAuthor.socials = socialsObj;
+      result[currentKey] = currentAuthor as Author;
+    }
+    currentKey = "";
+    currentAuthor = {};
+    socialsObj = {};
+    inSocials = false;
+  }
+
   const lines = content.split("\n");
   for (const line of lines) {
     const trimmed = line.trim();
     if (!trimmed || trimmed.startsWith("#")) continue;
 
-    if (trimmed.endsWith(":") && !trimmed.includes(" ")) {
-      if (currentKey && currentAuthor.name) {
-        result[currentKey] = currentAuthor as Author;
-      }
-      currentKey = trimmed.replace(":", "");
-      currentAuthor = {};
-      inSocials = false;
+    const indented = line !== line.trimStart();
+
+    // Top-level keys start a new author entry. Nested keys (indented) never do,
+    // even when their value is empty — e.g. a bare `title:`.
+    if (!indented && trimmed.endsWith(":") && !trimmed.includes(" ")) {
+      flushCurrent();
+      currentKey = trimmed.slice(0, -1);
       continue;
     }
 
-    if (trimmed.startsWith("socials:")) {
+    if (indented && trimmed.startsWith("socials:")) {
       inSocials = true;
-      socialsObj = {};
       continue;
     }
 
-    if (inSocials && trimmed.includes(":")) {
+    if (inSocials && indented) {
       const [key, ...valueParts] = trimmed.split(":");
       const value = valueParts.join(":").trim();
       if (key.trim() === "linkedin") socialsObj.linkedin = value;
@@ -56,12 +66,7 @@ function parseSimpleYaml(content: string): AuthorsData {
       continue;
     }
 
-    if (inSocials && !trimmed.startsWith(" ") && trimmed.includes(":")) {
-      currentAuthor.socials = socialsObj;
-      inSocials = false;
-    }
-
-    if (trimmed.includes(":") && !inSocials) {
+    if (trimmed.includes(":")) {
       const colonIndex = trimmed.indexOf(":");
       const key = trimmed.substring(0, colonIndex).trim();
       const value = trimmed.substring(colonIndex + 1).trim();
@@ -75,10 +80,7 @@ function parseSimpleYaml(content: string): AuthorsData {
     }
   }
 
-  if (currentKey && currentAuthor.name) {
-    result[currentKey] = currentAuthor as Author;
-  }
-
+  flushCurrent();
   return result;
 }
 
