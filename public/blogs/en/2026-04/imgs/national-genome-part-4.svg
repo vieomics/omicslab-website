@@ -1,0 +1,31 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building a national 1000-genome project, Part 4: Vietnam's journey from 2018 to 2026">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">SERIES · NATIONAL GENOMICS</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Eight years of</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">national genomics</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">2018 → 2026</text>
+
+  <!-- Right: timeline with rising trajectory -->
+  <line x1="1330" y1="400" x2="1710" y2="400" stroke="#111111" stroke-width="2"/>
+  <circle cx="1352" cy="400" r="9" fill="#111111"/>
+  <circle cx="1688" cy="400" r="9" fill="#111111"/>
+  <text x="1352" y="445" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="2" fill="#6c6c6c">2018</text>
+  <text x="1688" y="445" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="2" fill="#6c6c6c">2026</text>
+
+  <polyline points="1352,360 1440,320 1530,255 1620,205 1688,175" stroke="#111111" stroke-width="4" fill="none"/>
+  <g fill="#fafafa" stroke="#111111" stroke-width="4">
+    <circle cx="1440" cy="320" r="7"/>
+    <circle cx="1530" cy="255" r="7"/>
+    <circle cx="1620" cy="205" r="7"/>
+  </g>
+  <line x1="1330" y1="175" x2="1710" y2="175" stroke="#e3e3e3" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <text x="1520" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">INFRASTRUCTURE · TALENT · POLICY</text>
+  <text x="1520" y="66" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6c6c6c">PART 4 OF 5 — THE JOURNEY</text>
+</svg>

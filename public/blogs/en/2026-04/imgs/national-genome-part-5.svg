@@ -1,0 +1,40 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building a national 1000-genome project, Part 4: deployment, extensions, and conclusion">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">SERIES · NATIONAL GENOMICS</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Deploy, extend,</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">and put it</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">to work</text>
+
+  <!-- Right: cluster diagram -->
+  <g stroke="#c6c6c6" stroke-width="2">
+    <line x1="1520" y1="300" x2="1380" y2="200"/>
+    <line x1="1520" y1="300" x2="1660" y2="200"/>
+    <line x1="1520" y1="300" x2="1350" y2="300"/>
+    <line x1="1520" y1="300" x2="1690" y2="300"/>
+    <line x1="1520" y1="300" x2="1380" y2="400"/>
+    <line x1="1520" y1="300" x2="1660" y2="400"/>
+  </g>
+  <rect x="1462" y="272" width="116" height="56" fill="#111111"/>
+  <text x="1520" y="306" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="2" fill="#fafafa">CLUSTER</text>
+
+  <g fill="#fafafa" stroke="#111111" stroke-width="2">
+    <rect x="1350" y="176" width="60" height="48"/>
+    <rect x="1630" y="176" width="60" height="48"/>
+    <rect x="1320" y="276" width="60" height="48"/>
+    <rect x="1660" y="276" width="60" height="48"/>
+    <rect x="1350" y="376" width="60" height="48"/>
+    <rect x="1630" y="376" width="60" height="48"/>
+  </g>
+
+  <line x1="1710" y1="460" x2="1710" y2="140" stroke="#111111" stroke-width="3"/>
+  <path d="M1696 154 L1710 132 L1724 154" stroke="#111111" stroke-width="3" fill="none"/>
+
+  <text x="1520" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">HPC · CLOUD · CLINIC · FUTURE</text>
+  <text x="1520" y="66" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6c6c6c">PART 5 OF 5 — DEPLOYMENT &amp; FUTURE</text>
+</svg>
