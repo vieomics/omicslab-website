@@ -1,0 +1,33 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building a national 1000-genome project, Part 2: design principles and implementation roadmap">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">SERIES · NATIONAL GENOMICS</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Standardized</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">by design</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">from day one</text>
+
+  <!-- Right: five-phase timeline -->
+  <line x1="1330" y1="390" x2="1710" y2="390" stroke="#111111" stroke-width="2"/>
+  <rect x="1346" y="310" width="52" height="80" fill="#c6c6c6"/>
+  <rect x="1420" y="240" width="52" height="150" fill="#111111"/>
+  <rect x="1494" y="280" width="52" height="110" fill="#c6c6c6"/>
+  <rect x="1568" y="260" width="52" height="130" fill="#c6c6c6"/>
+  <rect x="1642" y="300" width="52" height="90" fill="#c6c6c6"/>
+  <line x1="1330" y1="220" x2="1710" y2="220" stroke="#e3e3e3" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="2" fill="#6c6c6c" text-anchor="middle">
+    <text x="1372" y="420">PLAN</text>
+    <text x="1446" y="420">COLLECT</text>
+    <text x="1520" y="420">SEQUENCE</text>
+    <text x="1594" y="420">CALL</text>
+    <text x="1668" y="420">OPERATE</text>
+  </g>
+
+  <text x="1520" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">5 PHASES · 6–12 MONTHS · 2–3 FTE</text>
+  <text x="1520" y="66" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#6c6c6c">PART 2 OF 5 — DESIGN &amp; ROADMAP</text>
+</svg>

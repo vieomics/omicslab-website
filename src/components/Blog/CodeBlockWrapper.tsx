@@ -2,6 +2,55 @@
 
 import { useEffect } from "react";
 
+/**
+ * Fallback for contexts where the async clipboard API is unavailable
+ * (e.g. non-secure origins). Mirrors the behavior Expressive Code ships.
+ */
+function fallbackCopy(text: string): boolean {
+  const scratch = document.createElement("pre");
+  Object.assign(scratch.style, {
+    opacity: "0",
+    pointerEvents: "none",
+    position: "absolute",
+    overflow: "hidden",
+    left: "0",
+    top: "0",
+    width: "20px",
+    height: "20px",
+    WebkitUserSelect: "auto",
+    userSelect: "all",
+  });
+  scratch.setAttribute("aria-hidden", "true");
+  scratch.textContent = text;
+  document.body.appendChild(scratch);
+
+  const range = document.createRange();
+  range.selectNode(scratch);
+  const selection = window.getSelection();
+  if (!selection) {
+    document.body.removeChild(scratch);
+    return false;
+  }
+  selection.removeAllRanges();
+  selection.addRange(range);
+
+  let copied = false;
+  try {
+    copied = document.execCommand("copy");
+  } finally {
+    selection.removeAllRanges();
+    document.body.removeChild(scratch);
+  }
+  return copied;
+}
+
+/**
+ * Expressive Code renders the copy button (and its markup) at build time but
+ * its script is not injected: article bodies are swapped in through
+ * `dangerouslySetInnerHTML`, where inline scripts never execute. This
+ * component binds those buttons after mount, so copying works on hard loads
+ * and client-side navigation alike.
+ */
 export default function CodeBlockWrapper({
   copyLabel,
   copiedLabel,
@@ -10,36 +59,52 @@ export default function CodeBlockWrapper({
   copiedLabel: string;
 }) {
   useEffect(() => {
-    const preElements = document.querySelectorAll("pre[data-code]");
+    const buttons = document.querySelectorAll<HTMLButtonElement>(
+      ".expressive-code .copy button",
+    );
 
-    preElements.forEach((pre) => {
-      if (pre.querySelector(".copy-btn")) return;
+    buttons.forEach((button) => {
+      if (button.dataset.copyBound === "true") return;
+      button.dataset.copyBound = "true";
 
-      const code = pre.getAttribute("data-code") || "";
-
-      const button = document.createElement("button");
-      button.className =
-        "copy-btn absolute top-3 right-3 border border-line bg-paper-light px-3 py-1.5 text-[10px] font-bold tracking-[0.14em] uppercase text-ink transition-colors hover:border-ink hover:bg-ink hover:text-paper-light";
-      button.type = "button";
-      button.textContent = copyLabel;
-
-      const wrapper = document.createElement("div");
-      wrapper.className = "group relative";
-
-      pre.parentNode?.insertBefore(wrapper, pre);
-      wrapper.appendChild(pre);
-      wrapper.appendChild(button);
+      // Expressive Code ships English strings; use the dictionary instead.
+      button.title = copyLabel;
+      button.dataset.copied = copiedLabel;
 
       button.addEventListener("click", async () => {
+        // The rendered attribute stores newlines as \u007f.
+        const code = (button.dataset.code || "").replace(/\u007f/g, "\n");
+
+        let copied = false;
         try {
           await navigator.clipboard.writeText(code);
-          button.textContent = copiedLabel;
-          setTimeout(() => {
-            button.textContent = copyLabel;
-          }, 2000);
-        } catch (err) {
-          console.error("Failed to copy:", err);
+          copied = true;
+        } catch {
+          copied = fallbackCopy(code);
         }
+
+        const live = button.parentNode?.querySelector("[aria-live]");
+        if (!copied || !live || live.querySelector(".feedback")) return;
+
+        const feedback = document.createElement("div");
+        feedback.classList.add("feedback");
+        feedback.append(copiedLabel);
+        live.append(feedback);
+        // Force a reflow so the transition runs on the next frame.
+        void feedback.offsetWidth;
+        requestAnimationFrame(() => feedback.classList.add("show"));
+
+        const hide = () => feedback.classList.remove("show");
+        const remove = () => {
+          if (parseFloat(getComputedStyle(feedback).opacity) > 0) return;
+          feedback.remove();
+        };
+
+        window.setTimeout(hide, 1500);
+        window.setTimeout(remove, 2500);
+        button.addEventListener("blur", hide);
+        feedback.addEventListener("transitioncancel", remove);
+        feedback.addEventListener("transitionend", remove);
       });
     });
   }, [copyLabel, copiedLabel]);

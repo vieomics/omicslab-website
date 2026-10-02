@@ -4,36 +4,13 @@ import remarkGfm from "remark-gfm";
 import remarkDirective from "remark-directive";
 import remarkRehype from "remark-rehype";
 import rehypeSlug from "rehype-slug";
-import rehypeHighlight from "rehype-highlight";
+import rehypeExpressiveCode, {
+  createRenderer,
+  type RehypeExpressiveCodeOptions,
+} from "rehype-expressive-code";
+import { pluginLineNumbers } from "@expressive-code/plugin-line-numbers";
 import rehypeStringify from "rehype-stringify";
 import { visit } from "unist-util-visit";
-
-function getTextContent(node: any): string {
-  if (node.type === "text") return node.value || "";
-  if (node.children) return node.children.map(getTextContent).join("");
-  return "";
-}
-
-function rehypeCopyButton() {
-  return (tree: any) => {
-    visit(tree, "element", (node: any) => {
-      if (node.tagName === "pre") {
-        const codeElement = node.children?.[0];
-        if (codeElement?.tagName === "code") {
-          const textContent = getTextContent(codeElement);
-
-          node.properties = node.properties || {};
-          node.properties["data-code"] = textContent;
-          node.properties["className"] = node.properties["className"] || [];
-          node.properties["className"] = [
-            ...node.properties["className"],
-            "relative",
-          ];
-        }
-      }
-    });
-  };
-}
 
 /**
  * Wrap each table in a scroll container. Tables with 5+ columns are allowed
@@ -89,6 +66,30 @@ const admonitionConfig: Record<string, { label: string; border: string }> = {
   important: { label: "Important", border: "#111111" },
 };
 
+// Expressive Code renders every fenced code block at build time with Shiki
+// (VS Code grammars + the `dark-plus` theme) inside an editor or terminal
+// frame with line numbers — the same presentation as the docs site
+// (opendocs). Its copy-button script is intentionally not injected: article
+// bodies are swapped in through `dangerouslySetInnerHTML`, where inline
+// scripts never execute, so CodeBlockWrapper owns that behavior instead.
+const expressiveCodeOptions: RehypeExpressiveCodeOptions = {
+  themes: ["dark-plus"],
+  plugins: [pluginLineNumbers()],
+  defaultProps: { showLineNumbers: true },
+  styleOverrides: {
+    borderRadius: "6px",
+    codeFontFamily:
+      'ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace',
+    codeFontSize: "0.875rem",
+    codeLineHeight: "1.55",
+    frames: { frameBoxShadowCssValue: "none" },
+  },
+  customCreateRenderer: async (options) => {
+    const renderer = await createRenderer(options);
+    return { ...renderer, jsModules: [] };
+  },
+};
+
 const processor = (unified() as any)
   .use(remarkParse, { allowHTML: true })
   .use(remarkGfm)
@@ -111,12 +112,10 @@ const processor = (unified() as any)
   })
   .use(remarkRehype, { allowDangerousHtml: true })
   .use(rehypeSlug)
-  // Colour the fenced blocks (`language-bash` and friends). Only tagged
-  // blocks are highlighted — detection stays off so terminal output keeps
-  // its literal text. csv/groovy are not in highlight.js' common set and
-  // are listed as plain text to avoid a missing-language notice per block.
-  .use(rehypeHighlight, { plainText: ["csv", "groovy"] })
-  .use(rehypeCopyButton)
+  // Expressive Code colours the fenced blocks and wraps them in the same
+  // code frame used by the docs. Unknown languages (csv, groovy, …) fall
+  // back to plain text without failing the build.
+  .use(rehypeExpressiveCode, expressiveCodeOptions)
   .use(rehypeWrapTables)
   .use(rehypeStringify, { allowDangerousHtml: true });
 

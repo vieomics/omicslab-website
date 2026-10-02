@@ -183,7 +183,7 @@ export const vi: Dictionary = {
     readInOtherLanguage: "Đọc bằng tiếng Anh",
   },
   authors: {
-    river: { title: "Founder @ Vieomics" },
+    vieomics: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
