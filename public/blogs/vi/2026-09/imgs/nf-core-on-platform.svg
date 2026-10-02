@@ -1,0 +1,43 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cách chạy pipeline nf-core trên nền tảng Omicslab">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="150" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">HƯỚNG DẪN · NF-CORE TRÊN NỀN TẢNG</text>
+  <rect x="120" y="182" width="120" height="6" fill="#111111"/>
+  <text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Chạy pipeline nf-core</text>
+  <text x="120" y="400" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">trên nền tảng</text>
+  <text x="120" y="500" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Omicslab</text>
+
+  <!-- Right: pipeline nodes feeding a browser form -->
+  <line x1="1350" y1="88" x2="1730" y2="88" stroke="#c6c6c6"/>
+  <circle cx="1350" cy="88" r="12" stroke="#111111" stroke-width="3" fill="#fafafa"/>
+  <circle cx="1540" cy="88" r="12" fill="#111111"/>
+  <circle cx="1730" cy="88" r="12" stroke="#111111" stroke-width="3" fill="#fafafa"/>
+  <line x1="1540" y1="100" x2="1540" y2="120" stroke="#c6c6c6"/>
+
+  <!-- Browser window -->
+  <rect x="1250" y="120" width="560" height="400" fill="#ffffff" stroke="#c6c6c6" stroke-width="2"/>
+  <line x1="1250" y1="176" x2="1810" y2="176" stroke="#e3e3e3"/>
+  <circle cx="1286" cy="148" r="6" fill="#c6c6c6"/>
+  <circle cx="1308" cy="148" r="6" fill="#c6c6c6"/>
+  <circle cx="1330" cy="148" r="6" fill="#c6c6c6"/>
+
+  <!-- Form rows -->
+  <rect x="1290" y="214" width="110" height="10" fill="#c6c6c6"/>
+  <rect x="1290" y="236" width="480" height="40" fill="#fafafa" stroke="#e3e3e3"/>
+  <rect x="1290" y="300" width="86" height="10" fill="#c6c6c6"/>
+  <rect x="1290" y="322" width="480" height="40" fill="#fafafa" stroke="#e3e3e3"/>
+  <rect x="1290" y="386" width="86" height="10" fill="#c6c6c6"/>
+  <rect x="1290" y="408" width="230" height="40" fill="#fafafa" stroke="#e3e3e3"/>
+  <rect x="1540" y="408" width="230" height="40" fill="#fafafa" stroke="#e3e3e3"/>
+
+  <!-- Run button -->
+  <rect x="1290" y="462" width="150" height="42" fill="#111111"/>
+  <path d="M1318 473 L1318 493 L1338 483 Z" fill="#fafafa"/>
+  <text x="1352" y="490" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="4" fill="#ffffff">RUN</text>
+
+  <text x="1550" y="560" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">MỘT BIỂU MẪU · MỌI PIPELINE NF-CORE</text>
+</svg>
