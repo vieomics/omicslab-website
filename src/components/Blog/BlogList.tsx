@@ -77,32 +77,7 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
 
   return (
     <div>
-      <div className="mb-10 flex flex-col gap-6 border-b border-line pb-8 lg:flex-row lg:items-center lg:justify-between">
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={() => setSelectedTag(null)}
-            className={`micro-label border px-4 py-2.5 transition-colors ${
-              selectedTag === null
-                ? "border-ink bg-ink text-paper-light"
-                : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
-            }`}
-          >
-            {dict.common.all}
-          </button>
-          {allTags.map((tag) => (
-            <button
-              key={tag}
-              onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
-              className={`micro-label border px-4 py-2.5 transition-colors ${
-                selectedTag === tag
-                  ? "border-ink bg-ink text-paper-light"
-                  : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
-              }`}
-            >
-              {tag}
-            </button>
-          ))}
-        </div>
+      <div className="mb-10 flex flex-col gap-6 border-b border-line pb-8">
         <div className="relative w-full lg:w-80">
           <input
             type="text"
@@ -160,6 +135,31 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
               ))}
             </div>
           )}
+        </div>
+        <div className="flex flex-wrap gap-2">
+          <button
+            onClick={() => setSelectedTag(null)}
+            className={`micro-label border px-4 py-2.5 transition-colors ${
+              selectedTag === null
+                ? "border-ink bg-ink text-paper-light"
+                : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
+            }`}
+          >
+            {dict.common.all}
+          </button>
+          {allTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag === selectedTag ? null : tag)}
+              className={`micro-label border px-4 py-2.5 transition-colors ${
+                selectedTag === tag
+                  ? "border-ink bg-ink text-paper-light"
+                  : "border-line bg-paper-light text-muted hover:border-ink hover:text-ink"
+              }`}
+            >
+              {tag}
+            </button>
+          ))}
         </div>
       </div>
 

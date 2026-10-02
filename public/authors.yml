@@ -1,4 +1,4 @@
-river:
+vieomics:
   name: Giang Nguyen
   title: Founder @ Vieomics
   url: https://www.facebook.com/nttg8100
@@ -13,7 +13,7 @@ team:
   name: Omicslab Team
   title:
   url: /#
-  image_url: /images/logo/logo-ico.svg
+  image_url: /images/team/omicslab-team.svg
   page: true
   email: contact@omicslab.io
   socials:

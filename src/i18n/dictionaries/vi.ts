@@ -183,7 +183,7 @@ export const vi: Dictionary = {
     readInOtherLanguage: "Đọc bằng tiếng Anh",
   },
   authors: {
-    river: { title: "Founder @ Vieomics" },
+    vieomics: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
@@ -430,7 +430,7 @@ export const vi: Dictionary = {
             },
             rows: [
               {
-                item: "Lắp ráp metagenomics (quy trình OmicsLab tùy chỉnh)",
+                item: "Lắp ráp hệ gen vi khuẩn (quy trình OmicsLab tùy chỉnh)",
                 unitPrice: "100.000 VND/mẫu",
                 qty: "100",
                 subtotal: "10.000.000 VND",
@@ -461,7 +461,23 @@ export const vi: Dictionary = {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
               },
               { link: { href: "/contact", text: "Liên hệ với chúng tôi" } },
-              { text: " để nhận báo giá chính xác." },
+              {
+                text: " để nhận báo giá chính xác. Mới bắt đầu? Xem hướng dẫn từng bước: ",
+              },
+              {
+                link: {
+                  href: "/blogs/how-to-run-nf-core-pipelines-on-omicslab",
+                  text: "Cách chạy pipeline nf-core trên nền tảng Omicslab",
+                },
+              },
+              { text: " và " },
+              {
+                link: {
+                  href: "/blogs/bacterial-genome-assembly-without-coding",
+                  text: "Xây dựng bộ genome vi khuẩn không cần lập trình",
+                },
+              },
+              { text: "." },
             ] as TextSegment[],
           },
           {

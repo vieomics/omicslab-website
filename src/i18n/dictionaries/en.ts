@@ -183,7 +183,7 @@ export const en = {
     readInOtherLanguage: "Read in Vietnamese",
   },
   authors: {
-    river: { title: "Founder @ Vieomics" },
+    vieomics: { title: "Founder @ Vieomics" },
   },
   home: {
     hero: {
@@ -430,7 +430,7 @@ export const en = {
             },
             rows: [
               {
-                item: "Metagenomics assembly (OmicsLab custom pipeline)",
+                item: "Bacterial genome assembly (OmicsLab custom pipeline)",
                 unitPrice: "100,000 VND/sample",
                 qty: "100",
                 subtotal: "10,000,000 VND",
@@ -461,7 +461,23 @@ export const en = {
                 text: "* Estimates based on typical bacterial genome assembly workload. Actual costs may vary. ",
               },
               { link: { href: "/contact", text: "Contact us" } },
-              { text: " for a precise quote." },
+              {
+                text: " for a precise quote. New to this? Follow the step-by-step guides: ",
+              },
+              {
+                link: {
+                  href: "/blogs/how-to-run-nf-core-pipelines-on-omicslab",
+                  text: "How to Run nf-core Pipelines on the Omicslab Platform",
+                },
+              },
+              { text: " and " },
+              {
+                link: {
+                  href: "/blogs/bacterial-genome-assembly-without-coding",
+                  text: "Building a Bacterial Genome Without Writing Code",
+                },
+              },
+              { text: "." },
             ] as TextSegment[],
           },
           {
