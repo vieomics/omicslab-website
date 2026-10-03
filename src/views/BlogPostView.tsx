@@ -1,6 +1,7 @@
 import CodeBlockWrapper from "@/components/Blog/CodeBlockWrapper";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import TableOfContents from "@/components/Blog/TableOfContents";
+import ScholarLink from "@/components/Common/ScholarLink";
 import { Blog } from "@/types/blog";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -18,6 +19,7 @@ interface BlogPostViewProps {
   coverImage: string;
   author: string;
   authorImage: string;
+  authorScholar?: string | null;
   date: string;
   headings: TocItem[];
   recentPosts: Blog[];
@@ -32,6 +34,7 @@ export default function BlogPostView({
   coverImage,
   author,
   authorImage,
+  authorScholar,
   date,
   headings,
   recentPosts,
@@ -68,7 +71,12 @@ export default function BlogPostView({
                     unoptimized
                   />
                 </div>
-                <p className="micro-label text-ink">{author}</p>
+                <div className="flex items-center gap-2">
+                  <p className="micro-label text-ink">{author}</p>
+                  {authorScholar && (
+                    <ScholarLink href={authorScholar} size={14} />
+                  )}
+                </div>
               </div>
               {translationSlug && (
                 <Link
