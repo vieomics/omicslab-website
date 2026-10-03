@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import ScholarLink from "@/components/Common/ScholarLink";
 import { useState } from "react";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -13,6 +14,9 @@ interface AuthorData {
   name: string;
   title: string;
   image_url: string;
+  socials?: {
+    scholar?: string;
+  };
 }
 
 export interface BlogPost {
@@ -81,6 +85,9 @@ function PipelineBlogItem({
           <span className="micro-label text-ink">
             {post.authorData?.name || post.author || dict.common.anonymous}
           </span>
+          {post.authorData?.socials?.scholar && (
+            <ScholarLink href={post.authorData.socials.scholar} size={14} />
+          )}
           {authorTitle && (
             <span className="micro-label text-muted">• {authorTitle}</span>
           )}
