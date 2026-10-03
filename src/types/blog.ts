@@ -8,6 +8,7 @@ export type Author = {
   socials: {
     linkedin?: string;
     github?: string;
+    scholar?: string;
   };
 };
 

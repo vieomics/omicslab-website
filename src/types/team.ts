@@ -7,4 +7,5 @@ export type TeamType = {
   twitterLink: string;
   instagramLink: string;
   linkedinLink: string;
+  scholarLink?: string;
 };

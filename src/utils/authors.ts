@@ -11,6 +11,7 @@ export type Author = {
   socials: {
     linkedin?: string;
     github?: string;
+    scholar?: string;
   };
 };
 
@@ -25,7 +26,7 @@ function parseSimpleYaml(content: string): AuthorsData {
   let currentKey = "";
   let currentAuthor: Partial<Author> = {};
   let inSocials = false;
-  let socialsObj: { linkedin?: string; github?: string } = {};
+  let socialsObj: { linkedin?: string; github?: string; scholar?: string } = {};
 
   function flushCurrent() {
     if (currentKey && currentAuthor.name) {
@@ -63,6 +64,7 @@ function parseSimpleYaml(content: string): AuthorsData {
       const value = valueParts.join(":").trim();
       if (key.trim() === "linkedin") socialsObj.linkedin = value;
       if (key.trim() === "github") socialsObj.github = value;
+      if (key.trim() === "scholar") socialsObj.scholar = value;
       continue;
     }
 
