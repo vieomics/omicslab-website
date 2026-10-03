@@ -13,6 +13,7 @@ const teamData: TeamType[] = [
     twitterLink: "/#",
     instagramLink: "/#",
     linkedinLink: "https://www.linkedin.com/in/giang-nguyen-761b28190/",
+    scholarLink: "https://scholar.google.com/citations?hl=en&user=23JI1U8AAAAJ",
   },
 ];
 

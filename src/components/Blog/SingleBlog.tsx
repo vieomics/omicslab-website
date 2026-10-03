@@ -1,4 +1,5 @@
 import { Blog } from "@/types/blog";
+import ScholarLink from "@/components/Common/ScholarLink";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
 import { formatDate } from "@/i18n/date";
@@ -56,6 +57,9 @@ const SingleBlog = ({
           <span className="micro-label text-ink">
             {authorData?.name || author || dict.common.anonymous}
           </span>
+          {authorData?.socials?.scholar && (
+            <ScholarLink href={authorData.socials.scholar} size={14} />
+          )}
           {authorTitle && (
             <span className="micro-label text-muted">• {authorTitle}</span>
           )}
