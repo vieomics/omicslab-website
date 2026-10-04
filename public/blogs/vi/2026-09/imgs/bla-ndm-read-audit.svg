@@ -1,0 +1,32 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Từ reads công khai đến cơ chế kháng thuốc: blaNDM trên nền tảng Omicslab">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="140" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">NGHIÊN CỨU · K. PNEUMONIAE · P. AERUGINOSA</text>
+  <rect x="120" y="172" width="120" height="6" fill="#111111"/>
+  <text x="120" y="290" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Từ dữ liệu công khai</text>
+  <text x="120" y="390" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">đến cơ chế</text>
+  <text x="120" y="490" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">kháng thuốc</text>
+  <text x="120" y="548" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#6c6c6c">TÁC VỤ NF-CORE · KIỂM TRA READ · STUDIO</text>
+
+  <!-- Right: read-depth and gene motif -->
+  <text x="1230" y="132" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#6c6c6c">ĐỘ PHỦ READ</text>
+  <line x1="1230" y1="270" x2="1790" y2="270" stroke="#e3e3e3" stroke-width="1"/>
+  <polyline points="1230,270 1402,270 1426,170 1790,170" stroke="#111111" stroke-width="4" fill="none"/>
+  <line x1="1420" y1="170" x2="1420" y2="330" stroke="#c6c6c6" stroke-dasharray="5 7"/>
+
+  <rect x="1230" y="336" width="52" height="44" fill="#ff7f0e"/>
+  <rect x="1282" y="336" width="138" height="44" fill="#e3e3e3"/>
+  <rect x="1420" y="336" width="370" height="44" fill="#1f77b4"/>
+  <polygon points="1420,320 1408,334 1432,334" fill="#111111"/>
+  <text x="1436" y="326" font-family="Inter, Arial, sans-serif" font-size="16" fill="#6c6c6c">điểm nối chung</text>
+
+  <text x="1256" y="412" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#ff7f0e">IS26</text>
+  <text x="1351" y="412" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#6c6c6c">mất đoạn</text>
+  <text x="1605" y="412" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#111111">blaNDM-1 CDS</text>
+
+  <text x="1510" y="536" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">5 CHỦNG · 4 ĐIỂM NỐI · 1 YẾU TỐ CHUNG</text>
+</svg>
