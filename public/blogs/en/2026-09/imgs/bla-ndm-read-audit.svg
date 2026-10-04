@@ -7,9 +7,9 @@
   <!-- Left: editorial typography -->
   <text x="120" y="140" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">CASE STUDY · K. PNEUMONIAE · P. AERUGINOSA</text>
   <rect x="120" y="172" width="120" height="6" fill="#111111"/>
-  <text x="120" y="290" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">From public data</text>
-  <text x="120" y="390" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">to a resistance</text>
-  <text x="120" y="490" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">mechanism</text>
+  <text x="120" y="290" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">From sequencing data</text>
+  <text x="120" y="390" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">to an antimicrobial-</text>
+  <text x="120" y="490" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">resistance mechanism</text>
   <text x="120" y="548" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#6c6c6c">NF-CORE JOBS · READ-LEVEL AUDIT · STUDIO</text>
 
   <!-- Right: read-depth and gene motif -->
