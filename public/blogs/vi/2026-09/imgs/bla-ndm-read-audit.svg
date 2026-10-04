@@ -5,9 +5,9 @@
   <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
 
   <!-- Left: editorial typography -->
-  <text x="120" y="140" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">PHÂN TÍCH THỰC TẾ · BLA-NDM</text>
+  <text x="120" y="140" font-family="Inter, Arial, sans-serif" font-size="22" letter-spacing="7" fill="#6c6c6c">NGHIÊN CỨU · K. PNEUMONIAE · P. AERUGINOSA</text>
   <rect x="120" y="172" width="120" height="6" fill="#111111"/>
-  <text x="120" y="290" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Từ reads công khai</text>
+  <text x="120" y="290" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">Từ dữ liệu công khai</text>
   <text x="120" y="390" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">đến cơ chế</text>
   <text x="120" y="490" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="96" font-weight="700" fill="#111111">kháng thuốc</text>
   <text x="120" y="548" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="3" fill="#6c6c6c">TÁC VỤ NF-CORE · KIỂM TRA READ · STUDIO</text>
