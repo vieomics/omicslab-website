@@ -161,6 +161,9 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
             </button>
           ))}
         </div>
+        <p className="border-l-2 border-line pl-4 text-xs leading-relaxed text-muted">
+          {dict.blogPage.terminologyNote}
+        </p>
       </div>
 
       {filteredPosts.length > 0 ? (
