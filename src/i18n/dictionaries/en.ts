@@ -364,6 +364,8 @@ export const en = {
     searchPlaceholder: "Search posts...",
     searchPipelines: "Search pipelines...",
     searchInfrastructure: "Search infrastructure blogs...",
+    terminologyNote:
+      "Bioinformatics has a lot of specialized terminology. Technical terms are kept in English so their original meaning is preserved.",
     guides: {
       title: "Infrastructure Guides",
       paragraph:
