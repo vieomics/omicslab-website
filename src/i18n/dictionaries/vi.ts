@@ -364,6 +364,8 @@ export const vi: Dictionary = {
     searchPlaceholder: "Tìm kiếm bài viết...",
     searchPipelines: "Tìm kiếm quy trình...",
     searchInfrastructure: "Tìm kiếm bài viết hạ tầng...",
+    terminologyNote:
+      "Bioinformatics có rất nhiều thuật ngữ chuyên ngành. Các thuật ngữ được giữ nguyên tiếng Anh để bảo toàn trọn vẹn ý nghĩa gốc.",
     guides: {
       title: "Hướng dẫn hạ tầng",
       paragraph:
