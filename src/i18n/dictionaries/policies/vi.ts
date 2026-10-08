@@ -7,7 +7,7 @@ import type { Policies } from "./en";
 export const policiesVi: Policies = {
   shared: {
     lastUpdatedLabel: "Cập nhật lần cuối",
-    lastUpdated: "25 tháng 9 năm 2026",
+    lastUpdated: "9 tháng 10 năm 2026",
     tocLabel: "Trong trang này",
     policiesLabel: "Chính sách",
   },
@@ -17,7 +17,7 @@ export const policiesVi: Policies = {
     title: "Chính sách Bảo vệ Dữ liệu Cá nhân & Quyền riêng tư",
     navTitle: "Chính sách Quyền riêng tư",
     description:
-      "Chào mừng bạn đến với Nền tảng phân tích dữ liệu tin sinh học Omicslab — sản phẩm do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Chúng tôi cam kết bảo vệ dữ liệu cá nhân, dữ liệu nghiên cứu của bạn theo quy định của pháp luật Việt Nam (Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Nghị định 356/2025/NĐ-CP, Luật An ninh mạng) và các tiêu chuẩn bảo mật quốc tế.",
+      "Chào mừng bạn đến với Nền tảng phân tích dữ liệu tin sinh học Omicslab — sản phẩm do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Chúng tôi cam kết bảo vệ dữ liệu cá nhân và dữ liệu bạn xử lý trên Nền tảng theo quy định của pháp luật Việt Nam (Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Nghị định 356/2025/NĐ-CP, Luật An ninh mạng) và các tiêu chuẩn bảo mật quốc tế.",
     sections: [
       {
         id: "controller",
@@ -45,7 +45,15 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn được phép tải lên dữ liệu cá nhân của người khác — ví dụ dữ liệu bệnh nhân mà Phòng lab, Bệnh viện hoặc Viện nghiên cứu của bạn đại diện. Trong trường hợp này, bạn là **Bên Kiểm soát Dữ liệu** đối với dữ liệu đó và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý và phi định danh hóa; Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2).",
+            text: "**Dữ liệu của Khách hàng:** là dữ liệu mà bạn (hoặc đơn vị của bạn) tải lên, kết nối, tạo ra hoặc xử lý trên Nền tảng. Dữ liệu của Khách hàng thuộc quyền kiểm soát của bạn và **không mặc nhiên được công khai**; đây là nhóm dữ liệu tách biệt với các bộ dữ liệu công khai/đối chuẩn được mô tả tại Mục 3.",
+          },
+          {
+            type: "p",
+            text: "**Bộ dữ liệu công khai / đối chuẩn (Public / Benchmark Dataset):** là bộ dữ liệu mà Vieomics có thể cung cấp từ các kho dữ liệu công cộng quốc tế, cơ sở dữ liệu khoa học truy cập mở, các nguồn công khai hợp pháp khác, hoặc dữ liệu mô phỏng hay được chuẩn bị cho mục đích đối chuẩn. Bộ dữ liệu công khai/đối chuẩn **không phải là dữ liệu của Khách hàng** và được quy định riêng tại Mục 3.",
+          },
+          {
+            type: "p",
+            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn được phép tải lên dữ liệu cá nhân của người khác — ví dụ dữ liệu bệnh nhân mà Phòng lab, Bệnh viện hoặc Viện nghiên cứu của bạn đại diện. Trong trường hợp này, bạn là **Bên Kiểm soát Dữ liệu** đối với dữ liệu đó và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý, việc giả danh hóa (pseudonymisation) và xử lý hợp pháp; Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2).",
           },
           {
             type: "label",
@@ -57,15 +65,15 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Bên Xử lý Dữ liệu:** Đối với dữ liệu nghiên cứu và dữ liệu sinh học do bạn (hoặc đơn vị của bạn) chủ động tải lên Nền tảng Omicslab, bạn giữ vai trò là Bên Kiểm soát Dữ liệu. Chúng tôi chỉ đóng vai trò là Bên Xử lý Dữ liệu — vận hành Nền tảng và thực hiện các tác vụ tính toán, lưu trữ hoàn toàn theo chỉ dẫn, thiết lập và yêu cầu của bạn.",
+            text: "**Bên Xử lý Dữ liệu:** Đối với dữ liệu nghiên cứu và dữ liệu sinh học do bạn (hoặc đơn vị của bạn) chủ động tải lên Nền tảng Omicslab, bạn giữ vai trò là Bên Kiểm soát Dữ liệu. Chúng tôi chỉ đóng vai trò là Bên Xử lý Dữ liệu — vận hành Nền tảng và thực hiện các tác vụ tính toán, lưu trữ theo chỉ dẫn, thiết lập và yêu cầu của bạn. Khi đóng vai trò Bên Xử lý, chúng tôi xử lý dữ liệu của Khách hàng theo chỉ dẫn bằng văn bản của bạn và theo thỏa thuận dịch vụ hiện hành, đồng thời vẫn chịu trách nhiệm đối với các nghĩa vụ của chính mình theo pháp luật hiện hành và các cam kết hợp đồng.",
           },
           {
             type: "label",
-            text: "Hạ tầng Lưu trữ và Xử lý Dữ liệu Y sinh Thu được Từ Mẫu Người / Bệnh nhân",
+            text: "Hạ tầng Lưu trữ và Xử lý Dữ liệu Người / Liên quan đến Sức khỏe (Theo từng Dự án)",
           },
           {
             type: "p",
-            text: "Đối với các tệp dữ liệu y sinh thu được từ mẫu người hoặc bệnh nhân (ví dụ: NIPT, WES, WGS, RNA-Seq người, hồ sơ di truyền), dữ liệu chỉ được lưu trữ và chạy phân tích trên hạ tầng điện toán đám mây của các Đối tác Hạ tầng được chúng tôi chỉ định chính thức, đã có hợp đồng cam kết bảo mật và thỏa thuận xử lý dữ liệu (DPA) ràng buộc với VIEOMICS, đảm bảo tuân thủ đầy đủ các quy định của pháp luật Việt Nam về an toàn thông tin và bảo vệ dữ liệu cá nhân.",
+            text: "Trường hợp Khách hàng tải lên hoặc xử lý dữ liệu y sinh thu được từ mẫu người (ví dụ: NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền), các khối lượng công việc này được xử lý theo **từng dự án / từng khách hàng doanh nghiệp**. Việc xử lý như vậy có thể cần các thỏa thuận riêng, biện pháp kiểm soát kỹ thuật, điều khoản xử lý dữ liệu và việc rà soát tuân thủ trước khi đưa vào vận hành. Với các dự án nhạy cảm, vị trí dữ liệu, hạ tầng, kiểm soát truy cập và phương thức xử lý có thể được thỏa thuận riêng; tùy dự án, các yếu tố này có thể sử dụng hạ tầng do Vieomics quản lý, do Khách hàng quản lý, hoặc do một đối tác được chỉ định quản lý, trong mọi trường hợp đều phải tuân theo các biện pháp bảo vệ và cam kết hợp đồng mà pháp luật hiện hành yêu cầu.",
           },
           {
             type: "label",
@@ -73,13 +81,13 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Trường hợp bạn chủ động kết nối, tích hợp tài khoản lưu trữ hoặc máy chủ phân tích riêng (API/Credentials cá nhân) vào Nền tảng Omicslab, bạn hoàn toàn chịu trách nhiệm về tính bảo mật, quyền truy cập và an toàn dữ liệu trên hạ tầng do bạn tự quản lý đó. Chúng tôi được miễn trừ mọi trách nhiệm đối với sự cố phát sinh từ hệ thống riêng của bạn.",
+            text: "Trường hợp bạn chủ động kết nối, tích hợp tài khoản lưu trữ hoặc máy chủ phân tích riêng (API/Credentials cá nhân) vào Nền tảng Omicslab, bạn chịu trách nhiệm về tính bảo mật, quyền truy cập và an toàn dữ liệu trên hạ tầng do bạn tự quản lý đó. Trong giới hạn pháp luật cho phép, chúng tôi không chịu trách nhiệm đối với sự cố phát sinh từ hệ thống do bạn tự quản lý. Điều này không ảnh hưởng đến các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng với bạn.",
           },
         ],
       },
       {
         id: "collect",
-        title: "2. Dữ liệu Thu thập & Quy định Trách nhiệm theo Loại Dữ liệu Sinh học",
+        title: "2. Dữ liệu Thu thập & Quy định Trách nhiệm theo Loại Dữ liệu",
         blocks: [
           {
             type: "p",
@@ -91,17 +99,19 @@ export const policiesVi: Policies = {
               "**Dữ liệu tài khoản:** Họ và tên đại diện, địa chỉ email, số điện thoại, địa chỉ liên hệ/hóa đơn, thông tin xác thực đăng nhập và các thiết lập tùy chỉnh tài khoản.",
               "**Dữ liệu sử dụng dịch vụ:** Nhật ký hoạt động (log files) trên Nền tảng, bao gồm các tiến trình phân tích (jobs), lịch sử lưu trữ, dung lượng sử dụng — phục vụ cho việc đối soát thanh toán, kiểm toán hệ thống và hỗ trợ kỹ thuật.",
               "**Dữ liệu kỹ thuật:** Địa chỉ IP, thông tin trình duyệt, loại thiết bị và thông tin kết nối — nhằm bảo đảm an toàn thông tin, phòng chống tấn công mạng và chẩn đoán lỗi.",
-              "**Dữ liệu truy cập Website:** Dữ liệu lưu lượng truy cập tổng hợp (đã được ẩn danh) thu thập qua Google Analytics trên **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics — nhằm cải thiện trải nghiệm người dùng.",
+              "**Dữ liệu truy cập Website:** Dữ liệu lưu lượng truy cập tổng hợp thu thập qua Google Analytics trên **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics — nhằm cải thiện trải nghiệm người dùng, được xử lý như mô tả tại Mục 11.",
               {
-                text: "**Dữ liệu Phân tích Tin sinh học (Tải lên hệ thống):**",
+                text: "**Dữ liệu Phân tích Tin sinh học (tải lên hoặc xử lý trên hệ thống):**",
                 children: [
-                  "**Dữ liệu Phi người (Vi sinh vật, Thực vật, Động vật, Mẫu môi trường):** Được xác định là dữ liệu kỹ thuật / dữ liệu nghiên cứu khoa học thuần túy. Dữ liệu này không thuộc phạm vi điều chỉnh của Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về bảo vệ dữ liệu cá nhân. Người dùng có toàn quyền tải lên, lưu trữ và thực hiện các luồng phân tích tự do mà không cần áp dụng các thủ tục về quyền riêng tư cá nhân.",
+                  "**Dữ liệu Phi người (Vi sinh vật, Thực vật, Động vật, Mẫu môi trường):** nhìn chung được xác định là dữ liệu nghiên cứu khoa học. Trong trường hợp thông thường và với điều kiện dữ liệu không chứa dữ liệu cá nhân, đây không phải là dữ liệu cá nhân theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Người dùng có thể tải lên, lưu trữ và phân tích dữ liệu này mà không cần áp dụng các thủ tục về dữ liệu cá nhân, trừ khi dữ liệu có chứa dữ liệu cá nhân.",
                   {
-                    text: "**Dữ liệu Người / Bệnh nhân (dữ liệu y sinh thu được từ mẫu người):** Bao gồm kết quả xét nghiệm di truyền trước sinh không xâm lấn (NIPT), giải trình tự toàn bộ vùng mã ngoại (WES), giải trình tự toàn bộ bộ gen (WGS), giải trình tự RNA trên mẫu người (RNA-Seq) và hồ sơ, dữ liệu di truyền lâm sàng của bệnh nhân. Đây là **Dữ liệu cá nhân nhạy cảm** theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Omicslab không quản lý và không truy cập vào danh tính thực của bệnh nhân/chủ thể dữ liệu. Trách nhiệm pháp lý bắt buộc được quy định như sau:",
+                    text: "**Dữ liệu Người / Liên quan đến Sức khỏe (dữ liệu y sinh thu được từ mẫu người):** khi Khách hàng lựa chọn tải lên hoặc xử lý dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người — ví dụ kết quả xét nghiệm di truyền trước sinh không xâm lấn (NIPT), giải trình tự toàn bộ vùng mã ngoại (WES), giải trình tự toàn bộ bộ gen (WGS), giải trình tự RNA trên mẫu người (RNA-Seq), hoặc hồ sơ di truyền và dữ liệu bộ gen lâm sàng của bệnh nhân — dữ liệu đó có thể là **dữ liệu cá nhân nhạy cảm** theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Vieomics không chủ động thu thập loại dữ liệu này từ công chúng, và các khối lượng công việc như vậy được xử lý theo **từng dự án / từng khách hàng doanh nghiệp**, tùy theo các thỏa thuận riêng, biện pháp kiểm soát kỹ thuật và việc rà soát tuân thủ. Chúng tôi không tìm cách định danh cá nhân và không yêu cầu truy cập danh tính thực đằng sau một Sample ID. Khi dữ liệu như vậy được xử lý:",
                     children: [
-                      "**Nghĩa vụ Phi định danh hóa (Anonymization):** Khách hàng cam kết mọi file dữ liệu (FASTQ, BAM, VCF…) khi tải lên chỉ được đi kèm với Mã định danh kỹ thuật (Sample ID). Khách hàng không được chứa bất kỳ Thông tin Định danh Cá nhân (PII) như Họ tên, Số CCCD/Passport, Ngày sinh hay Mã hồ sơ bệnh án trong tên file, metadata hoặc tiêu đề mẫu.",
-                      "**Sự đồng ý của Bệnh nhân:** Khách hàng (Phòng lab, Bệnh viện, Viện nghiên cứu) chịu toàn bộ trách nhiệm pháp lý trong việc thu thập sự đồng ý hợp pháp của bệnh nhân/chủ thể dữ liệu trước khi tiến hành giải trình tự và phân tích.",
-                      "**Bảng ánh xạ (Mapping Key):** Bảng ánh xạ nối giữa Sample ID và danh tính thực của bệnh nhân nằm hoàn toàn trên hệ thống nội bộ (LIMS local) của Khách hàng. Omicslab hoàn toàn miễn trừ trách nhiệm pháp lý đối với bảng ánh xạ này.",
+                      "**Mã định danh giả danh (Pseudonymous identifiers):** Khách hàng được khuyến nghị chỉ gắn một mã định danh kỹ thuật (Sample ID) và tránh đưa các định danh trực tiếp — như họ tên, số CCCD/hộ chiếu, ngày sinh hoặc mã hồ sơ bệnh án — vào tên file, metadata mẫu hoặc tham số phân tích, trừ khi điều đó là cần thiết cho một mục đích hợp pháp.",
+                      "**Không mặc nhiên là ẩn danh:** dữ liệu chỉ gắn Sample ID là dữ liệu **đã được giả danh hóa, không nhất thiết đã ẩn danh hoàn toàn**. Một Sample ID kỹ thuật tự nó không làm cho bộ dữ liệu bộ gen trở thành ẩn danh hoàn toàn, vì dữ liệu vẫn có thể liên kết được với một cá nhân — ví dụ thông qua thông tin ánh xạ của Khách hàng hoặc thông qua chính dữ liệu. Chúng tôi không mô tả các bộ dữ liệu này là ẩn danh hoàn toàn.",
+                      "**Sự đồng ý và căn cứ pháp lý:** Khách hàng (phòng lab, bệnh viện, viện nghiên cứu hoặc tổ chức khác) chịu trách nhiệm bảo đảm có căn cứ pháp lý hợp lệ và, khi được yêu cầu, có sự đồng ý và chấp thuận đạo đức cần thiết trước khi dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người được tải lên hoặc phân tích.",
+                      "**Thông tin ánh xạ:** mọi khóa liên kết Sample ID với danh tính thực của một cá nhân, nếu có, nên nằm dưới sự kiểm soát của Khách hàng và không phải là thông tin chúng tôi yêu cầu. Khi việc tách biệt này được cấu hình về mặt kỹ thuật, các khóa ánh xạ của Khách hàng được giữ tách biệt khỏi môi trường phân tích, và chúng tôi không sử dụng chúng để định danh cá nhân. Điều này không giới hạn các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng.",
+                      "**Yêu cầu bổ sung:** các dự án dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người mang tính **theo từng dự án** và có thể cần các điều khoản xử lý dữ liệu riêng, biện pháp kiểm soát kỹ thuật, cấu hình theo khu vực và việc rà soát tuân thủ trước khi đưa vào vận hành.",
                     ],
                   },
                 ],
@@ -111,8 +121,28 @@ export const policiesVi: Policies = {
         ],
       },
       {
+        id: "public-datasets",
+        title: "3. Bộ dữ liệu Công khai và Đối chuẩn",
+        blocks: [
+          {
+            type: "p",
+            text: "Ngoài việc xử lý dữ liệu của Khách hàng, Vieomics có thể cung cấp quyền truy cập các bộ dữ liệu công khai, truy cập mở, dữ liệu mô phỏng hoặc dữ liệu đối chuẩn nhằm hỗ trợ trình diễn, giáo dục, nghiên cứu, đối chuẩn, và kiểm thử, xác thực quy trình phân tích cũng như chức năng của nền tảng.",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Nguồn dữ liệu:** các bộ dữ liệu này có thể được lấy từ các kho dữ liệu công cộng quốc tế, cơ sở dữ liệu khoa học truy cập mở, các nguồn công khai hợp pháp khác, và có thể bao gồm dữ liệu mô phỏng hoặc đối chuẩn.",
+              "**Không nhất thiết do Vieomics thu thập:** khi một bộ dữ liệu được lấy từ kho công cộng hoặc nguồn hợp pháp khác, Vieomics không nhất thiết thu thập dữ liệu gốc trực tiếp từ các cá nhân liên quan và cũng không nhất thiết là bên kiểm soát hoặc bên thu thập dữ liệu gốc của bộ dữ liệu đó.",
+              "**Nguồn gốc và giấy phép:** việc sử dụng các bộ dữ liệu này phụ thuộc vào giấy phép, yêu cầu ghi nguồn và điều khoản sử dụng của kho hoặc nguồn tương ứng. Khi áp dụng, thông tin về nguồn gốc và giấy phép được cung cấp kèm theo bộ dữ liệu.",
+              "**Mục đích sử dụng:** các bộ dữ liệu này dành cho trình diễn, giáo dục, nghiên cứu, đối chuẩn và kiểm thử quy trình hoặc nền tảng. Chúng không được trình bày như dữ liệu của Khách hàng và không được nhầm lẫn với dữ liệu riêng của Khách hàng.",
+              "**Không chuyển đổi dữ liệu Khách hàng:** dữ liệu riêng của Khách hàng không bị công khai và không bị chuyển thành bộ dữ liệu công khai hoặc đối chuẩn, trừ khi Khách hàng đã cho phép riêng và việc đó được pháp luật cho phép. Vieomics không công bố, phân phối lại hoặc tái sử dụng dữ liệu của Khách hàng như một bộ dữ liệu công khai nếu không có sự cho phép đó.",
+            ],
+          },
+        ],
+      },
+      {
         id: "bases",
-        title: "3. Căn cứ pháp lý xử lý dữ liệu",
+        title: "4. Căn cứ pháp lý xử lý dữ liệu",
         blocks: [
           {
             type: "p",
@@ -131,7 +161,7 @@ export const policiesVi: Policies = {
       },
       {
         id: "use",
-        title: "4. Mục đích sử dụng dữ liệu",
+        title: "5. Mục đích sử dụng dữ liệu",
         blocks: [
           {
             type: "p",
@@ -145,19 +175,19 @@ export const policiesVi: Policies = {
             type: "ul",
             items: [
               "Không bán, cho thuê hay thương mại hóa dữ liệu cá nhân của người dùng dưới bất kỳ hình thức nào.",
-              "Không truy cập, khai thác hay chia sẻ dữ liệu nghiên cứu (dù là dữ liệu vi sinh, thực vật, động vật hay dữ liệu người đã phi định danh) cho bất kỳ mục đích nào khác ngoài việc thực hiện dịch vụ phân tích do bạn yêu cầu.",
+              "Không truy cập, khai thác hay chia sẻ dữ liệu của Khách hàng (bao gồm dữ liệu nghiên cứu và dữ liệu người đã giả danh hóa) cho bất kỳ mục đích nào khác ngoài việc thực hiện dịch vụ phân tích do bạn yêu cầu. Chúng tôi không công bố dữ liệu riêng của Khách hàng trừ khi bạn đã cho phép riêng và việc đó được pháp luật cho phép.",
             ],
           },
         ],
       },
       {
         id: "retention",
-        title: "5. Thời gian lưu trữ dữ liệu",
+        title: "6. Thời gian lưu trữ dữ liệu",
         blocks: [
           {
             type: "ul",
             items: [
-              "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated)** và được lưu giữ trong thời hạn mà pháp luật yêu cầu (thời hiệu khiếu nại, nghĩa vụ lưu trữ hồ sơ, chứng từ và hóa đơn), để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan. Hết thời hạn đó, dữ liệu bị **xóa hoặc ẩn danh hóa** theo ngoại lệ đã nêu tại Mục 8.",
+              "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated)** và được lưu giữ trong thời hạn mà pháp luật yêu cầu (thời hiệu khiếu nại, nghĩa vụ lưu trữ hồ sơ, chứng từ và hóa đơn), để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan. Hết thời hạn đó, dữ liệu bị **xóa hoặc ẩn danh hóa** theo ngoại lệ đã nêu tại Mục 9.",
               "**Dữ liệu sử dụng & kiểm toán:** Lưu trữ theo thời hạn quy định của pháp luật về kế toán, thuế và an ninh mạng.",
               "**Dữ liệu nghiên cứu (Object Storage):** được lưu trữ trên dịch vụ lưu trữ đối tượng (Object Storage) của Marketplace theo mô hình **trả theo mức sử dụng, tính theo chu kỳ tháng (pay-as-you-go)** và chỉ có hiệu lực trong chu kỳ bạn đã trả. Nếu bạn không còn đăng ký bất kỳ gói dịch vụ nào hoặc không gia hạn chu kỳ lưu trữ, quyền truy cập workspace sẽ bị khóa, dữ liệu được giữ lại trong thời gian **ân hạn 1 tháng**, sau đó **bị dọn dẹp toàn bộ khỏi workspace** — chỉ nhật ký audit được giữ lại cho mục đích tra cứu. Bạn cũng có thể tự xóa dữ liệu bất cứ lúc nào trên Nền tảng, hoặc việc xóa được thực hiện theo thỏa thuận xử lý dữ liệu (DPA) đã ký kết.",
               "**Số dư Top-up (ví tiền tổ chức):** Số dư tiền nạp (top-up) chỉ có thể sử dụng khi tổ chức của bạn còn gói đăng ký hiệu lực. Khi gói đăng ký hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, **số dư còn lại bị thu hồi và đưa về 0** — số tiền nạp không thể tiếp tục sử dụng khi không còn gói dịch vụ. Tổ chức chưa từng đăng ký gói thì số dư (nếu có) không bị thu hồi. Việc thu hồi được rà soát tự động theo chu kỳ hằng ngày. Điều kiện thanh toán, email cảnh báo trước và các mốc thời hạn được nêu chi tiết tại Mục 13 [Điều khoản Dịch vụ](/terms).",
@@ -167,7 +197,7 @@ export const policiesVi: Policies = {
       },
       {
         id: "security",
-        title: "6. Biện pháp bảo mật dữ liệu",
+        title: "7. Biện pháp bảo mật dữ liệu",
         blocks: [
           {
             type: "p",
@@ -178,7 +208,8 @@ export const policiesVi: Policies = {
             items: [
               "Mã hóa toàn bộ dữ liệu trên đường truyền (TLS/SSL) và khi lưu trữ (Encryption at Rest).",
               "Phân quyền truy cập tối thiểu (RBAC), quản lý xác thực đa yếu tố (MFA) và ghi nhật ký hệ thống (Audit Logs).",
-              "Rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
+              "Cô lập theo từng Workspace, và tách biệt các khóa ánh xạ của Khách hàng khỏi môi trường phân tích khi được cấu hình về mặt kỹ thuật.",
+              "Giám sát an ninh và phát hiện sự cố trên các tài nguyên do nền tảng quản lý, cùng với việc rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
               "Chỉ những nhân sự được phân công và chịu cam kết bảo mật nghiêm ngặt mới có quyền truy cập thông tin hỗ trợ kỹ thuật khi có yêu cầu bằng văn bản từ bạn.",
             ],
           },
@@ -198,7 +229,7 @@ export const policiesVi: Policies = {
       },
       {
         id: "sharing",
-        title: "7. Chia sẻ và Chuyển giao dữ liệu",
+        title: "8. Chia sẻ và Chuyển giao dữ liệu",
         blocks: [
           {
             type: "p",
@@ -213,17 +244,17 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Dữ liệu nghiên cứu của bạn sẽ không bao giờ được chia sẻ cho bên thứ ba ngoại trừ trường hợp có chỉ định trực tiếp từ bạn.",
+            text: "Dữ liệu của Khách hàng sẽ không bao giờ được chia sẻ cho bên thứ ba ngoại trừ trường hợp có chỉ định trực tiếp từ bạn, hoặc khi pháp luật yêu cầu. Chúng tôi không công bố, phân phối lại hoặc tái sử dụng dữ liệu của Khách hàng như một bộ dữ liệu công khai hoặc đối chuẩn nếu không có sự cho phép riêng và căn cứ pháp lý hợp lệ.",
           },
           {
             type: "p",
-            text: "**Nhà cung cấp dịch vụ của trang web này:** (i) **Cloudflare Pages** — phân phối các file tĩnh của trang (chúng tôi không bật dịch vụ phân tích của Cloudflare); (ii) **Google Analytics** — chỉ chạy khi bạn chấp nhận cookie tại Mục 10; (iii) **DMCA.com** — hiển thị huy hiệu bảo vệ. Trong phạm vi Nền tảng, chúng tôi làm việc với đối tác hạ tầng Marketplace và cổng thanh toán, tất cả đều gắn kết bằng thỏa thuận xử lý dữ liệu (DPA).",
+            text: "**Nhà cung cấp dịch vụ của trang web này:** (i) **Cloudflare Pages** — phân phối các file tĩnh của trang (chúng tôi không bật dịch vụ phân tích của Cloudflare); (ii) **Google Analytics** — chỉ chạy khi bạn chấp nhận cookie tại Mục 11; (iii) **DMCA.com** — hiển thị huy hiệu bảo vệ. Trong phạm vi Nền tảng, chúng tôi làm việc với đối tác hạ tầng Marketplace và cổng thanh toán, tất cả đều gắn kết bằng thỏa thuận xử lý dữ liệu (DPA).",
           },
         ],
       },
       {
         id: "rights",
-        title: "8. Quyền của chủ thể dữ liệu",
+        title: "9. Quyền của chủ thể dữ liệu",
         blocks: [
           {
             type: "p",
@@ -234,7 +265,7 @@ export const policiesVi: Policies = {
             items: [
               "Quyền được biết, quyền đồng ý hoặc rút lại sự đồng ý.",
               "Quyền truy cập, xem, chỉnh sửa hoặc yêu cầu hiệu chỉnh dữ liệu.",
-              "Quyền yêu cầu xóa dữ liệu, hạn chế hoặc phản đối xử lý dữ liệu — trừ dữ liệu bắt buộc lưu trữ theo pháp luật hoặc cần giữ lại để giải quyết tranh chấp, sự cố pháp lý (xem Mục 5).",
+              "Quyền yêu cầu xóa dữ liệu, hạn chế hoặc phản đối xử lý dữ liệu — trừ dữ liệu bắt buộc lưu trữ theo pháp luật hoặc cần giữ lại để giải quyết tranh chấp, sự cố pháp lý (xem Mục 6).",
               "Quyền yêu cầu cung cấp bản sao dữ liệu.",
               "Quyền khiếu nại, tố cáo hoặc yêu cầu bồi thường thiệt hại theo quy định của pháp luật.",
             ],
@@ -247,17 +278,29 @@ export const policiesVi: Policies = {
       },
       {
         id: "transfers",
-        title: "9. Lưu trữ và Chuyển dữ liệu ra nước ngoài",
+        title: "10. Lưu trữ và Chuyển dữ liệu ra nước ngoài",
         blocks: [
           {
             type: "p",
-            text: "Hệ thống máy chủ, hạ tầng tính toán và dữ liệu lưu trữ đối tượng (Object Storage) của Omicslab được lưu trữ 100% tại các trung tâm dữ liệu đạt chuẩn đặt trong lãnh thổ Việt Nam, tuân thủ nghiêm ngặt Luật An ninh mạng và Nghị định 53/2022/NĐ-CP. Trong trường hợp có bất kỳ sự chuyển giao dữ liệu cá nhân nào ra nước ngoài, chúng tôi cam kết thực hiện đầy đủ các thủ tục đánh giá tác động theo quy định của pháp luật Việt Nam. Ngoại lệ duy nhất là dịch vụ phân tích truy cập **trang web này (landing page)** — Nền tảng không sử dụng Google Analytics: dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo — xem Mục 10. Dịch vụ này **chỉ chạy sau khi bạn bấm Chấp nhận** tại thông báo cookie (Mục 10); nếu bạn từ chối, không có dữ liệu nào được chuyển đi.",
+            text: "Dữ liệu có thể được lưu trữ và xử lý tại khu vực địa lý được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Đối với các triển khai tại khu vực Việt Nam, dữ liệu được dự kiến lưu trữ và xử lý trên hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng.",
+          },
+          {
+            type: "p",
+            text: "Khi dịch vụ hoặc đối tác hạ tầng đặt ngoài lãnh thổ Việt Nam, dữ liệu có thể được lưu trữ và xử lý ngoài Việt Nam tùy theo khu vực và cấu hình bạn lựa chọn. Khi dữ liệu cá nhân được chuyển ra nước ngoài và pháp luật Việt Nam yêu cầu, chúng tôi hoàn thành các thủ tục đánh giá tác động và chuyển dữ liệu áp dụng (hoặc dựa trên căn cứ pháp lý khác) và áp dụng các biện pháp bảo vệ mà pháp luật hiện hành và thỏa thuận riêng yêu cầu.",
+          },
+          {
+            type: "p",
+            text: "Khách hàng có yêu cầu cụ thể về vị trí dữ liệu, phương án hạ tầng hoặc biện pháp kiểm soát bổ sung cho các dự án nhạy cảm có thể thỏa thuận riêng với chúng tôi; thông tin liên hệ tại Mục 12 được áp dụng.",
+          },
+          {
+            type: "p",
+            text: "Trên **trang web này (landing page)** — bản thân Nền tảng không sử dụng Google Analytics — dữ liệu lưu lượng truy cập (bao gồm địa chỉ IP) được xử lý bởi nhà cung cấp phân tích của chúng tôi với tư cách nhà xử lý và không dùng cho mục đích quảng cáo. Dịch vụ này **chỉ chạy sau khi bạn bấm Chấp nhận** tại thông báo cookie (Mục 11); nếu bạn từ chối, không có dữ liệu nào như vậy được chuyển đi.",
           },
         ],
       },
       {
         id: "cookies",
-        title: "10. Cookie và Công nghệ định danh",
+        title: "11. Cookie và Công nghệ định danh",
         blocks: [
           {
             type: "p",
@@ -279,7 +322,7 @@ export const policiesVi: Policies = {
       },
       {
         id: "contact",
-        title: "11. Thông tin liên hệ",
+        title: "12. Thông tin liên hệ",
         blocks: [
           {
             type: "p",
@@ -482,7 +525,7 @@ export const policiesVi: Policies = {
               "**Gói đăng ký (Subscription):** được thanh toán theo chu kỳ, thông thường là theo tháng. Việc gia hạn phải được thực hiện trước khi chu kỳ hiện tại kết thúc.",
               "**Lưu trữ Marketplace (pay-as-you-go):** dung lượng lưu trữ được tính phí theo mức sử dụng và theo chu kỳ tháng, gắn với gói đăng ký, và không thể kéo dài quá thời hạn của gói đang có hiệu lực.",
               "**Cảnh báo trước bằng email:** trước mọi hành động, chúng tôi gửi email cho quản trị viên — nhắc trước **7 ngày** khi chu kỳ lưu trữ sắp kết thúc, và thông báo ngay khi chu kỳ hết hạn. Sau khi hết hạn, dữ liệu được giữ thêm **thời gian ân hạn 1 tháng** trước khi bị dọn dẹp.",
-              "**Dọn dẹp dữ liệu workspace:** qua thời hạn ân, dữ liệu trong workspace bị xóa — chỉ nhật ký audit được giữ lại cho mục đích tra cứu (chi tiết tại Mục 5 [Chính sách Quyền riêng tư](/privacy)).",
+              "**Dọn dẹp dữ liệu workspace:** qua thời hạn ân, dữ liệu trong workspace bị xóa — chỉ nhật ký audit được giữ lại cho mục đích tra cứu (chi tiết tại Mục 6 [Chính sách Quyền riêng tư](/privacy)).",
               "**Số dư Top-up:** chỉ có thể sử dụng khi tổ chức còn gói đăng ký hiệu lực. Khi gói hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, số dư còn lại bị thu hồi về 0; thông tin về số dư và các mốc thời hạn cũng được gửi qua email trước khi áp dụng.",
             ],
           },
@@ -521,13 +564,13 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Hệ thống của Omicslab đặt máy chủ tại Việt Nam và tuân thủ nghiêm ngặt pháp luật Việt Nam về bảo vệ dữ liệu cá nhân, đặc biệt là Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP.",
+            text: "Omicslab vận hành theo mô hình triển khai đa khu vực và áp dụng pháp luật Việt Nam về bảo vệ dữ liệu cá nhân cho hoạt động tại Việt Nam — đặc biệt là Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Vị trí lưu trữ và xử lý phụ thuộc vào khu vực được cấu hình cho tổ chức hoặc dịch vụ tương ứng.",
           },
           {
             type: "ul",
             items: [
-              "**Lưu trữ & Xử lý:** Toàn bộ dữ liệu được lưu trữ và xử lý nội địa.",
-              "**Chuyển dữ liệu xuyên biên giới:** Dữ liệu chỉ được chuyển ra nước ngoài khi có sự đồng ý của bạn và đáp ứng đầy đủ các điều kiện theo quy định của pháp luật.",
+              "**Lưu trữ & Xử lý:** Dữ liệu được lưu trữ và xử lý tại khu vực địa lý được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Các triển khai tại khu vực Việt Nam được dự kiến sử dụng hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng.",
+              "**Chuyển dữ liệu xuyên biên giới:** Khi dữ liệu được xử lý tại khu vực ngoài Việt Nam, việc chuyển dữ liệu được thực hiện theo pháp luật hiện hành và thỏa thuận riêng.",
               "**Kiến trúc tách biệt (Separation of Control & Data):** Tầng điều khiển (quản lý điều phối job, thông tin xác thực, hạn ngạch) hoàn toàn độc lập với tầng dữ liệu. Dữ liệu chỉ luân chuyển giữa các điểm lưu trữ và môi trường tính toán do bạn chỉ định.",
               "**Chính sách riêng tư:** Quy định chi tiết về xử lý dữ liệu được công bố công khai tại [Điều khoản Dịch vụ](/terms) và [Chính sách Quyền riêng tư](/privacy) của chúng tôi.",
             ],
@@ -593,7 +636,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nền tảng Omicslab được lưu trữ tại **Việt Nam**. Dữ liệu khách hàng — gồm mọi dữ liệu nghiên cứu, sinh học hoặc bộ gen tải lên nền tảng — được lưu trữ và xử lý trên hạ tầng đặt tại Việt Nam và không rời khỏi quốc gia.",
+            text: "Nền tảng Omicslab hỗ trợ triển khai theo khu vực. Đối với khu vực **Việt Nam**, dữ liệu khách hàng — gồm dữ liệu nghiên cứu, sinh học hoặc bộ gen tải lên nền tảng — được lưu trữ và xử lý trên hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng. Các khu vực khác có thể sử dụng hạ tầng ngoài Việt Nam.",
           },
           {
             type: "p",
@@ -607,13 +650,13 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nguyên tắc về nơi lưu trữ dữ liệu rất đơn giản: dữ liệu tải lên nền tảng được lưu tại Việt Nam. Không có dữ liệu nào bị chuyển xuyên biên giới, và do đó các yêu cầu chuyển dữ liệu xuyên biên giới không áp dụng cho dữ liệu khách hàng.",
+            text: "Nơi lưu trữ dữ liệu phụ thuộc vào khu vực được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Với các triển khai tại khu vực Việt Nam, dữ liệu được dự kiến lưu tại Việt Nam; khi một dịch vụ được cấu hình tại khu vực khác, dữ liệu có thể được lưu trữ và xử lý ngoài Việt Nam, và các yêu cầu chuyển dữ liệu xuyên biên giới có thể được áp dụng. Khu vực được lựa chọn theo từng tổ chức hoặc dịch vụ; bảng dưới đây thể hiện khu vực Việt Nam mặc định.",
           },
           {
             type: "table",
             head: ["Khu vực", "Instance", "Khuôn khổ", "Nơi lưu trữ dữ liệu"],
             rows: [
-              ["Việt Nam", "vn.omicslab.io", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dữ liệu lưu tại Việt Nam"],
+              ["Việt Nam", "vn.omicslab.io", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dự kiến lưu tại Việt Nam"],
             ],
           },
           {
