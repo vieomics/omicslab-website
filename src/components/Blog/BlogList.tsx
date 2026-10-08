@@ -4,7 +4,6 @@ import { useState, useMemo, useEffect } from "react";
 import { Blog } from "@/types/blog";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
-import { localizePath } from "@/i18n/paths";
 import SingleBlog from "./SingleBlog";
 import Fuse from "fuse.js";
 
@@ -28,8 +27,6 @@ interface BlogListProps {
 const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [searchResults, setSearchResults] = useState<SearchIndexItem[]>([]);
-  const [showDropdown, setShowDropdown] = useState(false);
   const [fuse, setFuse] = useState<Fuse<SearchIndexItem> | null>(null);
 
   useEffect(() => {
@@ -49,31 +46,40 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
         });
         setFuse(index);
       })
-      .catch(() => {});
+      .catch((error) => {
+        // The list still filters via the local title/excerpt/tag fallback below,
+        // so a failed index load degrades gracefully instead of doing nothing.
+        console.error("Failed to load the blog search index:", error);
+      });
   }, [locale]);
 
-  useEffect(() => {
-    if (!fuse || !searchQuery || searchQuery.length < 2) {
-      setSearchResults([]);
-      setShowDropdown(false);
-      return;
-    }
+  const normalizedQuery = searchQuery.trim().toLowerCase();
 
-    const results = fuse.search(searchQuery, { limit: 10 });
-    setSearchResults(results.map((r) => r.item));
-    setShowDropdown(true);
-  }, [searchQuery, fuse]);
+  // Slugs matched by the full-text index for the current query, or null when we
+  // should fall back to a local text match (query too short / index unavailable).
+  const matchedSlugs = useMemo(() => {
+    if (normalizedQuery.length < 2 || !fuse) return null;
+    const results = fuse.search(normalizedQuery, { limit: 100 });
+    return new Set(results.map((result) => result.item.slug));
+  }, [normalizedQuery, fuse]);
 
   const filteredPosts = useMemo(() => {
-    if (selectedTag) {
-      return posts.filter((post) => post.tags?.includes(selectedTag));
-    }
-    return posts;
-  }, [posts, selectedTag]);
+    return posts.filter((post) => {
+      const matchesTag = selectedTag ? post.tags?.includes(selectedTag) : true;
+      if (!matchesTag) return false;
 
-  const handleResultClick = (slug: string) => {
-    window.location.href = localizePath(`/blogs/${slug}`, locale);
-  };
+      if (normalizedQuery.length < 2) return true;
+
+      if (matchedSlugs) {
+        return post.slug ? matchedSlugs.has(post.slug) : false;
+      }
+
+      const haystack = `${post.title ?? ""} ${post.excerpt ?? ""} ${(
+        post.tags ?? []
+      ).join(" ")}`.toLowerCase();
+      return haystack.includes(normalizedQuery);
+    });
+  }, [posts, selectedTag, normalizedQuery, matchedSlugs]);
 
   return (
     <div>
@@ -84,7 +90,7 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
             placeholder={dict.blogPage.searchPlaceholder}
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            onFocus={() => searchQuery.length >= 2 && setShowDropdown(true)}
+            aria-label={dict.blogPage.searchPlaceholder}
             className="w-full border border-line bg-paper-light py-3 pr-10 pl-4 text-sm text-ink placeholder:text-muted"
           />
           <svg
@@ -107,34 +113,6 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
               strokeLinecap="round"
             />
           </svg>
-          {showDropdown && searchResults.length > 0 && (
-            <div className="absolute z-50 mt-px w-full divide-y divide-line border border-line bg-paper-light">
-              {searchResults.map((result) => (
-                <button
-                  key={result.slug}
-                  onClick={() => handleResultClick(result.slug)}
-                  className="block w-full px-4 py-3 text-left transition-colors hover:bg-paper"
-                >
-                  <div className="font-display text-base leading-tight font-bold tracking-[-0.01em] text-ink uppercase">
-                    {result.title}
-                  </div>
-                  <div className="mt-1 line-clamp-1 text-xs text-muted">
-                    {result.excerpt || result.content.slice(0, 100)}
-                  </div>
-                  <div className="mt-2 flex flex-wrap gap-1.5">
-                    {result.tags?.slice(0, 3).map((tag) => (
-                      <span
-                        key={tag}
-                        className="micro-label border border-line px-2 py-1 text-muted"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
         </div>
         <div className="flex flex-wrap gap-2">
           <button
