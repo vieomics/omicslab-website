@@ -148,7 +148,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "To process sensitive data, the customer must [contact us](/contact) to arrange a **customer-managed (self-hosted) deployment under a separate agreement**. In this model, Omicslab delivers and deploys the Platform software onto the customer’s own infrastructure and instructs the customer’s team how to set it up; the customer itself runs the Platform, configures its own database, storage, compute and analysis tools, and controls access to the data and the environment in which analysis occurs. We do not require you to upload sensitive genomic or clinical datasets to Vieomics-managed infrastructure merely to use a self-hosted deployment. Vieomics provides the software and technical support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law — the customer is responsible for its own legal basis, permissions and consent requirements where applicable, the security configuration of its environment, and any personal data processing impact assessment required by law.",
+            text: "To process sensitive data, the customer must [contact us](/contact) to arrange a **customer-managed (self-hosted) deployment under a separate agreement**. In this model, Omicslab delivers and deploys the Platform software onto the customer’s own infrastructure and instructs the customer’s team how to set it up; the customer itself runs the Platform, configures its own database, storage, compute and analysis tools, and controls access to the data and the environment in which analysis occurs. We do not require you to upload sensitive genomic or clinical datasets to Vieomics-managed infrastructure merely to use a self-hosted deployment. Vieomics provides the software and technical support within the agreed service scope and does not access this data; a customer-managed deployment operates independently and no data from it is transmitted to Vieomics. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law — the customer is responsible for its own legal basis, permissions and consent requirements where applicable, the security configuration of its environment, and any personal data processing impact assessment required by law.",
           },
           {
             type: "label",
@@ -194,7 +194,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "Which categories apply depends on the deployment model. In a **customer-managed deployment**, research files and analysis outputs remain in the environment you control and are not transmitted to or stored by Vieomics; what may reach us is the account, usage and job metadata, technical, diagnostic and support information needed to provide the software and support you requested. In a **platform-managed service**, data is processed within the infrastructure we operate.",
+            text: "Which categories apply depends on the deployment model. In a **customer-managed deployment** the deployment is fully independent: no data from your environment — research files, analysis outputs, job metadata, logs, diagnostics or telemetry — is transmitted to or stored by Vieomics. In that case the information we hold is limited to the account, billing and support information you provide to us directly, together with anything you choose to send us as part of a support request. In a **platform-managed service**, data is processed within the infrastructure we operate.",
           },
         ],
       },
@@ -539,7 +539,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "Vieomics provides the software, documentation, deployment assistance, updates and technical support within the agreed scope of service. In this model, Vieomics does not automatically have access to or control over the infrastructure, database or data that the customer stores and processes on its own systems.",
+            text: "Vieomics provides the software, documentation, deployment assistance, updates and technical support within the agreed scope of service. In this model, Vieomics does not automatically have access to or control over the infrastructure, database or data that the customer stores and processes on its own systems. No data from a customer-managed deployment is transmitted to Vieomics; the deployment runs independently on the customer’s infrastructure.",
           },
           {
             type: "p",
