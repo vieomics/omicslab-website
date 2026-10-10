@@ -7,7 +7,7 @@ import type { Policies } from "./en";
 export const policiesVi: Policies = {
   shared: {
     lastUpdatedLabel: "Cập nhật lần cuối",
-    lastUpdated: "9 tháng 10 năm 2026",
+    lastUpdated: "10 tháng 10 năm 2026",
     tocLabel: "Trong trang này",
     policiesLabel: "Chính sách",
   },
@@ -35,7 +35,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Vieomics (CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS):** là pháp nhân vận hành Nền tảng Omicslab và chịu trách nhiệm pháp lý về toàn bộ hoạt động thu thập, xử lý, lưu trữ và bảo vệ dữ liệu quy định tại Chính sách này (“chúng tôi”). Mọi cam kết, nghĩa vụ và trách nhiệm đối với dữ liệu cá nhân nêu dưới đây đều thuộc về Vieomics — không phải đối với thương hiệu “Omicslab”.",
+            text: "**Vieomics (CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS):** là pháp nhân vận hành Nền tảng Omicslab và chịu trách nhiệm, như quy định tại Chính sách này, đối với dữ liệu cá nhân mà chúng tôi thực sự thu thập hoặc xử lý (“chúng tôi”). Mọi cam kết, nghĩa vụ và trách nhiệm đối với dữ liệu cá nhân nêu dưới đây đều thuộc về Vieomics — không phải đối với thương hiệu “Omicslab”.",
           },
           {
             type: "p",
@@ -217,18 +217,18 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Chúng tôi áp dụng các tiêu chuẩn bảo mật kỹ thuật và vận hành chặt chẽ để bảo vệ toàn bộ dữ liệu trên hệ thống:",
+            text: "Chúng tôi áp dụng các biện pháp bảo mật kỹ thuật và vận hành để bảo vệ dữ liệu cá nhân và dữ liệu dịch vụ mà chúng tôi nắm giữ trên các hệ thống do Vieomics quản lý:",
           },
           {
             type: "ul",
             items: [
-              "Mã hóa toàn bộ dữ liệu trên đường truyền (TLS/SSL) và khi lưu trữ (Encryption at Rest).",
+              "Mã hóa dữ liệu trên đường truyền (TLS/SSL) và khi lưu trữ (Encryption at Rest) đối với các dịch vụ do Vieomics quản lý.",
               "Phân quyền truy cập tối thiểu (RBAC), quản lý xác thực đa yếu tố (MFA) và ghi nhật ký hệ thống (Audit Logs).",
               "Cô lập theo từng Workspace, và tách biệt các khóa ánh xạ của Khách hàng khỏi môi trường phân tích khi được cấu hình về mặt kỹ thuật.",
               "Giám sát an ninh và phát hiện sự cố trên các tài nguyên do nền tảng quản lý, cùng với việc rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
               "Chỉ những nhân sự được phân công và chịu cam kết bảo mật nghiêm ngặt mới có quyền truy cập thông tin hỗ trợ kỹ thuật khi có yêu cầu bằng văn bản từ bạn.",
               "**Quản lý thông tin xác thực:** thông tin xác thực dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi; không hiển thị cho người dùng cuối và không lưu dưới dạng plain-text.",
-              "**Tách biệt kiến trúc:** tầng điều khiển (điều phối job, thông tin xác thực, hạn ngạch) hoàn toàn độc lập với tầng dữ liệu.",
+              "**Tách biệt kiến trúc:** tầng điều khiển (điều phối job, thông tin xác thực, hạn ngạch) được tách biệt khỏi tầng dữ liệu.",
             ],
           },
           {
@@ -379,10 +379,10 @@ export const policiesVi: Policies = {
           {
             type: "ul",
             items: [
-              "**Tách biệt kiến trúc:** tách biệt tuyệt đối tầng điều khiển (Control Plane) khỏi tầng dữ liệu (Data Plane) của khách hàng.",
+              "**Tách biệt kiến trúc:** tách biệt tầng điều khiển (Control Plane) khỏi tầng dữ liệu (Data Plane) khi được cấu hình.",
               "**Cấp quyền tối thiểu:** sử dụng mã xác thực ngắn hạn và giới hạn phạm vi truy cập nghiêm ngặt cho mọi kết nối liên vùng.",
               "**Cô lập môi trường:** tách biệt dữ liệu theo từng Workspace và kiểm soát truy cập theo vai trò (RBAC).",
-              "**Minh bạch kiểm toán:** duy trì nhật ký ghi vết (Audit Logs) bất biến, phục vụ công tác rà soát an ninh.",
+              "**Minh bạch kiểm toán:** duy trì nhật ký ghi vết (Audit Logs) phục vụ công tác rà soát an ninh.",
               "**Quản lý lỗ hổng:** tiếp nhận báo cáo sự cố hoặc cấu hình sai bảo mật và phát hành bản vá kịp thời.",
             ],
           },
@@ -424,7 +424,7 @@ export const policiesVi: Policies = {
     title: "Điều khoản Dịch vụ",
     navTitle: "Điều khoản Dịch vụ",
     description:
-      "Các Điều khoản này điều chỉnh việc bạn sử dụng Nền tảng Omicslab — nền tảng tin sinh học để lưu trữ, phân tích và chia sẻ dữ liệu nghiên cứu sinh học và bộ gen.",
+      "Các Điều khoản này điều chỉnh việc bạn sử dụng Nền tảng Omicslab — nền tảng tin sinh học để lưu trữ, phân tích và chia sẻ dữ liệu nghiên cứu sinh học. Dữ liệu bộ gen và dữ liệu sức khỏe của người chưa được công bố công khai không được xử lý trên Nền tảng cloud công khai; loại dữ liệu này được xử lý thông qua mô hình triển khai do khách hàng tự quản lý (xem Mục 3).",
     notice:
       "Khi truy cập hoặc sử dụng Nền tảng Omicslab, bạn đồng ý bị ràng buộc bởi các Điều khoản Dịch vụ này. Nếu không đồng ý, vui lòng không sử dụng Nền tảng.",
     sections: [
@@ -458,7 +458,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nền tảng công khai **không dành cho dữ liệu cá nhân nhạy cảm chưa được công bố công khai** và không tiếp nhận, không xử lý loại dữ liệu này. Bạn không được tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai, bao gồm dữ liệu bộ gen người, dữ liệu di truyền, dữ liệu liên quan đến sức khỏe và các dữ liệu danh mục đặc biệt khác theo định nghĩa của pháp luật Việt Nam. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+            text: "Nền tảng công khai **không dành cho dữ liệu cá nhân nhạy cảm chưa được công bố công khai** và không tiếp nhận, không xử lý loại dữ liệu này. Bạn không được tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai, bao gồm dữ liệu bộ gen người, dữ liệu di truyền, dữ liệu liên quan đến sức khỏe và các dữ liệu danh mục đặc biệt khác theo định nghĩa của pháp luật Việt Nam. Dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đúng cách đến mức việc tái nhận dạng không thể xảy ra một cách hợp lý, chỉ có thể được xử lý trên Nền tảng công khai trong một số trường hợp hạn chế, và chỉ khi đã đánh giá nguồn, điều kiện truy cập, giấy phép và rủi ro riêng tư — việc công bố công khai không tự nó làm dữ liệu trở thành ẩn danh.",
           },
           {
             type: "p",
@@ -541,7 +541,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Đối với dữ liệu nghiên cứu bạn tải lên, bạn giữ quyền kiểm soát và sở hữu. Chúng tôi đóng vai trò **người xử lý** đối với dữ liệu bạn cung cấp, và là **người kiểm soát** đối với dữ liệu tài khoản và sử dụng cần để vận hành dịch vụ.",
+            text: "Đối với dữ liệu nghiên cứu bạn tải lên, bạn giữ quyền kiểm soát và sở hữu. Chúng tôi chỉ đóng vai trò **người xử lý** đối với dữ liệu bạn cung cấp cho một dịch vụ do nền tảng quản lý mà chúng tôi vận hành; với dữ liệu nằm trong mô hình do khách hàng tự quản lý, chúng tôi không xử lý dữ liệu đó. Chúng tôi là **người kiểm soát** đối với dữ liệu tài khoản, thanh toán, bảo mật và sử dụng cần để vận hành dịch vụ.",
           },
         ],
       },

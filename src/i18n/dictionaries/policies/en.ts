@@ -72,7 +72,7 @@ export type PolicyPageKey = Exclude<keyof Policies, "shared" | "hub">;
 export const policiesEn: Policies = {
   shared: {
     lastUpdatedLabel: "Last updated",
-    lastUpdated: "9 October 2026",
+    lastUpdated: "10 October 2026",
     tocLabel: "On this page",
     policiesLabel: "Policies",
   },
@@ -100,7 +100,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Vieomics (VIEOMICS COMPANY LIMITED):** the legal entity that operates the Omicslab Platform and is legally responsible for all collection, processing, storage and protection of data described in this Policy (“we”, “us”). Every commitment, obligation and liability for personal data stated below belongs to Vieomics — not to the “Omicslab” brand.",
+            text: "**Vieomics (VIEOMICS COMPANY LIMITED):** the legal entity that operates the Omicslab Platform and is responsible, as described in this Policy, for the personal data we actually collect or process (“we”, “us”). Every commitment, obligation and liability for personal data stated below belongs to Vieomics — not to the “Omicslab” brand.",
           },
           {
             type: "p",
@@ -282,18 +282,18 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "We apply strict technical and operational security standards to protect all data on our systems:",
+            text: "We apply technical and operational security measures to protect the personal data and service data we hold on the systems Vieomics manages:",
           },
           {
             type: "ul",
             items: [
-              "Encryption of all data in transit (TLS/SSL) and at rest.",
+              "Encryption of data in transit (TLS/SSL) and at rest for the services Vieomics manages.",
               "Least-privilege access control (RBAC), multi-factor authentication (MFA) and system audit logs.",
               "Workspace isolation, and separation of customer mapping keys from the analysis environment where technically configured.",
               "Security monitoring and incident detection across platform-managed resources, together with regular security reviews and vulnerability assessments.",
               "Only assigned personnel bound by strict confidentiality obligations may access technical support information, and only upon your written request.",
               "**Credential handling:** credentials used to launch jobs are encrypted and transferred securely to the execution environment; they are never shown to end users or stored in plain text.",
-              "**Architecture separation:** the control plane (job orchestration, credentials, quotas) is completely separate from the data plane.",
+              "**Architecture separation:** the control plane (job orchestration, credentials, quotas) is kept separate from the data plane.",
             ],
           },
           {
@@ -444,10 +444,10 @@ export const policiesEn: Policies = {
           {
             type: "ul",
             items: [
-              "**Architecture separation:** strict separation of the control plane from the customer’s data plane.",
+              "**Architecture separation:** separation of the control plane from the data plane, where configured.",
               "**Least privilege:** short-lived credentials with tightly scoped access for every cross-boundary connection.",
               "**Environment isolation:** data isolated per workspace, with role-based access control (RBAC).",
-              "**Audit transparency:** immutable audit logs maintained to support security review.",
+              "**Audit transparency:** audit logging maintained to support security review.",
               "**Vulnerability management:** security incident and misconfiguration reports are received and patched promptly.",
             ],
           },
@@ -489,7 +489,7 @@ export const policiesEn: Policies = {
     title: "Terms of Service",
     navTitle: "Terms of Service",
     description:
-      "These Terms govern your use of the Omicslab Platform, a bioinformatics platform for storing, analysing and sharing biological and genomic research data.",
+      "These Terms govern your use of the Omicslab Platform, a bioinformatics platform for storing, analysing and sharing biological research data. Non-public human genomic and health data is not processed on the public cloud Platform; it is handled through customer-managed deployments (see Section 3).",
     notice:
       "By accessing or using the Omicslab Platform, you agree to be bound by these Terms of Service. If you do not agree, do not use the Platform.",
     sections: [
@@ -523,7 +523,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "The public Platform is **not intended for non-public sensitive personal data** and does not accept or process it. You must not upload non-public sensitive personal data of individuals in Vietnam to the public Platform, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+            text: "The public Platform is **not intended for non-public sensitive personal data** and does not accept or process it. You must not upload non-public sensitive personal data of individuals in Vietnam to the public Platform, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law. Data that has been lawfully published and made openly accessible, or properly de-identified such that re-identification is not reasonably possible, may in limited cases be processed on the public Platform, but only where its source, access conditions, licence and privacy risk have been assessed — public availability alone does not make data anonymous.",
           },
           {
             type: "p",
@@ -606,7 +606,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "For research data you upload, you retain control and ownership. We act as a **processor** with respect to data you provide, and as a **controller** with respect to account and usage data needed to run the service.",
+            text: "For research data you upload, you retain control and ownership. We act as a **processor** only for data you provide to a platform-managed service that we operate; for data held in a customer-managed deployment we do not process it. We act as a **controller** for the account, billing, security and usage data needed to run the service.",
           },
         ],
       },
