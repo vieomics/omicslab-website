@@ -84,7 +84,7 @@ export const policiesEn: Policies = {
     description:
       "Welcome to the Omicslab bioinformatics data analysis platform, a product operated by VIEOMICS COMPANY LIMITED. We are committed to protecting your personal data and the data you process on the Platform in accordance with Vietnamese law (the Personal Data Protection Law No. 91/2025/QH15, Decree No. 356/2025/ND-CP and the Cybersecurity Law) and international security standards.",
     notice:
-      "The public Omicslab Platform (cloud) does not accept and does not process non-public sensitive personal data of individuals in Vietnam, including human genomic and health-related data. For such data, the customer must contact us for a separate, contracted on-premise deployment: we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team how to set it up, while the customer itself runs, analyses, stores and manages the data. Vieomics does not process this data and acts as neither Data Controller nor Data Processor for it. Exception: data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+      "The public Omicslab Platform (cloud) does not accept and does not process non-public sensitive personal data of individuals in Vietnam, including human genomic and health-related data. For such data, the customer must contact us for a separate, contracted customer-managed (self-hosted) deployment: we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team how to set it up, while the customer itself runs, analyses, stores and manages the data. Vieomics provides the software and support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law. Publicly available human data is not automatically anonymous: lawfully published or properly de-identified data may be processed on the public Platform only after an assessment of its source, access conditions and privacy risk (see Section 1).",
     sections: [
       {
         id: "controller",
@@ -120,7 +120,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Personal data that does not belong to the user themselves:** you may upload other people’s personal data on the public Platform only where it is **basic personal data**; in that case you are the **Data Controller** and are responsible for the lawful basis of collection, consent and lawful handling, and Vieomics acts solely as the **Data Processor** on your instructions (see Section 2). **Sensitive personal data** (including patient, health and genomic data) must not be uploaded to the public Platform — it is handled only through the on-premise deployment described in this Section, except data that has been lawfully published or de-identified.",
+            text: "**Personal data that does not belong to the user themselves:** you may upload other people’s personal data on the public Platform only where it is **basic personal data**; in that case you are the **Data Controller** and are responsible for the lawful basis of collection, consent and lawful handling, and Vieomics acts solely as the **Data Processor** on your instructions (see Section 2). **Sensitive personal data** (including patient, health and genomic data) must not be uploaded to the public Platform — it is handled only through the customer-managed (self-hosted) deployment described in this Section, except data that has been lawfully published or properly de-identified such that re-identification is not reasonably possible.",
           },
           {
             type: "label",
@@ -132,7 +132,11 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Data Processor:** For research and biological data that you (or your organisation) actively upload to the Omicslab Platform, you act as the Data Controller. We act solely as the Data Processor — operating the Platform and performing computation and storage in accordance with your instructions, settings and requirements. Where we act as a processor, we process customer data in accordance with your documented instructions and the applicable service agreement, and we remain responsible for our own obligations under applicable law and our contractual commitments.",
+            text: "**Data Processor:** For research and biological data that you (or your organisation) actively upload to a platform-managed Omicslab service, you act as the Data Controller and we act as the Data Processor — operating that service and performing computation and storage in accordance with your instructions, settings and requirements. Where we act as a processor, we process customer data in accordance with your documented instructions and the applicable service agreement, and we remain responsible for our own obligations under applicable law and our contractual commitments.",
+          },
+          {
+            type: "p",
+            text: "This role applies to infrastructure we actually operate. In a **customer-managed deployment**, where you run the full stack yourself and we have no access to your environment or data, we do not process that data as a processor. Each party’s role and responsibilities for personal data depend on the actual processing activities, the access granted, the purposes of processing and applicable law — not on the mere use of the Omicslab software.",
           },
           {
             type: "label",
@@ -140,11 +144,11 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "The public Omicslab Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic records). You must not upload such data to the public Platform. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+            text: "The public Omicslab Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic records). You must not upload such data to the public Platform. **Publicly available data is not automatically anonymous:** data that has been lawfully published and made openly accessible, or that has been de-identified such that re-identification is not reasonably possible in the circumstances (for example some data retrieved from public repositories such as NCBI GEO/SRA), may be processed on the public Platform. Before uploading any human dataset you must assess its source, access conditions, permitted use, metadata and privacy risk — including whether it still contains or can enable inferences about individuals — and obtain any additional authorisation required for restricted or sensitive datasets. Sample or subject identifiers are not, by themselves, direct identifiers.",
           },
           {
             type: "p",
-            text: "To process sensitive data, the customer must [contact us](/contact) to arrange an **on-premise deployment under a separate agreement**. In this model, Omicslab only delivers and deploys the Platform software onto the customer’s own infrastructure and instructs the customer’s team how to set it up; the customer itself runs the Platform and analyses, stores and manages the data on its own infrastructure. Vieomics does not process the data and acts as neither Data Controller nor Data Processor for it, and the customer is solely responsible — including any personal data processing impact assessment required by law.",
+            text: "To process sensitive data, the customer must [contact us](/contact) to arrange a **customer-managed (self-hosted) deployment under a separate agreement**. In this model, Omicslab delivers and deploys the Platform software onto the customer’s own infrastructure and instructs the customer’s team how to set it up; the customer itself runs the Platform, configures its own database, storage, compute and analysis tools, and controls access to the data and the environment in which analysis occurs. We do not require you to upload sensitive genomic or clinical datasets to Vieomics-managed infrastructure merely to use a self-hosted deployment. Vieomics provides the software and technical support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law — the customer is responsible for its own legal basis, permissions and consent requirements where applicable, the security configuration of its environment, and any personal data processing impact assessment required by law.",
           },
           {
             type: "label",
@@ -160,7 +164,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "Omicslab builds a trusted operating layer for scientific computing, with two deployment models: **Platform-Managed** (infrastructure managed by Omicslab) and **BYO — Bring Your Own Infrastructure** (you connect your own storage, version control and compute resources).",
+            text: "Omicslab builds a trusted operating layer for scientific computing and is offered through different deployment models. **Platform-Managed (Marketplace):** Omicslab provides and manages the application services, compute and storage that we operate, and processes data within that infrastructure on your instructions. **Customer-Managed (self-hosted / Bring Your Own Infrastructure):** you deploy and operate the complete Omicslab stack — frontend, backend and APIs, application database, object storage and other storage, compute and workflow execution, pipelines and third-party analysis tools, plus your credentials, access policies, backups and operational security — on infrastructure you own or control. We supply the software, documentation, technical guidance, updates and support for the service you purchased, and we do not access your environment or data unless you authorise access for a defined support or maintenance purpose.",
           },
         ],
       },
@@ -183,10 +187,14 @@ export const policiesEn: Policies = {
                 text: "**Bioinformatics analysis data (uploaded to or processed on the system):**",
                 children: [
                   "**Non-human data (microorganisms, plants, animals, environmental samples):** generally classified as scientific research data. In typical cases, and provided it does not contain personal data, this data is not personal data under the Personal Data Protection Law No. 91/2025/QH15 and Decree No. 356/2025/ND-CP. Users may upload, store and analyse this data without applying personal-data privacy procedures, unless it contains personal data.",
-                  "**Human / health-related data:** the public Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic and clinical records). Such data must not be uploaded to the public Platform. For sensitive data, the customer must [contact us](/contact) to arrange an on-premise deployment under a separate agreement, in which we only deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team on setup, and the customer itself runs the Platform and analyses, stores and manages the data. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+                  "**Human / health-related data:** the public Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic and clinical records). Such data must not be uploaded to the public Platform. For sensitive data, the customer must [contact us](/contact) to arrange a customer-managed (self-hosted) deployment under a separate agreement, in which we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team on setup, and the customer itself runs, configures, analyses, stores and manages the data. **Publicly available data is not automatically anonymous:** data that has been lawfully published and made openly accessible, or that has been de-identified such that re-identification is not reasonably possible in the circumstances, may be processed on the public Platform after the assessment described in Section 1.",
                 ],
               },
             ],
+          },
+          {
+            type: "p",
+            text: "Which categories apply depends on the deployment model. In a **customer-managed deployment**, research files and analysis outputs remain in the environment you control and are not transmitted to or stored by Vieomics; what may reach us is the account, usage and job metadata, technical, diagnostic and support information needed to provide the software and support you requested. In a **platform-managed service**, data is processed within the infrastructure we operate.",
           },
         ],
       },
@@ -205,6 +213,7 @@ export const policiesEn: Policies = {
               "**Not necessarily collected by Vieomics:** where a dataset is obtained from a public repository or another lawful source, Vieomics does not necessarily collect the underlying data directly from the individuals concerned, and is not necessarily the original data controller or collector of that dataset.",
               "**Provenance and licensing:** use of these datasets is subject to the licence, attribution and usage terms of the applicable repository or source. Where applicable, provenance and licensing information is provided together with the dataset.",
               "**Intended purposes:** these datasets are intended for demonstration, education, research, benchmarking and pipeline or platform testing. They are not presented as, and must not be confused with, private customer datasets.",
+              "**Human data that is lawfully public:** some human research data is lawfully accessible but may still contain personal data or enable inferences about individuals. Uploading it to the public Platform requires the assessment described in Section 1; sensitive or restricted human datasets that require additional authorisation must instead be handled in a customer-managed environment.",
               "**No reclassification of customer data:** private customer datasets are not made public and are not converted into public or benchmark datasets unless the customer has separately authorised it and it is legally permitted. Vieomics does not publish, redistribute or reuse customer data as a public dataset without such authorisation.",
             ],
           },
@@ -259,8 +268,10 @@ export const policiesEn: Policies = {
             items: [
               "**Account data:** stored for as long as the account is active. After the account is closed, the account and its related data are only **deactivated** and retained for the period required by law (limitation periods, and statutory obligations to retain records, documents and invoices), so that the date on which any issue, dispute or legal incident arose can still be traced and evidenced at the request of a competent authority or the parties concerned. Once that period expires, the data is **deleted or anonymised**, under the exception already stated in Section 9.",
               "**Usage & audit data:** retained for the periods required by Vietnamese accounting, tax and cybersecurity law.",
-              "**Research data (object storage):** held in the platform’s object storage service (Marketplace) on a **pay-as-you-go basis, billed in monthly cycles**, and only for the cycle you have paid for. If you no longer subscribe to any plan, or do not renew the storage cycle, workspace access is blocked, the data is retained for a **one-month grace period** and is then **removed from the workspace entirely** — only the audit log is kept for tracing purposes. You may also delete data yourself at any time on the Platform, or deletion is carried out under a signed data processing agreement (DPA).",
+              "**Research data in platform-managed storage:** data held in the platform’s object storage service (Marketplace) is stored on a **pay-as-you-go basis, billed in monthly cycles**, and only for the cycle you have paid for. If you no longer subscribe to any plan, or do not renew the storage cycle, workspace access is blocked, the data is retained for a **one-month grace period** and is then **removed from the workspace entirely** — only the audit log is kept for tracing purposes. You may also delete data yourself at any time on the Platform.",
               "**Top-up balance (organization wallet):** prepaid credit can only be spent while your organization has a live subscription. Once the subscription lapses — expired or cancelled, with no renewal in flight — the **remaining balance is forfeited and reset to zero**, so a top-up cannot be spent without an active plan. Organizations that have never subscribed keep any balance they hold. The forfeiture sweep runs automatically every day. Payment terms, advance email notices and all deadlines are set out in Section 13 of our [Terms of Service](/terms).",
+              "**Research data in a customer-managed deployment:** data held in an environment you own or control is stored and deleted under your own storage lifecycle and configuration, subject to your own legal obligations. Vieomics does not hold a copy of that data and cannot delete it from your environment.",
+              "**Deletion and retained copies:** deleting an account, workspace or dataset does not necessarily erase backups, transaction records or audit logs immediately; these are overwritten or removed under the applicable retention and backup cycles.",
             ],
           },
         ],
@@ -287,11 +298,15 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
+            text: "These controls apply to the services and infrastructure Vieomics actually operates. In a **customer-managed deployment**, you are responsible for configuring and operating the security of your own infrastructure — including credentials, access policies, backups and the analysis environment — while we are responsible for the security of the software we supply.",
+          },
+          {
+            type: "p",
             text: "These measures are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform is ready for stricter requirements in the future; as of the date of this Policy, Omicslab **holds no certification** under any of those frameworks. Administrative penalties for cybersecurity and personal data protection violations are set out in Decree No. 330/2026/ND-CP, in force since 19 August 2026.",
           },
           {
             type: "p",
-            text: "If a personal data protection violation is detected (leakage, loss or unauthorised access to personal data), we draw up an official record and **notify the specialised personal data protection authority and the data subjects concerned within 72 hours of detection**, while activating our internal incident-response procedure. Incident records are kept for at least five years after the incident has been remediated.",
+            text: "If a personal data breach affecting information we control is detected (leakage, loss or unauthorised access to personal data), we activate our internal incident-response procedure and, where applicable law requires notification, notify the competent authority and/or the affected data subjects in accordance with the applicable statutory triggers, recipients and deadlines. Incident records are kept at least for the period required by applicable law after the incident has been remediated.",
           },
           {
             type: "p",
@@ -310,7 +325,7 @@ export const policiesEn: Policies = {
           {
             type: "ul",
             items: [
-              "**Infrastructure service providers (processors):** providers of servers, payment gateways and similar services that have signed confidentiality and data processing agreements with us.",
+              "**Infrastructure service providers (processors):** providers of servers, payment gateways and similar services that are bound by confidentiality and data-protection obligations and process personal data only on our instructions.",
               "**State authorities:** when a written request is made by a duly empowered authority through the legally prescribed procedure.",
             ],
           },
@@ -320,7 +335,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Service providers for this website:** (i) **Cloudflare Pages** — distributes the site’s static files (we do not enable Cloudflare’s analytics services); (ii) **Google Analytics** — runs only after you accept the cookie notice in Section 11; (iii) **DMCA.com** — displays the protection badge. For the Platform, we work with Marketplace infrastructure partners and the payment gateway, all bound by data processing agreements (DPA).",
+            text: "**Service providers for this website:** (i) **Cloudflare Pages** — distributes the site’s static files (we do not enable Cloudflare’s analytics services); (ii) **Google Analytics** — runs only after you accept the cookie notice in Section 11; (iii) **DMCA.com** — displays the protection badge. For the Platform, we work with Marketplace infrastructure partners and the payment gateway, all bound by appropriate confidentiality and data-protection terms.",
           },
         ],
       },
@@ -344,7 +359,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "To exercise these rights, you can act directly in your account settings or [contact us](/contact). We will respond to and process your request within 72 working hours of receiving complete and valid information.",
+            text: "To exercise these rights for information we control, you can act directly in your account settings or [contact us](/contact). We acknowledge a complete and valid request promptly and aim to resolve it within 72 working hours; where a request is complex or affects legally retained data, we may need longer and will keep you informed. This is our service target, not a statutory deadline. Where personal data is held exclusively in a **customer-managed deployment** that we do not control or access, we cannot directly access, modify, export or delete that data — such requests must be directed to the organisation that controls the environment (see Section 12).",
           },
         ],
       },
@@ -370,7 +385,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "Customers that need to process non-public sensitive personal data must arrange a separate, contracted on-premise deployment as described in Section 1; publicly available or lawfully de-identified data is treated as public data. The contact details in Section 12 apply.",
+            text: "Customers that need to process non-public sensitive personal data must arrange a separate, contracted customer-managed (self-hosted) deployment as described in Section 1. In a customer-managed deployment, data residency and any international transfers depend on the infrastructure and services you select — not on Vieomics. The contact details in Section 12 apply.",
           },
           {
             type: "p",
@@ -412,8 +427,8 @@ export const policiesEn: Policies = {
             type: "table",
             head: [
               "Control / Infrastructure",
-              "Tier 1 (self-managed infrastructure)",
-              "Tier 2 (platform-managed — Marketplace)",
+              "Customer-managed (self-hosted)",
+              "Platform-managed (Marketplace)",
             ],
             rows: [
               ["Data storage", "Your own cloud / object storage infrastructure", "Encrypted AES-256 storage on the platform (partitioned per workspace)"],
@@ -421,7 +436,8 @@ export const policiesEn: Policies = {
               ["Compute infrastructure", "Your own HPC / cloud cluster", "Compute infrastructure managed directly by Omicslab"],
               ["Infrastructure access", "Managed by the customer", "Managed by the platform"],
               ["Credentials", "Managed by the customer", "Secured by the platform (never shown in plain text)"],
-              ["Infrastructure compliance", "Customer’s responsibility", "Guaranteed by the platform"],
+              ["Application stack (frontend, backend, database)", "Deployed and operated by the customer", "Operated by the platform"],
+              ["Infrastructure compliance", "Customer’s responsibility", "Managed by the platform within its own scope"],
             ],
           },
           { type: "label", text: "Platform security commitments" },
@@ -511,7 +527,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "To process sensitive data, you must [contact us](/contact) to arrange an **on-premise deployment under a separate agreement**. We only deliver and deploy the Platform software onto your own infrastructure and instruct your team how to set it up; you run the Platform and analyse, store and manage the data yourself. Vieomics does not process this data and acts as neither Data Controller nor Data Processor for it — you are solely responsible, including any personal data processing impact assessment required by law.",
+            text: "To process sensitive data, you must [contact us](/contact) to arrange a **customer-managed (self-hosted) deployment under a separate agreement**. We deliver and deploy the Platform software onto your own infrastructure and instruct your team how to set it up; you run the Platform, configure your own database, storage, compute and analysis tools, and control access to the data and the environment in which analysis occurs. We do not require you to upload sensitive genomic or clinical datasets to Vieomics-managed infrastructure merely to use a self-hosted deployment; Vieomics provides the software and support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law — you are responsible for your own legal basis, permissions, consent requirements where applicable, the security configuration of your environment, and any personal data processing impact assessment required by law.",
           },
           {
             type: "label",
@@ -628,7 +644,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "You may close your account at any time. We may suspend or terminate access — with or without notice — for violation of these Terms, unlawful activity, or as required by law. Upon termination, you remain responsible for obligations accrued before termination. Personal and research data are handled per our [Privacy Policy](/privacy) and any data processing agreement in effect.",
+            text: "You may close your account at any time. We may suspend or terminate access — with or without notice — for violation of these Terms, unlawful activity, or as required by law. Upon termination, you remain responsible for obligations accrued before termination. Personal and research data are handled per our [Privacy Policy](/privacy).",
           },
         ],
       },
@@ -1010,7 +1026,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Sensitive personal data:** the public Platform does not accept or process non-public sensitive personal data of individuals in Vietnam. Human genomic or health-related data is handled only through a separate, contracted **on-premise deployment** in which we deploy the software onto your own infrastructure and you run, analyse, store and manage the data yourself (see the [Privacy Policy](/privacy)). **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+            text: "**Sensitive personal data:** the public Platform does not accept or process non-public sensitive personal data of individuals in Vietnam. Human genomic or health-related data is handled only through a separate, contracted **customer-managed (self-hosted) deployment** in which we deliver and deploy the software onto your own infrastructure and you run, configure, analyse, store and manage the data yourself (see the [Privacy Policy](/privacy)). **Publicly available human data is not automatically anonymous:** lawfully published or properly de-identified data may be processed on the public Platform only after an assessment of its source, access conditions and privacy risk.",
           },
         ],
       },
