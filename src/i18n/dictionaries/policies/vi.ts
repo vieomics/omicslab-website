@@ -449,6 +449,22 @@ export const policiesVi: Policies = {
             text: "Để xử lý dữ liệu nhạy cảm, bạn cần [liên hệ với chúng tôi](/contact) để **triển khai tại chỗ (on-premise) theo thỏa thuận riêng**. Chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính bạn và hướng dẫn đội ngũ của bạn thiết lập; bạn tự vận hành Nền tảng, tự phân tích, lưu trữ và quản lý dữ liệu. Vieomics không xử lý dữ liệu này và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu — bạn tự chịu toàn bộ trách nhiệm, bao gồm mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
           },
           {
+            type: "label",
+            text: "Triển khai tự quản lý bởi khách hàng (Customer-Managed Deployment)",
+          },
+          {
+            type: "p",
+            text: "Đối với mô hình triển khai tự quản lý, Omicslab được cài đặt và vận hành trên hạ tầng do khách hàng sở hữu hoặc kiểm soát. Khách hàng chịu trách nhiệm triển khai, cấu hình và quản lý toàn bộ các thành phần của hệ thống, bao gồm frontend, backend, cơ sở dữ liệu, lưu trữ đối tượng, tài nguyên tính toán và các công cụ phân tích.",
+          },
+          {
+            type: "p",
+            text: "Vieomics cung cấp phần mềm, tài liệu hướng dẫn, hỗ trợ triển khai, cập nhật và hỗ trợ kỹ thuật theo phạm vi dịch vụ đã thỏa thuận. Trong mô hình này, Vieomics không mặc nhiên có quyền truy cập hoặc kiểm soát hạ tầng, cơ sở dữ liệu hay dữ liệu được khách hàng lưu trữ và xử lý trên hệ thống của mình.",
+          },
+          {
+            type: "p",
+            text: "Mọi quyền truy cập của Vieomics vào môi trường khách hàng, nếu có, phải được khách hàng cho phép và giới hạn theo mục đích hỗ trợ đã thống nhất. Trách nhiệm của mỗi bên đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền quyết định đối với việc xử lý dữ liệu và các quy định pháp luật áp dụng.",
+          },
+          {
             type: "p",
             text: "Khi bạn vận hành Nền tảng trong môi trường của riêng mình, bạn đồng ý rằng:",
           },
