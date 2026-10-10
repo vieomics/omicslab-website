@@ -21,7 +21,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Individual",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Lite",
@@ -37,7 +37,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Lite",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Pro",
@@ -54,7 +54,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Pro",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Business",
@@ -155,7 +155,6 @@ export const en = {
     legalLabel: "Legal",
     privacy: "Privacy Policy",
     terms: "Terms of Service",
-    security: "Security & Compliance",
   },
   policies: policiesEn,
   cookieConsent: {
@@ -300,6 +299,11 @@ export const en = {
             "Omicslab is an end-to-end dry-lab bioinformatics service. It provides a bioinformatics platform to manage users, data, tools and compute infrastructure, plus professional services for customer-specific analyses that integrate tightly with the platform.",
         },
         {
+          question: "Does Omicslab operate outside Vietnam?",
+          answer:
+            "Currently, Vieomics **operates the Omicslab Platform only in Vietnam** and works with **Vietnamese people or persons living in Vietnam**, and multinational collaborations. Data and compute provided by Vieomics are **located in Vietnam**; we do not currently operate the Platform abroad.",
+        },
+        {
           question: "Can I migrate my existing pipelines and infrastructure?",
           answer:
             "Yes. Deploy the platform on-premises or in your own cloud, register your Slurm HPC cluster via the SDK and connect your storage, then bring your pipelines as Git repositories. Migration is designed to require minimal effort.",
@@ -317,7 +321,7 @@ export const en = {
         {
           question: "Do I need my own compute and storage?",
           answer:
-            "No. New users can pay and get everything ready — compute, storage and pipelines — then start running right away. Create an account at platform.omicslab.io; no credit card is required to sign up.",
+            "No. New users can pay and get everything ready — compute, storage and pipelines — then start running right away. Create an account at platform.omicslab.vn; no credit card is required to sign up.",
         },
         {
           question: "Where is my data stored?",
@@ -675,21 +679,6 @@ export const en = {
       title: "Terms of Service",
       description:
         "The terms that govern your use of the Omicslab Platform.",
-    },
-    security: {
-      title: "Security & Compliance",
-      description:
-        "Two deployment models, the security controls we apply, and how responsibility is shared between Omicslab and the customer.",
-    },
-    securityCompliance: {
-      title: "Compliance",
-      description:
-        "Where the Omicslab Platform is hosted, the law it follows and our compliance posture in Vietnam.",
-    },
-    securityResponsibility: {
-      title: "Responsibility",
-      description:
-        "Who owns each security control in each Omicslab deployment model.",
     },
   },
 };

@@ -606,3 +606,34 @@
 .legal-table tr:nth-child(even) {
   background-color: rgb(0 0 0 / 0.02);
 }
+
+/*
+  Printable policy documents — /legal/[doc].
+  Each policy is exported to PDF for submission (e.g. to the e-commerce
+  notification portal), so the layout favours a clean paper page.
+*/
+.print-root {
+  background-color: #ffffff;
+}
+
+.policy-doc {
+  color: var(--color-ink);
+}
+
+/* Keep headings with the content that follows, and avoid splitting rows. */
+.policy-doc h1,
+.policy-doc h2 {
+  break-after: avoid;
+  page-break-after: avoid;
+}
+
+.policy-doc .legal-body li,
+.policy-doc .legal-table tr {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+@page {
+  size: A4;
+  margin: 16mm 15mm 18mm;
+}
