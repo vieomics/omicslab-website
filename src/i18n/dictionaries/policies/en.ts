@@ -514,6 +514,22 @@ export const policiesEn: Policies = {
             text: "To process sensitive data, you must [contact us](/contact) to arrange an **on-premise deployment under a separate agreement**. We only deliver and deploy the Platform software onto your own infrastructure and instruct your team how to set it up; you run the Platform and analyse, store and manage the data yourself. Vieomics does not process this data and acts as neither Data Controller nor Data Processor for it — you are solely responsible, including any personal data processing impact assessment required by law.",
           },
           {
+            type: "label",
+            text: "Customer-Managed Deployment",
+          },
+          {
+            type: "p",
+            text: "In a customer-managed deployment, Omicslab is installed and operated on infrastructure owned or controlled by the customer. The customer is responsible for deploying, configuring and managing all components of the system, including the frontend, backend, database, object storage, compute resources and analysis tools.",
+          },
+          {
+            type: "p",
+            text: "Vieomics provides the software, documentation, deployment assistance, updates and technical support within the agreed scope of service. In this model, Vieomics does not automatically have access to or control over the infrastructure, database or data that the customer stores and processes on its own systems.",
+          },
+          {
+            type: "p",
+            text: "Any access by Vieomics to the customer’s environment, if any, must be authorised by the customer and limited to the agreed support purposes. Each party’s responsibility for personal data is determined by the actual processing activities, the authority to decide on the processing, and applicable law.",
+          },
+          {
             type: "p",
             text: "Where you operate the Platform in your own environment, you agree that:",
           },
