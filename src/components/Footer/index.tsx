@@ -86,22 +86,16 @@ const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
           className="micro-label flex flex-wrap items-center gap-x-7 gap-y-3 text-white/70"
         >
           <Link
-            href={localizeHref("/privacy", locale)}
-            className="transition-opacity hover:opacity-70"
-          >
-            {dict.footer.privacy}
-          </Link>
-          <Link
             href={localizeHref("/terms", locale)}
             className="transition-opacity hover:opacity-70"
           >
             {dict.footer.terms}
           </Link>
           <Link
-            href={localizeHref("/security", locale)}
+            href={localizeHref("/privacy", locale)}
             className="transition-opacity hover:opacity-70"
           >
-            {dict.footer.security}
+            {dict.footer.privacy}
           </Link>
         </nav>
       </div>

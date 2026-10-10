@@ -14,13 +14,18 @@ const staticPaths = [
   "/blogs",
   "/contact",
   "/privacy",
-  "/security",
-  "/security/compliance",
-  "/security/responsibility",
+  "/terms",
+  "/policies",
+  "/policies/pricing",
+  "/policies/payment",
+  "/policies/service-provision",
+  "/policies/conditions",
+  "/policies/rights-obligations",
+  "/policies/complaints",
+  "/policies/support",
   "/solutions",
   "/solutions/data-platform",
   "/solutions/custom-solutions",
-  "/terms",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
