@@ -83,7 +83,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để **triển khai do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng**. Trong mô hình này, Omicslab bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập; Khách hàng tự vận hành Nền tảng, tự cấu hình cơ sở dữ liệu, lưu trữ, tính toán và công cụ phân tích của mình, đồng thời kiểm soát quyền truy cập dữ liệu và môi trường phân tích. Chúng tôi không yêu cầu bạn phải tải dữ liệu bộ gen hay dữ liệu lâm sàng nhạy cảm lên hạ tầng do Vieomics quản lý chỉ để sử dụng mô hình tự quản lý. Vieomics cung cấp phần mềm và hỗ trợ kỹ thuật trong phạm vi dịch vụ đã thỏa thuận và không truy cập dữ liệu này. Trách nhiệm đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng — Khách hàng chịu trách nhiệm về căn cứ pháp lý, các quyền và yêu cầu về sự đồng ý (khi áp dụng), cấu hình bảo mật cho môi trường của mình, và mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
+            text: "Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để **triển khai do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng**. Trong mô hình này, Omicslab bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập; Khách hàng tự vận hành Nền tảng, tự cấu hình cơ sở dữ liệu, lưu trữ, tính toán và công cụ phân tích của mình, đồng thời kiểm soát quyền truy cập dữ liệu và môi trường phân tích. Chúng tôi không yêu cầu bạn phải tải dữ liệu bộ gen hay dữ liệu lâm sàng nhạy cảm lên hạ tầng do Vieomics quản lý chỉ để sử dụng mô hình tự quản lý. Vieomics cung cấp phần mềm và hỗ trợ kỹ thuật trong phạm vi dịch vụ đã thỏa thuận và không truy cập dữ liệu này; mô hình do khách hàng tự quản lý vận hành độc lập và không có dữ liệu nào từ đó được truyền tới Vieomics. Trách nhiệm đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng — Khách hàng chịu trách nhiệm về căn cứ pháp lý, các quyền và yêu cầu về sự đồng ý (khi áp dụng), cấu hình bảo mật cho môi trường của mình, và mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
           },
           {
             type: "label",
@@ -129,7 +129,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Nhóm dữ liệu áp dụng phụ thuộc vào mô hình triển khai. Trong **mô hình do khách hàng tự quản lý**, tệp nghiên cứu và kết quả phân tích vẫn nằm trong môi trường do bạn kiểm soát và không được truyền tới hay lưu bởi Vieomics; những gì có thể tới chúng tôi là dữ liệu tài khoản, dữ liệu sử dụng và metadata tác vụ, thông tin kỹ thuật, chẩn đoán và hỗ trợ cần thiết để cung cấp phần mềm và hỗ trợ mà bạn yêu cầu. Trong **dịch vụ do nền tảng quản lý**, dữ liệu được xử lý trong hạ tầng do chúng tôi vận hành.",
+            text: "Nhóm dữ liệu áp dụng phụ thuộc vào mô hình triển khai. Trong **mô hình do khách hàng tự quản lý**, hệ thống hoàn toàn độc lập: không có dữ liệu nào từ môi trường của bạn — tệp nghiên cứu, kết quả phân tích, metadata tác vụ, nhật ký, chẩn đoán hay telemetry — được truyền tới hay lưu bởi Vieomics. Trong trường hợp đó, thông tin chúng tôi nắm giữ chỉ gồm dữ liệu tài khoản, thanh toán và hỗ trợ mà bạn cung cấp trực tiếp cho chúng tôi, cùng bất kỳ tài liệu nào bạn chủ động gửi kèm khi yêu cầu hỗ trợ. Trong **dịch vụ do nền tảng quản lý**, dữ liệu được xử lý trong hạ tầng do chúng tôi vận hành.",
           },
         ],
       },
@@ -474,7 +474,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Vieomics cung cấp phần mềm, tài liệu hướng dẫn, hỗ trợ triển khai, cập nhật và hỗ trợ kỹ thuật theo phạm vi dịch vụ đã thỏa thuận. Trong mô hình này, Vieomics không mặc nhiên có quyền truy cập hoặc kiểm soát hạ tầng, cơ sở dữ liệu hay dữ liệu được khách hàng lưu trữ và xử lý trên hệ thống của mình.",
+            text: "Vieomics cung cấp phần mềm, tài liệu hướng dẫn, hỗ trợ triển khai, cập nhật và hỗ trợ kỹ thuật theo phạm vi dịch vụ đã thỏa thuận. Trong mô hình này, Vieomics không mặc nhiên có quyền truy cập hoặc kiểm soát hạ tầng, cơ sở dữ liệu hay dữ liệu được khách hàng lưu trữ và xử lý trên hệ thống của mình. Không có dữ liệu nào từ mô hình do khách hàng tự quản lý được truyền tới Vieomics; hệ thống vận hành độc lập trên hạ tầng của khách hàng.",
           },
           {
             type: "p",
