@@ -19,7 +19,7 @@ export const policiesVi: Policies = {
     description:
       "Chào mừng bạn đến với Nền tảng phân tích dữ liệu tin sinh học Omicslab — sản phẩm do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Chúng tôi cam kết bảo vệ dữ liệu cá nhân và dữ liệu bạn xử lý trên Nền tảng theo quy định của pháp luật Việt Nam (Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Nghị định 356/2025/NĐ-CP, Luật An ninh mạng) và các tiêu chuẩn bảo mật quốc tế.",
     notice:
-      "Nền tảng Omicslab công khai (cloud) không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm **chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe. Với loại dữ liệu này, Khách hàng cần liên hệ với chúng tôi để triển khai tại chỗ (on-premise) theo thỏa thuận riêng: chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, phân tích, lưu trữ và quản lý dữ liệu. Vieomics không xử lý dữ liệu này và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu đối với dữ liệu đó. Ngoại lệ: dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+      "Nền tảng Omicslab công khai (cloud) không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm **chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe. Với loại dữ liệu này, Khách hàng cần liên hệ với chúng tôi để triển khai **do khách hàng tự quản lý (self-hosted)** theo thỏa thuận riêng: chúng tôi bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, phân tích, lưu trữ và quản lý dữ liệu. Vieomics cung cấp phần mềm và hỗ trợ trong phạm vi dịch vụ đã thỏa thuận và không truy cập dữ liệu này. Trách nhiệm đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng. Dữ liệu người được công bố công khai **không mặc nhiên là dữ liệu ẩn danh**: dữ liệu đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách chỉ được xử lý trên Nền tảng công khai sau khi đánh giá nguồn, điều kiện truy cập và rủi ro riêng tư (xem Mục 1).",
     sections: [
       {
         id: "controller",
@@ -55,7 +55,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn chỉ được tải lên Nền tảng công khai dữ liệu cá nhân của người khác khi đó là **dữ liệu cá nhân cơ bản**; khi đó bạn là **Bên Kiểm soát Dữ liệu** và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý và xử lý hợp pháp, còn Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2). **Dữ liệu cá nhân nhạy cảm** (bao gồm dữ liệu bệnh nhân, dữ liệu sức khỏe và dữ liệu bộ gen) không được tải lên Nền tảng công khai — loại dữ liệu này chỉ được xử lý thông qua mô hình triển khai tại chỗ nêu tại Mục này, trừ dữ liệu đã được công bố công khai hoặc ẩn danh hóa hợp pháp.",
+            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn chỉ được tải lên Nền tảng công khai dữ liệu cá nhân của người khác khi đó là **dữ liệu cá nhân cơ bản**; khi đó bạn là **Bên Kiểm soát Dữ liệu** và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý và xử lý hợp pháp, còn Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2). **Dữ liệu cá nhân nhạy cảm** (bao gồm dữ liệu bệnh nhân, dữ liệu sức khỏe và dữ liệu bộ gen) không được tải lên Nền tảng công khai — loại dữ liệu này chỉ được xử lý thông qua mô hình triển khai do khách hàng tự quản lý (self-hosted) nêu tại Mục này, trừ dữ liệu đã được công bố công khai hoặc đã được ẩn danh hóa đúng cách.",
           },
           {
             type: "label",
@@ -67,7 +67,11 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Bên Xử lý Dữ liệu:** Đối với dữ liệu nghiên cứu và dữ liệu sinh học do bạn (hoặc đơn vị của bạn) chủ động tải lên Nền tảng Omicslab, bạn giữ vai trò là Bên Kiểm soát Dữ liệu. Chúng tôi chỉ đóng vai trò là Bên Xử lý Dữ liệu — vận hành Nền tảng và thực hiện các tác vụ tính toán, lưu trữ theo chỉ dẫn, thiết lập và yêu cầu của bạn. Khi đóng vai trò Bên Xử lý, chúng tôi xử lý dữ liệu của Khách hàng theo chỉ dẫn bằng văn bản của bạn và theo thỏa thuận dịch vụ hiện hành, đồng thời vẫn chịu trách nhiệm đối với các nghĩa vụ của chính mình theo pháp luật hiện hành và các cam kết hợp đồng.",
+            text: "**Bên Xử lý Dữ liệu:** Đối với dữ liệu nghiên cứu và dữ liệu sinh học do bạn (hoặc đơn vị của bạn) chủ động tải lên một dịch vụ Omicslab **do nền tảng quản lý**, bạn giữ vai trò là Bên Kiểm soát Dữ liệu và chúng tôi đóng vai trò là Bên Xử lý Dữ liệu — vận hành dịch vụ đó và thực hiện các tác vụ tính toán, lưu trữ theo chỉ dẫn, thiết lập và yêu cầu của bạn. Khi đóng vai trò Bên Xử lý, chúng tôi xử lý dữ liệu của Khách hàng theo chỉ dẫn bằng văn bản của bạn và theo thỏa thuận dịch vụ hiện hành, đồng thời vẫn chịu trách nhiệm đối với các nghĩa vụ của chính mình theo pháp luật hiện hành và các cam kết hợp đồng.",
+          },
+          {
+            type: "p",
+            text: "Vai trò này chỉ áp dụng với hạ tầng do chúng tôi thực sự vận hành. Trong **mô hình triển khai do khách hàng tự quản lý**, khi bạn tự vận hành toàn bộ hệ thống và chúng tôi không có quyền truy cập vào môi trường hay dữ liệu của bạn, chúng tôi không xử lý dữ liệu đó với tư cách Bên Xử lý. Vai trò và trách nhiệm của mỗi bên đối với dữ liệu cá nhân phụ thuộc vào hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng — không chỉ vì việc sử dụng phần mềm Omicslab.",
           },
           {
             type: "label",
@@ -75,11 +79,11 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Nền tảng Omicslab công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền của bệnh nhân). Bạn không được tải loại dữ liệu này lên Nền tảng công khai. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+            text: "Nền tảng Omicslab công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền của bệnh nhân). Bạn không được tải loại dữ liệu này lên Nền tảng công khai. **Dữ liệu công bố công khai không mặc nhiên là dữ liệu ẩn danh:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đến mức việc tái nhận dạng không thể xảy ra một cách hợp lý trong hoàn cảnh tương ứng (ví dụ một số dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), có thể được xử lý trên Nền tảng công khai. Trước khi tải lên bất kỳ bộ dữ liệu người nào, bạn phải đánh giá nguồn, điều kiện truy cập, mục đích sử dụng được phép, metadata và rủi ro riêng tư — bao gồm việc dữ liệu còn chứa hoặc có thể cho phép suy luận về cá nhân hay không — và xin mọi chấp thuận bổ sung cần thiết cho dữ liệu bị hạn chế hoặc nhạy cảm. Mã mẫu hoặc mã chủ thể không tự nó là thông tin định danh trực tiếp.",
           },
           {
             type: "p",
-            text: "Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để **triển khai tại chỗ (on-premise) theo thỏa thuận riêng**. Trong mô hình này, Omicslab chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập; Khách hàng tự vận hành Nền tảng, tự phân tích, lưu trữ và quản lý dữ liệu trên hạ tầng của mình. Vieomics không xử lý dữ liệu và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu đối với dữ liệu đó, và Khách hàng tự chịu toàn bộ trách nhiệm — bao gồm mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
+            text: "Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để **triển khai do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng**. Trong mô hình này, Omicslab bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập; Khách hàng tự vận hành Nền tảng, tự cấu hình cơ sở dữ liệu, lưu trữ, tính toán và công cụ phân tích của mình, đồng thời kiểm soát quyền truy cập dữ liệu và môi trường phân tích. Chúng tôi không yêu cầu bạn phải tải dữ liệu bộ gen hay dữ liệu lâm sàng nhạy cảm lên hạ tầng do Vieomics quản lý chỉ để sử dụng mô hình tự quản lý. Vieomics cung cấp phần mềm và hỗ trợ kỹ thuật trong phạm vi dịch vụ đã thỏa thuận và không truy cập dữ liệu này. Trách nhiệm đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng — Khách hàng chịu trách nhiệm về căn cứ pháp lý, các quyền và yêu cầu về sự đồng ý (khi áp dụng), cấu hình bảo mật cho môi trường của mình, và mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
           },
           {
             type: "label",
@@ -95,7 +99,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy cho điện toán khoa học, với hai mô hình triển khai: **Platform-Managed** (hạ tầng do Omicslab quản lý) và **BYO — Bring Your Own Infrastructure** (bạn kết nối hạ tầng lưu trữ, kiểm soát phiên bản và tính toán của riêng mình).",
+            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy cho điện toán khoa học và được cung cấp qua nhiều mô hình triển khai khác nhau. **Do nền tảng quản lý (Marketplace):** Omicslab cung cấp và quản lý các dịch vụ ứng dụng, tính toán và lưu trữ do chúng tôi vận hành, và xử lý dữ liệu trong hạ tầng đó theo chỉ dẫn của bạn. **Do khách hàng tự quản lý (self-hosted / Bring Your Own Infrastructure):** bạn triển khai và vận hành toàn bộ hệ thống Omicslab — frontend, backend và API, cơ sở dữ liệu ứng dụng, lưu trữ đối tượng và các lưu trữ khác, hạ tầng tính toán và môi trường thực thi quy trình, các pipeline và công cụ phân tích bên thứ ba, cùng thông tin xác thực, chính sách truy cập, sao lưu và bảo mật vận hành của bạn — trên hạ tầng do bạn sở hữu hoặc kiểm soát. Chúng tôi cung cấp phần mềm, tài liệu, hướng dẫn kỹ thuật, cập nhật và hỗ trợ cho dịch vụ bạn đã mua, và không truy cập môi trường hay dữ liệu của bạn trừ khi bạn cho phép truy cập cho một mục đích hỗ trợ hoặc bảo trì xác định.",
           },
         ],
       },
@@ -118,10 +122,14 @@ export const policiesVi: Policies = {
                 text: "**Dữ liệu Phân tích Tin sinh học (tải lên hoặc xử lý trên hệ thống):**",
                 children: [
                   "**Dữ liệu Phi người (Vi sinh vật, Thực vật, Động vật, Mẫu môi trường):** nhìn chung được xác định là dữ liệu nghiên cứu khoa học. Trong trường hợp thông thường và với điều kiện dữ liệu không chứa dữ liệu cá nhân, đây không phải là dữ liệu cá nhân theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Người dùng có thể tải lên, lưu trữ và phân tích dữ liệu này mà không cần áp dụng các thủ tục về dữ liệu cá nhân, trừ khi dữ liệu có chứa dữ liệu cá nhân.",
-                  "**Dữ liệu Người / Liên quan đến Sức khỏe:** Nền tảng công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền và dữ liệu bộ gen lâm sàng của bệnh nhân). Loại dữ liệu này không được tải lên Nền tảng công khai. Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để triển khai Nền tảng tại chỗ (on-premise) theo thỏa thuận riêng, trong đó chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, phân tích, lưu trữ và quản lý dữ liệu. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+                  "**Dữ liệu Người / Liên quan đến Sức khỏe:** Nền tảng công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền và dữ liệu bộ gen lâm sàng của bệnh nhân). Loại dữ liệu này không được tải lên Nền tảng công khai. Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để triển khai Nền tảng do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng, trong đó chúng tôi bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, tự cấu hình, phân tích, lưu trữ và quản lý dữ liệu. **Dữ liệu công bố công khai không mặc nhiên là dữ liệu ẩn danh:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đến mức việc tái nhận dạng không thể xảy ra một cách hợp lý trong hoàn cảnh tương ứng, có thể được xử lý trên Nền tảng công khai sau khi đánh giá như nêu tại Mục 1.",
                 ],
               },
             ],
+          },
+          {
+            type: "p",
+            text: "Nhóm dữ liệu áp dụng phụ thuộc vào mô hình triển khai. Trong **mô hình do khách hàng tự quản lý**, tệp nghiên cứu và kết quả phân tích vẫn nằm trong môi trường do bạn kiểm soát và không được truyền tới hay lưu bởi Vieomics; những gì có thể tới chúng tôi là dữ liệu tài khoản, dữ liệu sử dụng và metadata tác vụ, thông tin kỹ thuật, chẩn đoán và hỗ trợ cần thiết để cung cấp phần mềm và hỗ trợ mà bạn yêu cầu. Trong **dịch vụ do nền tảng quản lý**, dữ liệu được xử lý trong hạ tầng do chúng tôi vận hành.",
           },
         ],
       },
@@ -140,6 +148,7 @@ export const policiesVi: Policies = {
               "**Không nhất thiết do Vieomics thu thập:** khi một bộ dữ liệu được lấy từ kho công cộng hoặc nguồn hợp pháp khác, Vieomics không nhất thiết thu thập dữ liệu gốc trực tiếp từ các cá nhân liên quan và cũng không nhất thiết là bên kiểm soát hoặc bên thu thập dữ liệu gốc của bộ dữ liệu đó.",
               "**Nguồn gốc và giấy phép:** việc sử dụng các bộ dữ liệu này phụ thuộc vào giấy phép, yêu cầu ghi nguồn và điều khoản sử dụng của kho hoặc nguồn tương ứng. Khi áp dụng, thông tin về nguồn gốc và giấy phép được cung cấp kèm theo bộ dữ liệu.",
               "**Mục đích sử dụng:** các bộ dữ liệu này dành cho trình diễn, giáo dục, nghiên cứu, đối chuẩn và kiểm thử quy trình hoặc nền tảng. Chúng không được trình bày như dữ liệu của Khách hàng và không được nhầm lẫn với dữ liệu riêng của Khách hàng.",
+              "**Dữ liệu người được công bố hợp pháp:** một số dữ liệu nghiên cứu về người được truy cập hợp pháp nhưng vẫn có thể chứa dữ liệu cá nhân hoặc cho phép suy luận về cá nhân. Việc tải lên Nền tảng công khai đòi hỏi đánh giá như nêu tại Mục 1; dữ liệu người nhạy cảm hoặc bị hạn chế cần chấp thuận bổ sung phải được xử lý trong môi trường do khách hàng tự quản lý.",
               "**Không chuyển đổi dữ liệu Khách hàng:** dữ liệu riêng của Khách hàng không bị công khai và không bị chuyển thành bộ dữ liệu công khai hoặc đối chuẩn, trừ khi Khách hàng đã cho phép riêng và việc đó được pháp luật cho phép. Vieomics không công bố, phân phối lại hoặc tái sử dụng dữ liệu của Khách hàng như một bộ dữ liệu công khai nếu không có sự cho phép đó.",
             ],
           },
@@ -194,8 +203,10 @@ export const policiesVi: Policies = {
             items: [
               "**Dữ liệu tài khoản:** Được lưu trữ trong suốt thời gian tài khoản hoạt động. Sau khi tài khoản chấm dứt, tài khoản và dữ liệu liên quan chỉ bị **vô hiệu hóa (deactivated)** và được lưu giữ trong thời hạn mà pháp luật yêu cầu (thời hiệu khiếu nại, nghĩa vụ lưu trữ hồ sơ, chứng từ và hóa đơn), để bảo đảm khả năng truy xuất, tra cứu thời điểm phát sinh vấn đề, tranh chấp hoặc sự cố pháp lý khi có yêu cầu của cơ quan có thẩm quyền hoặc của các bên liên quan. Hết thời hạn đó, dữ liệu bị **xóa hoặc ẩn danh hóa** theo ngoại lệ đã nêu tại Mục 9.",
               "**Dữ liệu sử dụng & kiểm toán:** Lưu trữ theo thời hạn quy định của pháp luật về kế toán, thuế và an ninh mạng.",
-              "**Dữ liệu nghiên cứu (Object Storage):** được lưu trữ trên dịch vụ lưu trữ đối tượng (Object Storage) của Marketplace theo mô hình **trả theo mức sử dụng, tính theo chu kỳ tháng (pay-as-you-go)** và chỉ có hiệu lực trong chu kỳ bạn đã trả. Nếu bạn không còn đăng ký bất kỳ gói dịch vụ nào hoặc không gia hạn chu kỳ lưu trữ, quyền truy cập workspace sẽ bị khóa, dữ liệu được giữ lại trong thời gian **ân hạn 1 tháng**, sau đó **bị dọn dẹp toàn bộ khỏi workspace** — chỉ nhật ký audit được giữ lại cho mục đích tra cứu. Bạn cũng có thể tự xóa dữ liệu bất cứ lúc nào trên Nền tảng, hoặc việc xóa được thực hiện theo thỏa thuận xử lý dữ liệu (DPA) đã ký kết.",
+              "**Dữ liệu nghiên cứu trong lưu trữ do nền tảng quản lý:** dữ liệu trên dịch vụ lưu trữ đối tượng (Object Storage) của Marketplace được lưu theo mô hình **trả theo mức sử dụng, tính theo chu kỳ tháng (pay-as-you-go)** và chỉ có hiệu lực trong chu kỳ bạn đã trả. Nếu bạn không còn đăng ký bất kỳ gói dịch vụ nào hoặc không gia hạn chu kỳ lưu trữ, quyền truy cập workspace sẽ bị khóa, dữ liệu được giữ lại trong thời gian **ân hạn 1 tháng**, sau đó **bị dọn dẹp toàn bộ khỏi workspace** — chỉ nhật ký audit được giữ lại cho mục đích tra cứu. Bạn cũng có thể tự xóa dữ liệu bất cứ lúc nào trên Nền tảng.",
               "**Số dư Top-up (ví tiền tổ chức):** Số dư tiền nạp (top-up) chỉ có thể sử dụng khi tổ chức của bạn còn gói đăng ký hiệu lực. Khi gói đăng ký hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, **số dư còn lại bị thu hồi và đưa về 0** — số tiền nạp không thể tiếp tục sử dụng khi không còn gói dịch vụ. Tổ chức chưa từng đăng ký gói thì số dư (nếu có) không bị thu hồi. Việc thu hồi được rà soát tự động theo chu kỳ hằng ngày. Điều kiện thanh toán, email cảnh báo trước và các mốc thời hạn được nêu chi tiết tại Mục 13 [Điều khoản Dịch vụ](/terms).",
+              "**Dữ liệu nghiên cứu trong mô hình do khách hàng tự quản lý:** dữ liệu nằm trong môi trường do bạn sở hữu hoặc kiểm soát được lưu và xóa theo vòng đời lưu trữ và cấu hình của chính bạn, tùy thuộc nghĩa vụ pháp lý của bạn. Vieomics không giữ bản sao dữ liệu đó và không thể xóa dữ liệu khỏi môi trường của bạn.",
+              "**Xóa dữ liệu và các bản lưu giữ:** việc xóa tài khoản, workspace hay bộ dữ liệu không nhất thiết xóa ngay các bản sao lưu, hồ sơ giao dịch hoặc nhật ký audit; các bản này được ghi đè hoặc loại bỏ theo chu kỳ lưu trữ và sao lưu áp dụng.",
             ],
           },
         ],
@@ -222,11 +233,15 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
+            text: "Các biện pháp kiểm soát này áp dụng cho các dịch vụ và hạ tầng do Vieomics thực sự vận hành. Trong **mô hình do khách hàng tự quản lý**, bạn chịu trách nhiệm cấu hình và vận hành bảo mật cho hạ tầng của mình — bao gồm thông tin xác thực, chính sách truy cập, sao lưu và môi trường phân tích — trong khi chúng tôi chịu trách nhiệm về bảo mật của phần mềm do chúng tôi cung cấp.",
+          },
+          {
+            type: "p",
             text: "Các biện pháp này được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai; tính đến ngày cập nhật của Chính sách này, Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó. Xử phạt vi phạm trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân được quy định tại Nghị định 330/2026/NĐ-CP, có hiệu lực từ ngày 19 tháng 8 năm 2026.",
           },
           {
             type: "p",
-            text: "Khi phát hiện vi phạm quy định bảo vệ dữ liệu cá nhân (rò rỉ, mất mát hoặc truy cập trái phép dữ liệu cá nhân), chúng tôi lập biên bản xác minh và **thông báo cho cơ quan chuyên trách bảo vệ dữ liệu cá nhân và cho chính chủ thể dữ liệu trong thời hạn 72 giờ kể từ thời điểm phát hiện**, đồng thời kích hoạt quy trình ứng phó sự cố nội bộ. Hồ sơ vụ việc được lưu trữ tối thiểu 5 năm kể từ ngày khắc phục xong sự cố.",
+            text: "Khi phát hiện sự cố rò rỉ, mất mát hoặc truy cập trái phép dữ liệu cá nhân thuộc phạm vi chúng tôi kiểm soát, chúng tôi kích hoạt quy trình ứng phó sự cố nội bộ và, khi pháp luật áp dụng yêu cầu thông báo, thông báo cho cơ quan có thẩm quyền và/hoặc chủ thể dữ liệu bị ảnh hưởng theo đúng mốc thời hạn, đối tượng và điều kiện phát sinh nghĩa vụ theo quy định pháp luật hiện hành. Hồ sơ vụ việc được lưu trữ ít nhất trong thời hạn mà pháp luật yêu cầu kể từ ngày khắc phục xong sự cố.",
           },
           {
             type: "p",
@@ -245,7 +260,7 @@ export const policiesVi: Policies = {
           {
             type: "ul",
             items: [
-              "**Bên cung cấp dịch vụ hạ tầng (Bên Xử lý):** Các đơn vị cung cấp hạ tầng máy chủ, cổng thanh toán… đã ký thỏa thuận bảo mật và xử lý dữ liệu với chúng tôi.",
+              "**Bên cung cấp dịch vụ hạ tầng (Bên Xử lý):** Các đơn vị cung cấp hạ tầng máy chủ, cổng thanh toán… chịu ràng buộc bởi nghĩa vụ bảo mật và bảo vệ dữ liệu, và chỉ xử lý dữ liệu cá nhân theo chỉ dẫn của chúng tôi.",
               "**Cơ quan nhà nước:** Khi có yêu cầu bằng văn bản đúng thẩm quyền và trình tự pháp lý.",
             ],
           },
@@ -255,7 +270,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Nhà cung cấp dịch vụ của trang web này:** (i) **Cloudflare Pages** — phân phối các file tĩnh của trang (chúng tôi không bật dịch vụ phân tích của Cloudflare); (ii) **Google Analytics** — chỉ chạy khi bạn chấp nhận cookie tại Mục 11; (iii) **DMCA.com** — hiển thị huy hiệu bảo vệ. Trong phạm vi Nền tảng, chúng tôi làm việc với đối tác hạ tầng Marketplace và cổng thanh toán, tất cả đều gắn kết bằng thỏa thuận xử lý dữ liệu (DPA).",
+            text: "**Nhà cung cấp dịch vụ của trang web này:** (i) **Cloudflare Pages** — phân phối các file tĩnh của trang (chúng tôi không bật dịch vụ phân tích của Cloudflare); (ii) **Google Analytics** — chỉ chạy khi bạn chấp nhận cookie tại Mục 11; (iii) **DMCA.com** — hiển thị huy hiệu bảo vệ. Trong phạm vi Nền tảng, chúng tôi làm việc với đối tác hạ tầng Marketplace và cổng thanh toán, tất cả đều chịu ràng buộc bởi các điều khoản bảo mật và bảo vệ dữ liệu phù hợp.",
           },
         ],
       },
@@ -279,7 +294,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Để thực hiện các quyền trên, bạn có thể thao tác trực tiếp tại phần Cài đặt tài khoản hoặc [liên hệ với chúng tôi](/contact). Chúng tôi sẽ phản hồi và xử lý yêu cầu của bạn trong thời hạn không quá 72 giờ làm việc kể từ khi nhận đủ thông tin hợp lệ.",
+            text: "Để thực hiện các quyền trên đối với thông tin do chúng tôi kiểm soát, bạn có thể thao tác trực tiếp tại phần Cài đặt tài khoản hoặc [liên hệ với chúng tôi](/contact). Chúng tôi xác nhận yêu cầu đầy đủ, hợp lệ trong thời gian sớm nhất và hướng tới giải quyết trong vòng 72 giờ làm việc; với yêu cầu phức tạp hoặc liên quan dữ liệu buộc phải lưu giữ theo pháp luật, chúng tôi có thể cần thêm thời gian và sẽ thông báo cho bạn. Đây là mục tiêu dịch vụ của chúng tôi, không phải thời hạn luật định. Khi dữ liệu cá nhân chỉ nằm trong **môi trường do khách hàng tự quản lý** mà chúng tôi không kiểm soát hay truy cập, chúng tôi không thể trực tiếp truy cập, chỉnh sửa, xuất hay xóa dữ liệu đó — yêu cầu cần được gửi tới tổ chức kiểm soát môi trường (xem Mục 12).",
           },
         ],
       },
@@ -305,7 +320,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Khách hàng cần xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai phải thỏa thuận riêng một mô hình triển khai tại chỗ (on-premise) như nêu tại Mục 1; dữ liệu đã được công bố công khai hoặc ẩn danh hóa hợp pháp được coi là dữ liệu công khai. Thông tin liên hệ tại Mục 12 được áp dụng.",
+            text: "Khách hàng cần xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai phải thỏa thuận riêng một mô hình triển khai **do khách hàng tự quản lý (self-hosted)** như nêu tại Mục 1. Trong mô hình do khách hàng tự quản lý, nơi lưu trữ dữ liệu và mọi chuyển dữ liệu xuyên biên giới phụ thuộc vào hạ tầng và dịch vụ do bạn lựa chọn — không phụ thuộc vào Vieomics. Thông tin liên hệ tại Mục 12 được áp dụng.",
           },
           {
             type: "p",
@@ -347,8 +362,8 @@ export const policiesVi: Policies = {
             type: "table",
             head: [
               "Hạng mục / Hạ tầng",
-              "Tier 1 (Tự quản lý hạ tầng)",
-              "Tier 2 (Nền tảng quản lý - Marketplace)",
+              "Khách hàng tự quản lý (self-hosted)",
+              "Nền tảng quản lý (Marketplace)",
             ],
             rows: [
               ["Lưu trữ dữ liệu", "Hạ tầng Cloud / Object Storage riêng của bạn", "Lưu trữ mã hóa AES-256 trên nền tảng (phân vùng theo Workspace)"],
@@ -356,7 +371,8 @@ export const policiesVi: Policies = {
               ["Hạ tầng tính toán", "Cụm máy chủ HPC / Cloud riêng của bạn", "Hạ tầng tính toán được Omicslab quản lý trực tiếp"],
               ["Truy cập hạ tầng", "Khách hàng tự quản lý", "Nền tảng quản lý"],
               ["Thông tin xác thực (Credentials)", "Khách hàng tự quản lý", "Nền tảng bảo mật (không hiển thị dạng thô)"],
-              ["Tuân thủ hạ tầng (Compliance)", "Khách hàng tự chịu trách nhiệm", "Nền tảng đảm bảo tuân thủ"],
+              ["Toàn bộ ứng dụng (frontend, backend, cơ sở dữ liệu)", "Khách hàng triển khai và vận hành", "Nền tảng vận hành"],
+              ["Tuân thủ hạ tầng (Compliance)", "Khách hàng tự chịu trách nhiệm", "Nền tảng quản lý trong phạm vi của mình"],
             ],
           },
           { type: "label", text: "Cam kết bảo mật của Nền tảng" },
@@ -446,7 +462,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Để xử lý dữ liệu nhạy cảm, bạn cần [liên hệ với chúng tôi](/contact) để **triển khai tại chỗ (on-premise) theo thỏa thuận riêng**. Chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính bạn và hướng dẫn đội ngũ của bạn thiết lập; bạn tự vận hành Nền tảng, tự phân tích, lưu trữ và quản lý dữ liệu. Vieomics không xử lý dữ liệu này và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu — bạn tự chịu toàn bộ trách nhiệm, bao gồm mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
+            text: "Để xử lý dữ liệu nhạy cảm, bạn cần [liên hệ với chúng tôi](/contact) để **triển khai do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng**. Chúng tôi bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính bạn và hướng dẫn đội ngũ của bạn thiết lập; bạn tự vận hành Nền tảng, tự cấu hình cơ sở dữ liệu, lưu trữ, tính toán và công cụ phân tích của mình, đồng thời kiểm soát quyền truy cập dữ liệu và môi trường phân tích. Chúng tôi không yêu cầu bạn phải tải dữ liệu bộ gen hay dữ liệu lâm sàng nhạy cảm lên hạ tầng do Vieomics quản lý chỉ để sử dụng mô hình tự quản lý; Vieomics cung cấp phần mềm và hỗ trợ trong phạm vi dịch vụ đã thỏa thuận và không truy cập dữ liệu này. Trách nhiệm đối với dữ liệu cá nhân được xác định theo hoạt động xử lý thực tế, quyền truy cập được cấp, mục đích xử lý và quy định pháp luật áp dụng — bạn chịu trách nhiệm về căn cứ pháp lý, các quyền và yêu cầu về sự đồng ý (khi áp dụng), cấu hình bảo mật cho môi trường của mình, và mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
           },
           {
             type: "label",
@@ -563,7 +579,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn có thể đóng tài khoản bất cứ lúc nào. Chúng tôi có thể đình chỉ hoặc chấm dứt quyền truy cập — có hoặc không thông báo — vì vi phạm các Điều khoản này, hoạt động bất hợp pháp, hoặc theo yêu cầu của luật. Khi chấm dứt, bạn vẫn chịu trách nhiệm cho các nghĩa vụ phát sinh trước đó. Dữ liệu cá nhân và dữ liệu nghiên cứu được xử lý theo [Chính sách bảo mật](/privacy) và thỏa thuận xử lý dữ liệu hiện hành.",
+            text: "Bạn có thể đóng tài khoản bất cứ lúc nào. Chúng tôi có thể đình chỉ hoặc chấm dứt quyền truy cập — có hoặc không thông báo — vì vi phạm các Điều khoản này, hoạt động bất hợp pháp, hoặc theo yêu cầu của luật. Khi chấm dứt, bạn vẫn chịu trách nhiệm cho các nghĩa vụ phát sinh trước đó. Dữ liệu cá nhân và dữ liệu nghiên cứu được xử lý theo [Chính sách bảo mật](/privacy).",
           },
         ],
       },
@@ -945,7 +961,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Dữ liệu cá nhân nhạy cảm:** Nền tảng công khai không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam. Dữ liệu bộ gen người hoặc dữ liệu liên quan đến sức khỏe chỉ được xử lý thông qua một mô hình **triển khai tại chỗ (on-premise)** theo thỏa thuận riêng, trong đó chúng tôi triển khai phần mềm trên hạ tầng của chính bạn và bạn tự vận hành, phân tích, lưu trữ và quản lý dữ liệu (xem [Chính sách bảo mật](/privacy)). **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+            text: "**Dữ liệu cá nhân nhạy cảm:** Nền tảng công khai không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam. Dữ liệu bộ gen người hoặc dữ liệu liên quan đến sức khỏe chỉ được xử lý thông qua một mô hình **do khách hàng tự quản lý (self-hosted)** theo thỏa thuận riêng, trong đó chúng tôi bàn giao và triển khai phần mềm trên hạ tầng của chính bạn và bạn tự vận hành, tự cấu hình, phân tích, lưu trữ và quản lý dữ liệu (xem [Chính sách bảo mật](/privacy)). **Dữ liệu người được công bố công khai không mặc nhiên là dữ liệu ẩn danh:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đúng cách chỉ có thể được xử lý trên Nền tảng công khai sau khi đánh giá nguồn, điều kiện truy cập và rủi ro riêng tư.",
           },
         ],
       },
