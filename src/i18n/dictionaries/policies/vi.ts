@@ -14,10 +14,12 @@ export const policiesVi: Policies = {
 
   privacy: {
     kicker: "Pháp lý",
-    title: "Chính sách Bảo vệ Dữ liệu Cá nhân & Quyền riêng tư",
-    navTitle: "Chính sách Quyền riêng tư",
+    title: "Chính sách bảo mật",
+    navTitle: "Chính sách bảo mật",
     description:
       "Chào mừng bạn đến với Nền tảng phân tích dữ liệu tin sinh học Omicslab — sản phẩm do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Chúng tôi cam kết bảo vệ dữ liệu cá nhân và dữ liệu bạn xử lý trên Nền tảng theo quy định của pháp luật Việt Nam (Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Nghị định 356/2025/NĐ-CP, Luật An ninh mạng) và các tiêu chuẩn bảo mật quốc tế.",
+    notice:
+      "Nền tảng Omicslab công khai (cloud) không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm **chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe. Với loại dữ liệu này, Khách hàng cần liên hệ với chúng tôi để triển khai tại chỗ (on-premise) theo thỏa thuận riêng: chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, phân tích, lưu trữ và quản lý dữ liệu. Vieomics không xử lý dữ liệu này và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu đối với dữ liệu đó. Ngoại lệ: dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
     sections: [
       {
         id: "controller",
@@ -53,7 +55,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn được phép tải lên dữ liệu cá nhân của người khác — ví dụ dữ liệu bệnh nhân mà Phòng lab, Bệnh viện hoặc Viện nghiên cứu của bạn đại diện. Trong trường hợp này, bạn là **Bên Kiểm soát Dữ liệu** đối với dữ liệu đó và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý, việc giả danh hóa (pseudonymisation) và xử lý hợp pháp; Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2).",
+            text: "**Dữ liệu cá nhân không thuộc về chính Người dùng:** bạn chỉ được tải lên Nền tảng công khai dữ liệu cá nhân của người khác khi đó là **dữ liệu cá nhân cơ bản**; khi đó bạn là **Bên Kiểm soát Dữ liệu** và chịu trách nhiệm về căn cứ thu thập, việc lấy sự đồng ý và xử lý hợp pháp, còn Vieomics chỉ đóng vai trò **Bên Xử lý** theo chỉ dẫn của bạn (chi tiết tại Mục 2). **Dữ liệu cá nhân nhạy cảm** (bao gồm dữ liệu bệnh nhân, dữ liệu sức khỏe và dữ liệu bộ gen) không được tải lên Nền tảng công khai — loại dữ liệu này chỉ được xử lý thông qua mô hình triển khai tại chỗ nêu tại Mục này, trừ dữ liệu đã được công bố công khai hoặc ẩn danh hóa hợp pháp.",
           },
           {
             type: "label",
@@ -69,11 +71,15 @@ export const policiesVi: Policies = {
           },
           {
             type: "label",
-            text: "Hạ tầng Lưu trữ và Xử lý Dữ liệu Người / Liên quan đến Sức khỏe (Theo từng Dự án)",
+            text: "Phạm vi: Dữ liệu Người / Liên quan đến Sức khỏe (Không xử lý trên Nền tảng Công khai)",
           },
           {
             type: "p",
-            text: "Trường hợp Khách hàng tải lên hoặc xử lý dữ liệu y sinh thu được từ mẫu người (ví dụ: NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền), các khối lượng công việc này được xử lý theo **từng dự án / từng khách hàng doanh nghiệp**. Việc xử lý như vậy có thể cần các thỏa thuận riêng, biện pháp kiểm soát kỹ thuật, điều khoản xử lý dữ liệu và việc rà soát tuân thủ trước khi đưa vào vận hành. Với các dự án nhạy cảm, vị trí dữ liệu, hạ tầng, kiểm soát truy cập và phương thức xử lý có thể được thỏa thuận riêng; tùy dự án, các yếu tố này có thể sử dụng hạ tầng do Vieomics quản lý, do Khách hàng quản lý, hoặc do một đối tác được chỉ định quản lý, trong mọi trường hợp đều phải tuân theo các biện pháp bảo vệ và cam kết hợp đồng mà pháp luật hiện hành yêu cầu.",
+            text: "Nền tảng Omicslab công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền của bệnh nhân). Bạn không được tải loại dữ liệu này lên Nền tảng công khai. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+          },
+          {
+            type: "p",
+            text: "Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để **triển khai tại chỗ (on-premise) theo thỏa thuận riêng**. Trong mô hình này, Omicslab chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập; Khách hàng tự vận hành Nền tảng, tự phân tích, lưu trữ và quản lý dữ liệu trên hạ tầng của mình. Vieomics không xử lý dữ liệu và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu đối với dữ liệu đó, và Khách hàng tự chịu toàn bộ trách nhiệm — bao gồm mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
           },
           {
             type: "label",
@@ -82,6 +88,14 @@ export const policiesVi: Policies = {
           {
             type: "p",
             text: "Trường hợp bạn chủ động kết nối, tích hợp tài khoản lưu trữ hoặc máy chủ phân tích riêng (API/Credentials cá nhân) vào Nền tảng Omicslab, bạn chịu trách nhiệm về tính bảo mật, quyền truy cập và an toàn dữ liệu trên hạ tầng do bạn tự quản lý đó. Trong giới hạn pháp luật cho phép, chúng tôi không chịu trách nhiệm đối với sự cố phát sinh từ hệ thống do bạn tự quản lý. Điều này không ảnh hưởng đến các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng với bạn.",
+          },
+          {
+            type: "label",
+            text: "Mô hình triển khai",
+          },
+          {
+            type: "p",
+            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy cho điện toán khoa học, với hai mô hình triển khai: **Platform-Managed** (hạ tầng do Omicslab quản lý) và **BYO — Bring Your Own Infrastructure** (bạn kết nối hạ tầng lưu trữ, kiểm soát phiên bản và tính toán của riêng mình).",
           },
         ],
       },
@@ -104,16 +118,7 @@ export const policiesVi: Policies = {
                 text: "**Dữ liệu Phân tích Tin sinh học (tải lên hoặc xử lý trên hệ thống):**",
                 children: [
                   "**Dữ liệu Phi người (Vi sinh vật, Thực vật, Động vật, Mẫu môi trường):** nhìn chung được xác định là dữ liệu nghiên cứu khoa học. Trong trường hợp thông thường và với điều kiện dữ liệu không chứa dữ liệu cá nhân, đây không phải là dữ liệu cá nhân theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Người dùng có thể tải lên, lưu trữ và phân tích dữ liệu này mà không cần áp dụng các thủ tục về dữ liệu cá nhân, trừ khi dữ liệu có chứa dữ liệu cá nhân.",
-                  {
-                    text: "**Dữ liệu Người / Liên quan đến Sức khỏe (dữ liệu y sinh thu được từ mẫu người):** khi Khách hàng lựa chọn tải lên hoặc xử lý dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người — ví dụ kết quả xét nghiệm di truyền trước sinh không xâm lấn (NIPT), giải trình tự toàn bộ vùng mã ngoại (WES), giải trình tự toàn bộ bộ gen (WGS), giải trình tự RNA trên mẫu người (RNA-Seq), hoặc hồ sơ di truyền và dữ liệu bộ gen lâm sàng của bệnh nhân — dữ liệu đó có thể là **dữ liệu cá nhân nhạy cảm** theo Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Vieomics không chủ động thu thập loại dữ liệu này từ công chúng, và các khối lượng công việc như vậy được xử lý theo **từng dự án / từng khách hàng doanh nghiệp**, tùy theo các thỏa thuận riêng, biện pháp kiểm soát kỹ thuật và việc rà soát tuân thủ. Chúng tôi không tìm cách định danh cá nhân và không yêu cầu truy cập danh tính thực đằng sau một Sample ID. Khi dữ liệu như vậy được xử lý:",
-                    children: [
-                      "**Mã định danh giả danh (Pseudonymous identifiers):** Khách hàng được khuyến nghị chỉ gắn một mã định danh kỹ thuật (Sample ID) và tránh đưa các định danh trực tiếp — như họ tên, số CCCD/hộ chiếu, ngày sinh hoặc mã hồ sơ bệnh án — vào tên file, metadata mẫu hoặc tham số phân tích, trừ khi điều đó là cần thiết cho một mục đích hợp pháp.",
-                      "**Không mặc nhiên là ẩn danh:** dữ liệu chỉ gắn Sample ID là dữ liệu **đã được giả danh hóa, không nhất thiết đã ẩn danh hoàn toàn**. Một Sample ID kỹ thuật tự nó không làm cho bộ dữ liệu bộ gen trở thành ẩn danh hoàn toàn, vì dữ liệu vẫn có thể liên kết được với một cá nhân — ví dụ thông qua thông tin ánh xạ của Khách hàng hoặc thông qua chính dữ liệu. Chúng tôi không mô tả các bộ dữ liệu này là ẩn danh hoàn toàn.",
-                      "**Sự đồng ý và căn cứ pháp lý:** Khách hàng (phòng lab, bệnh viện, viện nghiên cứu hoặc tổ chức khác) chịu trách nhiệm bảo đảm có căn cứ pháp lý hợp lệ và, khi được yêu cầu, có sự đồng ý và chấp thuận đạo đức cần thiết trước khi dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người được tải lên hoặc phân tích.",
-                      "**Thông tin ánh xạ:** mọi khóa liên kết Sample ID với danh tính thực của một cá nhân, nếu có, nên nằm dưới sự kiểm soát của Khách hàng và không phải là thông tin chúng tôi yêu cầu. Khi việc tách biệt này được cấu hình về mặt kỹ thuật, các khóa ánh xạ của Khách hàng được giữ tách biệt khỏi môi trường phân tích, và chúng tôi không sử dụng chúng để định danh cá nhân. Điều này không giới hạn các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng.",
-                      "**Yêu cầu bổ sung:** các dự án dữ liệu bộ gen hoặc dữ liệu liên quan đến sức khỏe của người mang tính **theo từng dự án** và có thể cần các điều khoản xử lý dữ liệu riêng, biện pháp kiểm soát kỹ thuật, cấu hình theo khu vực và việc rà soát tuân thủ trước khi đưa vào vận hành.",
-                    ],
-                  },
+                  "**Dữ liệu Người / Liên quan đến Sức khỏe:** Nền tảng công khai **không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai** của cá nhân tại Việt Nam, bao gồm dữ liệu bộ gen người và dữ liệu liên quan đến sức khỏe (ví dụ NIPT, WES, WGS, RNA-Seq người hoặc hồ sơ di truyền và dữ liệu bộ gen lâm sàng của bệnh nhân). Loại dữ liệu này không được tải lên Nền tảng công khai. Để xử lý dữ liệu nhạy cảm, Khách hàng cần [liên hệ với chúng tôi](/contact) để triển khai Nền tảng tại chỗ (on-premise) theo thỏa thuận riêng, trong đó chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính Khách hàng và hướng dẫn đội ngũ Khách hàng thiết lập, còn Khách hàng tự vận hành, phân tích, lưu trữ và quản lý dữ liệu. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
                 ],
               },
             ],
@@ -211,11 +216,13 @@ export const policiesVi: Policies = {
               "Cô lập theo từng Workspace, và tách biệt các khóa ánh xạ của Khách hàng khỏi môi trường phân tích khi được cấu hình về mặt kỹ thuật.",
               "Giám sát an ninh và phát hiện sự cố trên các tài nguyên do nền tảng quản lý, cùng với việc rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
               "Chỉ những nhân sự được phân công và chịu cam kết bảo mật nghiêm ngặt mới có quyền truy cập thông tin hỗ trợ kỹ thuật khi có yêu cầu bằng văn bản từ bạn.",
+              "**Quản lý thông tin xác thực:** thông tin xác thực dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi; không hiển thị cho người dùng cuối và không lưu dưới dạng plain-text.",
+              "**Tách biệt kiến trúc:** tầng điều khiển (điều phối job, thông tin xác thực, hạn ngạch) hoàn toàn độc lập với tầng dữ liệu.",
             ],
           },
           {
             type: "p",
-            text: "Các biện pháp này được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai; tính đến ngày cập nhật của Chính sách này, Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó.",
+            text: "Các biện pháp này được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai; tính đến ngày cập nhật của Chính sách này, Omicslab **chưa được chứng nhận** theo bất kỳ khung nào trong số đó. Xử phạt vi phạm trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân được quy định tại Nghị định 330/2026/NĐ-CP, có hiệu lực từ ngày 19 tháng 8 năm 2026.",
           },
           {
             type: "p",
@@ -223,7 +230,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Xem chi tiết các tiêu chuẩn tại trang [Bảo mật & Tuân thủ](/security).",
+            text: "Các cam kết bảo mật của Nền tảng và phân định trách nhiệm giữa các bên được nêu tại Mục 12 của Chính sách này.",
           },
         ],
       },
@@ -278,19 +285,27 @@ export const policiesVi: Policies = {
       },
       {
         id: "transfers",
-        title: "10. Lưu trữ và Chuyển dữ liệu ra nước ngoài",
+        title: "10. Lưu trữ và vị trí dữ liệu",
         blocks: [
           {
             type: "p",
-            text: "Dữ liệu có thể được lưu trữ và xử lý tại khu vực địa lý được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Đối với các triển khai tại khu vực Việt Nam, dữ liệu được dự kiến lưu trữ và xử lý trên hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng.",
+            text: "Hiện tại Vieomics chỉ vận hành Nền tảng Omicslab tại Việt Nam, không vận hành ở nước ngoài. Với khu vực Việt Nam (mặc định), dữ liệu và tính toán do Vieomics cung cấp được lưu trữ và xử lý tại Việt Nam.",
           },
           {
             type: "p",
-            text: "Khi dịch vụ hoặc đối tác hạ tầng đặt ngoài lãnh thổ Việt Nam, dữ liệu có thể được lưu trữ và xử lý ngoài Việt Nam tùy theo khu vực và cấu hình bạn lựa chọn. Khi dữ liệu cá nhân được chuyển ra nước ngoài và pháp luật Việt Nam yêu cầu, chúng tôi hoàn thành các thủ tục đánh giá tác động và chuyển dữ liệu áp dụng (hoặc dựa trên căn cứ pháp lý khác) và áp dụng các biện pháp bảo vệ mà pháp luật hiện hành và thỏa thuận riêng yêu cầu.",
+            text: "Nền tảng cũng hỗ trợ khu vực toàn cầu (Global) cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng các hợp tác đa quốc gia; ở khu vực này, **dữ liệu và tính toán vẫn được đặt tại Việt Nam**, người dùng chỉ truy cập từ nước ngoài. Vì dữ liệu và tính toán do Vieomics cung cấp được đặt tại Việt Nam, việc chuyển dữ liệu cá nhân ra nước ngoài không phát sinh trong hoạt động hiện tại.",
+          },
+          {
+            type: "table",
+            head: ["Khu vực", "Instance", "Khuôn khổ", "Nơi lưu trữ dữ liệu"],
+            rows: [
+              ["Việt Nam (mặc định)", "platform.omicslab.vn", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dữ liệu và tính toán do Vieomics cung cấp được lưu tại Việt Nam"],
+              ["Toàn cầu (Global)", "platform.omicslab.vn", "PDPL cho dữ liệu cá nhân tại Việt Nam", "Vẫn tại Việt Nam; cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng hợp tác đa quốc gia"],
+            ],
           },
           {
             type: "p",
-            text: "Khách hàng có yêu cầu cụ thể về vị trí dữ liệu, phương án hạ tầng hoặc biện pháp kiểm soát bổ sung cho các dự án nhạy cảm có thể thỏa thuận riêng với chúng tôi; thông tin liên hệ tại Mục 12 được áp dụng.",
+            text: "Khách hàng cần xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai phải thỏa thuận riêng một mô hình triển khai tại chỗ (on-premise) như nêu tại Mục 1; dữ liệu đã được công bố công khai hoặc ẩn danh hóa hợp pháp được coi là dữ liệu công khai. Thông tin liên hệ tại Mục 12 được áp dụng.",
           },
           {
             type: "p",
@@ -321,8 +336,55 @@ export const policiesVi: Policies = {
         ],
       },
       {
+        id: "responsibility",
+        title: "12. Phân định trách nhiệm",
+        blocks: [
+          {
+            type: "p",
+            text: "Bảo mật là trách nhiệm chung. Bảng dưới đây nêu rõ bên nào kiểm soát từng hạng mục trong mỗi mô hình triển khai.",
+          },
+          {
+            type: "table",
+            head: [
+              "Hạng mục / Hạ tầng",
+              "Tier 1 (Tự quản lý hạ tầng)",
+              "Tier 2 (Nền tảng quản lý - Marketplace)",
+            ],
+            rows: [
+              ["Lưu trữ dữ liệu", "Hạ tầng Cloud / Object Storage riêng của bạn", "Lưu trữ mã hóa AES-256 trên nền tảng (phân vùng theo Workspace)"],
+              ["Kiểm soát phiên bản", "Kho mã nguồn (GitHub) riêng của bạn", "Kho mã nguồn tích hợp trên Marketplace"],
+              ["Hạ tầng tính toán", "Cụm máy chủ HPC / Cloud riêng của bạn", "Hạ tầng tính toán được Omicslab quản lý trực tiếp"],
+              ["Truy cập hạ tầng", "Khách hàng tự quản lý", "Nền tảng quản lý"],
+              ["Thông tin xác thực (Credentials)", "Khách hàng tự quản lý", "Nền tảng bảo mật (không hiển thị dạng thô)"],
+              ["Tuân thủ hạ tầng (Compliance)", "Khách hàng tự chịu trách nhiệm", "Nền tảng đảm bảo tuân thủ"],
+            ],
+          },
+          { type: "label", text: "Cam kết bảo mật của Nền tảng" },
+          {
+            type: "ul",
+            items: [
+              "**Tách biệt kiến trúc:** tách biệt tuyệt đối tầng điều khiển (Control Plane) khỏi tầng dữ liệu (Data Plane) của khách hàng.",
+              "**Cấp quyền tối thiểu:** sử dụng mã xác thực ngắn hạn và giới hạn phạm vi truy cập nghiêm ngặt cho mọi kết nối liên vùng.",
+              "**Cô lập môi trường:** tách biệt dữ liệu theo từng Workspace và kiểm soát truy cập theo vai trò (RBAC).",
+              "**Minh bạch kiểm toán:** duy trì nhật ký ghi vết (Audit Logs) bất biến, phục vụ công tác rà soát an ninh.",
+              "**Quản lý lỗ hổng:** tiếp nhận báo cáo sự cố hoặc cấu hình sai bảo mật và phát hành bản vá kịp thời.",
+            ],
+          },
+          { type: "label", text: "Trách nhiệm bắt buộc của Khách hàng" },
+          {
+            type: "ul",
+            items: [
+              "**Bảo mật tài khoản:** bảo vệ thông tin đăng nhập và bắt buộc áp dụng các biện pháp xác thực mạnh (MFA/2FA) trong tổ chức.",
+              "**Tuân thủ pháp lý và đạo đức:** đạt được đầy đủ chấp thuận từ Hội đồng Đạo đức (IRB), sự đồng ý tự nguyện của chủ thể dữ liệu (Informed Consent) và các quyền hợp pháp cần thiết trước khi xử lý dữ liệu bộ gen hoặc dữ liệu sức khỏe con người.",
+              "**Phân quyền dữ liệu:** chủ động phân loại dữ liệu và thiết lập quyền truy cập phù hợp cho từng Workspace cũng như tài nguyên lưu trữ.",
+              "**Sao lưu và kiểm chứng:** tự duy trì bản sao lưu dự phòng độc lập và tự chịu trách nhiệm kiểm chứng kết quả phân tích theo chính sách quản trị dữ liệu nghiên cứu của tổ chức mình.",
+            ],
+          },
+        ],
+      },
+      {
         id: "contact",
-        title: "12. Thông tin liên hệ",
+        title: "13. Thông tin liên hệ",
         blocks: [
           {
             type: "p",
@@ -356,7 +418,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Các Điều khoản Dịch vụ này là thỏa thuận có ràng buộc pháp lý giữa bạn (**Người dùng**) và **CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS** (“**Công ty**”, “**chúng tôi**”) — pháp nhân vận hành Nền tảng Omicslab (“**Nền tảng**”). Khi tạo tài khoản, truy cập hoặc sử dụng Nền tảng, bạn xác nhận đã đọc, hiểu và đồng ý bị ràng buộc bởi các Điều khoản này, [Chính sách Quyền riêng tư](/privacy) của chúng tôi và mọi chính sách khác được tham chiếu tại đây.",
+            text: "Các Điều khoản Dịch vụ này là thỏa thuận có ràng buộc pháp lý giữa bạn (**Người dùng**) và **CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS** (“**Công ty**”, “**chúng tôi**”) — pháp nhân vận hành Nền tảng Omicslab (“**Nền tảng**”). Khi tạo tài khoản, truy cập hoặc sử dụng Nền tảng, bạn xác nhận đã đọc, hiểu và đồng ý bị ràng buộc bởi các Điều khoản này, [Chính sách bảo mật](/privacy) của chúng tôi và mọi chính sách khác được tham chiếu tại đây.",
           },
         ],
       },
@@ -366,7 +428,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn phải từ **đủ 18 tuổi** trở lên mới được tạo tài khoản hoặc sử dụng Nền tảng. Khi đăng ký, bạn cam kết mình từ 18 tuổi trở lên và có năng lực pháp lý để tham gia thỏa thuận có ràng buộc. Nền tảng không dành cho người chưa đủ 18 tuổi, và chúng tôi không chủ động thu thập dữ liệu cá nhân của người chưa thành niên. Nếu phát hiện người dùng dưới 18 tuổi, chúng tôi sẽ vô hiệu hóa tài khoản và xử lý dữ liệu cá nhân liên quan theo [Chính sách Quyền riêng tư](/privacy) — xóa hoặc ẩn danh hóa theo yêu cầu của pháp luật.",
+            text: "Bạn phải từ **đủ 18 tuổi** trở lên mới được tạo tài khoản hoặc sử dụng Nền tảng. Khi đăng ký, bạn cam kết mình từ 18 tuổi trở lên và có năng lực pháp lý để tham gia thỏa thuận có ràng buộc. Nền tảng không dành cho người chưa đủ 18 tuổi, và chúng tôi không chủ động thu thập dữ liệu cá nhân của người chưa thành niên. Nếu phát hiện người dùng dưới 18 tuổi, chúng tôi sẽ vô hiệu hóa tài khoản và xử lý dữ liệu cá nhân liên quan theo [Chính sách bảo mật](/privacy) — xóa hoặc ẩn danh hóa theo yêu cầu của pháp luật.",
           },
           {
             type: "p",
@@ -380,14 +442,22 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nền tảng có thể được dùng để lưu trữ, xử lý và phân tích **dữ liệu nhạy cảm**, bao gồm dữ liệu bộ gen, di truyền, liên quan đến sức khỏe và dữ liệu danh mục đặc biệt khác của người theo định nghĩa của pháp luật Việt Nam (tham chiếu thêm GDPR và HIPAA — các khung chuẩn mà Nền tảng đang hướng tới). Vì tính nhạy cảm của dữ liệu này, bạn đồng ý rằng:",
+            text: "Nền tảng công khai **không dành cho dữ liệu cá nhân nhạy cảm chưa được công bố công khai** và không tiếp nhận, không xử lý loại dữ liệu này. Bạn không được tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai, bao gồm dữ liệu bộ gen người, dữ liệu di truyền, dữ liệu liên quan đến sức khỏe và các dữ liệu danh mục đặc biệt khác theo định nghĩa của pháp luật Việt Nam. **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+          },
+          {
+            type: "p",
+            text: "Để xử lý dữ liệu nhạy cảm, bạn cần [liên hệ với chúng tôi](/contact) để **triển khai tại chỗ (on-premise) theo thỏa thuận riêng**. Chúng tôi chỉ bàn giao và triển khai phần mềm Nền tảng trên hạ tầng của chính bạn và hướng dẫn đội ngũ của bạn thiết lập; bạn tự vận hành Nền tảng, tự phân tích, lưu trữ và quản lý dữ liệu. Vieomics không xử lý dữ liệu này và không phải là Bên Kiểm soát hay Bên Xử lý dữ liệu — bạn tự chịu toàn bộ trách nhiệm, bao gồm mọi đánh giá tác động xử lý dữ liệu cá nhân theo quy định của pháp luật.",
+          },
+          {
+            type: "p",
+            text: "Khi bạn vận hành Nền tảng trong môi trường của riêng mình, bạn đồng ý rằng:",
           },
           {
             type: "ul",
             items: [
-              "Bạn đã có các chấp thuận đạo đức, sự đồng ý có hiểu biết và ủy quyền cần thiết để xử lý dữ liệu bạn tải lên, theo pháp luật hiện hành và các hội đồng đạo đức của tổ chức bạn.",
-              "Bạn không tải lên dữ liệu thu thập từ những người chưa đồng ý xử lý cho nghiên cứu tin sinh học, trừ khi pháp luật cho phép.",
-              "Bạn vẫn là người kiểm soát dữ liệu (hoặc người xử lý được ủy quyền theo thỏa thuận của riêng bạn) đối với dữ liệu bạn tải lên, và chịu trách nhiệm bảo đảm việc sử dụng tuân thủ mọi luật bảo vệ dữ liệu hiện hành, gồm Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và, khi áp dụng, GDPR hoặc HIPAA.",
+              "Bạn đã có các chấp thuận đạo đức, sự đồng ý có hiểu biết và ủy quyền cần thiết để xử lý dữ liệu, theo pháp luật hiện hành và các hội đồng đạo đức của tổ chức bạn.",
+              "Bạn không xử lý dữ liệu thu thập từ những người chưa đồng ý xử lý cho nghiên cứu tin sinh học, trừ khi pháp luật cho phép.",
+              "Bạn vẫn là người kiểm soát dữ liệu (hoặc người xử lý được ủy quyền theo thỏa thuận của riêng bạn), và chịu trách nhiệm bảo đảm việc sử dụng tuân thủ mọi luật bảo vệ dữ liệu hiện hành, gồm Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và, khi áp dụng, GDPR hoặc HIPAA.",
               "Bạn không sử dụng Nền tảng để lưu trữ nội dung trái pháp luật hoặc dữ liệu mà việc xử lý xâm phạm quyền của bất kỳ người nào.",
             ],
           },
@@ -399,7 +469,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn chịu trách nhiệm bảo mật thông tin xác thực của mình và cho mọi hoạt động diễn ra dưới tài khoản. Bạn đồng ý thông báo ngay cho chúng tôi về bất kỳ truy cập trái phép hoặc nghi ngờ bị xâm phạm nào. Chúng tôi áp dụng các biện pháp kiểm soát bảo mật theo chuẩn ngành — gồm mã hóa khi truyền tải và khi lưu trữ, kiểm soát truy cập và ghi nhật ký kiểm toán — nhưng không hệ thống nào là không thể xâm nhập, và bạn phải tự bảo vệ thông tin xác thực của mình. Chi tiết được công bố tại trang [Bảo mật & Tuân thủ](/security).",
+            text: "Bạn chịu trách nhiệm bảo mật thông tin xác thực của mình và cho mọi hoạt động diễn ra dưới tài khoản. Bạn đồng ý thông báo ngay cho chúng tôi về bất kỳ truy cập trái phép hoặc nghi ngờ bị xâm phạm nào. Chúng tôi áp dụng các biện pháp kiểm soát bảo mật theo chuẩn ngành — gồm mã hóa khi truyền tải và khi lưu trữ, kiểm soát truy cập và ghi nhật ký kiểm toán — nhưng không hệ thống nào là không thể xâm nhập, và bạn phải tự bảo vệ thông tin xác thực của mình. Chi tiết được công bố tại trang [Chính sách Thương mại điện tử](/policies).",
           },
         ],
       },
@@ -434,7 +504,7 @@ export const policiesVi: Policies = {
               "**Hợp pháp:** chúng tôi chỉ xử lý dữ liệu cá nhân trên cơ sở pháp lý hợp lệ — sự đồng ý, hợp đồng, nghĩa vụ pháp lý hoặc lợi ích hợp pháp.",
               "**Thu hẹp dữ liệu:** chúng tôi chỉ thu thập những gì cần để vận hành Nền tảng.",
               "**Bảo mật:** biện pháp kỹ thuật và tổ chức bảo vệ dữ liệu cá nhân khỏi truy cập trái phép, mất mát hoặc sửa đổi.",
-              "**Quyền của bạn:** bạn có quyền truy cập, sửa đổi, xóa bỏ, hạn chế, di trú và phản đối — xem [Chính sách Quyền riêng tư](/privacy) để biết chi tiết.",
+              "**Quyền của bạn:** bạn có quyền truy cập, sửa đổi, xóa bỏ, hạn chế, di trú và phản đối — xem [Chính sách bảo mật](/privacy) để biết chi tiết.",
             ],
           },
           {
@@ -477,7 +547,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn có thể đóng tài khoản bất cứ lúc nào. Chúng tôi có thể đình chỉ hoặc chấm dứt quyền truy cập — có hoặc không thông báo — vì vi phạm các Điều khoản này, hoạt động bất hợp pháp, hoặc theo yêu cầu của luật. Khi chấm dứt, bạn vẫn chịu trách nhiệm cho các nghĩa vụ phát sinh trước đó. Dữ liệu cá nhân và dữ liệu nghiên cứu được xử lý theo [Chính sách Quyền riêng tư](/privacy) và thỏa thuận xử lý dữ liệu hiện hành.",
+            text: "Bạn có thể đóng tài khoản bất cứ lúc nào. Chúng tôi có thể đình chỉ hoặc chấm dứt quyền truy cập — có hoặc không thông báo — vì vi phạm các Điều khoản này, hoạt động bất hợp pháp, hoặc theo yêu cầu của luật. Khi chấm dứt, bạn vẫn chịu trách nhiệm cho các nghĩa vụ phát sinh trước đó. Dữ liệu cá nhân và dữ liệu nghiên cứu được xử lý theo [Chính sách bảo mật](/privacy) và thỏa thuận xử lý dữ liệu hiện hành.",
           },
         ],
       },
@@ -507,7 +577,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Các câu hỏi về Điều khoản này có thể gửi cho chúng tôi qua trang [Liên hệ](/contact) hoặc tới **contact@omicslab.io**, hoặc tới đầu mối bảo vệ dữ liệu được nêu trong [Chính sách Quyền riêng tư](/privacy).",
+            text: "Các câu hỏi về Điều khoản này có thể gửi cho chúng tôi qua trang [Liên hệ](/contact) hoặc tới **contact@omicslab.io**, hoặc tới đầu mối bảo vệ dữ liệu được nêu trong [Chính sách bảo mật](/privacy).",
           },
         ],
       },
@@ -517,7 +587,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Các điều khoản thanh toán và chu kỳ dưới đây áp dụng cho Nền tảng; thời gian lưu trữ dữ liệu chi tiết được nêu tại [Chính sách Quyền riêng tư](/privacy).",
+            text: "Các điều khoản thanh toán và chu kỳ dưới đây áp dụng cho Nền tảng; thời gian lưu trữ dữ liệu chi tiết được nêu tại [Chính sách bảo mật](/privacy).",
           },
           {
             type: "ul",
@@ -525,7 +595,7 @@ export const policiesVi: Policies = {
               "**Gói đăng ký (Subscription):** được thanh toán theo chu kỳ, thông thường là theo tháng. Việc gia hạn phải được thực hiện trước khi chu kỳ hiện tại kết thúc.",
               "**Lưu trữ Marketplace (pay-as-you-go):** dung lượng lưu trữ được tính phí theo mức sử dụng và theo chu kỳ tháng, gắn với gói đăng ký, và không thể kéo dài quá thời hạn của gói đang có hiệu lực.",
               "**Cảnh báo trước bằng email:** trước mọi hành động, chúng tôi gửi email cho quản trị viên — nhắc trước **7 ngày** khi chu kỳ lưu trữ sắp kết thúc, và thông báo ngay khi chu kỳ hết hạn. Sau khi hết hạn, dữ liệu được giữ thêm **thời gian ân hạn 1 tháng** trước khi bị dọn dẹp.",
-              "**Dọn dẹp dữ liệu workspace:** qua thời hạn ân, dữ liệu trong workspace bị xóa — chỉ nhật ký audit được giữ lại cho mục đích tra cứu (chi tiết tại Mục 6 [Chính sách Quyền riêng tư](/privacy)).",
+              "**Dọn dẹp dữ liệu workspace:** qua thời hạn ân, dữ liệu trong workspace bị xóa — chỉ nhật ký audit được giữ lại cho mục đích tra cứu (chi tiết tại Mục 6 [Chính sách bảo mật](/privacy)).",
               "**Số dư Top-up:** chỉ có thể sử dụng khi tổ chức còn gói đăng ký hiệu lực. Khi gói hết hạn hoặc bị hủy mà không có gia hạn đang chờ xử lý, số dư còn lại bị thu hồi về 0; thông tin về số dư và các mốc thời hạn cũng được gửi qua email trước khi áp dụng.",
             ],
           },
@@ -534,264 +604,599 @@ export const policiesVi: Policies = {
     ],
   },
 
-  security: {
-    kicker: "Bảo mật & Tuân thủ",
-    title: "Bảo mật & Tuân thủ",
-    navTitle: "Bảo mật & Tuân thủ",
+  hub: {
+    kicker: "Pháp lý",
+    title: "Chính sách",
     description:
-      "Hai mô hình triển khai, các biện pháp kiểm soát bảo mật và phân định trách nhiệm giữa Omicslab và khách hàng.",
-    sections: [
-      {
-        id: "trust-model",
-        title: "Mô hình Tin cậy & Bảo mật (Trust Model)",
-        blocks: [
-          {
-            type: "p",
-            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy dành cho điện toán khoa học, tối ưu cho các khối lượng công việc omics và dữ liệu sức khỏe nhạy cảm. Chúng tôi cung cấp hai mô hình triển khai linh hoạt:",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Bring Your Own Infrastructure (BYO):** Kết nối hạ tầng lưu trữ, kiểm soát phiên bản và tài nguyên tính toán sẵn có của chính bạn — đảm bảo dữ liệu luôn nằm hoàn toàn trong tầm kiểm soát nội bộ.",
-              "**Platform-Managed:** Triển khai trực tiếp trên hạ tầng do Omicslab quản lý với cam kết tuân thủ đầy đủ các tiêu chuẩn an toàn dữ liệu.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "compliance",
-        title: "1. Tuân thủ Pháp lý & Bảo mật Dữ liệu",
-        blocks: [
-          {
-            type: "p",
-            text: "Omicslab vận hành theo mô hình triển khai đa khu vực và áp dụng pháp luật Việt Nam về bảo vệ dữ liệu cá nhân cho hoạt động tại Việt Nam — đặc biệt là Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Vị trí lưu trữ và xử lý phụ thuộc vào khu vực được cấu hình cho tổ chức hoặc dịch vụ tương ứng.",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Lưu trữ & Xử lý:** Dữ liệu được lưu trữ và xử lý tại khu vực địa lý được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Các triển khai tại khu vực Việt Nam được dự kiến sử dụng hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng.",
-              "**Chuyển dữ liệu xuyên biên giới:** Khi dữ liệu được xử lý tại khu vực ngoài Việt Nam, việc chuyển dữ liệu được thực hiện theo pháp luật hiện hành và thỏa thuận riêng.",
-              "**Kiến trúc tách biệt (Separation of Control & Data):** Tầng điều khiển (quản lý điều phối job, thông tin xác thực, hạn ngạch) hoàn toàn độc lập với tầng dữ liệu. Dữ liệu chỉ luân chuyển giữa các điểm lưu trữ và môi trường tính toán do bạn chỉ định.",
-              "**Chính sách riêng tư:** Quy định chi tiết về xử lý dữ liệu được công bố công khai tại [Điều khoản Dịch vụ](/terms) và [Chính sách Quyền riêng tư](/privacy) của chúng tôi.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "controls",
-        title: "2. Các Biện pháp Kiểm soát Bảo mật",
-        blocks: [
-          {
-            type: "ul",
-            items: [
-              "**Mã hóa Dữ liệu (Encryption):** Áp dụng đồng bộ giao thức TLS cho dữ liệu đang truyền tải (in-transit) và thuật toán AES-256 cho dữ liệu lưu trữ (at-rest) trên toàn bộ tài nguyên do nền tảng quản lý.",
-              "**Kiểm soát Truy cập & Audit (Access Control):** Phân quyền truy cập theo vai trò (RBAC), cách ly triệt để theo từng Workspace và tự động ghi nhật ký kiểm toán (audit log) đầy đủ cho mọi thao tác tác động lên tầng dữ liệu.",
-              "**Quản lý Thông tin Xác thực (Credential Handling):** Các thông tin xác thực (credentials) dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi. Thông tin này tuyệt đối không hiển thị cho người dùng cuối hoặc lưu vết dưới dạng plain-text.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "responsibility",
-        title: "3. Phân định Trách nhiệm theo Mô hình Triển khai",
-        blocks: [
-          {
-            type: "p",
-            text: "Mức độ bảo đảm an ninh phụ thuộc vào mô hình triển khai do bạn lựa chọn:",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Mô hình Marketplace (Cao nhất):** Áp dụng cho các tài nguyên lưu trữ và tính toán do Quản trị viên (Superuser) của Omicslab cấp phát từ các nhà cung cấp đã qua thẩm định khắt khe. Omicslab chịu trách nhiệm bảo đảm toàn bộ các biện pháp an toàn và cam kết tuân thủ trên hạ tầng này.",
-              "**Mô hình Tự kết nối (BYO):** Khi bạn tự kết nối hạ tầng lưu trữ và tính toán cá nhân, rủi ro và trách nhiệm quản lý thuộc về phía bạn (bao gồm việc lựa chọn nhà cung cấp, cấu hình hệ thống và thiết lập các biện pháp bảo vệ tương ứng).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "more",
-        title: "Tìm hiểu thêm",
-        blocks: [
-          {
-            type: "ul",
-            items: [
-              "Trang [Tuân thủ (Compliance)](/security/compliance): Tìm hiểu chi tiết các tiêu chuẩn bảo mật, khuôn khổ vận hành và địa điểm đặt máy chủ.",
-              "Trang [Phân định Trách nhiệm (Shared Responsibility)](/security/responsibility): Xem bảng phân công chi tiết quyền kiểm soát từng biện pháp an toàn giữa Omicslab và Khách hàng tương ứng với từng mô hình triển khai.",
-            ],
-          },
-        ],
-      },
-    ],
+      "Các chính sách điều chỉnh Nền tảng Omicslab — bao gồm các nội dung công bố bắt buộc đối với website cung cấp dịch vụ thương mại điện tử theo quy định của Bộ Công Thương (Nghị định 52/2013/NĐ-CP, sửa đổi bởi Nghị định 85/2021/NĐ-CP).",
+    intro:
+      "Nền tảng Omicslab là dịch vụ phân tích dữ liệu tin sinh học do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Các tài liệu dưới đây hợp thành bộ chính sách và được áp dụng cùng nhau.",
   },
-  compliance: {
-    kicker: "Bảo mật & Tuân thủ",
-    title: "Tuân thủ",
-    navTitle: "Tuân thủ",
+
+  pricing: {
+    kicker: "Pháp lý",
+    title: "Chính sách giá",
+    navTitle: "Chính sách giá",
     description:
-      "Nơi nền tảng được lưu trữ, pháp luật tuân theo và cam kết tuân thủ cho hoạt động tại Việt Nam.",
+      "Cách Omicslab xác định, niêm yết và điều chỉnh giá dịch vụ của Nền tảng.",
     sections: [
       {
-        id: "hosting",
-        title: "Lưu trữ dữ liệu",
+        id: "price-basis",
+        title: "Điều 1. Giá dịch vụ và đơn vị tiền tệ",
         blocks: [
           {
             type: "p",
-            text: "Nền tảng Omicslab hỗ trợ triển khai theo khu vực. Đối với khu vực **Việt Nam**, dữ liệu khách hàng — gồm dữ liệu nghiên cứu, sinh học hoặc bộ gen tải lên nền tảng — được lưu trữ và xử lý trên hạ tầng đặt tại Việt Nam, tùy theo cấu hình dịch vụ và các điều khoản hợp đồng áp dụng. Các khu vực khác có thể sử dụng hạ tầng ngoài Việt Nam.",
+            text: "Một số sản phẩm hoặc tính năng của Nền tảng có thể áp dụng phí dịch vụ. Biểu phí được công bố trên trang bảng giá của Nền tảng, trên Dashboard hoặc thông báo trực tiếp đến Khách hàng.",
           },
           {
-            type: "p",
-            text: "Nền tảng được vận hành theo **pháp luật dân sự Việt Nam**, cụ thể là **Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15)** và **Nghị định 356/2025/NĐ-CP** (thay thế Nghị định 13/2023/NĐ-CP), có hiệu lực từ ngày 01 tháng 01 năm 2026.",
-          },
-        ],
-      },
-      {
-        id: "data-residency",
-        title: "Nơi lưu trữ dữ liệu",
-        blocks: [
-          {
-            type: "p",
-            text: "Nơi lưu trữ dữ liệu phụ thuộc vào khu vực được cấu hình cho tổ chức hoặc dịch vụ tương ứng. Với các triển khai tại khu vực Việt Nam, dữ liệu được dự kiến lưu tại Việt Nam; khi một dịch vụ được cấu hình tại khu vực khác, dữ liệu có thể được lưu trữ và xử lý ngoài Việt Nam, và các yêu cầu chuyển dữ liệu xuyên biên giới có thể được áp dụng. Khu vực được lựa chọn theo từng tổ chức hoặc dịch vụ; bảng dưới đây thể hiện khu vực Việt Nam mặc định.",
-          },
-          {
-            type: "table",
-            head: ["Khu vực", "Instance", "Khuôn khổ", "Nơi lưu trữ dữ liệu"],
-            rows: [
-              ["Việt Nam", "vn.omicslab.io", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dự kiến lưu tại Việt Nam"],
+            type: "ul",
+            items: [
+              "**Gói đăng ký (Subscription):** tính phí theo chu kỳ, thông thường theo tháng, theo gói bạn lựa chọn.",
+              "**Lưu trữ Marketplace (pay-as-you-go):** tính phí theo mức sử dụng, theo chu kỳ tháng, gắn với gói đăng ký đang có hiệu lực.",
+              "**Nạp trước (top-up):** khoản tín dụng trả trước trong ví tổ chức, dùng để thanh toán cho các dịch vụ trên Nền tảng.",
             ],
           },
           {
             type: "p",
-            text: "Cam kết pháp lý của chúng tôi áp dụng cho hoạt động tại Việt Nam hiện nay. Nếu nền tảng được mở rộng sang khu vực pháp lý khác trong tương lai, trang này sẽ được cập nhật để phản ánh pháp luật và thỏa thuận lưu trữ áp dụng cho hoạt động đó.",
+            text: "Giá được thể hiện bằng **Đồng Việt Nam (VND)**, đã bao gồm hoặc chưa bao gồm thuế GTGT tùy theo thông báo tại bước thanh toán hoặc trên hóa đơn. Ngoài khoản phí đã niêm yết, không phát sinh chi phí nào khác từ việc bán dịch vụ. Chi phí cho hạ tầng bạn tự kết nối (Bring Your Own Cloud) do nhà cung cấp của bạn thu và không thuộc giá của chúng tôi.",
           },
         ],
       },
       {
-        id: "framework",
-        title: "Pháp luật chúng tôi tuân theo",
+        id: "quota",
+        title: "Điều 2. Hạn ngạch sử dụng và cước vượt",
         blocks: [
           {
             type: "p",
-            text: "Nền tảng được vận hành như một dịch vụ pháp lý và xử lý dữ liệu chịu sự điều chỉnh của pháp luật Việt Nam. Khung pháp lý chính là Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP (thay thế Nghị định 13/2023/NĐ-CP), điều chỉnh cách dữ liệu cá nhân được thu thập, xử lý và bảo vệ tại Việt Nam, gồm yêu cầu về sự đồng ý, quyền của chủ thể dữ liệu và thông báo sự cố dữ liệu.",
+            text: "Mỗi gói bao gồm các hạn ngạch sử dụng (lưu trữ, tính toán và số job chạy đồng thời). Nếu mức sử dụng vượt hạn ngạch đã đăng ký trong một chu kỳ, phần vượt được tính theo đơn giá hiệu lực của gói và trừ từ số dư trả trước của Khách hàng mà không làm gián đoạn dịch vụ. Khách hàng cần duy trì số dư phù hợp với mức sử dụng thực tế để dịch vụ hoạt động ổn định.",
           },
         ],
       },
       {
-        id: "posture",
-        title: "Cam kết tuân thủ",
+        id: "changes",
+        title: "Điều 3. Thay đổi giá và khuyến mại",
         blocks: [
           {
             type: "p",
-            text: "Chúng tôi duy trì cam kết tuân thủ bằng các biện pháp kỹ thuật và tổ chức hiện thực hóa yêu cầu của pháp luật Việt Nam — mã hóa khi truyền tải và khi lưu trữ, kiểm soát truy cập, ghi nhật ký kiểm toán và cách tiếp cận có tài liệu đối với việc xử lý dữ liệu cá nhân.",
+            text: "Biểu phí có thể được điều chỉnh theo từng thời điểm, hoặc áp dụng các chương trình khuyến mại. Khi có thay đổi, chúng tôi công bố trên Nền tảng ít nhất **20 ngày** trước thời điểm áp dụng. Nếu Khách hàng tiếp tục sử dụng dịch vụ sau khi biểu phí mới có hiệu lực thì được xem là đã chấp nhận mức phí đã điều chỉnh.",
           },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Điều 4. Hoàn tiền",
+        blocks: [
           {
             type: "p",
-            text: "Xử phạt vi phạm trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân được quy định tại Nghị định 330/2026/NĐ-CP, có hiệu lực từ ngày 19 tháng 8 năm 2026. Cam kết này chỉ phản ánh hoạt động tại Việt Nam hiện nay. Nếu nền tảng mở rộng ra quốc tế, khung tuân thủ và mọi chứng nhận liên quan sẽ được cập nhật và công bố trên trang này.",
-          },
-          {
-            type: "p",
-            text: "Hệ thống, biện pháp kiểm soát và quy trình của Omicslab được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng có thể phục vụ các khối lượng công việc chịu yêu cầu nghiêm ngặt tại các khu vực này trong tương lai. Tính đến thời điểm trang này, Omicslab **chưa được chứng nhận, đánh giá độc lập hoặc công nhận** theo GDPR, HIPAA hay bất kỳ chương trình chứng nhận quốc tế nào — nội dung tại đây chỉ mô tả định hướng thiết kế và việc tuân thủ pháp luật Việt Nam. Mọi chứng nhận đạt được sẽ được công bố trên trang này.",
-          },
-          {
-            type: "p",
-            text: "Chúng tôi không bảo đảm Nền tảng tuân thủ mọi luật có thể áp dụng cho trường hợp sử dụng cụ thể của bạn. Bạn chịu trách nhiệm xác định việc sử dụng Nền tảng cho khối lượng công việc của mình có phù hợp hay không, cũng như trách nhiệm tuân thủ của riêng bạn. Xem [Chính sách Quyền riêng tư](/privacy) để biết đầy đủ các cam kết bảo vệ dữ liệu.",
+            text: "Trừ khi pháp luật có quy định khác, các khoản phí đã thanh toán **không được hoàn lại**. Việc hoàn tiền khi chấm dứt dịch vụ được điều chỉnh bởi [Chính sách về phương thức cung cấp dịch vụ, chấm dứt dịch vụ và hoàn tiền](/policies/service-provision).",
           },
         ],
       },
     ],
   },
 
-  responsibility: {
-    kicker: "Bảo mật & Tuân thủ",
-    title: "Trách nhiệm",
-    navTitle: "Trách nhiệm",
+  payment: {
+    kicker: "Pháp lý",
+    title: "Chính sách thanh toán",
+    navTitle: "Chính sách thanh toán",
     description:
-      "Bảo mật là trách nhiệm chung. Trang này nêu rõ ai kiểm soát từng biện pháp trong từng mô hình triển khai, và những gì chúng tôi yêu cầu ở bạn.",
+      "Cách đăng ký trực tuyến dịch vụ Omicslab và cách thức thanh toán.",
     sections: [
       {
-        id: "matrix",
-        title: "Ma trận chia sẻ trách nhiệm (Shared Responsibility Matrix)",
+        id: "steps",
+        title: "Điều 1. Hướng dẫn đăng ký và thanh toán trực tuyến",
         blocks: [
-          {
-            type: "table",
-            head: [
-              "Hạng mục / Hạ tầng",
-              "Tier 1 (Tự quản lý hạ tầng)",
-              "Tier 2 (Nền tảng quản lý - Marketplace)",
-            ],
-            rows: [
-              [
-                "Lưu trữ dữ liệu",
-                "Hạ tầng Cloud / Object Storage riêng của bạn",
-                "Lưu trữ mã hóa AES-256 trên nền tảng (phân vùng theo Workspace)",
-              ],
-              [
-                "Kiểm soát phiên bản",
-                "Kho mã nguồn (GitHub) riêng của bạn",
-                "Kho mã nguồn tích hợp trên Marketplace",
-              ],
-              [
-                "Hạ tầng tính toán",
-                "Cụm máy chủ HPC / Cloud riêng của bạn",
-                "Hạ tầng tính toán được Omicslab quản lý trực tiếp",
-              ],
-              ["Truy cập hạ tầng", "Khách hàng tự quản lý", "Nền tảng quản lý"],
-              [
-                "Thông tin xác thực (Credentials)",
-                "Khách hàng tự quản lý",
-                "Nền tảng bảo mật (không hiển thị dạng thô)",
-              ],
-              [
-                "Tuân thủ hạ tầng (Compliance)",
-                "Khách hàng tự chịu trách nhiệm",
-                "Nền tảng đảm bảo tuân thủ",
-              ],
-            ],
-          },
-          {
-            type: "label",
-            text: "Phân định vận hành",
-          },
           {
             type: "ul",
             items: [
-              "**Ở Tier 1:** Khách hàng tự cung cấp và chịu trách nhiệm toàn bộ đối với lưu trữ, mã nguồn và hạ tầng tính toán (vận hành trên tinh thần tự chịu rủi ro về mặt hạ tầng).",
-              "**Ở Tier 2:** Mô hình mang lại mức độ bảo đảm tối đa — mọi tài nguyên đều do Omicslab trực tiếp cấp phát và quản lý thông qua các đối tác hạ tầng đạt chuẩn.",
+              "**Bước 1:** mở trang bảng giá trên Nền tảng, chọn gói bạn mong muốn và chọn “Đăng ký”.",
+              "**Bước 2:** tạo tài khoản hoặc đăng nhập. Nếu là người dùng mới, điền các thông tin yêu cầu; chúng tôi gửi email xác nhận để kích hoạt tài khoản.",
+              "**Bước 3:** quay lại mục bảng giá và chọn gói phù hợp nhu cầu.",
+              "**Bước 4:** hoàn tất thông tin thanh toán và tiếp tục.",
+              "**Bước 5:** kiểm tra gói, điền mã giảm giá nếu có và tiếp tục thanh toán.",
+              "**Bước 6:** thanh toán bằng mã QR hoặc chuyển khoản theo thông tin được cung cấp để kích hoạt gói dịch vụ.",
             ],
           },
         ],
       },
       {
-        id: "platform",
-        title: "1. Cam kết Bảo mật từ Nền tảng",
+        id: "methods",
+        title: "Điều 2. Phương thức thanh toán",
         blocks: [
+          { type: "p", text: "Nền tảng hỗ trợ các phương thức thanh toán sau:" },
           {
             type: "ul",
             items: [
-              "**Tách biệt kiến trúc:** Tách biệt tuyệt đối tầng điều khiển (Control Plane) khỏi tầng dữ liệu (Data Plane) của khách hàng.",
-              "**Cấp quyền tối thiểu:** Sử dụng mã xác thực (credentials) ngắn hạn và giới hạn phạm vi truy cập nghiêm ngặt cho mọi kết nối liên vùng.",
-              "**Cô lập môi trường:** Tách biệt dữ liệu theo từng Workspace và kiểm soát truy cập theo vai trò (RBAC).",
-              "**Minh bạch kiểm toán:** Duy trì nhật ký ghi vết (Audit Logs) bất biến, phục vụ công tác rà soát an ninh.",
-              "**Quản lý lỗ hổng:** Tiếp nhận báo cáo sự cố/cấu hình sai bảo mật và phát hành bản vá kịp thời.",
+              "Chuyển khoản ngân hàng theo thông tin tài khoản hiển thị trên Dashboard hoặc trên hóa đơn. Vui lòng không sửa nội dung chuyển khoản.",
+              "Cổng thanh toán trực tuyến, hỗ trợ thẻ nội địa, thẻ quốc tế và các phương thức mà cổng cung cấp.",
+              "Nạp trước (top-up) vào ví tổ chức.",
             ],
           },
           {
             type: "p",
-            text: "**Lưu ý:** Với Tier 2, các cam kết trên được mở rộng xuống toàn bộ hạ tầng phần cứng bên dưới.",
+            text: "Vui lòng kiểm tra kỹ thông tin thanh toán trước khi chuyển khoản. Dịch vụ chỉ được kích hoạt hoặc gia hạn sau khi chúng tôi xác nhận thanh toán.",
+          },
+        ],
+      },
+      {
+        id: "cycles",
+        title: "Điều 3. Chu kỳ thanh toán và số dư top-up",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Thanh toán theo từng chu kỳ, thông thường theo tháng. Việc gia hạn phải hoàn tất trước khi chu kỳ hiện tại kết thúc.",
+              "Hóa đơn điện tử được phát hành theo quy định của pháp luật.",
+              "**Số dư top-up:** chỉ sử dụng được khi tổ chức còn gói đăng ký hiệu lực. Khi gói hết hạn hoặc bị hủy mà không có gia hạn đang xử lý, số dư còn lại bị thu hồi và đưa về 0 theo quy trình tự động hằng ngày; email cảnh báo được gửi trước khi áp dụng.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "issues",
+        title: "Điều 4. Thanh toán thất bại và giao dịch trùng lặp",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Nếu thanh toán không thành công, quyền truy cập dịch vụ có thể bị tạm khóa cho đến khi thanh toán hoàn tất.",
+              "Nếu phát sinh giao dịch trùng lặp hoặc ghi nợ sai, vui lòng liên hệ; chúng tôi đối soát và hoàn trả phần chênh lệch.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Điều 5. Hoàn tiền khi chấm dứt dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Các khoản phí đã thanh toán không được hoàn lại trừ khi pháp luật có quy định khác. Việc hoàn tiền khi chấm dứt dịch vụ được điều chỉnh bởi [Chính sách về phương thức cung cấp dịch vụ, chấm dứt dịch vụ và hoàn tiền](/policies/service-provision).",
+          },
+        ],
+      },
+    ],
+  },
+
+  serviceProvision: {
+    kicker: "Pháp lý",
+    title: "Chính sách về phương thức cung cấp dịch vụ, chấm dứt dịch vụ và hoàn tiền",
+    navTitle: "Cung cấp dịch vụ & hoàn tiền",
+    description:
+      "Cách Nền tảng cung cấp dịch vụ, cách dịch vụ chấm dứt và khi nào phí được hoàn lại.",
+    sections: [
+      {
+        id: "conditions",
+        title: "Điều 1. Điều kiện sử dụng dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Để sử dụng dịch vụ của Nền tảng, Khách hàng phải đáp ứng các điều kiện sau:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Có đầy đủ năng lực pháp luật và năng lực hành vi dân sự theo quy định.",
+              "Là cá nhân, doanh nghiệp hoặc tổ chức hoạt động hợp pháp.",
+              "Cung cấp đầy đủ, trung thực và chính xác thông tin đăng ký theo yêu cầu.",
+              "Có quyền hợp pháp đối với hạ tầng, hệ thống hoặc dữ liệu được kết nối với Nền tảng.",
+              "Tuân thủ chính sách này và các quy định pháp luật có liên quan.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Chúng tôi có quyền yêu cầu Khách hàng cung cấp thông tin hoặc tài liệu bổ sung để xác minh trong quá trình đăng ký hoặc sử dụng dịch vụ.",
+          },
+        ],
+      },
+      {
+        id: "delivery",
+        title: "Điều 2. Phương thức cung cấp dịch vụ",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Dịch vụ được cung cấp **trực tuyến** qua Nền tảng Omicslab. Không giao hàng hóa vật lý.",
+              "Tài khoản và không gian làm việc (workspace) được kích hoạt sau khi thanh toán hoặc xác nhận.",
+              "Dịch vụ được cung cấp theo khả năng sẵn có, theo khu vực và gói. Xem [Điều kiện và hạn chế](/policies/conditions) về khả dụng dịch vụ và từ chối bảo đảm.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "term",
+        title: "Điều 3. Thời hạn sử dụng dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Thời hạn sử dụng được xác định theo gói dịch vụ hoặc thỏa thuận giữa Omicslab và Khách hàng, và được thông tin rõ ràng trước hoặc tại thời điểm đăng ký. Đối với dịch vụ có thời hạn xác định, quyền sử dụng của Khách hàng có hiệu lực từ khi bắt đầu sử dụng đến hết thời hạn đã đăng ký hoặc thỏa thuận. Đối với dịch vụ gia hạn định kỳ, thời hạn được tiếp tục sau khi Khách hàng hoàn tất gia hạn và đáp ứng đầy đủ các điều kiện áp dụng.",
+          },
+        ],
+      },
+      {
+        id: "termination",
+        title: "Điều 4. Các trường hợp chấm dứt dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Dịch vụ có thể chấm dứt khi hết thời hạn, theo yêu cầu của Khách hàng, theo thỏa thuận giữa các bên, hoặc khi Omicslab thực hiện quyền tạm ngừng, giới hạn hoặc chấm dứt cung cấp dịch vụ trong các trường hợp sau:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Khách hàng vi phạm các điều kiện sử dụng dịch vụ.",
+              "Phát hiện dấu hiệu gian lận, lạm dụng hoặc rủi ro bảo mật.",
+              "Khách hàng không thanh toán đầy đủ các khoản phí theo quy định.",
+              "Theo yêu cầu của cơ quan nhà nước có thẩm quyền.",
+              "Theo yêu cầu hoặc thay đổi từ đối tác cung cấp dịch vụ hoặc hạ tầng.",
+              "Cần bảo trì, nâng cấp hoặc bảo vệ hệ thống.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Khi dịch vụ chấm dứt, chúng tôi có quyền thu hồi thông tin xác thực và vô hiệu hóa quyền truy cập vào hệ thống. Việc chấm dứt không làm chấm dứt các nghĩa vụ tài chính hoặc trách nhiệm pháp lý đã phát sinh trước thời điểm chấm dứt.",
+          },
+        ],
+      },
+      {
+        id: "end-time",
+        title: "Điều 5. Thời điểm hợp đồng chấm dứt hiệu lực",
+        blocks: [
+          {
+            type: "p",
+            text: "Hợp đồng giữa Omicslab và Khách hàng chấm dứt hiệu lực khi xảy ra một trong các trường hợp sau:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Hết thời hạn đã thỏa thuận mà các bên không có thỏa thuận gia hạn.",
+              "Các bên đã hoàn thành đầy đủ quyền, nghĩa vụ và thống nhất chấm dứt hợp đồng trước thời hạn.",
+              "Một trong các bên thực hiện quyền chấm dứt hợp đồng theo thỏa thuận hoặc theo quy định của pháp luật.",
+              "Omicslab chấm dứt cung cấp dịch vụ theo hợp đồng, điều khoản sử dụng, chính sách của mình hoặc theo yêu cầu của cơ quan nhà nước có thẩm quyền.",
+              "Các trường hợp khác theo thỏa thuận giữa các bên hoặc theo quy định của pháp luật.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Trường hợp không công bố rõ thời điểm chấm dứt hiệu lực và Khách hàng là bên chấm dứt, thì thời điểm Khách hàng gửi thông báo được coi là thời điểm hợp đồng chấm dứt.",
+          },
+        ],
+      },
+      {
+        id: "termination-process",
+        title: "Điều 6. Quy trình, thời hạn phản hồi khi Khách hàng gửi thông báo chấm dứt",
+        blocks: [
+          {
+            type: "p",
+            text: "Sau khi nhận được thông báo chấm dứt, chúng tôi kiểm tra và xác nhận tiếp nhận trong thời hạn tối đa **03 ngày làm việc**. Trường hợp thông báo chưa đầy đủ hoặc cần xác minh thêm, chúng tôi có thể yêu cầu Khách hàng bổ sung thông tin cần thiết; thời hạn được tính từ khi nhận đủ thông tin hợp lệ. Sau khi kiểm tra xong, chúng tôi phản hồi xác nhận việc chấm dứt, thời điểm chấm dứt và các nghĩa vụ còn tồn tại (nếu có). Chúng tôi dự kiến hoàn tất việc kiểm tra và phản hồi trong thời hạn **07 ngày làm việc** kể từ ngày nhận đủ thông tin hợp lệ; đối với trường hợp cần đối soát giao dịch hoặc phối hợp với bên thứ ba, thời hạn có thể kéo dài hơn và chúng tôi thông báo cho Khách hàng về tình trạng xử lý và thời gian dự kiến hoàn tất.",
+          },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Điều 7. Hoàn tiền khi chấm dứt dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Phí dịch vụ mà Khách hàng đã thanh toán cho Omicslab là khoản phí cho việc đăng ký và sử dụng dịch vụ theo thỏa thuận. Chúng tôi không hoàn trả phí dịch vụ trong trường hợp Khách hàng chấm dứt, ngừng hoặc không tiếp tục sử dụng dịch vụ trước thời hạn, trừ trường hợp pháp luật có quy định khác hoặc có chính sách riêng được công bố áp dụng cho từng dịch vụ. Việc chấm dứt không làm chấm dứt các nghĩa vụ tài chính hoặc trách nhiệm pháp lý đã phát sinh trước thời điểm chấm dứt. Không nội dung nào trong chính sách này làm hạn chế các quyền của người tiêu dùng theo quy định của pháp luật Việt Nam.",
+          },
+        ],
+      },
+    ],
+  },
+
+  conditions: {
+    kicker: "Pháp lý",
+    title: "Các điều kiện hoặc hạn chế trong việc cung cấp dịch vụ",
+    navTitle: "Điều kiện & hạn chế",
+    description:
+      "Các điều kiện, giới hạn và hành vi bị cấm áp dụng cho Nền tảng.",
+    sections: [
+      {
+        id: "conditions",
+        title: "Điều 1. Điều kiện sử dụng dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Để sử dụng dịch vụ của Nền tảng, Khách hàng phải đáp ứng các điều kiện sau:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Từ **đủ 18 tuổi** trở lên, có đầy đủ năng lực pháp luật, hoặc là tổ chức hoạt động hợp pháp.",
+              "Cung cấp đầy đủ, trung thực và chính xác thông tin đăng ký.",
+              "Có quyền hợp pháp đối với hạ tầng, hệ thống hoặc dữ liệu được kết nối với Nền tảng.",
+              "Tuân thủ các điều kiện này và các quy định pháp luật có liên quan.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "scope",
+        title: "Điều 2. Phạm vi sử dụng hợp lệ",
+        blocks: [
+          {
+            type: "p",
+            text: "Nền tảng cung cấp dịch vụ lưu trữ và phân tích dữ liệu tin sinh học — là dịch vụ phần mềm. Nền tảng không cung cấp hàng hóa vật lý. Bạn được phép sử dụng Nền tảng để:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Lưu trữ, quản lý và phân tích dữ liệu nghiên cứu phi người (vi sinh vật, thực vật, động vật, mẫu môi trường) và các khối lượng công việc khác trong phạm vi gói đã đăng ký.",
+              "Tích hợp API và công cụ của Nền tảng vào website, ứng dụng hoặc hệ thống nội bộ của bạn.",
+              "Đồng bộ kết quả phân tích và metadata với phần mềm hoặc hệ thống quản lý của bạn.",
+            ],
+          },
+          {
+            type: "p",
+            text: "**Dữ liệu cá nhân nhạy cảm:** Nền tảng công khai không tiếp nhận và không xử lý dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam. Dữ liệu bộ gen người hoặc dữ liệu liên quan đến sức khỏe chỉ được xử lý thông qua một mô hình **triển khai tại chỗ (on-premise)** theo thỏa thuận riêng, trong đó chúng tôi triển khai phần mềm trên hạ tầng của chính bạn và bạn tự vận hành, phân tích, lưu trữ và quản lý dữ liệu (xem [Chính sách bảo mật](/privacy)). **Ngoại lệ:** dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa hợp pháp (ví dụ dữ liệu tải từ các kho dữ liệu công cộng như NCBI GEO/SRA), được coi là **dữ liệu công khai** và có thể được xử lý trên Nền tảng công khai.",
+          },
+        ],
+      },
+      {
+        id: "law",
+        title: "Điều 3. Tuân thủ pháp luật",
+        blocks: [
+          {
+            type: "p",
+            text: "Bạn đồng ý sử dụng Nền tảng phù hợp với pháp luật Việt Nam và các quy định có liên quan về bảo vệ dữ liệu, an ninh mạng và nghiên cứu khoa học. Bạn chịu trách nhiệm về căn cứ pháp lý, sự đồng ý và chấp thuận đạo đức đối với dữ liệu bạn xử lý.",
+          },
+        ],
+      },
+      {
+        id: "prohibited",
+        title: "Điều 4. Các hành vi bị nghiêm cấm",
+        blocks: [
+          { type: "p", text: "Bạn không được sử dụng Nền tảng để:" },
+          {
+            type: "ul",
+            items: [
+              "Vi phạm pháp luật hoặc xâm phạm quyền của bất kỳ người nào.",
+              "Tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai (trừ dữ liệu công khai đã được công bố công khai hoặc ẩn danh hóa hợp pháp).",
+              "Cung cấp thông tin sai sự thật hoặc giả mạo danh tính của bất kỳ người hoặc tổ chức nào.",
+              "Tải lên mã độc, cố gắng truy cập trái phép hoặc can thiệp vào an ninh, ổn định của Nền tảng.",
+              "Tái định danh cá nhân hoặc phân biệt đối xử với bất kỳ người hoặc nhóm nào.",
+              "Lách hạn ngạch hoặc biện pháp bảo mật, hoặc bán lại quyền truy cập khi không có sự cho phép bằng văn bản.",
+              "Dịch ngược, sao chép hoặc khai thác phần mềm, API hoặc tài liệu kỹ thuật của Nền tảng khi chưa được chấp thuận bằng văn bản.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "access",
+        title: "Điều 5. Truy cập, thông tin xác thực và tích hợp",
+        blocks: [
+          {
+            type: "p",
+            text: "Bạn chịu trách nhiệm tích hợp với Nền tảng theo đúng tài liệu kỹ thuật của chúng tôi, bảo vệ thông tin xác thực của mình và kiểm soát quyền truy cập của nhân viên hoặc bên thứ ba. Bạn phải thông báo ngay cho chúng tôi khi phát hiện dấu hiệu lộ thông tin xác thực, truy cập trái phép hoặc sử dụng bất thường. Chúng tôi có thể áp dụng rate limit hoặc biện pháp kỹ thuật khác để bảo vệ hạ tầng, và có thể thay đổi hoặc ngừng hỗ trợ một phần API để nâng cấp hoặc tuân thủ pháp luật, thông báo hợp lý khi thay đổi ảnh hưởng đến việc tích hợp của bạn.",
+          },
+        ],
+      },
+      {
+        id: "infrastructure",
+        title: "Điều 6. Hạ tầng do Khách hàng tự quản lý",
+        blocks: [
+          {
+            type: "p",
+            text: "Trường hợp bạn kết nối hạ tầng lưu trữ, kiểm soát phiên bản hoặc tính toán của riêng mình (Bring Your Own Cloud), bạn chịu trách nhiệm về tính bảo mật, quyền truy cập và an toàn dữ liệu trên hạ tầng đó. Trong giới hạn pháp luật cho phép, chúng tôi không chịu trách nhiệm đối với sự cố phát sinh từ hệ thống do bạn tự quản lý, mà không giới hạn các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng.",
+          },
+        ],
+      },
+      {
+        id: "availability",
+        title: "Điều 7. Độ ổn định và tính sẵn sàng của dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Chúng tôi nỗ lực duy trì hệ thống ổn định, an toàn và liên tục, nhưng không bảo đảm dịch vụ hoạt động 100% thời gian, không có lỗi hoặc gián đoạn, hoặc có thời gian phản hồi cố định. Gián đoạn có thể phát sinh do bảo trì, sự cố hạ tầng hoặc đối tác, lỗi Internet hoặc viễn thông, tấn công mạng, hoặc các sự kiện nằm ngoài khả năng kiểm soát hợp lý của chúng tôi.",
+          },
+        ],
+      },
+      {
+        id: "suspension",
+        title: "Điều 8. Tạm ngừng và chấm dứt dịch vụ",
+        blocks: [
+          {
+            type: "p",
+            text: "Chúng tôi có thể tạm ngừng, giới hạn hoặc chấm dứt dịch vụ khi các điều kiện này hoặc điều khoản sử dụng bị vi phạm, khi có dấu hiệu gian lận, lạm dụng hoặc rủi ro bảo mật, khi phí không được thanh toán đầy đủ, theo yêu cầu của cơ quan có thẩm quyền, hoặc khi cần bảo trì, nâng cấp hoặc bảo vệ hệ thống. Khi chấm dứt, chúng tôi có thể thu hồi thông tin xác thực và vô hiệu hóa quyền truy cập. Việc chấm dứt không làm chấm dứt các nghĩa vụ tài chính hoặc trách nhiệm pháp lý đã phát sinh trước thời điểm chấm dứt.",
+          },
+        ],
+      },
+      {
+        id: "force-majeure",
+        title: "Điều 9. Sự kiện bất khả kháng",
+        blocks: [
+          {
+            type: "p",
+            text: "Chúng tôi không chịu trách nhiệm đối với việc chậm hoặc không thể thực hiện nghĩa vụ do các sự kiện bất khả kháng, bao gồm thiên tai, hỏa hoạn, dịch bệnh, chiến tranh, mất điện diện rộng, tấn công mạng, lỗi Internet hoặc viễn thông, lỗi từ đối tác hạ tầng, hoặc quyết định của cơ quan nhà nước. Trong trường hợp này, chúng tôi sẽ nỗ lực khắc phục trong thời gian sớm nhất có thể.",
+          },
+        ],
+      },
+      {
+        id: "changes",
+        title: "Điều 10. Thay đổi các điều kiện",
+        blocks: [
+          {
+            type: "p",
+            text: "Chúng tôi có thể sửa đổi hoặc bổ sung các điều kiện này khi cần thiết để phù hợp với hoạt động, yêu cầu của đối tác hoặc quy định của pháp luật. Phiên bản cập nhật được công bố trên Nền tảng. Việc tiếp tục sử dụng dịch vụ sau khi thay đổi có hiệu lực đồng nghĩa với việc chấp nhận nội dung sửa đổi.",
+          },
+        ],
+      },
+      {
+        id: "effect",
+        title: "Điều 11. Hiệu lực",
+        blocks: [
+          {
+            type: "p",
+            text: "Các điều kiện này có hiệu lực kể từ ngày được công bố trên Nền tảng. Nếu bất kỳ điều khoản nào bị tuyên vô hiệu theo quyết định của cơ quan có thẩm quyền thì các điều khoản còn lại vẫn giữ nguyên hiệu lực. Bằng việc đăng ký tài khoản hoặc sử dụng bất kỳ sản phẩm, API hoặc dịch vụ nào, Khách hàng xác nhận đã đọc, hiểu và đồng ý tuân thủ toàn bộ các điều kiện hoặc hạn chế trong việc cung cấp dịch vụ này.",
+          },
+        ],
+      },
+    ],
+  },
+
+  rightsObligations: {
+    kicker: "Pháp lý",
+    title: "Quyền và nghĩa vụ các bên",
+    navTitle: "Quyền & nghĩa vụ",
+    description:
+      "Quyền và nghĩa vụ của Omicslab (đơn vị vận hành nền tảng) và của Khách hàng.",
+    sections: [
+      {
+        id: "provider",
+        title: "Điều 1. Quyền và nghĩa vụ của đơn vị vận hành nền tảng (Omicslab / Vieomics)",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Ban hành, công khai và tổ chức thực hiện điều kiện hoạt động, điều kiện giao dịch; xây dựng, công khai tiêu chuẩn dịch vụ và quy trình trên Nền tảng.",
+              "Thu phí dịch vụ theo [Chính sách giá](/policies/pricing) đã công khai và thông tin đầy đủ hoặc tóm tắt về hình thức khuyến mại (nếu có) cho người mua trước khi đặt hàng.",
+              "Bảo đảm vận hành an toàn, ổn định Nền tảng.",
+              "Tạm ngừng, giới hạn hoặc chấm dứt cung cấp dịch vụ theo các trường hợp nêu tại [Chính sách về phương thức cung cấp dịch vụ, chấm dứt dịch vụ và hoàn tiền](/policies/service-provision); thu hồi thông tin xác thực và vô hiệu hóa quyền truy cập khi chấm dứt.",
+              "Áp dụng các biện pháp bảo vệ bí mật kinh doanh và dữ liệu cá nhân của người tiêu dùng theo [Chính sách bảo mật](/privacy) đã công khai.",
+              "Tiếp nhận, giải quyết yêu cầu, phản ánh, khiếu nại từ người sử dụng.",
+              "Giám sát, ngăn chặn hành vi vi phạm pháp luật; phối hợp và cung cấp thông tin, dữ liệu theo yêu cầu của cơ quan nhà nước có thẩm quyền.",
+              "Cung cấp thông tin chính xác, đầy đủ; bảo đảm chất lượng dịch vụ; thực hiện đầy đủ nghĩa vụ cung cấp dịch vụ, đổi trả, hoàn tiền; không lợi dụng nền tảng để kinh doanh ngành, nghề cấm đầu tư kinh doanh, hàng giả, hàng xâm phạm quyền sở hữu trí tuệ và các hành vi vi phạm pháp luật khác.",
+              "Thực hiện nghĩa vụ tài chính với Nhà nước; bảo vệ dữ liệu của người mua; bảo vệ thông tin của người tiêu dùng; phối hợp với cơ quan nhà nước có thẩm quyền trong việc xử lý vi phạm pháp luật.",
+            ],
           },
         ],
       },
       {
         id: "customer",
-        title: "2. Trách nhiệm Bắt buộc của Khách hàng",
+        title: "Điều 2. Quyền và nghĩa vụ của Khách hàng",
         blocks: [
           {
             type: "ul",
             items: [
-              "**Bảo mật tài khoản:** Bảo vệ thông tin đăng nhập và bắt buộc áp dụng các biện pháp xác thực mạnh (MFA/2FA) trong tổ chức.",
-              "**Tuân thủ pháp lý & Đạo đức:** Đạt được đầy đủ chấp thuận từ Hội đồng Đạo đức (IRB), sự đồng ý tự nguyện của chủ thể dữ liệu (Informed Consent) và các quyền hợp pháp cần thiết trước khi tải lên dữ liệu bộ gen hoặc dữ liệu sức khỏe con người.",
-              "**Phân quyền dữ liệu:** Chủ động phân loại dữ liệu và thiết lập quyền truy cập phù hợp cho từng Workspace cũng như tài nguyên lưu trữ.",
-              "**Sao lưu & Kiểm chứng:** Tự duy trì bản sao lưu dự phòng độc lập và tự chịu trách nhiệm kiểm chứng kết quả phân tích theo chính sách quản trị dữ liệu nghiên cứu của tổ chức mình.",
+              "Được bảo đảm quyền lợi của người tiêu dùng; được cung cấp thông tin đầy đủ, chính xác về dịch vụ và đơn vị cung cấp.",
+              "Được lựa chọn dịch vụ, phương thức thanh toán; được bảo vệ dữ liệu cá nhân; được giải quyết phản ánh, yêu cầu, khiếu nại theo quy định.",
+              "Cung cấp thông tin cần thiết, chính xác; thanh toán đầy đủ, đúng hạn.",
+              "Tuân thủ quy định pháp luật, điều kiện hoạt động và điều kiện giao dịch của Nền tảng; không lợi dụng Nền tảng để thực hiện hành vi vi phạm pháp luật.",
             ],
+          },
+        ],
+      },
+    ],
+  },
+
+  complaints: {
+    kicker: "Pháp lý",
+    title: "Phương thức tiếp nhận và giải quyết phản ánh, yêu cầu, khiếu nại",
+    navTitle: "Phản ánh & khiếu nại",
+    description:
+      "Cách gửi phản ánh, yêu cầu, khiếu nại và quy trình, thời hạn giải quyết.",
+    sections: [
+      {
+        id: "methods",
+        title: "Điều 1. Các phương thức tiếp nhận",
+        blocks: [
+          {
+            type: "p",
+            text: "Mọi yêu cầu hỗ trợ, phản ánh hoặc khiếu nại liên quan đến dịch vụ, vui lòng liên hệ với chúng tôi qua:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Biểu mẫu trực tuyến tại trang [Liên hệ](/contact).",
+              "Email **contact@omicslab.io** — vui lòng ghi rõ “Phản ánh / Khiếu nại” ở tiêu đề email.",
+              "Đầu mối bảo vệ dữ liệu cá nhân (DPO) **Nguyễn Tấn Thanh Giang** — **giangnguyen@omicslab.io** đối với khiếu nại liên quan đến dữ liệu cá nhân.",
+              "Gửi bưu điện hoặc trực tiếp tại: CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS, Số 10 Sông Thao, Phường Tân Sơn Hòa, Thành phố Hồ Chí Minh, Việt Nam.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "process",
+        title: "Điều 2. Trình tự, thủ tục tiếp nhận và xử lý",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "**Bước 1 — Tiếp nhận:** bộ phận chăm sóc khách hàng tiếp nhận khiếu nại qua các kênh trên và phản hồi xác nhận đã nhận.",
+              "**Bước 2 — Phân tích và xác minh:** khiếu nại được chuyển đến các bộ phận chuyên môn có liên quan để kiểm tra, xác minh nguyên nhân và mức độ sự việc.",
+              "**Bước 3 — Đề xuất giải pháp và phản hồi:** dựa trên kết quả xác minh, chúng tôi đưa ra phương án giải quyết và liên hệ trực tiếp với Khách hàng để thống nhất.",
+              "**Bước 4 — Thực hiện và đóng khiếu nại:** nếu Khách hàng đồng ý, chúng tôi thực hiện phương án đã thống nhất và thông báo đóng khiếu nại.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "timelines",
+        title: "Điều 3. Thời hạn phản hồi và giải quyết",
+        blocks: [
+          {
+            type: "p",
+            text: "Chúng tôi phản hồi các phản ánh, yêu cầu, khiếu nại trong vòng **03 ngày làm việc** kể từ thời điểm nhận được. Tùy theo tính chất, mức độ phức tạp và nội dung của từng khiếu nại, chúng tôi dự kiến giải quyết trong thời hạn **07 ngày làm việc** kể từ ngày xác nhận tiếp nhận đầy đủ thông tin, tài liệu cần thiết từ Khách hàng.",
+          },
+          {
+            type: "p",
+            text: "Đối với các vụ việc cần xác minh thêm, đối soát dữ liệu hoặc phối hợp với đối tác hoặc bên thứ ba có liên quan, thời hạn giải quyết có thể kéo dài hơn. Trong trường hợp này, chúng tôi thông báo cho Khách hàng về tình trạng xử lý, nguyên nhân và thời gian dự kiến hoàn tất.",
+          },
+        ],
+      },
+      {
+        id: "tools",
+        title: "Điều 4. Các biện pháp, công cụ hỗ trợ giải quyết",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "**Trao đổi, làm rõ với Khách hàng:** chúng tôi có thể trao đổi qua các kênh trên để làm rõ nội dung vụ việc, nguyên nhân và phương án xử lý.",
+              "**Kiểm tra và đối soát thông tin:** chúng tôi có thể kiểm tra thông tin tài khoản, giao dịch, lịch sử sử dụng, dữ liệu trên hệ thống và tài liệu do Khách hàng cung cấp.",
+              "**Yêu cầu bổ sung thông tin, tài liệu:** khi cần thiết, chúng tôi có thể yêu cầu Khách hàng cung cấp thêm thông tin, hình ảnh, chứng từ hoặc tài liệu liên quan.",
+              "**Phối hợp với các bên liên quan:** khi vụ việc liên quan đến đối tác, nhà cung cấp hạ tầng hoặc bên thứ ba khác, chúng tôi có thể phối hợp để kiểm tra, đối soát và xác minh.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "escalation",
+        title: "Điều 5. Khiếu nại lên cấp cao hơn",
+        blocks: [
+          {
+            type: "p",
+            text: "Nếu không đồng ý với kết quả, bạn có thể yêu cầu xem xét lại hoặc khởi kiện theo quy định của pháp luật. Người tiêu dùng có thể gửi phản ánh tới cơ quan quản lý nhà nước về bảo vệ quyền lợi người tiêu dùng. Không nội dung nào trong chính sách này làm hạn chế các quyền của người tiêu dùng theo quy định của pháp luật.",
+          },
+        ],
+      },
+    ],
+  },
+
+  support: {
+    kicker: "Pháp lý",
+    title: "Hình thức hỗ trợ trực tuyến",
+    navTitle: "Hỗ trợ trực tuyến",
+    description:
+      "Các kênh trực tuyến mà Omicslab hỗ trợ người dùng.",
+    sections: [
+      {
+        id: "channels",
+        title: "Điều 1. Các kênh hỗ trợ",
+        blocks: [
+          {
+            type: "p",
+            text: "Nền tảng cung cấp các hình thức hỗ trợ trực tuyến sau:",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Biểu mẫu liên hệ trực tuyến:** tại trang [Liên hệ](/contact).",
+              "**Email hỗ trợ:** **contact@omicslab.io**.",
+              "**Tài liệu tự phục vụ:** hướng dẫn, câu hỏi thường gặp và tài liệu kỹ thuật khi được cung cấp.",
+              "**Hỗ trợ trong ứng dụng:** kênh trò chuyện hoặc hỗ trợ trong ứng dụng khi được cung cấp cho gói của bạn.",
+              "**Pháp lý và dữ liệu cá nhân:** liên hệ DPO — **giangnguyen@omicslab.io**.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "hours",
+        title: "Điều 2. Thời gian và phản hồi hỗ trợ",
+        blocks: [
+          {
+            type: "p",
+            text: "Thời gian hỗ trợ là trong giờ làm việc (giờ hành chính), trừ ngày lễ. Yêu cầu ngoài giờ được xử lý vào ngày làm việc kế tiếp. Chúng tôi thường xác nhận các yêu cầu mới trong vòng **24 giờ làm việc**.",
           },
         ],
       },

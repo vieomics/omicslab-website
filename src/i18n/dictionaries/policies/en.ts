@@ -38,6 +38,14 @@ export type PolicyPage = {
   sections: PolicySection[];
 };
 
+/** Landing content for the /policies index page. */
+export type PolicyHub = {
+  kicker: string;
+  title: string;
+  description: string;
+  intro: string;
+};
+
 export type Policies = {
   shared: {
     lastUpdatedLabel: string;
@@ -45,12 +53,21 @@ export type Policies = {
     tocLabel: string;
     policiesLabel: string;
   };
+  /** /policies index page. */
+  hub: PolicyHub;
   privacy: PolicyPage;
   terms: PolicyPage;
-  security: PolicyPage;
-  compliance: PolicyPage;
-  responsibility: PolicyPage;
+  pricing: PolicyPage;
+  payment: PolicyPage;
+  serviceProvision: PolicyPage;
+  conditions: PolicyPage;
+  rightsObligations: PolicyPage;
+  complaints: PolicyPage;
+  support: PolicyPage;
 };
+
+/** Keys of the individual policy pages (excludes `shared` and `hub`). */
+export type PolicyPageKey = Exclude<keyof Policies, "shared" | "hub">;
 
 export const policiesEn: Policies = {
   shared: {
@@ -66,6 +83,8 @@ export const policiesEn: Policies = {
     navTitle: "Privacy Policy",
     description:
       "Welcome to the Omicslab bioinformatics data analysis platform, a product operated by VIEOMICS COMPANY LIMITED. We are committed to protecting your personal data and the data you process on the Platform in accordance with Vietnamese law (the Personal Data Protection Law No. 91/2025/QH15, Decree No. 356/2025/ND-CP and the Cybersecurity Law) and international security standards.",
+    notice:
+      "The public Omicslab Platform (cloud) does not accept and does not process non-public sensitive personal data of individuals in Vietnam, including human genomic and health-related data. For such data, the customer must contact us for a separate, contracted on-premise deployment: we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team how to set it up, while the customer itself runs, analyses, stores and manages the data. Vieomics does not process this data and acts as neither Data Controller nor Data Processor for it. Exception: data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
     sections: [
       {
         id: "controller",
@@ -101,7 +120,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "**Personal data that does not belong to the user themselves:** you may upload other people’s personal data — for example patient data for the laboratory, hospital or research institute you represent. In that case you are the **Data Controller** for that data and are responsible for the lawful basis of collection, consent, pseudonymisation and lawful handling; Vieomics acts solely as the **Data Processor** on your instructions (see Section 2).",
+            text: "**Personal data that does not belong to the user themselves:** you may upload other people’s personal data on the public Platform only where it is **basic personal data**; in that case you are the **Data Controller** and are responsible for the lawful basis of collection, consent and lawful handling, and Vieomics acts solely as the **Data Processor** on your instructions (see Section 2). **Sensitive personal data** (including patient, health and genomic data) must not be uploaded to the public Platform — it is handled only through the on-premise deployment described in this Section, except data that has been lawfully published or de-identified.",
           },
           {
             type: "label",
@@ -117,11 +136,15 @@ export const policiesEn: Policies = {
           },
           {
             type: "label",
-            text: "Infrastructure for Storage and Processing of Human / Health-Related Data (Project-Specific)",
+            text: "Scope: Human / Health-Related Data (Not Processed on the Public Platform)",
           },
           {
             type: "p",
-            text: "Where a customer uploads or processes bioinformatics data derived from human samples (for example NIPT, WES, WGS, human RNA-Seq or genetic records), such workloads are handled on a **project-specific / enterprise-specific** basis. Any such processing may require separate agreements, technical controls, data-processing terms and compliance review before onboarding. For sensitive projects, data location, infrastructure, access controls and processing arrangements may be agreed separately; depending on the project, these may involve infrastructure managed by Vieomics, by the customer, or by a designated partner, in each case subject to the safeguards and contractual protections required by applicable law.",
+            text: "The public Omicslab Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic records). You must not upload such data to the public Platform. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+          },
+          {
+            type: "p",
+            text: "To process sensitive data, the customer must [contact us](/contact) to arrange an **on-premise deployment under a separate agreement**. In this model, Omicslab only delivers and deploys the Platform software onto the customer’s own infrastructure and instructs the customer’s team how to set it up; the customer itself runs the Platform and analyses, stores and manages the data on its own infrastructure. Vieomics does not process the data and acts as neither Data Controller nor Data Processor for it, and the customer is solely responsible — including any personal data processing impact assessment required by law.",
           },
           {
             type: "label",
@@ -130,6 +153,14 @@ export const policiesEn: Policies = {
           {
             type: "p",
             text: "Where you choose to connect or integrate your own storage account or analysis servers (personal API credentials) into the Omicslab Platform, you are responsible for the security, access permissions and safety of the data on that infrastructure. To the extent permitted by applicable law, we are not liable for incidents arising from systems you manage. This does not affect our own obligations under applicable law or under any separate agreement with you.",
+          },
+          {
+            type: "label",
+            text: "Deployment models",
+          },
+          {
+            type: "p",
+            text: "Omicslab builds a trusted operating layer for scientific computing, with two deployment models: **Platform-Managed** (infrastructure managed by Omicslab) and **BYO — Bring Your Own Infrastructure** (you connect your own storage, version control and compute resources).",
           },
         ],
       },
@@ -152,16 +183,7 @@ export const policiesEn: Policies = {
                 text: "**Bioinformatics analysis data (uploaded to or processed on the system):**",
                 children: [
                   "**Non-human data (microorganisms, plants, animals, environmental samples):** generally classified as scientific research data. In typical cases, and provided it does not contain personal data, this data is not personal data under the Personal Data Protection Law No. 91/2025/QH15 and Decree No. 356/2025/ND-CP. Users may upload, store and analyse this data without applying personal-data privacy procedures, unless it contains personal data.",
-                  {
-                    text: "**Human / health-related data (bioinformatics data derived from human samples):** where a customer chooses to upload or process human genomic or health-related data — for example non-invasive prenatal testing (NIPT) results, whole exome sequencing (WES), whole genome sequencing (WGS), RNA sequencing of human samples (RNA-Seq), or patients’ genetic and clinical genomic records — that data may constitute **sensitive personal data** under the Personal Data Protection Law No. 91/2025/QH15 and Decree No. 356/2025/ND-CP. Vieomics does not solicit this type of data from the general public, and such workloads are handled on a **project-specific / enterprise-specific** basis, subject to separate agreements, technical controls and compliance review. We do not seek to identify individuals and do not require access to the real-world identity behind a Sample ID. Where such data is processed:",
-                    children: [
-                      "**Pseudonymous identifiers:** customers are expected to attach only a technical identifier (Sample ID) and to avoid including direct identifiers — such as full name, national ID/passport number, date of birth or medical record number — in file names, sample metadata or analysis parameters unless it is necessary for a lawful purpose.",
-                      "**Not automatically anonymous:** data labelled with a Sample ID is **pseudonymised, not necessarily anonymous**. A technical Sample ID does not by itself make a genomic dataset fully anonymous, because the data may still be linkable to an individual — for example through a customer’s mapping information or through the data itself. We do not describe such datasets as fully anonymous.",
-                      "**Consent and lawful basis:** the customer (laboratory, hospital, research institute or other organisation) is responsible for ensuring that it has a valid lawful basis and, where required, the necessary consents and ethical approvals before human genomic or health-related data is uploaded or analysed.",
-                      "**Mapping information:** any key that links a Sample ID to a person’s real-world identity, if one exists, should remain under the customer’s control and is not required by us. Where this separation is technically configured, customer mapping keys are kept separate from the analysis environment, and we do not use them to identify individuals. This does not limit our own obligations under applicable law or any separate agreement.",
-                      "**Additional requirements:** human genomic or health-related data projects are **project-specific** and may require separate data-processing terms, technical controls, regional configuration and compliance review before onboarding.",
-                    ],
-                  },
+                  "**Human / health-related data:** the public Platform **does not accept and does not process non-public sensitive personal data** of individuals in Vietnam, including human genomic and health-related data (for example NIPT, WES, WGS, human RNA-Seq or patients’ genetic and clinical records). Such data must not be uploaded to the public Platform. For sensitive data, the customer must [contact us](/contact) to arrange an on-premise deployment under a separate agreement, in which we only deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team on setup, and the customer itself runs the Platform and analyses, stores and manages the data. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
                 ],
               },
             ],
@@ -259,11 +281,13 @@ export const policiesEn: Policies = {
               "Workspace isolation, and separation of customer mapping keys from the analysis environment where technically configured.",
               "Security monitoring and incident detection across platform-managed resources, together with regular security reviews and vulnerability assessments.",
               "Only assigned personnel bound by strict confidentiality obligations may access technical support information, and only upon your written request.",
+              "**Credential handling:** credentials used to launch jobs are encrypted and transferred securely to the execution environment; they are never shown to end users or stored in plain text.",
+              "**Architecture separation:** the control plane (job orchestration, credentials, quotas) is completely separate from the data plane.",
             ],
           },
           {
             type: "p",
-            text: "These measures are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform is ready for stricter requirements in the future; as of the date of this Policy, Omicslab **holds no certification** under any of those frameworks.",
+            text: "These measures are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform is ready for stricter requirements in the future; as of the date of this Policy, Omicslab **holds no certification** under any of those frameworks. Administrative penalties for cybersecurity and personal data protection violations are set out in Decree No. 330/2026/ND-CP, in force since 19 August 2026.",
           },
           {
             type: "p",
@@ -271,7 +295,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "See the full standards on our [Security & Compliance](/security) page.",
+            text: "The Platform’s security commitments and the allocation of responsibility between the parties are set out in Section 12 of this Policy.",
           },
         ],
       },
@@ -326,19 +350,27 @@ export const policiesEn: Policies = {
       },
       {
         id: "transfers",
-        title: "10. Storage and International Data Transfers",
+        title: "10. Storage and Data Location",
         blocks: [
           {
             type: "p",
-            text: "Data may be stored and processed in the geographic region configured for the applicable organization or service. For Vietnam-region deployments, data is intended to be stored and processed on infrastructure located in Vietnam, subject to the applicable service configuration and contractual terms.",
+            text: "Vieomics currently operates the Omicslab Platform only in Vietnam, not abroad. For the Vietnam region (default), data and compute provided by Vieomics are stored and processed in Vietnam.",
           },
           {
             type: "p",
-            text: "Where services or infrastructure partners are located outside Vietnam, data may be stored and processed outside Vietnam depending on the region and configuration you select. Where personal data is transferred abroad and Vietnamese law requires it, we complete the applicable impact-assessment and transfer procedures (or rely on another lawful basis) and apply the safeguards required by applicable law and any separate agreement.",
+            text: "The Platform also supports a global region for Vietnamese people or persons living in Vietnam, and multinational collaboration; in that region, **data and compute remain located in Vietnam**, and users simply access from abroad. Because data and compute provided by Vieomics are located in Vietnam, no transfer of personal data abroad arises in our current operation.",
+          },
+          {
+            type: "table",
+            head: ["Region", "Instance", "Framework", "Data residency"],
+            rows: [
+              ["Vietnam (default)", "platform.omicslab.vn", "PDPL (Law 91/2025 + Decree 356/2025)", "Data and compute provided by Vieomics are stored in Vietnam"],
+              ["Global", "platform.omicslab.vn", "PDPL for personal data in Vietnam", "Still in Vietnam; for Vietnamese people or residents of Vietnam, and multinational collaboration"],
+            ],
           },
           {
             type: "p",
-            text: "Customers who require a specific data location, infrastructure arrangement or additional controls for sensitive projects may agree these separately with us; the contact details in Section 12 apply.",
+            text: "Customers that need to process non-public sensitive personal data must arrange a separate, contracted on-premise deployment as described in Section 1; publicly available or lawfully de-identified data is treated as public data. The contact details in Section 12 apply.",
           },
           {
             type: "p",
@@ -369,8 +401,55 @@ export const policiesEn: Policies = {
         ],
       },
       {
+        id: "responsibility",
+        title: "12. Allocation of Responsibility",
+        blocks: [
+          {
+            type: "p",
+            text: "Security is a shared responsibility. The table below shows who controls each area for each deployment model.",
+          },
+          {
+            type: "table",
+            head: [
+              "Control / Infrastructure",
+              "Tier 1 (self-managed infrastructure)",
+              "Tier 2 (platform-managed — Marketplace)",
+            ],
+            rows: [
+              ["Data storage", "Your own cloud / object storage infrastructure", "Encrypted AES-256 storage on the platform (partitioned per workspace)"],
+              ["Version control", "Your own source repository (GitHub)", "Source repositories integrated in the Marketplace"],
+              ["Compute infrastructure", "Your own HPC / cloud cluster", "Compute infrastructure managed directly by Omicslab"],
+              ["Infrastructure access", "Managed by the customer", "Managed by the platform"],
+              ["Credentials", "Managed by the customer", "Secured by the platform (never shown in plain text)"],
+              ["Infrastructure compliance", "Customer’s responsibility", "Guaranteed by the platform"],
+            ],
+          },
+          { type: "label", text: "Platform security commitments" },
+          {
+            type: "ul",
+            items: [
+              "**Architecture separation:** strict separation of the control plane from the customer’s data plane.",
+              "**Least privilege:** short-lived credentials with tightly scoped access for every cross-boundary connection.",
+              "**Environment isolation:** data isolated per workspace, with role-based access control (RBAC).",
+              "**Audit transparency:** immutable audit logs maintained to support security review.",
+              "**Vulnerability management:** security incident and misconfiguration reports are received and patched promptly.",
+            ],
+          },
+          { type: "label", text: "Mandatory customer responsibilities" },
+          {
+            type: "ul",
+            items: [
+              "**Account security:** protect your login credentials and enforce strong authentication (MFA/2FA) across your organization.",
+              "**Legal and ethical compliance:** obtain full approval from an ethics board (IRB), voluntary informed consent from data subjects and any other lawful rights required before processing human genomic or health data.",
+              "**Data access control:** classify your data and set appropriate access permissions for each workspace and storage resource.",
+              "**Backup and validation:** maintain independent backups and take responsibility for validating analysis outputs under your organization’s own research data management policy.",
+            ],
+          },
+        ],
+      },
+      {
         id: "contact",
-        title: "12. Contact",
+        title: "13. Contact",
         blocks: [
           {
             type: "p",
@@ -428,14 +507,22 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "The Platform may be used to store, process and analyse **sensitive data**, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law (with the GDPR and HIPAA as additional reference frameworks the Platform designs toward). Because of the sensitivity of this data, you agree that:",
+            text: "The public Platform is **not intended for non-public sensitive personal data** and does not accept or process it. You must not upload non-public sensitive personal data of individuals in Vietnam to the public Platform, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law. **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+          },
+          {
+            type: "p",
+            text: "To process sensitive data, you must [contact us](/contact) to arrange an **on-premise deployment under a separate agreement**. We only deliver and deploy the Platform software onto your own infrastructure and instruct your team how to set it up; you run the Platform and analyse, store and manage the data yourself. Vieomics does not process this data and acts as neither Data Controller nor Data Processor for it — you are solely responsible, including any personal data processing impact assessment required by law.",
+          },
+          {
+            type: "p",
+            text: "Where you operate the Platform in your own environment, you agree that:",
           },
           {
             type: "ul",
             items: [
-              "You have obtained all required ethical approvals, informed consents and authorisations needed to process the data you upload, in accordance with applicable law and your institution’s review boards.",
-              "You will not upload data collected from individuals who have not consented to its processing for bioinformatics research, except where permitted by law.",
-              "You remain the data controller (or an authorised processor under your own agreements) for data you upload, and you are responsible for ensuring your use complies with all applicable data protection legislation, including the Law on Personal Data Protection (Law No. 91/2025/QH15) and, where applicable, the GDPR or HIPAA.",
+              "You have obtained all required ethical approvals, informed consents and authorisations needed to process the data, in accordance with applicable law and your institution’s review boards.",
+              "You will not process data collected from individuals who have not consented to its processing for bioinformatics research, except where permitted by law.",
+              "You remain the data controller (or an authorised processor under your own agreements), and you are responsible for ensuring your use complies with all applicable data protection legislation, including the Law on Personal Data Protection (Law No. 91/2025/QH15) and, where applicable, the GDPR or HIPAA.",
               "You will not use the Platform to store unlawful content or data whose processing would violate the rights of any person.",
             ],
           },
@@ -447,7 +534,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account. You agree to notify us immediately of any unauthorised access or suspected breach. We employ industry-standard security controls — including encryption in transit and at rest, access control and audit logging — but no system is impenetrable, and you must take reasonable steps to protect your own credentials. Details are published on our [Security & Compliance](/security) page.",
+            text: "You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account. You agree to notify us immediately of any unauthorised access or suspected breach. We employ industry-standard security controls — including encryption in transit and at rest, access control and audit logging — but no system is impenetrable, and you must take reasonable steps to protect your own credentials. Details are published in our [E-commerce Policies](/policies).",
           },
         ],
       },
@@ -582,264 +669,599 @@ export const policiesEn: Policies = {
     ],
   },
 
-  security: {
-    kicker: "Security & Compliance",
-    title: "Security & Compliance",
-    navTitle: "Security & Compliance",
+  hub: {
+    kicker: "Legal",
+    title: "Policies",
     description:
-      "Two deployment models, the security controls we apply, and how responsibility is shared between Omicslab and the customer.",
-    sections: [
-      {
-        id: "trust-model",
-        title: "Trust Model & Security",
-        blocks: [
-          {
-            type: "p",
-            text: "Omicslab builds a trusted operating layer for scientific computing, tuned for sensitive omics and health-data workloads. We offer two flexible deployment models:",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Bring Your Own Infrastructure (BYO):** connect your own existing storage, version control and compute resources — keeping your data entirely under your internal control.",
-              "**Platform-Managed:** deployed directly on infrastructure managed by Omicslab, with a full commitment to data-safety standards.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "compliance",
-        title: "1. Legal Compliance & Data Security",
-        blocks: [
-          {
-            type: "p",
-            text: "Omicslab operates with regional deployments and applies Vietnamese personal data protection law to its Vietnam operation — in particular the Personal Data Protection Law No. 91/2025/QH15 and Decree No. 356/2025/ND-CP. The location of storage and processing depends on the region configured for the applicable organization or service.",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Storage & processing:** data is stored and processed in the geographic region configured for the applicable organization or service. Vietnam-region deployments are intended to use infrastructure located in Vietnam, subject to the applicable service configuration and contractual terms.",
-              "**Cross-border transfer:** where data is processed in a region outside Vietnam, transfers are handled in accordance with applicable law and any separate agreement.",
-              "**Separation of Control & Data:** the control plane (job orchestration, credentials, quotas) is completely separate from the data plane. Data flows only between the storage endpoints and compute environments you designate.",
-              "**Privacy policies:** the detailed rules on data processing are published in our [Terms of Service](/terms) and [Privacy Policy](/privacy).",
-            ],
-          },
-        ],
-      },
-      {
-        id: "controls",
-        title: "2. Security Controls",
-        blocks: [
-          {
-            type: "ul",
-            items: [
-              "**Encryption:** TLS applied consistently to data in transit and AES-256 to data at rest, across all platform-managed resources.",
-              "**Access Control & Audit:** role-based access control (RBAC), strict per-workspace isolation and complete automatic audit logging of every operation that touches the data plane.",
-              "**Credential Handling:** credentials used to launch jobs are encrypted and transferred securely to the execution environment. They are never shown to end users or stored in plain text.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "responsibility",
-        title: "3. Responsibility by Deployment Model",
-        blocks: [
-          {
-            type: "p",
-            text: "The level of security assurance depends on the deployment model you choose:",
-          },
-          {
-            type: "ul",
-            items: [
-              "**Marketplace (highest assurance):** applies to storage and compute resources provisioned by Omicslab administrators (superusers) from strictly vetted providers. Omicslab is responsible for all security measures and compliance commitments on this infrastructure.",
-              "**Bring Your Own (BYO):** when you connect your own storage and compute infrastructure, the risk and management responsibility are yours — including choosing the provider, configuring the system and setting up the corresponding safeguards.",
-            ],
-          },
-        ],
-      },
-      {
-        id: "more",
-        title: "Learn More",
-        blocks: [
-          {
-            type: "ul",
-            items: [
-              "The [Compliance](/security/compliance) page: details of our security standards, operating framework and server locations.",
-              "The [Shared Responsibility](/security/responsibility) page: a detailed matrix of which party controls each security measure for each deployment model.",
-            ],
-          },
-        ],
-      },
-    ],
+      "The policies that govern the Omicslab Platform — including the disclosures required of an e-commerce service website under Vietnam's Ministry of Industry and Trade regulations (Decree No. 52/2013/ND-CP, as amended by Decree No. 85/2021/ND-CP).",
+    intro:
+      "The Omicslab Platform is a bioinformatics data analysis service operated by VIEOMICS COMPANY LIMITED. The documents below form our policy set and apply together.",
   },
-  compliance: {
-    kicker: "Security & Compliance",
-    title: "Compliance",
-    navTitle: "Compliance",
+
+  pricing: {
+    kicker: "Legal",
+    title: "Pricing Policy",
+    navTitle: "Pricing Policy",
     description:
-      "Where the platform is hosted, the law it follows, and the compliance posture for the Vietnam operation.",
+      "How Omicslab sets, lists and changes the prices of the Platform's services.",
     sections: [
       {
-        id: "hosting",
-        title: "Data Hosting",
+        id: "price-basis",
+        title: "Article 1. Service prices and currency",
         blocks: [
           {
             type: "p",
-            text: "The Omicslab Platform supports regional deployment. For the **Vietnam** region, customer data — including research, biological or genomic data uploaded to the platform — is stored and processed on infrastructure located in Vietnam, subject to the applicable service configuration and contractual terms. Other regions may use infrastructure outside Vietnam.",
+            text: "Some products or features of the Platform are subject to service fees. Fees are published on the Platform's pricing page, in the Dashboard, or notified directly to the customer.",
           },
           {
-            type: "p",
-            text: "The platform is operated in accordance with **Vietnamese civil law** and the **Law on Personal Data Protection (Law No. 91/2025/QH15)** together with **Decree No. 356/2025/ND-CP** (which replaced Decree No. 13/2023/ND-CP), in force since 1 January 2026.",
-          },
-        ],
-      },
-      {
-        id: "data-residency",
-        title: "Data Residency",
-        blocks: [
-          {
-            type: "p",
-            text: "Data residency depends on the region configured for the applicable organization or service. For Vietnam-region deployments, data is intended to remain in Vietnam; where a service is configured in another region, data may be stored and processed outside Vietnam, and cross-border transfer requirements may apply. Regions are selected per organization or service; the table below shows the default Vietnam region.",
-          },
-          {
-            type: "table",
-            head: ["Region", "Instance", "Framework", "Data residency"],
-            rows: [
-              ["Vietnam", "vn.omicslab.io", "PDPL (Law 91/2025 + Decree 356/2025)", "Data intended to remain in Vietnam"],
+            type: "ul",
+            items: [
+              "**Subscription:** charged per billing cycle, normally monthly, according to the plan selected.",
+              "**Marketplace storage (pay-as-you-go):** charged on a usage basis in monthly cycles, tied to the subscription in force.",
+              "**Prepaid top-up:** prepaid credit held in your organization wallet and used to pay for services on the Platform.",
             ],
           },
           {
             type: "p",
-            text: "Our legal posture applies to the current Vietnam operation. If the platform is expanded to operate in other jurisdictions in the future, this page will be updated to reflect the applicable law and hosting arrangements for that operation.",
+            text: "Prices are expressed in **Vietnamese Dong (VND)** and are inclusive or exclusive of VAT as stated at checkout or on the invoice. Apart from the listed fee, no other charge arises from the sale of the service. Charges for infrastructure you connect yourself (Bring Your Own Cloud) are billed by your own provider and are not part of our prices.",
           },
         ],
       },
       {
-        id: "framework",
-        title: "The Law We Follow",
+        id: "quota",
+        title: "Article 2. Usage quotas and overage",
         blocks: [
           {
             type: "p",
-            text: "The platform is operated as a legal and data-processing service governed by Vietnamese law. The primary legal framework is the Law on Personal Data Protection (Law No. 91/2025/QH15) together with Decree No. 356/2025/ND-CP (which replaced Decree No. 13/2023/ND-CP), governing how personal data is collected, processed and protected in Vietnam, including consent requirements, data-subject rights and breach notifications.",
+            text: "Each plan includes usage quotas (storage, compute and concurrent jobs). If usage exceeds the subscribed quota in a cycle, the overage is charged at the effective unit price of the plan and deducted from the customer's prepaid balance without interrupting service. Customers should maintain a balance consistent with actual usage so the service runs without interruption.",
           },
         ],
       },
       {
-        id: "posture",
-        title: "Compliance Posture",
+        id: "changes",
+        title: "Article 3. Changes to prices and promotions",
         blocks: [
           {
             type: "p",
-            text: "We maintain our compliance posture through technical and organisational measures that implement the requirements of Vietnamese law — encryption in transit and at rest, access control, audit logging and a documented approach to handling personal data.",
+            text: "Fees may be adjusted from time to time, or promotional programmes may apply. Where a change is made, we publish it on the Platform at least **20 days** before it takes effect. If the customer continues to use the service after the new fee takes effect, it is treated as acceptance of the adjusted fee.",
           },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Article 4. Refunds",
+        blocks: [
           {
             type: "p",
-            text: "Administrative penalties for cybersecurity and personal data protection violations are set out in Decree No. 330/2026/ND-CP, in force since 19 August 2026. This posture reflects the current Vietnam operation only. Should the platform expand internationally, the compliance framework and any relevant certificates will be updated and published on this page.",
-          },
-          {
-            type: "p",
-            text: "Omicslab’s systems, controls and processes are **designed toward** the GDPR (EU) and HIPAA (US) so that the platform can serve regulated workloads in those jurisdictions in the future. As of the date of this page, Omicslab **has not been certified, audited or attested** under GDPR, HIPAA or any other international certification scheme — the statements here describe design intent and compliance with Vietnamese law only. Any certification obtained will be published on this page.",
-          },
-          {
-            type: "p",
-            text: "We do not warrant that the Platform complies with every law that may apply to your particular use. You remain responsible for determining the appropriateness of using the Platform for your workloads and for your own compliance. See the [Privacy Policy](/privacy) for the full data-protection commitments.",
+            text: "Unless otherwise required by law, fees already paid are **non-refundable**. Refunds on termination are governed by our [Service Provision, Termination and Refund Policy](/policies/service-provision).",
           },
         ],
       },
     ],
   },
 
-  responsibility: {
-    kicker: "Security & Compliance",
-    title: "Responsibility",
-    navTitle: "Responsibility",
+  payment: {
+    kicker: "Legal",
+    title: "Payment Policy",
+    navTitle: "Payment Policy",
     description:
-      "Security is a shared responsibility. This page sets out who owns each control in each deployment model, and what we ask of you.",
+      "How to register online for Omicslab services and how payment works.",
     sections: [
       {
-        id: "matrix",
-        title: "Shared Responsibility Matrix",
+        id: "steps",
+        title: "Article 1. Online registration and payment steps",
         blocks: [
-          {
-            type: "table",
-            head: [
-              "Control / Infrastructure",
-              "Tier 1 (self-managed infrastructure)",
-              "Tier 2 (platform-managed — Marketplace)",
-            ],
-            rows: [
-              [
-                "Data storage",
-                "Your own cloud / object storage infrastructure",
-                "Encrypted AES-256 storage on the platform (partitioned per workspace)",
-              ],
-              [
-                "Version control",
-                "Your own source repository (GitHub)",
-                "Source repositories integrated in the Marketplace",
-              ],
-              [
-                "Compute infrastructure",
-                "Your own HPC / cloud cluster",
-                "Compute infrastructure managed directly by Omicslab",
-              ],
-              ["Infrastructure access", "Managed by the customer", "Managed by the platform"],
-              [
-                "Credentials",
-                "Managed by the customer",
-                "Secured by the platform (never shown in plain text)",
-              ],
-              [
-                "Infrastructure compliance",
-                "Customer’s responsibility",
-                "Guaranteed by the platform",
-              ],
-            ],
-          },
-          {
-            type: "label",
-            text: "Operational Split",
-          },
           {
             type: "ul",
             items: [
-              "**Tier 1:** the customer provides — and is fully responsible for — storage, source code and compute infrastructure (operated on the understanding that infrastructure risk is yours).",
-              "**Tier 2:** the highest-assurance model — every resource is provisioned and managed directly by Omicslab through strictly vetted infrastructure partners.",
+              "**Step 1:** open the pricing page on the Platform, choose the plan you want and select “Register”.",
+              "**Step 2:** create an account or sign in. If you are new, complete the required details; we send a confirmation email to activate the account.",
+              "**Step 3:** return to the pricing section and choose the plan that fits your needs.",
+              "**Step 4:** complete your payment details and continue.",
+              "**Step 5:** review the plan, apply a discount code if you have one, and continue to payment.",
+              "**Step 6:** pay by QR code or bank transfer using the details provided, to activate the plan.",
             ],
           },
         ],
       },
       {
-        id: "platform",
-        title: "1. Platform Security Commitments",
+        id: "methods",
+        title: "Article 2. Payment methods",
         blocks: [
+          { type: "p", text: "The Platform supports the following payment methods:" },
           {
             type: "ul",
             items: [
-              "**Architecture separation:** strict separation of the control plane from the customer’s data plane.",
-              "**Least privilege:** short-lived credentials with tightly scoped access for every cross-boundary connection.",
-              "**Environment isolation:** data isolated per workspace, with role-based access control (RBAC).",
-              "**Audit transparency:** immutable audit logs maintained to support security review.",
-              "**Vulnerability management:** security incident and misconfiguration reports are received and patched promptly.",
+              "Bank transfer, using the account details shown in the Dashboard or on the invoice. Please do not alter the transfer reference.",
+              "Online payment gateway, supporting the domestic and international cards and methods the gateway provides.",
+              "Prepaid top-up to your organization wallet.",
             ],
           },
           {
             type: "p",
-            text: "**Note:** under Tier 2, these commitments extend down to the entire underlying hardware infrastructure.",
+            text: "Please check the payment information carefully before transferring. The service is activated or renewed only after we confirm payment.",
+          },
+        ],
+      },
+      {
+        id: "cycles",
+        title: "Article 3. Billing cycles and top-up balance",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Payment is made per cycle, normally monthly. Renewal must be completed before the current cycle ends.",
+              "Electronic invoices are issued as required by law.",
+              "**Top-up balance:** can only be spent while your organization has an active subscription. When the subscription expires or is cancelled with no renewal in flight, the remaining balance is forfeited and reset to zero by an automatic daily sweep; email notices are sent before this is applied.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "issues",
+        title: "Article 4. Failed and duplicate payments",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "If a payment does not succeed, access to the service may be suspended until payment is completed.",
+              "If a duplicate transaction or incorrect charge occurs, contact us; we reconcile the account and refund the difference.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Article 5. Refunds on termination",
+        blocks: [
+          {
+            type: "p",
+            text: "Fees already paid are non-refundable except where required by law. Refunds on termination are governed by our [Service Provision, Termination and Refund Policy](/policies/service-provision).",
+          },
+        ],
+      },
+    ],
+  },
+
+  serviceProvision: {
+    kicker: "Legal",
+    title: "Service Provision, Termination and Refund Policy",
+    navTitle: "Service Provision & Refund",
+    description:
+      "How the Platform's services are provided, how they end, and when fees are refunded.",
+    sections: [
+      {
+        id: "conditions",
+        title: "Article 1. Conditions for using the service",
+        blocks: [
+          {
+            type: "p",
+            text: "To use the Platform's services, a customer must meet the following conditions:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Have full legal capacity under the law.",
+              "Be an individual, business or organisation operating lawfully.",
+              "Provide complete, honest and accurate registration information as required.",
+              "Have lawful rights to the infrastructure, systems or data connected to the Platform.",
+              "Comply with this policy and the applicable law.",
+            ],
+          },
+          {
+            type: "p",
+            text: "We may require additional information or documents to verify a customer during registration or use of the service.",
+          },
+        ],
+      },
+      {
+        id: "delivery",
+        title: "Article 2. How the service is provided",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "The service is provided **online** through the Omicslab Platform. No physical goods are delivered.",
+              "Your account and workspace are activated after payment or confirmation.",
+              "The service is provided on an availability basis, by region and plan. See our [Conditions and Limitations](/policies/conditions) on availability and warranty disclaimer.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "term",
+        title: "Article 3. Term of use",
+        blocks: [
+          {
+            type: "p",
+            text: "The term of use is determined by the service plan or the agreement between Omicslab and the customer, and is stated clearly before or at the time of registration. For a fixed-term service, the customer's right to use the service runs from the start of use to the end of the registered or agreed term. For periodic services, the term continues after the customer completes renewal and meets the applicable conditions.",
+          },
+        ],
+      },
+      {
+        id: "termination",
+        title: "Article 4. Cases of termination",
+        blocks: [
+          {
+            type: "p",
+            text: "The service may end on expiry of the term, at the customer's request, by agreement between the parties, or where Omicslab exercises its right to suspend, limit or terminate the service in the following cases:",
+          },
+          {
+            type: "ul",
+            items: [
+              "The customer breaches the service conditions.",
+              "Signs of fraud, abuse or a security risk are detected.",
+              "The customer does not pay the applicable fees in full.",
+              "At the request of a competent state authority.",
+              "At the request of, or following a change by, a service or infrastructure partner.",
+              "Maintenance, upgrade or protection of the system is required.",
+            ],
+          },
+          {
+            type: "p",
+            text: "When the service ends, we may revoke credentials and disable access to the system. Termination does not end financial or legal obligations that arose before termination.",
+          },
+        ],
+      },
+      {
+        id: "end-time",
+        title: "Article 5. When the contract ends",
+        blocks: [
+          {
+            type: "p",
+            text: "The contract between Omicslab and the customer ends when one of the following occurs:",
+          },
+          {
+            type: "ul",
+            items: [
+              "The agreed term expires and the parties do not agree to renew.",
+              "The parties have completed their rights and obligations and agree to end the contract early.",
+              "Either party exercises its right to terminate under the contract or the law.",
+              "Omicslab terminates the service under the contract, the terms of use, its policies, or at the request of a competent state authority.",
+              "Other cases agreed by the parties or provided by law.",
+            ],
+          },
+          {
+            type: "p",
+            text: "Where the exact end time is not published and the customer is the terminating party, the time the customer sends the notice is treated as the end time.",
+          },
+        ],
+      },
+      {
+        id: "termination-process",
+        title: "Article 6. Process and response time for a customer's termination notice",
+        blocks: [
+          {
+            type: "p",
+            text: "After receiving a notice of termination, we check and confirm receipt within a maximum of **3 working days**. If the notice is incomplete or requires further verification, we may ask the customer for the necessary information; the period is counted from when we receive complete and valid information. Once the check is complete, we respond confirming the termination, the end time and any remaining obligations. We aim to complete the check and respond within **7 working days** of receiving complete and valid information; where reconciliation of transactions or coordination with third parties is needed, the period may be longer, and we inform the customer of the status and the expected completion time.",
+          },
+        ],
+      },
+      {
+        id: "refunds",
+        title: "Article 7. Refunds on termination",
+        blocks: [
+          {
+            type: "p",
+            text: "Service fees paid to Omicslab are for registering and using the service under the agreement. We do not refund service fees where the customer terminates, stops or does not continue to use the service before the term ends, except where required by law or where a separate published policy applies to a specific service. Termination does not end financial or legal obligations that arose before termination. Nothing in this policy limits your statutory rights as a consumer under Vietnamese law.",
+          },
+        ],
+      },
+    ],
+  },
+
+  conditions: {
+    kicker: "Legal",
+    title: "Conditions and Limitations for Providing the Service",
+    navTitle: "Conditions & Limitations",
+    description:
+      "The conditions, limits and prohibited uses that apply to the Platform.",
+    sections: [
+      {
+        id: "conditions",
+        title: "Article 1. Conditions of use",
+        blocks: [
+          {
+            type: "p",
+            text: "To use the Platform's services, a customer must meet the following conditions:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Be at least **18 years old** with full legal capacity, or an organisation operating lawfully.",
+              "Provide complete, honest and accurate registration information.",
+              "Have lawful rights to the infrastructure, systems or data connected to the Platform.",
+              "Comply with these conditions and the applicable law.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "scope",
+        title: "Article 2. Permitted scope of use",
+        blocks: [
+          {
+            type: "p",
+            text: "The Platform provides bioinformatics data storage and analysis — a software service. It does not supply physical goods. You may use the Platform to:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Store, manage and analyse non-human research data (microorganisms, plants, animals, environmental samples) and other workloads within your subscribed plans.",
+              "Integrate the Platform's API and tooling with your own website, application or internal systems.",
+              "Synchronise analysis results and metadata with your own management software or systems.",
+            ],
+          },
+          {
+            type: "p",
+            text: "**Sensitive personal data:** the public Platform does not accept or process non-public sensitive personal data of individuals in Vietnam. Human genomic or health-related data is handled only through a separate, contracted **on-premise deployment** in which we deploy the software onto your own infrastructure and you run, analyse, store and manage the data yourself (see the [Privacy Policy](/privacy)). **Exception:** data that has been lawfully published and made openly accessible, or lawfully de-identified (for example data retrieved from public repositories such as NCBI GEO/SRA), is treated as **public data** and may be processed on the public Platform.",
+          },
+        ],
+      },
+      {
+        id: "law",
+        title: "Article 3. Compliance with the law",
+        blocks: [
+          {
+            type: "p",
+            text: "You agree to use the Platform in accordance with Vietnamese law and applicable rules on data protection, cybersecurity and scientific research. You are responsible for the lawful basis, consents and ethics approvals for the data you process.",
+          },
+        ],
+      },
+      {
+        id: "prohibited",
+        title: "Article 4. Prohibited acts",
+        blocks: [
+          { type: "p", text: "You must not use the Platform to:" },
+          {
+            type: "ul",
+            items: [
+              "Violate the law or infringe the rights of any person.",
+              "Upload non-public sensitive personal data of individuals in Vietnam to the public Platform (except data that has been lawfully published or de-identified).",
+              "Provide false information or impersonate any person or organisation.",
+              "Upload malicious code, attempt unauthorised access, or interfere with the Platform's security or stability.",
+              "Re-identify individuals, or discriminate against any person or group.",
+              "Circumvent quotas or security controls, or resell access without written permission.",
+              "Reverse engineer, copy or exploit the Platform's software, API or technical documentation without written consent.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "access",
+        title: "Article 5. Access, credentials and integration",
+        blocks: [
+          {
+            type: "p",
+            text: "You are responsible for integrating with the Platform in accordance with our technical documentation, for protecting your credentials, and for controlling access by your staff or third parties. You must notify us immediately of any suspected credential leak, unauthorised access or abnormal use. We may apply rate limits or other technical measures to protect the infrastructure, and may change or discontinue part of the API for upgrades or legal compliance, giving reasonable notice where a change affects your integration.",
+          },
+        ],
+      },
+      {
+        id: "infrastructure",
+        title: "Article 6. Customer-managed infrastructure",
+        blocks: [
+          {
+            type: "p",
+            text: "Where you connect your own storage, version control or compute resources (Bring Your Own Cloud), you are responsible for the security, access permissions and safety of the data on that infrastructure. To the extent permitted by law, we are not liable for incidents arising from systems you manage, without limiting our own obligations under applicable law or a separate agreement.",
+          },
+        ],
+      },
+      {
+        id: "availability",
+        title: "Article 7. Service stability and availability",
+        blocks: [
+          {
+            type: "p",
+            text: "We aim to keep the system stable, safe and continuous, but we do not warrant that the service will operate 100% of the time, be free of errors or interruption, or have a fixed response time. Disruption may arise from maintenance, infrastructure or partner incidents, internet or telecommunications failures, cyberattacks, or events beyond our reasonable control.",
+          },
+        ],
+      },
+      {
+        id: "suspension",
+        title: "Article 8. Suspension and termination",
+        blocks: [
+          {
+            type: "p",
+            text: "We may suspend, limit or terminate the service where these conditions or the terms of use are breached, where there are signs of fraud, abuse or a security risk, where fees are not paid in full, at the request of a competent authority, or where maintenance, upgrade or protection of the system requires it. On termination, we may revoke credentials and disable access. Termination does not end financial or legal obligations that arose before termination.",
+          },
+        ],
+      },
+      {
+        id: "force-majeure",
+        title: "Article 9. Force majeure",
+        blocks: [
+          {
+            type: "p",
+            text: "We are not liable for delay or failure to perform due to force majeure events, including natural disasters, fire, epidemic, war, widespread power loss, cyberattacks, internet or telecommunications failures, infrastructure partner faults, or decisions of state authorities. In such cases we will endeavour to remedy the situation as soon as possible.",
+          },
+        ],
+      },
+      {
+        id: "changes",
+        title: "Article 10. Changes to these conditions",
+        blocks: [
+          {
+            type: "p",
+            text: "We may amend or supplement these conditions as needed to reflect our operations, partner requirements or the law. Updated versions are published on the Platform. Continued use after an amendment takes effect constitutes acceptance of it.",
+          },
+        ],
+      },
+      {
+        id: "effect",
+        title: "Article 11. Effect",
+        blocks: [
+          {
+            type: "p",
+            text: "These conditions take effect from the date published on the Platform. If any provision is declared invalid by a competent authority, the remaining provisions stay in effect. By registering an account or using any product, API or service, the customer confirms they have read, understood and agree to comply with all of these conditions and limitations.",
+          },
+        ],
+      },
+    ],
+  },
+
+  rightsObligations: {
+    kicker: "Legal",
+    title: "Rights and Obligations of the Parties",
+    navTitle: "Rights & Obligations",
+    description:
+      "The rights and obligations of Omicslab (the platform operator) and of the customer.",
+    sections: [
+      {
+        id: "provider",
+        title: "Article 1. Rights and obligations of the platform operator (Omicslab / Vieomics)",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "Issue, publish and implement operating and transaction conditions, and publish service standards and processes on the Platform.",
+              "Charge service fees according to the published [Pricing Policy](/policies/pricing), and inform buyers in full or in summary of any promotions before purchase.",
+              "Ensure the Platform operates safely and stably.",
+              "Suspend, limit or terminate the service in the cases described in the [Service Provision, Termination and Refund Policy](/policies/service-provision), and revoke credentials and disable access on termination.",
+              "Apply measures to protect business secrets and consumer personal data in line with the published [Privacy Policy](/privacy).",
+              "Receive and resolve requests, feedback and complaints from users.",
+              "Monitor and prevent unlawful conduct, and cooperate with and provide information or data at the request of competent state authorities.",
+              "Provide accurate and complete information, ensure service quality, and fulfil service, replacement and refund obligations; and not exploit the Platform for prohibited business, counterfeit goods, intellectual-property infringement or other unlawful conduct.",
+              "Fulfil financial obligations to the State, protect buyer data and consumer information, and cooperate with competent state authorities in handling violations.",
+            ],
           },
         ],
       },
       {
         id: "customer",
-        title: "2. Mandatory Customer Responsibilities",
+        title: "Article 2. Rights and obligations of the customer",
         blocks: [
           {
             type: "ul",
             items: [
-              "**Account security:** protect your login credentials and enforce strong authentication (MFA/2FA) across your organization.",
-              "**Legal & ethical compliance:** obtain full approval from an ethics board (IRB), voluntary informed consent from data subjects and any other lawful rights required before uploading human genomic or health data.",
-              "**Data access control:** classify your data and set appropriate access permissions for each workspace and storage resource.",
-              "**Backup & validation:** maintain independent backups and take responsibility for validating analysis outputs under your organization’s own research data management policy.",
+              "Be assured of consumer rights and be provided with complete, accurate information about the service and the provider.",
+              "Choose the service and payment method, have personal data protected, and have feedback, requests and complaints resolved in accordance with the law.",
+              "Provide the necessary and accurate information, and pay fees in full and on time.",
+              "Comply with the law, the operating conditions and the transaction conditions of the Platform, and not exploit the Platform to commit unlawful acts.",
             ],
+          },
+        ],
+      },
+    ],
+  },
+
+  complaints: {
+    kicker: "Legal",
+    title: "Method for Receiving and Resolving Feedback, Requests and Complaints",
+    navTitle: "Feedback & Complaints",
+    description:
+      "How to submit feedback or complaints and the process and timelines for resolving them.",
+    sections: [
+      {
+        id: "methods",
+        title: "Article 1. How to submit",
+        blocks: [
+          {
+            type: "p",
+            text: "For any support request, feedback or complaint about the service, please contact us through:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Online form on the [Contact](/contact) page.",
+              "Email **contact@omicslab.io** — please state “Feedback / Complaint” in the subject line.",
+              "Data protection contact (DPO) **Nguyen Tan Thanh Giang** — **giangnguyen@omicslab.io** for complaints relating to personal data.",
+              "By post or in person at: VIEOMICS COMPANY LIMITED, No. 10 Song Thao, Tan Son Hoa Ward, Ho Chi Minh City, Vietnam.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "process",
+        title: "Article 2. Process for receiving and handling",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "**Step 1 — Receive:** our customer support team receives the complaint through the channels above and confirms receipt.",
+              "**Step 2 — Analyse and verify:** the complaint is passed to the relevant technical or service teams to check and verify the cause and severity.",
+              "**Step 3 — Propose a solution and respond:** based on the verification, we propose a resolution and contact the customer directly to agree it.",
+              "**Step 4 — Implement and close:** if the customer agrees, we implement the agreed resolution and notify the customer that the complaint is closed.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "timelines",
+        title: "Article 3. Response and resolution timelines",
+        blocks: [
+          {
+            type: "p",
+            text: "We acknowledge feedback, requests and complaints within **3 working days** of receipt. Depending on the nature, complexity and content of each complaint, we aim to resolve it within **7 working days** of confirming receipt of the complete information and documents needed from the customer.",
+          },
+          {
+            type: "p",
+            text: "For matters requiring further verification, reconciliation, or coordination with partners or other third parties, the resolution period may be longer. In that case we inform the customer of the status, the reason and the expected completion time.",
+          },
+        ],
+      },
+      {
+        id: "tools",
+        title: "Article 4. Tools and measures supporting resolution",
+        blocks: [
+          {
+            type: "ul",
+            items: [
+              "**Clarify with the customer:** we may exchange with the customer through the channels above to clarify the matter, its cause and the proposed handling.",
+              "**Check and reconcile information:** we may check account, transaction, usage-history and system data, and documents provided by the customer.",
+              "**Request additional information:** where necessary, we may ask the customer for more information, images, documents or related materials.",
+              "**Coordinate with relevant parties:** where a matter involves a partner, infrastructure provider or other third party, we may coordinate with them to check and verify.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "escalation",
+        title: "Article 5. Escalation",
+        blocks: [
+          {
+            type: "p",
+            text: "If you disagree with the outcome, you may request a review or bring the matter before a competent authority or court under Vietnamese law. Consumers may also lodge complaints with the state authority responsible for consumer protection. Nothing in this policy limits your statutory rights as a consumer.",
+          },
+        ],
+      },
+    ],
+  },
+
+  support: {
+    kicker: "Legal",
+    title: "Online Support",
+    navTitle: "Online Support",
+    description:
+      "The online channels through which Omicslab supports users.",
+    sections: [
+      {
+        id: "channels",
+        title: "Article 1. Support channels",
+        blocks: [
+          {
+            type: "p",
+            text: "The Platform offers the following forms of online support:",
+          },
+          {
+            type: "ul",
+            items: [
+              "**Online contact form:** available on the [Contact](/contact) page.",
+              "**Support email:** **contact@omicslab.io**.",
+              "**Self-service resources:** guides, FAQs and technical documentation where available.",
+              "**In-product support:** the in-app chat or support channel, where it is provided for your plan.",
+              "**Legal and personal data:** contact the DPO — **giangnguyen@omicslab.io**.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "hours",
+        title: "Article 2. Support hours and response",
+        blocks: [
+          {
+            type: "p",
+            text: "Support hours are business hours (office hours) excluding public holidays. Requests received outside these hours are handled on the next business day. We usually acknowledge new requests within **24 working hours**.",
           },
         ],
       },
