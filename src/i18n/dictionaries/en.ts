@@ -467,10 +467,10 @@ export const en = {
                 subtotal: "10,000,000 VND",
               },
               {
-                item: "HPC compute (16 CPUs / 32 GB)",
-                unitPrice: "20,000 VND/hour",
+                item: "Compute (16 CPUs / 32 GB on GreenNode)",
+                unitPrice: "8,868 VND/hour",
                 qty: "~200 hours",
-                subtotal: "~4,000,000 VND",
+                subtotal: "~1,773,600 VND",
               },
               {
                 item: "Platform subscription",
@@ -486,7 +486,7 @@ export const en = {
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~15,250,000 VND (~5,250,000 VND with nf-core/bacass)",
+            total: "~13,023,600 VND (~3,023,600 VND with nf-core/bacass)",
             footnote: [
               {
                 text: "* Estimates based on typical bacterial genome assembly workload. Actual costs may vary. ",
@@ -527,10 +527,10 @@ export const en = {
                 subtotal: "10,000,000 VND",
               },
               {
-                item: "HPC compute (16 CPUs / 32 GB)",
-                unitPrice: "20,000 VND/hour",
+                item: "Compute (16 CPUs / 32 GB on GreenNode)",
+                unitPrice: "8,868 VND/hour",
                 qty: "~50 hours",
-                subtotal: "~1,000,000 VND",
+                subtotal: "~443,400 VND",
               },
               {
                 item: "Platform subscription",
@@ -546,7 +546,7 @@ export const en = {
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~12,005,000 VND (~2,005,000 VND with nf-core/ampliseq)",
+            total: "~11,448,400 VND (~1,448,400 VND with nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Estimates based on typical 16S rRNA analysis workload. Actual costs may vary. ",

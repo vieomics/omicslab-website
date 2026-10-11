@@ -467,10 +467,10 @@ export const vi: Dictionary = {
                 subtotal: "10.000.000 VND",
               },
               {
-                item: "Điện toán HPC (16 CPU / 32 GB)",
-                unitPrice: "20.000 VND/giờ",
+                item: "Điện toán (16 CPU / 32 GB trên GreenNode)",
+                unitPrice: "8.868 VND/giờ",
                 qty: "~200 giờ",
-                subtotal: "~4.000.000 VND",
+                subtotal: "~1.773.600 VND",
               },
               {
                 item: "Gói sử dụng nền tảng",
@@ -486,7 +486,7 @@ export const vi: Dictionary = {
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~15.250.000 VND (~5.250.000 VND nếu dùng nf-core/bacass)",
+            total: "~13.023.600 VND (~3.023.600 VND nếu dùng nf-core/bacass)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -527,10 +527,10 @@ export const vi: Dictionary = {
                 subtotal: "10.000.000 VND",
               },
               {
-                item: "Điện toán HPC (16 CPU / 32 GB)",
-                unitPrice: "20.000 VND/giờ",
+                item: "Điện toán (16 CPU / 32 GB trên GreenNode)",
+                unitPrice: "8.868 VND/giờ",
                 qty: "~50 giờ",
-                subtotal: "~1.000.000 VND",
+                subtotal: "~443.400 VND",
               },
               {
                 item: "Gói sử dụng nền tảng",
@@ -546,7 +546,7 @@ export const vi: Dictionary = {
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~12.005.000 VND (~2.005.000 VND nếu dùng nf-core/ampliseq)",
+            total: "~11.448.400 VND (~1.448.400 VND nếu dùng nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng phân tích 16S rRNA thông thường. Chi phí thực tế có thể thay đổi. ",
