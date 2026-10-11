@@ -33,11 +33,14 @@ jobs:
           preExistingWrangler: true
           command: pages deploy out --project-name=omicslab-website
 
-      - name: Purge retired policy URLs from the Cloudflare cache
-        # The old /security* pages were removed from the repo, but legacy edge
-        # cache entries (served with s-maxage=604800 by an older deployment)
-        # kept returning the old, overbroad copy. Purge the retired URLs and
-        # the policy pages they referenced so only current content is served.
+      - name: Purge retired and updated policy URLs from the Cloudflare cache
+        # Older deployments served the retired /security*, /pricing and
+        # /solutions/infrastructure* pages (and the old, overbroad policy copy)
+        # with s-maxage=604800, so legacy edge entries kept returning content
+        # that no longer exists in the repo. Purge by URL prefix so every cached
+        # variant (with/without trailing slash, .html, sub-paths) is cleared, and
+        # refresh the current policy pages after each deploy. Falls back to a
+        # full zone purge if the prefix request is rejected.
         # Non-fatal: if the token lacks Cache Purge permission the deploy still
         # succeeds and this step only logs a warning.
         continue-on-error: true
@@ -52,16 +55,32 @@ jobs:
             echo "::warning::Could not resolve the omicslab.io zone id; skipping cache purge."
             exit 0
           fi
-          curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache" \
+          PURGE_URL="https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache"
+          PREFIXES='{"prefixes":[
+            "omicslab.io/security",
+            "omicslab.io/en/security",
+            "omicslab.io/pricing",
+            "omicslab.io/en/pricing",
+            "omicslab.io/solutions/infrastructure",
+            "omicslab.io/en/solutions/infrastructure",
+            "omicslab.io/policies",
+            "omicslab.io/en/policies",
+            "omicslab.io/privacy",
+            "omicslab.io/en/privacy",
+            "omicslab.io/terms",
+            "omicslab.io/en/terms"
+          ]}'
+          RESPONSE=$(curl -sS -X POST "$PURGE_URL" \
             -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
             -H "Content-Type: application/json" \
-            --data '{"files":[
-              "https://omicslab.io/security",
-              "https://omicslab.io/security/compliance",
-              "https://omicslab.io/security/responsibility",
-              "https://omicslab.io/en/security",
-              "https://omicslab.io/privacy",
-              "https://omicslab.io/terms",
-              "https://omicslab.io/en/privacy",
-              "https://omicslab.io/en/terms"
-            ]}'
+            --data "$PREFIXES")
+          if printf '%s' "$RESPONSE" | grep -q '"success":true'; then
+            echo "Purged cached URLs by prefix."
+          else
+            echo "::warning::Prefix purge was rejected; falling back to a full zone purge."
+            echo "$RESPONSE"
+            curl -sS -X POST "$PURGE_URL" \
+              -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+              -H "Content-Type: application/json" \
+              --data '{"purge_everything":true}'
+          fi
