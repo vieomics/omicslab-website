@@ -195,6 +195,25 @@ export default function DataPlatformView({
             </ul>
           </div>
 
+          <div className="mx-auto mt-14 max-w-3xl">
+            <h3 className="display-md text-ink">
+              {t.pricing.usageCosts.title}
+            </h3>
+            <ul className="border-line mt-6 border-t">
+              {t.pricing.usageCosts.items.map((item, index) => (
+                <li
+                  key={index}
+                  className="border-line text-muted [&_strong]:text-ink border-b py-5 text-sm leading-relaxed [&_strong]:font-bold"
+                >
+                  <RichText segments={item} locale={locale} />
+                </li>
+              ))}
+            </ul>
+            <p className="text-muted mt-6 text-sm leading-relaxed">
+              {t.pricing.usageCosts.note}
+            </p>
+          </div>
+
           <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-3">
             <div className="border-line bg-paper-light border-b px-6 py-4 sm:col-span-2 lg:col-span-3">
               <h3 className="display-md text-ink">{t.pricing.topup.storage.title}</h3>
