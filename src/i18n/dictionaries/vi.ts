@@ -94,7 +94,7 @@ const topup = {
     [
       { strong: "Điện toán:" },
       {
-        text: " 20.000 VND/giờ cho cấu hình 16 CPU / 32 GB RAM trên CloudFly, GreenNode hoặc cụm Slurm của bạn — mức giá theo cấu hình thực tế của từng nguồn.",
+        text: " 8.868 VND/giờ cho cấu hình 16 CPU / 32 GB RAM trên GreenNode.",
       },
     ],
     [
@@ -118,9 +118,33 @@ const topup = {
       { label: "HTTP GET/HEAD", value: "5000 req/s" },
       { label: "Chuyển dữ liệu", value: "Không giới hạn" },
       { label: "Cách tính phí", value: "Pay as you go" },
-      { label: "Giá lưu trữ", value: "500 VND/GB" },
+      { label: "Giá lưu trữ", value: "500 VND/GB mỗi tháng" },
     ],
   },
+};
+
+const usageCosts = {
+  title: "Chi phí sử dụng nền tảng",
+  items: [
+    [
+      { strong: "Phí duy trì nền tảng:" },
+      { text: " 1.000 VND/giờ chạy job." },
+    ],
+    [
+      { strong: "Chi phí compute:" },
+      {
+        text: " Tùy thuộc vào phân tích và nhà cung cấp hạ tầng. Chi phí được xác định theo bảng giá công khai của nhà cung cấp tương ứng.",
+      },
+    ],
+    [
+      { strong: "Chi phí lưu trữ (S3):" },
+      {
+        text: " Tính theo bảng giá của nhà cung cấp lưu trữ được khách hàng lựa chọn, căn cứ vào dung lượng, thời gian lưu trữ và các khoản phí liên quan (nếu có).",
+      },
+    ],
+  ] as TextSegment[][],
+  note:
+    "Chi phí compute và lưu trữ không nằm trong phí duy trì nền tảng. Khách hàng có thể xem bảng giá của nhà cung cấp tương ứng trước khi sử dụng. Giá áp dụng và tổng chi phí dự kiến sẽ được xác định theo cấu hình và dịch vụ thực tế được lựa chọn.",
 };
 
 export const vi: Dictionary = {
@@ -405,6 +429,7 @@ export const vi: Dictionary = {
         title: "Bảng giá",
         subscription,
         topup,
+        usageCosts,
         trialNote: [
           { strong: "Lưu ý:" },
           {
@@ -442,10 +467,10 @@ export const vi: Dictionary = {
                 subtotal: "10.000.000 VND",
               },
               {
-                item: "Điện toán HPC (16 CPU / 32 GB)",
-                unitPrice: "20.000 VND/giờ",
+                item: "Điện toán (16 CPU / 32 GB trên GreenNode)",
+                unitPrice: "8.868 VND/giờ",
                 qty: "~200 giờ",
-                subtotal: "~4.000.000 VND",
+                subtotal: "~1.773.600 VND",
               },
               {
                 item: "Gói sử dụng nền tảng",
@@ -461,7 +486,7 @@ export const vi: Dictionary = {
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~15.250.000 VND (~5.250.000 VND nếu dùng nf-core/bacass)",
+            total: "~13.023.600 VND (~3.023.600 VND nếu dùng nf-core/bacass)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng công việc lắp ráp hệ gen vi khuẩn thông thường. Chi phí thực tế có thể thay đổi. ",
@@ -502,10 +527,10 @@ export const vi: Dictionary = {
                 subtotal: "10.000.000 VND",
               },
               {
-                item: "Điện toán HPC (16 CPU / 32 GB)",
-                unitPrice: "20.000 VND/giờ",
+                item: "Điện toán (16 CPU / 32 GB trên GreenNode)",
+                unitPrice: "8.868 VND/giờ",
                 qty: "~50 giờ",
-                subtotal: "~1.000.000 VND",
+                subtotal: "~443.400 VND",
               },
               {
                 item: "Gói sử dụng nền tảng",
@@ -521,7 +546,7 @@ export const vi: Dictionary = {
               },
             ],
             totalLabel: "Tổng ước tính / tháng",
-            total: "~12.005.000 VND (~2.005.000 VND nếu dùng nf-core/ampliseq)",
+            total: "~11.448.400 VND (~1.448.400 VND nếu dùng nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Ước tính dựa trên khối lượng phân tích 16S rRNA thông thường. Chi phí thực tế có thể thay đổi. ",
