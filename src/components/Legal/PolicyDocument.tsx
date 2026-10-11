@@ -1,6 +1,6 @@
 import type { Locale } from "@/i18n/config";
 import type { PolicyPage } from "@/i18n/dictionaries/policies/en";
-import { Block } from "./index";
+import { Block, Inline } from "./index";
 
 interface SiteInfo {
   legalName: string;
@@ -61,7 +61,9 @@ const PolicyDocument = ({
 
       {page.notice && (
         <div className="mt-6 border-l-4 border-ink bg-paper-light py-4 pr-5 pl-5">
-          <p className="text-sm leading-relaxed text-ink">{page.notice}</p>
+          <p className="text-sm leading-relaxed text-ink">
+            <Inline text={page.notice} locale={locale} />
+          </p>
         </div>
       )}
 
