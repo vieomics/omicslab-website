@@ -2,19 +2,3 @@
 # 308 by default. DMCA's ownership checker fetches this exact URL, so proxy it
 # to the same asset with a 200 response instead.
 /dmca-validation.html /dmca-validation 200
-
-# The old Security & Compliance pages (/security, /security/compliance,
-# /security/responsibility) were retired in the Bộ Công Thương policy
-# restructure. Their copy made broader claims than the current Privacy Policy
-# (data always domestic, full standards compliance, Marketplace as the
-# highest-assurance model). Redirect the URLs to the current, precisely-scoped
-# Privacy Policy — which limits commitments to the resources Vieomics directly
-# operates and makes residency conditional on configuration — so no stale,
-# overbroad claims stay reachable. Redirects run before static assets on
-# Cloudflare Pages, so they also retire any leftover copies from an older build.
-/security /privacy 301
-/security/ /privacy 301
-/security/* /privacy 301
-/en/security /en/privacy 301
-/en/security/ /en/privacy 301
-/en/security/* /en/privacy 301
