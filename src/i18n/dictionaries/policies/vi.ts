@@ -217,23 +217,23 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Chúng tôi áp dụng các biện pháp bảo mật kỹ thuật và vận hành để bảo vệ dữ liệu cá nhân và dữ liệu dịch vụ mà chúng tôi nắm giữ trên các hệ thống do Vieomics quản lý:",
+            text: "Bảo mật là trách nhiệm được phân chia giữa các bên. Với các dịch vụ và hạ tầng **do Vieomics trực tiếp vận hành và kiểm soát**, chúng tôi áp dụng các biện pháp kỹ thuật và vận hành dưới đây để bảo vệ dữ liệu cá nhân và dữ liệu dịch vụ mà chúng tôi nắm giữ tại đó:",
           },
           {
             type: "ul",
             items: [
-              "Mã hóa dữ liệu trên đường truyền (TLS/SSL) và khi lưu trữ (Encryption at Rest) đối với các dịch vụ do Vieomics quản lý.",
+              "Mã hóa dữ liệu trên đường truyền (TLS/SSL) và, khi nền tảng trực tiếp lưu trữ, mã hóa khi lưu trữ (Encryption at Rest) cho các dịch vụ và tài nguyên do Vieomics quản lý — sử dụng phương thức mã hóa mà nhà cung cấp hạ tầng và cấu hình tương ứng hỗ trợ (ví dụ AES-256).",
               "Phân quyền truy cập tối thiểu (RBAC), quản lý xác thực đa yếu tố (MFA) và ghi nhật ký hệ thống (Audit Logs).",
               "Cô lập theo từng Workspace, và tách biệt các khóa ánh xạ của Khách hàng khỏi môi trường phân tích khi được cấu hình về mặt kỹ thuật.",
               "Giám sát an ninh và phát hiện sự cố trên các tài nguyên do nền tảng quản lý, cùng với việc rà soát, đánh giá lỗ hổng bảo mật định kỳ.",
               "Chỉ những nhân sự được phân công và chịu cam kết bảo mật nghiêm ngặt mới có quyền truy cập thông tin hỗ trợ kỹ thuật khi có yêu cầu bằng văn bản từ bạn.",
-              "**Quản lý thông tin xác thực:** thông tin xác thực dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi; không hiển thị cho người dùng cuối và không lưu dưới dạng plain-text.",
+              "**Quản lý thông tin xác thực:** trong các dịch vụ do Vieomics trực tiếp vận hành, thông tin xác thực dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi; không hiển thị cho người dùng cuối và không lưu dưới dạng plain-text tại đó.",
               "**Tách biệt kiến trúc:** tầng điều khiển (điều phối job, thông tin xác thực, hạn ngạch) được tách biệt khỏi tầng dữ liệu.",
             ],
           },
           {
             type: "p",
-            text: "Các biện pháp kiểm soát này áp dụng cho các dịch vụ và hạ tầng do Vieomics thực sự vận hành. Trong **mô hình do khách hàng tự quản lý**, bạn chịu trách nhiệm cấu hình và vận hành bảo mật cho hạ tầng của mình — bao gồm thông tin xác thực, chính sách truy cập, sao lưu và môi trường phân tích — trong khi chúng tôi chịu trách nhiệm về bảo mật của phần mềm do chúng tôi cung cấp.",
+            text: "Các biện pháp kiểm soát này chỉ áp dụng cho các dịch vụ và hạ tầng **do Vieomics trực tiếp vận hành và kiểm soát**. **Nhà cung cấp cloud và hạ tầng** chịu trách nhiệm cho các biện pháp thuộc tầng của họ — an ninh vật lý và môi trường, lớp ảo hóa (hypervisor), và các nguyên tắc mã hóa, lưu trữ, mạng và ghi log mà họ cung cấp — theo điều khoản và chứng nhận của chính họ. Trong **mô hình do khách hàng tự quản lý hoặc BYOC**, **bạn** chịu trách nhiệm cho hạ tầng do bạn vận hành hoặc kết nối (lưu trữ tương thích S3, cơ sở dữ liệu, tính toán, sao lưu, chính sách truy cập, ghi log và môi trường phân tích của bạn) và chịu trách nhiệm xác minh rằng các biện pháp đó đáp ứng yêu cầu của bạn; khi dữ liệu nằm trong lưu trữ hoặc cơ sở dữ liệu do bạn vận hành hay kết nối, Vieomics không thể bảo đảm việc mã hóa, sao lưu, kiểm soát truy cập hay ghi log của hệ thống đó. Chúng tôi vẫn chịu trách nhiệm về bảo mật của phần mềm do chúng tôi cung cấp.",
           },
           {
             type: "p",
@@ -304,11 +304,11 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Hiện tại Vieomics chỉ vận hành Nền tảng Omicslab tại Việt Nam, không vận hành ở nước ngoài. Với khu vực Việt Nam (mặc định), dữ liệu và tính toán do Vieomics cung cấp được lưu trữ và xử lý tại Việt Nam.",
+            text: "Hiện tại Vieomics chỉ vận hành Nền tảng Omicslab tại Việt Nam, không vận hành ở nước ngoài. **Với các dịch vụ và hạ tầng do Vieomics cung cấp, địa điểm lưu trữ và xử lý phụ thuộc vào cấu hình dịch vụ và vùng hạ tầng mà bạn lựa chọn.** Ở khu vực Việt Nam (mặc định), dữ liệu và tính toán do Vieomics cung cấp được lưu trữ và xử lý tại Việt Nam (xem bảng bên dưới).",
           },
           {
             type: "p",
-            text: "Nền tảng cũng hỗ trợ khu vực toàn cầu (Global) cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng các hợp tác đa quốc gia; ở khu vực này, **dữ liệu và tính toán vẫn được đặt tại Việt Nam**, người dùng chỉ truy cập từ nước ngoài. Vì dữ liệu và tính toán do Vieomics cung cấp được đặt tại Việt Nam, việc chuyển dữ liệu cá nhân ra nước ngoài không phát sinh trong hoạt động hiện tại.",
+            text: "Nền tảng cũng hỗ trợ khu vực toàn cầu (Global) cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng các hợp tác đa quốc gia; với các dịch vụ và hạ tầng do Vieomics cung cấp, dữ liệu và tính toán vẫn được đặt tại Việt Nam, người dùng chỉ truy cập từ nước ngoài. Vì dữ liệu và tính toán do Vieomics cung cấp được đặt tại Việt Nam, việc chuyển dữ liệu cá nhân ra nước ngoài không phát sinh trong hoạt động hiện tại. Với hạ tầng do bạn tự vận hành hoặc kết nối, địa điểm phụ thuộc vào cấu hình của bạn, như mô tả bên dưới.",
           },
           {
             type: "table",
@@ -370,7 +370,7 @@ export const policiesVi: Policies = {
               "Nền tảng quản lý (Marketplace)",
             ],
             rows: [
-              ["Lưu trữ dữ liệu", "Hạ tầng Cloud / Object Storage riêng của bạn", "Lưu trữ mã hóa AES-256 trên nền tảng (phân vùng theo Workspace)"],
+              ["Lưu trữ dữ liệu", "Hạ tầng Cloud / Object Storage riêng của bạn", "Lưu trữ phân vùng theo Workspace; mã hóa khi lưu trữ cho các tài nguyên nền tảng trực tiếp vận hành, dùng phương thức mã hóa mà nhà cung cấp và cấu hình tương ứng hỗ trợ (ví dụ AES-256)"],
               ["Kiểm soát phiên bản", "Kho mã nguồn (GitHub) riêng của bạn", "Kho mã nguồn tích hợp trên Marketplace"],
               ["Hạ tầng tính toán", "Cụm máy chủ HPC / Cloud riêng của bạn", "Hạ tầng tính toán được Omicslab quản lý trực tiếp"],
               ["Truy cập hạ tầng", "Khách hàng tự quản lý", "Nền tảng quản lý"],
@@ -389,6 +389,10 @@ export const policiesVi: Policies = {
               "**Minh bạch kiểm toán:** duy trì nhật ký ghi vết (Audit Logs) phục vụ công tác rà soát an ninh.",
               "**Quản lý lỗ hổng:** tiếp nhận báo cáo sự cố hoặc cấu hình sai bảo mật và phát hành bản vá kịp thời.",
             ],
+          },
+          {
+            type: "p",
+            text: "Các cam kết trên chỉ áp dụng cho các tài nguyên **do Vieomics trực tiếp vận hành**. Nhà cung cấp cloud và hạ tầng chịu trách nhiệm cho tầng của họ, và khi bạn tự vận hành hoặc kết nối hạ tầng của mình (BYOC), việc mã hóa, sao lưu, kiểm soát truy cập và ghi log của hệ thống đó thuộc trách nhiệm của bạn — Vieomics không thể bảo đảm các yếu tố này.",
           },
           { type: "label", text: "Trách nhiệm bắt buộc của Khách hàng" },
           {
@@ -505,7 +509,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Bạn chịu trách nhiệm bảo mật thông tin xác thực của mình và cho mọi hoạt động diễn ra dưới tài khoản. Bạn đồng ý thông báo ngay cho chúng tôi về bất kỳ truy cập trái phép hoặc nghi ngờ bị xâm phạm nào. Chúng tôi áp dụng các biện pháp kiểm soát bảo mật theo chuẩn ngành — gồm mã hóa khi truyền tải và khi lưu trữ, kiểm soát truy cập và ghi nhật ký kiểm toán — nhưng không hệ thống nào là không thể xâm nhập, và bạn phải tự bảo vệ thông tin xác thực của mình. Chi tiết được công bố tại trang [Chính sách Thương mại điện tử](/policies).",
+            text: "Bạn chịu trách nhiệm bảo mật thông tin xác thực của mình và cho mọi hoạt động diễn ra dưới tài khoản. Bạn đồng ý thông báo ngay cho chúng tôi về bất kỳ truy cập trái phép hoặc nghi ngờ bị xâm phạm nào. Chúng tôi áp dụng các biện pháp kiểm soát bảo mật theo chuẩn ngành cho các dịch vụ và hạ tầng mà chúng tôi trực tiếp vận hành — gồm mã hóa khi truyền tải và khi lưu trữ, kiểm soát truy cập và ghi nhật ký kiểm toán — nhưng không hệ thống nào là không thể xâm nhập, và bạn phải tự bảo vệ thông tin xác thực của mình. Khi bạn tự vận hành hoặc kết nối hạ tầng của mình (BYOC), việc mã hóa, sao lưu, kiểm soát truy cập và ghi log của hệ thống đó thuộc trách nhiệm của bạn và nhà cung cấp của bạn; Vieomics không thể bảo đảm các yếu tố này. Chi tiết được công bố tại trang [Chính sách Thương mại điện tử](/policies).",
           },
         ],
       },
@@ -539,7 +543,7 @@ export const policiesVi: Policies = {
             items: [
               "**Hợp pháp:** chúng tôi chỉ xử lý dữ liệu cá nhân trên cơ sở pháp lý hợp lệ — sự đồng ý, hợp đồng, nghĩa vụ pháp lý hoặc lợi ích hợp pháp.",
               "**Thu hẹp dữ liệu:** chúng tôi chỉ thu thập những gì cần để vận hành Nền tảng.",
-              "**Bảo mật:** biện pháp kỹ thuật và tổ chức bảo vệ dữ liệu cá nhân khỏi truy cập trái phép, mất mát hoặc sửa đổi.",
+              "**Bảo mật:** biện pháp kỹ thuật và tổ chức bảo vệ dữ liệu cá nhân khỏi truy cập trái phép, mất mát hoặc sửa đổi trong các dịch vụ do Vieomics trực tiếp vận hành; với hạ tầng do bạn tự vận hành hoặc kết nối (BYOC), bảo mật thuộc trách nhiệm của bạn.",
               "**Quyền của bạn:** bạn có quyền truy cập, sửa đổi, xóa bỏ, hạn chế, di trú và phản đối — xem [Chính sách bảo mật](/privacy) để biết chi tiết.",
             ],
           },
