@@ -22,7 +22,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Individual",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Lite",
@@ -38,7 +38,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Lite",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Pro",
@@ -55,7 +55,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Pro",
-      ctaHref: "https://platform.omicslab.io",
+      ctaHref: "https://platform.omicslab.vn",
     },
     {
       name: "Business",
@@ -153,9 +153,8 @@ export const vi: Dictionary = {
     platform: "Nền tảng Omicslab",
     productOf: "Sản phẩm của",
     legalLabel: "Pháp lý",
-    privacy: "Chính sách Quyền riêng tư",
+    privacy: "Chính sách bảo mật",
     terms: "Điều khoản Dịch vụ",
-    security: "Bảo mật & Tuân thủ",
   },
   policies: policiesVi,
   cookieConsent: {
@@ -300,6 +299,11 @@ export const vi: Dictionary = {
             "Omicslab là dịch vụ tin sinh học dry-lab toàn diện: nền tảng giúp bạn quản lý người dùng, dữ liệu, công cụ và hạ tầng tính toán, cộng thêm dịch vụ chuyên môn khi cần phân tích theo yêu cầu. Tạo tổ chức, kết nối hạ tầng, chọn quy trình và chạy — mọi thứ cùng một nơi.",
         },
         {
+          question: "Omicslab có hoạt động ngoài Việt Nam không?",
+          answer:
+            "Hiện tại Vieomics **chỉ vận hành Nền tảng Omicslab tại Việt Nam** và làm việc với **người Việt Nam hoặc người sinh sống tại Việt Nam**, cùng các hợp tác đa quốc gia. Dữ liệu và tính toán do Vieomics cung cấp **được đặt tại Việt Nam**; chúng tôi chưa vận hành Nền tảng ở nước ngoài.",
+        },
+        {
           question: "Tôi đã có quy trình và hạ tầng riêng, có chuyển sang dùng được không?",
           answer:
             "Hoàn toàn được. Bạn vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK, kết nối lưu trữ sẵn có rồi mang quy trình vào dưới dạng kho Git. Không cần viết lại từ đầu — chúng tôi đồng hành cùng bạn ở từng bước.",
@@ -317,7 +321,7 @@ export const vi: Dictionary = {
         {
           question: "Tôi có cần tự chuẩn bị hạ tầng không?",
           answer:
-            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.io — không cần thẻ tín dụng.",
+            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.vn — không cần thẻ tín dụng.",
         },
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
@@ -667,28 +671,13 @@ export const vi: Dictionary = {
         "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
     },
     privacy: {
-      title: "Chính sách Bảo vệ Dữ liệu Cá nhân & Quyền riêng tư",
+      title: "Chính sách bảo mật",
       description:
         "Cách Omicslab thu thập, sử dụng, lưu trữ và bảo vệ dữ liệu cá nhân theo quy định của pháp luật Việt Nam và các tiêu chuẩn bảo mật quốc tế.",
     },
     terms: {
       title: "Điều khoản Dịch vụ",
       description: "Các điều khoản điều chỉnh việc bạn sử dụng Nền tảng Omicslab.",
-    },
-    security: {
-      title: "Bảo mật & Tuân thủ",
-      description:
-        "Hai mô hình triển khai, các biện pháp kiểm soát bảo mật và phân định trách nhiệm giữa Omicslab và khách hàng.",
-    },
-    securityCompliance: {
-      title: "Tuân thủ",
-      description:
-        "Nơi Nền tảng Omicslab được lưu trữ, pháp luật tuân theo và cam kết tuân thủ tại Việt Nam.",
-    },
-    securityResponsibility: {
-      title: "Trách nhiệm",
-      description:
-        "Ai kiểm soát từng biện pháp bảo mật trong từng mô hình triển khai của Omicslab.",
     },
   },
 };

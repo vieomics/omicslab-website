@@ -40,3 +40,5 @@ next-env.d.ts
 excalidraw
 # generated search indexes
 public/search-index*.json
+# generated policy PDFs
+/policy-pdfs/

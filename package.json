@@ -6,7 +6,9 @@
     "dev": "node scripts/build-search-index.js && next dev -p 3100",
     "build": "node scripts/build-search-index.js && next build",
     "preview": "node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "pdf:policies": "node scripts/generate-policy-pdfs.js",
+    "pdf:policies:build": "npm run build && node scripts/generate-policy-pdfs.js"
   },
   "dependencies": {
     "@expressive-code/plugin-line-numbers": "^0.44.2",
