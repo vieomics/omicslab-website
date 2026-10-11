@@ -259,7 +259,7 @@ export const vi: Dictionary = {
       subtitle: "Tương thích với",
       title: "Cloud, quy trình và công cụ bạn đang dùng",
       paragraph:
-        "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để dữ liệu nghiên cứu được giữ trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
+        "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để bạn có thể giữ dữ liệu nghiên cứu trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
       items: [
         { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
         { title: "GreenNode", detail: "Greennode (VNG Cloud) - TP.HCM" },
@@ -316,7 +316,7 @@ export const vi: Dictionary = {
         {
           question: "Nền tảng hỗ trợ những cloud và hạ tầng nào?",
           answer:
-            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ. Chúng tôi hỗ trợ sẵn CloudFly và GreenNode tại Việt Nam, cùng lưu trữ mua theo gói hoặc mang theo của riêng bạn. Việc giữ khối lượng công việc trong nước là chủ đích trong thiết kế, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
+            "Omicslab chạy được ở bất cứ đâu bạn cần: mọi cloud, cụm HPC Slurm riêng được đăng ký qua SDK, hoặc triển khai hoàn toàn tại chỗ. Chúng tôi hỗ trợ sẵn CloudFly và GreenNode tại Việt Nam, cùng lưu trữ mua theo gói hoặc mang theo của riêng bạn. Khi bạn chọn hạ tầng đặt tại Việt Nam, việc giữ khối lượng công việc trong nước được thiết kế để hỗ trợ, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP. Môi trường tự vận hành và biệt lập có thể cung cấp theo yêu cầu.",
         },
         {
           question: "Tôi có cần tự chuẩn bị hạ tầng không?",
@@ -326,7 +326,7 @@ export const vi: Dictionary = {
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
           answer:
-            "Trong dung lượng lưu trữ bạn chọn. Lưu trữ là dịch vụ lưu trữ đối tượng tương thích S3, nên có thể là CloudFly/VNG, bucket riêng của bạn, hoặc Amazon S3 — AWS Hanoi Local Zone đã hoạt động chính thức từ tháng 6 năm 2026, cho phép dữ liệu S3 được lưu tại Việt Nam. Mỗi phiên bản theo khu vực giữ dữ liệu của khách hàng trong khu vực, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu.",
+            "Trong dung lượng lưu trữ bạn chọn. Lưu trữ là dịch vụ lưu trữ đối tượng tương thích S3, nên có thể là CloudFly/VNG, bucket riêng của bạn, hoặc Amazon S3 — AWS Hanoi Local Zone đã hoạt động chính thức từ tháng 6 năm 2026, cho phép dữ liệu S3 được lưu tại Việt Nam. Với lưu trữ và tính toán do Vieomics cung cấp, phiên bản theo khu vực được thiết kế để giữ dữ liệu của khách hàng trong lãnh thổ Việt Nam, không chuyển dữ liệu qua biên giới, phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) và Nghị định 356/2025/NĐ-CP về chuyển dữ liệu xuyên biên giới và đánh giá tác động xử lý dữ liệu. Khi bạn kết nối lưu trữ, cloud hoặc máy chủ của riêng mình (BYOC), vị trí dữ liệu phụ thuộc vào hạ tầng do bạn lựa chọn và vận hành — Vieomics không kiểm soát hay bảo đảm vị trí đó.",
         },
         {
           question: "Chi phí như thế nào?",
