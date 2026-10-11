@@ -30,7 +30,7 @@ interface LegalProps {
  */
 const INLINE_PATTERN = /(\*\*[^*]+\*\*|\[[^\]]+\]\([^)]+\))/g;
 
-function Inline({ text, locale }: { text: string; locale: Locale }) {
+export function Inline({ text, locale }: { text: string; locale: Locale }) {
   const parts = text.split(INLINE_PATTERN).filter(Boolean);
 
   return (
@@ -154,7 +154,7 @@ const Legal = ({ page, pages, currentPath, locale, shared }: LegalProps) => {
           {page.notice && (
             <div className="rule-accent mt-8 max-w-[760px] bg-white/5 py-4 pr-5">
               <p className="text-sm leading-relaxed text-white">
-                {page.notice}
+                <Inline text={page.notice} locale={locale} />
               </p>
             </div>
           )}
