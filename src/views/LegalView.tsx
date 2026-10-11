@@ -1,6 +1,7 @@
 import Legal from "@/components/Legal";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
+import { policyPageRoutes } from "@/i18n/policyRoutes";
 import type { PolicyPage } from "@/i18n/dictionaries/policies/en";
 
 interface LegalViewProps {
@@ -17,16 +18,10 @@ export default function LegalView({
   path,
   page,
 }: LegalViewProps) {
-  const pages = [
-    { path: "/privacy", label: dict.policies.privacy.navTitle },
-    { path: "/terms", label: dict.policies.terms.navTitle },
-    { path: "/security", label: dict.policies.security.navTitle },
-    { path: "/security/compliance", label: dict.policies.compliance.navTitle },
-    {
-      path: "/security/responsibility",
-      label: dict.policies.responsibility.navTitle,
-    },
-  ];
+  const pages = policyPageRoutes.map((route) => ({
+    path: route.path,
+    label: dict.policies[route.key].navTitle,
+  }));
 
   return (
     <Legal

@@ -77,7 +77,7 @@ function ListItem({ item, locale }: { item: PolicyListItem; locale: Locale }) {
   );
 }
 
-function Block({ block, locale }: { block: PolicyBlock; locale: Locale }) {
+export function Block({ block, locale }: { block: PolicyBlock; locale: Locale }) {
   switch (block.type) {
     case "p":
       return (
