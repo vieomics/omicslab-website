@@ -9,6 +9,7 @@ export type PolicyPageRoute = { key: PolicyPageKey; path: string };
 export const policyPageRoutes: PolicyPageRoute[] = [
   { key: "privacy", path: "/privacy" },
   { key: "terms", path: "/terms" },
+  { key: "security", path: "/policies/security" },
   { key: "pricing", path: "/policies/pricing" },
   { key: "payment", path: "/policies/payment" },
   { key: "serviceProvision", path: "/policies/service-provision" },

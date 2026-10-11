@@ -57,6 +57,7 @@ export type Policies = {
   hub: PolicyHub;
   privacy: PolicyPage;
   terms: PolicyPage;
+  security: PolicyPage;
   pricing: PolicyPage;
   payment: PolicyPage;
   serviceProvision: PolicyPage;
@@ -72,7 +73,7 @@ export type PolicyPageKey = Exclude<keyof Policies, "shared" | "hub">;
 export const policiesEn: Policies = {
   shared: {
     lastUpdatedLabel: "Last updated",
-    lastUpdated: "11 October 2026",
+    lastUpdated: "12 October 2026",
     tocLabel: "On this page",
     policiesLabel: "Policies",
   },
@@ -716,6 +717,128 @@ export const policiesEn: Policies = {
       "The policies that govern the Omicslab Platform — including the disclosures required of an e-commerce service website under Vietnam's Ministry of Industry and Trade regulations (Decree No. 52/2013/ND-CP, as amended by Decree No. 85/2021/ND-CP).",
     intro:
       "The Omicslab Platform is a bioinformatics data analysis service operated by VIEOMICS COMPANY LIMITED. The documents below form our policy set and apply together.",
+  },
+
+  security: {
+    kicker: "Legal",
+    title: "Security & Compliance",
+    navTitle: "Security & Compliance",
+    description:
+      "How Omicslab secures the services it operates, where data is located, and how security and compliance responsibilities are shared between Vieomics and the customer.",
+    sections: [
+      {
+        id: "scope",
+        title: "Article 1. Scope of these commitments",
+        blocks: [
+          {
+            type: "p",
+            text: "This page describes the security measures, data-location rules and compliance posture of the Omicslab Platform. Our commitments apply only to the services and infrastructure **Vieomics directly operates and controls**. They do not extend to infrastructure a customer runs or connects itself, or to the layer supplied by a cloud or infrastructure provider.",
+          },
+          {
+            type: "p",
+            text: "Security is shared. The articles below distinguish what Vieomics does, what the cloud or infrastructure provider does, and what the customer does. Where a deployment is **customer-managed (self-hosted) or BYOC**, the customer operates the stack and Vieomics has no access to the environment or data unless the customer authorises it for a defined support or maintenance purpose.",
+          },
+        ],
+      },
+      {
+        id: "residency",
+        title: "Article 2. Data location and residency",
+        blocks: [
+          {
+            type: "p",
+            text: "Vieomics currently operates the Omicslab Platform only in Vietnam. **For the storage and compute that Vieomics provides, the location of storage and processing depends on the service configuration and the infrastructure region you select.** On the Vietnam region (default), data and compute provided by Vieomics are stored and processed in Vietnam.",
+          },
+          {
+            type: "p",
+            text: "**We do not represent that every resource is domestic.** The platform uses S3-compatible object storage, so a customer may connect its own bucket or use a cloud region of its choosing, and may run workloads on its own cluster. For infrastructure the customer selects, connects or operates — including Bring Your Own Cloud (BYOC) storage, compute or analysis servers, and customer-managed (self-hosted) deployments — the location of that data depends on that infrastructure, and Vieomics does not control and cannot guarantee that it is in Vietnam.",
+          },
+          {
+            type: "p",
+            text: "Because the storage and compute that Vieomics provides are located in Vietnam, no cross-border transfer of personal data arises in our current operation for those resources. Where a customer connects its own infrastructure, residency and any cross-border transfer depend on the customer's configuration, and the customer is responsible for the corresponding legal requirements. Section 10 of our [Privacy Policy](/privacy) contains the full statement.",
+          },
+        ],
+      },
+      {
+        id: "measures",
+        title: "Article 3. Security measures",
+        blocks: [
+          {
+            type: "p",
+            text: "For the services and infrastructure **Vieomics directly operates**, we implement:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Encryption of data in transit (TLS/SSL) and, where the platform directly stores it, encryption at rest for the resources Vieomics manages — using the encryption supported by the underlying infrastructure provider and configuration (for example AES-256).",
+              "Least-privilege access control (RBAC), multi-factor authentication (MFA) and system audit logs.",
+              "Workspace isolation, and separation of the control plane (job orchestration, credentials, quotas) from the data plane where technically configured.",
+              "Security monitoring and incident detection across platform-managed resources, together with regular security reviews and vulnerability assessments.",
+              "**Credential handling:** credentials used to launch jobs are encrypted and transferred securely to the execution environment; they are never shown to end users or stored in plain text there.",
+            ],
+          },
+          {
+            type: "p",
+            text: "**Cloud and infrastructure providers** are responsible for the measures in their own layer — physical and environmental security, the hypervisor, and the encryption, storage, network and logging primitives they supply — under their own terms and certifications. In a **customer-managed or BYOC deployment**, the customer is responsible for the infrastructure it operates or connects (storage, database, compute, backups, access policies, logging and the analysis environment) and for verifying that those measures meet its requirements; where data sits in storage or a database the customer runs or connects, Vieomics cannot guarantee its encryption, backup, access control or logging. We remain responsible for the security of the software we supply.",
+          },
+        ],
+      },
+      {
+        id: "compliance",
+        title: "Article 4. Standards and compliance posture",
+        blocks: [
+          {
+            type: "p",
+            text: "Vieomics operates the Platform under Vietnamese law, including the Personal Data Protection Law No. 91/2025/QH15, Decree No. 356/2025/ND-CP and the Cybersecurity Law. Administrative penalties for cybersecurity and personal data protection violations are set out in Decree No. 330/2026/ND-CP, in force since 19 August 2026.",
+          },
+          {
+            type: "p",
+            text: "Our measures are **designed toward** the GDPR (EU) and HIPAA (US) so the platform is ready for stricter requirements in the future. As of the date of this page, **Omicslab holds no certification, independent audit or accreditation** under GDPR, HIPAA or any international certification programme. We do not claim full compliance with any framework beyond the Vietnamese law under which we operate.",
+          },
+          {
+            type: "p",
+            text: "We do not warrant that the Platform satisfies every law that may apply to a customer's particular use case. The customer is responsible for determining whether its use of the Platform fits its workload and for its own compliance obligations.",
+          },
+        ],
+      },
+      {
+        id: "responsibility",
+        title: "Article 5. Allocation of responsibility",
+        blocks: [
+          {
+            type: "p",
+            text: "**Platform-managed (Marketplace).** For the application services, compute and storage that Vieomics operates, Vieomics is responsible for the security measures described in Article 3, for the data it directly stores, and for its own legal obligations. This is one of our deployment models; it is not presented as a higher- or lower-assurance model than a customer-managed deployment — the assurance a customer obtains depends on the configuration actually used.",
+          },
+          {
+            type: "p",
+            text: "**Customer-managed (self-hosted / BYOC).** The customer is responsible for the infrastructure, access control, backups, logging and security configuration it operates or connects, and for its own legal basis, consents and impact assessments. To the extent permitted by law, Vieomics is not liable for incidents arising from systems the customer manages, without limiting our own obligations under applicable law or a separate agreement.",
+          },
+          {
+            type: "p",
+            text: "**Public data scope.** The public, platform-managed (Marketplace) service is intended only for non-human data (microorganisms, plants, animals and environmental samples), simulated or benchmark data, and public data that has been lawfully published or properly de-identified after the assessment described in Section 1 of our [Privacy Policy](/privacy). Non-public sensitive personal data — including human genomic, genetic and health data — is handled only through a separate, contracted customer-managed (self-hosted) deployment.",
+          },
+        ],
+      },
+      {
+        id: "incidents",
+        title: "Article 6. Security incidents and breach notification",
+        blocks: [
+          {
+            type: "p",
+            text: "If a personal data breach affecting information Vieomics controls is detected, we activate our internal incident-response procedure and, where applicable law requires notification, notify the competent authority and/or the affected data subjects in accordance with the applicable statutory triggers, recipients and deadlines. Incident records are kept at least for the period required by applicable law after the incident has been remediated. For a customer-managed deployment, the customer is responsible for detecting and notifying incidents in its own environment.",
+          },
+        ],
+      },
+      {
+        id: "contact",
+        title: "Article 7. Contact",
+        blocks: [
+          {
+            type: "p",
+            text: "For security or compliance questions, contact us through the [Contact](/contact) page or at **contact@omicslab.io**. The data protection contact is set out in Section 13 of our [Privacy Policy](/privacy).",
+          },
+        ],
+      },
+    ],
   },
 
   pricing: {

@@ -7,7 +7,7 @@ import type { Policies } from "./en";
 export const policiesVi: Policies = {
   shared: {
     lastUpdatedLabel: "Cập nhật lần cuối",
-    lastUpdated: "11 tháng 10 năm 2026",
+    lastUpdated: "12 tháng 10 năm 2026",
     tocLabel: "Trong trang này",
     policiesLabel: "Chính sách",
   },
@@ -651,6 +651,128 @@ export const policiesVi: Policies = {
       "Các chính sách điều chỉnh Nền tảng Omicslab — bao gồm các nội dung công bố bắt buộc đối với website cung cấp dịch vụ thương mại điện tử theo quy định của Bộ Công Thương (Nghị định 52/2013/NĐ-CP, sửa đổi bởi Nghị định 85/2021/NĐ-CP).",
     intro:
       "Nền tảng Omicslab là dịch vụ phân tích dữ liệu tin sinh học do CÔNG TY TRÁCH NHIỆM HỮU HẠN VIEOMICS vận hành. Các tài liệu dưới đây hợp thành bộ chính sách và được áp dụng cùng nhau.",
+  },
+
+  security: {
+    kicker: "Pháp lý",
+    title: "Bảo mật & Tuân thủ",
+    navTitle: "Bảo mật & Tuân thủ",
+    description:
+      "Cách Omicslab bảo mật các dịch vụ do chúng tôi vận hành, vị trí lưu trữ dữ liệu và cách phân định trách nhiệm bảo mật, tuân thủ giữa Vieomics và Khách hàng.",
+    sections: [
+      {
+        id: "scope",
+        title: "Điều 1. Phạm vi các cam kết này",
+        blocks: [
+          {
+            type: "p",
+            text: "Trang này mô tả các biện pháp bảo mật, quy tắc về vị trí dữ liệu và định hướng tuân thủ của Nền tảng Omicslab. Các cam kết của chúng tôi chỉ áp dụng cho các dịch vụ và hạ tầng **do Vieomics trực tiếp vận hành và kiểm soát**. Các cam kết này không mở rộng tới hạ tầng do Khách hàng tự vận hành hoặc kết nối, cũng như tới tầng do nhà cung cấp cloud hoặc hạ tầng cung cấp.",
+          },
+          {
+            type: "p",
+            text: "Bảo mật là trách nhiệm được phân chia. Các điều dưới đây phân định rõ việc nào do Vieomics thực hiện, việc nào thuộc nhà cung cấp cloud hoặc hạ tầng, và việc nào thuộc Khách hàng. Với **mô hình do khách hàng tự quản lý (self-hosted) hoặc BYOC**, Khách hàng tự vận hành toàn bộ hệ thống và Vieomics không truy cập môi trường hay dữ liệu trừ khi Khách hàng cho phép truy cập cho một mục đích hỗ trợ hoặc bảo trì xác định.",
+          },
+        ],
+      },
+      {
+        id: "residency",
+        title: "Điều 2. Vị trí và nơi lưu trữ dữ liệu",
+        blocks: [
+          {
+            type: "p",
+            text: "Hiện tại Vieomics chỉ vận hành Nền tảng Omicslab tại Việt Nam. **Với lưu trữ và tính toán do Vieomics cung cấp, địa điểm lưu trữ và xử lý phụ thuộc vào cấu hình dịch vụ và vùng hạ tầng mà bạn lựa chọn.** Ở khu vực Việt Nam (mặc định), dữ liệu và tính toán do Vieomics cung cấp được lưu trữ và xử lý tại Việt Nam.",
+          },
+          {
+            type: "p",
+            text: "**Chúng tôi không tuyên bố rằng mọi tài nguyên đều nằm trong nước.** Nền tảng dùng lưu trữ đối tượng tương thích S3, nên Khách hàng có thể kết nối bucket riêng hoặc dùng một vùng cloud do mình lựa chọn, và có thể chạy khối lượng công việc trên cụm của riêng mình. Với hạ tầng do Khách hàng lựa chọn, kết nối hoặc vận hành — bao gồm lưu trữ, tính toán hoặc máy chủ phân tích theo mô hình Bring Your Own Cloud (BYOC), và mô hình do khách hàng tự quản lý (self-hosted) — vị trí dữ liệu phụ thuộc vào hạ tầng đó, và Vieomics không kiểm soát cũng không thể bảo đảm dữ liệu nằm tại Việt Nam.",
+          },
+          {
+            type: "p",
+            text: "Vì lưu trữ và tính toán do Vieomics cung cấp được đặt tại Việt Nam, việc chuyển dữ liệu cá nhân xuyên biên giới không phát sinh trong hoạt động hiện tại đối với các tài nguyên đó. Khi Khách hàng kết nối hạ tầng của riêng mình, nơi lưu trữ và mọi chuyển dữ liệu xuyên biên giới phụ thuộc vào cấu hình của Khách hàng, và Khách hàng chịu trách nhiệm về các yêu cầu pháp lý tương ứng. Mục 10 [Chính sách bảo mật](/privacy) nêu đầy đủ nội dung này.",
+          },
+        ],
+      },
+      {
+        id: "measures",
+        title: "Điều 3. Biện pháp bảo mật",
+        blocks: [
+          {
+            type: "p",
+            text: "Với các dịch vụ và hạ tầng **do Vieomics trực tiếp vận hành**, chúng tôi áp dụng:",
+          },
+          {
+            type: "ul",
+            items: [
+              "Mã hóa dữ liệu trên đường truyền (TLS/SSL) và, khi nền tảng trực tiếp lưu trữ, mã hóa khi lưu trữ cho các tài nguyên do Vieomics quản lý — sử dụng phương thức mã hóa mà nhà cung cấp hạ tầng và cấu hình tương ứng hỗ trợ (ví dụ AES-256).",
+              "Phân quyền truy cập tối thiểu (RBAC), xác thực đa yếu tố (MFA) và ghi nhật ký hệ thống (Audit Logs).",
+              "Cô lập theo từng Workspace, và tách biệt tầng điều khiển (điều phối job, thông tin xác thực, hạn ngạch) khỏi tầng dữ liệu khi được cấu hình về mặt kỹ thuật.",
+              "Giám sát an ninh và phát hiện sự cố trên các tài nguyên do nền tảng quản lý, cùng việc rà soát và đánh giá lỗ hổng bảo mật định kỳ.",
+              "**Quản lý thông tin xác thực:** thông tin xác thực dùng để khởi chạy công việc được mã hóa và truyền an toàn tới môi trường thực thi; không hiển thị cho người dùng cuối và không lưu dưới dạng plain-text tại đó.",
+            ],
+          },
+          {
+            type: "p",
+            text: "**Nhà cung cấp cloud và hạ tầng** chịu trách nhiệm cho các biện pháp thuộc tầng của họ — an ninh vật lý và môi trường, lớp ảo hóa (hypervisor), và các nguyên tắc mã hóa, lưu trữ, mạng và ghi log mà họ cung cấp — theo điều khoản và chứng nhận của chính họ. Trong **mô hình do khách hàng tự quản lý hoặc BYOC**, Khách hàng chịu trách nhiệm cho hạ tầng do mình vận hành hoặc kết nối (lưu trữ, cơ sở dữ liệu, tính toán, sao lưu, chính sách truy cập, ghi log và môi trường phân tích) và chịu trách nhiệm xác minh rằng các biện pháp đó đáp ứng yêu cầu của mình; khi dữ liệu nằm trong lưu trữ hoặc cơ sở dữ liệu do Khách hàng vận hành hay kết nối, Vieomics không thể bảo đảm việc mã hóa, sao lưu, kiểm soát truy cập hay ghi log của hệ thống đó. Chúng tôi vẫn chịu trách nhiệm về bảo mật của phần mềm do chúng tôi cung cấp.",
+          },
+        ],
+      },
+      {
+        id: "compliance",
+        title: "Điều 4. Tiêu chuẩn và định hướng tuân thủ",
+        blocks: [
+          {
+            type: "p",
+            text: "Vieomics vận hành Nền tảng theo pháp luật Việt Nam, bao gồm Luật Bảo vệ dữ liệu cá nhân số 91/2025/QH15, Nghị định 356/2025/NĐ-CP và Luật An ninh mạng. Xử phạt vi phạm trong lĩnh vực an ninh mạng và bảo vệ dữ liệu cá nhân được quy định tại Nghị định 330/2026/NĐ-CP, có hiệu lực từ ngày 19 tháng 8 năm 2026.",
+          },
+          {
+            type: "p",
+            text: "Các biện pháp của chúng tôi được **thiết kế theo hướng** phù hợp với GDPR (EU) và HIPAA (Hoa Kỳ) để nền tảng sẵn sàng cho các yêu cầu nghiêm ngặt hơn trong tương lai. Tính đến ngày của trang này, **Omicslab chưa được chứng nhận, đánh giá độc lập hoặc công nhận** theo GDPR, HIPAA hay bất kỳ chương trình chứng nhận quốc tế nào. Chúng tôi không tuyên bố tuân thủ đầy đủ bất kỳ khuôn khổ nào ngoài pháp luật Việt Nam mà chúng tôi đang vận hành theo.",
+          },
+          {
+            type: "p",
+            text: "Chúng tôi không bảo đảm Nền tảng đáp ứng mọi luật có thể áp dụng cho trường hợp sử dụng cụ thể của Khách hàng. Khách hàng chịu trách nhiệm xác định việc sử dụng Nền tảng cho khối lượng công việc của mình có phù hợp hay không, cũng như các nghĩa vụ tuân thủ của riêng mình.",
+          },
+        ],
+      },
+      {
+        id: "responsibility",
+        title: "Điều 5. Phân định trách nhiệm",
+        blocks: [
+          {
+            type: "p",
+            text: "**Do nền tảng quản lý (Marketplace).** Với các dịch vụ ứng dụng, tính toán và lưu trữ do Vieomics vận hành, Vieomics chịu trách nhiệm về các biện pháp bảo mật nêu tại Điều 3, về dữ liệu do mình trực tiếp lưu trữ, và về các nghĩa vụ pháp lý của chính mình. Đây là một trong các mô hình triển khai của chúng tôi; mô hình này không được trình bày như có mức bảo đảm cao hơn hay thấp hơn mô hình do khách hàng tự quản lý — mức bảo đảm mà Khách hàng có được phụ thuộc vào cấu hình thực tế đang dùng.",
+          },
+          {
+            type: "p",
+            text: "**Do khách hàng tự quản lý (self-hosted / BYOC).** Khách hàng chịu trách nhiệm về hạ tầng, kiểm soát truy cập, sao lưu, ghi log và cấu hình bảo mật do mình vận hành hoặc kết nối, cùng căn cứ pháp lý, sự đồng ý và đánh giá tác động của chính mình. Trong giới hạn pháp luật cho phép, Vieomics không chịu trách nhiệm đối với sự cố phát sinh từ hệ thống do Khách hàng tự quản lý, mà không làm hạn chế các nghĩa vụ của chính chúng tôi theo pháp luật hiện hành hoặc theo thỏa thuận riêng.",
+          },
+          {
+            type: "p",
+            text: "**Phạm vi dữ liệu công khai.** Dịch vụ công khai do nền tảng quản lý (Marketplace) chỉ dành cho dữ liệu phi người (vi sinh vật, thực vật, động vật và mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách sau khi đánh giá như nêu tại Mục 1 [Chính sách bảo mật](/privacy). Dữ liệu cá nhân nhạy cảm chưa được công bố công khai — bao gồm dữ liệu bộ gen người, dữ liệu di truyền và dữ liệu sức khỏe — chỉ được xử lý thông qua mô hình do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng.",
+          },
+        ],
+      },
+      {
+        id: "incidents",
+        title: "Điều 6. Sự cố bảo mật và thông báo vi phạm dữ liệu",
+        blocks: [
+          {
+            type: "p",
+            text: "Khi phát hiện sự cố rò rỉ, mất mát hoặc truy cập trái phép dữ liệu cá nhân thuộc phạm vi Vieomics kiểm soát, chúng tôi kích hoạt quy trình ứng phó sự cố nội bộ và, khi pháp luật áp dụng yêu cầu thông báo, thông báo cho cơ quan có thẩm quyền và/hoặc chủ thể dữ liệu bị ảnh hưởng theo đúng mốc thời hạn, đối tượng và điều kiện phát sinh nghĩa vụ theo quy định pháp luật hiện hành. Hồ sơ vụ việc được lưu trữ ít nhất trong thời hạn mà pháp luật yêu cầu kể từ ngày khắc phục xong sự cố. Với mô hình do khách hàng tự quản lý, Khách hàng chịu trách nhiệm phát hiện và thông báo sự cố trong môi trường của mình.",
+          },
+        ],
+      },
+      {
+        id: "contact",
+        title: "Điều 7. Thông tin liên hệ",
+        blocks: [
+          {
+            type: "p",
+            text: "Mọi câu hỏi về bảo mật hoặc tuân thủ, vui lòng liên hệ qua trang [Liên hệ](/contact) hoặc tới **contact@omicslab.io**. Đầu mối bảo vệ dữ liệu được nêu tại Mục 13 [Chính sách bảo mật](/privacy).",
+          },
+        ],
+      },
+    ],
   },
 
   pricing: {
