@@ -259,7 +259,7 @@ export const en = {
       subtitle: "Works with",
       title: "Clouds, Pipelines and Tools You Already Use",
       paragraph:
-        "Built to work with any cloud and any storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so your research data stays in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
+        "Built to work with any cloud and any storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so you can keep your research data in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
         { title: "GreenNode", detail: "Greennode (VNG Cloud) - Ho Chi Minh City" },
@@ -316,7 +316,7 @@ export const en = {
         {
           question: "Which clouds and infrastructure are supported?",
           answer:
-            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster registered via the SDK, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and storage you can buy by quota or bring yourself, including CloudFly/VNG object storage and your own buckets. Keeping workloads in-country is by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
+            "Omicslab runs wherever you do: any cloud, your own Slurm HPC cluster registered via the SDK, or a fully on-premises deployment — with native provisioning for Vietnam's CloudFly and GreenNode, and storage you can buy by quota or bring yourself, including CloudFly/VNG object storage and your own buckets. Where you choose infrastructure located in Vietnam, keeping workloads in-country is supported by design, aligning with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP. Air-gapped and self-hosted environments are available on request.",
         },
         {
           question: "Do I need my own compute and storage?",
@@ -326,7 +326,7 @@ export const en = {
         {
           question: "Where is my data stored?",
           answer:
-            "In the storage you choose. Storage is S3-compatible object storage, so it can be CloudFly/VNG, your own bucket, or Amazon S3 — the AWS Hanoi Local Zone has been generally available since June 2026, letting S3 data be stored inside Vietnam. Each regional instance keeps customer data inside the region with no cross-border transfer, a design that supports compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment.",
+            "In the storage you choose. Storage is S3-compatible object storage, so it can be CloudFly/VNG, your own bucket, or Amazon S3 — the AWS Hanoi Local Zone has been generally available since June 2026, letting S3 data be stored inside Vietnam. For the storage and compute that Vieomics provides, the regional instance is designed to keep customer data inside Vietnam with no cross-border transfer, supporting compliance with Vietnam's Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP on cross-border transfer and data-processing impact assessment. Where you connect your own storage, cloud or servers (BYOC), the location of that data depends on the infrastructure you choose and operate — Vieomics does not control or guarantee it.",
         },
         {
           question: "How much does it cost?",
