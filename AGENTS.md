@@ -61,7 +61,7 @@ npm run lint       # ESLint
 - Content lives in `src/i18n/dictionaries/policies/{en,vi}.ts`, wired into both dictionaries as the `policies` key (`vi.ts` is typed as `Policies`, so a missing translation fails the build). Section titles use `Điều N.` (vi) / `Article N.` (en).
 - `src/i18n/policyRoutes.ts` is the single ordered list of policy pages; it drives the legal sidebar, the `/policies` hub and the sitemap.
 - Long-form copy uses light inline markup — `**bold**` and `[label](/path)` — rendered by `src/components/Legal/index.tsx`, which localises every link with `localizeHref`
-- Routes (each in `(vi)` and `en`): `/privacy`, `/terms`, `/policies` (hub), and `/policies/[doc]` for `pricing`, `payment`, `service-provision`, `conditions`, `rights-obligations`, `complaints`, `support`. The `[doc]` route uses `generateStaticParams`; pages wrap `src/views/LegalView.tsx` / `src/components/Legal/PolicyHub.tsx`
+- Routes (each in `(vi)` and `en`): `/privacy`, `/terms`, `/policies` (hub), and `/policies/[doc]` for `security`, `pricing`, `payment`, `service-provision`, `conditions`, `rights-obligations`, `complaints`, `support`. The `[doc]` route uses `generateStaticParams`; pages wrap `src/views/LegalView.tsx` / `src/components/Legal/PolicyHub.tsx`
 - The set mirrors the Bộ Công Thương-approved per-policy model (one page per policy, `Điều N.` articles), keeping Omicslab/Vieomics specifics
 - Linked from the footer and listed in `src/app/sitemap.ts`
 - `(print)/legal/[doc]` renders a chrome-free standalone document per policy (`noindex`, excluded from the sitemap). Run `npm run build && npm run pdf:policies` to export the 4 upload PDFs (privacy, complaints, pricing, payment) to `policy-pdfs/` for the e-commerce notification portal

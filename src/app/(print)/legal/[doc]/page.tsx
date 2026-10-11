@@ -13,6 +13,7 @@ const dict = getDictionary("vi");
 const documents: Record<string, PolicyPage> = {
   privacy: dict.policies.privacy,
   terms: dict.policies.terms,
+  security: dict.policies.security,
   pricing: dict.policies.pricing,
   payment: dict.policies.payment,
   "service-provision": dict.policies.serviceProvision,
