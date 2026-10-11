@@ -282,23 +282,23 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "We apply technical and operational security measures to protect the personal data and service data we hold on the systems Vieomics manages:",
+            text: "Security is shared between the parties. For the services and infrastructure **Vieomics directly operates and controls**, we implement the technical and operational measures below to protect the personal data and service data we hold there:",
           },
           {
             type: "ul",
             items: [
-              "Encryption of data in transit (TLS/SSL) and at rest for the services Vieomics manages.",
+              "Encryption of data in transit (TLS/SSL) and, where the platform directly stores it, encryption at rest for the services and resources Vieomics manages — using the encryption supported by the underlying infrastructure provider and configuration (for example AES-256).",
               "Least-privilege access control (RBAC), multi-factor authentication (MFA) and system audit logs.",
               "Workspace isolation, and separation of customer mapping keys from the analysis environment where technically configured.",
               "Security monitoring and incident detection across platform-managed resources, together with regular security reviews and vulnerability assessments.",
               "Only assigned personnel bound by strict confidentiality obligations may access technical support information, and only upon your written request.",
-              "**Credential handling:** credentials used to launch jobs are encrypted and transferred securely to the execution environment; they are never shown to end users or stored in plain text.",
+              "**Credential handling:** in the services Vieomics directly operates, credentials used to launch jobs are encrypted and transferred securely to the execution environment; they are never shown to end users or stored in plain text there.",
               "**Architecture separation:** the control plane (job orchestration, credentials, quotas) is kept separate from the data plane.",
             ],
           },
           {
             type: "p",
-            text: "These controls apply to the services and infrastructure Vieomics actually operates. In a **customer-managed deployment**, you are responsible for configuring and operating the security of your own infrastructure — including credentials, access policies, backups and the analysis environment — while we are responsible for the security of the software we supply.",
+            text: "These controls apply only to the services and infrastructure **Vieomics directly operates and controls**. **Cloud and infrastructure providers** are responsible for the measures in their own layer — physical and environmental security, the hypervisor, and the encryption, storage, network and logging primitives they supply — under their own terms and certifications. In a **customer-managed or BYOC deployment**, **you** are responsible for the infrastructure you operate or connect (your S3-compatible storage, database, compute, backups, access policies, logging and the analysis environment) and for verifying that those measures meet your requirements; where data sits in storage or a database you run or connect, Vieomics cannot guarantee the encryption, backup, access control or logging of that system. We remain responsible for the security of the software we supply.",
           },
           {
             type: "p",
@@ -369,11 +369,11 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Vieomics currently operates the Omicslab Platform only in Vietnam, not abroad. For the Vietnam region (default), data and compute provided by Vieomics are stored and processed in Vietnam.",
+            text: "Vieomics currently operates the Omicslab Platform only in Vietnam, not abroad. **For services and infrastructure that Vieomics provides, the location of storage and processing depends on the service configuration and the infrastructure region you select.** On the Vietnam region (default), data and compute provided by Vieomics are stored and processed in Vietnam (see the table below).",
           },
           {
             type: "p",
-            text: "The Platform also supports a global region for Vietnamese people or persons living in Vietnam, and multinational collaboration; in that region, **data and compute remain located in Vietnam**, and users simply access from abroad. Because data and compute provided by Vieomics are located in Vietnam, no transfer of personal data abroad arises in our current operation.",
+            text: "The Platform also supports a global region for Vietnamese people or persons living in Vietnam, and multinational collaboration; for services and infrastructure provided by Vieomics, data and compute remain located in Vietnam and users simply access from abroad. Because data and compute provided by Vieomics are located in Vietnam, no transfer of personal data abroad arises in our current operation. For infrastructure you operate or connect yourself, the location depends on your configuration, as described below.",
           },
           {
             type: "table",
@@ -435,7 +435,7 @@ export const policiesEn: Policies = {
               "Platform-managed (Marketplace)",
             ],
             rows: [
-              ["Data storage", "Your own cloud / object storage infrastructure", "Encrypted AES-256 storage on the platform (partitioned per workspace)"],
+              ["Data storage", "Your own cloud / object storage infrastructure", "Storage partitioned per workspace; encryption at rest for resources the platform directly operates, using the encryption supported by the underlying provider and configuration (for example AES-256)"],
               ["Version control", "Your own source repository (GitHub)", "Source repositories integrated in the Marketplace"],
               ["Compute infrastructure", "Your own HPC / cloud cluster", "Compute infrastructure managed directly by Omicslab"],
               ["Infrastructure access", "Managed by the customer", "Managed by the platform"],
@@ -454,6 +454,10 @@ export const policiesEn: Policies = {
               "**Audit transparency:** audit logging maintained to support security review.",
               "**Vulnerability management:** security incident and misconfiguration reports are received and patched promptly.",
             ],
+          },
+          {
+            type: "p",
+            text: "The commitments above apply only to the resources **Vieomics directly operates**. Cloud and infrastructure providers are responsible for their own layer, and where you operate or connect your own infrastructure (BYOC) its encryption, backup, access control and logging are your responsibility — Vieomics cannot guarantee them.",
           },
           { type: "label", text: "Mandatory customer responsibilities" },
           {
@@ -570,7 +574,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account. You agree to notify us immediately of any unauthorised access or suspected breach. We employ industry-standard security controls — including encryption in transit and at rest, access control and audit logging — but no system is impenetrable, and you must take reasonable steps to protect your own credentials. Details are published in our [E-commerce Policies](/policies).",
+            text: "You are responsible for maintaining the confidentiality of your credentials and for all activity that occurs under your account. You agree to notify us immediately of any unauthorised access or suspected breach. We employ industry-standard security controls for the services and infrastructure we directly operate — including encryption in transit and at rest, access control and audit logging — but no system is impenetrable, and you must take reasonable steps to protect your own credentials. Where you operate or connect your own infrastructure (BYOC), its encryption, backup, access control and logging are your responsibility and that of your providers; Vieomics cannot guarantee them. Details are published in our [E-commerce Policies](/policies).",
           },
         ],
       },
@@ -604,7 +608,7 @@ export const policiesEn: Policies = {
             items: [
               "**Lawfulness:** we process personal data only on a valid legal basis — consent, contract, legal obligation, or legitimate interests.",
               "**Data minimisation:** we collect only what is necessary to operate the Platform.",
-              "**Security:** technical and organisational measures protect personal data against unauthorised access, loss or alteration.",
+              "**Security:** technical and organisational measures protect personal data against unauthorised access, loss or alteration within the services Vieomics directly operates; for infrastructure you operate or connect (BYOC), security is your responsibility.",
               "**Your rights:** you may exercise rights of access, rectification, erasure, restriction, portability and objection — see our [Privacy Policy](/privacy) for details.",
             ],
           },
