@@ -72,7 +72,7 @@ export type PolicyPageKey = Exclude<keyof Policies, "shared" | "hub">;
 export const policiesEn: Policies = {
   shared: {
     lastUpdatedLabel: "Last updated",
-    lastUpdated: "10 October 2026",
+    lastUpdated: "11 October 2026",
     tocLabel: "On this page",
     policiesLabel: "Policies",
   },
@@ -84,7 +84,7 @@ export const policiesEn: Policies = {
     description:
       "Welcome to the Omicslab bioinformatics data analysis platform, a product operated by VIEOMICS COMPANY LIMITED. We are committed to protecting your personal data and the data you process on the Platform in accordance with Vietnamese law (the Personal Data Protection Law No. 91/2025/QH15, Decree No. 356/2025/ND-CP and the Cybersecurity Law) and international security standards.",
     notice:
-      "The public Omicslab Platform (cloud) does not accept and does not process non-public sensitive personal data of individuals in Vietnam, including human genomic and health-related data. For such data, the customer must contact us for a separate, contracted customer-managed (self-hosted) deployment: we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team how to set it up, while the customer itself runs, analyses, stores and manages the data. Vieomics provides the software and support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law. Publicly available human data is not automatically anonymous: lawfully published or properly de-identified data may be processed on the public Platform only after an assessment of its source, access conditions and privacy risk (see Section 1).",
+      "The public Omicslab Platform (cloud) does not accept and does not process non-public sensitive personal data of individuals in Vietnam, including human genomic and health-related data. For such data, the customer must contact us for a separate, contracted customer-managed (self-hosted) deployment: we deliver and deploy the Platform software onto the customer’s own infrastructure and instruct the customer’s team how to set it up, while the customer itself runs, analyses, stores and manages the data. Vieomics provides the software and support within the agreed service scope and does not access this data. Responsibility for personal data follows the actual processing activities, the access granted, the purposes of processing and applicable law. Publicly available human data is not automatically anonymous: lawfully published or properly de-identified data may be processed on the public Platform only after an assessment of its source, access conditions and privacy risk (see Section 1). The public Platform is otherwise intended for non-human data (microorganisms, plants, animals and environmental samples) and simulated or benchmark data, as described in Section 1.",
     sections: [
       {
         id: "controller",
@@ -164,7 +164,7 @@ export const policiesEn: Policies = {
           },
           {
             type: "p",
-            text: "Omicslab builds a trusted operating layer for scientific computing and is offered through different deployment models. **Platform-Managed (Marketplace):** Omicslab provides and manages the application services, compute and storage that we operate, and processes data within that infrastructure on your instructions. **Customer-Managed (self-hosted / Bring Your Own Infrastructure):** you deploy and operate the complete Omicslab stack — frontend, backend and APIs, application database, object storage and other storage, compute and workflow execution, pipelines and third-party analysis tools, plus your credentials, access policies, backups and operational security — on infrastructure you own or control. We supply the software, documentation, technical guidance, updates and support for the service you purchased, and we do not access your environment or data unless you authorise access for a defined support or maintenance purpose.",
+            text: "Omicslab builds a trusted operating layer for scientific computing and is offered through different deployment models. **Platform-Managed (Marketplace):** Omicslab provides and manages the application services, compute and storage that we operate, and processes data within that infrastructure on your instructions. **Customer-Managed (self-hosted / Bring Your Own Infrastructure):** you deploy and operate the complete Omicslab stack — frontend, backend and APIs, application database, object storage and other storage, compute and workflow execution, pipelines and third-party analysis tools, plus your credentials, access policies, backups and operational security — on infrastructure you own or control. We supply the software, documentation, technical guidance, updates and support for the service you purchased, and we do not access your environment or data unless you authorise access for a defined support or maintenance purpose. The public, platform-managed (Marketplace) service is intended only for non-human data (microorganisms, plants, animals and environmental samples), simulated or benchmark data, and public data that has been lawfully published or properly de-identified — the latter only after the assessment described in this Section. Non-public sensitive personal data — including human genomic, genetic and health data — must not be uploaded to the public Platform and is handled only through a separate, contracted customer-managed (self-hosted) deployment.",
           },
         ],
       },
@@ -424,6 +424,10 @@ export const policiesEn: Policies = {
             text: "Security is a shared responsibility. The table below shows who controls each area for each deployment model.",
           },
           {
+            type: "p",
+            text: "**Data accepted on each model.** The public, platform-managed (Marketplace) service is intended only for non-human data (microorganisms, plants, animals and environmental samples), simulated or benchmark data, and public data that has been lawfully published or properly de-identified after the assessment described in Section 1. The platform security commitments below apply only to that data. Non-public sensitive personal data — including human genomic, genetic and health data — must not be uploaded to the public Platform and is handled only through a separate, contracted customer-managed (self-hosted) deployment.",
+          },
+          {
             type: "table",
             head: [
               "Control / Infrastructure",
@@ -456,7 +460,7 @@ export const policiesEn: Policies = {
             type: "ul",
             items: [
               "**Account security:** protect your login credentials and enforce strong authentication (MFA/2FA) across your organization.",
-              "**Legal and ethical compliance:** obtain full approval from an ethics board (IRB), voluntary informed consent from data subjects and any other lawful rights required before processing human genomic or health data.",
+              "**Legal and ethical compliance:** where you process human genomic or health data, do so only in a customer-managed (self-hosted) environment, and obtain full approval from an ethics board (IRB), voluntary informed consent from data subjects and any other lawful rights required. Such data must not be processed on the public Platform.",
               "**Data access control:** classify your data and set appropriate access permissions for each workspace and storage resource.",
               "**Backup and validation:** maintain independent backups and take responsibility for validating analysis outputs under your organization’s own research data management policy.",
             ],
@@ -489,7 +493,7 @@ export const policiesEn: Policies = {
     title: "Terms of Service",
     navTitle: "Terms of Service",
     description:
-      "These Terms govern your use of the Omicslab Platform, a bioinformatics platform for storing, analysing and sharing biological research data. Non-public human genomic and health data is not processed on the public cloud Platform; it is handled through customer-managed deployments (see Section 3).",
+      "These Terms govern your use of the Omicslab Platform, a bioinformatics platform for storing, analysing and sharing biological research data. The public Platform is intended only for non-human data, simulated or benchmark data, and lawfully published or properly de-identified public data. Non-public human genomic and health data is not processed on the public cloud Platform; it is handled through customer-managed deployments (see Section 3).",
     notice:
       "By accessing or using the Omicslab Platform, you agree to be bound by these Terms of Service. If you do not agree, do not use the Platform.",
     sections: [
@@ -523,7 +527,7 @@ export const policiesEn: Policies = {
         blocks: [
           {
             type: "p",
-            text: "The public Platform is **not intended for non-public sensitive personal data** and does not accept or process it. You must not upload non-public sensitive personal data of individuals in Vietnam to the public Platform, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law. Data that has been lawfully published and made openly accessible, or properly de-identified such that re-identification is not reasonably possible, may in limited cases be processed on the public Platform, but only where its source, access conditions, licence and privacy risk have been assessed — public availability alone does not make data anonymous.",
+            text: "The public Platform is **not intended for non-public sensitive personal data** and does not accept or process it. You must not upload non-public sensitive personal data of individuals in Vietnam to the public Platform, including human genomic, genetic, health-related and other special-category data as defined under Vietnamese law. Data that has been lawfully published and made openly accessible, or properly de-identified such that re-identification is not reasonably possible, may in limited cases be processed on the public Platform, but only where its source, access conditions, licence and privacy risk have been assessed — public availability alone does not make data anonymous. Accordingly, the public Platform is intended only for non-human data (microorganisms, plants, animals and environmental samples), simulated or benchmark data, and lawfully published or properly de-identified public data that has passed that assessment.",
           },
           {
             type: "p",
@@ -884,6 +888,10 @@ export const policiesEn: Policies = {
             type: "p",
             text: "We may require additional information or documents to verify a customer during registration or use of the service.",
           },
+          {
+            type: "p",
+            text: "**Data permitted on the public service.** The public, platform-managed (Marketplace) service may only be used with non-human data (microorganisms, plants, animals and environmental samples), simulated or benchmark data, and public data that has been lawfully published or properly de-identified. Non-public sensitive personal data of individuals in Vietnam — including human genomic, genetic and health data — must not be uploaded to the public service and is handled only through a separate, contracted customer-managed (self-hosted) deployment, as described in our [Privacy Policy](/privacy) and [Terms of Service](/terms).",
+          },
         ],
       },
       {
@@ -1019,7 +1027,7 @@ export const policiesEn: Policies = {
           {
             type: "ul",
             items: [
-              "Store, manage and analyse non-human research data (microorganisms, plants, animals, environmental samples) and other workloads within your subscribed plans.",
+              "Store, manage and analyse non-human research data (microorganisms, plants, animals, environmental samples), simulated or benchmark data, and public data that has been lawfully published or properly de-identified — within your subscribed plans. Non-public sensitive personal data of individuals in Vietnam is not permitted on the public Platform.",
               "Integrate the Platform's API and tooling with your own website, application or internal systems.",
               "Synchronise analysis results and metadata with your own management software or systems.",
             ],

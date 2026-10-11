@@ -7,7 +7,7 @@ import type { Policies } from "./en";
 export const policiesVi: Policies = {
   shared: {
     lastUpdatedLabel: "Cập nhật lần cuối",
-    lastUpdated: "10 tháng 10 năm 2026",
+    lastUpdated: "11 tháng 10 năm 2026",
     tocLabel: "Trong trang này",
     policiesLabel: "Chính sách",
   },
@@ -99,7 +99,7 @@ export const policiesVi: Policies = {
           },
           {
             type: "p",
-            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy cho điện toán khoa học và được cung cấp qua nhiều mô hình triển khai khác nhau. **Do nền tảng quản lý (Marketplace):** Omicslab cung cấp và quản lý các dịch vụ ứng dụng, tính toán và lưu trữ do chúng tôi vận hành, và xử lý dữ liệu trong hạ tầng đó theo chỉ dẫn của bạn. **Do khách hàng tự quản lý (self-hosted / Bring Your Own Infrastructure):** bạn triển khai và vận hành toàn bộ hệ thống Omicslab — frontend, backend và API, cơ sở dữ liệu ứng dụng, lưu trữ đối tượng và các lưu trữ khác, hạ tầng tính toán và môi trường thực thi quy trình, các pipeline và công cụ phân tích bên thứ ba, cùng thông tin xác thực, chính sách truy cập, sao lưu và bảo mật vận hành của bạn — trên hạ tầng do bạn sở hữu hoặc kiểm soát. Chúng tôi cung cấp phần mềm, tài liệu, hướng dẫn kỹ thuật, cập nhật và hỗ trợ cho dịch vụ bạn đã mua, và không truy cập môi trường hay dữ liệu của bạn trừ khi bạn cho phép truy cập cho một mục đích hỗ trợ hoặc bảo trì xác định.",
+            text: "Omicslab xây dựng một lớp vận hành đáng tin cậy cho điện toán khoa học và được cung cấp qua nhiều mô hình triển khai khác nhau. **Do nền tảng quản lý (Marketplace):** Omicslab cung cấp và quản lý các dịch vụ ứng dụng, tính toán và lưu trữ do chúng tôi vận hành, và xử lý dữ liệu trong hạ tầng đó theo chỉ dẫn của bạn. **Do khách hàng tự quản lý (self-hosted / Bring Your Own Infrastructure):** bạn triển khai và vận hành toàn bộ hệ thống Omicslab — frontend, backend và API, cơ sở dữ liệu ứng dụng, lưu trữ đối tượng và các lưu trữ khác, hạ tầng tính toán và môi trường thực thi quy trình, các pipeline và công cụ phân tích bên thứ ba, cùng thông tin xác thực, chính sách truy cập, sao lưu và bảo mật vận hành của bạn — trên hạ tầng do bạn sở hữu hoặc kiểm soát. Chúng tôi cung cấp phần mềm, tài liệu, hướng dẫn kỹ thuật, cập nhật và hỗ trợ cho dịch vụ bạn đã mua, và không truy cập môi trường hay dữ liệu của bạn trừ khi bạn cho phép truy cập cho một mục đích hỗ trợ hoặc bảo trì xác định. Dịch vụ công khai do nền tảng quản lý (Marketplace) chỉ dành cho dữ liệu phi người (vi sinh vật, thực vật, động vật và mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách — nhóm sau chỉ sau khi đánh giá như nêu tại Mục này. Dữ liệu cá nhân nhạy cảm chưa được công bố công khai — bao gồm dữ liệu bộ gen người, dữ liệu di truyền và dữ liệu sức khỏe — không được tải lên Nền tảng công khai và chỉ được xử lý thông qua mô hình do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng.",
           },
         ],
       },
@@ -359,6 +359,10 @@ export const policiesVi: Policies = {
             text: "Bảo mật là trách nhiệm chung. Bảng dưới đây nêu rõ bên nào kiểm soát từng hạng mục trong mỗi mô hình triển khai.",
           },
           {
+            type: "p",
+            text: "**Dữ liệu được chấp nhận theo từng mô hình.** Dịch vụ công khai do nền tảng quản lý (Marketplace) chỉ dành cho dữ liệu phi người (vi sinh vật, thực vật, động vật và mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách sau khi đánh giá như nêu tại Mục 1. Các cam kết bảo mật của Nền tảng dưới đây chỉ áp dụng cho nhóm dữ liệu đó. Dữ liệu cá nhân nhạy cảm chưa được công bố công khai — bao gồm dữ liệu bộ gen người, dữ liệu di truyền và dữ liệu sức khỏe — không được tải lên Nền tảng công khai và chỉ được xử lý thông qua mô hình do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng.",
+          },
+          {
             type: "table",
             head: [
               "Hạng mục / Hạ tầng",
@@ -391,7 +395,7 @@ export const policiesVi: Policies = {
             type: "ul",
             items: [
               "**Bảo mật tài khoản:** bảo vệ thông tin đăng nhập và bắt buộc áp dụng các biện pháp xác thực mạnh (MFA/2FA) trong tổ chức.",
-              "**Tuân thủ pháp lý và đạo đức:** đạt được đầy đủ chấp thuận từ Hội đồng Đạo đức (IRB), sự đồng ý tự nguyện của chủ thể dữ liệu (Informed Consent) và các quyền hợp pháp cần thiết trước khi xử lý dữ liệu bộ gen hoặc dữ liệu sức khỏe con người.",
+              "**Tuân thủ pháp lý và đạo đức:** khi xử lý dữ liệu bộ gen hoặc dữ liệu sức khỏe con người, bạn phải chỉ thực hiện trong môi trường do khách hàng tự quản lý (self-hosted), đồng thời đạt được đầy đủ chấp thuận từ Hội đồng Đạo đức (IRB), sự đồng ý tự nguyện của chủ thể dữ liệu (Informed Consent) và các quyền hợp pháp cần thiết. Loại dữ liệu này không được xử lý trên Nền tảng công khai.",
               "**Phân quyền dữ liệu:** chủ động phân loại dữ liệu và thiết lập quyền truy cập phù hợp cho từng Workspace cũng như tài nguyên lưu trữ.",
               "**Sao lưu và kiểm chứng:** tự duy trì bản sao lưu dự phòng độc lập và tự chịu trách nhiệm kiểm chứng kết quả phân tích theo chính sách quản trị dữ liệu nghiên cứu của tổ chức mình.",
             ],
@@ -424,7 +428,7 @@ export const policiesVi: Policies = {
     title: "Điều khoản Dịch vụ",
     navTitle: "Điều khoản Dịch vụ",
     description:
-      "Các Điều khoản này điều chỉnh việc bạn sử dụng Nền tảng Omicslab — nền tảng tin sinh học để lưu trữ, phân tích và chia sẻ dữ liệu nghiên cứu sinh học. Dữ liệu bộ gen và dữ liệu sức khỏe của người chưa được công bố công khai không được xử lý trên Nền tảng cloud công khai; loại dữ liệu này được xử lý thông qua mô hình triển khai do khách hàng tự quản lý (xem Mục 3).",
+      "Các Điều khoản này điều chỉnh việc bạn sử dụng Nền tảng Omicslab — nền tảng tin sinh học để lưu trữ, phân tích và chia sẻ dữ liệu nghiên cứu sinh học. Nền tảng công khai chỉ dành cho dữ liệu phi người, dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách. Dữ liệu bộ gen và dữ liệu sức khỏe của người chưa được công bố công khai không được xử lý trên Nền tảng cloud công khai; loại dữ liệu này được xử lý thông qua mô hình triển khai do khách hàng tự quản lý (xem Mục 3).",
     notice:
       "Khi truy cập hoặc sử dụng Nền tảng Omicslab, bạn đồng ý bị ràng buộc bởi các Điều khoản Dịch vụ này. Nếu không đồng ý, vui lòng không sử dụng Nền tảng.",
     sections: [
@@ -458,7 +462,7 @@ export const policiesVi: Policies = {
         blocks: [
           {
             type: "p",
-            text: "Nền tảng công khai **không dành cho dữ liệu cá nhân nhạy cảm chưa được công bố công khai** và không tiếp nhận, không xử lý loại dữ liệu này. Bạn không được tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai, bao gồm dữ liệu bộ gen người, dữ liệu di truyền, dữ liệu liên quan đến sức khỏe và các dữ liệu danh mục đặc biệt khác theo định nghĩa của pháp luật Việt Nam. Dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đúng cách đến mức việc tái nhận dạng không thể xảy ra một cách hợp lý, chỉ có thể được xử lý trên Nền tảng công khai trong một số trường hợp hạn chế, và chỉ khi đã đánh giá nguồn, điều kiện truy cập, giấy phép và rủi ro riêng tư — việc công bố công khai không tự nó làm dữ liệu trở thành ẩn danh.",
+            text: "Nền tảng công khai **không dành cho dữ liệu cá nhân nhạy cảm chưa được công bố công khai** và không tiếp nhận, không xử lý loại dữ liệu này. Bạn không được tải dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam lên Nền tảng công khai, bao gồm dữ liệu bộ gen người, dữ liệu di truyền, dữ liệu liên quan đến sức khỏe và các dữ liệu danh mục đặc biệt khác theo định nghĩa của pháp luật Việt Nam. Dữ liệu đã được công bố công khai và truy cập mở hợp pháp, hoặc đã được ẩn danh hóa đúng cách đến mức việc tái nhận dạng không thể xảy ra một cách hợp lý, chỉ có thể được xử lý trên Nền tảng công khai trong một số trường hợp hạn chế, và chỉ khi đã đánh giá nguồn, điều kiện truy cập, giấy phép và rủi ro riêng tư — việc công bố công khai không tự nó làm dữ liệu trở thành ẩn danh. Theo đó, Nền tảng công khai chỉ dành cho dữ liệu phi người (vi sinh vật, thực vật, động vật và mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách và đã qua đánh giá đó.",
           },
           {
             type: "p",
@@ -819,6 +823,10 @@ export const policiesVi: Policies = {
             type: "p",
             text: "Chúng tôi có quyền yêu cầu Khách hàng cung cấp thông tin hoặc tài liệu bổ sung để xác minh trong quá trình đăng ký hoặc sử dụng dịch vụ.",
           },
+          {
+            type: "p",
+            text: "**Dữ liệu được phép trên dịch vụ công khai.** Dịch vụ công khai do nền tảng quản lý (Marketplace) chỉ được sử dụng với dữ liệu phi người (vi sinh vật, thực vật, động vật và mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách. Dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam — bao gồm dữ liệu bộ gen người, dữ liệu di truyền và dữ liệu sức khỏe — không được tải lên dịch vụ công khai và chỉ được xử lý thông qua mô hình do khách hàng tự quản lý (self-hosted) theo thỏa thuận riêng, như nêu tại [Chính sách bảo mật](/privacy) và [Điều khoản Dịch vụ](/terms).",
+          },
         ],
       },
       {
@@ -954,7 +962,7 @@ export const policiesVi: Policies = {
           {
             type: "ul",
             items: [
-              "Lưu trữ, quản lý và phân tích dữ liệu nghiên cứu phi người (vi sinh vật, thực vật, động vật, mẫu môi trường) và các khối lượng công việc khác trong phạm vi gói đã đăng ký.",
+              "Lưu trữ, quản lý và phân tích dữ liệu nghiên cứu phi người (vi sinh vật, thực vật, động vật, mẫu môi trường), dữ liệu mô phỏng hoặc dữ liệu đối chuẩn, và dữ liệu công khai đã được công bố hợp pháp hoặc đã được ẩn danh hóa đúng cách — trong phạm vi gói đã đăng ký. Dữ liệu cá nhân nhạy cảm chưa được công bố công khai của cá nhân tại Việt Nam không được phép sử dụng trên Nền tảng công khai.",
               "Tích hợp API và công cụ của Nền tảng vào website, ứng dụng hoặc hệ thống nội bộ của bạn.",
               "Đồng bộ kết quả phân tích và metadata với phần mềm hoặc hệ thống quản lý của bạn.",
             ],
