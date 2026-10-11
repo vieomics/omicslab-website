@@ -32,3 +32,36 @@ jobs:
           accountId: 9d588da6db7f8868a77394467f1b97ab
           preExistingWrangler: true
           command: pages deploy out --project-name=omicslab-website
+
+      - name: Purge retired policy URLs from the Cloudflare cache
+        # The old /security* pages were removed from the repo, but legacy edge
+        # cache entries (served with s-maxage=604800 by an older deployment)
+        # kept returning the old, overbroad copy. Purge the retired URLs and
+        # the policy pages they referenced so only current content is served.
+        # Non-fatal: if the token lacks Cache Purge permission the deploy still
+        # succeeds and this step only logs a warning.
+        continue-on-error: true
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          set -euo pipefail
+          ZONE_ID=$(curl -sS "https://api.cloudflare.com/client/v4/zones?name=omicslab.io" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            | python3 -c "import sys,json; d=json.load(sys.stdin); print(d['result'][0]['id'] if d.get('success') and d.get('result') else '')")
+          if [ -z "$ZONE_ID" ]; then
+            echo "::warning::Could not resolve the omicslab.io zone id; skipping cache purge."
+            exit 0
+          fi
+          curl -sS -X POST "https://api.cloudflare.com/client/v4/zones/$ZONE_ID/purge_cache" \
+            -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data '{"files":[
+              "https://omicslab.io/security",
+              "https://omicslab.io/security/compliance",
+              "https://omicslab.io/security/responsibility",
+              "https://omicslab.io/en/security",
+              "https://omicslab.io/privacy",
+              "https://omicslab.io/terms",
+              "https://omicslab.io/en/privacy",
+              "https://omicslab.io/en/terms"
+            ]}'
