@@ -95,7 +95,7 @@ const topup = {
     [
       { strong: "Compute:" },
       {
-        text: " 20,000 VND/hour for 16 CPUs / 32 GB RAM on CloudFly, GreenNode or your own Slurm cluster — rates follow each provider's configuration.",
+        text: " 8,868 VND/hour for 16 CPUs / 32 GB RAM on GreenNode.",
       },
     ],
     [
@@ -119,9 +119,33 @@ const topup = {
       { label: "HTTP GET/HEAD", value: "5000 req/s" },
       { label: "Data transfer", value: "Unlimited" },
       { label: "Billing", value: "Pay as you go" },
-      { label: "Price", value: "500 VND/GB" },
+      { label: "Price", value: "500 VND/GB per month" },
     ],
   },
+};
+
+const usageCosts = {
+  title: "Platform Usage Costs",
+  items: [
+    [
+      { strong: "Platform maintenance fee:" },
+      { text: " 1,000 VND/hour while a job runs." },
+    ],
+    [
+      { strong: "Compute cost:" },
+      {
+        text: " depends on the analysis and the infrastructure provider. The cost is determined by the relevant provider's public pricing.",
+      },
+    ],
+    [
+      { strong: "Storage (S3) cost:" },
+      {
+        text: " is billed at the pricing of the storage provider the customer chooses, based on capacity, storage duration and any related fees (if any).",
+      },
+    ],
+  ] as TextSegment[][],
+  note:
+    "Compute and storage costs are not included in the platform maintenance fee. Customers can view the relevant provider's pricing before use. The applicable price and estimated total are determined by the actual configuration and services selected.",
 };
 
 export const en = {
@@ -405,6 +429,7 @@ export const en = {
         title: "Pricing",
         subscription,
         topup,
+        usageCosts,
         trialNote: [
           { strong: "Note:" },
           {
@@ -442,10 +467,10 @@ export const en = {
                 subtotal: "10,000,000 VND",
               },
               {
-                item: "HPC compute (16 CPUs / 32 GB)",
-                unitPrice: "20,000 VND/hour",
+                item: "Compute (16 CPUs / 32 GB on GreenNode)",
+                unitPrice: "8,868 VND/hour",
                 qty: "~200 hours",
-                subtotal: "~4,000,000 VND",
+                subtotal: "~1,773,600 VND",
               },
               {
                 item: "Platform subscription",
@@ -461,7 +486,7 @@ export const en = {
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~15,250,000 VND (~5,250,000 VND with nf-core/bacass)",
+            total: "~13,023,600 VND (~3,023,600 VND with nf-core/bacass)",
             footnote: [
               {
                 text: "* Estimates based on typical bacterial genome assembly workload. Actual costs may vary. ",
@@ -502,10 +527,10 @@ export const en = {
                 subtotal: "10,000,000 VND",
               },
               {
-                item: "HPC compute (16 CPUs / 32 GB)",
-                unitPrice: "20,000 VND/hour",
+                item: "Compute (16 CPUs / 32 GB on GreenNode)",
+                unitPrice: "8,868 VND/hour",
                 qty: "~50 hours",
-                subtotal: "~1,000,000 VND",
+                subtotal: "~443,400 VND",
               },
               {
                 item: "Platform subscription",
@@ -521,7 +546,7 @@ export const en = {
               },
             ],
             totalLabel: "Estimated Total / Month",
-            total: "~12,005,000 VND (~2,005,000 VND with nf-core/ampliseq)",
+            total: "~11,448,400 VND (~1,448,400 VND with nf-core/ampliseq)",
             footnote: [
               {
                 text: "* Estimates based on typical 16S rRNA analysis workload. Actual costs may vary. ",
