@@ -16,6 +16,7 @@ const staticPaths = [
   "/privacy",
   "/terms",
   "/policies",
+  "/policies/security",
   "/policies/pricing",
   "/policies/payment",
   "/policies/service-provision",
