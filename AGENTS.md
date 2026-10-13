@@ -51,6 +51,17 @@ npm run lint       # ESLint
 5. `generateStaticParams()` in `(vi)/blogs/[slug]/page.tsx` and `en/blogs/[slug]/page.tsx` prerenders all slugs per locale
 6. BlogList.tsx fetches the locale's search index client-side, runs Fuse.js in browser
 
+### Content writing style (blogs, tutorials, guides)
+- Every post, tutorial or guide is written in **scientific style with a humble voice**: neutral, evidence-based, precise — the standard of a methods or review section, not of a marketing blog.
+- Write with humility. Describe what was observed or tested, not what is universally true; use "we found", "in our tests", "this suggests", "one approach is" instead of declaring the correct way. Avoid self-congratulation about the tool, the team or the platform.
+- State scope and conditions instead of universals. Prefer "in most cases", "typically", "for Illumina short reads", "under the configuration tested here" over blanket claims about what "always" happens.
+- Do NOT present a claim as self-evident or inevitable. Banned fillers: "obviously", "of course", "sure", "clearly", "as we all know", "needless to say", "it goes without saying", and the Vietnamese equivalents ("đương nhiên", "tất nhiên", "hiển nhiên", "dĩ nhiên", "rõ ràng là", "ai cũng biết").
+- No unsupported generalizations ("all pipelines", "everyone uses", "this is always the case"). Qualify the claim or cite the source.
+- Back empirical statements with a citation, a tool version, or a reproducible step; keep measured results, expectations and opinion visibly distinct.
+- Attribute other people's work correctly: never use first-person "we"/"our" (or "chúng tôi") for research, measurements or comparisons performed by another team or study — name the source and use the passive ("the study reports", "not recorded in the reference databases"). First person is only for work the authors actually did.
+- Keep the voice factual — no hype adjectives ("revolutionary", "amazing", "perfect"), no promises, no fear/urgency framing; use imperative only inside numbered tutorial steps.
+- Applies to both `vi` and `en`; translations mirror the same hedges and qualifiers rather than strengthening them.
+
 ### Image paths
 - Blog images live alongside markdown in `public/blogs/<locale>/YYYY-MM/imgs/`
 - Images are served directly at `/blogs/<locale>/YYYY-MM/imgs/`
@@ -103,3 +114,4 @@ npm run lint       # ESLint
 - Do NOT use `getServerSideProps` or `getStaticProps` (Pages Router — use generateStaticParams in App Router)
 - Do NOT add `output: "standalone"` to next.config.js (use `"export"`)
 - Do NOT add `next/image` without `unoptimized` (breaks static export)
+- Do NOT write blog/tutorial/guide copy in an assumptive or absolute voice ("obviously", "of course", "it always happens") — follow **Content writing style** above
