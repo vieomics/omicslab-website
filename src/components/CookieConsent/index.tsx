@@ -19,9 +19,12 @@ function enableAnalytics() {
 
   const w = window as typeof window & { dataLayer?: unknown[]; gtag?: unknown };
   w.dataLayer = w.dataLayer || [];
-  const gtag = (...args: unknown[]) => {
-    w.dataLayer?.push(args);
-  };
+  // gtag.js only processes queued dataLayer entries that are `arguments`
+  // objects (it checks `[object Arguments]` / a `callee` property). A
+  // rest-parameter array is silently ignored, so push `arguments` itself.
+  const gtag = function () {
+    w.dataLayer?.push(arguments);
+  } as (...args: unknown[]) => void;
   w.gtag = gtag;
 
   gtag("consent", "default", {
