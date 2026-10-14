@@ -345,7 +345,7 @@ export const vi: Dictionary = {
         {
           question: "Tôi có cần tự chuẩn bị hạ tầng không?",
           answer:
-            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.vn — không cần thẻ tín dụng.",
+            "Không. Chỉ cần trả phí, bạn nhận ngay tính toán, lưu trữ và thư viện quy trình sẵn sàng để chạy. Đăng ký tại platform.omicslab.io — không cần thẻ tín dụng.",
         },
         {
           question: "Dữ liệu của tôi được lưu ở đâu?",
