@@ -529,3 +529,4 @@ Adopting Molecule makes it easier to catch configuration bugs early, reduce depl
 - [Building a Slurm HPC Cluster (Part 1)](/en/blogs/how-to-build-slurm-hpc-part-1) — foundation for understanding SLURM deployment
 - [Building a Slurm HPC Cluster (Part 2)](/en/blogs/how-to-build-slurm-hpc-part-2) — Ansible-based production deployment
 - [Running GitHub Actions Locally with act](/en/blogs/cicd-bioinformatics-act-local-github-action) — test GitHub Actions workflows before pushing
+- Cover image: [EFTA00000440 - Cluttered server room with numerous cables equipment and racks arranged on a white wall](https://commons.wikimedia.org/wiki/File:EFTA00000440_-_Cluttered_server_room_with_numerous_cables_equipment_and_racks_arranged_on_a_white_wall.jpg) — Federal Bureau of Investigation, Wikimedia Commons, Public domain

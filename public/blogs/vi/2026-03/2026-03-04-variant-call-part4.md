@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 4
 authors: [vieomics]
 tags: [nextflow, testing, linting, nf-test, ci-cd, workflow]
-image: ./imgs/gatk-variant-calling-production-slurm-optimization-part4.png
+image: ./imgs/part4.png
 ---
 
 Ở [Phần 3](/blogs/gatk-variant-calling-production-slurm-optimization-part3), chúng ta đã có một pipeline chạy được trên cluster. Điều còn thiếu là một cách tự động kiểm tra rằng pipeline vẫn cho ra kết quả như trước. Bài này bàn về lint và kiểm thử: vì sao chúng quan trọng và cách thiết lập.

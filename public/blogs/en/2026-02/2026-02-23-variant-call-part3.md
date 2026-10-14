@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 3
 authors: [vieomics]
 tags: [gatk, nextflow, slurm, hpc, optimization, fastp, spark, performance, variant-calling, production]
-image: ./imgs/gatk-variant-calling-production-slurm-optimization-part3.png
+image: ./imgs/variant_calling.png
 ---
 
 In [Part 1](/en/blogs/gatk-variant-calling-bash-workflow-pixi-part1), we built a bash baseline. In [Part 2](/en/blogs/gatk-variant-calling-bash-to-nextflow-validation-part2), we moved it to Nextflow and checked the results with checksums. This post looks at running the same pipeline on an HPC cluster: configuring executors for clusters of different sizes, tuning resources per tool, replacing the slowest steps with faster alternatives (fastp and Spark-based GATK tools), and scaling the number of samples.

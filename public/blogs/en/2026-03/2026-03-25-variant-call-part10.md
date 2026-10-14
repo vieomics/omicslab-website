@@ -580,3 +580,4 @@ Short-read structural variant calling remains a challenging problem in genomics.
 - [Delly Paper](https://doi.org/10.1093/bioinformatics/bts378) - Rausch et al. 2012, Bioinformatics
 - [CNVnator Paper](https://doi.org/10.1101/gr.114876.110) - Abyzov et al. 2011, Genome Research
 - [sv_benchmark](https://github.com/PapenfussLab/sv_benchmark): Comprehensive evaluation and characterisation of short-read general-purpose structural variant calling software
+- Cover image: [Y Chromosome](https://commons.wikimedia.org/wiki/File:Y_Chromosome.png) — Christinelmiller, Wikimedia Commons, CC BY-SA 4.0

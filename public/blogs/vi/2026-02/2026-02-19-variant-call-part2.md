@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 2
 authors: [vieomics]
 tags: [gatk, nextflow, bash, bioinformatics, validation, md5, reproducibility, migration, workflow]
-image: ./imgs/gatk-variant-calling-bash-to-nextflow-validation-part2.png
+image: ./imgs/variant_calling.png
 ---
 
 Ở [Phần 1](/blogs/gatk-variant-calling-bash-workflow-pixi-part1), chúng tôi đã xây dựng một pipeline gọi biến thể GATK gồm mười bước bằng bash. Cách làm đó phù hợp với số mẫu ít, nhưng trở nên khó quản lý khi số mẫu tăng lên. Bài này viết lại các bước tương tự thành các process của Nextflow, chạy chúng trong container, rồi kiểm tra — bằng checksum — rằng hai cách hiện thực cho ra kết quả tương đương.

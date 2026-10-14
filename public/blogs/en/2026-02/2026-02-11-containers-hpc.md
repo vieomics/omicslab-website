@@ -4,7 +4,7 @@ title: "Containers on HPC: from Docker to Singularity and Apptainer"
 description: "Why Docker is a poor fit for shared HPC systems and how Docker rootless, Singularity, and Apptainer address the security, permission, and scheduler problems it creates."
 authors: [vieomics]
 tags: [hpc, docker, containers, singularity, apptainer]
-image: ./imgs/containers-hpc-docker-singularity-apptainer.png
+image: ./imgs/intro.png
 ---
 
 Container technologies are widely used for software deployment and reproducibility in scientific computing. Traditional Docker, however, has limitations in High-Performance Computing (HPC) environments. This post looks at why Docker is a poor fit on shared HPC systems and introduces the alternatives commonly used there: Docker rootless, Singularity, and Apptainer.

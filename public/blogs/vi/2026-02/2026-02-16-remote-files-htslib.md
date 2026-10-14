@@ -4,7 +4,7 @@ title: "Làm việc với file từ xa bằng bcftools và samtools (HTSlib)"
 description: "Cách các công cụ dựa trên HTSlib truy vấn dữ liệu hệ gen trên S3, FTP và HTTPS qua yêu cầu byte-range có chỉ mục, kèm xác thực, đánh chỉ mục và các workflow thực tế."
 authors: [vieomics]
 tags: [bioinformatics, htslib, bcftools, samtools, s3, remote-files, cloud, genomics]
-image: ./imgs/remote-files-htslib-bcftools-samtools.png
+image: ./imgs/intro.png
 ---
 
 Các công cụ dựa trên HTSlib như `bcftools` và `samtools` có thể làm việc với dữ liệu hệ gen lưu trên server từ xa. Dù dữ liệu nằm trên AWS S3, truy cập qua FTP, hay được host trên endpoint HTTPS, những công cụ này có thể truy vấn và trích xuất một phần file từ xa mà không cần tải toàn bộ tập dữ liệu. Hướng dẫn này trình bày xác thực, các mẫu truy cập file từ xa và những workflow thực tế.

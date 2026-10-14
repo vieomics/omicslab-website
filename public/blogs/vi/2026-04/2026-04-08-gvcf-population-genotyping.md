@@ -685,3 +685,4 @@ Nhìn chung, với khoảng hai kỹ sư toàn thời gian, hạ tầng tính to
 7. "Scaling variant discovery to a million genomes with the Genomic Variant Store." Terra. https://terra.bio/scaling-variant-discovery-to-a-million-genomes-with-the-genomic-variant-store/
 
 8. DPGT (Distributed Population Genetics Tool). https://github.com/BGI-flexlab/DPGT
+- Ảnh bìa: [DNA Double Helix by NHGRI](https://commons.wikimedia.org/wiki/File:DNA_Double_Helix_by_NHGRI.jpg) — National Human Genome Research Institute, Wikimedia Commons, Public domain

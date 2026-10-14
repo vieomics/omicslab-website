@@ -1271,3 +1271,4 @@ With the nf-modules-template, teams can:
 - [Ruff Documentation](https://docs.astral.sh/ruff) — Python linter and formatter
 - [Prettier Documentation](https://prettier.io) — code formatter
 - [Hadolint Documentation](https://github.com/hadolint/hadolint) — Dockerfile linter
+- Cover image: [CSS code on a screen (Unsplash)](https://commons.wikimedia.org/wiki/File:CSS_code_on_a_screen_%28Unsplash%29.jpg) — Sai Kiran Anagani _imkiran, Wikimedia Commons, CC0

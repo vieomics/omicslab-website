@@ -258,3 +258,4 @@ The low recall (7.88%) reflects the limitations of short-read SV detection:
 
 6. **bcftools: VCF normalization and manipulation**
    http://samtools.github.io/bcftools/
+- Cover image: [Chromosomes image - Karyotype -- Smart-Servier](https://commons.wikimedia.org/wiki/File:Chromosomes_image_-_Karyotype_--_Smart-Servier.jpg) — Laboratoires Servier, Wikimedia Commons, CC BY-SA 3.0

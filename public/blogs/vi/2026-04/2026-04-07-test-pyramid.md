@@ -462,3 +462,4 @@ Khởi đầu đơn giản:
 - [Tài liệu nf-test](https://www.nf-test.com) — khung kiểm thử Nextflow
 - [GitHub Actions: About continuous integration](https://docs.github.com/en/actions/guides/about-continuous-integration) — thực hành CI/CD
 - [Google Testing Blog](https://testing.googleblog.com/) — góc nhìn về kiểm thử phần mềm
+- Ảnh bìa: [Codex CLI screenshot](https://commons.wikimedia.org/wiki/File:Codex_CLI_screenshot.png) — OpenAI / Codex CLI GitHub repository, Wikimedia Commons, Apache License 2.0

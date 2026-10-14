@@ -243,3 +243,4 @@ Zook, J. M., Chapman, B., Wang, J., Mittelman, D., Hofmann, O., Hide, W., & Sali
 - GIAB Data Repository: https://ftp.ncbi.nlm.nih.gov/giab/ftp/
 - IGV Reports: https://github.com/igvteam/igv-reports
 - Genomics toolkit (gkit): https://github.com/gianglabs/gkit
+- Cover image: [Laboratory pipettes](https://commons.wikimedia.org/wiki/File:Laboratory_pipettes.jpg) — J.N. Eskra, Wikimedia Commons, CC BY-SA 4.0

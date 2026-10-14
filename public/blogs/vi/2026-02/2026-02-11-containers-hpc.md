@@ -4,7 +4,7 @@ title: "Container trên HPC: từ Docker đến Singularity và Apptainer"
 description: "Vì sao Docker không phù hợp với hệ thống HPC dùng chung, và cách Docker rootless, Singularity cùng Apptainer giải quyết các vấn đề về bảo mật, quyền hạn và scheduler."
 authors: [vieomics]
 tags: [hpc, docker, containers, singularity, apptainer]
-image: ./imgs/containers-hpc-docker-singularity-apptainer.png
+image: ./imgs/intro.png
 ---
 
 Các công nghệ container được dùng rộng rãi để triển khai phần mềm và tái lập trong tính toán khoa học. Tuy nhiên, Docker truyền thống có những hạn chế trong môi trường High-Performance Computing (HPC). Bài này xem xét vì sao Docker không phù hợp với hệ thống HPC dùng chung, và giới thiệu những lựa chọn thay thế thường được dùng ở đó: Docker rootless, Singularity và Apptainer.

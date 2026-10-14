@@ -548,3 +548,4 @@ By implementing dual BAM/CRAM output, the pipeline keeps fast variant calling du
 - [GATK CRAM Support](https://gatk.broadinstitute.org/hc/en-us/articles/360035890791-SAM-or-BAM-or-CRAM-Mapped-sequence-data-formats)
 - [Storage Optimization Documentation](https://github.com/nttg8100/nf-germline-short-read-variant-calling)
 - [Pipeline Repository](https://github.com/nttg8100/nf-germline-short-read-variant-calling)
+- Cover image: [Hard disk drive platter, Western Digital Caviar 250Gb WD2500AAKS](https://commons.wikimedia.org/wiki/File:Hard_disk_drive_platter%2C_Western_Digital_Caviar_250Gb_WD2500AAKS.jpg) — Mk2010, Wikimedia Commons, CC BY 4.0

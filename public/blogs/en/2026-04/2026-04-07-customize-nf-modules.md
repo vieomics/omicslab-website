@@ -598,3 +598,4 @@ This separation enables code reuse across pipelines while keeping pipeline-speci
 - [Pixi Documentation](https://pixi.sh) — reproducible environment management
 - [GATK Documentation](https://gatk.broadinstitute.org) — Genome Analysis Toolkit
 - [GitHub Actions Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) — workflow composition
+- Cover image: [Programmer at work (Unsplash)](https://commons.wikimedia.org/wiki/File:Programmer_at_work_%28Unsplash%29.jpg) — Crew crew, Wikimedia Commons, CC0

@@ -580,3 +580,4 @@ Gọi biến thể cấu trúc từ short read vẫn là một bài toán khó t
 - [Bài báo Delly](https://doi.org/10.1093/bioinformatics/bts378) - Rausch et al. 2012, Bioinformatics
 - [Bài báo CNVnator](https://doi.org/10.1101/gr.114876.110) - Abyzov et al. 2011, Genome Research
 - [sv_benchmark](https://github.com/PapenfussLab/sv_benchmark): đánh giá và mô tả toàn diện phần mềm gọi biến thể cấu trúc short read đa dụng
+- Ảnh bìa: [Y Chromosome](https://commons.wikimedia.org/wiki/File:Y_Chromosome.png) — Christinelmiller, Wikimedia Commons, CC BY-SA 4.0

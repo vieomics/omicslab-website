@@ -529,3 +529,4 @@ Việc áp dụng Molecule giúp phát hiện lỗi cấu hình sớm hơn, gi�
 - [Xây dựng cụm Slurm HPC (Phần 1)](/blogs/how-to-build-slurm-hpc-part-1) — nền tảng để hiểu việc triển khai SLURM
 - [Xây dựng cụm Slurm HPC (Phần 2)](/blogs/how-to-build-slurm-hpc-part-2) — triển khai production dựa trên Ansible
 - [Chạy GitHub Actions cục bộ với act](/blogs/cicd-bioinformatics-act-local-github-action) — kiểm thử workflow GitHub Actions trước khi push
+- Ảnh bìa: [EFTA00000440 - Cluttered server room with numerous cables equipment and racks arranged on a white wall](https://commons.wikimedia.org/wiki/File:EFTA00000440_-_Cluttered_server_room_with_numerous_cables_equipment_and_racks_arranged_on_a_white_wall.jpg) — Federal Bureau of Investigation, Wikimedia Commons, Public domain

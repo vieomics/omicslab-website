@@ -361,3 +361,4 @@ Kết hợp tính tái lập của Pixi với điều phối SLURM của sparkhp
 - [SLURM Workload Manager](https://slurm.schedmd.com/) — lập lịch job và quản lý tài nguyên HPC
 - [Xây dựng cụm Slurm HPC (Phần 1)](/blogs/how-to-build-slurm-hpc-part-1) — nền tảng để triển khai SLURM
 - [Kiểm thử playbook Ansible cho HPC bằng Molecule](/blogs/hpc-ansible-molecule-playbook-testing) — kiểm thử tự động cho hạ tầng HPC
+- Ảnh bìa: [Kraken Supercomputer (3592578852)](https://commons.wikimedia.org/wiki/File:Kraken_Supercomputer_%283592578852%29.jpg) — Oak Ridge National Laboratory, Wikimedia Commons, CC BY 2.0

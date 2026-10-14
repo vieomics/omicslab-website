@@ -258,3 +258,4 @@ Recall thấp (7,88%) phản ánh các hạn chế cố hữu của phát hiện
 
 6. **bcftools: chuẩn hóa và thao tác VCF**
    http://samtools.github.io/bcftools/
+- Ảnh bìa: [Chromosomes image - Karyotype -- Smart-Servier](https://commons.wikimedia.org/wiki/File:Chromosomes_image_-_Karyotype_--_Smart-Servier.jpg) — Laboratoires Servier, Wikimedia Commons, CC BY-SA 3.0
