@@ -361,3 +361,4 @@ Combining Pixi's reproducibility with sparkhpc's SLURM orchestration makes it ea
 - [SLURM Workload Manager](https://slurm.schedmd.com/) — HPC job scheduling and resource management
 - [Building a Slurm HPC Cluster (Part 1)](/en/blogs/how-to-build-slurm-hpc-part-1) — foundation for SLURM deployment
 - [Testing Ansible Playbooks for HPC with Molecule](/en/blogs/hpc-ansible-molecule-playbook-testing) — automated testing for HPC infrastructure
+- Cover image: [Kraken Supercomputer (3592578852)](https://commons.wikimedia.org/wiki/File:Kraken_Supercomputer_%283592578852%29.jpg) — Oak Ridge National Laboratory, Wikimedia Commons, CC BY 2.0

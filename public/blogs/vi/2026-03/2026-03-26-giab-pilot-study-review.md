@@ -243,3 +243,4 @@ Zook, J. M., Chapman, B., Wang, J., Mittelman, D., Hofmann, O., Hide, W., & Sali
 - Kho dữ liệu GIAB: https://ftp.ncbi.nlm.nih.gov/giab/ftp/
 - IGV Reports: https://github.com/igvteam/igv-reports
 - Bộ công cụ genomics (gkit): https://github.com/gianglabs/gkit
+- Ảnh bìa: [Laboratory pipettes](https://commons.wikimedia.org/wiki/File:Laboratory_pipettes.jpg) — J.N. Eskra, Wikimedia Commons, CC BY-SA 4.0

@@ -598,3 +598,4 @@ Sự tách biệt này cho phép tái sử dụng mã giữa các pipeline trong
 - [Tài liệu Pixi](https://pixi.sh) — quản lý môi trường tái lập được
 - [Tài liệu GATK](https://gatk.broadinstitute.org) — Genome Analysis Toolkit
 - [GitHub Actions Reusable Workflows](https://docs.github.com/en/actions/using-workflows/reusing-workflows) — tổ hợp workflow
+- Ảnh bìa: [Programmer at work (Unsplash)](https://commons.wikimedia.org/wiki/File:Programmer_at_work_%28Unsplash%29.jpg) — Crew crew, Wikimedia Commons, CC0

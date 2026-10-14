@@ -554,3 +554,4 @@ Kết quả tổng hợp trong `merged_HG002_benchmark.csv` được hiển th�
 3. **Bài công bố nf-core/sarek** — bản hiện thực tham chiếu và độ chính xác được báo cáo: https://academic.oup.com/nargab/article/doi/10.1093/nargab/lqae031/7658070
 4. **File benchmark GIAB HG002 (NISTv4.2.1, GRCh38)**: https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh38/
 5. **nf-germline-short-read-variant-calling** — repository dùng trong bài này: https://github.com/nttg8100/nf-germline-short-read-variant-calling
+- Ảnh bìa: [Laboratory reactives for Sanger sequencing](https://commons.wikimedia.org/wiki/File:Laboratory_reactives_for_Sanger_sequencing.jpg) — LuisCG11, Wikimedia Commons, CC BY-SA 4.0

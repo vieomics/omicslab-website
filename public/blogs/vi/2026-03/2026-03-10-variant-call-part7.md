@@ -484,3 +484,4 @@ Nền tảng này có thể được mở rộng thành các workflow genomics l
 5. gnomAD — https://gnomad.broadinstitute.org/
 6. COSMIC — https://cancer.sanger.ac.uk/cosmic
 7. bcftools norm — https://samtools.github.io/bcftools/bcftools.html
+- Ảnh bìa: [Bioinformatics workflow systems have built-in functionality that facilitates and simplifies running analysis pipelines](https://commons.wikimedia.org/wiki/File:Bioinformatics_workflow_systems_have_built-in_functionality_that_facilitates_and_simplifies_running_analysis_pipelines.jpg) — Matthew D Young, Sam Behjati, Wikimedia Commons, CC BY 4.0

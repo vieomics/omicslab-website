@@ -4,7 +4,7 @@ title: "Docker out of Docker: chạy ứng dụng web tương tác cho phân tí
 description: "Cách chạy RStudio, JupyterLab và Code Server trong container và cho chúng khởi tạo thêm công cụ container qua Docker socket của host, kèm những lưu ý về bảo mật và quyền file."
 authors: [vieomics]
 tags: [docker, containers, rstudio, jupyterlab, code-server, bioinformatics, reproducibility, web-apps]
-image: ./imgs/docker-out-docker-bioinformatics-web-apps.png
+image: ./imgs/intro.png
 ---
 
 Chạy các ứng dụng web tương tác như RStudio, JupyterLab và Code Server trong container là một cách phổ biến để cung cấp môi trường phân tích tái lập. Những ứng dụng này thường cần khởi tạo thêm công cụ container từ bên trong. **Docker out of Docker (DooD)** giải quyết việc này bằng cách cho container truy cập Docker daemon của host. Bài này mô tả cách thiết lập DooD cho ứng dụng web tương tác cùng những đánh đổi liên quan.

@@ -4,7 +4,7 @@ title: "Thiết lập môi trường huấn luyện Nextflow cục bộ với co
 description: "Hướng dẫn chạy code-server như một job Slurm trên cụm HPC và truy cập từ laptop qua một SSH tunnel, với Nextflow, Singularity, nf-core và nf-test được cài qua Pixi."
 authors: [vieomics]
 tags: [nextflow, singularity, code-server, hpc, setup, training]
-image: ./imgs/setup-local-nextflow-training.png
+image: ./imgs/intro.png
 ---
 
 Một môi trường huấn luyện Nextflow dùng được cả trên laptop lẫn trên cụm HPC rất thuận tiện cho một nhóm cùng làm các bài tập giống nhau. [code-server](https://github.com/coder/code-server) chạy VS Code trong trình duyệt và có thể được khởi động như một job Slurm trên một compute node, nên học viên chỉ cần một trình duyệt và một kết nối SSH thay vì cài đặt cục bộ.

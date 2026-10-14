@@ -4,7 +4,7 @@ title: "Docker out of Docker: running interactive web applications for data anal
 description: "How to run RStudio, JupyterLab, and Code Server in containers and let them spawn additional containerized tools through the host Docker socket, with the security and permission caveats."
 authors: [vieomics]
 tags: [docker, containers, rstudio, jupyterlab, code-server, bioinformatics, reproducibility, web-apps]
-image: ./imgs/docker-out-docker-bioinformatics-web-apps.png
+image: ./imgs/intro.png
 ---
 
 Running interactive web applications such as RStudio, JupyterLab, and Code Server in containers is a common way to provide reproducible analysis environments. These applications often need to spawn additional containerized tools from within. **Docker out of Docker (DooD)** addresses this by letting a container access the host's Docker daemon. This post describes how to set up DooD for interactive web applications and the trade-offs involved.

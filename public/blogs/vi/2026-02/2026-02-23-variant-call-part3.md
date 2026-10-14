@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 3
 authors: [vieomics]
 tags: [gatk, nextflow, slurm, hpc, optimization, fastp, spark, performance, variant-calling, production]
-image: ./imgs/gatk-variant-calling-production-slurm-optimization-part3.png
+image: ./imgs/variant_calling.png
 ---
 
 Ở [Phần 1](/blogs/gatk-variant-calling-bash-workflow-pixi-part1), chúng tôi đã xây dựng một mốc so sánh bằng bash. Ở [Phần 2](/blogs/gatk-variant-calling-bash-to-nextflow-validation-part2), pipeline được chuyển sang Nextflow và kết quả được kiểm chứng bằng checksum. Bài này bàn đến việc chạy cùng pipeline đó trên cluster HPC: cấu hình executor cho các cluster với quy mô khác nhau, tinh chỉnh tài nguyên theo từng công cụ, thay các bước chậm nhất bằng lựa chọn nhanh hơn (fastp và các công cụ GATK dựa trên Spark), và mở rộng số lượng mẫu.

@@ -1271,3 +1271,4 @@ Với nf-modules-template, các nhóm có thể:
 - [Tài liệu Ruff](https://docs.astral.sh/ruff) — trình lint và định dạng Python
 - [Tài liệu Prettier](https://prettier.io) — trình định dạng mã
 - [Tài liệu Hadolint](https://github.com/hadolint/hadolint) — trình lint Dockerfile
+- Ảnh bìa: [CSS code on a screen (Unsplash)](https://commons.wikimedia.org/wiki/File:CSS_code_on_a_screen_%28Unsplash%29.jpg) — Sai Kiran Anagani _imkiran, Wikimedia Commons, CC0

@@ -4,7 +4,7 @@ title: "Setting up a local Nextflow training environment with code-server and an
 description: "A walkthrough of running code-server as a Slurm job on an HPC cluster and reaching it from a laptop through an SSH tunnel, with Nextflow, Singularity, nf-core and nf-test installed through Pixi."
 authors: [vieomics]
 tags: [nextflow, singularity, code-server, hpc, setup, training]
-image: ./imgs/setup-local-nextflow-training.png
+image: ./imgs/intro.png
 ---
 
 A Nextflow training environment that works both on a laptop and on an HPC cluster is convenient for a team working through the same exercises. [code-server](https://github.com/coder/code-server) runs VS Code in a browser and can be started as a Slurm job on a compute node, so trainees only need a browser and an SSH connection rather than a local installation.

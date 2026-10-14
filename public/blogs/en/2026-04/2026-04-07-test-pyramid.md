@@ -462,3 +462,4 @@ Starting simple:
 - [nf-test Documentation](https://www.nf-test.com) — Nextflow testing framework
 - [GitHub Actions: About continuous integration](https://docs.github.com/en/actions/guides/about-continuous-integration) — CI/CD practices
 - [Google Testing Blog](https://testing.googleblog.com/) — software testing insights
+- Cover image: [Codex CLI screenshot](https://commons.wikimedia.org/wiki/File:Codex_CLI_screenshot.png) — OpenAI / Codex CLI GitHub repository, Wikimedia Commons, Apache License 2.0

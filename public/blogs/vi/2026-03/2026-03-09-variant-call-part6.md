@@ -616,3 +616,4 @@ Thay đổi nhỏ về hiệu năng của workflow tối giản với FreeBayes:
 
 7. **nf-germline-short-read-variant-calling — pipeline dùng trong bài này**  
    https://github.com/nttg8100/nf-germline-short-read-variant-calling
+- Ảnh bìa: [Short Spinner Used in Molecular Laboratory](https://commons.wikimedia.org/wiki/File:Short_Spinner_Used_in_Molecular_Laboratory.jpg) — Ajay Kumar Chaurasiya, Wikimedia Commons, CC BY-SA 4.0

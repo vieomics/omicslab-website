@@ -554,3 +554,4 @@ The aggregated results in `merged_HG002_benchmark.csv` are shown below.
 3. **nf-core/sarek publication** — the reference implementation and its reported accuracy: https://academic.oup.com/nargab/article/doi/10.1093/nargab/lqae031/7658070
 4. **GIAB HG002 benchmark files (NISTv4.2.1, GRCh38)**: https://ftp-trace.ncbi.nlm.nih.gov/ReferenceSamples/giab/release/AshkenazimTrio/HG002_NA24385_son/NISTv4.2.1/GRCh38/
 5. **nf-germline-short-read-variant-calling** — the repository used in this post: https://github.com/nttg8100/nf-germline-short-read-variant-calling
+- Cover image: [Laboratory reactives for Sanger sequencing](https://commons.wikimedia.org/wiki/File:Laboratory_reactives_for_Sanger_sequencing.jpg) — LuisCG11, Wikimedia Commons, CC BY-SA 4.0

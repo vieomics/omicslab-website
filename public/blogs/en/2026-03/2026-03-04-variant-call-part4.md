@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 4
 authors: [vieomics]
 tags: [nextflow, testing, linting, nf-test, ci-cd, workflow]
-image: ./imgs/gatk-variant-calling-production-slurm-optimization-part4.png
+image: ./imgs/part4.png
 ---
 
 In [Part 3](/en/blogs/gatk-variant-calling-production-slurm-optimization-part3), we had a pipeline that runs on a cluster. What was still missing was a way to check, automatically, that the pipeline keeps producing the same results. This post covers linting and testing: why they matter and how to set them up.

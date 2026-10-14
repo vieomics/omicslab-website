@@ -6,7 +6,7 @@ series: Variant Calling from Bash to Production
 seriesOrder: 1
 authors: [vieomics]
 tags: [bash, gatk, variant-calling, pixi, genomics, workflow, bwa, samtools, bioinformatics, ngs]
-image: ./imgs/gatk-variant-calling-bash-workflow-pixi-part1.png
+image: ./imgs/variant_calling.png
 ---
 
 Bài viết này là điểm khởi đầu thực hành cho một workflow gọi biến thể germline. Bài bắt đầu bằng một cách tiếp cận đơn giản: các script bash, kèm một môi trường tái lập được quản lý bằng Pixi. Những bài sau trong chuỗi sẽ bàn đến việc chuyển workflow này sang Nextflow, nơi có thể xem xét thêm về tối ưu hóa, tùy biến và tích hợp công cụ bổ sung.
