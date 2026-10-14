@@ -5,7 +5,7 @@ description: "How the ten-step bash workflow from Part 1 was rewritten as Nextfl
 series: Variant Calling from Bash to Production
 seriesOrder: 2
 authors: [vieomics]
-tags: [gatk, nextflow, bash, bioinformatics, validation, md5, reproducibility, migration, workflow]
+tags: [variant-calling, nextflow]
 image: ./imgs/variant_calling.png
 ---
 

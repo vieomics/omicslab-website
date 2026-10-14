@@ -5,7 +5,7 @@ description: "Benchmarking Manta, the SV caller integrated in nf-core/sarek, aga
 series: Variant Calling from Bash to Production
 seriesOrder: 8
 authors: [vieomics]
-tags: [nextflow, variant-calling, structural-variants, manta, truvari, benchmarking]
+tags: [variant-calling]
 image: ./imgs/gatk-variant-calling-production-slurm-optimization-part8.png
 ---
 

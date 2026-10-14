@@ -3,7 +3,7 @@ slug: nf-modules-template-copier-ci-cd
 title: "Xây dựng template module Nextflow với Copier, CI/CD và nf-test"
 description: "Cách nf-modules-template tạo khung nhất quán cho repository module Nextflow bằng Copier, đảm bảo chất lượng mã qua pre-commit hook và chạy kiểm thử song song nhờ sharding của nf-test."
 authors: [vieomics]
-tags: [nextflow, copier, ci-cd, nf-test, testing, reproducibility, linting]
+tags: [nextflow, ci-cd]
 image: ./imgs/nf-modules-template-copier-ci-cd.png
 ---
 

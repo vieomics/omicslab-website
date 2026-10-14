@@ -5,7 +5,7 @@ description: "Điểm khởi đầu thực hành cho việc gọi biến thể g
 series: Variant Calling from Bash to Production
 seriesOrder: 1
 authors: [vieomics]
-tags: [bash, gatk, variant-calling, pixi, genomics, workflow, bwa, samtools, bioinformatics, ngs]
+tags: [variant-calling, nextflow]
 image: ./imgs/variant_calling.png
 ---
 

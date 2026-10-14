@@ -5,7 +5,7 @@ description: "A research proof of concept for variant annotation: normalizing ca
 series: Variant Calling from Bash to Production
 seriesOrder: 7
 authors: [vieomics]
-tags: [nextflow, variant-calling, variant-annotation, snpeff, ensembl-vep]
+tags: [variant-calling, nextflow]
 image: ./imgs/gatk-variant-calling-production-slurm-optimization-part7.png
 ---
 

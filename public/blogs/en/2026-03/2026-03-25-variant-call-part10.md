@@ -5,7 +5,7 @@ description: "A benchmark of five short-read SV callers (Manta, TIDDIT, Delly, S
 series: Variant Calling from Bash to Production
 seriesOrder: 10
 authors: [vieomics]
-tags: [nextflow, variant-calling, structural-variants, short-reads, truvari, manta]
+tags: [variant-calling]
 image: ./imgs/structural-variant-calling-short-reads-challenges.png
 ---
 

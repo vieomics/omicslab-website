@@ -5,7 +5,7 @@ description: "A benchmark of two minimal germline workflows — fastp → bwa-me
 series: Variant Calling from Bash to Production
 seriesOrder: 6
 authors: [vieomics]
-tags: [nextflow, variant-calling, benchmarking, giab, deepvariant, freebayes]
+tags: [variant-calling, nextflow]
 image: ./imgs/gatk-variant-calling-production-slurm-optimization-part6.png
 ---
 

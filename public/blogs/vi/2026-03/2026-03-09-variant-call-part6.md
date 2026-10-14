@@ -5,7 +5,7 @@ description: "Benchmark hai workflow germline tối giản — fastp → bwa-mem
 series: Variant Calling from Bash to Production
 seriesOrder: 6
 authors: [vieomics]
-tags: [nextflow, variant-calling, benchmarking, giab, deepvariant, freebayes]
+tags: [variant-calling, nextflow]
 image: ./imgs/gatk-variant-calling-production-slurm-optimization-part6.png
 ---
 

@@ -3,7 +3,7 @@ slug: containers-hpc-docker-singularity-apptainer
 title: "Container trên HPC: từ Docker đến Singularity và Apptainer"
 description: "Vì sao Docker không phù hợp với hệ thống HPC dùng chung, và cách Docker rootless, Singularity cùng Apptainer giải quyết các vấn đề về bảo mật, quyền hạn và scheduler."
 authors: [vieomics]
-tags: [hpc, docker, containers, singularity, apptainer]
+tags: [containers, hpc]
 image: ./imgs/intro.png
 ---
 

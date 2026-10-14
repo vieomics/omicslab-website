@@ -3,7 +3,7 @@ slug: hpc-spark-slurm-reproducible-cluster
 title: "Chạy cụm Spark trên SLURM: thiết lập tái lập được với Pixi và sparkhpc"
 description: "Cách thiết lập cụm Apache Spark tái lập được trên cụm HPC SLURM bằng Pixi để quản lý môi trường và sparkhpc để điều phối, dựa trên bản triển khai Spark-on-SLURM của gkit."
 authors: [vieomics]
-tags: [hpc, spark, slurm, pixi, distributed-computing, data-processing]
+tags: [hpc]
 image: ./imgs/hpc-spark-slurm-reproducible-cluster.png
 ---
 

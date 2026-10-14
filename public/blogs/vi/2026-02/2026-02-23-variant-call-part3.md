@@ -5,7 +5,7 @@ description: "Cấu hình pipeline Nextflow cho SLURM, tinh chỉnh CPU và bộ
 series: Variant Calling from Bash to Production
 seriesOrder: 3
 authors: [vieomics]
-tags: [gatk, nextflow, slurm, hpc, optimization, fastp, spark, performance, variant-calling, production]
+tags: [variant-calling, hpc]
 image: ./imgs/variant_calling.png
 ---
 

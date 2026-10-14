@@ -5,7 +5,7 @@ description: "Định dạng CRAM nén dựa trên hệ gen tham chiếu giúp g
 series: Variant Calling from Bash to Production
 seriesOrder: 9
 authors: [vieomics]
-tags: [nextflow, variant-calling, storage, cram, cost-optimization, bioinformatics]
+tags: [variant-calling, hpc]
 image: ./imgs/storage-cost-optimization-cram-format.png
 ---
 
