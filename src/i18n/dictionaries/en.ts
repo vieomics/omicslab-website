@@ -21,7 +21,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Individual",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Lite",
@@ -37,7 +37,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Lite",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Pro",
@@ -54,7 +54,7 @@ const subscription = {
         "The full platform feature set",
       ],
       cta: "Sign up with Pro",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Business",
