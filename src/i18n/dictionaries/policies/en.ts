@@ -380,8 +380,8 @@ export const policiesEn: Policies = {
             type: "table",
             head: ["Region", "Instance", "Framework", "Data residency"],
             rows: [
-              ["Vietnam (default)", "platform.omicslab.vn", "PDPL (Law 91/2025 + Decree 356/2025)", "Data and compute provided by Vieomics are stored in Vietnam"],
-              ["Global", "platform.omicslab.vn", "PDPL for personal data in Vietnam", "Still in Vietnam; for Vietnamese people or residents of Vietnam, and multinational collaboration"],
+              ["Vietnam (default)", "platform.omicslab.io", "PDPL (Law 91/2025 + Decree 356/2025)", "Data and compute provided by Vieomics are stored in Vietnam"],
+              ["Global", "platform.omicslab.io", "PDPL for personal data in Vietnam", "Still in Vietnam; for Vietnamese people or residents of Vietnam, and multinational collaboration"],
             ],
           },
           {

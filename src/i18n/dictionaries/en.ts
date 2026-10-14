@@ -345,7 +345,7 @@ export const en = {
         {
           question: "Do I need my own compute and storage?",
           answer:
-            "No. New users can pay and get everything ready — compute, storage and pipelines — then start running right away. Create an account at platform.omicslab.vn; no credit card is required to sign up.",
+            "No. New users can pay and get everything ready — compute, storage and pipelines — then start running right away. Create an account at platform.omicslab.io; no credit card is required to sign up.",
         },
         {
           question: "Where is my data stored?",

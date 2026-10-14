@@ -314,8 +314,8 @@ export const policiesVi: Policies = {
             type: "table",
             head: ["Khu vực", "Instance", "Khuôn khổ", "Nơi lưu trữ dữ liệu"],
             rows: [
-              ["Việt Nam (mặc định)", "platform.omicslab.vn", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dữ liệu và tính toán do Vieomics cung cấp được lưu tại Việt Nam"],
-              ["Toàn cầu (Global)", "platform.omicslab.vn", "PDPL cho dữ liệu cá nhân tại Việt Nam", "Vẫn tại Việt Nam; cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng hợp tác đa quốc gia"],
+              ["Việt Nam (mặc định)", "platform.omicslab.io", "PDPL (Luật 91/2025 + NĐ 356/2025)", "Dữ liệu và tính toán do Vieomics cung cấp được lưu tại Việt Nam"],
+              ["Toàn cầu (Global)", "platform.omicslab.io", "PDPL cho dữ liệu cá nhân tại Việt Nam", "Vẫn tại Việt Nam; cho người Việt Nam hoặc người sinh sống tại Việt Nam, cùng hợp tác đa quốc gia"],
             ],
           },
           {
