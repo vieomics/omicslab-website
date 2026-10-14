@@ -22,7 +22,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Individual",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Lite",
@@ -38,7 +38,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Lite",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Pro",
@@ -55,7 +55,7 @@ const subscription = {
         "Đầy đủ tính năng của nền tảng",
       ],
       cta: "Đăng ký gói Pro",
-      ctaHref: "https://platform.omicslab.vn",
+      ctaHref: "https://platform.omicslab.io",
     },
     {
       name: "Business",
