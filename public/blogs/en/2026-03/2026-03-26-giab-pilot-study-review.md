@@ -3,7 +3,7 @@ slug: giab-pilot-study-benchmark-development
 title: "The GIAB pilot study: how a high-confidence benchmark for NA12878 was built"
 description: "A review of the foundational 2014 GIAB pilot study by Zook et al., which combined 14 datasets across five sequencing platforms to define a high-confidence SNP and indel benchmark for the NA12878 reference material."
 authors: [vieomics]
-tags: [variant-calling, benchmarking, clinical-genomics, quality-control]
+tags: [variant-calling, testing]
 image: ./imgs/giab-pilot-study-benchmark-development.png
 ---
 

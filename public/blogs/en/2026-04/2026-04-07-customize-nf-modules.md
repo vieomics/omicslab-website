@@ -3,7 +3,7 @@ slug: customize-nf-core-modules-gianglabs
 title: "Customizing nf-core modules: a domain-specific variant calling library"
 description: "How the gianglabs/nf-modules repository extends nf-core with organization-specific modules and subworkflows for variant discovery, and how its testing and CI/CD strategy differs from the standard nf-core approach."
 authors: [vieomics]
-tags: [nextflow, nf-core, modules, customization, variant-calling, genome-analysis]
+tags: [nf-core, nextflow]
 image: ./imgs/customize-nf-core-modules-gianglabs.png
 ---
 

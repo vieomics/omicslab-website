@@ -5,7 +5,7 @@ description: "Chạy nf-core/sarek trên mẫu GIAB HG002, chấm điểm DeepVa
 series: Variant Calling from Bash to Production
 seriesOrder: 5
 authors: [vieomics]
-tags: [nextflow, variant-calling, benchmark, giab, hap-py, nf-core]
+tags: [variant-calling, nextflow]
 image: ./imgs/gatk-variant-calling-production-slurm-optimization-part5.png
 ---
 

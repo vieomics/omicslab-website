@@ -3,7 +3,7 @@ slug: remote-files-htslib-bcftools-samtools
 title: "Working with remote files using bcftools and samtools (HTSlib)"
 description: "How HTSlib-based tools query genomic data on S3, FTP, and HTTPS through indexed byte-range requests, with authentication, indexing, and practical workflows."
 authors: [vieomics]
-tags: [bioinformatics, htslib, bcftools, samtools, s3, remote-files, cloud, genomics]
+tags: [unix, genomics]
 image: ./imgs/intro.png
 ---
 

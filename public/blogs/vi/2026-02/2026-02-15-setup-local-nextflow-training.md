@@ -3,7 +3,7 @@ slug: setup-local-nextflow-training
 title: "Thiết lập môi trường huấn luyện Nextflow cục bộ với code-server và một cụm HPC"
 description: "Hướng dẫn chạy code-server như một job Slurm trên cụm HPC và truy cập từ laptop qua một SSH tunnel, với Nextflow, Singularity, nf-core và nf-test được cài qua Pixi."
 authors: [vieomics]
-tags: [nextflow, singularity, code-server, hpc, setup, training]
+tags: [nextflow, hpc]
 image: ./imgs/intro.png
 ---
 

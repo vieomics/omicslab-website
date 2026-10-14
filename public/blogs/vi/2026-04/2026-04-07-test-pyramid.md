@@ -3,7 +3,7 @@ slug: test-type-in-bioinformatics
 title: "Kiểm thử trong bioinformatics: vì sao chạy mã với dữ liệu đầu vào là chưa đủ"
 description: "Một pipeline chạy không lỗi chưa chắc đã cho kết quả đúng. Bài viết này mô tả các tầng kiểm thử giúp phát hiện thay đổi tham số âm thầm, dữ liệu hỏng và lỗi ở trường hợp biên trong workflow bioinformatics."
 authors: [vieomics]
-tags: [testing, quality-assurance, bioinformatics, ci-cd, nextflow, reproducibility]
+tags: [testing]
 image: ./imgs/test-type-in-bioinformatics.png
 ---
 

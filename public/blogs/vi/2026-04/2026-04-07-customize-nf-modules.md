@@ -3,7 +3,7 @@ slug: customize-nf-core-modules-gianglabs
 title: "Tùy biến module nf-core: thư viện gọi biến thể đặc thù cho lĩnh vực"
 description: "Cách repository gianglabs/nf-modules mở rộng nf-core bằng các module và subworkflow đặc thù tổ chức cho việc phát hiện biến thể, và cách chiến lược kiểm thử, CI/CD của nó khác với cách tiếp cận nf-core tiêu chuẩn."
 authors: [vieomics]
-tags: [nextflow, nf-core, modules, customization, variant-calling, genome-analysis]
+tags: [nf-core, nextflow]
 image: ./imgs/customize-nf-core-modules-gianglabs.png
 ---
 

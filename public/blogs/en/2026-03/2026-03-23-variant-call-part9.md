@@ -5,7 +5,7 @@ description: "How CRAM reference-based compression reduced alignment storage by 
 series: Variant Calling from Bash to Production
 seriesOrder: 9
 authors: [vieomics]
-tags: [nextflow, variant-calling, storage, cram, cost-optimization, bioinformatics]
+tags: [variant-calling, hpc]
 image: ./imgs/storage-cost-optimization-cram-format.png
 ---
 

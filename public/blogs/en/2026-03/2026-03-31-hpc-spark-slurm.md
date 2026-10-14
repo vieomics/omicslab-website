@@ -3,7 +3,7 @@ slug: hpc-spark-slurm-reproducible-cluster
 title: "Running Spark clusters on SLURM: a reproducible setup with Pixi and sparkhpc"
 description: "How to set up reproducible Apache Spark clusters on a SLURM HPC cluster using Pixi for environment management and sparkhpc for orchestration, based on the gkit Spark-on-SLURM implementation."
 authors: [vieomics]
-tags: [hpc, spark, slurm, pixi, distributed-computing, data-processing]
+tags: [hpc]
 image: ./imgs/hpc-spark-slurm-reproducible-cluster.png
 ---
 

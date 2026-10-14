@@ -3,7 +3,7 @@ slug: giab-pilot-study-benchmark-development
 title: "Nghiên cứu thí điểm GIAB: cách xây dựng bộ chuẩn độ tin cậy cao cho NA12878"
 description: "Bài điểm lại nghiên cứu thí điểm nền tảng năm 2014 của Zook et al., với 14 bộ dữ liệu từ năm nền tảng giải trình tự, nhằm xác lập bộ chuẩn SNP và indel độ tin cậy cao cho mẫu tham chiếu NA12878."
 authors: [vieomics]
-tags: [variant-calling, benchmarking, clinical-genomics, quality-control]
+tags: [variant-calling, testing]
 image: ./imgs/giab-pilot-study-benchmark-development.png
 ---
 

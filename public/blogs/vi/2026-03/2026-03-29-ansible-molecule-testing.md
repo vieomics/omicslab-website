@@ -3,7 +3,7 @@ slug: hpc-ansible-molecule-playbook-testing
 title: "Kiểm thử playbook Ansible cho HPC bằng Molecule: từ Vagrant thủ công đến CI/CD"
 description: "Cách chuyển quy trình kiểm thử playbook Ansible cho HPC từ chạy Vagrant thủ công sang Molecule với Docker, rồi tích hợp vào GitHub Actions CI/CD, lấy ví dụ là việc dựng cụm Slurm."
 authors: [vieomics]
-tags: [hpc, ansible, slurm, testing, molecule, ci-cd, docker]
+tags: [hpc, testing]
 image: ./imgs/hpc-ansible-molecule-playbook-testing.png
 ---
 

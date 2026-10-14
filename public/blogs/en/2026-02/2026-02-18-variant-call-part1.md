@@ -5,7 +5,7 @@ description: "A practical starting point for germline variant calling: a ten-ste
 series: Variant Calling from Bash to Production
 seriesOrder: 1
 authors: [vieomics]
-tags: [bash, gatk, variant-calling, pixi, genomics, workflow, bwa, samtools, bioinformatics, ngs]
+tags: [variant-calling, nextflow]
 image: ./imgs/variant_calling.png
 ---
 

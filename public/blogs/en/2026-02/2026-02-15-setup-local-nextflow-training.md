@@ -3,7 +3,7 @@ slug: setup-local-nextflow-training
 title: "Setting up a local Nextflow training environment with code-server and an HPC cluster"
 description: "A walkthrough of running code-server as a Slurm job on an HPC cluster and reaching it from a laptop through an SSH tunnel, with Nextflow, Singularity, nf-core and nf-test installed through Pixi."
 authors: [vieomics]
-tags: [nextflow, singularity, code-server, hpc, setup, training]
+tags: [nextflow, hpc]
 image: ./imgs/intro.png
 ---
 

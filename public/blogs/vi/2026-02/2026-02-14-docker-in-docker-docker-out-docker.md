@@ -3,7 +3,7 @@ slug: docker-out-docker-bioinformatics-web-apps
 title: "Docker out of Docker: chạy ứng dụng web tương tác cho phân tích dữ liệu"
 description: "Cách chạy RStudio, JupyterLab và Code Server trong container và cho chúng khởi tạo thêm công cụ container qua Docker socket của host, kèm những lưu ý về bảo mật và quyền file."
 authors: [vieomics]
-tags: [docker, containers, rstudio, jupyterlab, code-server, bioinformatics, reproducibility, web-apps]
+tags: [containers]
 image: ./imgs/intro.png
 ---
 

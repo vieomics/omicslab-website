@@ -3,7 +3,7 @@ slug: nf-modules-template-copier-ci-cd
 title: "Building a Nextflow module template with Copier, CI/CD, and nf-test"
 description: "How the nf-modules-template scaffolds consistent Nextflow module repositories with Copier, enforces code quality through pre-commit hooks, and runs tests in parallel with nf-test sharding."
 authors: [vieomics]
-tags: [nextflow, copier, ci-cd, nf-test, testing, reproducibility, linting]
+tags: [nextflow, ci-cd]
 image: ./imgs/nf-modules-template-copier-ci-cd.png
 ---
 

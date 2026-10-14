@@ -5,7 +5,7 @@ description: "Lint workflow Nextflow để giữ quy ước nhất quán, thêm 
 series: Variant Calling from Bash to Production
 seriesOrder: 4
 authors: [vieomics]
-tags: [nextflow, testing, linting, nf-test, ci-cd, workflow]
+tags: [nextflow, ci-cd]
 image: ./imgs/part4.png
 ---
 

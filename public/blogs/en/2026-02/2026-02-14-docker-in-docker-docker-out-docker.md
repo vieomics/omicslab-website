@@ -3,7 +3,7 @@ slug: docker-out-docker-bioinformatics-web-apps
 title: "Docker out of Docker: running interactive web applications for data analysis"
 description: "How to run RStudio, JupyterLab, and Code Server in containers and let them spawn additional containerized tools through the host Docker socket, with the security and permission caveats."
 authors: [vieomics]
-tags: [docker, containers, rstudio, jupyterlab, code-server, bioinformatics, reproducibility, web-apps]
+tags: [containers]
 image: ./imgs/intro.png
 ---
 

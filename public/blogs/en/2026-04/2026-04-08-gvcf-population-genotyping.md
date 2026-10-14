@@ -5,7 +5,7 @@ description: "How gVCF reference blocks and joint genotyping support cohort-scal
 series: Variant Calling from Bash to Production
 seriesOrder: 11
 authors: [vieomics]
-tags: [genomics, variant-calling, genotyping, bioinformatics, scalability, population-genetics, joint-genotyping, deepvariant]
+tags: [variant-calling, genomics]
 image: ./imgs/gvcf-population-scale-genotyping.png
 ---
 

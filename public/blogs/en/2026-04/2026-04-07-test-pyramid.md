@@ -3,7 +3,7 @@ slug: test-type-in-bioinformatics
 title: "Testing in bioinformatics: why running code with input data is not enough"
 description: "A pipeline that runs without errors does not necessarily produce correct results. This post describes the layers of testing that help catch silent parameter changes, data corruption, and edge-case failures in bioinformatics workflows."
 authors: [vieomics]
-tags: [testing, quality-assurance, bioinformatics, ci-cd, nextflow, reproducibility]
+tags: [testing]
 image: ./imgs/test-type-in-bioinformatics.png
 ---
 

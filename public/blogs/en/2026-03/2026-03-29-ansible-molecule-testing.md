@@ -3,7 +3,7 @@ slug: hpc-ansible-molecule-playbook-testing
 title: "Testing Ansible playbooks for HPC with Molecule: from manual Vagrant to CI/CD"
 description: "How to move an HPC Ansible playbook test workflow from manual Vagrant runs to Molecule with Docker, and then to GitHub Actions CI/CD, using a Slurm cluster build as the example."
 authors: [vieomics]
-tags: [hpc, ansible, slurm, testing, molecule, ci-cd, docker]
+tags: [hpc, testing]
 image: ./imgs/hpc-ansible-molecule-playbook-testing.png
 ---
 
