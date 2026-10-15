@@ -2,8 +2,8 @@
 slug: anatomy-of-an-analysis
 title: "What a bioinformatics analysis is made of"
 description: "An analysis is a chain of steps: each step has an input, a tool, and an output. Knowing the pattern lets you read any pipeline instead of memorising one."
-order: 3
-module: "How an analysis is assembled"
+order: 2
+module: "How the result is produced"
 duration: "20 min"
 related:
   - migrate-bash-nextflow-enterprise-pipeline
@@ -37,4 +37,4 @@ A pipeline that "ran without errors" has not necessarily produced a correct resu
 
 ## Wrapping up
 
-You now have a pattern for reading an analysis: ask the input, tool and output at each step. The next lesson looks at who is responsible for each step.
+You now have a pattern for reading an analysis: ask the input, tool and output at each step. The next lesson opens the pipeline that produced the result, to see how those steps are packaged.

@@ -2,8 +2,8 @@
 slug: environments-and-reproducibility
 title: "Vì sao kết quả cần tái lập: Git, môi trường và container"
 description: "Ba công cụ giải quyết ba vấn đề khác nhau: Git lưu lịch sử thay đổi, trình quản lý môi trường ghim phiên bản, container đóng gói cả hệ điều hành. Cùng nhau, chúng làm kết quả tái lập được."
-order: 6
-module: "Công cụ, tái lập và cách tự học"
+order: 7
+module: "Đứng sau kết quả"
 duration: "25 phút"
 related:
   - how-to-version-control-git-bioinformatics-part-1

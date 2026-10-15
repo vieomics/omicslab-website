@@ -2,8 +2,8 @@
 slug: how-an-algorithm-works
 title: "Một thuật toán hoạt động như thế nào: ví dụ BLAST"
 description: "BLAST tìm một chuỗi giống với chuỗi bạn có trong một cơ sở dữ liệu lớn. Bài này đi qua bốn bước của nó bằng ý tưởng và đoạn mã giả, không cần biết lập trình."
-order: 2
-module: "Dữ liệu và cách máy tính xử lý"
+order: 4
+module: "Kết quả được tạo ra như thế nào"
 duration: "30 phút"
 related:
   - remote-files-htslib-bcftools-samtools
@@ -53,4 +53,4 @@ Phần lớn công cụ tin sinh học đều là một thuật toán kèm giả
 
 ## Kết thúc bài
 
-Bạn đã thấy máy tính so sánh chuỗi bằng hạt giống, mở rộng, chấm điểm và E-value. Các bài sau đặt một thuật toán như vậy vào trong cả một phân tích nhiều bước.
+Bạn đã thấy máy tính so sánh chuỗi bằng hạt giống, mở rộng, chấm điểm và E-value. Các bài sau lùi thêm một lớp, tới dữ liệu và con người đứng sau kết quả.

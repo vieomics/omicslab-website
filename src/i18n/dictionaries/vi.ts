@@ -438,9 +438,9 @@ export const vi: Dictionary = {
     kicker: "Học tập",
     title: "Học tin sinh học trên Omicslab",
     description:
-      "Các khóa học ngắn, có thứ tự, đưa người mới đi từ dữ liệu giải trình tự thô đến kết quả trên nền tảng. Mỗi khóa một chủ đề, từng bước một.",
+      "Mỗi khóa học bắt đầu từ một kết quả nhìn thấy được — một phân tích đã hoàn tất trên nền tảng — rồi đi ngược lại: trước hết là cách làm ra nó, sau đó là các khái niệm đằng sau.",
     intro:
-      "Mỗi khóa học là một chuỗi bài học: đọc một khái niệm ngắn, rồi thực hiện bước đó trên nền tảng Omicslab. Khi cần thêm chi tiết, bài học liên kết tới các bài kỹ thuật dài hơn trong blog.",
+      "Mỗi khóa học mở đầu bằng kết quả bạn sẽ có. Từ đó, khóa học đi ngược về các bước tạo ra kết quả, và chỉ sau đó mới tới những ý tưởng bên dưới. Hãy đọc khóa đầu để có một kết quả, rồi khóa thứ hai để hiểu điều gì đã xảy ra.",
     notice:
       "Các khóa học này là tài liệu học tập, được soạn để giúp bạn làm quen và sử dụng nền tảng Omicslab. Nội dung không được cung cấp cho bất kỳ mục đích thương mại nào.",
     courseLabel: "Khóa học",

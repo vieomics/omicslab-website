@@ -1,9 +1,10 @@
 ---
-title: "Metagenomics and bacterial whole-genome assembly from WGS data"
-description: "A beginner course that goes from raw sequencing data to an assembled, quality-checked and annotated bacterial genome, carried out on the Omicslab platform."
+title: "Assemble and annotate a bacterial genome from WGS data"
+description: "The result: an assembled, quality-checked and annotated bacterial genome, with its antimicrobial-resistance genes — run on the Omicslab platform. The course goes from raw FASTQ data to that result, one step at a time."
 level: "Beginner"
 duration: "About 3 hours"
-order: 2
+order: 1
+tag: "Result"
 outcomes:
   - "Read and assess a FASTQ file at a basic level: read count, length and base quality."
   - "Tell isolate WGS data apart from metagenomic data, and choose the analysis that fits."

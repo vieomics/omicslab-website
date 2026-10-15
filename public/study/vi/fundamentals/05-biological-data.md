@@ -1,9 +1,9 @@
 ---
 slug: biological-data
-title: "Dữ liệu sinh học là gì"
-description: "DNA, RNA và protein là chuỗi; nhưng dữ liệu sinh học còn có chất lượng, độ phủ và thông tin mẫu — và mỗi loại dữ liệu được lưu bằng một định dạng riêng."
-order: 1
-module: "Dữ liệu và cách máy tính xử lý"
+title: "Dữ liệu đứng sau kết quả"
+description: "Kết quả bắt đầu từ dữ liệu. DNA, RNA và protein là chuỗi; nhưng dữ liệu sinh học còn có chất lượng, độ phủ và thông tin mẫu — và mỗi loại được lưu bằng một định dạng riêng."
+order: 5
+module: "Đứng sau kết quả"
 duration: "20 phút"
 related:
   - unix-pipes-bioinformatics-streaming-data
@@ -45,4 +45,4 @@ Trước khi phân tích, hãy hỏi hai câu: dữ liệu đang ở giai đoạ
 
 ## Kết thúc bài
 
-Bạn đã biết dữ liệu sinh học được viết bằng chuỗi và mang theo chất lượng cùng thông tin mẫu. Bài tiếp theo xem máy tính so sánh chuỗi như thế nào, qua một ví dụ cụ thể.
+Bạn đã biết dữ liệu sinh học được viết bằng chuỗi và mang theo chất lượng cùng thông tin mẫu. Bài tiếp theo xem con người đứng sau kết quả.

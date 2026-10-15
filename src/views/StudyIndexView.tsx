@@ -55,7 +55,9 @@ export default function StudyIndexView({
                 href={localizePath(`/study/${track.slug}`, locale)}
                 className="group flex flex-col border border-line bg-paper-light p-8 transition-colors hover:border-ink"
               >
-                <span className="micro-label text-muted">{t.courseLabel}</span>
+                <span className="micro-label text-muted">
+                  {track.tag || t.courseLabel}
+                </span>
                 <span className="display-sm mt-3 text-ink">{track.title}</span>
                 <span className="mt-3 text-sm leading-relaxed text-muted">
                   {track.description}

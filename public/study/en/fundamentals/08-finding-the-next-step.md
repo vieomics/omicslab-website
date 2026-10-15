@@ -2,8 +2,8 @@
 slug: finding-the-next-step
 title: "When a ready pipeline is not enough: finding a step"
 description: "How to turn a question nobody has packaged into a step of your own: name the step, find existing tools, try it on small data, package it, then verify."
-order: 7
-module: "Tools, reproducibility and learning on your own"
+order: 8
+module: "What stands behind the result"
 duration: "25 min"
 related:
   - customize-nf-core-modules-gianglabs
@@ -37,4 +37,4 @@ The goal is not to remember every tool, but to know how to find, try and verify 
 
 ## Wrapping up the course
 
-You now have the background picture: what biological data is, how an algorithm such as BLAST reasons, what steps an analysis is made of, who does what, why results need to be reproducible, and how to find the next step yourself. The next course — bacterial genome assembly — applies these ideas in a concrete procedure.
+You now have the background picture: what biological data is, how an algorithm such as BLAST reasons, what steps an analysis is made of, who does what, why results need to be reproducible, and how to find the next step yourself. The assembly course — the previous one — applies these ideas in a concrete procedure.

@@ -1,9 +1,9 @@
 ---
 slug: biological-data
-title: "What biological data is"
-description: "DNA, RNA and protein are strings; but biological data also carries quality, coverage and sample information — and each kind is stored in its own format."
-order: 1
-module: "Data and how a computer handles it"
+title: "The data behind the result"
+description: "A result begins with data. DNA, RNA and protein are strings; but biological data also carries quality, coverage and sample information — and each kind is stored in its own format."
+order: 5
+module: "What stands behind the result"
 duration: "20 min"
 related:
   - unix-pipes-bioinformatics-streaming-data
@@ -45,4 +45,4 @@ Before analysing, ask two questions: which stage is the data at, and what sample
 
 ## Wrapping up
 
-You now know that biological data is written as strings and carries quality and sample information. The next lesson looks at how a computer compares strings, through one concrete example.
+You now know that biological data is written as strings and carries quality and sample information. The next lesson looks at the people behind the result.

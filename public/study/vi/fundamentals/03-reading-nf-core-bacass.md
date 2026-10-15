@@ -1,9 +1,9 @@
 ---
 slug: reading-nf-core-bacass
-title: "Đọc một pipeline: nf-core/bacass"
-description: "nf-core/bacass đóng gói sẵn các bước lắp ráp hệ gen vi khuẩn. Bài này xem nó làm gì và vì sao hiểu từng bước quan trọng hơn chỉ bấm chạy."
-order: 5
-module: "Công cụ, tái lập và cách tự học"
+title: "Đọc pipeline đã tạo ra kết quả: nf-core/bacass"
+description: "Kết quả ở khóa trước do một pipeline tạo ra. Bài này mở nó ra: nf-core/bacass gồm những bước nào, và vì sao hiểu từng bước quan trọng hơn chỉ bấm chạy."
+order: 3
+module: "Kết quả được tạo ra như thế nào"
 duration: "25 phút"
 related:
   - bacterial-genome-assembly-without-coding
@@ -47,4 +47,4 @@ Không cần học thuộc tham số. Hãy mở trang tài liệu của đúng p
 
 ## Kết thúc bài
 
-Bạn đã biết bacass gồm những bước gì và cách đọc tài liệu của nó. Hai bài sau nói về điều kiện để kết quả đáng tin, và cách tự tìm một bước khi pipeline có sẵn không đủ.
+Bạn đã biết bacass gồm những bước gì và cách đọc tài liệu của nó. Bài tiếp theo mở một bước ra, để xem một thuật toán như BLAST nghĩ gì.

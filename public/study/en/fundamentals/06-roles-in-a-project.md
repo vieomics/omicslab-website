@@ -1,9 +1,9 @@
 ---
 slug: roles-in-a-project
-title: "Who does what in a bioinformatics project"
+title: "The people behind the result"
 description: "A bioinformatics result passes through many people: the wet lab, the bioinformatician, the software engineer, the infrastructure engineer, the clinician. Knowing each role tells you who to ask, and for what."
-order: 4
-module: "How an analysis is assembled"
+order: 6
+module: "What stands behind the result"
 duration: "20 min"
 related:
   - how-to-version-control-git-bioinformatics-part-1
@@ -38,4 +38,4 @@ Most project failures sit at the hand-offs, not in the algorithms: a samplesheet
 
 ## Wrapping up
 
-You now know the roles and what they hand over. The next lesson reads one concrete pipeline — `nf-core/bacass` — to see how these steps are packaged.
+You now know the roles and what they hand over. The next lesson looks at why a result like this can be reproduced.

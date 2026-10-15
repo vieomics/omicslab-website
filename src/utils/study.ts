@@ -46,6 +46,8 @@ export interface StudyTrackMeta {
   duration: string;
   /** Position on the Study hub; lower comes first. */
   order: number;
+  /** Short badge, e.g. "Result" or "Behind the result". */
+  tag?: string;
   outcomes: string[];
   tools: string[];
 }
@@ -103,6 +105,7 @@ function readTrackMeta(locale: Locale, trackSlug: string): StudyTrackMeta | null
     level: (data.level as string) || "",
     duration: (data.duration as string) || "",
     order: Number.isFinite(Number(data.order)) ? Number(data.order) : 999,
+    tag: (data.tag as string) || undefined,
     outcomes: Array.isArray(data.outcomes) ? (data.outcomes as string[]) : [],
     tools: Array.isArray(data.tools) ? (data.tools as string[]) : [],
   };

@@ -2,8 +2,8 @@
 slug: how-an-algorithm-works
 title: "How an algorithm works: BLAST as an example"
 description: "BLAST finds a sequence similar to yours inside a large database. This lesson walks through its four steps with ideas and a short piece of pseudocode, no programming needed."
-order: 2
-module: "Data and how a computer handles it"
+order: 4
+module: "How the result is produced"
 duration: "30 min"
 related:
   - remote-files-htslib-bcftools-samtools
@@ -53,4 +53,4 @@ Most bioinformatics tools are an algorithm plus assumptions and one trade-off. K
 
 ## Wrapping up
 
-You have seen a computer compare strings through seeds, extension, scoring and the E-value. The next lessons place an algorithm like this inside a whole multi-step analysis.
+You have seen a computer compare strings through seeds, extension, scoring and the E-value. The next lessons step back a layer, to the data and the people behind the result.

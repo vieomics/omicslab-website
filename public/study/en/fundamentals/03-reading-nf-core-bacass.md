@@ -1,9 +1,9 @@
 ---
 slug: reading-nf-core-bacass
-title: "Reading a pipeline: nf-core/bacass"
-description: "nf-core/bacass packages the steps of bacterial genome assembly. This lesson looks at what it does and why understanding each step matters more than just pressing run."
-order: 5
-module: "Tools, reproducibility and learning on your own"
+title: "Reading the pipeline that produced the result: nf-core/bacass"
+description: "The result in the previous course was produced by a pipeline. This lesson opens it up: what steps nf-core/bacass contains, and why understanding each step matters more than just pressing run."
+order: 3
+module: "How the result is produced"
 duration: "25 min"
 related:
   - bacterial-genome-assembly-without-coding
@@ -47,4 +47,4 @@ You do not need to memorise parameters. Open the documentation page for the exac
 
 ## Wrapping up
 
-You now know what steps bacass contains and how to read its documentation. The next two lessons cover what makes a result trustworthy, and how to find a step when a ready pipeline is not enough.
+You now know what steps bacass contains and how to read its documentation. The next lesson opens one step, to see how an algorithm such as BLAST reasons.

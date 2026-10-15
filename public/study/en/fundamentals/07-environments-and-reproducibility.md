@@ -2,8 +2,8 @@
 slug: environments-and-reproducibility
 title: "Why results need to be reproducible: git, environments and containers"
 description: "Three tools solve three different problems: git stores the history of changes, an environment manager pins versions, and a container packages the whole system. Together they make a result reproducible."
-order: 6
-module: "Tools, reproducibility and learning on your own"
+order: 7
+module: "What stands behind the result"
 duration: "25 min"
 related:
   - how-to-version-control-git-bioinformatics-part-1

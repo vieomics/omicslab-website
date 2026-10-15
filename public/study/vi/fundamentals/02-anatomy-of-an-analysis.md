@@ -2,8 +2,8 @@
 slug: anatomy-of-an-analysis
 title: "Một phân tích tin sinh học gồm những bước nào"
 description: "Phân tích là các bước nối tiếp nhau: mỗi bước có đầu vào, một công cụ, và đầu ra. Hiểu khuôn mẫu này giúp đọc bất kỳ pipeline nào."
-order: 3
-module: "Cách một phân tích được ghép lại"
+order: 2
+module: "Kết quả được tạo ra như thế nào"
 duration: "20 phút"
 related:
   - migrate-bash-nextflow-enterprise-pipeline
@@ -37,4 +37,4 @@ Một pipeline "chạy xong không lỗi" chưa chắc cho kết quả đúng. M
 
 ## Kết thúc bài
 
-Bạn đã có khuôn mẫu để đọc một phân tích: hỏi đầu vào, công cụ, đầu ra ở từng bước. Bài tiếp theo xem ai là người phụ trách mỗi bước.
+Bạn đã có khuôn mẫu để đọc một phân tích: hỏi đầu vào, công cụ, đầu ra ở từng bước. Bài tiếp theo mở pipeline đã tạo ra kết quả, để thấy các bước này được đóng gói ra sao.

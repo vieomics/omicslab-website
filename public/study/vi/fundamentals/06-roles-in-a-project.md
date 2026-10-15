@@ -1,9 +1,9 @@
 ---
 slug: roles-in-a-project
-title: "Ai làm gì trong một dự án tin sinh học"
+title: "Con người đứng sau kết quả"
 description: "Một kết quả tin sinh học đi qua nhiều người: phòng thí nghiệm, nhà tin sinh học, kỹ sư phần mềm, kỹ sư hạ tầng, chuyên gia lâm sàng. Hiểu mỗi vai để biết hỏi ai và hỏi gì."
-order: 4
-module: "Cách một phân tích được ghép lại"
+order: 6
+module: "Đứng sau kết quả"
 duration: "20 phút"
 related:
   - how-to-version-control-git-bioinformatics-part-1
@@ -38,4 +38,4 @@ Phần lớn lỗi trong dự án nằm ở chỗ bàn giao, không phải ở t
 
 ## Kết thúc bài
 
-Bạn đã biết các vai trò và sản phẩm bàn giao. Bài tiếp theo đọc một pipeline cụ thể — `nf-core/bacass` — để thấy những bước này được đóng gói sẵn ra sao.
+Bạn đã biết các vai trò và sản phẩm bàn giao. Bài tiếp theo xem vì sao một kết quả như vậy có thể tái lập được.
