@@ -44,6 +44,10 @@ export default function StudyIndexView({
             {t.intro}
           </p>
 
+          <p className="rule-accent mt-8 max-w-[820px] bg-paper-light py-4 pr-5 text-sm leading-relaxed text-muted">
+            {t.notice}
+          </p>
+
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             {tracks.map((track) => (
               <Link

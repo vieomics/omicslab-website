@@ -441,6 +441,8 @@ export const en = {
       "Short, ordered courses that take a newcomer from raw sequencing data to a result on the platform. One topic per course, one step at a time.",
     intro:
       "Each course is a sequence of lessons: read a short concept, then carry out the step on the Omicslab platform. Lessons link to the longer technical write-ups in the blog when more detail helps.",
+    notice:
+      "These courses are learning materials, written to help you get started on the Omicslab platform and find your way around it. They are not offered for any commercial purpose.",
     courseLabel: "Course",
     lessonsSuffix: "lessons",
     modulesSuffix: "modules",

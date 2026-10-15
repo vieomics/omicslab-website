@@ -441,6 +441,8 @@ export const vi: Dictionary = {
       "Các khóa học ngắn, có thứ tự, đưa người mới đi từ dữ liệu giải trình tự thô đến kết quả trên nền tảng. Mỗi khóa một chủ đề, từng bước một.",
     intro:
       "Mỗi khóa học là một chuỗi bài học: đọc một khái niệm ngắn, rồi thực hiện bước đó trên nền tảng Omicslab. Khi cần thêm chi tiết, bài học liên kết tới các bài kỹ thuật dài hơn trong blog.",
+    notice:
+      "Các khóa học này là tài liệu học tập, được soạn để giúp bạn làm quen và sử dụng nền tảng Omicslab. Nội dung không được cung cấp cho bất kỳ mục đích thương mại nào.",
     courseLabel: "Khóa học",
     lessonsSuffix: "bài",
     modulesSuffix: "chương",

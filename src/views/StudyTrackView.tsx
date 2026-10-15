@@ -119,6 +119,10 @@ export default function StudyTrackView({
                     </ul>
                   </div>
                 )}
+
+                <p className="border-l-2 border-line pl-4 text-xs leading-relaxed text-muted">
+                  {t.notice}
+                </p>
               </div>
             </aside>
           </div>
