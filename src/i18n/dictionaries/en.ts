@@ -167,6 +167,7 @@ export const en = {
     dataPlatform: "Omicslab Platform",
     pipelinesSoftwares: "Custom Solutions",
     blog: "Blog",
+    study: "Study",
     docs: "Docs",
     mobileMenu: "Mobile Menu",
     languageSwitcher: "Switch language",
@@ -431,6 +432,70 @@ export const en = {
       postsSuffix: "posts",
       browseAll: "Browse all posts",
       browseTopics: "Browse by topic",
+    },
+  },
+  study: {
+    kicker: "Study",
+    title: "Learn bioinformatics on Omicslab",
+    description:
+      "Short, ordered courses that take a newcomer from raw sequencing data to a result on the platform. One topic per course, one step at a time.",
+    intro:
+      "Each course is a sequence of lessons: read a short concept, then carry out the step on the Omicslab platform. Lessons link to the longer technical write-ups in the blog when more detail helps.",
+    courseLabel: "Course",
+    lessonsSuffix: "lessons",
+    modulesSuffix: "modules",
+    levelLabel: "Level",
+    durationLabel: "Estimated time",
+    outcomesLabel: "What you will be able to do",
+    toolsLabel: "Tools and pipelines",
+    curriculumLabel: "Curriculum",
+    openCourse: "Open course",
+    startCourse: "Start the first lesson",
+    backToStudy: "All courses",
+    backToCourse: "Back to course",
+    lessonLabel: "Lesson",
+    inThisLesson: "In this lesson",
+    courseContents: "Course contents",
+    relatedLabel: "Related reading",
+    relatedIntro:
+      "Longer articles from the blog that go deeper into the same subject.",
+    previous: "Previous",
+    next: "Next",
+    figurePlaceholder: "Figure — artwork to be added",
+    upcoming: {
+      title: "Courses in preparation",
+      description:
+        "The Study section is being extended. These courses are scaffolded and will be published as their lessons are written.",
+      items: [
+        {
+          title: "Germline variant calling from short reads",
+          description:
+            "From FASTQ to an annotated VCF, following the variant-calling series from a bash baseline to a Nextflow pipeline.",
+          level: "Intermediate",
+        },
+        {
+          title: "Workflow engineering with Nextflow",
+          description:
+            "Modules, containers, testing and continuous integration for reproducible pipelines.",
+          level: "Intermediate",
+        },
+        {
+          title: "Building and running an HPC cluster",
+          description:
+            "A Slurm cluster from a single machine to production, with monitoring and administration practices.",
+          level: "Advanced",
+        },
+      ],
+    },
+    notFound: {
+      title: "Course not found",
+      description:
+        "This course has not been published yet. Browse the courses that are available.",
+    },
+    metadata: {
+      title: "Study",
+      description:
+        "Ordered courses that teach bioinformatics on the Omicslab platform, starting with bacterial genome assembly from WGS data.",
     },
   },
   solutions: {
@@ -722,6 +787,11 @@ export const en = {
     blog: {
       title: "Blog",
       description: "Explore the latest blogs and solutions from Omicslab.",
+    },
+    study: {
+      title: "Study",
+      description:
+        "Ordered courses that teach bioinformatics on the Omicslab platform, starting with bacterial genome assembly from WGS data.",
     },
     contact: {
       title: "Contact",

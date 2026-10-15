@@ -608,6 +608,35 @@
 }
 
 /*
+  Study lessons — figure placeholders. A lesson can reference an image before
+  the artwork exists; the file check in `src/utils/study.ts` renders this boxed
+  label instead, with the caption still shown underneath.
+*/
+.study-figure-placeholder {
+  display: flex;
+  min-height: 280px;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed var(--color-line);
+  background-color: var(--color-paper-light);
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgb(0 0 0 / 0.03) 0,
+    rgb(0 0 0 / 0.03) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+}
+
+.study-figure-placeholder span {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/*
   Printable policy documents — /legal/[doc].
   Each policy is exported to PDF for submission (e.g. to the e-commerce
   notification portal), so the layout favours a clean paper page.

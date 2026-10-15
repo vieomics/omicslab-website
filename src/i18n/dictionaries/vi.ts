@@ -167,6 +167,7 @@ export const vi: Dictionary = {
     dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Giải pháp tùy chỉnh",
     blog: "Blog",
+    study: "Học tập",
     docs: "Tài liệu",
     mobileMenu: "Menu di động",
     languageSwitcher: "Chuyển ngôn ngữ",
@@ -431,6 +432,70 @@ export const vi: Dictionary = {
       postsSuffix: "bài",
       browseAll: "Xem tất cả bài viết",
       browseTopics: "Xem theo chủ đề",
+    },
+  },
+  study: {
+    kicker: "Học tập",
+    title: "Học tin sinh học trên Omicslab",
+    description:
+      "Các khóa học ngắn, có thứ tự, đưa người mới đi từ dữ liệu giải trình tự thô đến kết quả trên nền tảng. Mỗi khóa một chủ đề, từng bước một.",
+    intro:
+      "Mỗi khóa học là một chuỗi bài học: đọc một khái niệm ngắn, rồi thực hiện bước đó trên nền tảng Omicslab. Khi cần thêm chi tiết, bài học liên kết tới các bài kỹ thuật dài hơn trong blog.",
+    courseLabel: "Khóa học",
+    lessonsSuffix: "bài",
+    modulesSuffix: "chương",
+    levelLabel: "Trình độ",
+    durationLabel: "Thời lượng dự kiến",
+    outcomesLabel: "Sau khóa học, bạn có thể",
+    toolsLabel: "Công cụ và pipeline",
+    curriculumLabel: "Nội dung khóa học",
+    openCourse: "Mở khóa học",
+    startCourse: "Bắt đầu bài đầu tiên",
+    backToStudy: "Tất cả khóa học",
+    backToCourse: "Về khóa học",
+    lessonLabel: "Bài",
+    inThisLesson: "Trong bài này",
+    courseContents: "Nội dung khóa học",
+    relatedLabel: "Đọc thêm",
+    relatedIntro:
+      "Các bài viết dài hơn trong blog đi sâu vào cùng chủ đề.",
+    previous: "Bài trước",
+    next: "Bài sau",
+    figurePlaceholder: "Hình — sẽ bổ sung ảnh minh họa",
+    upcoming: {
+      title: "Các khóa học đang chuẩn bị",
+      description:
+        "Mục Học tập đang được mở rộng. Các khóa học dưới đây đã có khung và sẽ được phát hành khi bài học hoàn tất.",
+      items: [
+        {
+          title: "Gọi biến thể germline từ dữ liệu đọc ngắn",
+          description:
+            "Từ FASTQ đến VCF đã chú giải, theo chuỗi bài về gọi biến thể: từ baseline bash đến pipeline Nextflow.",
+          level: "Trung cấp",
+        },
+        {
+          title: "Kỹ thuật workflow với Nextflow",
+          description:
+            "Module, container, kiểm thử và tích hợp liên tục cho các pipeline tái lập được.",
+          level: "Trung cấp",
+        },
+        {
+          title: "Xây dựng và vận hành cụm HPC",
+          description:
+            "Cụm Slurm từ một máy đơn đến production, kèm giám sát và các thực hành quản trị.",
+          level: "Nâng cao",
+        },
+      ],
+    },
+    notFound: {
+      title: "Không tìm thấy khóa học",
+      description:
+        "Khóa học này chưa được phát hành. Bạn có thể xem các khóa học đang có.",
+    },
+    metadata: {
+      title: "Học tập",
+      description:
+        "Các khóa học có thứ tự giúp học tin sinh học trên nền tảng Omicslab, bắt đầu với lắp ráp hệ gen vi khuẩn từ dữ liệu WGS.",
     },
   },
   solutions: {
@@ -722,6 +787,11 @@ export const vi: Dictionary = {
     blog: {
       title: "Blog",
       description: "Khám phá các bài viết và giải pháp mới nhất từ Omicslab.",
+    },
+    study: {
+      title: "Học tập",
+      description:
+        "Các khóa học có thứ tự giúp học tin sinh học trên nền tảng Omicslab, bắt đầu với lắp ráp hệ gen vi khuẩn từ dữ liệu WGS.",
     },
     contact: {
       title: "Liên hệ",

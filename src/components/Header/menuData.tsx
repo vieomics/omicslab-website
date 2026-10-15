@@ -48,6 +48,12 @@ export default function getMenuData(dict: Dictionary): Menu[] {
       newTab: false,
     },
     {
+      id: 9,
+      title: dict.nav.study,
+      path: "/study",
+      newTab: false,
+    },
+    {
       id: 8,
       title: dict.nav.docs,
       path: "https://docs.omicslab.io",

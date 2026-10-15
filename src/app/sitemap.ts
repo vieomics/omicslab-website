@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { Locale } from "@/i18n/config";
 import { localizePath } from "@/i18n/paths";
 import { getPostSlugs, getPostTranslation } from "@/utils/markdown";
+import { getAllTracks } from "@/utils/study";
 
 export const dynamic = "force-static";
 
@@ -13,6 +14,7 @@ const staticPaths = [
   "/about",
   "/blogs",
   "/blogs/topics",
+  "/study",
   "/contact",
   "/privacy",
   "/terms",
@@ -68,6 +70,39 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.6,
         alternates: { languages },
       });
+    }
+  }
+
+  for (const locale of localeList) {
+    const other: Locale = locale === "vi" ? "en" : "vi";
+
+    for (const track of getAllTracks(locale)) {
+      entries.push({
+        url: `${baseUrl}${localizePath(`/study/${track.slug}`, locale)}`,
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: {
+          languages: {
+            vi: `${baseUrl}${localizePath(`/study/${track.slug}`, "vi")}`,
+            en: `${baseUrl}${localizePath(`/study/${track.slug}`, "en")}`,
+          },
+        },
+      });
+
+      for (const lesson of track.lessons) {
+        const lessonPath = `/study/${track.slug}/${lesson.slug}`;
+        entries.push({
+          url: `${baseUrl}${localizePath(lessonPath, locale)}`,
+          changeFrequency: "monthly",
+          priority: 0.6,
+          alternates: {
+            languages: {
+              [locale]: `${baseUrl}${localizePath(lessonPath, locale)}`,
+              [other]: `${baseUrl}${localizePath(lessonPath, other)}`,
+            },
+          },
+        });
+      }
     }
   }
 
