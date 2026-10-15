@@ -9,8 +9,8 @@ const dict = getDictionary("en");
 export const metadata: Metadata = pageMetadata({
   locale: "en",
   path: "/study",
-  title: dict.study.metadata.title,
-  description: dict.study.metadata.description,
+  title: dict.metadata.study.title,
+  description: dict.metadata.study.description,
 });
 
 const Study = () => {

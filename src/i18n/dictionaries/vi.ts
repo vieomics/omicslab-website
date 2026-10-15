@@ -492,11 +492,6 @@ export const vi: Dictionary = {
       description:
         "Khóa học này chưa được phát hành. Bạn có thể xem các khóa học đang có.",
     },
-    metadata: {
-      title: "Học tập",
-      description:
-        "Các khóa học có thứ tự giúp học tin sinh học trên nền tảng Omicslab, bắt đầu với lắp ráp hệ gen vi khuẩn từ dữ liệu WGS.",
-    },
   },
   solutions: {
     index: {

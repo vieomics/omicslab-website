@@ -44,6 +44,8 @@ export interface StudyTrackMeta {
   description: string;
   level: string;
   duration: string;
+  /** Position on the Study hub; lower comes first. */
+  order: number;
   outcomes: string[];
   tools: string[];
 }
@@ -100,6 +102,7 @@ function readTrackMeta(locale: Locale, trackSlug: string): StudyTrackMeta | null
     description: (data.description as string) || "",
     level: (data.level as string) || "",
     duration: (data.duration as string) || "",
+    order: Number.isFinite(Number(data.order)) ? Number(data.order) : 999,
     outcomes: Array.isArray(data.outcomes) ? (data.outcomes as string[]) : [],
     tools: Array.isArray(data.tools) ? (data.tools as string[]) : [],
   };
@@ -157,11 +160,12 @@ export function getTrack(locale: Locale, trackSlug: string): StudyTrack | null {
   return { ...meta, modules, lessons, lessonCount: lessons.length };
 }
 
-/** Every track for a locale, in curriculum order. */
+/** Every track for a locale, ordered by their `order` frontmatter. */
 export function getAllTracks(locale: Locale): StudyTrack[] {
   return getTrackSlugs(locale)
     .map((slug) => getTrack(locale, slug))
-    .filter((track): track is StudyTrack => track !== null);
+    .filter((track): track is StudyTrack => track !== null)
+    .sort((a, b) => a.order - b.order || a.slug.localeCompare(b.slug));
 }
 
 /** Flat list of `{ track, lesson }` pairs across every track (for routing). */

@@ -492,11 +492,6 @@ export const en = {
       description:
         "This course has not been published yet. Browse the courses that are available.",
     },
-    metadata: {
-      title: "Study",
-      description:
-        "Ordered courses that teach bioinformatics on the Omicslab platform, starting with bacterial genome assembly from WGS data.",
-    },
   },
   solutions: {
     index: {
@@ -791,7 +786,7 @@ export const en = {
     study: {
       title: "Study",
       description:
-        "Ordered courses that teach bioinformatics on the Omicslab platform, starting with bacterial genome assembly from WGS data.",
+        "Ordered courses that teach bioinformatics on the Omicslab platform — from the fundamentals of data and algorithms to bacterial genome assembly from WGS data.",
     },
     contact: {
       title: "Contact",
