@@ -399,6 +399,20 @@ export const vi: Dictionary = {
       paragraph:
         "Các hướng dẫn kỹ thuật để thiết lập và quản lý hạ tầng HPC. Mỗi hướng dẫn có thể được tùy chỉnh theo yêu cầu cụ thể của bạn.",
     },
+    topics: {
+      title: "Chủ đề blog",
+      subtitle: "Toàn bộ bài viết, nhóm theo chủ đề",
+      description:
+        "Tất cả bài viết của Omicslab được gom theo một số chủ đề, để có thể đọc trọn một mảng nội dung hoặc một chuỗi bài.",
+      intro:
+        "Các bài viết được nhóm theo chủ đề bên dưới. Với chủ đề gồm nhiều bài, thứ tự trong chuỗi được hiển thị để đọc lần lượt.",
+      columnPost: "Bài viết",
+      columnSeries: "Chuỗi bài",
+      columnDate: "Ngày",
+      postsSuffix: "bài",
+      browseAll: "Xem tất cả bài viết",
+      browseTopics: "Xem theo chủ đề",
+    },
   },
   solutions: {
     index: {
