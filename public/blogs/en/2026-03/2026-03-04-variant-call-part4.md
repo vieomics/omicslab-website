@@ -5,7 +5,7 @@ description: "Linting a Nextflow workflow for consistent conventions, adding nf-
 series: Variant Calling from Bash to Production
 seriesOrder: 4
 authors: [vieomics]
-tags: [nextflow, ci-cd]
+tags: [variant-calling, nextflow]
 image: ./imgs/part4.png
 ---
 

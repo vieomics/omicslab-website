@@ -399,6 +399,20 @@ export const en = {
       paragraph:
         "Technical guides for setting up and managing HPC infrastructure. Each guide can be customized to your specific requirements.",
     },
+    topics: {
+      title: "Blog topics",
+      subtitle: "Every post, grouped by topic",
+      description:
+        "All Omicslab posts collected under a small set of topics, so a subject or a series can be read end to end.",
+      intro:
+        "Posts are grouped by topic below. Where a subject spans several articles, the series order is shown so the parts can be read in sequence.",
+      columnPost: "Post",
+      columnSeries: "Series",
+      columnDate: "Date",
+      postsSuffix: "posts",
+      browseAll: "Browse all posts",
+      browseTopics: "Browse by topic",
+    },
   },
   solutions: {
     index: {
