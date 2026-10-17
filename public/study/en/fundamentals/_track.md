@@ -6,6 +6,7 @@ duration: "About 2 hours"
 order: 1
 tag: "A to Z"
 outcomes:
+  - "See where software and algorithms meet biological data — the point where a wet-lab sample becomes something a computer can read."
   - "Read a finished analysis correctly and know which artefacts it contains."
   - "Describe an analysis as a chain of steps with inputs, outputs and quality checks."
   - "Read a pipeline such as nf-core/bacass to understand what it does, not just press run."
