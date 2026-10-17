@@ -41,34 +41,15 @@ The key idea is easy to miss: a pipeline is not a tidier way of writing commands
 
 The important consequence is that a step's position comes from *what it needs*, not from where it is written. Calling variants is the fifth step because it consumes the alignments, not because someone typed it fifth. The description says only what depends on what; a program is then free to choose the order, run independent steps at the same time, and redo only the parts whose inputs changed.
 
-The difference is easiest to see in two small descriptions of the same analysis. As a script, it is a list to be followed top to bottom:
+The same idea is easier to see concretely. The picture below is a small variant-calling analysis: a FASTQ file goes in, the reads are aligned, the alignment is cleaned up, variants are called, and a VCF file comes out. Each box is a step; each arrow is a file — the output of one step and the input of the next.
 
-```text
-fastqc   reads_R1.fastq reads_R2.fastq
-fastp    -i reads_R1.fastq -I reads_R2.fastq -o trim_R1.fastq -O trim_R2.fastq
-bwa      mem reference.fasta trim_R1.fastq trim_R2.fastq > aligned.sam
-samtools sort aligned.sam -o sorted.bam
-samtools markdup sorted.bam marked.bam
-bcftools mpileup -f reference.fasta marked.bam | bcftools call -mv -o calls.vcf
-```
+![A simple variant-calling pipeline](./imgs/analysis-pipeline.png "Figure 2. A pipeline drawn concretely: boxes are steps, arrows are the data files that pass between them — reads in FASTQ, alignments in BAM/CRAM, variant calls in VCF/gVCF. Image: Beatrice Branchini, CC0, via Wikimedia Commons.")
 
-As a pipeline, it is a set of steps and their connections, with no inherent order:
+There are two ways to read that picture, and both are useful. As boxes, it is a recipe: align, clean up, call. As arrows, it is a set of dependencies: *Variant Calling* cannot start until a BAM file exists, and a BAM file cannot exist until alignment has finished. The second reading is the one a workflow engine uses, and drawing it as a graph makes it explicit.
 
-```text
-step TRIM      reads           -> trimmed reads
-step ALIGN     trimmed reads   -> sorted, duplicate-marked alignments
-step CALL      alignments      -> variant calls
-step SUMMARISE all reports     -> one summary
+![The same analysis as a directed acyclic graph](./imgs/pipeline-dag.svg "Figure 3. The same structure written as a directed acyclic graph: each node is a step, each arrow means its output feeds the next. Image: public domain, via Wikimedia Commons.")
 
-TRIM      depends on the input reads
-ALIGN     depends on TRIM
-CALL      depends on ALIGN
-SUMMARISE depends on every step
-```
-
-Both produce the same result. The difference appears when something changes. Give the first step two samples instead of one, and the script needs editing in several places; in the pipeline nothing is edited, and the engine simply runs the chain twice and merges the reports where the graph allows. Replace the aligner with a better one, and only the *ALIGN* step changes, because the connections are stated rather than implied by line order. This is also the ordinary way a pipeline grows from one sample to hundreds: the structure is written once, and the samples fan out through it.
-
-![A directed acyclic graph](./imgs/pipeline-dag.svg "Figure 2. A directed acyclic graph: each node is a step, each arrow means its output feeds the next. Image: public domain, via Wikimedia Commons.")
+Because the structure is stated rather than implied by line order, changes stay local. Give the analysis two samples instead of one and nothing in the description is edited — the engine runs the chain once per sample and merges the reports where the graph allows, which is the ordinary way a pipeline grows from one sample to hundreds. Replace the aligner with a better one and only that one step changes; the steps before and after it are untouched, because their connections are explicit.
 
 A useful analogy: a script is a set of directions you follow yourself, one line at a time. A pipeline is a structure of tasks that a foreman can hand out — the foreman works out what can be done in parallel, notices when a task fails, and redoes only what is affected.
 
@@ -117,14 +98,14 @@ The practical habit is simple even if the tooling is not: pin versions, record t
 
 The compute itself is increasingly shared rather than sitting under a desk, and the choice has consequences.
 
-![A compute cluster in a data centre](./imgs/compute-cluster.jpg "Figure 3. An institutional compute cluster. Image: CSIRO, CC BY 3.0, via Wikimedia Commons.")
+![A compute cluster in a data centre](./imgs/compute-cluster.jpg "Figure 4. An institutional compute cluster. Image: CSIRO, CC BY 3.0, via Wikimedia Commons.")
 
 A **laptop** is fine for learning and for small tests. Beyond that, two environments dominate:
 
 - A shared **HPC cluster**, usually with a scheduler such as Slurm. Users log in to a small *login node* to prepare their work, then submit *jobs* to a scheduler that places them on powerful *compute nodes* as resources free up. The vocabulary is worth learning: a job asks for some CPUs, memory and a maximum time (*walltime*) on a named *partition*; a *job array* runs the same job once per sample. Data usually lives on a shared filesystem large enough to be visible from every node, while temporary files go to a faster local *scratch*. The whole cluster is paid for once and then amortised across many users, which is why jobs may wait in a queue.
 - **Cloud** providers offer on-demand machines and object storage (such as S3), billed by use. This suits work that is bursty or very large, where paying for idle capacity the rest of the time makes no sense. It brings its own ideas: machines that scale up and down automatically, cheaper *spot* or *preemptible* instances that can be reclaimed, and *egress* charges for moving data out.
 
-![A computing centre](./imgs/computing-centre.jpg "Figure 4. Compute and storage in a data centre. Image: Fermilab, public domain, via Wikimedia Commons.")
+![A computing centre](./imgs/computing-centre.jpg "Figure 5. Compute and storage in a data centre. Image: Fermilab, public domain, via Wikimedia Commons.")
 
 A rough comparison:
 
@@ -137,7 +118,7 @@ A rough comparison:
 
 A detail that surprises newcomers is that the expensive part is often moving the data rather than computing on it, and this is why *data locality* shapes the design. Object storage and streaming have become common: read what a step needs, where it already lives, instead of copying terabytes to a local disk first. The same reason drives *hybrid* setups, where a local cluster handles routine work and cloud capacity is added when demand spikes.
 
-![The layers of a cloud stack](./imgs/cloud-computing-stack.svg "Figure 5. A cloud computing stack, from infrastructure up to the application. Image: SamJohnston, CC0, via Wikimedia Commons.")
+![The layers of a cloud stack](./imgs/cloud-computing-stack.svg "Figure 6. A cloud computing stack, from infrastructure up to the application. Image: SamJohnston, CC0, via Wikimedia Commons.")
 
 Platforms such as Omicslab sit on top of this layer. They connect storage and compute once, then let an analyst choose a packaged pipeline, declare the inputs and the resources, and follow the run; the plumbing between the pipeline and the machine, and the choice of executor, is handled for them.
 
@@ -171,4 +152,4 @@ Those three skills are the subject of the rest of the course. The next lesson tu
 - Wilkinson, M. D. et al. (2016). *The FAIR Guiding Principles for scientific data management and stewardship.* [Scientific Data](https://doi.org/10.1038/sdata.2016.18).
 - Docker. *Docker documentation.* [https://docs.docker.com](https://docs.docker.com) — the container format referenced here.
 
-**Image credits.** Figure 1: Athena supercomputer cluster, NASA, public domain. Figure 2: directed acyclic graph, public domain. Figure 3: CSIRO GPU cluster at the data centre, CSIRO, CC BY 3.0. Figure 4: cable racks at a computing centre, Fermilab, public domain. Figure 5: cloud computing stack, SamJohnston, CC0. All via [Wikimedia Commons](https://commons.wikimedia.org).
+**Image credits.** Figure 1: Athena supercomputer cluster, NASA, public domain. Figure 2: variant-calling pipeline overview, Beatrice Branchini, CC0. Figure 3: directed acyclic graph, public domain. Figure 4: CSIRO GPU cluster at the data centre, CSIRO, CC BY 3.0. Figure 5: cable racks at a computing centre, Fermilab, public domain. Figure 6: cloud computing stack, SamJohnston, CC0. All via [Wikimedia Commons](https://commons.wikimedia.org).
