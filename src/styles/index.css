@@ -612,6 +612,17 @@
   the artwork exists; the file check in `src/utils/study.ts` renders this boxed
   label instead, with the caption still shown underneath.
 */
+.blog-details .study-figure {
+  text-align: center;
+}
+
+/* Do not stretch a small image across the full column. */
+.blog-details .study-figure img {
+  width: auto;
+  max-width: 100%;
+  max-height: 520px;
+}
+
 .study-figure-placeholder {
   display: flex;
   min-height: 280px;
