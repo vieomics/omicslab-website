@@ -3,7 +3,7 @@ title: "Assemble and annotate a bacterial genome from WGS data"
 description: "The result: an assembled, quality-checked and annotated bacterial genome, with its antimicrobial-resistance genes — run on the Omicslab platform. The course goes from raw FASTQ data to that result, one step at a time."
 level: "Beginner"
 duration: "About 3 hours"
-order: 1
+order: 2
 tag: "Result"
 outcomes:
   - "Read and assess a FASTQ file at a basic level: read count, length and base quality."

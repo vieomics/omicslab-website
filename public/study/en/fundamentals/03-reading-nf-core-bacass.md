@@ -1,7 +1,7 @@
 ---
 slug: reading-nf-core-bacass
 title: "Reading the pipeline that produced the result: nf-core/bacass"
-description: "The result in the previous course was produced by a pipeline. This lesson opens it up: what steps nf-core/bacass contains, and why understanding each step matters more than just pressing run."
+description: "A result like this is produced by a pipeline. This lesson opens it up: what steps nf-core/bacass contains, and why understanding each step matters more than just pressing run."
 order: 3
 module: "How the result is produced"
 duration: "25 min"
@@ -10,7 +10,7 @@ related:
   - how-to-run-nf-core-pipelines-on-omicslab
 ---
 
-If you read the lesson on BLAST, you saw a tool that does *one* job. `nf-core/bacass` is the opposite: it joins several tools into one complete pipeline to assemble a bacterial genome.
+A single tool does *one* job. `nf-core/bacass` is the opposite: it joins several tools into one complete pipeline to assemble a bacterial genome.
 
 ## nf-core and Nextflow, briefly
 

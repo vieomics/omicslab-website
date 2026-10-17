@@ -3,7 +3,7 @@ title: "Lắp ráp và chú giải hệ gen vi khuẩn từ dữ liệu WGS"
 description: "Kết quả: một bộ hệ gen vi khuẩn đã lắp ráp, kiểm định và chú giải, kèm các gene kháng thuốc — chạy trên nền tảng Omicslab. Khóa học đi từ dữ liệu FASTQ thô đến kết quả đó, từng bước một."
 level: "Cơ bản"
 duration: "Khoảng 3 giờ"
-order: 1
+order: 2
 tag: "Kết quả"
 outcomes:
   - "Đọc và đánh giá sơ bộ một tệp FASTQ: số read, độ dài, chất lượng base."

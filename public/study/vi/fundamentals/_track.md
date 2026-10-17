@@ -1,9 +1,9 @@
 ---
 title: "Đằng sau kết quả: dữ liệu, phương pháp và cách một phân tích được tổ chức"
-description: "Khóa khái niệm đi sau khóa đầu: bắt đầu từ kết quả bạn vừa có, rồi bóc từng lớp — cách kết quả được tạo ra, một thuật toán như BLAST hoạt động ra sao, và dữ liệu cùng con người đứng sau nó."
+description: "Khóa đầu tiên: bắt đầu từ một kết quả đã hoàn tất, rồi bóc từng lớp — cách nó được tạo ra, một thuật toán như BLAST hoạt động ra sao, và dữ liệu cùng con người đứng sau."
 level: "Cơ bản"
 duration: "Khoảng 2 giờ"
-order: 2
+order: 1
 tag: "Đằng sau kết quả"
 outcomes:
   - "Đọc đúng một kết quả phân tích và biết nó gồm những sản phẩm gì."
@@ -22,4 +22,4 @@ tools:
   - "Docker"
 ---
 
-Khóa này không dạy thao tác và không cần bạn biết lập trình. Nó quay lại câu hỏi: chuyện gì thực sự đã xảy ra khi kết quả ở khóa trước được tạo ra? Khóa học bắt đầu từ kết quả đó, đi ngược về các bước tạo ra nó, rồi tới những ý tưởng và con người đứng sau. Mục tiêu là hiểu cơ chế và biết tìm bước tiếp theo ở đâu, thay vì ghi nhớ quy trình.
+Khóa này không dạy thao tác và không cần bạn biết lập trình. Nó đặt câu hỏi: chuyện gì thực sự đã xảy ra khi một kết quả phân tích được tạo ra? Khóa học bắt đầu từ một kết quả đã hoàn tất, đi ngược về các bước tạo ra nó, rồi tới những ý tưởng và con người đứng sau. Mục tiêu là hiểu cơ chế và biết tìm bước tiếp theo ở đâu, thay vì ghi nhớ quy trình.

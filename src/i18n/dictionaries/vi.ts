@@ -440,7 +440,7 @@ export const vi: Dictionary = {
     description:
       "Mỗi khóa học bắt đầu từ một kết quả nhìn thấy được — một phân tích đã hoàn tất trên nền tảng — rồi đi ngược lại: trước hết là cách làm ra nó, sau đó là các khái niệm đằng sau.",
     intro:
-      "Mỗi khóa học mở đầu bằng kết quả bạn sẽ có. Từ đó, khóa học đi ngược về các bước tạo ra kết quả, và chỉ sau đó mới tới những ý tưởng bên dưới. Hãy đọc khóa đầu để có một kết quả, rồi khóa thứ hai để hiểu điều gì đã xảy ra.",
+      "Khóa đầu tiên mổ xẻ một kết quả đã hoàn tất và giải thích nó được tạo ra như thế nào; khóa thứ hai để bạn tự tạo ra một kết quả như vậy trên nền tảng.",
     notice:
       "Các khóa học này là tài liệu học tập, được soạn để giúp bạn làm quen và sử dụng nền tảng Omicslab. Nội dung không được cung cấp cho bất kỳ mục đích thương mại nào.",
     courseLabel: "Khóa học",

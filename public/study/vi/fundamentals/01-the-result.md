@@ -1,7 +1,7 @@
 ---
 slug: the-result
-title: "Kết quả bạn vừa có"
-description: "Điểm khởi đầu của khóa học: nhìn lại kết quả từ khóa lắp ráp — một bộ hệ gen đã chú giải cùng các gene kháng thuốc — rồi đặt câu hỏi điều gì đã tạo ra nó."
+title: "Kết quả bạn sẽ có"
+description: "Điểm khởi đầu của khóa học: nhìn vào một kết quả đã hoàn tất — một bộ hệ gen vi khuẩn đã chú giải cùng các gene kháng thuốc — rồi đặt câu hỏi điều gì đã tạo ra nó."
 order: 1
 module: "Bắt đầu từ kết quả"
 duration: "15 phút"
@@ -9,18 +9,18 @@ related:
   - bacterial-genome-assembly-without-coding
 ---
 
-Nếu bạn đã hoàn thành khóa lắp ráp, bạn đang có một kết quả trong tay. Khóa này không thêm kết quả mới, mà quay lại và trả lời một câu hỏi đơn giản: *chuyện gì đã thực sự xảy ra để tạo ra nó?* Ta bắt đầu từ kết quả, rồi đi ngược lại.
+Một phân tích tin sinh học kết thúc bằng một kết quả: ví dụ một bộ hệ gen đã lắp ráp và chú giải. Khóa học bắt đầu từ một kết quả như vậy và hỏi: *chuyện gì đã thực sự xảy ra để tạo ra nó?* Ta đi ngược từ kết quả về các bước.
 
-## Kết quả bạn đã có
+## Một kết quả đã hoàn tất
 
-Một lần chạy lắp ráp thường để lại vài thứ cụ thể:
+Một lần chạy lắp ráp và chú giải hoàn tất để lại vài thứ cụ thể:
 
 - **Các contig** — những đoạn hệ gen đã lắp ráp, ở dạng tệp FASTA.
 - **Báo cáo đánh giá** — số contig, N50, tổng độ dài, để biết bộ lắp ráp hoàn chỉnh đến đâu.
 - **Kết quả chú giải** — gene được tìm thấy và chức năng dự đoán cho chúng.
-- **Danh sách gene kháng thuốc** — nếu bạn chạy thêm bước tìm gene kháng thuốc.
+- **Danh sách gene kháng thuốc** — nếu bước tìm gene kháng thuốc được chạy thêm.
 
-![Các sản phẩm của một lần chạy lắp ráp và chú giải](./imgs/result-artifacts.svg "Hình 1. Kết quả của khóa trước: contig, báo cáo, chú giải và gene kháng thuốc.")
+![Các sản phẩm của một lần chạy lắp ráp và chú giải](./imgs/result-artifacts.svg "Hình 1. Một kết quả hoàn tất: contig, báo cáo, chú giải và gene kháng thuốc.")
 
 ## Ba câu hỏi đi ngược
 
@@ -39,7 +39,7 @@ Ba câu hỏi trên tương ứng với ba phần của khóa:
 - **Và khi cần một bước mới** — cách tự tìm và kiểm chứng một bước mà chưa pipeline nào có sẵn.
 
 :::note
-Bạn chưa chạy khóa lắp ráp cũng không sao. Mỗi ý tưởng ở đây đứng độc lập; kết quả chỉ là điểm tựa để bắt đầu. Nếu muốn, bạn có thể đọc khóa lắp ráp trước rồi quay lại.
+Kết quả ở đây là một ví dụ. Khóa tiếp theo sẽ để bạn tự tạo ra một kết quả như vậy trên nền tảng.
 :::
 
 ## Kết thúc bài

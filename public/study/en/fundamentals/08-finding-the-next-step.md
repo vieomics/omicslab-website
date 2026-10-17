@@ -37,4 +37,4 @@ The goal is not to remember every tool, but to know how to find, try and verify 
 
 ## Wrapping up the course
 
-You now have the background picture: what biological data is, how an algorithm such as BLAST reasons, what steps an analysis is made of, who does what, why results need to be reproducible, and how to find the next step yourself. The assembly course — the previous one — applies these ideas in a concrete procedure.
+You now have the background picture: what biological data is, how an algorithm such as BLAST reasons, what steps an analysis is made of, who does what, why results need to be reproducible, and how to find the next step yourself. The next course — bacterial genome assembly — applies these ideas in a concrete procedure.

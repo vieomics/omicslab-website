@@ -1,9 +1,9 @@
 ---
 title: "Behind the result: data, methods and how an analysis is organised"
-description: "The concept course that follows the first: start from the result you just produced, then peel back the layers — how it was produced, how an algorithm such as BLAST works, and the data and people behind it."
+description: "The first course: start from a finished result, then peel back the layers — how it was produced, how an algorithm such as BLAST works, and the data and people behind it."
 level: "Beginner"
 duration: "About 2 hours"
-order: 2
+order: 1
 tag: "Behind the result"
 outcomes:
   - "Read a finished analysis correctly and know which artefacts it contains."
@@ -22,4 +22,4 @@ tools:
   - "Docker"
 ---
 
-This course teaches no operations and needs no programming background. It returns to the question: what actually happened when the result in the previous course was produced? The course starts from that result, works back through how it was produced, then to the ideas and people behind it. The aim is to understand the mechanism and to know where to find the next step, instead of memorising a procedure.
+This course teaches no operations and needs no programming background. It asks a question: what actually happened when a finished analysis was produced? The course starts from a finished result, works back through how it was produced, then to the ideas and people behind it. The aim is to understand the mechanism and to know where to find the next step, instead of memorising a procedure.

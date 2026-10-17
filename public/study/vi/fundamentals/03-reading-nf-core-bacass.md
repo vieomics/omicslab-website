@@ -1,7 +1,7 @@
 ---
 slug: reading-nf-core-bacass
 title: "Đọc pipeline đã tạo ra kết quả: nf-core/bacass"
-description: "Kết quả ở khóa trước do một pipeline tạo ra. Bài này mở nó ra: nf-core/bacass gồm những bước nào, và vì sao hiểu từng bước quan trọng hơn chỉ bấm chạy."
+description: "Một kết quả như vậy do một pipeline tạo ra. Bài này mở nó ra: nf-core/bacass gồm những bước nào, và vì sao hiểu từng bước quan trọng hơn chỉ bấm chạy."
 order: 3
 module: "Kết quả được tạo ra như thế nào"
 duration: "25 phút"
@@ -10,7 +10,7 @@ related:
   - how-to-run-nf-core-pipelines-on-omicslab
 ---
 
-Nếu bạn đã đọc bài về BLAST, bạn đã thấy một công cụ chỉ làm *một* việc. `nf-core/bacass` ngược lại: nó ghép nhiều công cụ thành một pipeline hoàn chỉnh để lắp ráp hệ gen vi khuẩn.
+Một công cụ đơn lẻ chỉ làm *một* việc. `nf-core/bacass` ngược lại: nó ghép nhiều công cụ thành một pipeline hoàn chỉnh để lắp ráp hệ gen vi khuẩn.
 
 ## nf-core và Nextflow, nói ngắn
 

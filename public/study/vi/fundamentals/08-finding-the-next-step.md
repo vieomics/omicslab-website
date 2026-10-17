@@ -37,4 +37,4 @@ Mục tiêu không phải nhớ mọi công cụ, mà là biết cách tìm, cá
 
 ## Kết thúc khóa học
 
-Bạn đã có bức tranh nền: dữ liệu sinh học là gì, một thuật toán như BLAST nghĩ ra sao, một phân tích gồm những bước nào, ai làm gì, vì sao kết quả cần tái lập, và cách tự tìm bước tiếp theo. Khóa lắp ráp hệ gen vi khuẩn — ở phần trước — đã áp dụng những ý tưởng này vào một quy trình cụ thể.
+Bạn đã có bức tranh nền: dữ liệu sinh học là gì, một thuật toán như BLAST nghĩ ra sao, một phân tích gồm những bước nào, ai làm gì, vì sao kết quả cần tái lập, và cách tự tìm bước tiếp theo. Khóa tiếp theo — lắp ráp hệ gen vi khuẩn — sẽ áp dụng những ý tưởng này vào một quy trình cụ thể.

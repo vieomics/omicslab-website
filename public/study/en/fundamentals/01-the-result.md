@@ -1,7 +1,7 @@
 ---
 slug: the-result
-title: "The result you have in hand"
-description: "The starting point of the course: look back at the result from the assembly course — an annotated genome with its resistance genes — and ask what produced it."
+title: "The result you will get"
+description: "The starting point of the course: look at a finished result — an annotated bacterial genome with its resistance genes — and ask what produced it."
 order: 1
 module: "Starting from the result"
 duration: "15 min"
@@ -9,18 +9,18 @@ related:
   - bacterial-genome-assembly-without-coding
 ---
 
-If you finished the assembly course, you have a result in hand. This course adds no new result; it goes back and answers a simple question: *what actually happened to produce it?* We start from the result, then work backwards.
+A bioinformatics analysis ends in a result: an assembled and annotated genome, for instance. This course starts from such a result and asks: *what actually happened to produce it?* We work backwards from the result to the steps.
 
-## The result you already have
+## A finished result
 
-An assembly run usually leaves a few concrete things:
+A completed assembly and annotation run leaves a few concrete things:
 
 - **Contigs** — the assembled genome stretches, as a FASTA file.
 - **An assessment report** — contig count, N50, total length, to show how complete the assembly is.
 - **Annotation output** — the genes found and their predicted function.
-- **A resistance-gene list** — if you also ran a resistance-gene step.
+- **A resistance-gene list** — if a resistance-gene step was also run.
 
-![The artefacts of an assembly and annotation run](./imgs/result-artifacts.svg "Figure 1. The result from the previous course: contigs, a report, annotation and resistance genes.")
+![The artefacts of an assembly and annotation run](./imgs/result-artifacts.svg "Figure 1. A finished result: contigs, a report, annotation and resistance genes.")
 
 ## Three questions, working backwards
 
@@ -39,7 +39,7 @@ The three questions map to the three parts of the course:
 - **And when a new step is needed** — how to find and verify a step no ready pipeline offers.
 
 :::note
-It is fine if you have not run the assembly course. Each idea here stands on its own; the result is only a starting point. If you prefer, read the assembly course first and come back.
+The result here is an example. The next course has you produce one like it yourself on the platform.
 :::
 
 ## Wrapping up
