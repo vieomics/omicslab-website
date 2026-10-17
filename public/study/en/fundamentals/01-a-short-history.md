@@ -66,9 +66,9 @@ The most recent shift is organisational. Work that once ran as a personal script
 
 Two things stay constant across the whole arc. Biology keeps producing data, and computing keeps having to catch up. The interesting work happens where the two meet: at the file, the format, the algorithm and the machine. That meeting point is where this course continues, and the next lesson looks at how the field is practised today.
 
-## Sources and credits
+## References
 
-Dates and details above follow the commonly cited sources below. Where a date is approximate, it is phrased as such.
+Dates and details above follow the commonly cited references below. Where a date is approximate, it is phrased as such.
 
 - Sanger, F. (1955). *The amino-acid sequence in the phenylalanyl chain of insulin.* [Biochemical Journal](https://doi.org/10.1042/bj0490463).
 - Sanger, F., Nicklen, S. & Coulson, A. R. (1977). *DNA sequencing with chain-terminating inhibitors.* [PNAS](https://doi.org/10.1073/pnas.74.12.5463).
