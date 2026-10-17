@@ -17,26 +17,72 @@ A newcomer might imagine bioinformatics as writing programs to read DNA. In prac
 
 ## From commands to a pipeline
 
-A first analysis is usually a series of commands run in order. For a simple germline example it might be: check the reads, trim them, map them to a reference, sort and index the mapping, mark duplicate reads, call variants, and filter the calls. That works well once. It becomes fragile the moment something changes, because the steps and their connections live only in the analyst's notes and memory:
+A first analysis is usually a series of commands run in order. For a simple germline example it might be: check the reads, trim them, map them to a reference, sort and index the mapping, mark duplicate reads, call variants, and filter the calls. That works well once. But the same analysis can be carried out at three different levels, and the difference between them is the point of this section.
 
-- change one input, and the run is repeated by hand from the start;
-- if the fifth step fails after an hour, nothing lets it resume where it stopped;
-- the same analysis on a second sample means editing and rerunning every command;
-- two people running "the same" analysis may quietly choose different parameters.
+### Three levels of the same analysis
 
-A **pipeline** makes the steps and their connections explicit, as a graph in which each step's output feeds the next. The formal name for that graph is a *directed acyclic graph*: a set of steps with a direction, and no loops. Once the graph is written down, a program can execute it, and many of the fragile points above disappear.
+**By hand.** You type each command and watch it finish before starting the next one. Nothing is written down, so the analysis lives only in the terminal history and in your memory. Repeating it next month means reconstructing it from notes.
+
+**In a shell script.** The commands are saved in a file and run together. This is a real improvement — the analysis is now written down and can be re-run with one command. But a script is still a list of instructions in a fixed order. The shell has no idea that the fourth line produced the file the fifth line reads, so it cannot skip a step whose result already exists, and if line five fails after line four succeeded, rerunning the script repeats line four as well.
+
+**As a pipeline.** The steps and their connections are described *separately from the act of running them*. That description can then be executed by a program, which removes most of the mechanical fragility of the first two levels.
+
+| | Commands by hand | A shell script | A pipeline |
+| --- | --- | --- | --- |
+| What is recorded | nothing | the commands, in order | the steps and how they connect |
+| If step five fails | start over | rerun the script | resume from step five |
+| Many samples at once | typed again | rarely | automatic, where the graph allows |
+| Environment per step | whatever is installed | whatever is installed | a container per step |
+| Handing it to a colleague | describing it aloud | a script to read | explicit inputs, outputs and versions |
+
+### What a pipeline actually is
+
+The key idea is easy to miss: a pipeline is not a tidier way of writing commands. It is a description of the analysis as *data* — a graph in which the steps are points and the connections are arrows. Its formal name is a **directed acyclic graph**: directed, because the arrows point from a step to the step that consumes its output; acyclic, because nothing depends on its own result.
+
+The important consequence is that a step's position comes from *what it needs*, not from where it is written. Calling variants is the fifth step because it consumes the alignments, not because someone typed it fifth. The description says only what depends on what; a program is then free to choose the order, run independent steps at the same time, and redo only the parts whose inputs changed.
+
+The difference is easiest to see in two small descriptions of the same analysis. As a script, it is a list to be followed top to bottom:
+
+```text
+fastqc   reads_R1.fastq reads_R2.fastq
+fastp    -i reads_R1.fastq -I reads_R2.fastq -o trim_R1.fastq -O trim_R2.fastq
+bwa      mem reference.fasta trim_R1.fastq trim_R2.fastq > aligned.sam
+samtools sort aligned.sam -o sorted.bam
+samtools markdup sorted.bam marked.bam
+bcftools mpileup -f reference.fasta marked.bam | bcftools call -mv -o calls.vcf
+```
+
+As a pipeline, it is a set of steps and their connections, with no inherent order:
+
+```text
+step TRIM      reads           -> trimmed reads
+step ALIGN     trimmed reads   -> sorted, duplicate-marked alignments
+step CALL      alignments      -> variant calls
+step SUMMARISE all reports     -> one summary
+
+TRIM      depends on the input reads
+ALIGN     depends on TRIM
+CALL      depends on ALIGN
+SUMMARISE depends on every step
+```
+
+Both produce the same result. The difference appears when something changes. Give the first step two samples instead of one, and the script needs editing in several places; in the pipeline nothing is edited, and the engine simply runs the chain twice and merges the reports where the graph allows. Replace the aligner with a better one, and only the *ALIGN* step changes, because the connections are stated rather than implied by line order. This is also the ordinary way a pipeline grows from one sample to hundreds: the structure is written once, and the samples fan out through it.
 
 ![A directed acyclic graph](./imgs/pipeline-dag.svg "Figure 2. A directed acyclic graph: each node is a step, each arrow means its output feeds the next. Image: public domain, via Wikimedia Commons.")
 
+A useful analogy: a script is a set of directions you follow yourself, one line at a time. A pipeline is a structure of tasks that a foreman can hand out — the foreman works out what can be done in parallel, notices when a task fails, and redoes only what is affected.
+
+One clarification, because the words are easy to confuse. This is not the Unix pipe (`|`), which streams the output of one command straight into the next on a single machine. A workflow pipeline is a larger idea: a graph of steps, most of which read and write files, running across many samples and sometimes many machines.
+
 ### What a workflow manager actually does
 
-A **workflow manager** is the program that runs the graph. Its job is the bookkeeping a person would otherwise do by hand:
+A **workflow manager** is the program that executes the graph. Its job is the bookkeeping a person would otherwise do by hand:
 
-- **Ordering and dependencies.** It knows that sorting must finish before variant calling starts, and refuses to start a step whose inputs are missing.
-- **Parallelism and scatter–gather.** Twenty samples can be processed at once, then brought back together for a step that needs all of them.
-- **Restart and caching.** If a run fails, it continues from the failed step rather than from the beginning; results whose inputs have not changed are reused. In Nextflow this is the `-resume` switch.
-- **Resource allocation per step.** Each step declares how much CPU, memory and time it needs, which matters when steps differ by orders of magnitude.
-- **Execution environment per step.** Each step can name its own container, so different tools with conflicting dependencies coexist in one pipeline.
+- **Ordering and dependencies.** It knows that the alignments must exist before calling starts, and refuses to start a step whose inputs are missing.
+- **Parallelism and scatter–gather.** It runs steps that do not depend on each other at the same time, and fans one step out over many samples (*scatter*) before collecting the results (*gather*).
+- **Restart and caching.** If a run fails, it continues from the failed step rather than from the beginning, and reuses outputs whose inputs have not changed. In Nextflow this is the `-resume` switch.
+- **Resource allocation per step.** Each step declares the CPU, memory and time it needs, which matters when one step takes seconds and another takes hours.
+- **Execution environment per step.** Each step names its own container, so tools with conflicting dependencies can sit side by side in one pipeline.
 - **Declared outputs.** The manager knows which files are the result and collects them, instead of leaving them scattered across working directories.
 
 Nextflow (released 2013) and Snakemake (2012) are two common managers; WDL and CWL are language-style alternatives built on the same idea. The practical payoff is a shift of effort: from *running* commands to *describing* the analysis once, which is what makes reruns, sharing and scaling-up possible.
