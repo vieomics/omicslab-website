@@ -1,26 +1,26 @@
 ---
 title: "A practical view of bioinformatics, from A to Z"
-description: "The first course: a practical view of the whole of bioinformatics, from data to result — start from a finished result, then peel back the layers: how it was produced, how an algorithm such as BLAST works, and the data and people behind it."
+description: "A practical overview of the field, written for someone who knows basic biology: where bioinformatics came from, how it is practised today with modern software and infrastructure, and how an analysis is really put together."
 level: "Beginner"
-duration: "About 2 hours"
+duration: "About 2.5 hours"
 order: 1
 tag: "A to Z"
 outcomes:
-  - "See where software and algorithms meet biological data — the point where a wet-lab sample becomes something a computer can read."
-  - "Read a finished analysis correctly and know which artefacts it contains."
-  - "Describe an analysis as a chain of steps with inputs, outputs and quality checks."
-  - "Read a pipeline such as nf-core/bacass to understand what it does, not just press run."
-  - "Understand how a similarity search such as BLAST works, even without any programming background."
+  - "Trace how bioinformatics grew from reading one protein to reading millions of genomes."
+  - "Describe how analyses are run today, using workflow managers, containers, and cloud or HPC infrastructure."
+  - "Explain where software meets biological data, and why that hand-off matters."
   - "Understand what biological data is and why it needs several file formats."
-  - "Know what each role does in a project and what the hand-offs between them are."
-  - "Understand why git, environment managers and containers make results reproducible."
-  - "Know how to find a missing step and how to verify it."
+  - "Follow how an algorithm such as BLAST finds a match, without any programming background."
+  - "Describe an analysis as a chain of steps with inputs, outputs and checks."
+  - "Know the roles in a project and what each hands over to the next."
+  - "Explain why reproducibility rests on version control, pinned environments and containers."
+  - "Know how to find and verify a step that no ready tool provides."
 tools:
   - "BLAST"
-  - "nf-core/bacass"
+  - "Nextflow"
+  - "Docker"
   - "Git"
   - "Pixi"
-  - "Docker"
 ---
 
-This course teaches no operations and needs no programming background. It asks a question: what actually happened when a finished analysis was produced? The course starts from a finished result, works back through how it was produced, then to the ideas and people behind it. The aim is to understand the mechanism and to know where to find the next step, instead of memorising a procedure.
+This course is a practical walk through the field rather than an operations manual. It starts with where bioinformatics came from, then looks at how the work is actually done now — on pipelines, containers and shared compute — and finally opens up the parts of an analysis: the data, the algorithms, the people and the habits that keep results reliable. No programming background is assumed.

@@ -2,14 +2,14 @@
 slug: how-an-algorithm-works
 title: "How an algorithm works: BLAST as an example"
 description: "BLAST finds a sequence similar to yours inside a large database. This lesson walks through its four steps with ideas and a short piece of pseudocode, no programming needed."
-order: 4
-module: "How the result is produced"
+order: 5
+module: "Data and methods"
 duration: "30 min"
 related:
-  - remote-files-htslib-bcftools-samtools
+  - bioinformatics-computing-resource-optimization-part1
 ---
 
-A very common question is: "what is this sequence similar to in a database?" The tool that answers it is **BLAST**. Understanding BLAST is a good way to see how a computer thinks, because many other tools reuse the same ideas.
+The most common question asked of a sequence is: "what is it similar to?" The tool that answers it, **BLAST**, is a good example of how a computer reasons about biological data, because many other tools reuse the same ideas.
 
 ## The question
 
@@ -43,7 +43,7 @@ return the ranked list of matches
 
 ## What to remember
 
-BLAST does not try every possibility — it is a **heuristic**: fast, but it can miss weak similarities that the slow way would find. That is a deliberate trade-off between speed and completeness.
+BLAST does not try every possibility — it is a **heuristic**: fast, but it can miss weak similarities that the slow way would find. That is a deliberate trade-off between speed and completeness, and it is the same trade-off that shaped the history of the field.
 
 ![BLAST's seed and extend steps](./imgs/blast-seed-extend.svg "Figure 1. Find a short matching word (a seed), then grow the match outwards.")
 
@@ -53,4 +53,4 @@ Most bioinformatics tools are an algorithm plus assumptions and one trade-off. K
 
 ## Wrapping up
 
-You have seen a computer compare strings through seeds, extension, scoring and the E-value. The next lessons step back a layer, to the data and the people behind the result.
+You have seen how a computer compares strings through seeds, extension, scoring and the E-value. The next lesson steps back and looks at an analysis as a whole, as a chain of such steps.

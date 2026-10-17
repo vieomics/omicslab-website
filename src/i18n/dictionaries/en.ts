@@ -438,9 +438,9 @@ export const en = {
     kicker: "Study",
     title: "Learn bioinformatics on Omicslab",
     description:
-      "Each course starts from a result you can see — a finished analysis on the platform — then works backwards: first how to produce it, then the concepts behind it.",
+      "A practical overview of bioinformatics, course by course — from where the field came from to how analyses are run today on modern software and infrastructure.",
     intro:
-      "The first course takes a finished result apart and explains how it was produced; the second has you produce one yourself on the platform.",
+      "Courses are built from short, ordered lessons, and each can be read on its own.",
     notice:
       "These courses are learning materials, written to help you get started on the Omicslab platform and find your way around it. They are not offered for any commercial purpose.",
     courseLabel: "Course",
