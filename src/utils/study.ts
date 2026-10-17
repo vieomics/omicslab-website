@@ -46,7 +46,7 @@ export interface StudyTrackMeta {
   duration: string;
   /** Position on the Study hub; lower comes first. */
   order: number;
-  /** Short badge, e.g. "Result" or "Behind the result". */
+  /** Short badge, e.g. "Result" or "A to Z". */
   tag?: string;
   outcomes: string[];
   tools: string[];

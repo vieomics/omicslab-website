@@ -1,10 +1,10 @@
 ---
-title: "Behind the result: data, methods and how an analysis is organised"
-description: "The first course: start from a finished result, then peel back the layers — how it was produced, how an algorithm such as BLAST works, and the data and people behind it."
+title: "A practical view of bioinformatics, from A to Z"
+description: "The first course: a practical view of the whole of bioinformatics, from data to result — start from a finished result, then peel back the layers: how it was produced, how an algorithm such as BLAST works, and the data and people behind it."
 level: "Beginner"
 duration: "About 2 hours"
 order: 1
-tag: "Behind the result"
+tag: "A to Z"
 outcomes:
   - "Read a finished analysis correctly and know which artefacts it contains."
   - "Describe an analysis as a chain of steps with inputs, outputs and quality checks."

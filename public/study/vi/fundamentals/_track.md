@@ -1,10 +1,10 @@
 ---
-title: "Đằng sau kết quả: dữ liệu, phương pháp và cách một phân tích được tổ chức"
-description: "Khóa đầu tiên: bắt đầu từ một kết quả đã hoàn tất, rồi bóc từng lớp — cách nó được tạo ra, một thuật toán như BLAST hoạt động ra sao, và dữ liệu cùng con người đứng sau."
+title: "Góc nhìn thực tế tin sinh học từ A đến Z"
+description: "Khóa đầu tiên: một góc nhìn thực tế về toàn bộ tin sinh học, từ dữ liệu đến kết quả — bắt đầu từ một kết quả đã hoàn tất, rồi bóc từng lớp: cách nó được tạo ra, một thuật toán như BLAST hoạt động ra sao, và dữ liệu cùng con người đứng sau."
 level: "Cơ bản"
 duration: "Khoảng 2 giờ"
 order: 1
-tag: "Đằng sau kết quả"
+tag: "Từ A đến Z"
 outcomes:
   - "Đọc đúng một kết quả phân tích và biết nó gồm những sản phẩm gì."
   - "Mô tả một phân tích như một chuỗi bước có đầu vào, đầu ra và điểm kiểm tra chất lượng."
