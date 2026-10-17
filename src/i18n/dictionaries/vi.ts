@@ -444,6 +444,8 @@ export const vi: Dictionary = {
     notice:
       "Các khóa học này là tài liệu học tập, được soạn để giúp bạn làm quen và sử dụng nền tảng Omicslab. Nội dung không được cung cấp cho bất kỳ mục đích thương mại nào.",
     courseLabel: "Khóa học",
+    author: "Nhóm Omicslab",
+    by: "Bởi",
     lessonsSuffix: "bài",
     modulesSuffix: "chương",
     levelLabel: "Trình độ",

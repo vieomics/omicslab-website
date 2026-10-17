@@ -34,6 +34,8 @@ related:                              # blog post slugs only, optional
 
 - Do not link to other *courses*. A lesson must stand on its own.
 - `related` points at blog posts, never at other lessons.
+- Author credit is **Omicslab team**, shown from the dictionary (`study.author` /
+  `study.by`), not from frontmatter.
 
 ## Structure
 

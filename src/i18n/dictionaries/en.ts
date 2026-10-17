@@ -444,6 +444,8 @@ export const en = {
     notice:
       "These courses are learning materials, written to help you get started on the Omicslab platform and find your way around it. They are not offered for any commercial purpose.",
     courseLabel: "Course",
+    author: "Omicslab team",
+    by: "By",
     lessonsSuffix: "lessons",
     modulesSuffix: "modules",
     levelLabel: "Level",

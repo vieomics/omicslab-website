@@ -60,6 +60,9 @@ export default function StudyLessonView({
             >
               {track.title}
             </Link>
+            <span>
+              {t.by} {t.author}
+            </span>
             {lesson.duration && <span>{lesson.duration}</span>}
           </div>
         </div>

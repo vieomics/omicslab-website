@@ -38,6 +38,9 @@ export default function StudyTrackView({
             {track.description}
           </p>
           <div className="micro-label mt-8 flex flex-wrap gap-x-8 gap-y-2 text-accent">
+            <span>
+              {t.by} {t.author}
+            </span>
             {track.level && <span>{track.level}</span>}
             {track.duration && <span>{track.duration}</span>}
             <span>

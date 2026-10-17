@@ -63,6 +63,9 @@ export default function StudyIndexView({
                   {track.description}
                 </span>
                 <span className="micro-label mt-6 flex flex-wrap gap-x-6 gap-y-2 text-muted">
+                  <span>
+                    {t.by} {t.author}
+                  </span>
                   {track.level && <span>{track.level}</span>}
                   {track.duration && <span>{track.duration}</span>}
                   <span>
