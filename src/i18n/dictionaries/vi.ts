@@ -293,6 +293,25 @@ export const vi: Dictionary = {
         { title: "Studio", detail: "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker" },
       ],
     },
+    customers: {
+      subtitle: "Khách hàng",
+      title: "Các nhóm nghiên cứu đang làm việc với Omicslab",
+      paragraph:
+        "Dưới đây là một số nhóm nghiên cứu đang làm việc với Omicslab. Chúng tôi chỉ nêu tên những nhóm đã đồng ý được giới thiệu.",
+      cta: "Xem trang nhóm nghiên cứu",
+      members: [
+        {
+          initials: "NTD",
+          name: "Nguyen Thanh Danh Lab",
+          affiliation:
+            "Nhóm nghiên cứu T.D. Nguyen, Viện Công nghệ Tiên tiến, Viện Hàn lâm Khoa học và Công nghệ Việt Nam (VAST)",
+          location: "TP. Hồ Chí Minh, Việt Nam",
+          focus:
+            "Hướng nghiên cứu của nhóm gồm tổng hợp và đặc trưng vật liệu lai, cảm biến phát hiện hợp chất độc hại và xúc tác dị thể.",
+          link: "https://sites.google.com/view/nguyensresearchgroup/thanh-danh-nguyen",
+        },
+      ],
+    },
     about: {
       title: "Dịch vụ tin sinh học dry-lab toàn diện, phát triển tại Việt Nam",
       paragraph1:
