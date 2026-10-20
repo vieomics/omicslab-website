@@ -3,6 +3,7 @@ import HomeBlogSection from "@/components/Blog/HomeBlogSection";
 import CallToAction from "@/components/CallToAction";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
+import Customers from "@/components/Customers";
 import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
@@ -23,6 +24,7 @@ export default function HomeView({ dict, locale, posts }: HomeViewProps) {
       <ScrollUp />
       <Hero dict={dict} />
       <Services dict={dict} locale={locale} />
+      <Customers dict={dict} />
       <HowItWorks dict={dict} />
       <PlatformStrip dict={dict} />
       <About dict={dict} />
