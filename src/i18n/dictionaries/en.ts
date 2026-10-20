@@ -293,6 +293,25 @@ export const en = {
         { title: "Studio", detail: "Galaxy, Streamlit, RStudio, etc. — or any Docker web app" },
       ],
     },
+    customers: {
+      subtitle: "Our Customers",
+      title: "Research Groups Working With Omicslab",
+      paragraph:
+        "Some of the research groups we work with are listed below. We name only the groups that have agreed to be listed.",
+      cta: "Visit the research group",
+      members: [
+        {
+          initials: "NTD",
+          name: "Nguyen Thanh Danh Lab",
+          affiliation:
+            "T.D. Nguyen Research Group, Institute of Advanced Technology, Vietnam Academy of Science and Technology (VAST)",
+          location: "Ho Chi Minh City, Vietnam",
+          focus:
+            "The group's work covers the synthesis and characterisation of hybrid materials, sensors for toxic compounds and heterogeneous catalysts.",
+          link: "https://sites.google.com/view/nguyensresearchgroup/thanh-danh-nguyen",
+        },
+      ],
+    },
     about: {
       title: "End-to-End Dry-Lab Bioinformatics Services, Built in Vietnam",
       paragraph1:
