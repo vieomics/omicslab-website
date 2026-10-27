@@ -8,7 +8,7 @@ import { localizeHref } from "@/i18n/paths";
 const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
   return (
     <footer className="bg-black text-white">
-      <div className="page-width grid gap-8 py-12 md:grid-cols-[1fr_auto] md:items-center">
+      <div className="page-width grid gap-8 py-12 md:grid-cols-[1fr_auto] md:items-start">
         <div className="max-w-[560px] text-[11px] leading-relaxed text-white">
           <p className="text-[10px] font-bold tracking-[0.12em] uppercase md:whitespace-nowrap">
             {dict.footer.platform} - {dict.footer.productOf}{" "}
@@ -68,6 +68,20 @@ const Footer = ({ dict, locale }: { dict: Dictionary; locale: Locale }) => {
             <img
               src="https://images.dmca.com/Badges/dmca-badge-w100-5x1-08.png?ID=a37d795a-3698-4b42-b62a-163d02b5aadf"
               alt="DMCA.com Protection Status"
+            />
+          </a>
+          <a
+            href="https://online.gov.vn/nen-tang/0bb618cb-fc56-41bf-91e1-8114da3f7283"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Đã xác nhận với Bộ Công Thương"
+            className="transition-opacity hover:opacity-70"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="https://fileserver.online.gov.vn/uploads/Resources/iconxacnhan/DaThongBao.png"
+              alt="Đã xác nhận"
+              className="block h-11 w-auto"
             />
           </a>
           <Image
