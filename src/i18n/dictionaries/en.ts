@@ -1,5 +1,6 @@
 import { TextSegment } from "../types";
 import { policiesEn } from "./policies/en";
+import { guideEn } from "./guides/en";
 
 const subscription = {
   subtitle: "Subscription",
@@ -163,6 +164,7 @@ export const en = {
     home: "Home",
     about: "About",
     contact: "Contact",
+    guide: "Guide",
     solutions: "Solutions",
     dataPlatform: "Omicslab Platform",
     pipelinesSoftwares: "Custom Solutions",
@@ -181,6 +183,7 @@ export const en = {
     terms: "Terms of Service",
   },
   policies: policiesEn,
+  guide: guideEn,
   cookieConsent: {
     title: "Traffic analytics",
     message:
@@ -727,6 +730,11 @@ export const en = {
       title: "Contact",
       description:
         "Get in touch with Omicslab for bioinformatics services and solutions.",
+    },
+    guide: {
+      title: "User Guide",
+      description:
+        "Step-by-step instructions for the Omicslab Platform: organizations, billing, workspaces, analyses, Studio and support.",
     },
     privacy: {
       title: "Personal Data Protection & Privacy Policy",

@@ -1,6 +1,7 @@
 import { TextSegment } from "../types";
 import type { Dictionary } from "./en";
 import { policiesVi } from "./policies/vi";
+import { guideVi } from "./guides/vi";
 
 const subscription = {
   subtitle: "Gói sử dụng",
@@ -163,6 +164,7 @@ export const vi: Dictionary = {
     home: "Trang chủ",
     about: "Giới thiệu",
     contact: "Liên hệ",
+    guide: "Hướng dẫn",
     solutions: "Giải pháp",
     dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Giải pháp tùy chỉnh",
@@ -181,6 +183,7 @@ export const vi: Dictionary = {
     terms: "Điều khoản Dịch vụ",
   },
   policies: policiesVi,
+  guide: guideVi,
   cookieConsent: {
     title: "Phân tích lưu lượng truy cập",
     message:
@@ -727,6 +730,11 @@ export const vi: Dictionary = {
       title: "Liên hệ",
       description:
         "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
+    },
+    guide: {
+      title: "Hướng dẫn sử dụng",
+      description:
+        "Hướng dẫn từng bước sử dụng Nền tảng Omicslab: tổ chức, thanh toán, workspace, phân tích, Studio và hỗ trợ.",
     },
     privacy: {
       title: "Chính sách bảo mật",
