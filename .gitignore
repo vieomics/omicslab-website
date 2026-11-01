@@ -42,3 +42,6 @@ excalidraw
 public/search-index*.json
 # generated policy PDFs
 /policy-pdfs/
+
+# Raw tutorial screenshots (optimized copies live in public/guides)
+full_tutorial

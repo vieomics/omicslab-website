@@ -22,6 +22,12 @@ export default function getMenuData(dict: Dictionary): Menu[] {
       newTab: false,
     },
     {
+      id: 51,
+      title: dict.nav.guide,
+      path: "/guide",
+      newTab: false,
+    },
+    {
       id: 6,
       title: dict.nav.solutions,
       path: undefined,
