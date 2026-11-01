@@ -1,0 +1,45 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A pipeline from GitHub on Omicslab: all it needs is schema.json and an entrypoint in the omicslab folder">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1160" y1="0" x2="1160" y2="600" stroke="#e3e3e3"/>
+
+  <text x="120" y="120" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6" fill="#6c6c6c">PIPELINE INTEGRATION · GITHUB</text>
+  <rect x="120" y="148" width="120" height="6" fill="#111111"/>
+
+  <text x="120" y="268" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="94" font-weight="700" fill="#111111">Your pipeline,</text>
+  <text x="120" y="366" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="94" font-weight="700" fill="#111111">running on Omicslab</text>
+
+  <text x="122" y="440" font-family="Inter, Arial, sans-serif" font-size="27" fill="#333333">All it needs is schema.json and an entrypoint in omicslab/.</text>
+  <text x="122" y="492" font-family="Inter, Arial, sans-serif" font-size="17" letter-spacing="4" fill="#6c6c6c">BASH · SNAKEMAKE · NEXTFLOW · NO PIPELINE REWRITE</text>
+  <text x="122" y="540" font-family="Inter, Arial, sans-serif" font-size="17" letter-spacing="4" fill="#6c6c6c">ONE FORM · ONE MANIFEST · READY TO RERUN</text>
+
+  <!-- Right: repo -> schema -> form -->
+  <rect x="1220" y="92" width="600" height="424" fill="#ffffff" stroke="#c6c6c6" stroke-width="2"/>
+  <text x="1250" y="128" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#6c6c6c">GITHUB REPO</text>
+  <line x1="1220" y1="146" x2="1820" y2="146" stroke="#e3e3e3"/>
+
+  <text x="1250" y="188" font-family="Inter, Arial, sans-serif" font-size="20" fill="#111111">your-lab/your-pipeline</text>
+  <text x="1250" y="218" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">schema.json · omicslab/main.sh · pixi.lock</text>
+
+  <rect x="1250" y="250" width="240" height="74" fill="#111111"/>
+  <text x="1270" y="282" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">schema.json</text>
+  <text x="1270" y="306" font-family="Inter, Arial, sans-serif" font-size="13" fill="#c6c6c6">form + required fields</text>
+
+  <line x1="1490" y1="287" x2="1540" y2="287" stroke="#111111" stroke-width="3"/>
+  <path d="M1540 287 L1528 279 M1540 287 L1528 295" stroke="#111111" stroke-width="3"/>
+
+  <rect x="1540" y="250" width="250" height="74" fill="#f0f0f0" stroke="#c6c6c6"/>
+  <text x="1560" y="282" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Run form</text>
+  <text x="1560" y="306" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">fastq_dir · outdir</text>
+
+  <rect x="1250" y="360" width="540" height="116" fill="#ffffff" stroke="#e3e3e3"/>
+  <text x="1270" y="392" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6c6c6c">fastq_dir *</text>
+  <rect x="1270" y="402" width="500" height="28" fill="#fafafa" stroke="#e3e3e3"/>
+  <text x="1280" y="422" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6c6c6c">s3://.../qc_pipeline_fastq_files/</text>
+  <text x="1270" y="452" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6c6c6c">outdir *</text>
+  <rect x="1270" y="462" width="500" height="28" fill="#fafafa" stroke="#e3e3e3"/>
+  <text x="1280" y="482" font-family="Inter, Arial, sans-serif" font-size="12" fill="#6c6c6c">output</text>
+
+  <text x="1520" y="552" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="3" fill="#6c6c6c">ONE SMALL CONTRACT · ANY ENGINE</text>
+</svg>
