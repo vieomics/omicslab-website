@@ -461,6 +461,30 @@ export const en = {
         },
         { text: "." },
       ] as TextSegment[],
+      promo: {
+        eyebrow: "Redeem · Promo code",
+        title: "10,000 VND credit on the Individual plan",
+        paragraph:
+          "Enter the code in the promo code field when you subscribe to the Individual plan to receive 10,000 VND in credit. The code is limited to 100 seats.",
+        codeLabel: "Promo code",
+        code: "WELCOME2VIEOMICS",
+        copyLabel: "Copy code",
+        copiedLabel: "Copied",
+        details: [
+          { label: "Plan", value: "Individual" },
+          { label: "Value", value: "10,000 VND in credit" },
+          { label: "Limit", value: "100 seats" },
+        ],
+        cta: "Subscribe to Individual",
+        ctaHref: "https://platform.omicslab.io",
+        note: [
+          {
+            text: "The code is entered during Individual plan checkout. See the ",
+          },
+          { link: { href: "/policies/pricing", text: "Pricing Policy" } },
+          { text: " for how promotions are applied." },
+        ] as TextSegment[],
+      },
       pricing: {
         title: "Pricing",
         subscription,

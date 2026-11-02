@@ -461,6 +461,30 @@ export const vi: Dictionary = {
         },
         { text: "." },
       ] as TextSegment[],
+      promo: {
+        eyebrow: "Redeem · Mã khuyến mãi",
+        title: "10.000 VND credit cho gói Individual",
+        paragraph:
+          "Nhập mã ở ô mã khuyến mãi khi đăng ký gói Individual để nhận 10.000 VND credit. Mã được giới hạn cho 100 suất.",
+        codeLabel: "Mã khuyến mãi",
+        code: "WELCOME2VIEOMICS",
+        copyLabel: "Sao chép mã",
+        copiedLabel: "Đã sao chép",
+        details: [
+          { label: "Gói áp dụng", value: "Individual" },
+          { label: "Giá trị", value: "10.000 VND credit" },
+          { label: "Số lượng", value: "100 suất" },
+        ],
+        cta: "Đăng ký gói Individual",
+        ctaHref: "https://platform.omicslab.io",
+        note: [
+          {
+            text: "Mã được nhập trong hộp thoại đăng ký gói Individual. Xem ",
+          },
+          { link: { href: "/policies/pricing", text: "Chính sách giá" } },
+          { text: " để biết cách áp dụng khuyến mại." },
+        ] as TextSegment[],
+      },
       pricing: {
         title: "Bảng giá",
         subscription,
