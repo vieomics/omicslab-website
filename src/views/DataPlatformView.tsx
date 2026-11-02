@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact";
 import RichText from "@/components/Common/RichText";
+import PromoCode from "@/components/PromoCode";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
 import { localizeHref } from "@/i18n/paths";
@@ -125,6 +126,68 @@ export default function DataPlatformView({
             <p className="text-muted [&_strong]:text-ink text-sm leading-relaxed [&_strong]:font-bold">
               <RichText segments={t.note} locale={locale} />
             </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-pad">
+        <div className="page-width">
+          <div className="band-dark px-6 py-10 sm:px-10 sm:py-12 lg:px-12 lg:py-14">
+            <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,400px)] lg:items-center lg:gap-12">
+              <div>
+                <p className="eyebrow text-white/55">
+                  <span aria-hidden="true" className="eyebrow-line" />
+                  {t.promo.eyebrow}
+                </p>
+                <h2 className="display-md mt-5 max-w-[640px] text-white">
+                  {t.promo.title}
+                </h2>
+                <p className="mt-4 max-w-[560px] text-sm leading-relaxed text-white/65 sm:text-base">
+                  {t.promo.paragraph}
+                </p>
+                <Link
+                  href={localizeHref(t.promo.ctaHref, locale)}
+                  target={
+                    t.promo.ctaHref.startsWith("http") ? "_blank" : undefined
+                  }
+                  rel={
+                    t.promo.ctaHref.startsWith("http")
+                      ? "noopener noreferrer"
+                      : undefined
+                  }
+                  className="btn-editorial btn-editorial-inverse mt-8"
+                >
+                  {t.promo.cta}
+                </Link>
+                <p className="mt-5 max-w-[560px] text-xs leading-relaxed text-white/45">
+                  <RichText segments={t.promo.note} locale={locale} />
+                </p>
+              </div>
+
+              <div className="border-t-ink bg-paper-light border-t-4 p-6 sm:p-8">
+                <p className="micro-label text-muted">{t.promo.codeLabel}</p>
+                <div className="mt-4">
+                  <PromoCode
+                    code={t.promo.code}
+                    copyLabel={t.promo.copyLabel}
+                    copiedLabel={t.promo.copiedLabel}
+                  />
+                </div>
+                <dl className="border-line mt-6 border-t">
+                  {t.promo.details.map((detail) => (
+                    <div
+                      key={detail.label}
+                      className="border-line flex items-baseline justify-between gap-6 border-b py-3"
+                    >
+                      <dt className="micro-label text-muted">{detail.label}</dt>
+                      <dd className="text-ink text-right text-sm font-semibold">
+                        {detail.value}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </div>
           </div>
         </div>
       </section>
