@@ -5,7 +5,7 @@ import { chaptersPart2 } from "./content/vi/part-2";
 export const guideVi: GuideContent = {
   shared: {
     lastUpdatedLabel: "Cập nhật",
-    lastUpdated: "01/11/2026",
+    lastUpdated: "03/11/2026",
     chaptersLabel: "Các chương",
     tocLabel: "Mục lục",
     previous: "Chương trước",
@@ -25,6 +25,19 @@ export const guideVi: GuideContent = {
     noteTitle: "Lưu ý",
     chapterLabel: "Chương",
     sectionLabel: "mục",
+    video: {
+      kicker: "Video hướng dẫn",
+      title: "Làm việc với Omicslab trong 5 phút",
+      description:
+        "Tám chương, theo đúng thứ tự thao tác: tài khoản, thanh toán, workspace, phân tích, Studio, trình xem và hỗ trợ.",
+      duration: "05:17",
+      note: "Giọng đọc Duyên Hà My · Phụ đề tiếng Việt · Nhạc AtlasAudio",
+      jump: "8 chương bên dưới",
+      src: "/guides/video/omicslab-guide-vi.mp4",
+      poster: "/guides/video/omicslab-guide-poster.webp",
+      captions: "/guides/video/omicslab-guide-vi.vtt",
+      captionsLabel: "Tiếng Việt",
+    },
   },
   chapters: [...chaptersPart1, ...chaptersPart2],
 };
