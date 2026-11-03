@@ -5,7 +5,7 @@ import { chaptersPart2 } from "./content/en/part-2";
 export const guideEn: GuideContent = {
   shared: {
     lastUpdatedLabel: "Updated",
-    lastUpdated: "1 November 2026",
+    lastUpdated: "3 November 2026",
     chaptersLabel: "Chapters",
     tocLabel: "Contents",
     previous: "Previous chapter",
@@ -25,6 +25,19 @@ export const guideEn: GuideContent = {
     noteTitle: "Note",
     chapterLabel: "Chapter",
     sectionLabel: "sections",
+    video: {
+      kicker: "Video walkthrough",
+      title: "Using the Omicslab platform in 5 minutes",
+      description:
+        "Eight chapters in the order you will use them: account, billing, workspace, analysis, Studio, viewers and support.",
+      duration: "05:17",
+      note: "Vietnamese narration · Vietnamese captions · Music: AtlasAudio",
+      jump: "8 chapters below",
+      src: "/guides/video/omicslab-guide-vi.mp4",
+      poster: "/guides/video/omicslab-guide-poster.webp",
+      captions: "/guides/video/omicslab-guide-vi.vtt",
+      captionsLabel: "Tiếng Việt",
+    },
   },
   chapters: [...chaptersPart1, ...chaptersPart2],
 };
