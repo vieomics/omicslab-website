@@ -2,3 +2,81 @@
 # 308 by default. DMCA's ownership checker fetches this exact URL, so proxy it
 # to the same asset with a 200 response instead.
 /dmca-validation.html /dmca-validation 200
+
+# --- Retired URLs ---------------------------------------------------------
+# These pages were live before the policy/solutions restructure and were
+# removed without redirects, so Google kept requesting them and received 404.
+# Cloudflare Pages applies _redirects before static assets.
+
+# Security & Compliance pages retired in the Bộ Công Thương restructure.
+# The content now lives in /policies/security.
+/security /policies/security 301
+/security/ /policies/security 301
+/security.html /policies/security 301
+/security/* /policies/security 301
+/en/security /en/policies/security 301
+/en/security/ /en/policies/security 301
+/en/security.html /en/policies/security 301
+/en/security/* /en/policies/security 301
+
+# Pricing moved under the data-platform page.
+/pricing /solutions/data-platform#pricing 301
+/pricing/ /solutions/data-platform#pricing 301
+/pricing.html /solutions/data-platform#pricing 301
+/pricing/* /solutions/data-platform#pricing 301
+/en/pricing /en/solutions/data-platform#pricing 301
+/en/pricing/ /en/solutions/data-platform#pricing 301
+/en/pricing.html /en/solutions/data-platform#pricing 301
+/en/pricing/* /en/solutions/data-platform#pricing 301
+
+# The Infrastructure-as-a-Service offering was retired; the data-platform
+# page covers the compute and storage that remain available.
+/solutions/infrastructure /solutions/data-platform 301
+/solutions/infrastructure/ /solutions/data-platform 301
+/solutions/infrastructure.html /solutions/data-platform 301
+/solutions/infrastructure/* /solutions/data-platform 301
+/en/solutions/infrastructure /en/solutions/data-platform 301
+/en/solutions/infrastructure/ /en/solutions/data-platform 301
+/en/solutions/infrastructure.html /en/solutions/data-platform 301
+/en/solutions/infrastructure/* /en/solutions/data-platform 301
+
+# Blog post removed in a62181c. Send readers to the blog index instead of a
+# 404; the slug was shared by both locales.
+/blogs/learn-bioinformatics-with-vieomics /blogs 301
+/blogs/learn-bioinformatics-with-vieomics/ /blogs 301
+/blogs/learn-bioinformatics-with-vieomics.html /blogs 301
+/blogs/learn-bioinformatics-with-vieomics/* /blogs 301
+/en/blogs/learn-bioinformatics-with-vieomics /en/blogs 301
+/en/blogs/learn-bioinformatics-with-vieomics/ /en/blogs 301
+/en/blogs/learn-bioinformatics-with-vieomics.html /en/blogs 301
+/en/blogs/learn-bioinformatics-with-vieomics/* /en/blogs 301
+
+# Legacy documentation URL referenced from the Slurm HPC part 3 article.
+# The docs section no longer exists on this domain; point to the article
+# section that covers the same SSH hardening material.
+/docs/resources/administration/ssh-remote-server /en/blogs/how-to-build-slurm-hpc-part-3 301
+/docs/resources/administration/ssh-remote-server/ /en/blogs/how-to-build-slurm-hpc-part-3 301
+/glabs-docs-blogs/docs/resources/administration/ssh-remote-server /en/blogs/how-to-build-slurm-hpc-part-3 301
+/glabs-docs-blogs/docs/resources/administration/ssh-remote-server/ /en/blogs/how-to-build-slurm-hpc-part-3 301
+
+# Auth pages from the pre-static template. The platform now handles sign-in
+# and account creation at platform.omicslab.io.
+/signin https://platform.omicslab.io 301
+/signin.html https://platform.omicslab.io 301
+/signup https://platform.omicslab.io 301
+/signup.html https://platform.omicslab.io 301
+/forgot-password https://platform.omicslab.io 301
+/forgot-password.html https://platform.omicslab.io 301
+/reset-password https://platform.omicslab.io 301
+/reset-password/* https://platform.omicslab.io 301
+
+# Legacy Docusaurus blog paths (the site was previously served under
+# /glabs-docs-blogs/blog/<slug>).
+/blog /blogs 301
+/blog/* /blogs/:splat 301
+/en/blog /en/blogs 301
+/en/blog/* /en/blogs/:splat 301
+/glabs-docs-blogs/blog /blogs 301
+/glabs-docs-blogs/blog/* /blogs/:splat 301
+/glabs-docs-blogs/en/blog /en/blogs 301
+/glabs-docs-blogs/en/blog/* /en/blogs/:splat 301

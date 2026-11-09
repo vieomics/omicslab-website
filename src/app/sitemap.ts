@@ -28,6 +28,7 @@ const staticPaths = [
   "/policies/support",
   "/solutions",
   "/solutions/data-platform",
+  "/solutions/pipelines-softwares",
   "/solutions/custom-solutions",
 ];
 

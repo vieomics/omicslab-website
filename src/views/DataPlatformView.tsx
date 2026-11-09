@@ -192,7 +192,7 @@ export default function DataPlatformView({
         </div>
       </section>
 
-      <section className="section-pad rule-top">
+      <section id="pricing" className="section-pad rule-top scroll-mt-24">
         <div className="page-width">
           <h2 className="display-md text-ink">{t.pricing.title}</h2>
 
