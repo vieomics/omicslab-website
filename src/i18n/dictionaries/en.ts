@@ -33,6 +33,7 @@ const subscription = {
         "Up to 2 workspaces",
         "1 organization member, 3 members per workspace",
         "5 Studio sessions and 5 analysis jobs at once",
+        "LIMS included by default",
         "Support SLA: response within 24 business hours",
         "Storage billed by usage",
         "The full platform feature set",

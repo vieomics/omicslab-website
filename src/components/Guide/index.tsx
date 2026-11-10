@@ -210,6 +210,55 @@ export default function Guide({ guide, locale }: GuideProps) {
                   </aside>
                 </div>
 
+                {hub.video ? (
+                  <section className="bg-ink mt-10 border border-black text-white">
+                    <div className="flex flex-wrap items-end justify-between gap-4 px-5 py-5 sm:px-7">
+                      <div className="max-w-[680px]">
+                        <p className="micro-label text-accent">
+                          {hub.video.kicker}
+                        </p>
+                        <h2 className="display-sm mt-2 text-white">
+                          {hub.video.title}
+                        </h2>
+                        <p className="mt-2 text-sm leading-relaxed text-white/65">
+                          {hub.video.description}
+                        </p>
+                      </div>
+                      <p className="micro-label text-white/45">
+                        {hub.video.duration}
+                      </p>
+                    </div>
+                    <video
+                      className="aspect-video w-full bg-black"
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster={hub.video.poster}
+                      aria-label={hub.video.title}
+                    >
+                      <source src={hub.video.src} type="video/mp4" />
+                      <track
+                        kind="captions"
+                        src={hub.video.captions}
+                        srcLang="vi"
+                        label={hub.video.captionsLabel}
+                        default
+                      />
+                    </video>
+                    <div className="flex flex-wrap items-center justify-between gap-2 border-t border-white/15 px-5 py-3 sm:px-7">
+                      <p className="micro-label text-white/45">
+                        {hub.video.note}
+                      </p>
+                      <a
+                        href={`#${chapters[0]?.slug ?? "bat-dau"}`}
+                        className="micro-label text-white/70 transition-colors hover:text-white"
+                      >
+                        {hub.video.jump} ↓
+                      </a>
+                    </div>
+                  </section>
+                ) : null}
+
                 <details className="border-line bg-paper mt-8 border px-4 py-3 lg:hidden">
                   <summary className="micro-label text-ink cursor-pointer">
                     {shared.tocLabel}
