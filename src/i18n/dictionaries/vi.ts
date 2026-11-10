@@ -34,6 +34,7 @@ const subscription = {
         "Tối đa 2 workspace",
         "1 thành viên tổ chức, 3 thành viên mỗi workspace",
         "5 job Studio và 5 job phân tích chạy đồng thời",
+        "LIMS đi kèm theo mặc định",
         "SLA hỗ trợ: phản hồi trong 24 giờ ngày làm việc",
         "Lưu trữ tính theo dung lượng dùng",
         "Đầy đủ tính năng của nền tảng",
