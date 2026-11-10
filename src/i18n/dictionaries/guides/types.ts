@@ -67,6 +67,19 @@ export type GuideContent = {
     noteTitle: string;
     chapterLabel: string;
     sectionLabel: string;
+    /** Optional overview video shown above the chapter list. */
+    video?: {
+      kicker: string;
+      title: string;
+      description: string;
+      duration: string;
+      note: string;
+      jump: string;
+      src: string;
+      poster: string;
+      captions: string;
+      captionsLabel: string;
+    };
   };
   chapters: GuideChapter[];
 };
