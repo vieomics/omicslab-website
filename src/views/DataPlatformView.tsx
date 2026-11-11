@@ -1,5 +1,6 @@
 import Contact from "@/components/Contact";
 import RichText from "@/components/Common/RichText";
+import VideoTutorials from "@/components/Guide/VideoTutorials";
 import PromoCode from "@/components/PromoCode";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -115,7 +116,7 @@ export default function DataPlatformView({
             {t.intro.split("\n\n").map((paragraph, i) => (
               <p
                 key={i}
-                className="text-ink text-base leading-relaxed first:mt-0 mt-5"
+                className="text-ink mt-5 text-base leading-relaxed first:mt-0"
               >
                 {paragraph}
               </p>
@@ -198,10 +199,7 @@ export default function DataPlatformView({
 
           <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-4">
             {t.pricing.subscription.tiers.map((tier) => (
-              <div
-                key={tier.name}
-                className="bg-paper-light flex flex-col p-8"
-              >
+              <div key={tier.name} className="bg-paper-light flex flex-col p-8">
                 <p className="micro-label text-muted">{tier.highlight}</p>
                 <h3 className="display-md text-ink mt-3">{tier.name}</h3>
 
@@ -227,7 +225,9 @@ export default function DataPlatformView({
 
                 <Link
                   href={localizeHref(tier.ctaHref, locale)}
-                  target={tier.ctaHref.startsWith("http") ? "_blank" : undefined}
+                  target={
+                    tier.ctaHref.startsWith("http") ? "_blank" : undefined
+                  }
                   rel={
                     tier.ctaHref.startsWith("http")
                       ? "noopener noreferrer"
@@ -279,12 +279,14 @@ export default function DataPlatformView({
 
           <div className="border-line bg-line mt-10 grid gap-px border sm:grid-cols-2 lg:grid-cols-3">
             <div className="border-line bg-paper-light border-b px-6 py-4 sm:col-span-2 lg:col-span-3">
-              <h3 className="display-md text-ink">{t.pricing.topup.storage.title}</h3>
+              <h3 className="display-md text-ink">
+                {t.pricing.topup.storage.title}
+              </h3>
             </div>
             {t.pricing.topup.storage.specs.map((spec) => (
               <div key={spec.label} className="bg-paper-light p-6">
                 <p className="micro-label text-muted">{spec.label}</p>
-                <p className="font-display mt-2 text-3xl leading-none font-extrabold text-ink">
+                <p className="font-display text-ink mt-2 text-3xl leading-none font-extrabold">
                   {spec.value}
                 </p>
               </div>
@@ -433,6 +435,35 @@ export default function DataPlatformView({
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 className="absolute inset-0 h-full w-full"
+              />
+            </div>
+            <div className="border-line flex flex-wrap items-center justify-between gap-3 border-t px-5 py-3">
+              <p className="micro-label text-muted">
+                {t.gettingStarted.videoTitle}
+              </p>
+              <Link
+                href={localizeHref("/guide/videos", locale)}
+                className="micro-label text-ink decoration-accent underline decoration-2 underline-offset-4 transition-opacity hover:opacity-70"
+              >
+                {t.gettingStarted.tutorialsLink} →
+              </Link>
+            </div>
+          </div>
+
+          <div className="mt-14">
+            <h3 className="display-sm text-ink">
+              {t.gettingStarted.tutorialsTitle}
+            </h3>
+            <p className="text-muted mt-3 max-w-[760px] text-sm leading-relaxed">
+              {t.gettingStarted.tutorialsDescription}
+            </p>
+            <div className="mt-8">
+              <VideoTutorials
+                series={{
+                  ...dict.guide.videos,
+                  videos: dict.guide.videos.videos.slice(1),
+                }}
+                locale={locale}
               />
             </div>
           </div>

@@ -128,10 +128,7 @@ const topup = {
 const usageCosts = {
   title: "Chi phí sử dụng nền tảng",
   items: [
-    [
-      { strong: "Phí duy trì nền tảng:" },
-      { text: " 1.000 VND/giờ chạy job." },
-    ],
+    [{ strong: "Phí duy trì nền tảng:" }, { text: " 1.000 VND/giờ chạy job." }],
     [
       { strong: "Chi phí compute:" },
       {
@@ -145,8 +142,7 @@ const usageCosts = {
       },
     ],
   ] as TextSegment[][],
-  note:
-    "Chi phí compute và lưu trữ không nằm trong phí duy trì nền tảng. Khách hàng có thể xem bảng giá của nhà cung cấp tương ứng trước khi sử dụng. Giá áp dụng và tổng chi phí dự kiến sẽ được xác định theo cấu hình và dịch vụ thực tế được lựa chọn.",
+  note: "Chi phí compute và lưu trữ không nằm trong phí duy trì nền tảng. Khách hàng có thể xem bảng giá của nhà cung cấp tương ứng trước khi sử dụng. Giá áp dụng và tổng chi phí dự kiến sẽ được xác định theo cấu hình và dịch vụ thực tế được lựa chọn.",
 };
 
 export const vi: Dictionary = {
@@ -166,6 +162,8 @@ export const vi: Dictionary = {
     about: "Giới thiệu",
     contact: "Liên hệ",
     guide: "Hướng dẫn",
+    guideWritten: "Tài liệu hướng dẫn",
+    guideVideos: "Video hướng dẫn",
     solutions: "Giải pháp",
     dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Giải pháp tùy chỉnh",
@@ -280,8 +278,7 @@ export const vi: Dictionary = {
         },
       ],
       noteLabel: "Lưu ý",
-      note:
-        "Dùng hạ tầng của riêng bạn? Nền tảng vẫn tính một khoản phí nhỏ theo giờ khi chạy job — chỉ dùng để vận hành và bảo trì nền tảng.",
+      note: "Dùng hạ tầng của riêng bạn? Nền tảng vẫn tính một khoản phí nhỏ theo giờ khi chạy job — chỉ dùng để vận hành và bảo trì nền tảng.",
     },
     platforms: {
       subtitle: "Tương thích với",
@@ -289,12 +286,27 @@ export const vi: Dictionary = {
       paragraph:
         "Được thiết kế để hoạt động với mọi cloud và mọi hình thức lưu trữ, Omicslab ưu tiên tối ưu cho các nhà cung cấp Việt Nam — CloudFly và GreenNode — để bạn có thể giữ dữ liệu nghiên cứu trong nước và việc xử lý dữ liệu phù hợp với Luật Bảo vệ dữ liệu cá nhân (Luật số 91/2025/QH15) cùng Nghị định 356/2025/NĐ-CP, văn bản kế thừa Nghị định 13/2023/NĐ-CP.",
       items: [
-        { title: "CloudFly", detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM" },
+        {
+          title: "CloudFly",
+          detail: "Cloud Việt Nam — Hà Nội, Đà Nẵng, TP.HCM",
+        },
         { title: "GreenNode", detail: "Greennode (VNG Cloud) - TP.HCM" },
         { title: "Slurm HPC", detail: "Cụm riêng của bạn, kết nối qua SDK" },
-        { title: "Nextflow", detail: "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv" },
-        { title: "Lưu trữ", detail: "Lưu trữ đối tượng tương thích S3 — mua theo gói dung lượng hoặc dùng của riêng bạn" },
-        { title: "Studio", detail: "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker" },
+        {
+          title: "Nextflow",
+          detail:
+            "Chủ yếu Nextflow & nf-core, nhưng không giới hạn, mở rộng dễ dàng với bash, Snakemake, vv",
+        },
+        {
+          title: "Lưu trữ",
+          detail:
+            "Lưu trữ đối tượng tương thích S3 — mua theo gói dung lượng hoặc dùng của riêng bạn",
+        },
+        {
+          title: "Studio",
+          detail:
+            "Galaxy, Streamlit, RStudio, vv — hoặc mọi ứng dụng web Docker",
+        },
       ],
     },
     customers: {
@@ -351,7 +363,8 @@ export const vi: Dictionary = {
             "Hiện tại Vieomics **chỉ vận hành Nền tảng Omicslab tại Việt Nam** và làm việc với **người Việt Nam hoặc người sinh sống tại Việt Nam**, cùng các hợp tác đa quốc gia. Dữ liệu và tính toán do Vieomics cung cấp **được đặt tại Việt Nam**; chúng tôi chưa vận hành Nền tảng ở nước ngoài.",
         },
         {
-          question: "Tôi đã có quy trình và hạ tầng riêng, có chuyển sang dùng được không?",
+          question:
+            "Tôi đã có quy trình và hạ tầng riêng, có chuyển sang dùng được không?",
           answer:
             "Hoàn toàn được. Bạn vận hành nền tảng tại chỗ hoặc trên cloud riêng, đăng ký cụm HPC Slurm qua SDK, kết nối lưu trữ sẵn có rồi mang quy trình vào dưới dạng kho Git. Không cần viết lại từ đầu — chúng tôi đồng hành cùng bạn ở từng bước.",
         },
@@ -458,7 +471,10 @@ export const vi: Dictionary = {
         { strong: "Lưu ý:" },
         { text: " Dùng thử hoặc cần hỗ trợ, liên hệ " },
         {
-          link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
+          link: {
+            href: "mailto:contact@omicslab.io",
+            text: "contact@omicslab.io",
+          },
         },
         { text: "." },
       ] as TextSegment[],
@@ -659,6 +675,10 @@ export const vi: Dictionary = {
           "Dữ liệu có thể được cấu hình đồng bộ từ máy giải trình tự.",
         ],
         videoTitle: "Omicslab Platform - Nền tảng phân tích tin sinh học",
+        tutorialsLink: "Mở trang video đầy đủ",
+        tutorialsTitle: "Video hướng dẫn",
+        tutorialsDescription:
+          "Sáu video ghi lại các bước trong phần bắt đầu nhanh. Video tổng quan phía trên trình bày toàn bộ quy trình; chọn một video bên dưới để phát ngay tại đây.",
       },
     },
     pipelines: {
@@ -761,6 +781,11 @@ export const vi: Dictionary = {
       description:
         "Hướng dẫn từng bước sử dụng Nền tảng Omicslab: tổ chức, thanh toán, workspace, phân tích, Studio và hỗ trợ.",
     },
+    guideVideos: {
+      title: "Video hướng dẫn",
+      description:
+        "Bảy video hướng dẫn sử dụng Nền tảng Omicslab: đăng ký tài khoản, workspace, LIMS/Cohorts, samplesheet, trình xem và Studio.",
+    },
     privacy: {
       title: "Chính sách bảo mật",
       description:
@@ -768,7 +793,8 @@ export const vi: Dictionary = {
     },
     terms: {
       title: "Điều khoản Dịch vụ",
-      description: "Các điều khoản điều chỉnh việc bạn sử dụng Nền tảng Omicslab.",
+      description:
+        "Các điều khoản điều chỉnh việc bạn sử dụng Nền tảng Omicslab.",
     },
   },
 };

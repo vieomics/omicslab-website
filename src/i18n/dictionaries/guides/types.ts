@@ -45,6 +45,43 @@ export type GuideChapter = {
   sections: GuideSection[];
 };
 
+export type GuideVideo = {
+  /** YouTube video ID. */
+  id: string;
+  /** Two-digit label shown beside the title. */
+  number: string;
+  title: string;
+  duration: string;
+  /** One or two sentences describing what the recording covers. */
+  description: string;
+  /** Local poster image, stored under public/. */
+  thumbnail: string;
+};
+
+export type GuideVideoSeries = {
+  kicker: string;
+  title: string;
+  description: string;
+  meta: string;
+  aboutLabel: string;
+  intro: string;
+  languageNote: string;
+  listLabel: string;
+  playLabel: string;
+  selectedLabel: string;
+  watchOnYouTube: string;
+  openPlaylist: string;
+  writtenGuideLabel: string;
+  writtenGuideText: string;
+  writtenGuideCta: string;
+  docsLabel: string;
+  docsText: string;
+  docsCta: string;
+  noteTitle: string;
+  note: string;
+  videos: GuideVideo[];
+};
+
 export type GuideContent = {
   shared: {
     lastUpdatedLabel: string;
@@ -75,11 +112,13 @@ export type GuideContent = {
       duration: string;
       note: string;
       jump: string;
+      seriesLink: string;
       src: string;
       poster: string;
       captions: string;
       captionsLabel: string;
     };
   };
+  videos: GuideVideoSeries;
   chapters: GuideChapter[];
 };
