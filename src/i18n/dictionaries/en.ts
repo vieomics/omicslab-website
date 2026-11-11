@@ -146,8 +146,7 @@ const usageCosts = {
       },
     ],
   ] as TextSegment[][],
-  note:
-    "Compute and storage costs are not included in the platform maintenance fee. Customers can view the relevant provider's pricing before use. The applicable price and estimated total are determined by the actual configuration and services selected.",
+  note: "Compute and storage costs are not included in the platform maintenance fee. Customers can view the relevant provider's pricing before use. The applicable price and estimated total are determined by the actual configuration and services selected.",
 };
 
 export const en = {
@@ -166,6 +165,8 @@ export const en = {
     about: "About",
     contact: "Contact",
     guide: "Guide",
+    guideWritten: "Written guide",
+    guideVideos: "Video tutorials",
     solutions: "Solutions",
     dataPlatform: "Omicslab Platform",
     pipelinesSoftwares: "Custom Solutions",
@@ -280,8 +281,7 @@ export const en = {
         },
       ],
       noteLabel: "Note",
-      note:
-        "Running on your own infrastructure? A small platform fee is still charged per hour while jobs run — it covers platform maintenance only.",
+      note: "Running on your own infrastructure? A small platform fee is still charged per hour while jobs run — it covers platform maintenance only.",
     },
     platforms: {
       subtitle: "Works with",
@@ -290,11 +290,25 @@ export const en = {
         "Built to work with any cloud and any storage, Omicslab is tuned first for Vietnam's own providers — CloudFly and GreenNode — so you can keep your research data in-country and your processing aligns with the Personal Data Protection Law (Law No. 91/2025/QH15) and Decree No. 356/2025/ND-CP, which replaced Decree No. 13/2023/ND-CP.",
       items: [
         { title: "CloudFly", detail: "Vietnam cloud — Hanoi, Da Nang, HCMC" },
-        { title: "GreenNode", detail: "Greennode (VNG Cloud) - Ho Chi Minh City" },
+        {
+          title: "GreenNode",
+          detail: "Greennode (VNG Cloud) - Ho Chi Minh City",
+        },
         { title: "Slurm HPC", detail: "Your own cluster, connected via SDK" },
-        { title: "Nextflow", detail: "Mainly Nextflow & nf-core, not limited — extend easily with bash, Snakemake, etc." },
-        { title: "Storage", detail: "S3-compatible object storage — bought by quota, or bring your own" },
-        { title: "Studio", detail: "Galaxy, Streamlit, RStudio, etc. — or any Docker web app" },
+        {
+          title: "Nextflow",
+          detail:
+            "Mainly Nextflow & nf-core, not limited — extend easily with bash, Snakemake, etc.",
+        },
+        {
+          title: "Storage",
+          detail:
+            "S3-compatible object storage — bought by quota, or bring your own",
+        },
+        {
+          title: "Studio",
+          detail: "Galaxy, Streamlit, RStudio, etc. — or any Docker web app",
+        },
       ],
     },
     customers: {
@@ -458,7 +472,10 @@ export const en = {
         { strong: "Note:" },
         { text: " For a trial or support, reach us at " },
         {
-          link: { href: "mailto:contact@omicslab.io", text: "contact@omicslab.io" },
+          link: {
+            href: "mailto:contact@omicslab.io",
+            text: "contact@omicslab.io",
+          },
         },
         { text: "." },
       ] as TextSegment[],
@@ -659,6 +676,10 @@ export const en = {
           "Data can be configured to sync from your sequencing machine.",
         ],
         videoTitle: "Omicslab Platform - Bioinformatics analysis platform",
+        tutorialsLink: "Open the full video page",
+        tutorialsTitle: "Video tutorials",
+        tutorialsDescription:
+          "Six recordings that follow the quick-start steps. The overview above shows the complete flow; select a video below to play it here.",
       },
     },
     pipelines: {
@@ -761,6 +782,11 @@ export const en = {
       description:
         "Step-by-step instructions for the Omicslab Platform: organizations, billing, workspaces, analyses, Studio and support.",
     },
+    guideVideos: {
+      title: "Video tutorials",
+      description:
+        "Seven video walkthroughs of the Omicslab Platform: account registration, workspaces, LIMS/Cohorts, samplesheets, the Viewer and Studio.",
+    },
     privacy: {
       title: "Personal Data Protection & Privacy Policy",
       description:
@@ -768,8 +794,7 @@ export const en = {
     },
     terms: {
       title: "Terms of Service",
-      description:
-        "The terms that govern your use of the Omicslab Platform.",
+      description: "The terms that govern your use of the Omicslab Platform.",
     },
   },
 };

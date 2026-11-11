@@ -14,6 +14,7 @@ const staticPaths = [
   "/blogs",
   "/blogs/topics",
   "/guide",
+  "/guide/videos",
   "/contact",
   "/privacy",
   "/terms",

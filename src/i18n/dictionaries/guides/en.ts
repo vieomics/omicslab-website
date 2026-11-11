@@ -1,6 +1,7 @@
 import type { GuideContent } from "./types";
 import { chaptersPart1 } from "./content/en/part-1";
 import { chaptersPart2 } from "./content/en/part-2";
+import { videosEn } from "./videos/en";
 
 export const guideEn: GuideContent = {
   shared: {
@@ -33,11 +34,13 @@ export const guideEn: GuideContent = {
       duration: "05:17",
       note: "Vietnamese narration · Vietnamese captions · Music: AtlasAudio",
       jump: "8 chapters below",
+      seriesLink: "Watch the 7 video tutorials",
       src: "/guides/video/omicslab-guide-vi.mp4",
       poster: "/guides/video/omicslab-guide-poster.webp",
       captions: "/guides/video/omicslab-guide-vi.vtt",
       captionsLabel: "Tiếng Việt",
     },
   },
+  videos: videosEn,
   chapters: [...chaptersPart1, ...chaptersPart2],
 };

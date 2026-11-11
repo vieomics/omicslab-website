@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import GuideToc from "./GuideToc";
 import { Inline } from "@/components/Legal";
 import { guideImageSizes } from "@/i18n/dictionaries/guides/imageSizes";
@@ -8,6 +9,7 @@ import type {
   GuideListItem,
 } from "@/i18n/dictionaries/guides/types";
 import { Locale } from "@/i18n/config";
+import { localizeHref } from "@/i18n/paths";
 
 interface GuideProps {
   guide: GuideContent;
@@ -249,12 +251,20 @@ export default function Guide({ guide, locale }: GuideProps) {
                       <p className="micro-label text-white/45">
                         {hub.video.note}
                       </p>
-                      <a
-                        href={`#${chapters[0]?.slug ?? "bat-dau"}`}
-                        className="micro-label text-white/70 transition-colors hover:text-white"
-                      >
-                        {hub.video.jump} ↓
-                      </a>
+                      <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                        <Link
+                          href={localizeHref("/guide/videos", locale)}
+                          className="micro-label text-white/70 transition-colors hover:text-white"
+                        >
+                          {hub.video.seriesLink} →
+                        </Link>
+                        <a
+                          href={`#${chapters[0]?.slug ?? "bat-dau"}`}
+                          className="micro-label text-white/70 transition-colors hover:text-white"
+                        >
+                          {hub.video.jump} ↓
+                        </a>
+                      </div>
                     </div>
                   </section>
                 ) : null}
