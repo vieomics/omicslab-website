@@ -1,6 +1,7 @@
 import type { GuideContent } from "./types";
 import { chaptersPart1 } from "./content/vi/part-1";
 import { chaptersPart2 } from "./content/vi/part-2";
+import { videosVi } from "./videos/vi";
 
 export const guideVi: GuideContent = {
   shared: {
@@ -33,11 +34,13 @@ export const guideVi: GuideContent = {
       duration: "05:17",
       note: "Giọng đọc Duyên Hà My · Phụ đề tiếng Việt · Nhạc AtlasAudio",
       jump: "8 chương bên dưới",
+      seriesLink: "Xem 7 video hướng dẫn",
       src: "/guides/video/omicslab-guide-vi.mp4",
       poster: "/guides/video/omicslab-guide-poster.webp",
       captions: "/guides/video/omicslab-guide-vi.vtt",
       captionsLabel: "Tiếng Việt",
     },
   },
+  videos: videosVi,
   chapters: [...chaptersPart1, ...chaptersPart2],
 };
