@@ -80,7 +80,7 @@ const topup = {
   subtitle: "Top-Up",
   title: "Pay for What You Use",
   paragraph:
-    "Top up your organization wallet and spend it on compute, storage and the platform fee as you go.",
+    "Top up your organization wallet and spend it on compute, storage and, when applicable, the platform fee as you go. The platform fee is currently 0 VND/hour through 31 December 2026.",
   lines: [
     [
       { strong: "Top-up:" },
@@ -103,7 +103,7 @@ const topup = {
     [
       { strong: "Platform fee:" },
       {
-        text: " 1,000 VND/hour while jobs run — also applies on your own infrastructure, and covers platform maintenance only.",
+        text: " 0 VND/hour through 31 December 2026 (normally 1,000 VND/hour) while jobs run — also applies on your own infrastructure, and covers platform maintenance only.",
       },
     ],
     [
@@ -130,8 +130,10 @@ const usageCosts = {
   title: "Platform Usage Costs",
   items: [
     [
-      { strong: "Platform maintenance fee:" },
-      { text: " 1,000 VND/hour while a job runs." },
+      { strong: "Platform fee:" },
+      {
+        text: " 0 VND/hour through 31 December 2026 (normally 1,000 VND/hour) while a job runs.",
+      },
     ],
     [
       { strong: "Compute cost:" },
@@ -146,7 +148,7 @@ const usageCosts = {
       },
     ],
   ] as TextSegment[][],
-  note: "Compute and storage costs are not included in the platform maintenance fee. Customers can view the relevant provider's pricing before use. The applicable price and estimated total are determined by the actual configuration and services selected.",
+  note: "Compute and storage costs are separate from the platform fee. The platform fee is 0 VND/hour through 31 December 2026; the standard rate is 1,000 VND/hour. Customers can view the relevant provider's pricing before use. The applicable price and estimated total are determined by the actual configuration and services selected.",
 };
 
 export const en = {
@@ -281,7 +283,7 @@ export const en = {
         },
       ],
       noteLabel: "Note",
-      note: "Running on your own infrastructure? A small platform fee is still charged per hour while jobs run — it covers platform maintenance only.",
+      note: "Running on your own infrastructure? The platform fee is 0 VND/hour through 31 December 2026 (normally 1,000 VND/hour); compute and storage are billed by your provider.",
     },
     platforms: {
       subtitle: "Works with",
@@ -481,15 +483,16 @@ export const en = {
       ] as TextSegment[],
       promo: {
         eyebrow: "Redeem · Promo code",
-        title: "20,000 VND credit on the Lite plan",
+        title: "Lite plan — 1,000,000 VND/month, with 20,000 VND credit",
         paragraph:
-          "Enter the code in the promo code field when you subscribe to the Lite plan to receive 20,000 VND in credit. The code is limited to 100 seats.",
+          "Subscribe to the Lite plan, currently 1,000,000 VND/month, and enter the code in the promo code field to receive 20,000 VND in credit. The code is limited to 100 seats.",
         codeLabel: "Promo code",
         code: "WELCOME2VIEOMICS",
         copyLabel: "Copy code",
         copiedLabel: "Copied",
         details: [
           { label: "Plan", value: "Lite" },
+          { label: "Plan price", value: "1,000,000 VND/month" },
           { label: "Value", value: "20,000 VND in credit" },
           { label: "Limit", value: "100 seats" },
         ],
