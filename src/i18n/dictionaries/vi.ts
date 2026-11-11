@@ -81,7 +81,7 @@ const topup = {
   subtitle: "Nạp tiền (top-up)",
   title: "Trả phí cho những gì bạn dùng",
   paragraph:
-    "Nạp vào ví của tổ chức và dùng cho tính toán, lưu trữ cùng phí nền tảng.",
+    "Nạp vào ví của tổ chức và dùng cho tính toán, lưu trữ cùng phí nền tảng khi áp dụng. Phí nền tảng hiện là 0 VND/giờ đến hết ngày 31/12/2026.",
   lines: [
     [
       { strong: "Nạp tiền:" },
@@ -102,7 +102,7 @@ const topup = {
     [
       { strong: "Phí nền tảng:" },
       {
-        text: " 1.000 VND/giờ trong lúc job chạy — áp dụng cả với hạ tầng của riêng bạn, chỉ dùng để vận hành và bảo trì nền tảng.",
+        text: " 0 VND/giờ đến hết ngày 31/12/2026 (thông thường 1.000 VND/giờ) trong lúc job chạy — áp dụng cả với hạ tầng của riêng bạn, chỉ dùng để vận hành và bảo trì nền tảng.",
       },
     ],
     [
@@ -128,7 +128,12 @@ const topup = {
 const usageCosts = {
   title: "Chi phí sử dụng nền tảng",
   items: [
-    [{ strong: "Phí duy trì nền tảng:" }, { text: " 1.000 VND/giờ chạy job." }],
+    [
+      { strong: "Phí nền tảng:" },
+      {
+        text: " 0 VND/giờ đến hết ngày 31/12/2026 (thông thường 1.000 VND/giờ) trong lúc job chạy.",
+      },
+    ],
     [
       { strong: "Chi phí compute:" },
       {
@@ -142,7 +147,7 @@ const usageCosts = {
       },
     ],
   ] as TextSegment[][],
-  note: "Chi phí compute và lưu trữ không nằm trong phí duy trì nền tảng. Khách hàng có thể xem bảng giá của nhà cung cấp tương ứng trước khi sử dụng. Giá áp dụng và tổng chi phí dự kiến sẽ được xác định theo cấu hình và dịch vụ thực tế được lựa chọn.",
+  note: "Chi phí compute và lưu trữ tách biệt với phí nền tảng. Phí nền tảng là 0 VND/giờ đến hết ngày 31/12/2026; mức thông thường là 1.000 VND/giờ. Khách hàng có thể xem bảng giá của nhà cung cấp tương ứng trước khi sử dụng. Giá áp dụng và tổng chi phí dự kiến sẽ được xác định theo cấu hình và dịch vụ thực tế được lựa chọn.",
 };
 
 export const vi: Dictionary = {
@@ -278,7 +283,7 @@ export const vi: Dictionary = {
         },
       ],
       noteLabel: "Lưu ý",
-      note: "Dùng hạ tầng của riêng bạn? Nền tảng vẫn tính một khoản phí nhỏ theo giờ khi chạy job — chỉ dùng để vận hành và bảo trì nền tảng.",
+      note: "Dùng hạ tầng của riêng bạn? Phí nền tảng là 0 VND/giờ đến hết ngày 31/12/2026 (thông thường 1.000 VND/giờ); chi phí compute và lưu trữ do nhà cung cấp của bạn thu.",
     },
     platforms: {
       subtitle: "Tương thích với",
@@ -480,15 +485,16 @@ export const vi: Dictionary = {
       ] as TextSegment[],
       promo: {
         eyebrow: "Redeem · Mã khuyến mãi",
-        title: "20.000 VND credit cho gói Lite",
+        title: "Gói Lite — 1.000.000 VND/tháng, nhận 20.000 VND credit",
         paragraph:
-          "Nhập mã ở ô mã khuyến mãi khi đăng ký gói Lite để nhận 20.000 VND credit. Mã được giới hạn cho 100 suất.",
+          "Đăng ký gói Lite, hiện có giá 1.000.000 VND/tháng, và nhập mã ở ô mã khuyến mãi để nhận 20.000 VND credit. Mã được giới hạn cho 100 suất.",
         codeLabel: "Mã khuyến mãi",
         code: "WELCOME2VIEOMICS",
         copyLabel: "Sao chép mã",
         copiedLabel: "Đã sao chép",
         details: [
           { label: "Gói áp dụng", value: "Lite" },
+          { label: "Giá gói", value: "1.000.000 VND/tháng" },
           { label: "Giá trị", value: "20.000 VND credit" },
           { label: "Số lượng", value: "100 suất" },
         ],
