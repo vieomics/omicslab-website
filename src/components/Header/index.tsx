@@ -105,9 +105,9 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                         onClick={closeMenus}
                         scroll={false}
                         href={localizeHref(menuItem.path, locale)}
-                        className={`flex items-center py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors lg:py-0 hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 ${
+                        className={`hover:decoration-accent flex items-center py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:underline hover:decoration-2 hover:underline-offset-8 lg:py-0 ${
                           currentPath === menuItem.path
-                            ? "underline decoration-accent decoration-2 underline-offset-8"
+                            ? "decoration-accent underline decoration-2 underline-offset-8"
                             : ""
                         }`}
                       >
@@ -123,7 +123,16 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                       <button
                         onClick={() => handleSubmenu(index)}
                         aria-expanded={openIndex === index}
-                        className="flex w-full items-center justify-between gap-2 py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:underline hover:decoration-accent hover:decoration-2 hover:underline-offset-8 lg:w-auto lg:py-0"
+                        className={`hover:decoration-accent flex w-full items-center justify-between gap-2 py-3 text-[11px] font-bold tracking-[0.14em] text-white uppercase transition-colors hover:underline hover:decoration-2 hover:underline-offset-8 lg:w-auto lg:py-0 ${
+                          menuItem.submenu?.some(
+                            (submenuItem) =>
+                              submenuItem.path &&
+                              (currentPath === submenuItem.path ||
+                                currentPath.startsWith(`${submenuItem.path}/`)),
+                          )
+                            ? "decoration-accent underline decoration-2 underline-offset-8"
+                            : ""
+                        }`}
                       >
                         {menuItem.title}
                         <svg
@@ -145,7 +154,7 @@ const Header = ({ dict, locale, translatedSlugs }: HeaderProps) => {
                       <div
                         className={`${
                           openIndex === index ? "block" : "hidden"
-                        } mt-1 border-l border-line pl-4 lg:absolute lg:top-full lg:left-0 lg:mt-0 lg:min-w-[280px] lg:border lg:border-line lg:bg-paper-light lg:py-3 lg:pl-0`}
+                        } border-line lg:border-line lg:bg-paper-light mt-1 border-l pl-4 lg:absolute lg:top-full lg:left-0 lg:mt-0 lg:min-w-[280px] lg:border lg:py-3 lg:pl-0`}
                       >
                         {menuItem?.submenu?.map((submenuItem, i) => (
                           <div key={i}>

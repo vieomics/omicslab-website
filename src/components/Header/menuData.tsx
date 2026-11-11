@@ -24,8 +24,22 @@ export default function getMenuData(dict: Dictionary): Menu[] {
     {
       id: 51,
       title: dict.nav.guide,
-      path: "/guide",
+      path: undefined,
       newTab: false,
+      submenu: [
+        {
+          id: 511,
+          title: dict.nav.guideWritten,
+          path: "/guide",
+          newTab: false,
+        },
+        {
+          id: 512,
+          title: dict.nav.guideVideos,
+          path: "/guide/videos",
+          newTab: false,
+        },
+      ],
     },
     {
       id: 6,
