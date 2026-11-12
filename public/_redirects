@@ -8,6 +8,19 @@
 # removed without redirects, so Google kept requesting them and received 404.
 # Cloudflare Pages applies _redirects before static assets.
 
+# /solutions/pipelines-softwares was renamed to /solutions/custom-solutions.
+# Keep old links working with a permanent redirect instead of serving a
+# duplicate page whose canonical points somewhere else; otherwise Google
+# reports the old URL as "Alternate page with proper canonical tag".
+/solutions/pipelines-softwares /solutions/custom-solutions 301
+/solutions/pipelines-softwares/ /solutions/custom-solutions 301
+/solutions/pipelines-softwares.html /solutions/custom-solutions 301
+/solutions/pipelines-softwares/* /solutions/custom-solutions 301
+/en/solutions/pipelines-softwares /en/solutions/custom-solutions 301
+/en/solutions/pipelines-softwares/ /en/solutions/custom-solutions 301
+/en/solutions/pipelines-softwares.html /en/solutions/custom-solutions 301
+/en/solutions/pipelines-softwares/* /en/solutions/custom-solutions 301
+
 # Security & Compliance pages retired in the Bộ Công Thương restructure.
 # The content now lives in /policies/security.
 /security /policies/security 301

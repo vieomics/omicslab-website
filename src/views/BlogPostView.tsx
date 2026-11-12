@@ -1,4 +1,5 @@
 import CodeBlockWrapper from "@/components/Blog/CodeBlockWrapper";
+import JsonLd from "@/components/Seo/JsonLd";
 import SingleBlog from "@/components/Blog/SingleBlog";
 import TableOfContents from "@/components/Blog/TableOfContents";
 import ScholarLink from "@/components/Common/ScholarLink";
@@ -8,13 +9,19 @@ import { Locale } from "@/i18n/config";
 import { formatDate } from "@/i18n/date";
 import { localizePath } from "@/i18n/paths";
 import { TocItem } from "@/utils/toc";
+import {
+  blogPostingJsonLd,
+  breadcrumbJsonLd,
+} from "@/utils/structuredData";
 import Image from "next/image";
 import Link from "next/link";
 
 interface BlogPostViewProps {
   dict: Dictionary;
   locale: Locale;
+  slug: string;
   title: string;
+  description: string;
   content: string;
   coverImage: string;
   author: string;
@@ -29,7 +36,9 @@ interface BlogPostViewProps {
 export default function BlogPostView({
   dict,
   locale,
+  slug,
   title,
+  description,
   content,
   coverImage,
   author,
@@ -41,9 +50,28 @@ export default function BlogPostView({
   translationSlug,
 }: BlogPostViewProps) {
   const otherLocale: Locale = locale === "vi" ? "en" : "vi";
+  const postingJsonLd = blogPostingJsonLd({
+    locale,
+    slug,
+    title,
+    description,
+    image: coverImage,
+    date,
+    author,
+    authorUrl: authorScholar,
+  });
+  const breadcrumb = breadcrumbJsonLd({
+    locale,
+    slug,
+    title,
+    homeLabel: dict.nav.home,
+    blogLabel: dict.nav.blog,
+  });
 
   return (
     <>
+      <JsonLd data={postingJsonLd} />
+      <JsonLd data={breadcrumb} />
       <CodeBlockWrapper
         copyLabel={dict.common.copy}
         copiedLabel={dict.common.copied}
@@ -90,7 +118,7 @@ export default function BlogPostView({
             <div className="mt-10 border border-line bg-white">
               <Image
                 src={coverImage}
-                alt="image"
+                alt={title}
                 width={1920}
                 height={600}
                 className="h-auto w-full object-cover"
