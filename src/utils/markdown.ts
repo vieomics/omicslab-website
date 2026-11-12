@@ -153,19 +153,23 @@ export function getPostBySlug(
       /!\[(.*?)\]\((.*?)\)/g,
       (match, alt, path) => {
         const fixedPath = resolveImagePath(locale, folderPath, path);
-        return `<img src="${fixedPath}" alt="${escapeHtmlAttribute(alt)}" />`;
+        return `<img src="${fixedPath}" alt="${escapeHtmlAttribute(alt)}" loading="lazy" decoding="async" />`;
       },
     );
     processed = processed.replace(
       /<figure[^>]*>[\s\S]*?<\/figure>/gi,
       (match) => {
-        const imgMatch = match.match(/<img[^>]+src="([^"]+)"/);
+        const imgTag = match.match(/<img\b[^>]*>/i)?.[0] ?? "";
+        const srcMatch = imgTag.match(/\bsrc="([^"]+)"/i);
+        const altMatch = imgTag.match(/\balt="([^"]*)"/i);
         const captionMatch = match.match(
           /<figcaption[^>]*>([\s\S]*?)<\/figcaption>/,
         );
-        if (imgMatch) {
-          const src = resolveImagePath(locale, folderPath, imgMatch[1]);
-          let html = `<figure><img src="${src}" alt="" />`;
+        if (srcMatch) {
+          const src = resolveImagePath(locale, folderPath, srcMatch[1]);
+          let html = `<figure><img src="${src}" alt="${escapeHtmlAttribute(
+            altMatch?.[1] ?? "",
+          )}" loading="lazy" decoding="async" />`;
           if (captionMatch) {
             html += `<figcaption>${captionMatch[1]}</figcaption>`;
           }

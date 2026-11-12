@@ -59,8 +59,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const locale of localeList) {
-    for (const post of getAllPosts(locale, ["slug", "date"])) {
+    for (const post of getAllPosts(locale, ["slug", "date", "coverImage"])) {
       const slug = post.slug as string;
+      const coverImage = post.coverImage as string | null;
       const translation = getPostTranslation(locale, slug);
       const otherLocale: Locale = locale === "vi" ? "en" : "vi";
       const languages: Record<string, string> = {
@@ -86,6 +87,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: { languages },
+        images: coverImage
+          ? [
+              coverImage.startsWith("http")
+                ? coverImage
+                : `${siteUrl}${coverImage}`,
+            ]
+          : undefined,
       });
     }
   }
