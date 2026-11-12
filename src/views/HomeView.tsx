@@ -8,9 +8,11 @@ import Faq from "@/components/Faq";
 import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import PlatformStrip from "@/components/PlatformStrip";
+import JsonLd from "@/components/Seo/JsonLd";
 import Services from "@/components/Services";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
+import { faqJsonLd } from "@/utils/structuredData";
 
 interface HomeViewProps {
   dict: Dictionary;
@@ -21,6 +23,7 @@ interface HomeViewProps {
 export default function HomeView({ dict, locale, posts }: HomeViewProps) {
   return (
     <main>
+      <JsonLd data={faqJsonLd(dict.home.faq.items)} />
       <ScrollUp />
       <Hero dict={dict} />
       <Services dict={dict} locale={locale} />
