@@ -458,7 +458,7 @@ export const en = {
       title: "Solutions",
       subtitle: "Bioinformatics solutions for multiomics research",
       paragraph:
-        "Use the navigation menu to access: Omicslab Platform and Custom Solutions.",
+        "Two paths cover most requests: the managed Omicslab Platform, where storage, tools and compute are operated together, and Custom Solutions for pipeline development, infrastructure integration and private deployments. The two can be combined, and an existing system can be integrated rather than replaced.",
       metadataDescription:
         "Bioinformatics solutions for multiomics analysis, data management, and pipeline execution.",
     },

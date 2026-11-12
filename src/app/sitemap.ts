@@ -1,11 +1,11 @@
 import type { MetadataRoute } from "next";
-import { Locale } from "@/i18n/config";
+import { Locale, defaultLocale } from "@/i18n/config";
 import { localizePath } from "@/i18n/paths";
-import { getPostSlugs, getPostTranslation } from "@/utils/markdown";
+import { siteUrl } from "@/i18n/site";
+import { getAllPosts, getPostTranslation } from "@/utils/markdown";
 
 export const dynamic = "force-static";
 
-const baseUrl = "https://omicslab.io";
 const localeList: Locale[] = ["vi", "en"];
 
 const staticPaths = [
@@ -29,9 +29,18 @@ const staticPaths = [
   "/policies/support",
   "/solutions",
   "/solutions/data-platform",
-  "/solutions/pipelines-softwares",
   "/solutions/custom-solutions",
 ];
+
+function staticAlternates(path: string): Record<string, string> {
+  const vi = `${siteUrl}${localizePath(path, "vi")}`;
+  const en = `${siteUrl}${localizePath(path, "en")}`;
+  return {
+    vi,
+    en,
+    "x-default": vi,
+  };
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
@@ -39,34 +48,41 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const path of staticPaths) {
     for (const locale of localeList) {
       entries.push({
-        url: `${baseUrl}${localizePath(path, locale)}`,
-        lastModified: new Date(),
+        url: `${siteUrl}${localizePath(path, locale)}`,
         changeFrequency: "weekly",
         priority: path === "/" ? 1 : 0.8,
         alternates: {
-          languages: {
-            vi: `${baseUrl}${localizePath(path, "vi")}`,
-            en: `${baseUrl}${localizePath(path, "en")}`,
-          },
+          languages: staticAlternates(path),
         },
       });
     }
   }
 
   for (const locale of localeList) {
-    for (const slug of getPostSlugs(locale)) {
+    for (const post of getAllPosts(locale, ["slug", "date"])) {
+      const slug = post.slug as string;
       const translation = getPostTranslation(locale, slug);
+      const otherLocale: Locale = locale === "vi" ? "en" : "vi";
       const languages: Record<string, string> = {
-        [locale]: `${baseUrl}${localizePath(`/blogs/${slug}`, locale)}`,
+        [locale]: `${siteUrl}${localizePath(`/blogs/${slug}`, locale)}`,
       };
+
       if (translation) {
-        const other: Locale = locale === "vi" ? "en" : "vi";
-        languages[other] =
-          `${baseUrl}${localizePath(`/blogs/${translation}`, other)}`;
+        languages[otherLocale] = `${siteUrl}${localizePath(
+          `/blogs/${translation}`,
+          otherLocale,
+        )}`;
       }
 
+      const defaultSlug = locale === defaultLocale ? slug : translation;
+      languages["x-default"] = `${siteUrl}${localizePath(
+        `/blogs/${defaultSlug ?? slug}`,
+        defaultSlug ? defaultLocale : locale,
+      )}`;
+
       entries.push({
-        url: `${baseUrl}${localizePath(`/blogs/${slug}`, locale)}`,
+        url: `${siteUrl}${localizePath(`/blogs/${slug}`, locale)}`,
+        lastModified: new Date(post.date as string),
         changeFrequency: "monthly",
         priority: 0.6,
         alternates: { languages },

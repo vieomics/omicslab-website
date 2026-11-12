@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/i18n/site";
 import { fontVariables } from "./fonts";
 import "../styles/index.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "404 - Không tìm thấy trang | Page Not Found",
   description: "Trang bạn tìm kiếm không tồn tại. | The page does not exist.",
+  robots: { index: false, follow: false },
 };
 
 /**
