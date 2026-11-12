@@ -13,5 +13,5 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function AboutPage() {
-  return <AboutView dict={dict} />;
+  return <AboutView dict={dict} locale="vi" />;
 }

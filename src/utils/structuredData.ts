@@ -44,6 +44,7 @@ interface BlogPostingJsonLdInput {
   date: string;
   author: string;
   authorUrl?: string | null;
+  authorSameAs?: (string | null | undefined)[];
 }
 
 export function blogPostingJsonLd({
@@ -55,7 +56,9 @@ export function blogPostingJsonLd({
   date,
   author,
   authorUrl,
+  authorSameAs = [],
 }: BlogPostingJsonLdInput) {
+  const sameAs = authorSameAs.filter((url): url is string => Boolean(url));
   const url = `${siteUrl}${localizePath(`/blogs/${slug}`, locale)}`;
   const imageUrl = image
     ? image.startsWith("http")
@@ -75,11 +78,60 @@ export function blogPostingJsonLd({
     author: {
       "@type": "Person",
       name: author,
-      ...(authorUrl ? { url: authorUrl, sameAs: [authorUrl] } : {}),
+      ...(authorUrl ? { url: authorUrl } : {}),
+      ...(sameAs.length > 0 ? { sameAs } : {}),
     },
     publisher: { "@id": organizationId },
     inLanguage: locale === "vi" ? "vi-VN" : "en-US",
     isPartOf: { "@id": websiteId },
+  };
+}
+
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export function faqJsonLd(items: readonly FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer.replace(/\*\*/g, ""),
+      },
+    })),
+  };
+}
+
+interface ServiceJsonLdInput {
+  locale: Locale;
+  path: string;
+  name: string;
+  description: string;
+  serviceType: string;
+}
+
+export function serviceJsonLd({
+  locale,
+  path,
+  name,
+  description,
+  serviceType,
+}: ServiceJsonLdInput) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name,
+    description,
+    serviceType,
+    url: `${siteUrl}${localizePath(path, locale)}`,
+    provider: { "@id": organizationId },
+    areaServed: { "@type": "Country", name: "Vietnam" },
+    availableLanguage: ["vi", "en"],
   };
 }
 

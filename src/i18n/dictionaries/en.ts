@@ -202,6 +202,13 @@ export const en = {
     noBlogs: "No blogs found.",
     readMore: "Read more",
     recentArticles: "Recent Articles",
+    relatedArticles: "Related articles",
+    browseAllArticles: "Browse all articles",
+    breadcrumb: "Breadcrumb",
+    aboutAuthor: "About the author",
+    googleScholar: "Google Scholar",
+    linkedin: "LinkedIn",
+    github: "GitHub",
     tableOfContents: "Table of Contents",
     copy: "Copy",
     copied: "Copied!",
@@ -415,6 +422,45 @@ export const en = {
   aboutPage: {
     title: "About Us",
     description: "Learn more about Omicslab and our team.",
+    whatWeDo: {
+      subtitle: "What we do",
+      title: "The platform and the services around it",
+      paragraph:
+        "Omicslab combines a bioinformatics platform with the work needed to run it in a real laboratory. An engagement can cover only the platform, only a defined project, or both.",
+      items: [
+        {
+          title: "Platform engineering",
+          paragraph:
+            "We develop and operate the Omicslab Platform: organization and workspace management, data and tool catalogs, job execution and result viewers.",
+        },
+        {
+          title: "Infrastructure integration",
+          paragraph:
+            "We connect existing Slurm HPC clusters, S3-compatible storage and cloud accounts, or work within a self-hosted deployment on infrastructure the customer controls.",
+        },
+        {
+          title: "Professional services",
+          paragraph:
+            "We develop and integrate pipelines, support migration from existing workflows, and provide training or platform-operation support within the agreed scope.",
+        },
+      ],
+    },
+    approach: {
+      subtitle: "How we work",
+      title: "Start from the system you already have",
+      paragraphs: [
+        "Most engagements begin with a short scoping conversation: what the analysis needs to produce, which data and infrastructure are already available, and where the current process breaks down. The deployment model, data boundaries and responsibilities are documented before implementation starts.",
+        "Where an existing cluster, storage system or pipeline can be kept, we integrate with it rather than replacing it. For self-hosted and integrated deployments, the result should be a system the customer can operate and audit in its own environment.",
+      ],
+      links: [
+        { label: "Explore the platform", href: "/solutions/data-platform" },
+        {
+          label: "Explore custom solutions",
+          href: "/solutions/custom-solutions",
+        },
+        { label: "Read the user guide", href: "/guide" },
+      ],
+    },
     team: {
       title: "Meet Our Team",
       members: [
@@ -423,6 +469,36 @@ export const en = {
             "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
+    },
+  },
+  contactPage: {
+    subtitle: "Before you write",
+    title: "A short message with the essentials is enough",
+    paragraph:
+      "We read every message. To reply with something useful, the points below are usually enough; if a detail is missing, we will ask.",
+    items: [
+      {
+        title: "The analysis goal",
+        paragraph:
+          "What the analysis should produce, and the biological or operational question behind it.",
+      },
+      {
+        title: "The data and its constraints",
+        paragraph:
+          "Data type, approximate size, and whether it is public, simulated or subject to a specific access condition.",
+      },
+      {
+        title: "The environment",
+        paragraph:
+          "Whether you already have a cloud account, Slurm cluster or on-premises infrastructure, and which parts you want to keep.",
+      },
+    ],
+    support: {
+      title: "Already using the platform?",
+      paragraph:
+        "The user guide covers organization setup, billing, workspaces and analyses. The support policy describes the support channels and scope.",
+      guideLabel: "Open the user guide",
+      supportLabel: "Read the support policy",
     },
   },
   blogPage: {
@@ -466,6 +542,7 @@ export const en = {
       metadataTitle: "Omicslab Platform",
       metadataDescription:
         "Omicslab - Bioinformatics research platform for data management, HPC, and tool execution.",
+      serviceType: "Managed bioinformatics platform",
       title: "Omicslab Platform",
       subtitle: "Omicslab — a comprehensive bioinformatics research platform",
       intro:
@@ -689,6 +766,7 @@ export const en = {
       metadataTitle: "Custom Solutions",
       metadataDescription:
         "Custom bioinformatics and platform services: HPC built and integrated with the platform, private platform deployments, and pipeline development and integration.",
+      serviceType: "Custom bioinformatics and platform services",
       title: "Custom Solutions",
       subtitle:
         "Custom Omicslab solutions that fit exactly what your specific bioinformatics work requires.",
@@ -738,11 +816,6 @@ export const en = {
       },
     },
   },
-  contactPage: {
-    title: "Contact",
-    description:
-      "Get in touch with Omicslab for bioinformatics services and solutions.",
-  },
   errorPage: {
     title: "404 Page",
     description: "The page you are looking for does not exist.",
@@ -763,22 +836,24 @@ export const en = {
     siteDescription:
       "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     home: {
-      title: "Omicslab",
+      title: "Omicslab — End-to-End Dry-Lab Bioinformatics Platform",
       description:
         "End-to-end dry-lab bioinformatics services. Manage users, data, tools and compute on one platform — migrate your pipelines with minimal effort or pay and run everything.",
     },
     about: {
       title: "About Us",
-      description: "Learn more about Omicslab and our team.",
+      description:
+        "Omicslab is developed by Vieomics in Vietnam: a bioinformatics platform for users, data, tools and compute, plus professional services for custom analysis and infrastructure integration.",
     },
     blog: {
-      title: "Blog",
-      description: "Explore the latest blogs and solutions from Omicslab.",
+      title: "Bioinformatics Blog",
+      description:
+        "Technical guides and notes on bioinformatics pipelines, HPC infrastructure, containers, workflow reproducibility and data analysis.",
     },
     contact: {
       title: "Contact",
       description:
-        "Get in touch with Omicslab for bioinformatics services and solutions.",
+        "Contact Omicslab for platform access, pipeline integration, HPC setup and custom bioinformatics services.",
     },
     guide: {
       title: "User Guide",

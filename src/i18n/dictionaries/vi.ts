@@ -202,6 +202,13 @@ export const vi: Dictionary = {
     noBlogs: "Không tìm thấy bài viết nào.",
     readMore: "Đọc thêm",
     recentArticles: "Bài viết gần đây",
+    relatedArticles: "Bài viết liên quan",
+    browseAllArticles: "Xem tất cả bài viết",
+    breadcrumb: "Đường dẫn",
+    aboutAuthor: "Về tác giả",
+    googleScholar: "Google Scholar",
+    linkedin: "LinkedIn",
+    github: "GitHub",
     tableOfContents: "Mục lục",
     copy: "Sao chép",
     copied: "Đã sao chép!",
@@ -417,6 +424,45 @@ export const vi: Dictionary = {
   aboutPage: {
     title: "Giới thiệu",
     description: "Tìm hiểu thêm về Omicslab và đội ngũ của chúng tôi.",
+    whatWeDo: {
+      subtitle: "Chúng tôi làm gì",
+      title: "Nền tảng và các dịch vụ xung quanh",
+      paragraph:
+        "Omicslab kết hợp một nền tảng tin sinh học với phần công việc cần thiết để vận hành nó trong phòng thí nghiệm thực tế. Phạm vi hợp tác có thể chỉ gồm nền tảng, một dự án cụ thể, hoặc cả hai.",
+      items: [
+        {
+          title: "Phát triển nền tảng",
+          paragraph:
+            "Chúng tôi phát triển và vận hành Nền tảng Omicslab: quản lý tổ chức và workspace, danh mục dữ liệu và công cụ, thực thi tác vụ và trình xem kết quả.",
+        },
+        {
+          title: "Tích hợp hạ tầng",
+          paragraph:
+            "Chúng tôi kết nối cụm HPC Slurm, lưu trữ tương thích S3 và tài khoản cloud sẵn có, hoặc làm việc trong mô hình tự vận hành trên hạ tầng do khách hàng kiểm soát.",
+        },
+        {
+          title: "Dịch vụ chuyên môn",
+          paragraph:
+            "Chúng tôi phát triển và tích hợp quy trình, hỗ trợ chuyển đổi từ workflow hiện có, và cung cấp đào tạo hoặc hỗ trợ vận hành nền tảng trong phạm vi đã thỏa thuận.",
+        },
+      ],
+    },
+    approach: {
+      subtitle: "Cách chúng tôi làm việc",
+      title: "Bắt đầu từ hệ thống bạn đã có",
+      paragraphs: [
+        "Phần lớn công việc bắt đầu bằng một buổi trao đổi ngắn: phân tích cần tạo ra kết quả gì, dữ liệu và hạ tầng nào đã có, và quy trình hiện tại đang tắc ở đâu. Mô hình triển khai, ranh giới dữ liệu và trách nhiệm được ghi rõ trước khi bắt đầu.",
+        "Khi cụm máy, hệ thống lưu trữ hoặc quy trình hiện có vẫn dùng được, chúng tôi tích hợp thay vì thay thế. Với mô hình tự vận hành và tích hợp, kết quả cần là một hệ thống mà khách hàng có thể tự vận hành và kiểm tra trong môi trường của mình.",
+      ],
+      links: [
+        { label: "Tìm hiểu nền tảng", href: "/solutions/data-platform" },
+        {
+          label: "Tìm hiểu giải pháp tùy chỉnh",
+          href: "/solutions/custom-solutions",
+        },
+        { label: "Đọc hướng dẫn sử dụng", href: "/guide" },
+      ],
+    },
     team: {
       title: "Đội ngũ của chúng tôi",
       members: [
@@ -425,6 +471,36 @@ export const vi: Dictionary = {
             "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
         },
       ],
+    },
+  },
+  contactPage: {
+    subtitle: "Trước khi gửi tin nhắn",
+    title: "Một tin nhắn ngắn với các thông tin chính là đủ",
+    paragraph:
+      "Chúng tôi đọc mọi tin nhắn. Để phản hồi hữu ích, các điểm dưới đây thường là đủ; nếu còn thiếu, chúng tôi sẽ hỏi thêm.",
+    items: [
+      {
+        title: "Mục tiêu phân tích",
+        paragraph:
+          "Phân tích cần tạo ra kết quả gì, và câu hỏi sinh học hoặc vận hành phía sau là gì.",
+      },
+      {
+        title: "Dữ liệu và điều kiện",
+        paragraph:
+          "Loại dữ liệu, kích thước ước tính, và dữ liệu là công khai, mô phỏng hay thuộc một điều kiện truy cập cụ thể.",
+      },
+      {
+        title: "Môi trường hiện có",
+        paragraph:
+          "Bạn đã có tài khoản cloud, cụm Slurm hay hạ tầng tại chỗ chưa, và phần nào muốn giữ lại.",
+      },
+    ],
+    support: {
+      title: "Đang dùng nền tảng?",
+      paragraph:
+        "Hướng dẫn sử dụng trình bày thiết lập tổ chức, thanh toán, workspace và phân tích. Chính sách hỗ trợ mô tả kênh và phạm vi hỗ trợ.",
+      guideLabel: "Mở hướng dẫn sử dụng",
+      supportLabel: "Đọc chính sách hỗ trợ",
     },
   },
   blogPage: {
@@ -468,6 +544,7 @@ export const vi: Dictionary = {
       metadataTitle: "Nền tảng Omicslab",
       metadataDescription:
         "Omicslab - Nền tảng nghiên cứu tin sinh học cho quản lý dữ liệu, HPC và thực thi công cụ.",
+      serviceType: "Nền tảng tin sinh học được quản lý",
       title: "Nền tảng Omicslab",
       subtitle: "Omicslab — nền tảng nghiên cứu tin sinh học toàn diện",
       intro:
@@ -691,6 +768,7 @@ export const vi: Dictionary = {
       metadataTitle: "Giải pháp tùy chỉnh",
       metadataDescription:
         "Dịch vụ tin sinh học và nền tảng theo yêu cầu: xây dựng HPC và tích hợp với nền tảng, triển khai nền tảng riêng, phát triển và tích hợp quy trình.",
+      serviceType: "Dịch vụ tin sinh học và nền tảng theo yêu cầu",
       title: "Giải pháp tùy chỉnh",
       subtitle:
         "Giải pháp Omicslab tùy chỉnh đáp ứng chính xác mọi yêu cầu tin sinh học đặc thù.",
@@ -740,11 +818,6 @@ export const vi: Dictionary = {
       },
     },
   },
-  contactPage: {
-    title: "Liên hệ",
-    description:
-      "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
-  },
   errorPage: {
     title: "Trang 404",
     description: "Trang bạn tìm kiếm không tồn tại.",
@@ -765,22 +838,24 @@ export const vi: Dictionary = {
     siteDescription:
       "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     home: {
-      title: "Omicslab",
+      title: "Omicslab — Nền tảng tin sinh học dry-lab toàn diện",
       description:
         "Dịch vụ tin sinh học dry-lab toàn diện. Quản lý người dùng, dữ liệu, công cụ và tính toán trên một nền tảng — di chuyển quy trình với công sức tối thiểu hoặc trả phí để có mọi thứ sẵn sàng.",
     },
     about: {
       title: "Giới thiệu",
-      description: "Tìm hiểu thêm về Omicslab và đội ngũ của chúng tôi.",
+      description:
+        "Omicslab được phát triển bởi Vieomics tại Việt Nam: nền tảng tin sinh học cho người dùng, dữ liệu, công cụ và tính toán, cùng dịch vụ chuyên môn cho phân tích theo yêu cầu và tích hợp hạ tầng.",
     },
     blog: {
-      title: "Blog",
-      description: "Khám phá các bài viết và giải pháp mới nhất từ Omicslab.",
+      title: "Blog tin sinh học",
+      description:
+        "Hướng dẫn kỹ thuật và ghi chép về pipeline tin sinh học, hạ tầng HPC, container, khả năng tái lập quy trình và phân tích dữ liệu.",
     },
     contact: {
       title: "Liên hệ",
       description:
-        "Kết nối với Omicslab để được tư vấn dịch vụ và giải pháp tin sinh học.",
+        "Liên hệ Omicslab để được tư vấn truy cập nền tảng, tích hợp pipeline, thiết lập HPC và dịch vụ tin sinh học theo yêu cầu.",
     },
     guide: {
       title: "Hướng dẫn sử dụng",
