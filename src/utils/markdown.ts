@@ -71,6 +71,14 @@ function resolveImagePath(
   return `/blogs/${locale}/${folderPath}/${relative}`;
 }
 
+function escapeHtmlAttribute(value: string): string {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
 function readPostFile(file: PostFile, locale: Locale) {
   const fullPath = join(localeDirectory(locale), file.folderPath, file.fileName);
   const fileContents = fs.readFileSync(fullPath, "utf8");
@@ -141,10 +149,13 @@ export function getPostBySlug(
 
   function processContent(rawContent: string, folderPath: string) {
     let processed = rawContent.replace(/<!--truncate-->/g, "");
-    processed = processed.replace(/!\[.*?\]\((.*?)\)/g, (match, path) => {
-      const fixedPath = resolveImagePath(locale, folderPath, path);
-      return `<img src="${fixedPath}" alt="" />`;
-    });
+    processed = processed.replace(
+      /!\[(.*?)\]\((.*?)\)/g,
+      (match, alt, path) => {
+        const fixedPath = resolveImagePath(locale, folderPath, path);
+        return `<img src="${fixedPath}" alt="${escapeHtmlAttribute(alt)}" />`;
+      },
+    );
     processed = processed.replace(
       /<figure[^>]*>[\s\S]*?<\/figure>/gi,
       (match) => {

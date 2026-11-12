@@ -460,7 +460,7 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Sử dụng menu điều hướng để truy cập: Nền tảng Omicslab và Giải pháp tùy chỉnh.",
+        "Hai hướng bao quát phần lớn nhu cầu: Nền tảng Omicslab được quản lý, nơi lưu trữ, công cụ và tính toán được vận hành cùng nhau, và Giải pháp tùy chỉnh cho phát triển quy trình, tích hợp hạ tầng và triển khai riêng. Hai hướng có thể kết hợp, và hệ thống hiện có có thể được tích hợp thay vì thay thế.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
