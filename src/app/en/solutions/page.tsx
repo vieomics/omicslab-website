@@ -13,5 +13,5 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function SolutionsPage() {
-  return <SolutionsIndexView dict={dict} />;
+  return <SolutionsIndexView dict={dict} locale="en" />;
 }

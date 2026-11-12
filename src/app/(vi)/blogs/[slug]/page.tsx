@@ -26,7 +26,13 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getPostBySlug("vi", slug, ["title", "metadata"]);
+  const post = getPostBySlug("vi", slug, [
+    "title",
+    "metadata",
+    "date",
+    "author",
+    "coverImage",
+  ]);
 
   if (!post) {
     return {
@@ -42,6 +48,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     slug,
     title: (post.title as string) || slug,
     description: postMeta?.description,
+    image: (post.coverImage as string) || undefined,
+    date: post.date as string,
+    author: post.author as string,
   });
 }
 
@@ -55,6 +64,7 @@ export default async function Post({ params }: Props) {
     "content",
     "coverImage",
     "date",
+    "description",
   ]);
 
   if (!post) {
@@ -85,7 +95,9 @@ export default async function Post({ params }: Props) {
     <BlogPostView
       dict={dict}
       locale="vi"
+      slug={slug}
       title={(post.title as string) || ""}
+      description={(post.description as string) || ""}
       content={content}
       coverImage={
         (post.coverImage as string) || "/images/blog/placeholder.jpg"

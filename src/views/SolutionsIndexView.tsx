@@ -1,7 +1,29 @@
 import { Dictionary } from "@/i18n";
+import { Locale } from "@/i18n/config";
+import { localizePath } from "@/i18n/paths";
+import Link from "next/link";
 
-export default function SolutionsIndexView({ dict }: { dict: Dictionary }) {
+export default function SolutionsIndexView({
+  dict,
+  locale,
+}: {
+  dict: Dictionary;
+  locale: Locale;
+}) {
   const { index } = dict.solutions;
+  const solutions = [
+    {
+      title: dict.solutions.dataPlatform.title,
+      description: dict.solutions.dataPlatform.subtitle,
+      href: "/solutions/data-platform",
+    },
+    {
+      title: dict.solutions.pipelines.title,
+      description: dict.solutions.pipelines.subtitle,
+      href: "/solutions/custom-solutions",
+    },
+  ];
+
   return (
     <div>
       <section className="band-dark pt-36 pb-16 lg:pt-[190px] lg:pb-24">
@@ -21,6 +43,24 @@ export default function SolutionsIndexView({ dict }: { dict: Dictionary }) {
             <p className="text-ink text-base leading-relaxed">
               {index.paragraph}
             </p>
+          </div>
+
+          <div className="border-line bg-line mt-12 grid gap-px border md:grid-cols-2">
+            {solutions.map((solution) => (
+              <Link
+                key={solution.href}
+                href={localizePath(solution.href, locale)}
+                className="group bg-paper-light p-8 transition-colors hover:bg-paper"
+              >
+                <h2 className="display-md text-ink">{solution.title}</h2>
+                <p className="text-muted mt-4 text-sm leading-relaxed">
+                  {solution.description}
+                </p>
+                <span className="micro-label text-ink mt-8 inline-block">
+                  {dict.common.readMore} →
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
