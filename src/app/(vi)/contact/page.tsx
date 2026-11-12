@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 const ContactPage = () => {
-  return <ContactView dict={dict} />;
+  return <ContactView dict={dict} locale="vi" />;
 };
 
 export default ContactPage;

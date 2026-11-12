@@ -1,6 +1,8 @@
 import { getDictionary } from "@/i18n";
+import { getAuthorTitle } from "@/i18n/authors";
 import { blogPostMetadata } from "@/i18n/metadata";
 import { getAuthors } from "@/utils/authors";
+import { selectRelatedPosts } from "@/utils/blogPosts";
 import {
   getAllPosts,
   getPostBySlug,
@@ -65,6 +67,7 @@ export default async function Post({ params }: Props) {
     "coverImage",
     "date",
     "description",
+    "tags",
   ]);
 
   if (!post) {
@@ -78,15 +81,19 @@ export default async function Post({ params }: Props) {
     "coverImage",
     "slug",
     "author",
+    "tags",
   ]);
-
-  const recentPosts = allPosts.map((recent: any) => ({
-    ...recent,
-    authorData: recent.author ? authors[recent.author] || null : null,
-  }));
 
   const authorKey = post.author as string;
   const authorData = authorKey ? (authors as any)[authorKey] : null;
+  const relatedPosts = selectRelatedPosts(
+    allPosts,
+    slug,
+    (post.tags as string[]) || [],
+  ).map((recent: any) => ({
+    ...recent,
+    authorData: recent.author ? authors[recent.author] || null : null,
+  }));
 
   const content = await markdownToHtml((post.content as string) || "");
   const headings = extractHeadings(content);
@@ -108,10 +115,17 @@ export default async function Post({ params }: Props) {
       authorImage={
         (authorData?.image_url as string) || "/images/team/omicslab-team.svg"
       }
+      authorTitle={getAuthorTitle(authorKey, authorData?.title, dict)}
       authorScholar={authorData?.socials?.scholar || null}
+      authorLinkedin={authorData?.socials?.linkedin || null}
+      authorGithub={
+        authorData?.socials?.github
+          ? `https://github.com/${authorData.socials.github}`
+          : null
+      }
       date={(post.date as string) || new Date().toISOString()}
       headings={headings}
-      recentPosts={recentPosts}
+      relatedPosts={relatedPosts}
       translationSlug={getPostTranslation("en", slug)}
     />
   );
