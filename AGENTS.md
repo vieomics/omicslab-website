@@ -50,6 +50,8 @@ npm run lint       # ESLint
 4. `src/utils/markdownToHtml.ts` unified pipeline: remark-parse → remark-gfm → remark-directive → remark-rehype → rehype-slug → rehype-highlight → rehype-stringify
 5. `generateStaticParams()` in `(vi)/blogs/[slug]/page.tsx` and `en/blogs/[slug]/page.tsx` prerenders all slugs per locale
 6. BlogList.tsx fetches the locale's search index client-side, runs Fuse.js in browser
+7. Optional frontmatter beyond `slug/title/description/authors/tags/image`: `updated` (date of the last substantive edit → `dateModified` and `og:article:modified_time`) and `citations` (list of source URLs, e.g. a paper DOI → schema.org `citation`). Tags feed `keywords` and `articleSection` in the BlogPosting JSON-LD
+8. Cover images are referenced by `image:`; prefer a PNG for the social preview (`og:image`) since most platforms do not render SVG. Keep the SVG next to it as the editable source
 
 ### Content writing style (blogs, tutorials, guides)
 - Every post, tutorial or guide is written in **scientific style with a humble voice**: neutral, evidence-based, precise — the standard of a methods or review section, not of a marketing blog.

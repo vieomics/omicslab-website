@@ -32,7 +32,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     "title",
     "metadata",
     "date",
+    "updated",
     "author",
+    "tags",
     "coverImage",
   ]);
 
@@ -52,6 +54,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: postMeta?.description,
     image: (post.coverImage as string) || undefined,
     date: post.date as string,
+    updated: post.updated as string | undefined,
+    tags: (post.tags as string[]) || [],
     author: post.author as string,
   });
 }
@@ -66,8 +70,10 @@ export default async function Post({ params }: Props) {
     "content",
     "coverImage",
     "date",
+    "updated",
     "description",
     "tags",
+    "citations",
   ]);
 
   if (!post) {
@@ -124,6 +130,9 @@ export default async function Post({ params }: Props) {
           : null
       }
       date={(post.date as string) || new Date().toISOString()}
+      updated={(post.updated as string) || undefined}
+      tags={(post.tags as string[]) || []}
+      citations={(post.citations as string[]) || []}
       headings={headings}
       relatedPosts={relatedPosts}
       translationSlug={getPostTranslation("en", slug)}
