@@ -19,7 +19,10 @@ interface BlogMetadataOptions {
   description?: string;
   image?: string;
   date?: string;
+  /** Last substantive edit; falls back to the publication date. */
+  updated?: string;
   author?: string;
+  tags?: string[];
 }
 
 function absoluteUrl(path: string): string {
@@ -66,7 +69,9 @@ export function blogPostMetadata({
   description,
   image,
   date,
+  updated,
   author,
+  tags = [],
 }: BlogMetadataOptions): Metadata {
   const otherLocale: Locale = locale === "vi" ? "en" : "vi";
   const translation = getPostTranslation(locale, slug);
@@ -96,6 +101,7 @@ export function blogPostMetadata({
   return {
     title,
     description,
+    ...(tags.length > 0 ? { keywords: tags } : {}),
     alternates: {
       canonical,
       languages,
@@ -109,7 +115,10 @@ export function blogPostMetadata({
       locale: locale === "vi" ? "vi_VN" : "en_US",
       alternateLocale: locale === "vi" ? ["en_US"] : ["vi_VN"],
       publishedTime: date,
+      modifiedTime: updated || date,
       authors: author ? [author] : undefined,
+      section: tags[0],
+      tags,
       images: image ? [{ url: image, alt: title }] : undefined,
     },
     twitter: {
