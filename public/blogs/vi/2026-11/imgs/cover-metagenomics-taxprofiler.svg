@@ -1,0 +1,67 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Shotgun metagenomics: many microbes in one stool sample, sequenced as short reads and classified into taxa">
+<rect width="1920" height="600" fill="#fafafa"/>
+<line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+<line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+<line x1="1092" y1="0" x2="1092" y2="600" stroke="#e3e3e3"/>
+<text x="120" y="132" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6.5" fill="#6c6c6c">SHOTGUN METAGENOMICS · NF-CORE/TAXPROFILER</text>
+<rect x="120" y="162" width="120" height="6" fill="#111111"/>
+<text x="120" y="300" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="146" font-weight="700" fill="#111111">6 samples</text>
+<text x="120" y="392" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="84" font-weight="700" fill="#111111">80 minutes</text>
+<text x="122" y="466" font-family="Inter, Arial, sans-serif" font-size="26" fill="#333333">73.6 million read pairs · 3 children · 3 adults</text>
+<text x="122" y="508" font-family="Inter, Arial, sans-serif" font-size="26" fill="#333333">ENA PRJEB22032 · one manifest to replay</text>
+<text x="122" y="556" font-family="Inter, Arial, sans-serif" font-size="17" letter-spacing="4" fill="#6c6c6c">SAMPLESHEET IN · 76 TASKS · RESULTS OUT</text>
+<text x="1690" y="196" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="5" fill="#6c6c6c">SHORT READS</text>
+<text x="1352" y="578" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="4" fill="#6c6c6c">ONE SAMPLE · MANY GENOMES</text>
+<circle cx="1352" cy="330" r="206" fill="#ffffff" stroke="#c6c6c6" stroke-width="2"/>
+<circle cx="1352" cy="330" r="188" fill="none" stroke="#eeeeee" stroke-width="1"/>
+<rect x="-14.9" y="-5.0" width="29.7" height="10.0" rx="5.0" fill="#111111" transform="translate(1295 179) rotate(112)"/>
+<circle cx="1394" cy="173" r="8.3" fill="#7fa9d4"/>
+<rect x="-15.0" y="-6.5" width="29.9" height="12.9" rx="6.5" fill="#7fa9d4" transform="translate(1224 222) rotate(103)"/>
+<rect x="-14.1" y="-6.2" width="28.3" height="12.4" rx="6.2" fill="#7fa9d4" transform="translate(1271 219) rotate(96)"/>
+<circle cx="1319" cy="224" r="8.2" fill="#111111"/>
+<circle cx="1364" cy="225" r="12.5" fill="#7fa9d4"/>
+<circle cx="1418" cy="230" r="8.5" fill="#111111"/>
+<circle cx="1471" cy="227" r="8.7" fill="#111111"/>
+<rect x="-13.4" y="-5.6" width="26.8" height="11.2" rx="5.6" fill="#7fa9d4" transform="translate(1197 262) rotate(4)"/>
+<rect x="-15.4" y="-6.5" width="30.8" height="12.9" rx="6.5" fill="#7fa9d4" transform="translate(1298 274) rotate(68)"/>
+<rect x="-16.2" y="-5.4" width="32.4" height="10.9" rx="5.4" fill="#111111" transform="translate(1340 262) rotate(16)"/>
+<rect x="-14.8" y="-5.6" width="29.5" height="11.3" rx="5.6" fill="#b3b3b3" transform="translate(1395 270) rotate(162)"/>
+<rect x="-17.8" y="-5.6" width="35.6" height="11.2" rx="5.6" fill="#111111" transform="translate(1443 266) rotate(125)"/>
+<circle cx="1499" cy="270" r="9.5" fill="#7fa9d4"/>
+<circle cx="1222" cy="314" r="11.2" fill="#7fa9d4"/>
+<circle cx="1265" cy="313" r="11.3" fill="#111111"/>
+<rect x="-18.6" y="-6.5" width="37.2" height="13.0" rx="6.5" fill="#b3b3b3" transform="translate(1315 315) rotate(49)"/>
+<circle cx="1420" cy="311" r="10.2" fill="#111111"/>
+<rect x="-19.9" y="-6.1" width="39.9" height="12.2" rx="6.1" fill="#7fa9d4" transform="translate(1466 306) rotate(32)"/>
+<rect x="-17.7" y="-5.9" width="35.4" height="11.8" rx="5.9" fill="#7fa9d4" transform="translate(1240 350) rotate(52)"/>
+<circle cx="1291" cy="354" r="8.2" fill="#7fa9d4"/>
+<circle cx="1349" cy="358" r="11.5" fill="#7fa9d4"/>
+<circle cx="1439" cy="354" r="11.8" fill="#111111"/>
+<circle cx="1487" cy="350" r="12.9" fill="#111111"/>
+<circle cx="1219" cy="394" r="10.8" fill="#7fa9d4"/>
+<circle cx="1269" cy="404" r="11.4" fill="#b3b3b3"/>
+<rect x="-19.5" y="-5.4" width="39.1" height="10.9" rx="5.4" fill="#b3b3b3" transform="translate(1423 396) rotate(161)"/>
+<rect x="-17.1" y="-5.5" width="34.3" height="11.0" rx="5.5" fill="#111111" transform="translate(1464 404) rotate(24)"/>
+<circle cx="1240" cy="443" r="10.9" fill="#b3b3b3"/>
+<rect x="-19.5" y="-5.5" width="39.0" height="10.9" rx="5.5" fill="#111111" transform="translate(1300 446) rotate(160)"/>
+<rect x="-15.2" y="-6.4" width="30.3" height="12.8" rx="6.4" fill="#7fa9d4" transform="translate(1351 451) rotate(88)"/>
+<circle cx="1392" cy="440" r="10.0" fill="#111111"/>
+<rect x="-15.9" y="-5.4" width="31.8" height="10.7" rx="5.4" fill="#111111" transform="translate(1438 441) rotate(57)"/>
+<circle cx="1318" cy="490" r="10.2" fill="#b3b3b3"/>
+<circle cx="1416" cy="481" r="8.2" fill="#7fa9d4"/>
+<rect x="1614" y="239" width="140" height="14" rx="7.0" fill="#7fa9d4"/>
+<rect x="1622" y="260" width="84" height="14" rx="7.0" fill="#111111"/>
+<rect x="1616" y="281" width="176" height="14" rx="7.0" fill="#b3b3b3"/>
+<rect x="1624" y="302" width="104" height="14" rx="7.0" fill="#111111"/>
+<rect x="1615" y="323" width="150" height="14" rx="7.0" fill="#7fa9d4"/>
+<rect x="1621" y="344" width="66" height="14" rx="7.0" fill="#b3b3b3"/>
+<rect x="1614" y="365" width="128" height="14" rx="7.0" fill="#111111"/>
+<rect x="1623" y="386" width="94" height="14" rx="7.0" fill="#7fa9d4"/>
+<rect x="1618" y="407" width="158" height="14" rx="7.0" fill="#b3b3b3"/>
+<path d="M1566 272 Q1592 259.0 1606 262" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+<path d="M1598 258 L1608 262 L1598 266" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+<path d="M1566 330 Q1592 322.0 1606 330" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+<path d="M1598 326 L1608 330 L1598 334" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+<path d="M1566 388 Q1592 385.0 1606 398" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+<path d="M1598 394 L1608 398 L1598 402" stroke="#c6c6c6" stroke-width="1.5" fill="none"/>
+</svg>
