@@ -42,9 +42,15 @@ interface BlogPostingJsonLdInput {
   description?: string;
   image?: string;
   date: string;
+  /** Last substantive edit; falls back to the publication date. */
+  updated?: string;
   author: string;
   authorUrl?: string | null;
   authorSameAs?: (string | null | undefined)[];
+  /** Post tags, used as schema.org keywords and to derive the section. */
+  tags?: string[];
+  /** Source works the article builds on, e.g. a paper DOI. */
+  citations?: string[];
 }
 
 export function blogPostingJsonLd({
@@ -54,9 +60,12 @@ export function blogPostingJsonLd({
   description,
   image,
   date,
+  updated,
   author,
   authorUrl,
   authorSameAs = [],
+  tags = [],
+  citations = [],
 }: BlogPostingJsonLdInput) {
   const sameAs = authorSameAs.filter((url): url is string => Boolean(url));
   const url = `${siteUrl}${localizePath(`/blogs/${slug}`, locale)}`;
@@ -74,7 +83,7 @@ export function blogPostingJsonLd({
     description,
     image: imageUrl ? [imageUrl] : undefined,
     datePublished: date,
-    dateModified: date,
+    dateModified: updated || date,
     author: {
       "@type": "Person",
       name: author,
@@ -84,6 +93,13 @@ export function blogPostingJsonLd({
     publisher: { "@id": organizationId },
     inLanguage: locale === "vi" ? "vi-VN" : "en-US",
     isPartOf: { "@id": websiteId },
+    ...(tags.length > 0
+      ? {
+          keywords: tags.join(", "),
+          articleSection: tags[0],
+        }
+      : {}),
+    ...(citations.length > 0 ? { citation: citations } : {}),
   };
 }
 
