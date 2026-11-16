@@ -31,6 +31,9 @@ interface BlogPostViewProps {
   authorLinkedin?: string | null;
   authorGithub?: string | null;
   date: string;
+  updated?: string;
+  tags?: string[];
+  citations?: string[];
   headings: TocItem[];
   relatedPosts: Blog[];
   translationSlug: string | null;
@@ -51,6 +54,9 @@ export default function BlogPostView({
   authorLinkedin,
   authorGithub,
   date,
+  updated,
+  tags = [],
+  citations = [],
   headings,
   relatedPosts,
   translationSlug,
@@ -63,6 +69,9 @@ export default function BlogPostView({
     description,
     image: coverImage,
     date,
+    updated,
+    tags,
+    citations,
     author,
     authorUrl: authorLinkedin || authorScholar || authorGithub,
     authorSameAs: [authorScholar, authorLinkedin, authorGithub],
