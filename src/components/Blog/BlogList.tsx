@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef } from "react";
 import { Blog } from "@/types/blog";
 import { Dictionary } from "@/i18n";
 import { Locale } from "@/i18n/config";
@@ -28,6 +28,26 @@ const BlogList = ({ posts, allTags, dict, locale }: BlogListProps) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [fuse, setFuse] = useState<Fuse<SearchIndexItem> | null>(null);
+  const appliedUrlTags = useRef(false);
+
+  // Deep links such as /blogs?tag=nf-core open the list already filtered. The
+  // site is a static export, so the query string can only be read in the
+  // browser; values that are not a known tag are ignored instead of leaving
+  // the page with an empty list.
+  useEffect(() => {
+    if (appliedUrlTags.current) return;
+    appliedUrlTags.current = true;
+
+    const requested = new URLSearchParams(window.location.search)
+      .get("tag")
+      ?.trim();
+    if (!requested) return;
+
+    const match = allTags.find(
+      (tag) => tag.toLowerCase() === requested.toLowerCase(),
+    );
+    if (match) setSelectedTag(match);
+  }, [allTags]);
 
   useEffect(() => {
     fetch(`/search-index.${locale}.json`)
