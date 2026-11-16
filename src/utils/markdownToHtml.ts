@@ -56,6 +56,47 @@ function rehypeWrapTables() {
   };
 }
 
+/**
+ * `remark-directive` also parses *text* directives (`:name`), which ordinary
+ * prose hits constantly: "doi:10.1093/…", "20:257", "CPU: cho cụm". Those
+ * nodes have no handler, so they serialise as an empty `<div>` and drop the
+ * characters they captured. This site only uses container directives
+ * (`:::note`), so turn every text directive back into the literal text that
+ * was written.
+ */
+function remarkRestoreTextDirectives() {
+  return (tree: any) => {
+    const walk = (node: any) => {
+      if (!node || !Array.isArray(node.children)) return;
+
+      for (let index = 0; index < node.children.length; index += 1) {
+        const child = node.children[index];
+
+        if (child?.type === "textDirective") {
+          const replacement: any[] = [
+            { type: "text", value: `:${child.name ?? ""}` },
+          ];
+
+          if (Array.isArray(child.children) && child.children.length > 0) {
+            replacement.push(
+              { type: "text", value: "[" },
+              ...child.children,
+              { type: "text", value: "]" },
+            );
+          }
+
+          node.children.splice(index, 1, ...replacement);
+          index += replacement.length - 1;
+        } else {
+          walk(child);
+        }
+      }
+    };
+
+    walk(tree);
+  };
+}
+
 const admonitionConfig: Record<string, { label: string; border: string }> = {
   tip: { label: "Tip", border: "#111111" },
   note: { label: "Note", border: "#6c6c6c" },
@@ -94,6 +135,7 @@ const processor = (unified() as any)
   .use(remarkParse, { allowHTML: true })
   .use(remarkGfm)
   .use(remarkDirective)
+  .use(remarkRestoreTextDirectives)
   .use(() => (tree: any) => {
     visit(tree, (node: any) => {
       if (node.type === "containerDirective" || node.type === "leafDirective") {
