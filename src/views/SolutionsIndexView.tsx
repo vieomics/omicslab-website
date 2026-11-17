@@ -27,6 +27,16 @@ export default function SolutionsIndexView({
       description: dict.solutions.metagenomics.subtitle,
       href: "/solutions/metagenomics",
     },
+    {
+      title: dict.solutions.methylation.title,
+      description: dict.solutions.methylation.subtitle,
+      href: "/solutions/methylation",
+    },
+    {
+      title: dict.solutions.variants.title,
+      description: dict.solutions.variants.subtitle,
+      href: "/solutions/variants",
+    },
   ];
 
   return (

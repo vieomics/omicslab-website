@@ -172,7 +172,9 @@ export const vi: Dictionary = {
     solutions: "Giải pháp",
     dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Giải pháp tùy chỉnh",
-    metagenomics: "Phân tích vi sinh vật (Metagenomics)",
+    metagenomics: "Metagenomics",
+    methylation: "DNA methylation",
+    variants: "WGS, WES, Cohort variants",
     blog: "Blog",
     docs: "Tài liệu",
     mobileMenu: "Menu di động",
@@ -537,7 +539,7 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Ba hướng bao quát phần lớn nhu cầu: Nền tảng Omicslab được quản lý, Phân tích vi sinh vật (Metagenomics) cho shotgun, amplicon, virus và MAG, và Giải pháp tùy chỉnh cho phát triển quy trình, tích hợp hạ tầng và triển khai riêng. Ba hướng có thể kết hợp, và hệ thống hiện có có thể được tích hợp thay vì thay thế.",
+        "Năm hướng bao quát phần lớn nhu cầu: Nền tảng Omicslab được quản lý, Phân tích vi sinh vật (Metagenomics), Phân tích Methyl hóa DNA, Phân tích biến thể (WGS, WES, Cohort variants), và Giải pháp tùy chỉnh cho phát triển quy trình, tích hợp hạ tầng và triển khai riêng. Năm hướng có thể kết hợp, và hệ thống hiện có có thể được tích hợp thay vì thay thế.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
     },
@@ -572,6 +574,77 @@ export const vi: Dictionary = {
         primaryHref: "https://platform.omicslab.io",
         secondaryLabel: "Đọc hướng dẫn nf-core",
         secondaryHref: "/blogs/how-to-run-nf-core-pipelines-on-omicslab",
+      },
+    },
+    methylation: {
+      metadataTitle: "Phân tích Methyl hóa DNA (DNA methylation)",
+      metadataDescription:
+        "Phân tích methyl hóa DNA từ dữ liệu bisulfite/WGBS với nf-core/methylseq: align, gọi methylation theo từng cytosine, DMR và so sánh nhóm trên nền tảng Omicslab. Chỉ dùng cho mục đích nghiên cứu.",
+      serviceType: "Phân tích methyl hóa DNA trên nền tảng Omicslab",
+      researchOnly: {
+        label: "Chỉ dùng cho mục đích nghiên cứu",
+        text: "Các phân tích này chỉ dành cho mục đích nghiên cứu. Chúng chưa được xác nhận để chẩn đoán, chọn phác đồ điều trị hoặc quản lý bệnh nhân.",
+      },
+      title: "Phân tích Methyl hóa DNA (DNA methylation)",
+      subtitle:
+        "Từ read bisulfite/WGBS đến mức methyl hóa theo từng cytosine, vùng gen và mẫu — trên một nền tảng tái lập.",
+      intro:
+        "Methyl hóa DNA là thông tin không nằm trong trình tự base. Bisulfite sequencing (WGBS hoặc RRBS) chuyển cytosine không methyl thành uracil, nên việc align và gọi methylation cần tham chiếu đã chuyển đổi và kiểm tra chất lượng thư viện cẩn thận. Omicslab giữ read, tham chiếu, kết quả methylation và manifest của từng lượt chạy trong cùng một dự án, để có thể so sánh mẫu và nhóm mà không phải dựng lại môi trường.",
+      blog: {
+        title: "Hướng dẫn và ví dụ",
+        subtitle:
+          "Pipeline methyl hóa, dữ liệu cohort và cách chạy trên nền tảng.",
+        slugs: [
+          "short-read-methylation-pipeline",
+          "data-curation-harmonization-geo-cohorts",
+          "how-to-run-nf-core-pipelines-on-omicslab",
+        ],
+      },
+      cta: {
+        title: "Bắt đầu với dữ liệu methyl hóa của bạn",
+        paragraph:
+          "Đưa một lượt chạy bisulfite nhỏ vào, kiểm tra conversion và coverage, rồi mở rộng cùng cấu hình cho một cohort.",
+        primaryLabel: "Mở nền tảng",
+        primaryHref: "https://platform.omicslab.io",
+        secondaryLabel: "Đọc hướng dẫn methyl hóa",
+        secondaryHref: "/blogs/short-read-methylation-pipeline",
+      },
+    },
+    variants: {
+      metadataTitle: "Phân tích biến thể (WGS, WES, Cohort variants)",
+      metadataDescription:
+        "Phân tích biến thể từ WGS/WES trên nền tảng Omicslab: gọi germline và somatic, gVCF và joint calling, lọc, chú giải, QC và so sánh cohort. Chỉ dùng cho mục đích nghiên cứu.",
+      serviceType: "Phân tích biến thể trên nền tảng Omicslab",
+      researchOnly: {
+        label: "Chỉ dùng cho mục đích nghiên cứu",
+        text: "Các phân tích này chỉ dành cho mục đích nghiên cứu. Chúng chưa được xác nhận để chẩn đoán, chọn phác đồ điều trị hoặc quản lý bệnh nhân.",
+      },
+      title: "Phân tích biến thể (WGS, WES, Cohort variants)",
+      subtitle:
+        "Từ read thô đến biến thể germline/somatic, gVCF và so sánh cohort — với quy trình có thể tái lập.",
+      intro:
+        "Phân tích biến thể là một chuỗi quyết định: align, gọi biến thể, lọc, chú giải và QC. Với WGS và WES, kết quả phụ thuộc vào độ phủ, thiết kế mẫu (germline, tumour-normal, tumour-only) và cách xử lý vùng lặp. Ở quy mô cohort, gVCF và joint calling giữ cách biểu diễn nhất quán giữa các mẫu. Omicslab giữ read, tham chiếu, VCF/gVCF và manifest của từng lượt chạy trong cùng một dự án.",
+      blog: {
+        title: "Phân tích mẫu từ dữ liệu thực tế",
+        subtitle:
+          "Các ví dụ trên dữ liệu công khai và dữ liệu benchmark, kèm hướng dẫn cho từng phân tích.",
+        slugs: [
+          "short-read-germline-variant-calling-pipeline",
+          "short-read-somatic-variant-calling-pipeline",
+          "gvcf-population-scale-genotyping",
+          "giab-pilot-study-benchmark-development",
+          "structural-variant-calling-short-reads-challenges",
+          "gatk-variant-calling-bash-workflow-pixi-part1",
+        ],
+      },
+      cta: {
+        title: "Bắt đầu với dữ liệu biến thể của bạn",
+        paragraph:
+          "Đưa một lượt chạy WGS hoặc WES nhỏ vào, kiểm tra độ phủ và callability, rồi mở rộng cùng cấu hình cho một cohort.",
+        primaryLabel: "Mở nền tảng",
+        primaryHref: "https://platform.omicslab.io",
+        secondaryLabel: "Đọc hướng dẫn germline",
+        secondaryHref: "/blogs/short-read-germline-variant-calling-pipeline",
       },
     },
     dataPlatform: {

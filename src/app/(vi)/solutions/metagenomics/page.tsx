@@ -3,7 +3,7 @@ import { getDictionary } from "@/i18n";
 import { pageMetadata } from "@/i18n/metadata";
 import { getAllPosts } from "@/utils/markdown";
 import { serviceJsonLd } from "@/utils/structuredData";
-import MetagenomicsView from "@/views/MetagenomicsView";
+import SolutionExamplesView from "@/views/SolutionExamplesView";
 import type { Metadata } from "next";
 
 const dict = getDictionary("vi");
@@ -37,7 +37,7 @@ export default function MetagenomicsPage() {
           serviceType: dict.solutions.metagenomics.serviceType,
         })}
       />
-      <MetagenomicsView dict={dict} locale="vi" posts={posts} />
+      <SolutionExamplesView content={dict.solutions.metagenomics} dict={dict} locale="vi" posts={posts} />
     </>
   );
 }
