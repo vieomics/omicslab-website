@@ -549,145 +549,10 @@ export const en = {
         "From raw reads to community composition, functional potential and microbial genomes — on a reproducible platform.",
       intro:
         "Metagenomics asks which organisms are present, what genes they carry and how the community changes. Omicslab gives you a place to run the standard pipelines, keep raw and processed data together, and retain the parameters and versions behind each result. The same project can hold isolate genomes, amplicon runs and shotgun runs, so results can be compared without moving files between systems.",
-      platform: {
-        title: "What the platform provides",
-        subtitle:
-          "The analysis layer is only useful if the data, tools and records stay together. These are the pieces Omicslab brings into one project.",
-        items: [
-          {
-            title: "Data and storage",
-            paragraph:
-              "S3-compatible object storage for raw reads, assemblies, reference databases and results. Data is organised by project and workspace, with role-based access.",
-          },
-          {
-            title: "Tools and pipelines",
-            paragraph:
-              "nf-core pipelines and custom workflows run as analysis jobs. Containers and versions are pinned, so the same inputs and parameters can be replayed later.",
-          },
-          {
-            title: "Compute",
-            paragraph:
-              "Cloud or Slurm-backed compute, sized per job. Long assemblies and many-sample screens can be queued without maintaining a local cluster.",
-          },
-          {
-            title: "Reproducibility",
-            paragraph:
-              "Each run keeps its parameters, tool versions, logs and output manifest. A result is tied to the configuration that produced it.",
-          },
-          {
-            title: "Collaboration",
-            paragraph:
-              "Administrators, contributors and viewers work in the same workspace. Results can be shared without copying the underlying data.",
-          },
-          {
-            title: "Custom analysis",
-            paragraph:
-              "Studio provides a terminal, notebooks and project code when a standard pipeline is not enough — a new database, a different binning strategy or a downstream figure.",
-          },
-        ],
-      },
-      analyses: {
-        title: "Common microbial analyses",
-        subtitle:
-          "These are the questions most projects start with. Each entry names the nf-core pipeline that implements it and the kind of output it produces.",
-        items: [
-          {
-            name: "Shotgun taxonomic profiling",
-            pipeline: "nf-core/taxprofiler",
-            question:
-              "Which taxa are present in a shotgun sample, and in what proportion?",
-            output:
-              "Taxonomic profiles from one or more databases, diversity estimates, Krona plots and a MultiQC report.",
-            blogSlug: "shotgun-metagenomics-taxprofiler",
-            blogLabel: "Read the stool metagenomics guide",
-          },
-          {
-            name: "Bacterial genome assembly and AMR",
-            pipeline: "nf-core/bacass",
-            question:
-              "What does an isolate genome look like, and which resistance genes does it carry?",
-            output:
-              "Assembly, annotation, AMR gene calls, QC and a comparison-ready genome.",
-            blogSlug: "bacterial-genome-assembly-without-coding",
-            blogLabel: "Read the bacterial assembly guide",
-          },
-          {
-            name: "Viral genome analysis",
-            pipeline: "nf-core/viralrecon",
-            question:
-              "What consensus, variants and lineage does a viral sample support?",
-            output:
-              "Consensus sequence, variant calls, lineage/clade assignment and coverage/QC reports.",
-            blogSlug: "hbv-ngs-analysis-guide",
-            blogLabel: "Read the HBV NGS guide",
-          },
-          {
-            name: "Amplicon and 16S/ITS profiling",
-            pipeline: "nf-core/ampliseq",
-            question:
-              "What is the community composition in an amplicon library?",
-            output:
-              "ASVs, taxonomic assignment, alpha/beta diversity and differential abundance.",
-            blogSlug: "",
-            blogLabel: "",
-          },
-          {
-            name: "Functional profiling",
-            pipeline: "nf-core/funcscan",
-            question:
-              "Which antimicrobial-resistance genes, biosynthetic gene clusters, antimicrobial peptides or CRISPR systems are encoded in the community?",
-            output:
-              "Annotated hits for ARGs, BGCs, AMPs and CRISPR arrays, with summaries for follow-up.",
-            blogSlug: "",
-            blogLabel: "",
-          },
-          {
-            name: "Metagenome-assembled genomes",
-            pipeline: "nf-core/mag",
-            question:
-              "Which microbial genomes can be reconstructed from a shotgun community?",
-            output:
-              "MAGs with completeness/contamination estimates, taxonomy and QC.",
-            blogSlug: "",
-            blogLabel: "",
-          },
-        ],
-      },
-      workflow: {
-        title: "How a run works",
-        subtitle:
-          "The path is the same for one sample and a cohort; only the samplesheet and the resources change.",
-        steps: [
-          {
-            title: "1. Bring the data in",
-            paragraph:
-              "Upload reads or connect an existing bucket. A samplesheet links each sample to its files and metadata.",
-          },
-          {
-            title: "2. Choose the analysis",
-            paragraph:
-              "Pick a pipeline and a reference database. Shared parameters stay in the project so the next run starts from the same configuration.",
-          },
-          {
-            title: "3. Run and monitor",
-            paragraph:
-              "The job runs on the selected compute. Logs, resource use and QC are visible while it runs, so a failed step can be diagnosed early.",
-          },
-          {
-            title: "4. Inspect and share",
-            paragraph:
-              "Results stay in the workspace: tables, MultiQC, trees, assemblies and figures. Reviewers can be given access without copying the data.",
-          },
-          {
-            title: "5. Keep the record",
-            paragraph:
-              "The run manifest keeps versions, parameters and checksums. That is the difference between a result and a result that can be reproduced.",
-          },
-        ],
-      },
       blog: {
-        title: "From the blog",
-        subtitle: "Worked examples and guides that go with these analyses.",
+        title: "Sample analyses from real data",
+        subtitle:
+          "Worked examples on public data, with the guide for each analysis and how to read the results.",
         slugs: [
           "shotgun-metagenomics-taxprofiler",
           "hbv-ngs-analysis-guide",
@@ -700,7 +565,7 @@ export const en = {
       cta: {
         title: "Start with your own data",
         paragraph:
-          "The platform is ready for a first project: bring a small run, compare it with the public examples, then scale the same configuration to a cohort.",
+          "The platform is ready for a first project: bring a small run, compare it with the public examples, then run your own cohort.",
         primaryLabel: "Open the platform",
         primaryHref: "https://platform.omicslab.io",
         secondaryLabel: "Read the nf-core guide",
