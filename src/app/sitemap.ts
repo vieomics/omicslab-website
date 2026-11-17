@@ -30,6 +30,7 @@ const staticPaths = [
   "/solutions",
   "/solutions/data-platform",
   "/solutions/custom-solutions",
+  "/solutions/metagenomics",
 ];
 
 function staticAlternates(path: string): Record<string, string> {
