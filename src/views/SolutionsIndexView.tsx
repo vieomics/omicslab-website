@@ -22,6 +22,21 @@ export default function SolutionsIndexView({
       description: dict.solutions.pipelines.subtitle,
       href: "/solutions/custom-solutions",
     },
+    {
+      title: dict.solutions.metagenomics.title,
+      description: dict.solutions.metagenomics.subtitle,
+      href: "/solutions/metagenomics",
+    },
+    {
+      title: dict.solutions.methylation.title,
+      description: dict.solutions.methylation.subtitle,
+      href: "/solutions/methylation",
+    },
+    {
+      title: dict.solutions.variants.title,
+      description: dict.solutions.variants.subtitle,
+      href: "/solutions/variants",
+    },
   ];
 
   return (
@@ -45,7 +60,7 @@ export default function SolutionsIndexView({
             </p>
           </div>
 
-          <div className="border-line bg-line mt-12 grid gap-px border md:grid-cols-2">
+          <div className="border-line bg-line mt-12 grid gap-px border md:grid-cols-2 lg:grid-cols-3">
             {solutions.map((solution) => (
               <Link
                 key={solution.href}
