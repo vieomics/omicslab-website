@@ -59,6 +59,12 @@ export default function getMenuData(dict: Dictionary): Menu[] {
           path: "/solutions/custom-solutions",
           newTab: false,
         },
+        {
+          id: 64,
+          title: dict.nav.metagenomics,
+          path: "/solutions/metagenomics",
+          newTab: false,
+        },
       ],
     },
     {

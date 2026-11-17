@@ -172,6 +172,7 @@ export const vi: Dictionary = {
     solutions: "Giải pháp",
     dataPlatform: "Nền tảng Omicslab",
     pipelinesSoftwares: "Giải pháp tùy chỉnh",
+    metagenomics: "Phân tích vi sinh vật (Metagenomics)",
     blog: "Blog",
     docs: "Tài liệu",
     mobileMenu: "Menu di động",
@@ -536,9 +537,177 @@ export const vi: Dictionary = {
       title: "Giải pháp",
       subtitle: "Giải pháp tin sinh học cho nghiên cứu đa omics",
       paragraph:
-        "Hai hướng bao quát phần lớn nhu cầu: Nền tảng Omicslab được quản lý, nơi lưu trữ, công cụ và tính toán được vận hành cùng nhau, và Giải pháp tùy chỉnh cho phát triển quy trình, tích hợp hạ tầng và triển khai riêng. Hai hướng có thể kết hợp, và hệ thống hiện có có thể được tích hợp thay vì thay thế.",
+        "Ba hướng bao quát phần lớn nhu cầu: Nền tảng Omicslab được quản lý, Phân tích vi sinh vật (Metagenomics) cho shotgun, amplicon, virus và MAG, và Giải pháp tùy chỉnh cho phát triển quy trình, tích hợp hạ tầng và triển khai riêng. Ba hướng có thể kết hợp, và hệ thống hiện có có thể được tích hợp thay vì thay thế.",
       metadataDescription:
         "Giải pháp tin sinh học cho phân tích đa omics, quản lý dữ liệu và thực thi quy trình.",
+    },
+    metagenomics: {
+      metadataTitle: "Phân tích vi sinh vật (Metagenomics)",
+      metadataDescription:
+        "Phân tích vi sinh vật trên nền tảng Omicslab: shotgun metagenomics, amplicon 16S/ITS, lắp ráp hệ gen vi khuẩn, hệ gen virus, phân tích chức năng và MAG với nf-core/taxprofiler, bacass, viralrecon, ampliseq, funcscan và mag.",
+      serviceType: "Phân tích vi sinh vật trên nền tảng Omicslab",
+      title: "Phân tích vi sinh vật (Metagenomics)",
+      subtitle:
+        "Từ read thô đến thành phần cộng đồng, tiềm năng chức năng và hệ gen vi sinh vật — trên một nền tảng tái lập.",
+      intro:
+        "Metagenomics trả lời câu hỏi: trong mẫu có những sinh vật nào, chúng mang gene gì và cộng đồng thay đổi ra sao. Omicslab cung cấp nơi chạy các pipeline chuẩn, giữ dữ liệu thô và đã xử lý trong cùng một dự án, và lưu lại tham số cùng phiên bản công cụ của từng kết quả. Cùng một dự án có thể chứa hệ gen phân lập, amplicon và shotgun, nên kết quả có thể so sánh mà không phải chuyển tệp qua nhiều hệ thống.",
+      platform: {
+        title: "Nền tảng cung cấp gì",
+        subtitle:
+          "Lớp phân tích chỉ hữu ích khi dữ liệu, công cụ và hồ sơ lượt chạy nằm cùng một chỗ. Đây là những phần Omicslab gom vào một dự án.",
+        items: [
+          {
+            title: "Dữ liệu và lưu trữ",
+            paragraph:
+              "Lưu trữ đối tượng tương thích S3 cho read thô, bộ lắp ráp, cơ sở dữ liệu tham chiếu và kết quả. Dữ liệu được tổ chức theo dự án và workspace, với phân quyền theo vai trò.",
+          },
+          {
+            title: "Công cụ và pipeline",
+            paragraph:
+              "Pipeline nf-core và quy trình tùy chỉnh chạy như analysis job. Container và phiên bản được ghim, nên cùng đầu vào và tham số có thể chạy lại sau này.",
+          },
+          {
+            title: "Tính toán",
+            paragraph:
+              "Tính toán trên cloud hoặc cụm Slurm, cấu hình theo từng job. Các bộ lắp ráp dài và sàng lọc nhiều mẫu có thể xếp hàng mà không cần duy trì cụm cục bộ.",
+          },
+          {
+            title: "Tái lập",
+            paragraph:
+              "Mỗi lượt chạy giữ tham số, phiên bản công cụ, log và manifest đầu ra. Kết quả gắn với cấu hình đã tạo ra nó.",
+          },
+          {
+            title: "Cộng tác",
+            paragraph:
+              "Quản trị viên, cộng tác viên và người xem làm việc trong cùng workspace. Có thể chia sẻ kết quả mà không phải sao chép dữ liệu gốc.",
+          },
+          {
+            title: "Phân tích tùy chỉnh",
+            paragraph:
+              "Studio cung cấp terminal, notebook và mã dự án khi pipeline chuẩn chưa đủ — ví dụ cơ sở dữ liệu mới, cách binning khác hoặc một hình downstream.",
+          },
+        ],
+      },
+      analyses: {
+        title: "Các phân tích vi sinh vật phổ biến",
+        subtitle:
+          "Đây là những câu hỏi phần lớn dự án bắt đầu. Mỗi mục ghi pipeline nf-core thực hiện và loại đầu ra.",
+        items: [
+          {
+            name: "Định danh phân loại shotgun",
+            pipeline: "nf-core/taxprofiler",
+            question:
+              "Có những taxon nào trong mẫu shotgun, và tỉ lệ ra sao?",
+            output:
+              "Hồ sơ taxon từ một hoặc nhiều cơ sở dữ liệu, ước lượng đa dạng, Krona và báo cáo MultiQC.",
+            blogSlug: "shotgun-metagenomics-taxprofiler",
+            blogLabel: "Đọc hướng dẫn shotgun metagenomics mẫu phân",
+          },
+          {
+            name: "Lắp ráp hệ gen vi khuẩn và AMR",
+            pipeline: "nf-core/bacass",
+            question:
+              "Hệ gen của một chủng phân lập trông thế nào, và mang gene kháng thuốc nào?",
+            output:
+              "Bộ lắp ráp, chú giải, gene kháng thuốc, QC và hệ gen sẵn sàng để so sánh.",
+            blogSlug: "bacterial-genome-assembly-without-coding",
+            blogLabel: "Đọc hướng dẫn lắp ráp hệ gen vi khuẩn",
+          },
+          {
+            name: "Phân tích hệ gen virus",
+            pipeline: "nf-core/viralrecon",
+            question:
+              "Mẫu virus cho ra consensus, biến thể và lineage nào?",
+            output:
+              "Consensus, biến thể, lineage/clade và báo cáo độ phủ/QC.",
+            blogSlug: "hbv-ngs-analysis-guide",
+            blogLabel: "Đọc hướng dẫn HBV NGS",
+          },
+          {
+            name: "Amplicon và 16S/ITS",
+            pipeline: "nf-core/ampliseq",
+            question:
+              "Thành phần cộng đồng trong thư viện amplicon ra sao?",
+            output:
+              "ASV, gán taxon, đa dạng alpha/beta và so sánh khác biệt.",
+            blogSlug: "",
+            blogLabel: "",
+          },
+          {
+            name: "Phân tích chức năng",
+            pipeline: "nf-core/funcscan",
+            question:
+              "Cộng đồng mang gene kháng thuốc, cụm gene sinh tổng hợp, peptide kháng khuẩn hay CRISPR nào?",
+            output:
+              "Các hit ARG, BGC, AMP và CRISPR đã chú giải, kèm bảng tổng hợp.",
+            blogSlug: "",
+            blogLabel: "",
+          },
+          {
+            name: "Hệ gen vi sinh vật tái dựng từ metagenome (MAG)",
+            pipeline: "nf-core/mag",
+            question:
+              "Có thể tái dựng những hệ gen vi sinh vật nào từ cộng đồng shotgun?",
+            output:
+              "MAG với độ hoàn chỉnh/ô nhiễm, taxon và QC.",
+            blogSlug: "",
+            blogLabel: "",
+          },
+        ],
+      },
+      workflow: {
+        title: "Một lượt phân tích diễn ra thế nào",
+        subtitle:
+          "Đường đi giống nhau cho một mẫu và một cohort; chỉ samplesheet và tài nguyên thay đổi.",
+        steps: [
+          {
+            title: "1. Đưa dữ liệu vào",
+            paragraph:
+              "Tải read lên hoặc kết nối bucket có sẵn. Samplesheet nối mỗi mẫu với tệp và metadata.",
+          },
+          {
+            title: "2. Chọn phân tích",
+            paragraph:
+              "Chọn pipeline và cơ sở dữ liệu tham chiếu. Tham số dùng chung được giữ trong dự án để lượt sau bắt đầu từ cùng cấu hình.",
+          },
+          {
+            title: "3. Chạy và theo dõi",
+            paragraph:
+              "Job chạy trên tài nguyên đã chọn. Log, tài nguyên và QC hiển thị trong lúc chạy, nên bước lỗi có thể được chẩn đoán sớm.",
+          },
+          {
+            title: "4. Xem và chia sẻ",
+            paragraph:
+              "Kết quả nằm trong workspace: bảng, MultiQC, cây, bộ lắp ráp và hình. Có thể cấp quyền cho người phản biện mà không phải sao chép dữ liệu.",
+          },
+          {
+            title: "5. Giữ hồ sơ",
+            paragraph:
+              "Manifest của lượt chạy giữ phiên bản, tham số và checksum. Đó là khác biệt giữa một kết quả và một kết quả có thể tái lập.",
+          },
+        ],
+      },
+      blog: {
+        title: "Từ blog",
+        subtitle: "Các ví dụ và hướng dẫn đi cùng những phân tích này.",
+        slugs: [
+          "shotgun-metagenomics-taxprofiler",
+          "hbv-ngs-analysis-guide",
+          "reading-hbv-ngs-results",
+          "bacterial-genome-assembly-without-coding",
+          "bla-ndm-on-omicslab",
+          "how-to-run-nf-core-pipelines-on-omicslab",
+        ],
+      },
+      cta: {
+        title: "Bắt đầu với dữ liệu của bạn",
+        paragraph:
+          "Nền tảng đã sẵn sàng cho một dự án đầu tiên: đưa một lượt chạy nhỏ vào, so sánh với các ví dụ công khai, rồi mở rộng cùng cấu hình cho một cohort.",
+        primaryLabel: "Mở nền tảng",
+        primaryHref: "https://platform.omicslab.io",
+        secondaryLabel: "Đọc hướng dẫn nf-core",
+        secondaryHref: "/blogs/how-to-run-nf-core-pipelines-on-omicslab",
+      },
     },
     dataPlatform: {
       metadataTitle: "Nền tảng Omicslab",
