@@ -172,7 +172,9 @@ export const en = {
     solutions: "Solutions",
     dataPlatform: "Omicslab Platform",
     pipelinesSoftwares: "Custom Solutions",
-    metagenomics: "Microbial analysis (Metagenomics)",
+    metagenomics: "Metagenomics",
+    methylation: "DNA methylation",
+    variants: "WGS, WES, cohort variants",
     blog: "Blog",
     docs: "Docs",
     mobileMenu: "Mobile Menu",
@@ -535,7 +537,7 @@ export const en = {
       title: "Solutions",
       subtitle: "Bioinformatics solutions for multiomics research",
       paragraph:
-        "Three paths cover most requests: the managed Omicslab Platform, Microbial analysis (Metagenomics) for shotgun, amplicon, viral and MAG workflows, and Custom Solutions for pipeline development, infrastructure integration and private deployments. The three can be combined, and an existing system can be integrated rather than replaced.",
+        "Five paths cover most requests: the managed Omicslab Platform, Microbial analysis (Metagenomics), DNA methylation analysis, variant analysis (WGS, WES, cohort variants), and Custom Solutions for pipeline development, infrastructure integration and private deployments. The five can be combined, and an existing system can be integrated rather than replaced.",
       metadataDescription:
         "Bioinformatics solutions for multiomics analysis, data management, and pipeline execution.",
     },
@@ -570,6 +572,77 @@ export const en = {
         primaryHref: "https://platform.omicslab.io",
         secondaryLabel: "Read the nf-core guide",
         secondaryHref: "/blogs/how-to-run-nf-core-pipelines-on-omicslab",
+      },
+    },
+    methylation: {
+      metadataTitle: "DNA methylation analysis",
+      metadataDescription:
+        "DNA methylation analysis from bisulfite/WGBS data with nf-core/methylseq: alignment, per-cytosine methylation, DMRs and group comparisons on the Omicslab Platform. For research use only.",
+      serviceType: "DNA methylation analysis on the Omicslab Platform",
+      researchOnly: {
+        label: "Research Purpose Only",
+        text: "These analyses are intended for research use only. They are not validated for clinical diagnosis, treatment selection or patient management.",
+      },
+      title: "DNA methylation analysis",
+      subtitle:
+        "From bisulfite/WGBS reads to per-cytosine methylation, regions and samples — on a reproducible platform.",
+      intro:
+        "DNA methylation is information that is not written in the base sequence. Bisulfite sequencing (WGBS or RRBS) converts unmethylated cytosines to uracil, so alignment and methylation calling need a converted reference and careful library QC. Omicslab keeps reads, references, methylation calls and the manifest of each run in the same project, so samples and groups can be compared without rebuilding the environment.",
+      blog: {
+        title: "Guides and examples",
+        subtitle:
+          "The methylation pipeline, cohort data and how to run it on the platform.",
+        slugs: [
+          "short-read-methylation-pipeline",
+          "data-curation-harmonization-geo-cohorts",
+          "how-to-run-nf-core-pipelines-on-omicslab",
+        ],
+      },
+      cta: {
+        title: "Start with your methylation data",
+        paragraph:
+          "Bring a small bisulfite run, check the conversion and coverage QC, then extend the same configuration to a cohort.",
+        primaryLabel: "Open the platform",
+        primaryHref: "https://platform.omicslab.io",
+        secondaryLabel: "Read the methylation guide",
+        secondaryHref: "/blogs/short-read-methylation-pipeline",
+      },
+    },
+    variants: {
+      metadataTitle: "Variant analysis (WGS, WES, cohort variants)",
+      metadataDescription:
+        "Variant analysis from WGS/WES on the Omicslab Platform: germline and somatic calling, gVCF and joint calling, filtering, annotation, QC and cohort comparisons. For research use only.",
+      serviceType: "Variant analysis on the Omicslab Platform",
+      researchOnly: {
+        label: "Research Purpose Only",
+        text: "These analyses are intended for research use only. They are not validated for clinical diagnosis, treatment selection or patient management.",
+      },
+      title: "Variant analysis (WGS, WES, cohort variants)",
+      subtitle:
+        "From raw reads to germline/somatic variants, gVCFs and cohort comparisons — with reproducible workflows.",
+      intro:
+        "Variant analysis is a chain of decisions: alignment, calling, filtering, annotation and QC. For WGS and WES, the result depends on coverage, the sample design (germline, tumour-normal, tumour-only) and how repeats and low-complexity regions are handled. At cohort scale, gVCFs and joint calling keep the representation consistent across samples. Omicslab keeps reads, references, VCF/gVCF files and the manifest of each run in the same project.",
+      blog: {
+        title: "Sample analyses from real data",
+        subtitle:
+          "Worked examples on public and benchmark data, with the guide for each analysis.",
+        slugs: [
+          "short-read-germline-variant-calling-pipeline",
+          "short-read-somatic-variant-calling-pipeline",
+          "gvcf-population-scale-genotyping",
+          "giab-pilot-study-benchmark-development",
+          "structural-variant-calling-short-reads-challenges",
+          "gatk-variant-calling-bash-workflow-pixi-part1",
+        ],
+      },
+      cta: {
+        title: "Start with your variant data",
+        paragraph:
+          "Bring a small WGS or WES run, check coverage and callability, then extend the same configuration to a cohort.",
+        primaryLabel: "Open the platform",
+        primaryHref: "https://platform.omicslab.io",
+        secondaryLabel: "Read the germline guide",
+        secondaryHref: "/blogs/short-read-germline-variant-calling-pipeline",
       },
     },
     dataPlatform: {
