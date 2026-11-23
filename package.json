@@ -2,6 +2,7 @@
   "name": "play-nextjs",
   "version": "2.2.2",
   "private": true,
+  "license": "GPL-3.0-only",
   "scripts": {
     "dev": "node scripts/build-search-index.js && next dev -p 3100",
     "build": "node scripts/build-search-index.js && next build",

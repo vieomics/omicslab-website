@@ -127,30 +127,17 @@ npm run build
 npm run preview   # node server.js → http://localhost:3000
 ```
 
-Or deploy `out/` to any static host. Production uses **Cloudflare Pages** (see CI/CD below).
+Or deploy `out/` to any static host.
 
-## Deploy — Cloudflare Pages
+## Deploy
 
-Production is served by **Cloudflare Pages** from the static `out/` directory.
-The project is defined in `wrangler.toml`:
+This repository does not include a hosting-specific deployment workflow. Build the static export and publish `out/` with the hosting provider of your choice:
 
-```toml
-name = "omicslab-website"
-pages_build_output_dir = "./out"
+```bash
+npm run build
 ```
 
-On every push to `main`, [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml):
-
-1. Installs dependencies and runs `npm run build`
-2. Deploys `out/` to Cloudflare Pages with `wrangler pages deploy`
-
-### Required GitHub Secret
-
-| Secret                 | Description                                        |
-| ---------------------- | -------------------------------------------------- |
-| `CLOUDFLARE_API_TOKEN` | API token with permission to deploy Pages projects |
-
-The workflow can also be triggered manually from GitHub → Actions → **Deploy to Cloudflare Pages** → **Run workflow**.
+The output is plain HTML, CSS, JavaScript and assets; no Node.js runtime is required.
 
 ## Google Analytics
 
@@ -158,4 +145,4 @@ Tracked via `G-H4DR9KS6SL` (gtag.js). The scripts are injected in the root `<hea
 
 ## License
 
-MIT — free for personal and commercial use.
+GNU General Public License v3.0 only (GPL-3.0-only). See [LICENSE](LICENSE).

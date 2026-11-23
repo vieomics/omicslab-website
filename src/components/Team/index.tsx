@@ -9,10 +9,10 @@ const teamData: TeamType[] = [
     designation:
       "Founder @ Vieomics | Ex-DNAnexus | Scaling Multi-Omics Infrastructure & AI",
     image: "/images/team/giangnguyen.png",
-    facebookLink: "https://www.facebook.com/nttg8100",
+    facebookLink: "https://www.facebook.com/omicslab",
     twitterLink: "/#",
     instagramLink: "/#",
-    linkedinLink: "https://www.linkedin.com/in/giang-nguyen-761b28190/",
+    linkedinLink: "",
     scholarLink: "https://scholar.google.com/citations?hl=en&user=23JI1U8AAAAJ",
   },
 ];

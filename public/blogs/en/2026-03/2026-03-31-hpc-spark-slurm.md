@@ -124,7 +124,7 @@ Pixi is a cross-platform package manager that creates reproducible environments.
 
 ```toml
 [workspace]
-authors = ["nttg8100 <nttg8100@gmail>"]
+authors = ["Vieomics"]
 channels = ["conda-forge", "bioconda"]
 name = "spark-on-slurm"
 platforms = ["linux-64"]
