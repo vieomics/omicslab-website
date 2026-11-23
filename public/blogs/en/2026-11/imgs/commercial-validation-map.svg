@@ -1,0 +1,73 @@
+<svg width="1400" height="600" viewBox="0 0 1400 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Validation: hold out the labels, predict, compare and repeat on another platform">
+  <rect width="1400" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1400" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1400" y2="599" stroke="#c6c6c6"/>
+
+  <text x="60" y="58" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="4" fill="#6c6c6c">VALIDATION: HOLD OUT THE LABELS</text>
+  <line x1="60" y1="72" x2="390" y2="72" stroke="#c6c6c6"/>
+
+  <!-- Step labels above arrows -->
+  <text x="365" y="90" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">BUILD</text>
+  <text x="725" y="90" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">PREDICT</text>
+  <text x="1085" y="90" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">COMPARE</text>
+
+  <!-- Reference set -->
+  <rect x="60" y="100" width="300" height="150" fill="#ededed" stroke="#111111" stroke-width="2"/>
+  <text x="78" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">REFERENCE SET</text>
+  <text x="78" y="164" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#111111">Labels known</text>
+  <text x="78" y="194" font-family="Inter, Arial, sans-serif" font-size="15" fill="#3d3d3d">used to build the model</text>
+  <text x="78" y="220" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">the asset you cannot copy</text>
+
+  <!-- Validation set -->
+  <rect x="420" y="100" width="300" height="150" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="438" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">VALIDATION SET</text>
+  <text x="438" y="164" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#111111">Labels hidden</text>
+  <text x="438" y="194" font-family="Inter, Arial, sans-serif" font-size="15" fill="#3d3d3d">the pipeline has not seen it</text>
+  <text x="438" y="220" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">predict, then compare</text>
+
+  <!-- Prediction -->
+  <rect x="780" y="100" width="300" height="150" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="798" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">PREDICTION</text>
+  <text x="798" y="164" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="700" fill="#111111">Call each sample</text>
+  <text x="798" y="194" font-family="Inter, Arial, sans-serif" font-size="15" fill="#3d3d3d">the output is a label</text>
+  <text x="798" y="220" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">not a probability you can hide</text>
+
+  <!-- Metrics -->
+  <rect x="1140" y="100" width="200" height="150" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1158" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">METRICS</text>
+  <text x="1158" y="164" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Sensitivity</text>
+  <text x="1158" y="190" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Specificity</text>
+  <text x="1158" y="216" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Stability</text>
+
+  <!-- Arrows -->
+  <g stroke="#111111" stroke-width="1.5">
+    <line x1="364" y1="175" x2="412" y2="175"/>
+    <line x1="724" y1="175" x2="772" y2="175"/>
+    <line x1="1084" y1="175" x2="1132" y2="175"/>
+  </g>
+  <g fill="#111111">
+    <path d="M410 170 L418 175 L410 180 Z"/>
+    <path d="M770 170 L778 175 L770 180 Z"/>
+    <path d="M1130 170 L1138 175 L1130 180 Z"/>
+  </g>
+
+  <!-- Platform check -->
+  <text x="60" y="330" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="4" fill="#6c6c6c">SAME PIPELINE, DIFFERENT PLATFORM</text>
+  <line x1="60" y1="344" x2="500" y2="344" stroke="#c6c6c6"/>
+
+  <rect x="60" y="370" width="300" height="90" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="78" y="406" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Platform A</text>
+  <text x="78" y="432" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">validation may look good</text>
+
+  <rect x="420" y="370" width="300" height="90" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="438" y="406" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" fill="#111111">Platform B</text>
+  <text x="438" y="432" font-family="Inter, Arial, sans-serif" font-size="13" fill="#6c6c6c">do not assume it transfers</text>
+
+  <line x1="364" y1="415" x2="412" y2="415" stroke="#111111" stroke-width="1.5"/>
+  <path d="M410 410 L418 415 L410 420 Z" fill="#111111"/>
+
+  <text x="780" y="416" font-family="Inter, Arial, sans-serif" font-size="18" fill="#111111">Repeat on the target platform before market.</text>
+
+  <!-- Bottom note -->
+  <text x="60" y="530" font-family="Inter, Arial, sans-serif" font-size="20" fill="#111111">A published result is not a validation for your platform.</text>
+</svg>
