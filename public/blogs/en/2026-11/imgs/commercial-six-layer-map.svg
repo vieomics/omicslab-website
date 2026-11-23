@@ -1,0 +1,80 @@
+<svg width="1400" height="600" viewBox="0 0 1400 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Six-layer commercial pipeline architecture, each layer versioned and covered by licence and IP review">
+  <rect width="1400" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1400" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1400" y2="599" stroke="#c6c6c6"/>
+
+  <text x="60" y="58" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="4" fill="#6c6c6c">SIX LAYERS, EACH WITH A CONTRACT AND A VERSION</text>
+  <line x1="60" y1="72" x2="560" y2="72" stroke="#c6c6c6"/>
+
+  <!-- 01 Input -->
+  <rect x="60" y="100" width="180" height="170" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="78" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">01</text>
+  <text x="78" y="164" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#111111">INPUT</text>
+  <text x="78" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">contract</text>
+  <text x="78" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">validation</text>
+  <text x="78" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- 02 Preprocessing -->
+  <rect x="272" y="100" width="180" height="170" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="290" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">02</text>
+  <text x="290" y="162" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="700" fill="#111111">PREPROCESSING</text>
+  <text x="290" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">transform</text>
+  <text x="290" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">QC</text>
+  <text x="290" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- 03 Representation -->
+  <rect x="484" y="100" width="180" height="170" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="502" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">03</text>
+  <text x="502" y="162" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700" fill="#111111">REPRESENTATION</text>
+  <text x="502" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">features</text>
+  <text x="502" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">schema</text>
+  <text x="502" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- 04 Model / data (highlighted) -->
+  <rect x="696" y="100" width="180" height="170" fill="#ededed" stroke="#111111" stroke-width="2"/>
+  <text x="714" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">04</text>
+  <text x="714" y="162" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" fill="#111111">MODEL / DATA</text>
+  <text x="714" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">versioned</text>
+  <text x="714" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">governed</text>
+  <text x="714" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- 05 Decision -->
+  <rect x="908" y="100" width="180" height="170" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="926" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">05</text>
+  <text x="926" y="164" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#111111">DECISION</text>
+  <text x="926" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">thresholds</text>
+  <text x="926" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">no-result</text>
+  <text x="926" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- 06 Report -->
+  <rect x="1120" y="100" width="180" height="170" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1138" y="130" font-family="Inter, Arial, sans-serif" font-size="13" letter-spacing="2" fill="#6c6c6c">06</text>
+  <text x="1138" y="164" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" fill="#111111">REPORT</text>
+  <text x="1138" y="192" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">versions</text>
+  <text x="1138" y="212" font-family="Inter, Arial, sans-serif" font-size="13" fill="#3d3d3d">audit</text>
+  <text x="1138" y="250" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="2" fill="#6c6c6c">v1.0</text>
+
+  <!-- Arrows -->
+  <g stroke="#111111" stroke-width="1.5">
+    <line x1="244" y1="185" x2="264" y2="185"/>
+    <line x1="456" y1="185" x2="476" y2="185"/>
+    <line x1="668" y1="185" x2="688" y2="185"/>
+    <line x1="880" y1="185" x2="900" y2="185"/>
+    <line x1="1092" y1="185" x2="1112" y2="185"/>
+  </g>
+  <g fill="#111111">
+    <path d="M262 180 L270 185 L262 190 Z"/>
+    <path d="M474 180 L482 185 L474 190 Z"/>
+    <path d="M686 180 L694 185 L686 190 Z"/>
+    <path d="M898 180 L906 185 L898 190 Z"/>
+    <path d="M1110 180 L1118 185 L1110 190 Z"/>
+  </g>
+
+  <!-- Licence + IP band -->
+  <line x1="60" y1="370" x2="1300" y2="370" stroke="#2f7a4f" stroke-width="4"/>
+  <text x="60" y="402" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="3" fill="#2f7a4f">LICENCE + IP REVIEW RUNS ACROSS ALL SIX LAYERS</text>
+  <text x="60" y="428" font-family="Inter, Arial, sans-serif" font-size="14" fill="#6c6c6c">code · docs · data · dependencies</text>
+
+  <!-- Bottom note -->
+  <text x="60" y="500" font-family="Inter, Arial, sans-serif" font-size="20" fill="#111111">A pipeline version without a data version is not reproducibility.</text>
+</svg>
