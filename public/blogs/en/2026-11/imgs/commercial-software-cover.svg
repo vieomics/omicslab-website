@@ -1,0 +1,51 @@
+<svg width="1920" height="600" viewBox="0 0 1920 600" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Building commercial software: the product is a result, not just a pipeline">
+  <rect width="1920" height="600" fill="#fafafa"/>
+  <line x1="0" y1="1" x2="1920" y2="1" stroke="#c6c6c6"/>
+  <line x1="0" y1="599" x2="1920" y2="599" stroke="#c6c6c6"/>
+  <line x1="1180" y1="0" x2="1180" y2="600" stroke="#e3e3e3"/>
+
+  <!-- Left: editorial typography -->
+  <text x="120" y="132" font-family="Inter, Arial, sans-serif" font-size="20" letter-spacing="6" fill="#6c6c6c">BUILDING COMMERCIAL SOFTWARE · AI ERA</text>
+  <rect x="120" y="160" width="120" height="6" fill="#111111"/>
+  <text x="120" y="270" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="88" font-weight="700" fill="#111111">Build the product</text>
+  <text x="120" y="368" font-family="'Barlow Condensed', 'Arial Narrow', Arial, sans-serif" font-size="88" font-weight="700" fill="#111111">not just the pipeline</text>
+  <text x="120" y="438" font-family="Inter, Arial, sans-serif" font-size="25" fill="#3d3d3d">Architecture, licences, and what</text>
+  <text x="120" y="474" font-family="Inter, Arial, sans-serif" font-size="25" fill="#3d3d3d">to keep internal</text>
+  <line x1="120" y1="516" x2="520" y2="516" stroke="#c6c6c6"/>
+  <text x="120" y="556" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="3" fill="#6c6c6c">ARCHITECTURE · LICENCE · DATA · VALIDATION</text>
+
+  <!-- Right: the product stack -->
+  <text x="1250" y="72" font-family="Inter, Arial, sans-serif" font-size="18" letter-spacing="4" fill="#6c6c6c">THE PRODUCT</text>
+
+  <!-- 01 Input -->
+  <rect x="1250" y="96" width="560" height="78" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1272" y="126" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6c6c6c">01 · INPUT</text>
+  <text x="1272" y="150" font-family="Inter, Arial, sans-serif" font-size="19" fill="#111111">contract · validation</text>
+
+  <!-- 02 Processing -->
+  <rect x="1250" y="186" width="560" height="78" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1272" y="216" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6c6c6c">02 · PROCESSING</text>
+  <text x="1272" y="240" font-family="Inter, Arial, sans-serif" font-size="19" fill="#111111">transform · QC</text>
+
+  <!-- 03 Model / data, highlighted -->
+  <rect x="1250" y="276" width="560" height="104" fill="#ededed" stroke="#111111" stroke-width="2"/>
+  <text x="1272" y="306" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6c6c6c">03 · MODEL / DATA</text>
+  <text x="1272" y="332" font-family="Inter, Arial, sans-serif" font-size="19" fill="#111111">versioned · governed</text>
+  <text x="1272" y="356" font-family="Inter, Arial, sans-serif" font-size="15" fill="#6c6c6c">the part to keep internal</text>
+
+  <!-- 04 Decision -->
+  <rect x="1250" y="392" width="560" height="78" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1272" y="422" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6c6c6c">04 · DECISION</text>
+  <text x="1272" y="446" font-family="Inter, Arial, sans-serif" font-size="19" fill="#111111">thresholds · no-result</text>
+
+  <!-- 05 Report -->
+  <rect x="1250" y="482" width="560" height="72" fill="#ffffff" stroke="#c6c6c6" stroke-width="1.5"/>
+  <text x="1272" y="510" font-family="Inter, Arial, sans-serif" font-size="16" letter-spacing="3" fill="#6c6c6c">05 · REPORT</text>
+  <text x="1272" y="534" font-family="Inter, Arial, sans-serif" font-size="19" fill="#111111">versions · audit</text>
+
+  <!-- Licence + IP rail -->
+  <line x1="1844" y1="96" x2="1844" y2="554" stroke="#2f7a4f" stroke-width="2"/>
+  <line x1="1836" y1="96" x2="1852" y2="96" stroke="#2f7a4f" stroke-width="2"/>
+  <line x1="1836" y1="554" x2="1852" y2="554" stroke="#2f7a4f" stroke-width="2"/>
+  <text x="1866" y="260" font-family="Inter, Arial, sans-serif" font-size="15" letter-spacing="4" fill="#2f7a4f" transform="rotate(90 1866 260)">LICENCE + IP</text>
+</svg>
